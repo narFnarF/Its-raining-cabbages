@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>intro events</name>
+    <events>
+        <event-block sid="982771922025691">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9766550269779521" type="Touch">
+                    <param id="0" name="Object">txtLabel</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9560081896507147">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="9206397683920992" type="txtLabel">
+                            <param id="0" name="Text to compare">&quot;New game/Erase save file&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8564417058141517" type="System">
+                            <param id="0" name="Layout">gameplay</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9750028966800894">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="9961610043932339" type="txtLabel">
+                            <param id="0" name="Text to compare">&quot;Load savefile&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="4194595822097684" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2178317074950907">
+            <conditions>
+                <condition id="-30" name="On load failed" sid="916172357455549" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="6684695453931849" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;save failed&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="572006554579995">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="1582341082064107" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="2337562366560498" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;save ok&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

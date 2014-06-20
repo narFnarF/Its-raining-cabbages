@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>idle game</name>
+    <description></description>
+    <version>r102</version>
+    <author>narF</author>
+    <author-email>narF@narF.ca</author-email>
+    <author-website>http://www.narF.ca</author-website>
+    <app-id>ca.narF.idlegame</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>16800</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <first-layout>Intro</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-folder expanded="0" name="plugins">
+            <object-type name="Browser" sid="5129043714455325">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="1040817558484765">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Touch" sid="2427246001340585">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type global="1" name="Date" sid="8536047002691559">
+                <plugin id="Rex_Date" />
+            </object-type>
+            <object-type name="Mouse" sid="9887476147998468">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Keyboard" sid="8221280292440799">
+                <plugin id="Keyboard" />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="bee stuff">
+            <object-type name="bee" sid="4716704536026207">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cabbageID" sid="8587644090087937" type="number" />
+                    <instance-variable name="targetX" sid="2658733998509146" type="number" />
+                    <instance-variable name="targetY" sid="888475734182301" type="number" />
+                    <instance-variable name="status" sid="2282952334753853" type="string" />
+                    <instance-variable name="speed" sid="1991404268606079" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
+                        <frame duration="1" hotspotX="0.74026" hotspotY="0.828125" />
+                        <frame duration="1" hotspotX="0.723404" hotspotY="0.807407" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="beeCollectZone" sid="8514725442516342">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1705140010114099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="beeDropZone" sid="7173800691898986">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="26439158848992">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6993862622659614" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="textboxes">
+            <object-type name="plus1" sid="9026095487772363">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="2289773093146785">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8332503493718814">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="2977789895684222">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="factory stuff">
+            <object-type name="factory" sid="5214980029075165">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cabbages" sid="1205103854269568" type="number" />
+                    <instance-variable name="maxStorage" sid="6992621492704183" type="number" />
+                    <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
+                    <instance-variable name="timer" sid="5116439341233498" type="number" />
+                    <instance-variable comment="Number of time that the factory produced something, in the last 60 seconds" name="nbTimesActivatedThisMinute" sid="1401889563010287" type="number" />
+                    <instance-variable comment="averaged from the last 60 seconds" name="productionPerSeconds" sid="3603915098265743" type="number" />
+                    <instance-variable name="price" sid="603673640481284" type="number" />
+                    <instance-variable name="speed" sid="4558002097740508" type="number" />
+                    <instance-variable name="timerLength" sid="6847551949910904" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
+                        <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="factoryProgressBar" sid="5953083345980087">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8102623093277821">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5605835646574217" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.555556" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtFactory" sid="146299065524885">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5769377757837101">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="notifications">
+            <object-type name="notificationBox" sid="4820868941892838">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ouverte" sid="3708815445241575" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1545521745320206">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3571457017003339" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="notifications" sid="5194667752447656">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="txtNotifications" sid="9963654768141708">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="grand" sid="2051567679053458" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9962413741718986">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="UI">
+            <object-type name="arrow" sid="9018481897248055">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="goto" sid="4017894354927551" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5810778148981333">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6799261809530454" speed="5">
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.441176" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="camera" sid="4915622769187808">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="screen" sid="9728426467232505" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="7314232100600382">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="7030378950934829">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4781535449343194" speed="5">
+                        <frame duration="1" hotspotX="0.502283" hotspotY="0.502283" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tooltips" sid="5300416514676331">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6987805813863065">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="txtLabel" sid="2110053242017875">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1321623081067884">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="UIShit" sid="1716407423504638">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6792969353378058">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="screen" sid="9322701201513001">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="number" sid="4851678768145092" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1956974350066586">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9558079890219215" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="props">
+            <object-type name="solidBloc" sid="3710229597765973">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="2362145777090324">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="3411584763812897">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4478074572537306" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="water" sid="5146963646431959">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7430355389712841">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914258321610921" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="waterParticles" sid="1205555491118924">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8214194427257181">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-type name="cabbage" sid="9209630044662387">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="1936616672555206">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="NoSave" sid="9790473529950608">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023358627610028" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
+                        <collision-poly>
+                            <point x="0.142857" y="0.153846" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.153846" />
+                            <point x="1" y="0.461538" />
+                            <point x="0.857143" y="0.846154" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0714286" y="0.923077" />
+                            <point x="0" y="0.461538" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="menhir" sid="1702331039481137">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="price" sid="2406122236208806" type="number" />
+                <instance-variable name="upgrades" sid="8057385511455278" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="4019090817851407">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3215945281272706" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                        <collision-poly>
+                            <point x="0.016" y="0" />
+                            <point x="0.984" y="0" />
+                            <point x="0.84" y="0.833333" />
+                            <point x="0.16" y="0.833333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                        <collision-poly>
+                            <point x="0.016" y="0" />
+                            <point x="0.984" y="0" />
+                            <point x="0.84" y="0.833333" />
+                            <point x="0.16" y="0.833333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buyBeesButton" sid="8260176431510501">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="price" sid="8032522824403215" type="number" />
+                <instance-variable name="text" sid="382682042274087" type="string" />
+                <instance-variable name="bee" sid="8354818448560706" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="btnUpgrade" sid="3947049937687157">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="type" sid="6915415841375174" type="string" />
+                <instance-variable name="price" sid="5950407521339703" type="number" />
+                <instance-variable name="priceMutiplicator" sid="159484438039128" type="number" />
+                <instance-variable name="priceAdditor" sid="7885002291117093" type="number" />
+                <instance-variable name="active" sid="6576830435381587" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="btnUpgradeBack" sid="2766913013001252">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="NoSave" sid="3565957130775504">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="bee spawn" x="0.516" y="0.7" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="hasTooltip" plugin-id="Sprite" sid="7905734791955215">
+            <members>
+                <member>menhir</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="tooltipText" sid="1130508236957116" type="string" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder expanded="1">
+        <layout>gameplay.xml</layout>
+        <layout>Intro.xml</layout>
+    </layout-folder>
+    <event-folder expanded="0">
+        <event-sheet>gameplay events.xml</event-sheet>
+        <event-sheet>intro events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="4" />
+        <global-instance type="Function" uid="5" />
+        <global-instance type="Mouse" uid="30" />
+        <global-instance type="Keyboard" uid="40" />
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="0">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
