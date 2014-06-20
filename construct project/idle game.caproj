@@ -83,6 +83,7 @@
                     <instance-variable name="targetY" sid="888475734182301" type="number" />
                     <instance-variable name="status" sid="2282952334753853" type="string" />
                     <instance-variable name="speed" sid="1991404268606079" type="number" />
+                    <instance-variable name="numéro" sid="3220576457764413" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
@@ -387,7 +388,7 @@
             <instance-variables>
                 <instance-variable name="price" sid="8032522824403215" type="number" />
                 <instance-variable name="text" sid="382682042274087" type="string" />
-                <instance-variable name="bee" sid="8354818448560706" type="number" />
+                <instance-variable name="beeNb" sid="8354818448560706" type="number" />
             </instance-variables>
         </object-type>
         <object-type name="btnUpgrade" sid="3947049937687157">
@@ -398,6 +399,7 @@
                 <instance-variable name="priceMutiplicator" sid="159484438039128" type="number" />
                 <instance-variable name="priceAdditor" sid="7885002291117093" type="number" />
                 <instance-variable name="active" sid="6576830435381587" type="boolean" />
+                <instance-variable name="itsCabbageId" sid="7581341157815091" type="number" />
             </instance-variables>
         </object-type>
         <object-type name="btnUpgradeBack" sid="2766913013001252">
@@ -411,6 +413,30 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0">
                         <image-point name="bee spawn" x="0.516" y="0.7" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cabbageIcon" sid="4395305785758166">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="NoSave" sid="9528792989406612">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7652899822361494" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
+                        <collision-poly>
+                            <point x="0.142857" y="0.153846" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.153846" />
+                            <point x="1" y="0.461538" />
+                            <point x="0.857143" y="0.846154" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0714286" y="0.923077" />
+                            <point x="0" y="0.461538" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>

@@ -854,7 +854,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking">
+        <event-group description="" sid="2726329761105019" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>
@@ -889,7 +889,7 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;last time stamp: &quot; &amp; lastTimeStamp</param>
                         </action>
-                        <action id="14" name="Log" sid="5889039946605682" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="5889039946605682" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;delta time: &quot; &amp; deltaTime</param>
                         </action>
@@ -897,7 +897,7 @@
                             <param id="0" name="Variable">totalTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="14" name="Log" sid="5741928776791303" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="5741928776791303" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Total time: &quot; &amp; totalTime/60/60 &amp; &quot; hours&quot;</param>
                         </action>
@@ -915,10 +915,6 @@
                                 <action id="-10" name="Add to" sid="4557968347485927" type="System">
                                     <param id="0" name="Variable">salads</param>
                                     <param id="1" name="Value">round( factory.productionPerSeconds * deltaTime )</param>
-                                </action>
-                                <action disabled="1" id="0" name="Call function" sid="2739930042348651" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;You produced &quot; &amp; round( factory.productionPerSeconds * deltaTime ) &amp; &quot; salads during your absence.&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9008356441449291" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
@@ -1095,7 +1091,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8843421730346775" title="buy bees button">
+        <event-group description="" sid="8843421730346775" title="buy bees button">
             <sub-events>
                 <event-block sid="5263809454682485">
                     <conditions>
@@ -1104,30 +1100,6 @@
                     <actions>
                         <action id="0" name="Set text" sid="8135432495761273" type="buyBeesButton">
                             <param id="0" name="Text">replace(buyBeesButton.text, &quot;%price&quot;, str(buyBeesButton.price))</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="1228128865997657">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="889317314449679" type="System">
-                            <param id="0" name="Variable">salads</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">buyBeesButton.price</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set enabled" sid="6167009099687055" type="buyBeesButton">
-                            <param id="0" name="Mode">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="8451084442348013">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="7648289706473685" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set enabled" sid="821130642592316" type="buyBeesButton">
-                            <param id="0" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1153,15 +1125,15 @@
                             <param id="1" name="Layer">&quot;game&quot;</param>
                             <param id="2" name="Image point">&quot;bee spawn&quot;</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="4477330218215635" type="bee">
-                            <param id="0" name="X">bee.X+random(-100,100)</param>
-                            <param id="1" name="Y">bee.Y+random(-100,100)</param>
-                        </action>
                         <action id="-10" name="Set value" sid="9807869303637682" type="bee">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Value">0.01</param>
                         </action>
                         <action id="-9" name="Destroy" sid="8458266529928002" type="buyBeesButton" />
+                        <action id="-10" name="Set value" sid="1317549052721104" type="bee">
+                            <param id="0" name="Instance variable">numéro</param>
+                            <param id="1" name="Value">buyBeesButton.beeNb</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4417028747309527">
@@ -1209,45 +1181,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="9370331734770841">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6096008449267426" type="buyBeesButton">
-                                    <param id="0" name="Instance variable">bee</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1475347189673341" type="btnUpgrade">
-                                    <param id="0" name="Instance variable">type</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Bee #2 speed&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4148910375910791" type="btnUpgrade">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="917141357981208">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2509375759890564" type="buyBeesButton">
-                                    <param id="0" name="Instance variable">bee</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="5072434552061807" type="btnUpgrade">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="3699609878101366">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="366598880384512" type="btnUpgrade">
                                     <param id="0" name="Instance variable">type</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Bee #&quot; &amp; buyBeesButton.bee &amp; &quot; speed&quot;</param>
+                                    <param id="2" name="Value">&quot;Bee #&quot; &amp; buyBeesButton.beeNb &amp; &quot; speed&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1442,6 +1381,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="7283655628005028">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8530769776756976" type="btnUpgrade">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Bee #1 speed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7118241980042968" type="System">
+                                    <param id="0" name="Variable">current</param>
+                                    <param id="1" name="Value">&quot;bee fart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="8905886710297214">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5546319038293028" type="btnUpgrade">
@@ -1457,6 +1411,36 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="8560268670933769">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4327171099637549" type="btnUpgrade">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Bee #3 speed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8655725767240744" type="System">
+                                    <param id="0" name="Variable">current</param>
+                                    <param id="1" name="Value">&quot;bee fart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6168024400149453">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3954378393364508" type="btnUpgrade">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Bee #4 speed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7077358044224537" type="System">
+                                    <param id="0" name="Variable">current</param>
+                                    <param id="1" name="Value">&quot;bee fart&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="9203974679798158">
                             <conditions />
                             <actions>
@@ -1467,32 +1451,49 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="3964708812298284">
+                <comment>Create a cabbage icon for each button, and save the UID of the cabbages</comment>
+                <event-block sid="3964708812298284">
                     <conditions>
+                        <condition id="-2" name="On start of layout" sid="6518724184531598" type="System" />
                         <condition id="-11" name="For Each" sid="5308978796316074" type="System">
                             <param id="0" name="Object">btnUpgrade</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="4362721178844921" type="btnUpgrade" />
-                        <condition id="-4" name="Trigger once while true" sid="8422962685435864" type="System" />
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="1744476452956423" type="System">
-                            <param id="0" name="Object to create">cabbage</param>
+                            <param id="0" name="Object to create">cabbageIcon</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="X">btnUpgrade.X + 95</param>
                             <param id="3" name="Y">btnUpgrade.Y + (btnUpgrade.Height*0.6)</param>
                         </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="2041171030933222" type="cabbage">
-                            <param id="0" name="Mode">0</param>
+                        <action id="-10" name="Set value" sid="1663835911729626" type="btnUpgrade">
+                            <param id="0" name="Instance variable">itsCabbageId</param>
+                            <param id="1" name="Value">cabbageIcon.UID</param>
                         </action>
-                        <action id="9" name="Set scale" sid="3944981173634376" type="cabbage">
-                            <param id="0" name="Scale">2</param>
+                        <action id="-15" name="Set visible" sid="9482698081606579" type="cabbageIcon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5750254673565848">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2826067516602943" type="System">
+                            <param id="0" name="Object">btnUpgrade</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="1305187261741058" type="btnUpgrade" />
+                        <condition id="-14" name="Pick by unique ID" sid="3646594483788783" type="cabbageIcon">
+                            <param id="0" name="Unique ID">btnUpgrade.itsCabbageId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7811454329883462" type="cabbageIcon">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8792768240858758" title="Save">
+        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
             <sub-events>
                 <event-block sid="7604520539040787">
                     <conditions>

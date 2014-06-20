@@ -558,6 +558,7 @@
                         <targetY>0</targetY>
                         <status>collect</status>
                         <speed>0.02</speed>
+                        <numéro>1</numéro>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -952,6 +953,7 @@
                         <priceMutiplicator>3</priceMutiplicator>
                         <priceAdditor>1</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -986,6 +988,7 @@
                         <priceMutiplicator>2</priceMutiplicator>
                         <priceAdditor>5</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1020,6 +1023,7 @@
                         <priceMutiplicator>2.5</priceMutiplicator>
                         <priceAdditor>7</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1054,6 +1058,7 @@
                         <priceMutiplicator>3</priceMutiplicator>
                         <priceAdditor>1</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1088,6 +1093,7 @@
                         <priceMutiplicator>3</priceMutiplicator>
                         <priceAdditor>1</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1122,6 +1128,7 @@
                         <priceMutiplicator>3</priceMutiplicator>
                         <priceAdditor>1</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1156,6 +1163,7 @@
                         <priceMutiplicator>3</priceMutiplicator>
                         <priceAdditor>1</priceAdditor>
                         <active>true</active>
+                        <itsCabbageId>0</itsCabbageId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1186,7 +1194,7 @@
                     <instance-variables>
                         <price>100</price>
                         <text>Buy 1 bee. Cost: %price salads.</text>
-                        <bee>2</bee>
+                        <beeNb>2</beeNb>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1215,7 +1223,7 @@
                     <instance-variables>
                         <price>400</price>
                         <text>Buy 1 bee. Cost: %price salads.</text>
-                        <bee>3</bee>
+                        <beeNb>3</beeNb>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1244,7 +1252,7 @@
                     <instance-variables>
                         <price>1200</price>
                         <text>Buy 1 bee. Cost: %price salads.</text>
-                        <bee>4</bee>
+                        <beeNb>4</beeNb>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1257,6 +1265,31 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="cabbageIcon" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>780.894470215</x>
+                        <y>1110.89440918</y>
+                        <z>0</z>
+                        <width>37.788887024</width>
+                        <height>35.089679718</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.538461983</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
