@@ -61,5 +61,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="990275086393793">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3303152092615089" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1286344703649095" type="btnUpgrade">
+                    <param id="0" name="Text">projectversion</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

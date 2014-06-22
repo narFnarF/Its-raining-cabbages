@@ -117,6 +117,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="btnUpgrade" uid="58">
+                    <properties>
+                        <text>v123</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <type>Factory storage</type>
+                        <price>1</price>
+                        <priceMutiplicator>3</priceMutiplicator>
+                        <priceAdditor>1</priceAdditor>
+                        <itsCabbageId>0</itsCabbageId>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5</x>
+                        <y>923</y>
+                        <z>0</z>
+                        <width>121</width>
+                        <height>33</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
