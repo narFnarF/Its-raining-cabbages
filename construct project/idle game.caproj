@@ -172,7 +172,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="notifications">
+        <object-folder expanded="1" name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -202,6 +202,9 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type global="1" name="sillyMessages" sid="110751735252375">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="UI">

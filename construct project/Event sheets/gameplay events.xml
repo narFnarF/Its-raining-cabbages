@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplay events</name>
     <events>
+        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[2,1,1],&quot;data&quot;:[[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
         <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
         <variable constant="0" name="saladsCollectedThisMinute" sid="6393007018642754" static="0" type="number">0</variable>
         <event-block sid="6829102839958492">
@@ -16,11 +17,53 @@
                 </action>
                 <action id="0" name="Call function" sid="3461923599023826" type="Function">
                     <param id="0" name="Name">&quot;notification&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy menhir enlargements and factory upgrades. Try to find a lion! ;)&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades. Try to find the lions! ;)&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="3347646705997988" title="bees">
+        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
+            <sub-events>
+                <event-block sid="7604520539040787">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="9202097605480088" type="System">
+                            <param id="0" name="Interval (seconds)">60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="6282600037916136" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4501332724436306" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Saving in progress...&quot;{###}&quot;nobr&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1585622187687725">
+                    <conditions>
+                        <condition id="-28" name="On save complete" sid="5213636866070556" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9488686038622572" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2349786055396418">
+                    <conditions>
+                        <condition id="-29" name="On load complete" sid="6025335682815054" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="171037476735454" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Loading successful&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -591,44 +634,41 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3758003106738181" title="Notifications">
+        <event-group description="" sid="3758003106738181" title="Notifications">
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
                         <comment>Faire un tableau de notification possible. À chaque 37 secondes, tu en affiche 1 random. On peut en ajouter ou retirer.</comment>
                         <event-block sid="3351956113656007">
-                            <conditions />
-                            <actions />
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="2683204853402891" type="System">
+                                    <param id="0" name="Interval (seconds)">193</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7815691982683778" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">sillyMessages.At( floor( random(0, sillyMessages.Width) ) )</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3657177703028113">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="1720216996430262" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Load" sid="7377178129965534" type="sillyMessages">
+                                    <param id="0" name="JSON">JSONPourArraySillyMessages</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block disabled="1" sid="9715668394937267">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="239939325066862" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="2026136445860617" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;debug &quot; &amp; random(10)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4008492876518852">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="2614558667678372" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set size" sid="1148152875012406" type="notifications">
-                            <param id="0" name="Width">0</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
-                        </action>
-                    </actions>
+                <event-group collapsed="1" description="" sid="7051194549149644" title="Notification box">
                     <sub-events>
-                        <event-block sid="2443003121445401">
+                        <event-block sid="4008492876518852">
                             <conditions>
+                                <condition id="-2" name="On start of layout" sid="2614558667678372" type="System" />
                                 <condition id="-8" name="Is boolean instance variable set" sid="1740071637189476" type="txtNotifications">
                                     <param id="0" name="Instance variable">grand</param>
                                 </condition>
@@ -639,10 +679,125 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="1230529723461663">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2690118603809105" type="notificationBox">
+                                    <param id="0" name="Instance variable">ouverte</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="2335230733173366" type="notificationBox">
+                                    <param id="0" name="Height">lerp(notificationBox.Height, screen.Height, 0.2)</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="5248047263717285" type="txtNotifications">
+                                    <param id="0" name="Height">lerp(txtNotifications.Height, screen.Height, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9256392490111727">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4182422587160907" type="notificationBox">
+                                    <param id="0" name="Instance variable">ouverte</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="2271114065119186" type="notificationBox">
+                                    <param id="0" name="Height">lerp(notificationBox.Height, 73, 0.2)</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="129026006207576" type="txtNotifications">
+                                    <param id="0" name="Height">lerp(txtNotifications.Height, 66, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="3306952286666225">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="3199464399313145" type="Touch">
+                                    <param id="0" name="Object">notificationBox</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3310808169397982">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7854924857770561" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5572289705858641" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3228668079021772">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="6064968522936261" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="9860001046856851" type="txtNotifications">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2870772467017314">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143655051395795" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="4697917754665632" type="txtNotifications">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="7850291712389564">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5540295360199629" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="866303902294505" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8252794892255349">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="5291673362194709" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="3593734442279792" type="txtNotifications">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6986068898036857">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6683865256677001" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="6193827089382902" type="txtNotifications">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <comment>Vide la textbox, et push la nouvelle notification</comment>
-                <event-block sid="3297061255133494">
+                </event-group>
+                <event-block collapsed="1" sid="3297061255133494">
                     <conditions>
                         <condition id="0" name="On function" sid="9779909940571391" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -650,6 +805,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Vide la textbox, et push la nouvelle notification</comment>
                         <event-block sid="8681305054990883">
                             <conditions>
                                 <condition id="1" name="Compare parameter" sid="3949063803916931" type="Function">
@@ -714,122 +870,6 @@
                                     <param id="0" name="Text">notifications.CurValue &amp; newline</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="1230529723461663">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2690118603809105" type="notificationBox">
-                            <param id="0" name="Instance variable">ouverte</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-6" name="Set height" sid="2335230733173366" type="notificationBox">
-                            <param id="0" name="Height">lerp(notificationBox.Height, screen.Height, 0.2)</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="5248047263717285" type="txtNotifications">
-                            <param id="0" name="Height">lerp(txtNotifications.Height, screen.Height, 0.2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9256392490111727">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4182422587160907" type="notificationBox">
-                            <param id="0" name="Instance variable">ouverte</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-6" name="Set height" sid="2271114065119186" type="notificationBox">
-                            <param id="0" name="Height">lerp(notificationBox.Height, 73, 0.2)</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="129026006207576" type="txtNotifications">
-                            <param id="0" name="Height">lerp(txtNotifications.Height, 66, 0.2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3306952286666225">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="3199464399313145" type="Touch">
-                            <param id="0" name="Object">notificationBox</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="3310808169397982">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7854924857770561" type="notificationBox">
-                                    <param id="0" name="Instance variable">ouverte</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="5572289705858641" type="notificationBox">
-                                    <param id="0" name="Instance variable">ouverte</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="3228668079021772">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="6064968522936261" type="txtNotifications">
-                                            <param id="0" name="Instance variable">grand</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="9860001046856851" type="txtNotifications">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="2870772467017314">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143655051395795" type="txtNotifications">
-                                            <param id="0" name="Instance variable">grand</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="4697917754665632" type="txtNotifications">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="7850291712389564">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5540295360199629" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="866303902294505" type="notificationBox">
-                                    <param id="0" name="Instance variable">ouverte</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="8252794892255349">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="5291673362194709" type="txtNotifications">
-                                            <param id="0" name="Instance variable">grand</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="3593734442279792" type="txtNotifications">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="6986068898036857">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6683865256677001" type="txtNotifications">
-                                            <param id="0" name="Instance variable">grand</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="6193827089382902" type="txtNotifications">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1079,48 +1119,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
-            <sub-events>
-                <event-block sid="7604520539040787">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="9202097605480088" type="System">
-                            <param id="0" name="Interval (seconds)">60</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-36" name="Save" sid="6282600037916136" type="System">
-                            <param id="0" name="Slot">&quot;mysave&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="4501332724436306" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Saving in progress...&quot;{###}&quot;nobr&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1585622187687725">
-                    <conditions>
-                        <condition id="-28" name="On save complete" sid="5213636866070556" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="9488686038622572" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2349786055396418">
-                    <conditions>
-                        <condition id="-29" name="On load complete" sid="6025335682815054" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="171037476735454" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Loading successful&quot;</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -1469,7 +1469,7 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.899999976</opacity>
                     </world>
                 </instance>
                 <instance type="txtNotifications" uid="36">
@@ -1545,6 +1545,13 @@
     <nonworld-instances>
         <instance type="Date" uid="0" />
         <instance type="notifications" uid="33">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="sillyMessages" uid="50">
             <properties>
                 <width>10</width>
                 <height>1</height>
