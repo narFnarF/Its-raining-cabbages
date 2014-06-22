@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="5124844430050604">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1925549236185755" type="ok" />
+                <condition id="-8" name="Compare two values" sid="1807020968835942" type="System">
+                    <param id="0" name="First value">trim(inputBox.Text)</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="7490617237929796" type="sillyMessages">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Value">trim(inputBox.Text)</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="0" name="Call function" sid="9170270633709217" type="Function">
+                    <param id="0" name="Name">&quot;reload list&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="8064868882213027" type="inputBox">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="6" name="Set focused" sid="8098234063151226" type="inputBox" />
+            </actions>
+        </event-block>
+        <event-block sid="6347667982938746">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9501194046090256" type="download" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4206560830839336">
+                    <conditions>
+                        <condition id="-32" name="Is on platform" sid="1759880966035124" type="System">
+                            <param id="0" name="Platform">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Download" sid="7889788809474526" type="sillyMessages">
+                            <param id="0" name="Filename">&quot;data.json&quot;</param>
+                        </action>
+                        <action disabled="1" id="0" name="Alert" sid="4013090327308007" type="Browser">
+                            <param id="0" name="Message">&quot;html5&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="261361341469341">
+                    <conditions>
+                        <condition id="-32" name="Is on platform" sid="9273497691723566" type="System">
+                            <param id="0" name="Platform">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Alert" sid="1407611797842838" type="Browser">
+                            <param id="0" name="Message">&quot;app&quot;</param>
+                        </action>
+                        <action id="8" name="Show save dialog" sid="4736443381677763" type="NodeWebkit">
+                            <param id="0" name="Accept">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1315232919707721">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2904135508589573" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1416580694405403" type="output">
+                    <param id="0" name="Text">sillyMessages.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8322853032275808">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9274085044790261" type="delete" />
+                <condition id="0" inverted="1" name="Compare selection" sid="4139780269237172" type="List">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Index">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Delete" sid="5201334140203261" type="sillyMessages">
+                    <param id="0" name="Index">sillyMessages.IndexOf(List.SelectedText)</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+                <action id="0" name="Call function" sid="5895296631233151" type="Function">
+                    <param id="0" name="Name">&quot;reload list&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2503328053739752">
+            <conditions>
+                <condition id="0" name="On function" sid="3838011435516275" type="Function">
+                    <param id="0" name="Name">&quot;reload list&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Clear" sid="5114165220839887" type="List" />
+                <action id="7" name="Add item" sid="7712381630770675" type="List">
+                    <param id="0" name="Text">&quot;(select)&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8593533014262517">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="2290861475580372" type="sillyMessages">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="1748805891729623" type="List">
+                            <param id="0" name="Text">sillyMessages.CurValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4666702436365159">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6983729799381063" type="LoadJSON" />
+                <condition id="-8" name="Compare two values" sid="1942691030328971" type="System">
+                    <param id="0" name="First value">trim(inputBox.Text)</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="8695760897597268" type="sillyMessages">
+                    <param id="0" name="JSON">trim( inputBox.Text )</param>
+                </action>
+                <action id="0" name="Set text" sid="8568811330214813" type="inputBox">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="928547854168275" type="Function">
+                    <param id="0" name="Name">&quot;reload list&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7889012243084095">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5425319173953193" type="copyToClipboard" />
+                <condition id="-32" name="Is on platform" sid="3938415772722533" type="System">
+                    <param id="0" name="Platform">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="27" name="Set clipboard text" sid="4915245304078814" type="NodeWebkit">
+                    <param id="0" name="Text">output.Text</param>
+                </action>
+                <action id="0" name="Alert" sid="4641872063917489" type="Browser">
+                    <param id="0" name="Message">&quot;Copied to clipboard&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2957054173417419">
+            <conditions>
+                <condition id="4" name="On save dialog OK" sid="7141622831780518" type="NodeWebkit" />
+            </conditions>
+            <actions>
+                <action id="0" name="Write file" sid="3216765599116728" type="NodeWebkit">
+                    <param id="0" name="Path">NodeWebkit.ChosenPath</param>
+                    <param id="1" name="Contents">sillyMessages.AsJSON</param>
+                </action>
+                <action id="0" name="Alert" sid="8932181985523117" type="Browser">
+                    <param id="0" name="Message">&quot;Saved to &quot; &amp; NodeWebkit.ChosenPath</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5951002564767455">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5633566639698525" type="loadFromFile" />
+            </conditions>
+            <actions>
+                <action id="6" name="Show open dialog" sid="2268602264475866" type="NodeWebkit">
+                    <param id="0" name="Accept">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685389871101309">
+            <conditions>
+                <condition id="2" name="On open dialog OK" sid="47423810263241" type="NodeWebkit" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8109679991461495" type="inputBox">
+                    <param id="0" name="Text">NodeWebkit.ReadFile(NodeWebkit.ChosenPath)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4140998171429941">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8634603708723623" type="clear" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="3144602660211545" type="sillyMessages">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8895630038485029" type="inputBox">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="3031478139515587" type="Function">
+                    <param id="0" name="Name">&quot;reload list&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

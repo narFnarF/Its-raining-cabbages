@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Array manager</name>
+    <description></description>
+    <version>v1</version>
+    <author>narF</author>
+    <author-email>narF@narF.ca</author-email>
+    <author-website>http://narF.ca</author-website>
+    <app-id>ca.narF.arrayManager</app-id>
+    <unique-id>3srysn5ca9fa7</unique-id>
+    <saved-with-version>17300</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">Node-Webkit</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>700</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">Node-Webkit</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-folder expanded="1" name="plugins">
+            <object-type name="Browser" sid="1841778613170698">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="2548297692191615">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="9392197967032403">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="NodeWebkit" sid="392748117871442">
+                <plugin id="NodeWebkit" />
+            </object-type>
+        </object-folder>
+        <object-type name="inputBox" sid="383449007500581">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type global="1" name="sillyMessages" sid="3772427203468817">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="ok" sid="1520313357163017">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text" sid="5517595104670231">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="download" sid="7124107603192646">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="List" sid="3804456010862512">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="LoadJSON" sid="6081256111019009">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="delete" sid="8826856009116357">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="output" sid="6702110063427604">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="copyToClipboard" sid="6775219204954826">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="loadFromFile" sid="1992745820075935">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="clear" sid="3080539369990441">
+            <plugin id="Button" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="6" />
+        <global-instance type="Function" uid="7" />
+        <global-instance type="Browser" uid="8" />
+        <global-instance type="NodeWebkit" uid="3" />
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
