@@ -2,7 +2,7 @@
 <c2layout>
     <name>gameplay</name>
     <sid>8873350371196689</sid>
-    <event-sheet>gameplay events</event-sheet>
+    <event-sheet>main</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>
@@ -195,6 +195,34 @@
                     <world>
                         <x>1633</x>
                         <y>487</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>960</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.100000001</opacity>
+                    </world>
+                </instance>
+                <instance type="screen" uid="51">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <number>4</number>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>978</x>
+                        <y>-537</y>
                         <z>0</z>
                         <width>640</width>
                         <height>960</height>
@@ -509,6 +537,62 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="arrow" uid="52">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <goto>4</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>949.946289063</x>
+                        <y>896.603088379</y>
+                        <z>0</z>
+                        <width>84</width>
+                        <height>92</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.441176474</hotspotY>
+                        <angle>-1.568058014</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrow" uid="53">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <goto>2</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>962.127685547</x>
+                        <y>-114.095703125</y>
+                        <z>0</z>
+                        <width>87</width>
+                        <height>92</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.441176474</hotspotY>
+                        <angle>1.563664317</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -607,8 +691,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>740</x>
-                        <y>1073</y>
+                        <x>747</x>
+                        <y>1066</y>
                         <z>0</z>
                         <width>37.788887024</width>
                         <height>35.089679718</height>
@@ -1036,8 +1120,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-99</x>
-                        <y>1231</y>
+                        <x>-200</x>
+                        <y>740</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -1199,6 +1283,97 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-1.124453664</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tamagotchi" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <name>Vérachou</name>
+                        <age>0</age>
+                        <animation>normal</animation>
+                        <hungry>4</hungry>
+                        <hungryMax>6</hungryMax>
+                        <hungryCounter>1000</hungryCounter>
+                        <hungryCounterMax>7200</hungryCounterMax>
+                        <energy>5</energy>
+                        <energyMax>5</energyMax>
+                        <energyCounter>0</energyCounter>
+                        <energyCounterMax>3600</energyCounterMax>
+                        <IQ>0</IQ>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>966</x>
+                        <y>-475</y>
+                        <z>0</z>
+                        <width>78</width>
+                        <height>79</height>
+                        <depth>0</depth>
+                        <hotspotX>0.461538464</hotspotX>
+                        <hotspotY>0.962025344</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tamagoStats" uid="55">
+                    <properties>
+                        <text>Tamagotchi stats</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>751</x>
+                        <y>-433</y>
+                        <z>0</z>
+                        <width>433</width>
+                        <height>223</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tamagoFeedBtn" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <energyCost>1</energyCost>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>-568</y>
+                        <z>0</z>
+                        <width>68.978256226</width>
+                        <height>68.978256226</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1420,6 +1595,36 @@
                         <z>0</z>
                         <width>433</width>
                         <height>292</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UIShit" uid="56">
+                    <properties>
+                        <text>Lorem Ipsum fucking big text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>670</x>
+                        <y>-918</y>
+                        <z>0</z>
+                        <width>433</width>
+                        <height>214</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

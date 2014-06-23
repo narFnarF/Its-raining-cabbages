@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tamagotchi</name>
+    <events>
+        <event-group description="" sid="8754673480950891" title="Temps">
+            <sub-events>
+                <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
+                <event-block sid="9512050473778214">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1860863763713713" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="4087588214860005" type="tamagotchi">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4345176056331216" type="tamagotchi">
+                            <param id="0" name="Instance variable">hungryCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="1784352281555666" type="tamagotchi">
+                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5630432467569522">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5216105380087696" type="Function">
+                            <param id="0" name="Name">&quot;long&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6282097893564611" type="System">
+                            <param id="0" name="Variable">deltaTime</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="2517044701390282" type="tamagotchi">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Value">deltaTime</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="8253461582700784" type="tamagotchi">
+                            <param id="0" name="Instance variable">hungryCounter</param>
+                            <param id="1" name="Value">deltaTime</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4916256050990617" type="tamagotchi">
+                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="1" name="Value">deltaTime</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3703682494449975">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5419852454937395" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungryCounter</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">tamagotchi.hungryCounterMax</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="2836054889359187" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungryCounter</param>
+                    <param id="1" name="Value">tamagotchi.hungryCounterMax</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="8301194686745903" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungry</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3439727451382907">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4660518827706128" type="tamagotchi">
+                    <param id="0" name="Instance variable">energyCounter</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">tamagotchi.energyCounterMax</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="5854992227875504" type="tamagotchi">
+                    <param id="0" name="Instance variable">energyCounter</param>
+                    <param id="1" name="Value">tamagotchi.energyCounterMax</param>
+                </action>
+                <action id="-11" name="Add to" sid="7601764559688248" type="tamagotchi">
+                    <param id="0" name="Instance variable">energy</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1319362704304816">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="444649422003241" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="300854537332919" type="tamagotchi">
+                    <param id="0" name="Animation">tamagotchi.animation</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8730127331567993" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungry</param>
+                    <param id="1" name="Value">clamp(tamagotchi.hungry, 0, tamagotchi.hungryMax)</param>
+                </action>
+                <action id="-10" name="Set value" sid="9986178807805716" type="tamagotchi">
+                    <param id="0" name="Instance variable">energy</param>
+                    <param id="1" name="Value">clamp(tamagotchi.energy, 0, tamagotchi.energyMax)</param>
+                </action>
+                <action id="0" name="Set text" sid="7950236982847891" type="tamagoStats">
+                    <param id="0" name="Text">tamagotchi.name &amp; &quot;&apos;s Stats:&quot; &amp; newline</param>
+                </action>
+                <action id="1" name="Append text" sid="6322905547913123" type="tamagoStats">
+                    <param id="0" name="Text">&quot;Age: &quot; &amp; floor(tamagotchi.age/60/60/24) &amp; &quot; days&quot; &amp; newline</param>
+                </action>
+                <action id="1" name="Append text" sid="4946838984776045" type="tamagoStats">
+                    <param id="0" name="Text">&quot;Hungry: &quot; &amp; tamagotchi.hungry &amp; &quot;/&quot; &amp; tamagotchi.hungryMax &amp; newline</param>
+                </action>
+                <action id="1" name="Append text" sid="925179766749205" type="tamagoStats">
+                    <param id="0" name="Text">&quot;IQ: &quot; &amp; tamagotchi.IQ &amp; newline</param>
+                </action>
+                <action id="1" name="Append text" sid="7429131338764678" type="tamagoStats">
+                    <param id="0" name="Text">&quot;Energy: &quot; &amp; tamagotchi.energy &amp; &quot;/&quot; &amp; tamagotchi.energyMax &amp; newline</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2332682831838649">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5592849802816032" type="Touch">
+                    <param id="0" name="Object">tamagoFeedBtn</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1207271925093749" type="System">
+                    <param id="0" name="First value">tamagotchi.energy</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">tamagoFeedBtn.energyCost</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="3043899067181655" type="System">
+                    <param id="0" name="First value">tamagotchi.hungry +1</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">tamagotchi.hungryMax</param>
+                </condition>
+                <condition disabled="1" id="-7" name="Compare instance variable" sid="183050610652043" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungry</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">tamagotchi.hungryMax-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="3605265059095567" type="tamagotchi">
+                    <param id="0" name="Instance variable">energy</param>
+                    <param id="1" name="Value">tamagoFeedBtn.energyCost</param>
+                </action>
+                <action id="-11" name="Add to" sid="8292539516744722" type="tamagotchi">
+                    <param id="0" name="Instance variable">hungry</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="14" name="Log" sid="8156571470161552" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">tamagotchi.PickedCount</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

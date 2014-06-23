@@ -172,7 +172,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="notifications">
+        <object-folder expanded="0" name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -284,7 +284,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="props">
+        <object-folder expanded="0" name="props">
             <object-type name="solidBloc" sid="3710229597765973">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -322,6 +322,47 @@
                     </behavior-type>
                 </behaviors>
                 <texture />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="tamagotchi">
+            <object-type name="tamagotchi" sid="345317527254927">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="2925477932496892" type="string" />
+                    <instance-variable name="age" sid="7317338424517423" type="number" />
+                    <instance-variable name="animation" sid="2342245633523666" type="string" />
+                    <instance-variable name="hungry" sid="6213101917915552" type="number" />
+                    <instance-variable name="hungryMax" sid="6946453867958305" type="number" />
+                    <instance-variable name="hungryCounter" sid="4521198605043197" type="number" />
+                    <instance-variable comment="2 hours" name="hungryCounterMax" sid="1201984919770812" type="number" />
+                    <instance-variable name="energy" sid="315820726766646" type="number" />
+                    <instance-variable name="energyMax" sid="9878480204033343" type="number" />
+                    <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
+                    <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
+                    <instance-variable name="IQ" sid="4269610420630433" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
+                        <frame duration="1" hotspotX="0.461538" hotspotY="0.962025" />
+                        <frame duration="1" hotspotX="0.472527" hotspotY="0.87037" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tamagoStats" sid="4291720361545455">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3569514873855026">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="tamagoFeedBtn" sid="1869117220261939">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8507912904868358" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="cabbage" sid="9209630044662387">
@@ -495,14 +536,24 @@
                 <instance-variable name="tooltipText" sid="1130508236957116" type="string" />
             </instance-variables>
         </family>
+        <family name="tamagoButtons" plugin-id="Sprite" sid="2082036991771531">
+            <members>
+                <member>tamagoFeedBtn</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="energyCost" sid="1507618704537177" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>gameplay.xml</layout>
         <layout>Intro.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>gameplay events.xml</event-sheet>
         <event-sheet>intro events.xml</event-sheet>
+        <event-sheet>tamagotchi.xml</event-sheet>
+        <event-sheet>main.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

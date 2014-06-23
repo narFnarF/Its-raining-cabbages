@@ -346,12 +346,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Spawn another object" sid="8512746536515936" type="cabbage">
+                        <action id="0" name="Spawn another object" sid="8512746536515936" type="cabbage">
                             <param id="0" name="Object">waterParticles</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action disabled="1" id="-8" name="Set angle" sid="2743520051919777" type="waterParticles">
+                        <action id="-8" name="Set angle" sid="2743520051919777" type="waterParticles">
                             <param id="0" name="Angle">-90</param>
                         </action>
                         <action id="-9" name="Destroy" sid="192578142204367" type="cabbage" />
@@ -634,7 +634,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3758003106738181" title="Notifications">
+        <event-group collapsed="1" description="" sid="3758003106738181" title="Notifications">
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
@@ -946,6 +946,10 @@
                                     <param id="0" name="Variable">totalTime</param>
                                     <param id="1" name="Value">deltaTime</param>
                                 </action>
+                                <action id="0" name="Call function" sid="6298881922052676" type="Function">
+                                    <param id="0" name="Name">&quot;long&quot;</param>
+                                    <param id="1" name="Parameter {n}">deltaTime</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -993,7 +997,8 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="5490210380852038">
+                <comment>Debug shortcut</comment>
+                <event-block collapsed="1" sid="5490210380852038">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="4926763517407425" type="System" />
                     </conditions>
