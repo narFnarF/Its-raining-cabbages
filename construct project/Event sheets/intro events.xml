@@ -71,5 +71,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="5697039993662718">
+            <conditions>
+                <condition id="-30" name="On load failed" sid="295083211596474" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="6548049828311696" type="Browser">
+                    <param id="0" name="Message">&quot;There&apos;s problem with your savefile. Sorry, you&apos;ll have to create a new game. The game is in early production, so you should expect this to happen with every new version. I&apos;m really sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
