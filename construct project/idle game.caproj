@@ -54,7 +54,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="plugins">
+        <object-folder expanded="0" name="plugins">
             <object-type name="Browser" sid="5129043714455325">
                 <plugin id="Browser" />
             </object-type>
@@ -134,16 +134,20 @@
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="cabbages" sid="1205103854269568" type="number" />
-                    <instance-variable name="maxStorage" sid="6992621492704183" type="number" />
+                    <instance-variable name="inputCabbages" sid="1205103854269568" type="number" />
+                    <instance-variable name="maxInputCapacity" sid="6992621492704183" type="number" />
+                    <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
-                    <instance-variable name="price" sid="603673640481284" type="number" />
-                    <instance-variable name="speed" sid="4558002097740508" type="number" />
                     <instance-variable name="timerLength" sid="6847551949910904" type="number" />
+                    <instance-variable name="speed" sid="4558002097740508" type="number" />
                     <instance-variable name="convertedInLastMinute" sid="6853493073040225" type="number" />
                     <instance-variable name="currentProductionPerMinute" sid="5311232562546029" type="number" />
                 </instance-variables>
+                <container>
+                    <type>factory</type>
+                    <type>factoryNotification</type>
+                </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
                         <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
@@ -170,6 +174,19 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="factoryNotification" sid="3803439497545899">
+                <plugin id="Sprite" />
+                <container>
+                    <type>factory</type>
+                    <type>factoryNotification</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.629268" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="notifications">
@@ -207,7 +224,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="UI">
+        <object-folder expanded="0" name="UI">
             <object-type name="arrow" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -324,7 +341,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="tamagotchi">
+        <object-folder expanded="0" name="tamagotchi">
             <object-type name="tamagotchi" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>

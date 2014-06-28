@@ -996,8 +996,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-177</x>
-                        <y>862</y>
+                        <x>179</x>
+                        <y>761</y>
                         <z>0</z>
                         <width>14</width>
                         <height>13</height>
@@ -1016,13 +1016,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <cabbages>0</cabbages>
-                        <maxStorage>5</maxStorage>
+                        <inputCabbages>0</inputCabbages>
+                        <maxInputCapacity>5</maxInputCapacity>
+                        <outputSalads>0</outputSalads>
                         <productivity>1</productivity>
                         <timer>0</timer>
-                        <price>1</price>
-                        <speed>1</speed>
                         <timerLength>10</timerLength>
+                        <speed>1</speed>
                         <convertedInLastMinute>0</convertedInLastMinute>
                         <currentProductionPerMinute>0</currentProductionPerMinute>
                     </instance-variables>
@@ -1050,7 +1050,7 @@
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
+                        <wrapping>Character</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <behavior-instances>
@@ -1373,6 +1373,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="factoryNotification" uid="65">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>332</x>
+                        <y>706</y>
+                        <z>0</z>
+                        <width>56.69430542</width>
+                        <height>101.950286865</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502439022</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

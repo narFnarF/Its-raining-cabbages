@@ -30,7 +30,7 @@
                 <event-block sid="5630432467569522">
                     <conditions>
                         <condition id="0" name="On function" sid="5216105380087696" type="Function">
-                            <param id="0" name="Name">&quot;long&quot;</param>
+                            <param id="0" name="Name">&quot;user is back&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
