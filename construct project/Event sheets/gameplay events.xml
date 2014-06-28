@@ -408,7 +408,7 @@
                             <param id="0" name="Text">&quot;Cucumbers cut lenghtwise: &quot; &amp; 0 &amp; newline</param>
                         </action>
                         <action id="1" name="Append text" sid="7094839605858453" type="UIShit">
-                            <param id="0" name="Text">&quot;Salads per minute: &quot; &amp; round(factory.productionPerSeconds*60) &amp; newline</param>
+                            <param id="0" name="Text">&quot;Salads per minute: &quot; &amp; round(factory.currentProductionPerMinute) &amp; newline</param>
                         </action>
                     </actions>
                 </event-block>
@@ -564,7 +564,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2599602954484774" title="factory">
+        <event-group description="" sid="2599602954484774" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -593,6 +593,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-11" name="Add to" sid="3226974522644266" type="factory">
+                            <param id="0" name="Instance variable">convertedInLastMinute</param>
+                            <param id="1" name="Value">min(factory.productivity, factory.cabbages)</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="4127942007554423" type="factory">
                             <param id="0" name="Object">plus1</param>
                             <param id="1" name="Layer">&quot;game&quot;</param>
@@ -612,10 +616,6 @@
                         <action id="-10" name="Set value" sid="6717610270941805" type="factory">
                             <param id="0" name="Instance variable">timer</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="9572798011611594" type="factory">
-                            <param id="0" name="Instance variable">nbTimesActivatedThisMinute</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -875,7 +875,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking">
+        <event-group description="" sid="2726329761105019" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>
@@ -923,11 +923,11 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="4557968347485927" type="System">
                                     <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">round( factory.productionPerSeconds * deltaTime )</param>
+                                    <param id="1" name="Value">round( factory.currentProductionPerMinute/60 * deltaTime )</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9008356441449291" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;You were gone for &quot; &amp; deltaTime &amp; &quot; seconds.&quot; &amp; newline &amp; &quot;You produced &quot; &amp; round( factory.productionPerSeconds * deltaTime ) &amp; &quot; salads during your absence.&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;You were gone for &quot; &amp; deltaTime &amp; &quot; seconds.&quot; &amp; newline &amp; &quot;You produced &quot; &amp; round( factory.currentProductionPerMinute/60 * deltaTime ) &amp; &quot; salads during your absence.&quot;</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="9112068711656747" type="cabbage" />
                                 <action id="-3" name="Set position" sid="4204848102630081" type="bee">
@@ -970,27 +970,27 @@
                         <event-block sid="7501014718838966">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4207835167342868" type="System">
-                                    <param id="0" name="First value">factory.nbTimesActivatedThisMinute * factory.productivity /60</param>
+                                    <param id="0" name="First value">factory.convertedInLastMinute</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">factory.productionPerSeconds</param>
+                                    <param id="2" name="Second value">factory.currentProductionPerMinute</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="545778202321373" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Whoohoo! Your improvements now produce &quot; &amp;  factory.productionPerSeconds*60  &amp; &quot; salads per minute.&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Whoohoo! Your improvements now produce &quot; &amp;  factory.convertedInLastMinute  &amp; &quot; salads per minute.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="907143506829863">
                             <conditions />
                             <actions>
-                                <action id="-10" name="Set value" sid="4110951995769523" type="factory">
-                                    <param id="0" name="Instance variable">productionPerSeconds</param>
-                                    <param id="1" name="Value">factory.nbTimesActivatedThisMinute * factory.productivity /60</param>
+                                <action id="-10" name="Set value" sid="9197125425490681" type="factory">
+                                    <param id="0" name="Instance variable">currentProductionPerMinute</param>
+                                    <param id="1" name="Value">factory.convertedInLastMinute</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="2037816865390782" type="factory">
-                                    <param id="0" name="Instance variable">nbTimesActivatedThisMinute</param>
+                                <action id="-10" name="Set value" sid="4636080341873149" type="factory">
+                                    <param id="0" name="Instance variable">convertedInLastMinute</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -1129,7 +1129,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="6204455573469562" title="Store">
             <sub-events>
-                <event-group description="" sid="3529658980017324" title="update store buttons function">
+                <event-group collapsed="1" description="" sid="3529658980017324" title="update store buttons function">
                     <sub-events>
                         <event-block sid="5015864478203848">
                             <conditions>
@@ -1285,7 +1285,27 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block collapsed="1" sid="1373537816387478">
+                                <event-block sid="4479922774084822">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2799326765194787" type="btnBee">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Bee speed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="1628568381434662" type="bee">
+                                            <param id="0" name="Instance variable">numéro</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">btnBee.beeNb</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="2833933313867365" type="bee">
+                                            <param id="0" name="Instance variable">speed</param>
+                                            <param id="1" name="Value">0.01</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1373537816387478">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="7868044164676858" type="btnBee">
                                             <param id="0" name="Instance variable">type</param>
@@ -1363,27 +1383,6 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <event-block sid="4479922774084822">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="5347716867569672" type="System" />
-                                        <condition id="-7" name="Compare instance variable" sid="2799326765194787" type="btnBee">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Bee speed&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="1628568381434662" type="bee">
-                                            <param id="0" name="Instance variable">numéro</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">btnBee.beeNb</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-11" name="Add to" sid="2833933313867365" type="bee">
-                                            <param id="0" name="Instance variable">speed</param>
-                                            <param id="1" name="Value">0.01</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                                 <event-block sid="6370667092449423">
                                     <conditions />
@@ -1473,7 +1472,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="3088460644845565">
+                        <event-block sid="3088460644845565">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="7776650535697001" type="Touch">
                                     <param id="0" name="Object">btnUpgrade</param>
@@ -1509,7 +1508,7 @@
                                             <param id="0" name="Instance variable">maxStorage</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-11" name="Add to" sid="4145194181882132" type="factory">
+                                        <action disabled="1" id="-11" name="Add to" sid="4145194181882132" type="factory">
                                             <param id="0" name="Instance variable">timerLength</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -1534,7 +1533,7 @@
                                         </action>
                                         <action id="-11" name="Add to" sid="7769195329742967" type="factory">
                                             <param id="0" name="Instance variable">timerLength</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
                                         <action id="0" name="Call function" sid="91392510580881" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -1576,7 +1575,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-group description="" sid="6288693740494948" title="cabbage icon">
+                        <event-group collapsed="1" description="" sid="6288693740494948" title="cabbage icon">
                             <sub-events>
                                 <comment>Create a cabbage icon for each button, and save the UID of the cabbages</comment>
                                 <event-block sid="3964708812298284">

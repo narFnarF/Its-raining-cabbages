@@ -130,7 +130,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -138,11 +138,11 @@
                     <instance-variable name="maxStorage" sid="6992621492704183" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
-                    <instance-variable comment="Number of time that the factory produced something, in the last 60 seconds" name="nbTimesActivatedThisMinute" sid="1401889563010287" type="number" />
-                    <instance-variable comment="averaged from the last 60 seconds" name="productionPerSeconds" sid="3603915098265743" type="number" />
                     <instance-variable name="price" sid="603673640481284" type="number" />
                     <instance-variable name="speed" sid="4558002097740508" type="number" />
                     <instance-variable name="timerLength" sid="6847551949910904" type="number" />
+                    <instance-variable name="convertedInLastMinute" sid="6853493073040225" type="number" />
+                    <instance-variable name="currentProductionPerMinute" sid="5311232562546029" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">

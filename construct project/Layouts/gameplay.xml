@@ -726,7 +726,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1376</x>
+                        <x>1382</x>
                         <y>357</y>
                         <z>0</z>
                         <width>515</width>
@@ -761,7 +761,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1373</x>
+                        <x>1382</x>
                         <y>478</y>
                         <z>0</z>
                         <width>515</width>
@@ -796,7 +796,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1375</x>
+                        <x>1382</x>
                         <y>598</y>
                         <z>0</z>
                         <width>515</width>
@@ -831,7 +831,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1370</x>
+                        <x>1382</x>
                         <y>719</y>
                         <z>0</z>
                         <width>515</width>
@@ -1020,11 +1020,11 @@
                         <maxStorage>5</maxStorage>
                         <productivity>1</productivity>
                         <timer>0</timer>
-                        <nbTimesActivatedThisMinute>0</nbTimesActivatedThisMinute>
-                        <productionPerSeconds>0</productionPerSeconds>
                         <price>1</price>
                         <speed>1</speed>
                         <timerLength>10</timerLength>
+                        <convertedInLastMinute>0</convertedInLastMinute>
+                        <currentProductionPerMinute>0</currentProductionPerMinute>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
