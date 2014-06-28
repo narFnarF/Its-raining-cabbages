@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description></description>
-    <version>r103</version>
+    <version>r104</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -54,7 +54,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="plugins">
+        <object-folder expanded="1" name="plugins">
             <object-type name="Browser" sid="5129043714455325">
                 <plugin id="Browser" />
             </object-type>

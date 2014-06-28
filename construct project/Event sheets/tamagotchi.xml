@@ -160,6 +160,10 @@
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">tamagotchi.PickedCount</param>
                 </action>
+                <action disabled="1" id="14" name="Log" sid="1016314763912502" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">tamagotchi.PickedCount</param>
+                </action>
             </actions>
         </event-block>
     </events>
