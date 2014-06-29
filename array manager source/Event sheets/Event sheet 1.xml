@@ -213,5 +213,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="2756206055567905">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="7795307480581326" type="List" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9871206700794016" type="inputBox">
+                    <param id="0" name="Text">List.SelectedText</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

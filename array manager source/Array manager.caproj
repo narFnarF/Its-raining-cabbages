@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">Node-Webkit</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
     </used-plugins>
     <used-behaviors />
@@ -68,9 +67,6 @@
         </object-type>
         <object-type name="ok" sid="1520313357163017">
             <plugin id="Button" />
-        </object-type>
-        <object-type name="Text" sid="5517595104670231">
-            <plugin id="Text" />
         </object-type>
         <object-type name="download" sid="7124107603192646">
             <plugin id="Button" />
