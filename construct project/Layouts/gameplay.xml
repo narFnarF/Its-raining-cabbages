@@ -1286,7 +1286,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="tamagotchi" uid="54">
+                <instance type="verachou" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1298,20 +1298,23 @@
                         <age>0</age>
                         <animation>normal</animation>
                         <hungry>4</hungry>
-                        <hungryMax>6</hungryMax>
+                        <hungryMax>4</hungryMax>
                         <hungryCounter>1000</hungryCounter>
-                        <hungryCounterMax>7200</hungryCounterMax>
+                        <hungryCounterMax>3600</hungryCounterMax>
                         <energy>5</energy>
                         <energyMax>5</energyMax>
                         <energyCounter>0</energyCounter>
-                        <energyCounterMax>3600</energyCounterMax>
+                        <energyCounterMax>900</energyCounterMax>
                         <IQ>0</IQ>
+                        <IQmax>8</IQmax>
+                        <IQCounter>0</IQCounter>
+                        <IQCounterMax>3600</IQCounterMax>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>966</x>
-                        <y>-475</y>
+                        <x>961</x>
+                        <y>-328</y>
                         <z>0</z>
                         <width>78</width>
                         <height>79</height>
@@ -1322,37 +1325,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="tamagoStats" uid="55">
-                    <properties>
-                        <text>Tamagotchi stats</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>751</x>
-                        <y>-433</y>
-                        <z>0</z>
-                        <width>433</width>
-                        <height>223</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="tamagoFeedBtn" uid="63">
+                <instance type="verachouFeedBtn" uid="63">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1365,11 +1338,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>735</x>
-                        <y>-568</y>
+                        <x>1233</x>
+                        <y>-743</y>
                         <z>0</z>
-                        <width>68.978256226</width>
-                        <height>68.978256226</height>
+                        <width>105</width>
+                        <height>103</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1395,6 +1368,610 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.502439022</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>off</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                        <type>hungry</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>858</x>
+                        <y>-754</y>
+                        <z>0</z>
+                        <width>65.883987427</width>
+                        <height>73.204437256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="66">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>2</nb>
+                        <type>hungry</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>947</x>
+                        <y>-753</y>
+                        <z>0</z>
+                        <width>65.883987427</width>
+                        <height>73.204437256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="67">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>3</nb>
+                        <type>hungry</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1035</x>
+                        <y>-753</y>
+                        <z>0</z>
+                        <width>65.883987427</width>
+                        <height>73.204437256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="68">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>4</nb>
+                        <type>hungry</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1124</x>
+                        <y>-753</y>
+                        <z>0</z>
+                        <width>65.883987427</width>
+                        <height>73.204437256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txtLabel" uid="69">
+                    <properties>
+                        <text>Hungry</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-40,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>665</x>
+                        <y>-780</y>
+                        <z>0</z>
+                        <width>149</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="71">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>850.341430664</x>
+                        <y>-618.103515625</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="72">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>off</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>3</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>939.341430664</x>
+                        <y>-617.103515625</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="73">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>5</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1027.341308594</x>
+                        <y>-617.103515625</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="74">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>7</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1116.341308594</x>
+                        <y>-617.103515625</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txtLabel" uid="75">
+                    <properties>
+                        <text>IQ</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-40,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>712</x>
+                        <y>-613</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="76">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>2</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>853</x>
+                        <y>-558</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="77">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>4</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>942</x>
+                        <y>-557</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="78">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>6</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1030</x>
+                        <y>-557</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="79">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>8</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1119</x>
+                        <y>-557</y>
+                        <z>0</z>
+                        <width>46.8998909</width>
+                        <height>52.110992432</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouStudyBtn" uid="80">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <energyCost>1</energyCost>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1233</x>
+                        <y>-584</y>
+                        <z>0</z>
+                        <width>105</width>
+                        <height>103</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txtLabel" uid="70">
+                    <properties>
+                        <text>Energy</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-40,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>665</x>
+                        <y>-912</y>
+                        <z>0</z>
+                        <width>149</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEnergy" uid="81">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>877</x>
+                        <y>-882</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509009004</hotspotX>
+                        <hotspotY>0.819999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEnergy" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>off</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>2</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>967</x>
+                        <y>-882</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509009004</hotspotX>
+                        <hotspotY>0.819999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEnergy" uid="83">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>3</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1057</x>
+                        <y>-882</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509009004</hotspotX>
+                        <hotspotY>0.819999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEnergy" uid="84">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>4</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1147</x>
+                        <y>-882</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509009004</hotspotX>
+                        <hotspotY>0.819999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEnergy" uid="85">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>5</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1237</x>
+                        <y>-882</y>
+                        <z>0</z>
+                        <width>77</width>
+                        <height>27</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509009004</hotspotX>
+                        <hotspotY>0.819999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnergyTimerTxt" uid="86">
+                    <properties>
+                        <text>128 sec.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-24,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1076</x>
+                        <y>-873</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>46</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lightSwitch" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>on</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <turnedOn>true</turnedOn>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>733</x>
+                        <y>-331</y>
+                        <z>0</z>
+                        <width>106.995330811</width>
+                        <height>106.995330811</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1479,7 +2056,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIShit" uid="28">
+                <instance type="globalStats" uid="28">
                     <properties>
                         <text>Lorem Ipsum fucking big text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1509,7 +2086,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIShit" uid="26">
+                <instance type="globalStats" uid="26">
                     <properties>
                         <text>Lorem Ipsum fucking big text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1594,7 +2171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIShit" uid="19">
+                <instance type="globalStats" uid="19">
                     <properties>
                         <text>Lorem Ipsum fucking big text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1624,13 +2201,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIShit" uid="56">
+                <instance type="verachouStats" uid="55">
                     <properties>
-                        <text>Lorem Ipsum fucking big text</text>
+                        <text>Tamagotchi stats</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1642,11 +2219,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>670</x>
-                        <y>-918</y>
+                        <x>761</x>
+                        <y>-896</y>
                         <z>0</z>
                         <width>433</width>
-                        <height>214</height>
+                        <height>223</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

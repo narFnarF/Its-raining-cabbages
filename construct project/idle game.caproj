@@ -113,6 +113,48 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnBee" sid="5490029273198872">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="type" sid="4003687732661722" type="string" />
+                    <instance-variable name="beeNb" sid="7230698741477582" type="number" />
+                    <instance-variable name="price" sid="9467765411504432" type="number" />
+                    <instance-variable name="priceMutiplicator" sid="1536403289043156" type="number" />
+                    <instance-variable name="priceAdditor" sid="4298812065567865" type="number" />
+                    <instance-variable name="itsCabbageId" sid="6790518584655663" type="number" />
+                </instance-variables>
+                <container>
+                    <type>btnBee</type>
+                    <type>btnBeeBack</type>
+                </container>
+            </object-type>
+            <object-type name="btnBeeBack" sid="6009999432359583">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5184238594130307">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>btnBee</type>
+                    <type>btnBeeBack</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="bee spawn" x="0.516" y="0.7" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="buyBeesButton" sid="8260176431510501">
+                <plugin id="Button" />
+                <instance-variables>
+                    <instance-variable name="price" sid="8032522824403215" type="number" />
+                    <instance-variable name="text" sid="382682042274087" type="string" />
+                    <instance-variable name="beeNb" sid="8354818448560706" type="number" />
+                </instance-variables>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="textboxes">
             <object-type name="plus1" sid="9026095487772363">
@@ -130,7 +172,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -185,6 +227,39 @@
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
                         <frame duration="1" hotspotX="0.508772" hotspotY="0.629268" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnUpgrade" sid="3947049937687157">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="type" sid="6915415841375174" type="string" />
+                    <instance-variable name="price" sid="5950407521339703" type="number" />
+                    <instance-variable name="priceMutiplicator" sid="159484438039128" type="number" />
+                    <instance-variable name="priceAdditor" sid="7885002291117093" type="number" />
+                    <instance-variable name="itsCabbageId" sid="7581341157815091" type="number" />
+                </instance-variables>
+                <container>
+                    <type>btnUpgrade</type>
+                    <type>btnUpgradeBack</type>
+                </container>
+            </object-type>
+            <object-type name="btnUpgradeBack" sid="2766913013001252">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3565957130775504">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>btnUpgrade</type>
+                    <type>btnUpgradeBack</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="bee spawn" x="0.516" y="0.7" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -276,7 +351,7 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="UIShit" sid="1716407423504638">
+            <object-type name="globalStats" sid="1716407423504638">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="6792969353378058">
@@ -341,8 +416,8 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="tamagotchi">
-            <object-type name="tamagotchi" sid="345317527254927">
+        <object-folder expanded="1" name="verachou">
+            <object-type name="verachou" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="name" sid="2925477932496892" type="string" />
@@ -357,6 +432,9 @@
                     <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
                     <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
                     <instance-variable name="IQ" sid="4269610420630433" type="number" />
+                    <instance-variable name="IQmax" sid="6774559943169333" type="number" />
+                    <instance-variable name="IQCounter" sid="7779685056698707" type="number" />
+                    <instance-variable name="IQCounterMax" sid="3486132832093965" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
@@ -365,7 +443,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="tamagoStats" sid="4291720361545455">
+            <object-type name="verachouStats" sid="4291720361545455">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="3569514873855026">
@@ -373,10 +451,64 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="tamagoFeedBtn" sid="1869117220261939">
+            <object-type name="verachouFeedBtn" sid="1869117220261939">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8507912904868358" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouStudyBtn" sid="6506717338388186">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1700243232574993" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouEnergy" sid="4891179448567307">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="1112557148176972" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="9290783877406575" speed="5">
+                        <frame duration="1" hotspotX="0.509009" hotspotY="0.82" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="2475857233106956" speed="5">
+                        <frame duration="1" hotspotX="0.509009" hotspotY="0.82" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="heart" sid="1244228769241016">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="1867126846187975" type="number" />
+                    <instance-variable name="type" sid="8525387831059956" type="string" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="5656164001952044" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.431579" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="2886834824426518" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.431579" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="EnergyTimerTxt" sid="5340654386194916">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="lightSwitch" sid="561888425972263">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="turnedOn" sid="3718597580846417" type="boolean" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="8727848375741922" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="8956037132713342" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -444,47 +576,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="buyBeesButton" sid="8260176431510501">
-            <plugin id="Button" />
-            <instance-variables>
-                <instance-variable name="price" sid="8032522824403215" type="number" />
-                <instance-variable name="text" sid="382682042274087" type="string" />
-                <instance-variable name="beeNb" sid="8354818448560706" type="number" />
-            </instance-variables>
-        </object-type>
-        <object-type name="btnUpgrade" sid="3947049937687157">
-            <plugin id="Text" />
-            <instance-variables>
-                <instance-variable name="type" sid="6915415841375174" type="string" />
-                <instance-variable name="price" sid="5950407521339703" type="number" />
-                <instance-variable name="priceMutiplicator" sid="159484438039128" type="number" />
-                <instance-variable name="priceAdditor" sid="7885002291117093" type="number" />
-                <instance-variable name="itsCabbageId" sid="7581341157815091" type="number" />
-            </instance-variables>
-            <container>
-                <type>btnUpgrade</type>
-                <type>btnUpgradeBack</type>
-            </container>
-        </object-type>
-        <object-type name="btnUpgradeBack" sid="2766913013001252">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="NoSave" sid="3565957130775504">
-                    <behavior id="NoSave" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>btnUpgrade</type>
-                <type>btnUpgradeBack</type>
-            </container>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <image-point name="bee spawn" x="0.516" y="0.7" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="cabbageIcon" sid="4395305785758166">
             <plugin id="Sprite" />
             <behaviors>
@@ -509,40 +600,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="btnBee" sid="5490029273198872">
-            <plugin id="Text" />
-            <instance-variables>
-                <instance-variable name="type" sid="4003687732661722" type="string" />
-                <instance-variable name="beeNb" sid="7230698741477582" type="number" />
-                <instance-variable name="price" sid="9467765411504432" type="number" />
-                <instance-variable name="priceMutiplicator" sid="1536403289043156" type="number" />
-                <instance-variable name="priceAdditor" sid="4298812065567865" type="number" />
-                <instance-variable name="itsCabbageId" sid="6790518584655663" type="number" />
-            </instance-variables>
-            <container>
-                <type>btnBee</type>
-                <type>btnBeeBack</type>
-            </container>
-        </object-type>
-        <object-type name="btnBeeBack" sid="6009999432359583">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="NoSave" sid="5184238594130307">
-                    <behavior id="NoSave" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>btnBee</type>
-                <type>btnBeeBack</type>
-            </container>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <image-point name="bee spawn" x="0.516" y="0.7" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="hasTooltip" plugin-id="Sprite" sid="7905734791955215">
@@ -555,7 +612,8 @@
         </family>
         <family name="tamagoButtons" plugin-id="Sprite" sid="2082036991771531">
             <members>
-                <member>tamagoFeedBtn</member>
+                <member>verachouFeedBtn</member>
+                <member>verachouStudyBtn</member>
             </members>
             <instance-variables>
                 <instance-variable name="energyCost" sid="1507618704537177" type="number" />

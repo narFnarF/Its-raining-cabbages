@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplay events</name>
     <events>
-        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[11,1,1],&quot;data&quot;:[[[&quot;The NSA is spying on what you are doing in this game.&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;Is this the thing they call \&quot;art\&quot;?&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
+        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[11,1,1],&quot;data&quot;:[[[&quot;Is this art or fart?&quot;]],[[&quot;The NSA is spying on what you are doing in this game.&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
         <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
         <variable constant="0" name="saladsCollectedThisMinute" sid="6393007018642754" static="0" type="number">0</variable>
         <event-block sid="6829102839958492">
@@ -395,19 +395,19 @@
                 <event-block sid="3071285974674716">
                     <conditions />
                     <actions>
-                        <action id="0" name="Set text" sid="4370277178457741" type="UIShit">
+                        <action id="0" name="Set text" sid="4370277178457741" type="globalStats">
                             <param id="0" name="Text">&quot;Salads: &quot; &amp; salads &amp; &quot; (coleslaw type)&quot; &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="1314502359725571" type="UIShit">
+                        <action id="1" name="Append text" sid="1314502359725571" type="globalStats">
                             <param id="0" name="Text">&quot;Bees: &quot; &amp; bee.Count &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="1482937127463452" type="UIShit">
+                        <action id="1" name="Append text" sid="1482937127463452" type="globalStats">
                             <param id="0" name="Text">&quot;Lions: &quot; &amp; 0 &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="4198186552769851" type="UIShit">
+                        <action id="1" name="Append text" sid="4198186552769851" type="globalStats">
                             <param id="0" name="Text">&quot;Cucumbers cut lenghtwise: &quot; &amp; 0 &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="7094839605858453" type="UIShit">
+                        <action id="1" name="Append text" sid="7094839605858453" type="globalStats">
                             <param id="0" name="Text">&quot;Salads per minute: &quot; &amp; round(factory.currentProductionPerMinute) &amp; newline</param>
                         </action>
                     </actions>
