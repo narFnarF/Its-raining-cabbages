@@ -375,6 +375,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="verachouDarkness" sid="2686922646626659">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="429013310828128">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806741008849285" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
             <object-type name="solidBloc" sid="3710229597765973">
@@ -605,6 +618,14 @@
                             <point x="0" y="0.461538" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="verachouSparkle" sid="1822700665624996">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339122616548337" speed="5">
+                    <frame duration="1" hotspotX="0.66" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
