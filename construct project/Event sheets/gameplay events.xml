@@ -23,10 +23,13 @@
         </event-block>
         <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
             <sub-events>
-                <event-block sid="7604520539040787">
+                <event-block any="1" sid="7604520539040787">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="9202097605480088" type="System">
                             <param id="0" name="Interval (seconds)">60</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="6824059852371036" type="Touch">
+                            <param id="0" name="Object">saveBtn</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -564,7 +567,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2599602954484774" title="factory">
+        <event-group collapsed="1" description="" sid="2599602954484774" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -946,7 +949,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2726329761105019" title="time tracking">
+        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>
@@ -1192,7 +1195,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="6204455573469562" title="Store">
             <sub-events>
-                <event-group collapsed="1" description="" sid="3529658980017324" title="update store buttons function">
+                <event-group collapsed="1" description="" sid="3529658980017324" title="function: update store buttons">
                     <sub-events>
                         <event-block sid="5015864478203848">
                             <conditions>
@@ -1312,7 +1315,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Set text" sid="6834870799646872" type="btnBee">
-                                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.numéro &amp; &quot; speed: Current: &quot; &amp; bee.speed &amp; newline &amp; &quot;Cost:     &quot; &amp; btnBee.price</param>
+                                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.numéro &amp; &quot; speed: Current: &quot; &amp; bee.speed*100 &amp; newline &amp; &quot;Cost:     &quot; &amp; btnBee.price</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1322,7 +1325,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="901981960933352" title="bee button">
+                <event-group collapsed="1" description="" sid="901981960933352" title="bee button">
                     <sub-events>
                         <event-block disabled="1" sid="5263809454682485">
                             <conditions>
@@ -1364,7 +1367,7 @@
                                     <actions>
                                         <action id="-11" name="Add to" sid="2833933313867365" type="bee">
                                             <param id="0" name="Instance variable">speed</param>
-                                            <param id="1" name="Value">0.01</param>
+                                            <param id="1" name="Value">0.005</param>
                                         </action>
                                     </actions>
                                 </event-block>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>spawned objects</name>
+    <sid>1520303894250391</sid>
+    <event-sheet></event-sheet>
+    <size>
+        <width>640</width>
+        <height>960</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0" sid="1707574892777851">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="cabbageIcon" uid="91">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159</x>
+                        <y>77</y>
+                        <z>0</z>
+                        <width>37.788887024</width>
+                        <height>35.089679718</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.538461566</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouEggIcon" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>67</x>
+                        <y>61</y>
+                        <z>0</z>
+                        <width>33.578266144</width>
+                        <height>53.725227356</height>
+                        <depth>0</depth>
+                        <hotspotX>0.660000026</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="plus1" uid="6">
+                    <properties>
+                        <text>+1</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,204,51</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Character</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>40</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>352</x>
+                        <y>66</y>
+                        <z>0</z>
+                        <width>253</width>
+                        <height>62</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="waterParticles" uid="27">
+                    <properties>
+                        <rate>15</rate>
+                        <spray-cone>90</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>100</speed>
+                        <size>16</size>
+                        <opacity>100</opacity>
+                        <grow-rate>5</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->150</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>0</acceleration>
+                        <gravity>300</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>349</x>
+                        <y>124</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>

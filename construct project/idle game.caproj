@@ -375,19 +375,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="verachouDarkness" sid="2686922646626659">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="429013310828128">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806741008849285" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
             <object-type name="solidBloc" sid="3710229597765973">
@@ -435,24 +422,30 @@
                 <instance-variables>
                     <instance-variable name="name" sid="2925477932496892" type="string" />
                     <instance-variable name="age" sid="7317338424517423" type="number" />
-                    <instance-variable name="animation" sid="2342245633523666" type="string" />
+                    <instance-variable name="status" sid="2342245633523666" type="string" />
                     <instance-variable name="hungry" sid="6213101917915552" type="number" />
                     <instance-variable name="hungryMax" sid="6946453867958305" type="number" />
                     <instance-variable name="hungryCounter" sid="4521198605043197" type="number" />
                     <instance-variable comment="2 hours" name="hungryCounterMax" sid="1201984919770812" type="number" />
-                    <instance-variable name="energy" sid="315820726766646" type="number" />
-                    <instance-variable name="energyMax" sid="9878480204033343" type="number" />
-                    <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
-                    <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
                     <instance-variable name="IQ" sid="4269610420630433" type="number" />
                     <instance-variable name="IQmax" sid="6774559943169333" type="number" />
                     <instance-variable name="IQCounter" sid="7779685056698707" type="number" />
                     <instance-variable name="IQCounterMax" sid="3486132832093965" type="number" />
+                    <instance-variable name="energy" sid="315820726766646" type="number" />
+                    <instance-variable name="energyMax" sid="9878480204033343" type="number" />
+                    <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
+                    <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.5" />
+                    </animation>
                     <animation framecount="2" loop="1" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
                         <frame duration="1" hotspotX="0.461538" hotspotY="0.962025" />
                         <frame duration="1" hotspotX="0.472527" hotspotY="0.87037" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6338539069129807" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.922222" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -530,6 +523,27 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330031687124053" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouEggIcon" sid="1822700665624996">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339122616548337" speed="5">
+                        <frame duration="1" hotspotX="0.66" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouDarkness" sid="2686922646626659">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="429013310828128">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806741008849285" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -621,11 +635,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="verachouSparkle" sid="1822700665624996">
+        <object-type name="saveBtn" sid="4336163140375962">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339122616548337" speed="5">
-                    <frame duration="1" hotspotX="0.66" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
+                    <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -653,6 +667,7 @@
     <layout-folder expanded="1">
         <layout>gameplay.xml</layout>
         <layout>Intro.xml</layout>
+        <layout>spawned objects.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>gameplay events.xml</event-sheet>

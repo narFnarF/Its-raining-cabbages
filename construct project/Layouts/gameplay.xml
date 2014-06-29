@@ -678,31 +678,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cabbageIcon" uid="57">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>747</x>
-                        <y>1066</y>
-                        <z>0</z>
-                        <width>37.788887024</width>
-                        <height>35.089679718</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="btnBee" uid="59">
                     <properties>
                         <text>Bee #X speed: Current: 0.02 ... Cost:      1234</text>
@@ -719,7 +694,7 @@
                         <type>Bee speed</type>
                         <beeNb>1</beeNb>
                         <price>2000</price>
-                        <priceMutiplicator>98</priceMutiplicator>
+                        <priceMutiplicator>9.8</priceMutiplicator>
                         <priceAdditor>0</priceAdditor>
                         <itsCabbageId>-1</itsCabbageId>
                     </instance-variables>
@@ -754,7 +729,7 @@
                         <type>Buy bee</type>
                         <beeNb>2</beeNb>
                         <price>100</price>
-                        <priceMutiplicator>98</priceMutiplicator>
+                        <priceMutiplicator>9.8</priceMutiplicator>
                         <priceAdditor>0</priceAdditor>
                         <itsCabbageId>-1</itsCabbageId>
                     </instance-variables>
@@ -788,8 +763,8 @@
                     <instance-variables>
                         <type>Buy bee</type>
                         <beeNb>3</beeNb>
-                        <price>500</price>
-                        <priceMutiplicator>98</priceMutiplicator>
+                        <price>3000</price>
+                        <priceMutiplicator>9.8</priceMutiplicator>
                         <priceAdditor>0</priceAdditor>
                         <itsCabbageId>-1</itsCabbageId>
                     </instance-variables>
@@ -823,8 +798,8 @@
                     <instance-variables>
                         <type>Buy bee</type>
                         <beeNb>4</beeNb>
-                        <price>1200</price>
-                        <priceMutiplicator>98</priceMutiplicator>
+                        <price>10000</price>
+                        <priceMutiplicator>9.8</priceMutiplicator>
                         <priceAdditor>0</priceAdditor>
                         <itsCabbageId>-1</itsCabbageId>
                     </instance-variables>
@@ -929,11 +904,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>62</x>
-                        <y>736</y>
+                        <x>35</x>
+                        <y>803</y>
                         <z>0</z>
-                        <width>86</width>
-                        <height>38</height>
+                        <width>204</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -1038,97 +1013,6 @@
                         <hotspotX>0.506437778</hotspotX>
                         <hotspotY>0.513888896</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="plus1" uid="6">
-                    <properties>
-                        <text>+1</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,204,51</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Character</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>40</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-241</x>
-                        <y>703</y>
-                        <z>0</z>
-                        <width>253</width>
-                        <height>62</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="waterParticles" uid="27">
-                    <properties>
-                        <rate>15</rate>
-                        <spray-cone>90</spray-cone>
-                        <type>One-shot</type>
-                        <initial-particle-properties></initial-particle-properties>
-                        <speed>100</speed>
-                        <size>16</size>
-                        <opacity>100</opacity>
-                        <grow-rate>5</grow-rate>
-                        <x-randomiser>0</x-randomiser>
-                        <y-randomiser>0</y-randomiser>
-                        <speed-randomiser->150</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
-                        <grow-rate-randomiser>0</grow-rate-randomiser>
-                        <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>0</acceleration>
-                        <gravity>300</gravity>
-                        <angle-randomiser>0</angle-randomiser>
-                        <speed-randomiser>0</speed-randomiser>
-                        <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Fade to invisible</destroy-mode>
-                        <timeout>1</timeout>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-200</x>
-                        <y>740</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1274,11 +1158,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>145</x>
-                        <y>818</y>
+                        <x>135.077667236</x>
+                        <y>813.251586914</y>
                         <z>0</z>
                         <width>7</width>
-                        <height>239</height>
+                        <height>261</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1289,26 +1173,26 @@
                 <instance type="verachou" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>normal</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <name>Vérachou</name>
                         <age>0</age>
-                        <animation>normal</animation>
+                        <status>unborn</status>
                         <hungry>4</hungry>
                         <hungryMax>4</hungryMax>
                         <hungryCounter>0</hungryCounter>
                         <hungryCounterMax>3600</hungryCounterMax>
-                        <energy>5</energy>
-                        <energyMax>5</energyMax>
-                        <energyCounter>0</energyCounter>
-                        <energyCounterMax>900</energyCounterMax>
                         <IQ>0</IQ>
                         <IQmax>8</IQmax>
                         <IQCounter>0</IQCounter>
                         <IQCounterMax>3600</IQCounterMax>
+                        <energy>5</energy>
+                        <energyMax>5</energyMax>
+                        <energyCounter>0</energyCounter>
+                        <energyCounterMax>900</energyCounterMax>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1976,7 +1860,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="verachouSparkle" uid="89">
+                <instance type="saveBtn" uid="89">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1986,64 +1870,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1363</x>
-                        <y>-323</y>
+                        <x>117</x>
+                        <y>926</y>
                         <z>0</z>
-                        <width>33.578266144</width>
-                        <height>53.725227356</height>
+                        <width>128</width>
+                        <height>53</height>
                         <depth>0</depth>
-                        <hotspotX>0.660000026</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="verachouDarkness" uid="90">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>978</x>
-                        <y>-592.5</y>
-                        <z>0</z>
-                        <width>640</width>
-                        <height>843</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.800000012</opacity>
-                    </world>
-                </instance>
-                <instance type="lightSwitch" uid="87">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>on</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <turnedOn>false</turnedOn>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>733</x>
-                        <y>-331</y>
-                        <z>0</z>
-                        <width>106.995330811</width>
-                        <height>106.995330811</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.796875</hotspotX>
+                        <hotspotY>0.773584902</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2273,6 +2107,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="verachouDarkness" uid="90">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>978</x>
+                        <y>-592.5</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>843</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.800000012</opacity>
+                    </world>
+                </instance>
                 <instance type="verachouStats" uid="55">
                     <properties>
                         <text>Tamagotchi stats</text>
@@ -2299,6 +2158,31 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lightSwitch" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>on</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <turnedOn>true</turnedOn>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>733</x>
+                        <y>-331</y>
+                        <z>0</z>
+                        <width>106.995330811</width>
+                        <height>106.995330811</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
