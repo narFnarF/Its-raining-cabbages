@@ -1299,7 +1299,7 @@
                         <animation>normal</animation>
                         <hungry>4</hungry>
                         <hungryMax>4</hungryMax>
-                        <hungryCounter>1000</hungryCounter>
+                        <hungryCounter>0</hungryCounter>
                         <hungryCounterMax>3600</hungryCounterMax>
                         <energy>5</energy>
                         <energyMax>5</energyMax>
@@ -1924,7 +1924,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnergyTimerTxt" uid="86">
+                <instance type="verachouEnergyTimerTxt" uid="86">
                     <properties>
                         <text>128 sec.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1939,10 +1939,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1076</x>
+                        <x>991</x>
                         <y>-873</y>
                         <z>0</z>
-                        <width>200</width>
+                        <width>285</width>
                         <height>46</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1969,6 +1969,31 @@
                         <z>0</z>
                         <width>106.995330811</width>
                         <height>106.995330811</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="verachouCollectBtn" uid="88">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <energyCost>1</energyCost>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1233</x>
+                        <y>-323</y>
+                        <z>0</z>
+                        <width>105</width>
+                        <height>103</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -26,7 +26,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-11" name="Add to" sid="1911023966916177" type="verachou">
-                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="0" name="Instance variable">IQCounter</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -54,6 +54,10 @@
                             <param id="0" name="Instance variable">energyCounter</param>
                             <param id="1" name="Value">deltaTime</param>
                         </action>
+                        <action id="-11" name="Add to" sid="6086337707940455" type="verachou">
+                            <param id="0" name="Instance variable">IQCounter</param>
+                            <param id="1" name="Value">deltaTime</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -73,6 +77,25 @@
                 </action>
                 <action id="-12" name="Subtract from" sid="8301194686745903" type="verachou">
                     <param id="0" name="Instance variable">hungry</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="19696716390735">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1635857112742938" type="verachou">
+                    <param id="0" name="Instance variable">IQCounter</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">verachou.IQCounterMax</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="5771172919847265" type="verachou">
+                    <param id="0" name="Instance variable">IQCounter</param>
+                    <param id="1" name="Value">verachou.IQCounterMax</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="2598999941692657" type="verachou">
+                    <param id="0" name="Instance variable">IQ</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -112,6 +135,10 @@
                 <action id="-10" name="Set value" sid="9986178807805716" type="verachou">
                     <param id="0" name="Instance variable">energy</param>
                     <param id="1" name="Value">clamp(verachou.energy, 0, verachou.energyMax)</param>
+                </action>
+                <action id="-10" name="Set value" sid="3537539891449403" type="verachou">
+                    <param id="0" name="Instance variable">IQ</param>
+                    <param id="1" name="Value">clamp(verachou.IQ, 0, verachou.IQmax)</param>
                 </action>
                 <action id="0" name="Set text" sid="7950236982847891" type="verachouStats">
                     <param id="0" name="Text">verachou.name &amp; &quot;&apos;s Stats:&quot; &amp; newline</param>
@@ -172,7 +199,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
+        <event-group description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -194,6 +221,9 @@
                         <action id="4" name="Set animation" sid="8440416327424395" type="lightSwitch">
                             <param id="0" name="Animation">&quot;off&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9493472435071903" type="verachouEnergyTimerTxt">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -252,6 +282,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6763619826082647">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5871082884066807" type="verachou">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">verachou.energyMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8516982255534056" type="verachouEnergyTimerTxt">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4664619873492401">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3780433786060083" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8914974012968476" type="verachou">
+                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6633451142081179">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="8862309977567349" type="System">
@@ -295,21 +350,33 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6076633929689879">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2141232106602758" type="lightSwitch">
+                            <param id="0" name="Instance variable">turnedOn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3684347264374891" type="lightSwitch">
+                            <param id="0" name="Animation">&quot;on&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3497862456119245">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4823759967104009" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1596730105167879" type="verachouEnergyTimerTxt">
+                            <param id="0" name="Text">floor((verachou.energyCounterMax - verachou.energyCounter)/60) &amp; &quot;m&quot; &amp; zeropad((verachou.energyCounterMax - verachou.energyCounter) % 60, 2) &amp; &quot;s&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="6076633929689879">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="2141232106602758" type="lightSwitch">
-                    <param id="0" name="Instance variable">turnedOn</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="3684347264374891" type="lightSwitch">
-                    <param id="0" name="Animation">&quot;on&quot;</param>
-                    <param id="1" name="From">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="8837413209552696">
             <conditions>
                 <condition id="3" name="On touched object" sid="8585086600605762" type="Touch">

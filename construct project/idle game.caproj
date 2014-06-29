@@ -496,7 +496,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="EnergyTimerTxt" sid="5340654386194916">
+            <object-type name="verachouEnergyTimerTxt" sid="5340654386194916">
                 <plugin id="Text" />
             </object-type>
             <object-type name="lightSwitch" sid="561888425972263">
@@ -509,6 +509,14 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="8956037132713342" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouCollectBtn" sid="761117717822557">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330031687124053" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -610,8 +618,9 @@
                 <instance-variable name="tooltipText" sid="1130508236957116" type="string" />
             </instance-variables>
         </family>
-        <family name="tamagoButtons" plugin-id="Sprite" sid="2082036991771531">
+        <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
             <members>
+                <member>verachouCollectBtn</member>
                 <member>verachouFeedBtn</member>
                 <member>verachouStudyBtn</member>
             </members>
