@@ -422,6 +422,7 @@
                 <instance-variables>
                     <instance-variable name="name" sid="2925477932496892" type="string" />
                     <instance-variable name="age" sid="7317338424517423" type="number" />
+                    <instance-variable name="ageMax" sid="1125517200955031" type="number" />
                     <instance-variable name="status" sid="2342245633523666" type="string" />
                     <instance-variable name="hungry" sid="6213101917915552" type="number" />
                     <instance-variable name="hungryMax" sid="6946453867958305" type="number" />

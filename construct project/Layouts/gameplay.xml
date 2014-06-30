@@ -1180,6 +1180,7 @@
                     <instance-variables>
                         <name>Vérachou</name>
                         <age>0</age>
+                        <ageMax>1</ageMax>
                         <status>unborn</status>
                         <hungry>4</hungry>
                         <hungryMax>4</hungryMax>
