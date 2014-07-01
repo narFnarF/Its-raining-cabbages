@@ -17,7 +17,7 @@
                 </action>
                 <action id="0" name="Call function" sid="3461923599023826" type="Function">
                     <param id="0" name="Name">&quot;notification&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades. Try to find the lions! ;)&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades. You also have the vérachou to take care of.&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -102,6 +102,11 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1538419636707625" type="cabbage">
                                                     <param id="0" name="Instance variable">beeTargeted</param>
                                                 </condition>
+                                                <condition id="-15" name="Pick nearest/furthest" sid="5364755163715563" type="cabbage">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="X">bee.X</param>
+                                                    <param id="2" name="Y">bee.Y</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-10" name="Set value" sid="577921621561438" type="bee">
@@ -111,6 +116,10 @@
                                                 <action id="-13" name="Set boolean" sid="3117320010778382" type="cabbage">
                                                     <param id="0" name="Instance variable">beeTargeted</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action disabled="1" id="14" name="Log" sid="3462031770649739" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;targeted cabbages: &quot; &amp; cabbage.PickedCount</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -159,7 +168,7 @@
                                                         </action>
                                                         <action id="-10" name="Set value" sid="7617252212296585" type="bee">
                                                             <param id="0" name="Instance variable">targetX</param>
-                                                            <param id="1" name="Value">beeDropZone.X</param>
+                                                            <param id="1" name="Value">beeDropZone.X + random(0, beeDropZone.Width/2)</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="3972905951695338" type="bee">
                                                             <param id="0" name="Instance variable">targetY</param>
@@ -190,6 +199,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Bees carry the cabbage</comment>
                         <event-block sid="9003721093325638">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1080272995837674" type="bee">
@@ -212,6 +222,7 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>Bees drop the cabbage</comment>
                                 <event-block sid="7036074356679145">
                                     <conditions>
                                         <condition id="0" name="On collision with another object" sid="481552190356381" type="bee">
@@ -1158,8 +1169,16 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Alert" sid="2987195995204194" type="Browser">
-                                    <param id="0" name="Message">&quot;pet&quot;</param>
+                                <action id="-3" name="Create object" sid="4640776345347283" type="System">
+                                    <param id="0" name="Object to create">cabbage</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="3755200330580629" type="cabbage">
+                                    <param id="0" name="Impulse">100</param>
+                                    <param id="1" name="Angle">-90</param>
+                                    <param id="2" name="Image point">0</param>
                                 </action>
                             </actions>
                         </event-block>
