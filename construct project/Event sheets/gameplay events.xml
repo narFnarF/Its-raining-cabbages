@@ -66,7 +66,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
+        <event-group description="" sid="3347646705997988" title="bees">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -102,10 +102,13 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1538419636707625" type="cabbage">
                                                     <param id="0" name="Instance variable">beeTargeted</param>
                                                 </condition>
-                                                <condition id="-15" name="Pick nearest/furthest" sid="5364755163715563" type="cabbage">
+                                                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="5364755163715563" type="cabbage">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="X">bee.X</param>
                                                     <param id="2" name="Y">bee.Y</param>
+                                                </condition>
+                                                <condition id="-16" name="Pick random instance" sid="5873129647627251" type="System">
+                                                    <param id="0" name="Object">cabbage</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -323,7 +326,7 @@
                         </action>
                         <action behavior="Physics" id="0" name="Apply force" sid="4810275541699112" type="cabbage">
                             <param id="0" name="Force X">random(-1,1)</param>
-                            <param id="1" name="Force Y">1000</param>
+                            <param id="1" name="Force Y">500</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
@@ -373,7 +376,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5098640981762788" title="UI">
+        <event-group description="" sid="5098640981762788" title="UI">
             <sub-events>
                 <event-group description="" sid="2044294317449855" title="Tooltips">
                     <sub-events>
@@ -415,10 +418,10 @@
                         <action id="1" name="Append text" sid="1314502359725571" type="globalStats">
                             <param id="0" name="Text">&quot;Bees: &quot; &amp; bee.Count &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="1482937127463452" type="globalStats">
+                        <action disabled="1" id="1" name="Append text" sid="1482937127463452" type="globalStats">
                             <param id="0" name="Text">&quot;Lions: &quot; &amp; 0 &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="4198186552769851" type="globalStats">
+                        <action disabled="1" id="1" name="Append text" sid="4198186552769851" type="globalStats">
                             <param id="0" name="Text">&quot;Cucumbers cut lenghtwise: &quot; &amp; 0 &amp; newline</param>
                         </action>
                         <action id="1" name="Append text" sid="7094839605858453" type="globalStats">

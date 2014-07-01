@@ -1036,7 +1036,7 @@
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
                                 <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
+                                <elasticity>0.1</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
@@ -1981,66 +1981,6 @@
                     <world>
                         <x>-74</x>
                         <y>227</y>
-                        <z>0</z>
-                        <width>37</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.740259767</hotspotX>
-                        <hotspotY>0.828125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="bee" uid="95">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <numéro>1</numéro>
-                        <speed>0.02</speed>
-                        <status>collect</status>
-                        <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-73</x>
-                        <y>308</y>
-                        <z>0</z>
-                        <width>37</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.740259767</hotspotX>
-                        <hotspotY>0.828125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="bee" uid="96">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <numéro>1</numéro>
-                        <speed>0.02</speed>
-                        <status>collect</status>
-                        <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-73</x>
-                        <y>394</y>
                         <z>0</z>
                         <width>37</width>
                         <height>30</height>
