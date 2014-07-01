@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description></description>
-    <version>r104</version>
+    <version>r105</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -689,8 +689,8 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
-        <file-folder expanded="0" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
