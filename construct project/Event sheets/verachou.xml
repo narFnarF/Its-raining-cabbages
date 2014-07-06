@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>tamagotchi</name>
+    <name>verachou</name>
     <events>
         <event-group collapsed="1" description="" sid="8754673480950891" title="Temps">
             <sub-events>
@@ -315,7 +315,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="769228176042275" title="update UI">
+        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -671,7 +671,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="1764654600153932" type="verachou">
                             <param id="0" name="Instance variable">ageMax</param>
-                            <param id="1" name="Value">60*60*24*4 + random(60*60*24*2)</param>
+                            <param id="1" name="Value">4*24*3600 + random(2*24*3600)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -688,38 +688,53 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="2734971219616774">
-            <conditions>
-                <condition id="3" name="On touched object" sid="1620774673149907" type="Touch">
-                    <param id="0" name="Object">verachou</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="6236428052823693" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;dead&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="249344025769012" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Value">&quot;unborn&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4620212848438034">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="7468606095899577" type="verachou">
-                    <param id="0" name="Instance variable">age</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">verachou.ageMax</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1231429983725944" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Value">&quot;dead&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="9383853222221445" title="grow up">
+            <sub-events>
+                <comment>from baby to kid TODO</comment>
+                <event-block sid="510441217435825">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="549281559886376" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">&quot;which age??? TODO&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="4620212848438034">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7468606095899577" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">verachou.ageMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1231429983725944" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;dead&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2734971219616774">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1620774673149907" type="Touch">
+                            <param id="0" name="Object">verachou</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6236428052823693" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dead&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="249344025769012" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;unborn&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

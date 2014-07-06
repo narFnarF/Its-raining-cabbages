@@ -1279,11 +1279,11 @@
                         <x>961</x>
                         <y>-328</y>
                         <z>0</z>
-                        <width>78</width>
-                        <height>79</height>
+                        <width>305</width>
+                        <height>64</height>
                         <depth>0</depth>
-                        <hotspotX>0.461538464</hotspotX>
-                        <hotspotY>0.962025344</hotspotY>
+                        <hotspotX>0.501639366</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -441,9 +441,21 @@
                     <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
                         <frame duration="1" hotspotX="0.501639" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="2" loop="1" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
+                    <animation framecount="2" loop="1" name="baby" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
                         <frame duration="1" hotspotX="0.461538" hotspotY="0.962025" />
                         <frame duration="1" hotspotX="0.472527" hotspotY="0.87037" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="kid" pingpong="0" repeatcount="1" repeatto="0" sid="3414579298123279" speed="1">
+                        <frame duration="1" hotspotX="0.693182" hotspotY="0.965217" />
+                        <frame duration="1" hotspotX="0.506173" hotspotY="0.979381" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="teen" pingpong="0" repeatcount="1" repeatto="0" sid="5892831189021971" speed="1">
+                        <frame duration="1" hotspotX="0.363636" hotspotY="0.777778" />
+                        <frame duration="1" hotspotX="0.670455" hotspotY="0.746154" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="adult" pingpong="0" repeatcount="1" repeatto="0" sid="5417209032790861" speed="1">
+                        <frame duration="1" hotspotX="0.703297" hotspotY="0.97546" />
+                        <frame duration="1" hotspotX="0.573171" hotspotY="0.967949" />
                     </animation>
                     <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6338539069129807" speed="5">
                         <frame duration="1" hotspotX="0.508475" hotspotY="0.922222" />
@@ -673,7 +685,7 @@
     <event-folder expanded="1">
         <event-sheet>gameplay events.xml</event-sheet>
         <event-sheet>intro events.xml</event-sheet>
-        <event-sheet>tamagotchi.xml</event-sheet>
+        <event-sheet>verachou.xml</event-sheet>
         <event-sheet>main.xml</event-sheet>
     </event-folder>
     <global-instances>
