@@ -17,7 +17,7 @@
                 </action>
                 <action id="0" name="Call function" sid="3461923599023826" type="Function">
                     <param id="0" name="Name">&quot;notification&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades. You also have the vérachou to take care of.&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades.&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -66,7 +66,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3347646705997988" title="bees">
+        <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -376,7 +376,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5098640981762788" title="UI">
+        <event-group collapsed="1" description="" sid="5098640981762788" title="UI">
             <sub-events>
                 <event-group description="" sid="2044294317449855" title="Tooltips">
                     <sub-events>
@@ -415,7 +415,7 @@
                         <action id="0" name="Set text" sid="4370277178457741" type="globalStats">
                             <param id="0" name="Text">&quot;Salads: &quot; &amp; salads &amp; &quot; (coleslaw type)&quot; &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="1314502359725571" type="globalStats">
+                        <action disabled="1" id="1" name="Append text" sid="1314502359725571" type="globalStats">
                             <param id="0" name="Text">&quot;Bees: &quot; &amp; bee.Count &amp; newline</param>
                         </action>
                         <action disabled="1" id="1" name="Append text" sid="1482937127463452" type="globalStats">
@@ -1165,6 +1165,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="5574790077687577">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="2164939528319908" type="Keyboard">
+                                    <param id="0" name="Key">50 (2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="961588235365985" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">10000</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="2673550343140702">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
@@ -1215,7 +1228,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6204455573469562" title="Store">
+        <event-group description="" sid="6204455573469562" title="Store">
             <sub-events>
                 <event-group collapsed="1" description="" sid="3529658980017324" title="function: update store buttons">
                     <sub-events>
@@ -1347,7 +1360,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="901981960933352" title="bee button">
+                <event-group description="" sid="901981960933352" title="bee button">
                     <sub-events>
                         <event-block disabled="1" sid="5263809454682485">
                             <conditions>

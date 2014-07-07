@@ -5,5 +5,47 @@
     <events>
         <include>verachou</include>
         <include>gameplay events</include>
+        <event-block sid="4299691373049875">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="1772967474790766" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="3343364431425841" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;in main events: load ok&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="44450218264837">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3053238371912052" type="System">
+                            <param id="0" name="Variable">versionNumberSaved</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">projectversion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="2325579747462141" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;version numbers are matching&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="481412724318204">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1122042431314676" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="4247978058858044" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Version numbers are not matching. Redirecting.&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4444096656095953" type="System">
+                            <param id="0" name="Layout">savefile error</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

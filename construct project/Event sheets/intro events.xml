@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>intro events</name>
     <events>
+        <variable constant="0" name="versionNumberSaved" sid="5178529854886543" static="0" type="text">pet</variable>
         <event-block sid="982771922025691">
             <conditions>
                 <condition id="3" name="On touched object" sid="9766550269779521" type="Touch">
@@ -19,6 +20,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="3378446891769618" type="System">
+                            <param id="0" name="Variable">versionNumberSaved</param>
+                            <param id="1" name="Value">projectversion</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="8564417058141517" type="System">
                             <param id="0" name="Layout">gameplay</param>
                         </action>
@@ -39,17 +44,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="2178317074950907">
-            <conditions>
-                <condition id="-30" name="On load failed" sid="916172357455549" type="System" />
-            </conditions>
-            <actions>
-                <action id="14" name="Log" sid="6684695453931849" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;save failed&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="572006554579995">
             <conditions>
                 <condition id="-29" name="On load complete" sid="1582341082064107" type="System" />
@@ -57,7 +51,18 @@
             <actions>
                 <action id="14" name="Log" sid="2337562366560498" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;save ok&quot;</param>
+                    <param id="1" name="Message">&quot;load ok&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2178317074950907">
+            <conditions>
+                <condition id="-30" name="On load failed" sid="916172357455549" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="6684695453931849" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;load failed&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -77,7 +82,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
-                    <param id="0" name="Message">&quot;There&apos;s problem with your savefile. Either you don&apos;t have a save file on this machine, or you&apos;re trying to load a savefile from a previous version. You&apos;ll have to create a new game. The game is in early production, so you should expect this to happen with every new version. I&apos;m really sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="0" name="Message">&quot;There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? Or maybe your savefile got corrupted (often occurs every time I release a new version). You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
