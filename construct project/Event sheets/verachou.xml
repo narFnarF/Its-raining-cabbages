@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>verachou</name>
     <events>
-        <event-group description="" sid="8754673480950891" title="Temps">
+        <event-group collapsed="1" description="" sid="8754673480950891" title="Time passing">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
                 <event-block sid="6891274320217265">
@@ -101,63 +101,67 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="3703682494449975">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="5419852454937395" type="verachou">
-                    <param id="0" name="Instance variable">hungryCounter</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">verachou.hungryCounterMax</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="2836054889359187" type="verachou">
-                    <param id="0" name="Instance variable">hungryCounter</param>
-                    <param id="1" name="Value">verachou.hungryCounterMax</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="8301194686745903" type="verachou">
-                    <param id="0" name="Instance variable">hungry</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="19696716390735">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="1635857112742938" type="verachou">
-                    <param id="0" name="Instance variable">IQCounter</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">verachou.IQCounterMax</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="5771172919847265" type="verachou">
-                    <param id="0" name="Instance variable">IQCounter</param>
-                    <param id="1" name="Value">verachou.IQCounterMax</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="2598999941692657" type="verachou">
-                    <param id="0" name="Instance variable">IQ</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3439727451382907">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="4660518827706128" type="verachou">
-                    <param id="0" name="Instance variable">energyCounter</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">verachou.energyCounterMax</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="5854992227875504" type="verachou">
-                    <param id="0" name="Instance variable">energyCounter</param>
-                    <param id="1" name="Value">verachou.energyCounterMax</param>
-                </action>
-                <action id="-11" name="Add to" sid="7601764559688248" type="verachou">
-                    <param id="0" name="Instance variable">energy</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="8756537487001793" title="Lower stats over time">
+            <sub-events>
+                <event-block sid="3703682494449975">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5419852454937395" type="verachou">
+                            <param id="0" name="Instance variable">hungryCounter</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">verachou.hungryCounterMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="2836054889359187" type="verachou">
+                            <param id="0" name="Instance variable">hungryCounter</param>
+                            <param id="1" name="Value">verachou.hungryCounterMax</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="8301194686745903" type="verachou">
+                            <param id="0" name="Instance variable">hungry</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="19696716390735">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1635857112742938" type="verachou">
+                            <param id="0" name="Instance variable">IQCounter</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">verachou.IQCounterMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5771172919847265" type="verachou">
+                            <param id="0" name="Instance variable">IQCounter</param>
+                            <param id="1" name="Value">verachou.IQCounterMax</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="2598999941692657" type="verachou">
+                            <param id="0" name="Instance variable">IQ</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3439727451382907">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4660518827706128" type="verachou">
+                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">verachou.energyCounterMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5854992227875504" type="verachou">
+                            <param id="0" name="Instance variable">energyCounter</param>
+                            <param id="1" name="Value">verachou.energyCounterMax</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="7601764559688248" type="verachou">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="1319362704304816">
             <conditions />
             <actions>
@@ -188,132 +192,376 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2332682831838649">
-            <conditions>
-                <condition id="3" name="On touched object" sid="5592849802816032" type="Touch">
-                    <param id="0" name="Object">verachouFeedBtn</param>
-                </condition>
-                <condition id="-10" name="Compare opacity" sid="7546664837875254" type="verachouFeedBtn">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Opacity">100</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="3605265059095567" type="verachou">
-                    <param id="0" name="Instance variable">energy</param>
-                    <param id="1" name="Value">verachouFeedBtn.energyCost</param>
-                </action>
-                <action id="-11" name="Add to" sid="8292539516744722" type="verachou">
-                    <param id="0" name="Instance variable">hungry</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3435124051775161">
-            <conditions>
-                <condition id="3" name="On touched object" sid="3090476971193669" type="Touch">
-                    <param id="0" name="Object">verachouStudyBtn</param>
-                </condition>
-                <condition id="-10" name="Compare opacity" sid="7710139171195807" type="verachouStudyBtn">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Opacity">100</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="5464142868107567" type="verachou">
-                    <param id="0" name="Instance variable">energy</param>
-                    <param id="1" name="Value">verachouStudyBtn.energyCost</param>
-                </action>
-                <action id="-11" name="Add to" sid="7656805026918497" type="verachou">
-                    <param id="0" name="Instance variable">IQ</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8837413209552696">
-            <conditions>
-                <condition id="3" name="On touched object" sid="8585086600605762" type="Touch">
-                    <param id="0" name="Object">lightSwitch</param>
-                </condition>
-                <condition id="-7" inverted="1" name="Compare instance variable" sid="3688812081772244" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;unborn&quot;</param>
-                </condition>
-                <condition id="-7" inverted="1" name="Compare instance variable" sid="4066012102777991" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;dead&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-14" name="Toggle boolean" sid="3488958268494765" type="lightSwitch">
-                    <param id="0" name="Instance variable">turnedOn</param>
-                </action>
-                <action id="0" name="Call function" sid="2836053792104384" type="Function">
-                    <param id="0" name="Name">&quot;notification&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Turning off the light freezes the Vérachou, which is useful if you are unavailable for a long time (while you sleep for example)&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group collapsed="1" description="" sid="3513415724425396" title="Collect">
+        <event-group collapsed="1" description="" sid="9768025433966211" title="Buttons">
             <sub-events>
-                <event-block sid="9487928906751053">
+                <event-block sid="2332682831838649">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="8902909324026308" type="Touch">
-                            <param id="0" name="Object">verachouCollectBtn</param>
+                        <condition id="3" name="On touched object" sid="5592849802816032" type="Touch">
+                            <param id="0" name="Object">verachouFeedBtn</param>
                         </condition>
-                        <condition id="-10" name="Compare opacity" sid="9288588405463324" type="verachouCollectBtn">
+                        <condition id="-10" name="Compare opacity" sid="7546664837875254" type="verachouFeedBtn">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Opacity">100</param>
                         </condition>
-                        <condition id="2" name="Is playing" sid="5346497571124743" type="heart">
-                            <param id="0" name="Animation">&quot;on&quot;</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="9368953981021002" type="verachou">
+                        <action id="-12" name="Subtract from" sid="3605265059095567" type="verachou">
                             <param id="0" name="Instance variable">energy</param>
-                            <param id="1" name="Value">verachouCollectBtn.energyCost</param>
+                            <param id="1" name="Value">verachouFeedBtn.energyCost</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="7293918441148098" type="heart">
-                            <param id="0" name="Object">verachouEggIcon</param>
-                            <param id="1" name="Layer">&quot;game&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="7377701475786783" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="7325110073626982" type="System">
-                            <param id="0" name="Variable">eggs</param>
-                            <param id="1" name="Value">verachou.hungry + verachou.IQ</param>
+                        <action id="-11" name="Add to" sid="8292539516744722" type="verachou">
+                            <param id="0" name="Instance variable">hungry</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3326244165563117">
+                <event-block sid="3435124051775161">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="6213574531518783" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="6642581468452939" type="verachouEggIcon">
-                            <param id="0" name="X">lerp(verachouEggIcon.X, verachouCollectBtn.X, 0.05)</param>
-                            <param id="1" name="Y">lerp(verachouEggIcon.y, verachouCollectBtn.y, 0.05)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5997903082301934">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="3271234433584236" type="verachouEggIcon">
-                            <param id="0" name="Object">verachouCollectBtn</param>
+                        <condition id="3" name="On touched object" sid="3090476971193669" type="Touch">
+                            <param id="0" name="Object">verachouStudyBtn</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="7710139171195807" type="verachouStudyBtn">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8763059086962557" type="verachouEggIcon" />
+                        <action id="-12" name="Subtract from" sid="5464142868107567" type="verachou">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Value">verachouStudyBtn.energyCost</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="7656805026918497" type="verachou">
+                            <param id="0" name="Instance variable">IQ</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8837413209552696">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8585086600605762" type="Touch">
+                            <param id="0" name="Object">lightSwitch</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="3688812081772244" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;unborn&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="4066012102777991" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dead&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="3488958268494765" type="lightSwitch">
+                            <param id="0" name="Instance variable">turnedOn</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2836053792104384" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Turning off the light puts the Vérachou to sleep. Its stats won&apos;t change but it won&apos;t gain energy either. It still ages though. Useful if you are unavailable for a long time (while you sleep for example)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group collapsed="1" description="" sid="3513415724425396" title="Collect">
+                    <sub-events>
+                        <event-block sid="9487928906751053">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="8902909324026308" type="Touch">
+                                    <param id="0" name="Object">verachouCollectBtn</param>
+                                </condition>
+                                <condition id="-10" name="Compare opacity" sid="9288588405463324" type="verachouCollectBtn">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5346497571124743" type="heart">
+                                    <param id="0" name="Animation">&quot;on&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="9368953981021002" type="verachou">
+                                    <param id="0" name="Instance variable">energy</param>
+                                    <param id="1" name="Value">verachouCollectBtn.energyCost</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="7293918441148098" type="heart">
+                                    <param id="0" name="Object">verachouEggIcon</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7377701475786783" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="7325110073626982" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Value">verachou.hungry + verachou.IQ</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3326244165563117">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="6213574531518783" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="6642581468452939" type="verachouEggIcon">
+                                    <param id="0" name="X">lerp(verachouEggIcon.X, verachouCollectBtn.X, 0.05)</param>
+                                    <param id="1" name="Y">lerp(verachouEggIcon.y, verachouCollectBtn.y, 0.05)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5997903082301934">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3271234433584236" type="verachouEggIcon">
+                                    <param id="0" name="Object">verachouCollectBtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8763059086962557" type="verachouEggIcon" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="9383853222221445" title="grow up">
+            <sub-events>
+                <comment>Buy a new one</comment>
+                <event-block sid="2657801181745593">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1781017527737728" type="Touch">
+                            <param id="0" name="Object">verachou</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7064943619978999" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;unborn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6544814190166312">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5723005840022097" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">verachou.costPurchase</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="9090393805652024" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">verachou.costPurchase</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="908481263186473" type="verachou">
+                                    <param id="0" name="Instance variable">status</param>
+                                    <param id="1" name="Value">&quot;baby&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8413289580117368" type="verachou">
+                                    <param id="0" name="Instance variable">hungry</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4204273997746266" type="verachou">
+                                    <param id="0" name="Instance variable">IQ</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6031146247395906" type="verachou">
+                                    <param id="0" name="Instance variable">energy</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5876680307492696" type="verachou">
+                                    <param id="0" name="Instance variable">hungryMax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2218155708103275" type="verachou">
+                                    <param id="0" name="Instance variable">hungryCounterMax</param>
+                                    <param id="1" name="Value">1800</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2261518443785217" type="verachou">
+                                    <param id="0" name="Instance variable">IQmax</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8264494390605794" type="verachou">
+                                    <param id="0" name="Instance variable">energyMax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1764654600153932" type="verachou">
+                                    <param id="0" name="Instance variable">ageMax</param>
+                                    <param id="1" name="Value">4*24*3600 + random(2*24*3600)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1425983946462513">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1490204764780841" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4511363684777757" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;You need &quot; &amp; verachou.costPurchase &amp;&quot; salads to buy a Vérachou&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>evolve to kid</comment>
+                <event-block sid="510441217435825">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="850628043783297" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baby&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="549281559886376" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4*3600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8236414644737421" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;kid&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8517629467788163" type="verachou">
+                            <param id="0" name="Instance variable">hungryMax</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2963556383716789" type="verachou">
+                            <param id="0" name="Instance variable">IQmax</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8314758769933747" type="verachou">
+                            <param id="0" name="Instance variable">energyMax</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>evolve to teen</comment>
+                <event-block sid="4982680128169781">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3259676847300223" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;kid&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2862937167293456" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">2*24*3600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2727256888218547" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;teen&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2015666042320364" type="verachou">
+                            <param id="0" name="Instance variable">hungryMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2121213794375164" type="verachou">
+                            <param id="0" name="Instance variable">hungryCounterMax</param>
+                            <param id="1" name="Value">3600</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7008120424121682" type="verachou">
+                            <param id="0" name="Instance variable">IQmax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6096877375105179" type="verachou">
+                            <param id="0" name="Instance variable">energyMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>evolve to adult</comment>
+                <event-block sid="7712468537742391">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5659664127985713" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;teen&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4600760571801389" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4*24*3600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="395984411686147" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;adult&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4441123393658972" type="verachou">
+                            <param id="0" name="Instance variable">hungryMax</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8377688305194679" type="verachou">
+                            <param id="0" name="Instance variable">IQmax</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4299357187998395" type="verachou">
+                            <param id="0" name="Instance variable">energyMax</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>die</comment>
+                <event-block sid="4620212848438034">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7468606095899577" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">verachou.ageMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1231429983725944" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;dead&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5823834516377806" type="lightSwitch">
+                            <param id="0" name="Instance variable">turnedOn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>return to dust (becomes a Buy button)</comment>
+                <event-block sid="2734971219616774">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1620774673149907" type="Touch">
+                            <param id="0" name="Object">verachou</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6236428052823693" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dead&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="249344025769012" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;unborn&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1383148688037169" type="verachou">
+                            <param id="0" name="Instance variable">hungry</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4780851782435931" type="verachou">
+                            <param id="0" name="Instance variable">IQ</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1331414848517749" type="verachou">
+                            <param id="0" name="Instance variable">energy</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2481131391376602" type="verachou">
+                            <param id="0" name="Instance variable">age</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="769228176042275" title="update UI">
+        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -640,246 +888,6 @@
                     <actions>
                         <action id="0" name="Set text" sid="1596730105167879" type="verachouEnergyTimerTxt">
                             <param id="0" name="Text">floor((verachou.energyCounterMax - verachou.energyCounter)/60) &amp; &quot;m&quot; &amp; zeropad((verachou.energyCounterMax - verachou.energyCounter) % 60, 2) &amp; &quot;s&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="9383853222221445" title="grow up">
-            <sub-events>
-                <comment>Buy a new one</comment>
-                <event-block sid="2657801181745593">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1781017527737728" type="Touch">
-                            <param id="0" name="Object">verachou</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7064943619978999" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;unborn&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6544814190166312">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="5723005840022097" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">verachou.costPurchase</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Subtract from" sid="9090393805652024" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">verachou.costPurchase</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="908481263186473" type="verachou">
-                                    <param id="0" name="Instance variable">status</param>
-                                    <param id="1" name="Value">&quot;baby&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8413289580117368" type="verachou">
-                                    <param id="0" name="Instance variable">hungry</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4204273997746266" type="verachou">
-                                    <param id="0" name="Instance variable">IQ</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="6031146247395906" type="verachou">
-                                    <param id="0" name="Instance variable">energy</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5876680307492696" type="verachou">
-                                    <param id="0" name="Instance variable">hungryMax</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2218155708103275" type="verachou">
-                                    <param id="0" name="Instance variable">hungryCounterMax</param>
-                                    <param id="1" name="Value">1800</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2261518443785217" type="verachou">
-                                    <param id="0" name="Instance variable">IQmax</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8264494390605794" type="verachou">
-                                    <param id="0" name="Instance variable">energyMax</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="1764654600153932" type="verachou">
-                                    <param id="0" name="Instance variable">ageMax</param>
-                                    <param id="1" name="Value">4*24*3600 + random(2*24*3600)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1425983946462513">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1490204764780841" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="4511363684777757" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;You need &quot; &amp; verachou.costPurchase &amp;&quot; salads to buy a Vérachou&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>evolve to kid</comment>
-                <event-block sid="510441217435825">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="850628043783297" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;baby&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="549281559886376" type="verachou">
-                            <param id="0" name="Instance variable">age</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">4*3600</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="8236414644737421" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;kid&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8517629467788163" type="verachou">
-                            <param id="0" name="Instance variable">hungryMax</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2963556383716789" type="verachou">
-                            <param id="0" name="Instance variable">IQmax</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8314758769933747" type="verachou">
-                            <param id="0" name="Instance variable">energyMax</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>evolve to teen</comment>
-                <event-block sid="4982680128169781">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3259676847300223" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;kid&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="2862937167293456" type="verachou">
-                            <param id="0" name="Instance variable">age</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">2*24*3600</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="2727256888218547" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;teen&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2015666042320364" type="verachou">
-                            <param id="0" name="Instance variable">hungryMax</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2121213794375164" type="verachou">
-                            <param id="0" name="Instance variable">hungryCounterMax</param>
-                            <param id="1" name="Value">3600</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7008120424121682" type="verachou">
-                            <param id="0" name="Instance variable">IQmax</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6096877375105179" type="verachou">
-                            <param id="0" name="Instance variable">energyMax</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>evolve to adult</comment>
-                <event-block sid="7712468537742391">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5659664127985713" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;teen&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="4600760571801389" type="verachou">
-                            <param id="0" name="Instance variable">age</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">4*24*3600</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="395984411686147" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;adult&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4441123393658972" type="verachou">
-                            <param id="0" name="Instance variable">hungryMax</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8377688305194679" type="verachou">
-                            <param id="0" name="Instance variable">IQmax</param>
-                            <param id="1" name="Value">8</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4299357187998395" type="verachou">
-                            <param id="0" name="Instance variable">energyMax</param>
-                            <param id="1" name="Value">5</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>die</comment>
-                <event-block sid="4620212848438034">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7468606095899577" type="verachou">
-                            <param id="0" name="Instance variable">age</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">verachou.ageMax</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="1231429983725944" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;dead&quot;</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="5823834516377806" type="lightSwitch">
-                            <param id="0" name="Instance variable">turnedOn</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>return to dust (becomes a Buy button)</comment>
-                <event-block sid="2734971219616774">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1620774673149907" type="Touch">
-                            <param id="0" name="Object">verachou</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="6236428052823693" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;dead&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="249344025769012" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;unborn&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1383148688037169" type="verachou">
-                            <param id="0" name="Instance variable">hungry</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4780851782435931" type="verachou">
-                            <param id="0" name="Instance variable">IQ</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1331414848517749" type="verachou">
-                            <param id="0" name="Instance variable">energy</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2481131391376602" type="verachou">
-                            <param id="0" name="Instance variable">age</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
