@@ -1257,6 +1257,7 @@
                     </properties>
                     <instance-variables>
                         <name>Vérachou</name>
+                        <costPurchase>200</costPurchase>
                         <age>0</age>
                         <ageMax>1</ageMax>
                         <status>unborn</status>
