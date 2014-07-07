@@ -20,6 +20,7 @@
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -74,7 +75,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="bee stuff">
+        <object-folder expanded="0" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -416,7 +417,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="verachou">
+        <object-folder expanded="0" name="verachou">
             <object-type name="verachou" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -657,6 +658,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TextBox" sid="1463393681975661">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families>
         <family name="hasTooltip" plugin-id="Sprite" sid="7905734791955215">
@@ -683,6 +687,7 @@
         <layout>Intro.xml</layout>
         <layout>spawned objects.xml</layout>
         <layout>savefile error.xml</layout>
+        <layout>manual loading.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>gameplay events.xml</event-sheet>
@@ -690,6 +695,7 @@
         <event-sheet>verachou.xml</event-sheet>
         <event-sheet>main.xml</event-sheet>
         <event-sheet>savefile error events.xml</event-sheet>
+        <event-sheet>manual loading events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
@@ -704,7 +710,7 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>manual loading events</name>
+    <events>
+        <event-block sid="9778464060931054">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="4794401432471973" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="2" name="Mouse button is down" sid="8294367331804588" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+                <condition id="2" name="Mouse button is down" sid="3240175351051314" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-38" name="Load from JSON" sid="6241605877364079" type="System">
+                    <param id="0" name="JSON">TextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

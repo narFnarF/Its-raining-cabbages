@@ -21,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
+        <event-group description="" sid="8792768240858758" title="Save">
             <sub-events>
                 <event-block any="1" sid="7604520539040787">
                     <conditions>
@@ -50,6 +50,10 @@
                         <action id="0" name="Call function" sid="9488686038622572" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="4881794402163457" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">SaveStateJSON</param>
                         </action>
                     </actions>
                 </event-block>
