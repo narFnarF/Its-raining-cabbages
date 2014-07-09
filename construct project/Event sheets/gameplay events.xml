@@ -1388,6 +1388,10 @@
                                     <param id="0" name="Variable">salads</param>
                                     <param id="1" name="Value">btnBee.price</param>
                                 </action>
+                                <action id="14" name="Log" sid="7333274800985168" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">newline &amp; &quot;touched btnBee: &quot; &amp; bee.PickedCount</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="4479922774084822">
@@ -1408,6 +1412,10 @@
                                             <param id="0" name="Instance variable">speed</param>
                                             <param id="1" name="Value">0.005</param>
                                         </action>
+                                        <action disabled="1" id="14" name="Log" sid="7479258912149777" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;type: bee speed: &quot; &amp; bee.PickedCount</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="1373537816387478">
@@ -1419,10 +1427,20 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="3952664423899618" type="btnBeeBack">
+                                        <action id="14" name="Log" sid="9392878356548108" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;type: buy bee (avant spawn): &quot; &amp; bee.PickedCount</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="3952664423899618" type="btnBeeBack">
                                             <param id="0" name="Object">bee</param>
                                             <param id="1" name="Layer">&quot;game&quot;</param>
                                             <param id="2" name="Image point">&quot;bee spawn&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="5409442867341612" type="System">
+                                            <param id="0" name="Object to create">bee</param>
+                                            <param id="1" name="Layer">&quot;game&quot;</param>
+                                            <param id="2" name="X">btnBeeBack.ImagePointX(&quot;bee spawn&quot;)</param>
+                                            <param id="3" name="Y">btnBeeBack.ImagePointY(&quot;bee spawn&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="9807869303637682" type="bee">
                                             <param id="0" name="Instance variable">speed</param>
@@ -1439,6 +1457,10 @@
                                         <action id="-10" name="Set value" sid="4590974568236626" type="btnBee">
                                             <param id="0" name="Instance variable">type</param>
                                             <param id="1" name="Value">&quot;Bee speed&quot;</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="6670977378552766" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;type: buy bee (après spawn): &quot; &amp; bee.PickedCount</param>
                                         </action>
                                     </actions>
                                     <sub-events>

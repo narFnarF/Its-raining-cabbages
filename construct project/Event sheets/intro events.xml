@@ -82,7 +82,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
-                    <param id="0" name="Message">&quot;There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? Or maybe your savefile got corrupted (often occurs every time I release a new version). You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="0" name="Message">&quot;Oh oh! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? Or maybe your savefile got corrupted (often occurs every time I release a new version). You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>

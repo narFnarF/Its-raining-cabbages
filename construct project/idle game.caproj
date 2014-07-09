@@ -75,7 +75,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="bee stuff">
+        <object-folder expanded="1" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -300,7 +300,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="UI">
+        <object-folder expanded="1" name="UI">
             <object-type name="arrow" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
