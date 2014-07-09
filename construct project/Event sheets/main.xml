@@ -47,5 +47,17 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="2157140494808033">
+            <conditions>
+                <condition id="10" name="On Nth touch start" sid="8465753243608319" type="Touch">
+                    <param id="0" name="Touch number">4-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="303121196091852" type="System">
+                    <param id="0" name="Layout">manual loading</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -21,5 +21,27 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="4226205492298222">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6841543499950354" type="Touch">
+                    <param id="0" name="Object">saveBtn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="6837059719760134" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6397254503824751">
+            <conditions>
+                <condition id="-28" name="On save complete" sid="1001810118588949" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6744596480617422" type="TextBox">
+                    <param id="0" name="Text">SaveStateJSON</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
