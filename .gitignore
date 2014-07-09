@@ -1,0 +1,3 @@
+construct project/Layouts/gameplay.uistate.xml
+construct project/idle game.uistate.xml
+construct project/idle game.capx.backup1
