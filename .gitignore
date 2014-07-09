@@ -1,11 +1,3 @@
-construct project/Layouts/gameplay.uistate.xml
-construct project/idle game.uistate.xml
-construct project/idle game.capx.backup1
-construct project/Event sheets/intro events.uistate.xml
-construct project/Event sheets/main.uistate.xml
-construct project/Event sheets/manual loading events.uistate.xml
-construct project/Layouts/manual loading.uistate.xml
-construct project/Layouts/Intro.uistate.xml
-construct project/idle game.capx.backup3
-construct project/idle game.capx.backup2
-construct project/idle game.capx.autosave
+*.uistate.xml
+*.autosave
+*.backup[1234567890]
