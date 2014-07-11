@@ -971,8 +971,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-88</x>
-                        <y>797</y>
+                        <x>94</x>
+                        <y>1027</y>
                         <z>0</z>
                         <width>14</width>
                         <height>13</height>
@@ -1940,28 +1940,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="saveBtn" uid="89">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>117</x>
-                        <y>926</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>53</height>
-                        <depth>0</depth>
-                        <hotspotX>0.796875</hotspotX>
-                        <hotspotY>0.773584902</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -2264,6 +2242,71 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="saveBtn" uid="89">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>117</x>
+                        <y>926</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0.796875</hotspotX>
+                        <hotspotY>0.773584902</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="buy popup" sid="9414037678170604">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="9patch" uid="98">
+                    <properties>
+                        <left-margin>10</left-margin>
+                        <right-margin>10</right-margin>
+                        <top-margin>10</top-margin>
+                        <bottom-margin>10</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-703</x>
+                        <y>714</y>
+                        <z>0</z>
+                        <width>571</width>
+                        <height>271</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>
