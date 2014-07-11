@@ -21,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="8792768240858758" title="Save">
+        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
             <sub-events>
                 <event-block any="1" sid="7604520539040787">
                     <conditions>
@@ -729,7 +729,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="3758003106738181" title="Notifications">
             <sub-events>
-                <event-group description="" sid="3373127521768589" title="Silly notifications">
+                <event-group collapsed="1" description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
                         <event-block sid="3657177703028113">
                             <conditions>
@@ -895,7 +895,12 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="4" name="Set animation" sid="1563127842587189" type="notificationBox">
+                            <param id="0" name="Animation">&quot;flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Vide la textbox, et push la nouvelle notification</comment>
                         <event-block sid="8681305054990883">
@@ -1232,7 +1237,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6204455573469562" title="Store">
+        <event-group collapsed="1" description="" sid="6204455573469562" title="Store">
             <sub-events>
                 <event-group collapsed="1" description="" sid="3529658980017324" title="function: update store buttons">
                     <sub-events>
