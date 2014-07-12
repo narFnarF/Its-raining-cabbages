@@ -22,6 +22,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -76,7 +77,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="bee stuff">
+        <object-folder expanded="0" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -266,7 +267,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="notifications">
+        <object-folder expanded="0" name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -305,7 +306,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="UI">
+        <object-folder expanded="0" name="UI">
             <object-type name="arrow" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -569,6 +570,103 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="purchase popup">
+            <object-type name="purchasePopup" sid="269146194465256">
+                <plugin id="NinePatch" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="purchasePopupBuyBtn" sid="191091152619404">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="functionCall" sid="9188864498709404" type="string" />
+                    <instance-variable name="price" sid="8457791532848926" type="number" />
+                    <instance-variable name="currency" sid="7694556192140746" type="string" />
+                </instance-variables>
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="purchasePopupBuyBtnTxt" sid="4765928005168268">
+                <plugin id="Text" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+            </object-type>
+            <object-type name="purchasePopupDescriptionTxt" sid="9467639165513063">
+                <plugin id="Text" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+            </object-type>
+            <object-type name="purchasePopupDarkness" sid="5715703512699373">
+                <plugin id="TiledBg" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="menhir">
+            <object-type name="menhir" sid="1702331039481137">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="price" sid="2406122236208806" type="number" />
+                    <instance-variable name="upgrades" sid="8057385511455278" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="4019090817851407">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3215945281272706" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                            <collision-poly>
+                                <point x="0.016" y="0" />
+                                <point x="0.984" y="0" />
+                                <point x="0.84" y="0.833333" />
+                                <point x="0.16" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                            <collision-poly>
+                                <point x="0.016" y="0" />
+                                <point x="0.984" y="0" />
+                                <point x="0.84" y="0.833333" />
+                                <point x="0.16" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="menhirMsgArray" sid="2986728960170597">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-type name="cabbage" sid="9209630044662387">
             <plugin id="Sprite" />
             <instance-variables>
@@ -594,38 +692,6 @@
                             <point x="0.5" y="1" />
                             <point x="0.0714286" y="0.923077" />
                             <point x="0" y="0.461538" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="menhir" sid="1702331039481137">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="price" sid="2406122236208806" type="number" />
-                <instance-variable name="upgrades" sid="8057385511455278" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Physics" sid="4019090817851407">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3215945281272706" speed="2">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
-                        <collision-poly>
-                            <point x="0.016" y="0" />
-                            <point x="0.984" y="0" />
-                            <point x="0.84" y="0.833333" />
-                            <point x="0.16" y="0.833333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
-                        <collision-poly>
-                            <point x="0.016" y="0" />
-                            <point x="0.984" y="0" />
-                            <point x="0.84" y="0.833333" />
-                            <point x="0.16" y="0.833333" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -665,10 +731,6 @@
         </object-type>
         <object-type name="TextBox" sid="1463393681975661">
             <plugin id="TextBox" />
-        </object-type>
-        <object-type name="9patch" sid="269146194465256">
-            <plugin id="NinePatch" />
-            <texture />
         </object-type>
     </object-folder>
     <families>
