@@ -729,7 +729,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="3758003106738181" title="Notifications">
             <sub-events>
-                <event-group collapsed="1" description="" sid="3373127521768589" title="Silly notifications">
+                <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
                         <event-block sid="3657177703028113">
                             <conditions>
@@ -738,6 +738,10 @@
                             <actions>
                                 <action id="11" name="Load" sid="7377178129965534" type="sillyMessages">
                                     <param id="0" name="JSON">JSONPourArraySillyMessages</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6268345366391628" type="System">
+                                    <param id="0" name="Variable">JSONPourArraySillyMessages</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -991,13 +995,13 @@
                 <event-block sid="9962088991240607">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="9095994442493353" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
+                            <param id="0" name="Interval (seconds)">0.2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="7566795386140006" type="System">
                             <param id="0" name="Variable">deltaTime</param>
-                            <param id="1" name="Value">round( (date.UnixTimestamp - lastTimeStamp) /1000)</param>
+                            <param id="1" name="Value">(date.UnixTimestamp - lastTimeStamp) /1000</param>
                         </action>
                         <action id="-9" name="Set value" sid="5298891451791608" type="System">
                             <param id="0" name="Variable">lastTimeStamp</param>
@@ -1005,7 +1009,7 @@
                         </action>
                         <action id="-10" name="Add to" sid="9254257425759682" type="System">
                             <param id="0" name="Variable">totalTime</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">deltaTime</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1018,22 +1022,18 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="9112068711656747" type="cabbage" />
-                                <action id="-3" name="Set position" sid="4204848102630081" type="bee">
-                                    <param id="0" name="X">random(0, screen.Width)</param>
-                                    <param id="1" name="Y">random(0, screen.Height)</param>
+                                <action disabled="1" id="-9" name="Destroy" sid="9112068711656747" type="cabbage" />
+                                <action disabled="1" id="-3" name="Set position" sid="4204848102630081" type="bee">
+                                    <param id="0" name="X">bee.X + random(-200, 200)</param>
+                                    <param id="1" name="Y">bee.Y + random(-200, 200)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="7883306464174072" type="bee">
+                                <action disabled="1" id="-10" name="Set value" sid="7883306464174072" type="bee">
                                     <param id="0" name="Instance variable">cabbageID</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="5414644814328128" type="bee">
+                                <action disabled="1" id="-10" name="Set value" sid="5414644814328128" type="bee">
                                     <param id="0" name="Instance variable">status</param>
                                     <param id="1" name="Value">&quot;collect&quot;</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="9596240255915584" type="System">
-                                    <param id="0" name="Variable">totalTime</param>
-                                    <param id="1" name="Value">deltaTime</param>
                                 </action>
                                 <action id="0" name="Call function" sid="6298881922052676" type="Function">
                                     <param id="0" name="Name">&quot;user is back&quot;</param>

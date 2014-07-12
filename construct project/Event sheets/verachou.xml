@@ -185,7 +185,7 @@
                     <param id="0" name="Text">verachou.name &amp; &quot;&apos;s Stats:&quot; &amp; newline</param>
                 </action>
                 <action id="1" name="Append text" sid="6322905547913123" type="verachouStats">
-                    <param id="0" name="Text">&quot;Age: &quot; &amp; floor(verachou.age/60/60/24) &amp; &quot; days &quot; &amp; verachou.age%(60*60*24) &amp; &quot; sec&quot; &amp; newline</param>
+                    <param id="0" name="Text">&quot;Age: &quot; &amp; floor(verachou.age/60/60/24) &amp; &quot; days &quot; &amp; round(verachou.age%(60*60*24)) &amp; &quot; sec&quot; &amp; newline</param>
                 </action>
                 <action id="1" name="Append text" sid="925179766749205" type="verachouStats">
                     <param id="0" name="Text">&quot;Eggs: &quot; &amp; eggs &amp; newline</param>
@@ -561,7 +561,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
+        <event-group description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
