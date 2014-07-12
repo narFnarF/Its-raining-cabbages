@@ -1703,7 +1703,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9344236190523339" title="purchase popup">
+        <event-group description="" sid="9344236190523339" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
@@ -1738,6 +1738,9 @@
                                     <param id="0" name="Instance variable">currency</param>
                                     <param id="1" name="Value">Function.Param(PARAM_CURRENCY)</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="4615869405369526" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
                                 <action id="0" name="Call function" sid="5176423925186251" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;visible&quot;</param>
@@ -1757,19 +1760,6 @@
                         <action id="0" name="Call function" sid="4492177388878388" type="Function">
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="4089424764731506">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="2514136515029884" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="9070270427338798" type="Function">
-                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;type&quot;{###}&quot;pet description bla bla&quot; &amp; newline &amp; newline &amp; &quot;non mais sérieux, qui a pensé à écrire un aussi gros texte. Serait-ce narF? Foutu narF!&quot;{###}123{###}&quot;currency ghe&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1893,7 +1883,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="9723364976985796" title="adjust visibility">
+                <event-group description="" sid="9723364976985796" title="adjust visibility">
                     <sub-events>
                         <event-block sid="7276475911048179">
                             <conditions />
