@@ -2098,6 +2098,130 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
+                <instance type="lion" uid="109">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>vide</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>0</level>
+                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
+                        <huntTime>10</huntTime>
+                        <huntTimeCounter>0</huntTimeCounter>
+                        <away>false</away>
+                        <readyToCollect>false</readyToCollect>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1533</x>
+                        <y>265</y>
+                        <z>0</z>
+                        <width>269</width>
+                        <height>363</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotY>0.501377404</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lion" uid="110">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>vide</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>0</level>
+                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
+                        <huntTime>10</huntTime>
+                        <huntTimeCounter>0</huntTimeCounter>
+                        <away>false</away>
+                        <readyToCollect>false</readyToCollect>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1830</x>
+                        <y>265</y>
+                        <z>0</z>
+                        <width>269</width>
+                        <height>363</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotY>0.501377404</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lion" uid="111">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>vide</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>0</level>
+                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
+                        <huntTime>10</huntTime>
+                        <huntTimeCounter>0</huntTimeCounter>
+                        <away>false</away>
+                        <readyToCollect>false</readyToCollect>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1533</x>
+                        <y>647</y>
+                        <z>0</z>
+                        <width>269</width>
+                        <height>363</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotY>0.501377404</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lion" uid="112">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>vide</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>0</level>
+                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
+                        <huntTime>10</huntTime>
+                        <huntTimeCounter>0</huntTimeCounter>
+                        <away>false</away>
+                        <readyToCollect>false</readyToCollect>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1826</x>
+                        <y>650</y>
+                        <z>0</z>
+                        <width>269</width>
+                        <height>363</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotY>0.501377404</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2681,6 +2805,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="inventory" uid="113" />
     </nonworld-instances>
     <effects />
 </c2layout>

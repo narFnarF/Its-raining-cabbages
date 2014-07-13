@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -705,7 +706,37 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="lions" />
+        <object-folder expanded="1" name="lions">
+            <object-type name="lion" sid="5246547682708114">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="level" sid="7130495753662925" type="number" />
+                    <instance-variable name="initialWaitingTime" sid="9638501070773712" type="number" />
+                    <instance-variable name="initialWaitingTimeCounter" sid="6475709690379468" type="number" />
+                    <instance-variable name="huntTime" sid="6955178951385895" type="number" />
+                    <instance-variable name="huntTimeCounter" sid="4270270175809803" type="number" />
+                    <instance-variable name="away" sid="9952528029607261" type="boolean" />
+                    <instance-variable comment="when the lion is back and ready to collect" name="readyToCollect" sid="3188355233868491" type="boolean" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="burger" pingpong="0" repeatcount="1" repeatto="0" sid="4370781162084332" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="lion" pingpong="0" repeatcount="1" repeatto="0" sid="3653958491940525" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="hunting" pingpong="0" repeatcount="1" repeatto="0" sid="9173746592414603" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="inventory" sid="977963652630131">
+                <plugin id="Dictionary" />
+            </object-type>
+        </object-folder>
         <object-type name="cabbageIcon" sid="4395305785758166">
             <plugin id="Sprite" />
             <behaviors>
@@ -757,6 +788,7 @@
         <event-sheet>main.xml</event-sheet>
         <event-sheet>savefile error events.xml</event-sheet>
         <event-sheet>manual loading events.xml</event-sheet>
+        <event-sheet>lions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

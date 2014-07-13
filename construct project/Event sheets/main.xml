@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>main</name>
     <events>
+        <include>lions</include>
         <include>verachou</include>
         <include>gameplay events</include>
         <event-block sid="4299691373049875">

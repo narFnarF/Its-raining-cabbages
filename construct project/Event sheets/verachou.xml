@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>verachou</name>
     <events>
-        <event-group collapsed="1" description="" sid="8754673480950891" title="Time passing">
+        <event-group description="" sid="8754673480950891" title="Time passing">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
                 <event-block sid="6891274320217265">
