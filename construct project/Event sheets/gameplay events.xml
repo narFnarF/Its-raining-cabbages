@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplay events</name>
     <events>
-        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[11,1,1],&quot;data&quot;:[[[&quot;Is this art or fart?&quot;]],[[&quot;The NSA is spying on what you are doing in this game.&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
+        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[31,1,1],&quot;data&quot;:[[[&quot;La minute philosophique: est-ce que c&apos;est vraiment les choux qui tombent du ciel... ou si c&apos;est le menhir qui les attirent?&quot;]],[[&quot;Aucun lions n&apos;a été maltraité durant la création de ce jeu.&quot;]],[[&quot;Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature.&quot;]],[[&quot;Ce menhir... C&apos;est un pic, un cap! Que dis-je? C&apos;est une péninsule!&quot;]],[[&quot;We can only hope that the fishes in the water love to eat cabbages.&quot;]],[[&quot;Freud would be proud of your menhir.&quot;]],[[&quot;Have your bought your anti-cabbages protecting helmet?&quot;]],[[&quot;Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again.&quot;]],[[&quot;Is the water just water, or a manifestation of universal entropy?&quot;]],[[&quot;Most of the cabbages in this game are actually imported from your Skyrim save file.&quot;]],[[&quot;Never underestimate the combined power of cabbages and gravity.&quot;]],[[&quot;Now hiring engineer to improve productivity of coleslaw salad factory.&quot;]],[[&quot;Rent-a-bee: 514-555-8385&quot;]],[[&quot;Scientist community actively trying to find a way to turn cabbages into clean energy. \&quot;We have so much of them anyway!\&quot;&quot;]],[[&quot;Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!&quot;]],[[&quot;The cabbages are restless. Consider sacrificing salad dressing to appease them.&quot;]],[[&quot;The name of the Boing 747 means that it can carry up to 747 cabbages.&quot;]],[[&quot;US government implement additional airport security following cabbage terrorist attack.&quot;]],[[&quot;Where’s the easy mode in this game?&quot;]],[[&quot;World hunger have been solved as cabbages enter population eating habits.&quot;]],[[&quot;The NSA cannot confirm nor deny whether it is spying on your bees.&quot;]],[[&quot;Is this art or fart?&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
         <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
         <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
         <event-block sid="6829102839958492">
@@ -493,7 +493,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1962647449018996" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Enlarge your menhir!&quot;{###}menhir.price{###}&quot;salads&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}menhir.price{###}&quot;salads&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1711,7 +1711,12 @@
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="14" name="Log" sid="623392299464135" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">newline &amp; &quot;open purchase popup&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <variable constant="1" name="PARAM_FUNCTION_CALL" sid="287497647354334" static="0" type="number">0</variable>
                         <variable constant="1" name="PARAM_DESCRIPTION" sid="5741935465883889" static="0" type="number">1</variable>
@@ -1724,7 +1729,7 @@
                                     <param id="0" name="Text">Function.Param(PARAM_DESCRIPTION)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6650445298278178" type="purchasePopupBuyBtnTxt">
-                                    <param id="0" name="Text">&quot;Buy: &quot; &amp; Function.Param(PARAM_PRICE) &amp; &quot; &quot; &amp; Function.Param(PARAM_CURRENCY)</param>
+                                    <param id="0" name="Text">&quot;Buy for &quot; &amp; Function.Param(PARAM_PRICE) &amp; &quot; &quot; &amp; Function.Param(PARAM_CURRENCY)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="3060359656948211" type="purchasePopupBuyBtn">
                                     <param id="0" name="Instance variable">price</param>
@@ -1738,7 +1743,7 @@
                                     <param id="0" name="Instance variable">currency</param>
                                     <param id="1" name="Value">Function.Param(PARAM_CURRENCY)</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="4615869405369526" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="4615869405369526" type="System">
                                     <param id="0" name="Seconds">0.01</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5176423925186251" type="Function">
@@ -1757,6 +1762,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="14" name="Log" sid="9357852022166641" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;click outside: turn visibility off&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="4492177388878388" type="Function">
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
@@ -1769,7 +1778,12 @@
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="14" name="Log" sid="8094859483289155" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;purchase popup visibility: &quot; &amp; Function.Param(0)</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="8485362911102587">
                             <conditions>
@@ -1780,6 +1794,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="9051090239783525" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="2839774470081691" type="purchasePopup">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -1806,6 +1823,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="6941552155971268" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="5420468636339637" type="purchasePopup">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -1825,7 +1845,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7934955406918831">
+                <event-block collapsed="1" sid="7934955406918831">
                     <conditions>
                         <condition id="3" name="On touched object" sid="9242316414086531" type="Touch">
                             <param id="0" name="Object">purchasePopupBuyBtn</param>
@@ -1883,7 +1903,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="9723364976985796" title="adjust visibility">
+                <event-group collapsed="1" description="" sid="9723364976985796" title="Buy button: adjust visibility">
                     <sub-events>
                         <event-block sid="7276475911048179">
                             <conditions />
@@ -1893,6 +1913,10 @@
                                 </action>
                                 <action id="-16" name="Set opacity" sid="8392869785145184" type="purchasePopupBuyBtnTxt">
                                     <param id="0" name="Opacity">30</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="6262407022340205" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;adjust visibility&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
