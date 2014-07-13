@@ -175,7 +175,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -306,7 +306,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="UI">
+        <object-folder expanded="0" name="UI">
             <object-type name="arrow" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -669,36 +669,43 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-type name="cabbage" sid="9209630044662387">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Physics" sid="1936616672555206">
-                    <behavior id="Physics" />
-                </behavior-type>
-                <behavior-type name="NoSave" sid="9790473529950608">
-                    <behavior id="NoSave" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023358627610028" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
-                        <collision-poly>
-                            <point x="0.142857" y="0.153846" />
-                            <point x="0.5" y="0" />
-                            <point x="0.857143" y="0.153846" />
-                            <point x="1" y="0.461538" />
-                            <point x="0.857143" y="0.846154" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0714286" y="0.923077" />
-                            <point x="0" y="0.461538" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder expanded="0" name="cabbages stuff">
+            <object-type name="cabbage" sid="9209630044662387">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="1936616672555206">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="9790473529950608">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023358627610028" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
+                            <collision-poly>
+                                <point x="0.142857" y="0.153846" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.153846" />
+                                <point x="1" y="0.461538" />
+                                <point x="0.857143" y="0.846154" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0714286" y="0.923077" />
+                                <point x="0" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cabbagesSpawnArea" sid="3837656882855279">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="lions" />
         <object-type name="cabbageIcon" sid="4395305785758166">
             <plugin id="Sprite" />
             <behaviors>

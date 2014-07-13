@@ -272,7 +272,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="567087151684171" title="camera">
+        <event-group collapsed="1" description="" sid="567087151684171" title="camera">
             <sub-events>
                 <event-block sid="7452036870298714">
                     <conditions>
@@ -310,7 +310,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9491979833701507" title="cabbages">
+        <event-group description="" sid="9491979833701507" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -322,8 +322,8 @@
                         <action id="-3" name="Create object" sid="9216119791076222" type="System">
                             <param id="0" name="Object to create">cabbage</param>
                             <param id="1" name="Layer">&quot;game&quot;</param>
-                            <param id="2" name="X">random(0,640)</param>
-                            <param id="3" name="Y">-10</param>
+                            <param id="2" name="X">random(cabbagesSpawnArea.BBoxLeft, cabbagesSpawnArea.BBoxRight)</param>
+                            <param id="3" name="Y">cabbagesSpawnArea.BBoxTop</param>
                         </action>
                         <action behavior="Physics" id="6" name="Apply torque" sid="4116279118160518" type="cabbage">
                             <param id="0" name="Torque">random(-100,100)</param>
@@ -491,7 +491,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2599602954484774" title="factory">
+        <event-group collapsed="1" description="" sid="2599602954484774" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
