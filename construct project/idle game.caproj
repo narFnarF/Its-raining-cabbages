@@ -175,7 +175,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -638,7 +638,6 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="price" sid="2406122236208806" type="number" />
-                    <instance-variable name="upgrades" sid="8057385511455278" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="4019090817851407">

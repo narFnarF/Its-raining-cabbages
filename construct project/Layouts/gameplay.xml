@@ -1025,7 +1025,6 @@
                     </properties>
                     <instance-variables>
                         <price>1</price>
-                        <upgrades>0</upgrades>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

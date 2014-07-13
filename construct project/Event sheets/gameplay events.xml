@@ -272,7 +272,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="567087151684171" title="camera">
+        <event-group description="" sid="567087151684171" title="camera">
             <sub-events>
                 <event-block sid="7452036870298714">
                     <conditions>
@@ -380,7 +380,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5098640981762788" title="UI">
+        <event-group collapsed="1" description="" sid="5098640981762788" title="UI">
             <sub-events>
                 <event-block sid="3071285974674716">
                     <conditions />
@@ -491,7 +491,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2599602954484774" title="factory">
+        <event-group description="" sid="2599602954484774" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
