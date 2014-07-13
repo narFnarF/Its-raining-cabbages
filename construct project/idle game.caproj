@@ -306,7 +306,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="UI">
+        <object-folder expanded="1" name="UI">
             <object-type name="arrow" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -342,14 +342,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="tooltips" sid="5300416514676331">
-                <plugin id="Text" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="6987805813863065">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
             <object-type name="txtLabel" sid="2110053242017875">
                 <plugin id="Text" />
                 <behaviors>
@@ -381,6 +373,17 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="saveBtn" sid="4336163140375962">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
+                        <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="debugTextBox" sid="1463393681975661">
+                <plugin id="TextBox" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
@@ -570,7 +573,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="purchase popup">
+        <object-folder expanded="0" name="purchase popup">
             <object-type name="purchasePopup" sid="269146194465256">
                 <plugin id="NinePatch" />
                 <container>
@@ -630,7 +633,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="menhir">
+        <object-folder expanded="0" name="menhir">
             <object-type name="menhir" sid="1702331039481137">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -721,27 +724,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="saveBtn" sid="4336163140375962">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
-                    <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TextBox" sid="1463393681975661">
-            <plugin id="TextBox" />
-        </object-type>
     </object-folder>
     <families>
-        <family name="hasTooltip" plugin-id="Sprite" sid="7905734791955215">
-            <members>
-                <member>menhir</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="tooltipText" sid="1130508236957116" type="string" />
-            </instance-variables>
-        </family>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
             <members>
                 <member>verachouCollectBtn</member>

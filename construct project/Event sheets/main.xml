@@ -47,6 +47,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
         <event-block sid="2157140494808033">
             <conditions>
                 <condition id="10" name="On Nth touch start" sid="8465753243608319" type="Touch">

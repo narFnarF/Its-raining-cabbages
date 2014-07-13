@@ -17,7 +17,7 @@
             </conditions>
             <actions>
                 <action id="-38" name="Load from JSON" sid="6241605877364079" type="System">
-                    <param id="0" name="JSON">TextBox.Text</param>
+                    <param id="0" name="JSON">debugTextBox.Text</param>
                 </action>
             </actions>
         </event-block>
@@ -38,7 +38,7 @@
                 <condition id="-28" name="On save complete" sid="1001810118588949" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="6744596480617422" type="TextBox">
+                <action id="0" name="Set text" sid="6744596480617422" type="debugTextBox">
                     <param id="0" name="Text">SaveStateJSON</param>
                 </action>
             </actions>

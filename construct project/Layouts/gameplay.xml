@@ -1024,7 +1024,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <tooltipText>Enlarge your menhir! Cost only %p salads. Click to buy. (100% natural product)</tooltipText>
                         <price>1</price>
                         <upgrades>0</upgrades>
                     </instance-variables>
@@ -2101,36 +2100,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.555555582</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="tooltips" uid="29">
-                    <properties>
-                        <text>tooltip txtbox</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>223</x>
-                        <y>1001</y>
-                        <z>0</z>
-                        <width>438</width>
-                        <height>126</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

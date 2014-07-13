@@ -380,39 +380,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5098640981762788" title="UI">
+        <event-group description="" sid="5098640981762788" title="UI">
             <sub-events>
-                <event-group description="" sid="2044294317449855" title="Tooltips">
-                    <sub-events>
-                        <event-block sid="253324217306317">
-                            <conditions />
-                            <actions>
-                                <action id="-15" name="Set visible" sid="9255609179152548" type="tooltips">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8002289658783344">
-                            <conditions>
-                                <condition id="7" name="Cursor is over object" sid="2120821531731377" type="Mouse">
-                                    <param id="0" name="Object">hasTooltip</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="9563851687972046" type="tooltips">
-                                    <param id="0" name="Text">hasTooltip.tooltipText</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="450706656351727" type="tooltips">
-                                    <param id="0" name="X">Mouse.X</param>
-                                    <param id="1" name="Y">Mouse.Y-30</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6083326190390221" type="tooltips">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <event-block sid="3071285974674716">
                     <conditions />
                     <actions>

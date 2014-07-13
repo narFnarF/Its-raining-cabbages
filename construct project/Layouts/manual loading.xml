@@ -4,7 +4,7 @@
     <sid>8714149234599271</sid>
     <event-sheet>manual loading events</event-sheet>
     <size>
-        <width>1708</width>
+        <width>640</width>
         <height>960</height>
     </size>
     <margins>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TextBox" uid="94">
+                <instance type="debugTextBox" uid="94">
                     <properties>
                         <text></text>
                         <placeholder>Copy JSON save here to load it, or tap &quot;Save&quot; bellow to get the JSON save.</placeholder>
