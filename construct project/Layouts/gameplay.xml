@@ -2247,9 +2247,9 @@
                     </properties>
                     <instance-variables>
                         <level>0</level>
-                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
-                        <huntTime>10</huntTime>
+                        <huntTime>3600</huntTime>
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
@@ -2278,9 +2278,9 @@
                     </properties>
                     <instance-variables>
                         <level>0</level>
-                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
-                        <huntTime>10</huntTime>
+                        <huntTime>3600</huntTime>
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
@@ -2309,9 +2309,9 @@
                     </properties>
                     <instance-variables>
                         <level>0</level>
-                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
-                        <huntTime>10</huntTime>
+                        <huntTime>3600</huntTime>
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
@@ -2340,9 +2340,9 @@
                     </properties>
                     <instance-variables>
                         <level>0</level>
-                        <initialWaitingTime>5</initialWaitingTime>
+                        <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
-                        <huntTime>10</huntTime>
+                        <huntTime>3600</huntTime>
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>

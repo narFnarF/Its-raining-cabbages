@@ -86,5 +86,23 @@
                 </action>
             </actions>
         </event-block>
+        <comment>arranger ça de manière plus officielle</comment>
+        <event-block any="1" sid="4258302951631631">
+            <conditions>
+                <condition id="10" name="On Nth touch start" sid="3697646351717958" type="Touch">
+                    <param id="0" name="Touch number">3 -1</param>
+                </condition>
+                <condition id="0" name="On click" sid="4860973688333908" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="9589407556962802" type="Browser">
+                    <param id="0" name="URL">&quot;http://cabbages.narf.ca&quot;</param>
+                    <param id="1" name="Target">2</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
