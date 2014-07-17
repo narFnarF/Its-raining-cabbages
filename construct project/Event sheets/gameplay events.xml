@@ -19,6 +19,14 @@
                     <param id="0" name="Name">&quot;notification&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades.&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="1591688361595606" type="System">
+                    <param id="0" name="Variable">eggs</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1246514919853343" type="System">
+                    <param id="0" name="Variable">salads</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
@@ -70,7 +78,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
+        <event-group description="" sid="3347646705997988" title="bees">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -214,21 +222,27 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;drop&quot;</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="5476771696423116" type="cabbage">
-                                    <param id="0" name="Unique ID">bee.cabbageID</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="374014145128332" type="bee">
                                     <param id="0" name="X">lerp(bee.X, bee.targetX, bee.speed*dt*60)</param>
                                     <param id="1" name="Y">lerp(bee.Y, bee.targetY, bee.speed*dt*60)</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="4512997745814188" type="cabbage">
-                                    <param id="0" name="Object">bee</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="6185740159736688">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="5476771696423116" type="cabbage">
+                                            <param id="0" name="Unique ID">bee.cabbageID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="4512997745814188" type="cabbage">
+                                            <param id="0" name="Object">bee</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <comment>Bees drop the cabbage</comment>
                                 <event-block sid="7036074356679145">
                                     <conditions>
@@ -247,9 +261,6 @@
                                         </action>
                                         <action behavior="Physics" id="27" name="Set enabled" sid="933020125570539" type="cabbage">
                                             <param id="0" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Physics" disabled="1" id="9" name="Set angular velocity" sid="3225567730256859" type="cabbage">
-                                            <param id="0" name="Angular velocity">0</param>
                                         </action>
                                         <action id="11" name="Set collisions enabled" sid="1159742551813714" type="cabbage">
                                             <param id="0" name="Collisions">1</param>
@@ -310,7 +321,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9491979833701507" title="cabbages">
+        <event-group collapsed="1" description="" sid="9491979833701507" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -882,7 +893,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking">
+        <event-group description="" sid="2726329761105019" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>
@@ -1672,7 +1683,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9344236190523339" title="purchase popup">
+        <event-group collapsed="1" description="" sid="9344236190523339" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>

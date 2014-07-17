@@ -55,12 +55,12 @@
                 </instance>
                 <instance type="txtLabel" uid="96">
                     <properties>
-                        <text>To load, press all 3 mouse buttons (outside of the box)</text>
+                        <text>[Load button]</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-40,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -71,36 +71,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8</x>
-                        <y>855</y>
+                        <x>14</x>
+                        <y>861</y>
                         <z>0</z>
-                        <width>494</width>
-                        <height>119</height>
+                        <width>266</width>
+                        <height>87</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="saveBtn" uid="97">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>607.350952148</x>
-                        <y>916.546630859</y>
-                        <z>0</z>
-                        <width>111.502937317</width>
-                        <height>46.169185638</height>
-                        <depth>0</depth>
-                        <hotspotX>0.796875</hotspotX>
-                        <hotspotY>0.773584902</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

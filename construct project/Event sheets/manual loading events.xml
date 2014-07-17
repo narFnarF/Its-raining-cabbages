@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>manual loading events</name>
     <events>
-        <event-block sid="9778464060931054">
+        <event-block disabled="1" sid="9778464060931054">
             <conditions>
                 <condition id="2" name="Mouse button is down" sid="4794401432471973" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -16,12 +16,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-38" name="Load from JSON" sid="6241605877364079" type="System">
-                    <param id="0" name="JSON">debugTextBox.Text</param>
+                <action id="-2" name="Go to layout" sid="7619808489055349" type="System">
+                    <param id="0" name="Layout">gameplay</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4226205492298222">
+        <event-block disabled="1" sid="4226205492298222">
             <conditions>
                 <condition id="3" name="On touched object" sid="6841543499950354" type="Touch">
                     <param id="0" name="Object">saveBtn</param>
@@ -33,13 +33,29 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6397254503824751">
+        <event-block disabled="1" sid="6397254503824751">
             <conditions>
                 <condition id="-28" name="On save complete" sid="1001810118588949" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="6744596480617422" type="debugTextBox">
                     <param id="0" name="Text">SaveStateJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5235953496558794">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5260508732335893" type="Touch">
+                    <param id="0" name="Object">txtLabel</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="6082231380865861" type="txtLabel">
+                    <param id="0" name="Text to compare">&quot;[Load button]&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-38" name="Load from JSON" sid="6241605877364079" type="System">
+                    <param id="0" name="JSON">debugTextBox.Text</param>
                 </action>
             </actions>
         </event-block>
