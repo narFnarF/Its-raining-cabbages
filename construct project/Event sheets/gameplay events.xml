@@ -78,7 +78,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3347646705997988" title="bees">
+        <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -893,7 +893,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2726329761105019" title="time tracking">
+        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>

@@ -78,7 +78,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="bee stuff">
+        <object-folder expanded="0" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -427,7 +427,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="verachou">
+        <object-folder expanded="1" name="verachou">
             <object-type name="verachou" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -448,6 +448,8 @@
                     <instance-variable name="energyMax" sid="9878480204033343" type="number" />
                     <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
                     <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
+                    <instance-variable name="toEvolveCounter" sid="6339981050453749" type="number" />
+                    <instance-variable name="toEvolve" sid="2145543609789773" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
@@ -544,7 +546,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="verachouCollectBtn" sid="761117717822557">
+            <object-type name="verachouGrowBtn" sid="761117717822557">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330031687124053" speed="5">
@@ -572,6 +574,18 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="verachouProgressBar" sid="2395862388375656">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="value" sid="3954409651565213" type="number" />
+                    <instance-variable name="valueMax" sid="3059102364074422" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="verachouProgressBarBg" sid="8075840418252747">
+                <plugin id="TiledBg" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="purchase popup">
@@ -706,7 +720,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="lions">
+        <object-folder expanded="0" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -815,8 +829,8 @@
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
             <members>
-                <member>verachouCollectBtn</member>
                 <member>verachouFeedBtn</member>
+                <member>verachouGrowBtn</member>
                 <member>verachouStudyBtn</member>
             </members>
             <instance-variables>
