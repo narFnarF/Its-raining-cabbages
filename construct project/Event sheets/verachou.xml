@@ -3,7 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>verachou</name>
     <events>
-        <event-group description="" sid="8754673480950891" title="Time passing">
+        <event-block disabled="1" sid="3820918889345804">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9135518288077619" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8235515923426217" type="verachou">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">&quot;unborn&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="8754673480950891" title="Time passing">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
                 <event-block sid="6891274320217265">
@@ -192,7 +203,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9768025433966211" title="Buttons">
+        <event-group collapsed="1" description="" sid="9768025433966211" title="Buttons">
             <sub-events>
                 <event-block sid="4071728232353448">
                     <conditions>
@@ -339,7 +350,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9383853222221445" title="grow up">
+        <event-group collapsed="1" description="" sid="9383853222221445" title="grow up">
             <sub-events>
                 <comment>Buy a new one</comment>
                 <event-block sid="2657801181745593">

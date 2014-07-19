@@ -1529,7 +1529,7 @@
                 <instance type="verachou" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>normal</initial-animation>
+                        <initial-animation>baby</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -1558,11 +1558,11 @@
                         <x>306</x>
                         <y>1742</y>
                         <z>0</z>
-                        <width>305</width>
-                        <height>64</height>
+                        <width>78</width>
+                        <height>79</height>
                         <depth>0</depth>
-                        <hotspotX>0.501639366</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.461538464</hotspotX>
+                        <hotspotY>0.962025344</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2226,10 +2226,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-681</x>
+                        <x>-673</x>
                         <y>-158</y>
                         <z>0</z>
-                        <width>633</width>
+                        <width>617</width>
                         <height>113</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
