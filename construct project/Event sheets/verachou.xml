@@ -418,6 +418,10 @@
                                     <param id="0" name="Instance variable">toEvolve</param>
                                     <param id="1" name="Value">7</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="4810978322138075" type="verachou">
+                                    <param id="0" name="Instance variable">toEvolveCounter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1425983946462513">
@@ -677,6 +681,12 @@
                         <action id="-10" name="Set value" sid="5147875301167312" type="verachouProgressBar">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">verachou.toEvolveCounter</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2332331139626546" type="verachouProgressBar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1823062012045071" type="verachouProgressBarBg">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -964,6 +974,33 @@
                     <actions>
                         <action id="0" name="Set text" sid="1596730105167879" type="verachouEnergyTimerTxt">
                             <param id="0" name="Text">floor((verachou.energyCounterMax - verachou.energyCounter)/60) &amp; &quot;m&quot; &amp; zeropad((verachou.energyCounterMax - floor(verachou.energyCounter) ) % 60, 2) &amp; &quot;s&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="8873401265729525">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5481908084882389" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;baby&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="755986047872568" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;kid&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7552650749665954" type="verachou">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;teen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1521973522890789" type="verachouProgressBar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6624265329456627" type="verachouProgressBarBg">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
