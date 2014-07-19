@@ -14,7 +14,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="8754673480950891" title="Time passing">
+        <event-group description="" sid="8754673480950891" title="Time passing">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
                 <event-block sid="6891274320217265">
@@ -112,7 +112,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8756537487001793" title="Lower stats over time">
+        <event-group description="" sid="8756537487001793" title="Lower stats over time">
             <sub-events>
                 <event-block sid="3703682494449975">
                     <conditions>
@@ -219,7 +219,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="5935699665926828" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;verachou buy&quot;{###}&quot;Buy a vérachou. Then love it like you would love your own child. (If you never had a child, then it&apos;ll be good training)&quot;{###}200{###}&quot;salads&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;verachou buy&quot;{###}&quot;Adopt a vérachou. Then love it like you would love your own child. (If you never had a child, it&apos;s ok. It&apos;ll be good training)&quot;{###}200{###}&quot;salads&quot;{###}&quot;Adopt for &quot;</param>
                         </action>
                     </actions>
                 </event-block>

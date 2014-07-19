@@ -295,6 +295,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">arrow.goto</param>
                         </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="5224733347865089" type="camera">
@@ -473,7 +474,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1962647449018996" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}menhir.price{###}&quot;salads&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}menhir.price{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -572,6 +573,7 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="6596752157258402" type="purchasePopup" />
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="4127942007554423" type="factory">
@@ -644,7 +646,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3758003106738181" title="Notifications">
+        <event-group collapsed="1" description="" sid="3758003106738181" title="Notifications">
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
@@ -1304,6 +1306,7 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">btnBee.price</param>
                                 </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="3268661961810302" type="purchasePopup" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="2961524409026808" type="System">
@@ -1532,6 +1535,7 @@
                                     <param id="2" name="Value">btnUpgrade.price</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="5779554108973548" type="btnUpgrade" />
+                                <condition id="-9" inverted="1" name="Is visible" sid="9722674533762943" type="purchasePopup" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="6185282127400281" type="System">
@@ -1698,30 +1702,38 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <variable constant="1" name="PARAM_FUNCTION_CALL" sid="287497647354334" static="0" type="number">0</variable>
-                        <variable constant="1" name="PARAM_DESCRIPTION" sid="5741935465883889" static="0" type="number">1</variable>
-                        <variable constant="1" name="PARAM_PRICE" sid="424257490165207" static="0" type="number">2</variable>
-                        <variable constant="1" name="PARAM_CURRENCY" sid="3240868740482591" static="0" type="number">3</variable>
+                        <variable constant="1" name="p_FUNCTION_CALL" sid="287497647354334" static="0" type="number">0</variable>
+                        <variable constant="1" name="P_DESCRIPTION" sid="5741935465883889" static="0" type="number">1</variable>
+                        <variable constant="1" name="p_PRICE" sid="424257490165207" static="0" type="number">2</variable>
+                        <variable constant="1" name="P_CURRENCY" sid="3240868740482591" static="0" type="number">3</variable>
+                        <variable constant="1" name="P_BUTTON_TXT" sid="6239323993807903" static="0" type="number">4</variable>
+                        <variable constant="1" name="P_function_params" sid="3325033692983624" static="0" type="number">5</variable>
                         <event-block sid="9802245080491284">
-                            <conditions />
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="6850287178539472" type="purchasePopup" />
+                            </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="9896712579119286" type="purchasePopupDescriptionTxt">
-                                    <param id="0" name="Text">Function.Param(PARAM_DESCRIPTION)</param>
+                                    <param id="0" name="Text">Function.Param(P_DESCRIPTION)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6650445298278178" type="purchasePopupBuyBtnTxt">
-                                    <param id="0" name="Text">&quot;Buy for &quot; &amp; Function.Param(PARAM_PRICE) &amp; &quot; &quot; &amp; Function.Param(PARAM_CURRENCY)</param>
+                                    <param id="0" name="Text">Function.Param(P_BUTTON_TXT)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="3060359656948211" type="purchasePopupBuyBtn">
                                     <param id="0" name="Instance variable">price</param>
-                                    <param id="1" name="Value">Function.Param(PARAM_PRICE)</param>
+                                    <param id="1" name="Value">Function.Param(P_PRICE)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="246493300881905" type="purchasePopupBuyBtn">
                                     <param id="0" name="Instance variable">functionCall</param>
-                                    <param id="1" name="Value">Function.Param(PARAM_FUNCTION_CALL)</param>
+                                    <param id="1" name="Value">Function.Param(P_FUNCTION_CALL)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6031643195485533" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">functionCallParams</param>
+                                    <param id="1" name="Value">Function.Param(P_FUNCTION_PARAMS)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="5258603718979137" type="purchasePopupBuyBtn">
                                     <param id="0" name="Instance variable">currency</param>
-                                    <param id="1" name="Value">Function.Param(PARAM_CURRENCY)</param>
+                                    <param id="1" name="Value">Function.Param(P_CURRENCY)</param>
                                 </action>
                                 <action disabled="1" id="-16" name="Wait" sid="4615869405369526" type="System">
                                     <param id="0" name="Seconds">0.01</param>
@@ -1731,6 +1743,22 @@
                                     <param id="1" name="Parameter {n}">&quot;visible&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="5611176068099713">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2714737755001618" type="Function">
+                                            <param id="0" name="Index">P_PRICE</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="3282276299373799" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Text">Function.Param(P_PRICE) &amp; &quot; &quot; &amp; Function.Param(P_CURRENCY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1825,7 +1853,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7934955406918831">
+                <event-block collapsed="1" sid="7934955406918831">
                     <conditions>
                         <condition id="3" name="On touched object" sid="9242316414086531" type="Touch">
                             <param id="0" name="Object">purchasePopupBuyBtn</param>
@@ -1841,16 +1869,27 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;buy&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="1487484469212607" type="Function">
-                            <param id="0" name="Name">purchasePopupBuyBtn.functionCall</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Call function" sid="5377940465416621" type="Function">
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="13824302831608">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5056556591704056" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">functionCall</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1487484469212607" type="Function">
+                                    <param id="0" name="Name">purchasePopupBuyBtn.functionCall</param>
+                                    <param id="1" name="Parameter {n}">purchasePopupBuyBtn.functionCallParams</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="7338441655247254">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5467674846598704" type="purchasePopupBuyBtn">
@@ -1898,7 +1937,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="9723364976985796" title="Buy button: adjust visibility">
+                <event-group collapsed="1" description="" sid="9723364976985796" title="adjust visibility of the Buy button">
                     <sub-events>
                         <event-block sid="7276475911048179">
                             <conditions />
@@ -1978,6 +2017,48 @@
                                         </action>
                                         <action id="-16" name="Set opacity" sid="1337190127550691" type="purchasePopupBuyBtnTxt">
                                             <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1564314069543243">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9631744906943528" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">price</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6928596528410794" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="5702193152151283" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" sid="6915278078437985" title="text popup">
+                    <sub-events>
+                        <event-block sid="1359478353731207">
+                            <conditions>
+                                <condition id="0" name="On function" sid="408578008528803" type="Function">
+                                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="1" name="TEXT" sid="1229490495965919" static="0" type="number">0</variable>
+                                <variable constant="1" name="TXT_BUTTON" sid="8746804029203494" static="0" type="number">1</variable>
+                                <event-block sid="8004655529436159">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4103462059281514" type="Function">
+                                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;{###}Function.Param(TEXT){###}0{###}&quot;&quot;{###}Function.Param(TXT_BUTTON){###}&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

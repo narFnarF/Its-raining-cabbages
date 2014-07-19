@@ -2243,11 +2243,12 @@
                 <instance type="lion" uid="109">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>vide</initial-animation>
+                        <initial-animation>lion</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <numéro>0</numéro>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2274,11 +2275,12 @@
                 <instance type="lion" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>vide</initial-animation>
+                        <initial-animation>lion</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <numéro>1</numéro>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2305,11 +2307,12 @@
                 <instance type="lion" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>vide</initial-animation>
+                        <initial-animation>lion</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <numéro>2</numéro>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2336,11 +2339,12 @@
                 <instance type="lion" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>vide</initial-animation>
+                        <initial-animation>lion</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <numéro>3</numéro>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2376,11 +2380,6 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
-                    <instance-variables>
-                        <functionCall></functionCall>
-                        <price>0</price>
-                        <currency></currency>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2434,11 +2433,6 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
-                    <instance-variables>
-                        <functionCall></functionCall>
-                        <price>0</price>
-                        <currency></currency>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2492,11 +2486,6 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
-                    <instance-variables>
-                        <functionCall></functionCall>
-                        <price>0</price>
-                        <currency></currency>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2550,11 +2539,6 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
-                    <instance-variables>
-                        <functionCall></functionCall>
-                        <price>0</price>
-                        <currency></currency>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3207,6 +3191,7 @@
                     </properties>
                     <instance-variables>
                         <functionCall></functionCall>
+                        <functionCallParams>0</functionCallParams>
                         <price>0</price>
                         <currency>salads</currency>
                     </instance-variables>
@@ -3392,7 +3377,7 @@
         <instance type="inventory" uid="113" />
         <instance type="lionRandomItems" uid="122">
             <properties>
-                <width>10</width>
+                <width>0</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>

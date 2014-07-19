@@ -427,7 +427,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="verachou">
+        <object-folder expanded="0" name="verachou">
             <object-type name="verachou" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -588,7 +588,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="purchase popup">
+        <object-folder expanded="1" name="purchase popup">
             <object-type name="purchasePopup" sid="269146194465256">
                 <plugin id="NinePatch" />
                 <container>
@@ -604,6 +604,7 @@
                 <plugin id="NinePatch" />
                 <instance-variables>
                     <instance-variable name="functionCall" sid="9188864498709404" type="string" />
+                    <instance-variable name="functionCallParams" sid="1830715055677984" type="number" />
                     <instance-variable name="price" sid="8457791532848926" type="number" />
                     <instance-variable name="currency" sid="7694556192140746" type="string" />
                 </instance-variables>
@@ -720,10 +721,11 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="lions">
+        <object-folder expanded="1" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="numéro" sid="7024890554918371" type="number" />
                     <instance-variable name="level" sid="7130495753662925" type="number" />
                     <instance-variable name="initialWaitingTime" sid="9638501070773712" type="number" />
                     <instance-variable name="initialWaitingTimeCounter" sid="6475709690379468" type="number" />
@@ -737,6 +739,7 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionRandomItems</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
@@ -758,16 +761,12 @@
             </object-type>
             <object-type name="lionBtn" sid="5989880898955489">
                 <plugin id="NinePatch" />
-                <instance-variables>
-                    <instance-variable name="functionCall" sid="5557282353147778" type="string" />
-                    <instance-variable name="price" sid="7734348519332658" type="number" />
-                    <instance-variable name="currency" sid="7671784856866907" type="string" />
-                </instance-variables>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionRandomItems</type>
                 </container>
                 <texture />
             </object-type>
@@ -778,10 +777,18 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionRandomItems</type>
                 </container>
             </object-type>
             <object-type global="1" name="lionRandomItems" sid="2847898352338322">
                 <plugin id="Arr" />
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionRandomItems</type>
+                </container>
             </object-type>
             <object-type name="inventoryDisplay" sid="8665233173308308">
                 <plugin id="Text" />
@@ -798,6 +805,7 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionRandomItems</type>
                 </container>
             </object-type>
         </object-folder>
