@@ -358,7 +358,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="731191703593424" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion, so that it can bring back better stuff.&quot;{###}1{###}&quot;Veggie burger&quot;{###}&quot;Level up for &quot;{###}lion.numéro</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion, so that it can bring back better stuff.&quot;{###}1*lion.level +1{###}&quot;Veggie burger&quot;{###}&quot;Level up for &quot;{###}lion.numéro</param>
                         </action>
                     </actions>
                 </event-block>
