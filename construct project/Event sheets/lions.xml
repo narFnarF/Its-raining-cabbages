@@ -29,6 +29,7 @@
         </event-block>
         <event-group description="" sid="8861246033139075" title="Attract and catch a lion">
             <sub-events>
+                <variable constant="0" name="lionsCaught" sid="4410064742002127" static="0" type="number">0</variable>
                 <event-block sid="6931695193521489">
                     <conditions>
                         <condition id="3" name="On touched object" sid="154182526583012" type="Touch">
@@ -70,6 +71,14 @@
                         </action>
                         <action id="-15" name="Set visible" sid="1134231834488876" type="lionBtnTxt">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4013087732670253" type="System">
+                            <param id="0" name="Variable">lionsCaught</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3269335378874641" type="lion">
+                            <param id="0" name="Instance variable">initialWaitingTime</param>
+                            <param id="1" name="Value">(lionsCaught^2*2-1) *3600</param>
                         </action>
                     </actions>
                 </event-block>
