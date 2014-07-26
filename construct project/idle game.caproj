@@ -739,7 +739,6 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
-                    <type>lionRandomItems</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
@@ -766,7 +765,6 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
-                    <type>lionRandomItems</type>
                 </container>
                 <texture />
             </object-type>
@@ -777,18 +775,10 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
-                    <type>lionRandomItems</type>
                 </container>
             </object-type>
             <object-type global="1" name="lionRandomItems" sid="2847898352338322">
                 <plugin id="Arr" />
-                <container>
-                    <type>lion</type>
-                    <type>lionBtnTxt</type>
-                    <type>lionBtn</type>
-                    <type>lionStatsTxt</type>
-                    <type>lionRandomItems</type>
-                </container>
             </object-type>
             <object-type name="inventoryDisplay" sid="8665233173308308">
                 <plugin id="Text" />
@@ -805,7 +795,6 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
-                    <type>lionRandomItems</type>
                 </container>
             </object-type>
         </object-folder>
@@ -832,6 +821,10 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="verachouLevelUp" sid="4539624746310134">
+            <plugin id="Particles" />
+            <texture />
         </object-type>
     </object-folder>
     <families>

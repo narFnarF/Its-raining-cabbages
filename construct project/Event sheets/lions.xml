@@ -371,18 +371,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2672811906858162">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="5420364423425016" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Push" sid="1509447840267328" type="lionRandomItems">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;Useless lion poop&quot;</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="4568260268737477">
                     <conditions>
                         <condition id="0" name="On function" sid="3887364937499269" type="Function">
@@ -403,28 +391,6 @@
                             <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="6789418216464794">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1898350185642457" type="lion">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;Veggie burger&quot;</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="9" name="Delete" sid="8876908359997528" type="lionRandomItems">
-                                    <param id="0" name="Index">lionRandomItems.IndexOf(&quot;Useless lion poop&quot;)</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="4996067425529869">
                     <conditions>
@@ -438,7 +404,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="1" name="Set size" sid="8127433245200737" type="lionRandomItems">
+                        <action id="1" name="Set size" sid="8127433245200737" type="lionRandomItems">
                             <param id="0" name="Width">0</param>
                             <param id="1" name="Height">1</param>
                             <param id="2" name="Depth">1</param>
@@ -446,6 +412,54 @@
                     </actions>
                     <sub-events>
                         <variable constant="0" name="selectedItem" sid="7709488776865407" static="0" type="text"></variable>
+                        <event-block sid="6750290611819817">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1554831690008845" type="lion">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;Useless lion poop&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6789418216464794">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1898350185642457" type="lion">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;Veggie burger&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7756889310556609">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3518821852297478" type="lion">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="9339451897100293" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;narF&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="6258392454317527">
                             <conditions />
                             <actions>
