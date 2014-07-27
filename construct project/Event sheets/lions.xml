@@ -509,11 +509,17 @@
                         <action id="0" name="Set text" sid="3629245345554869" type="lionStatsTxt">
                             <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
                         </action>
+                        <action id="-3" name="Create object" sid="1240644864216046" type="System">
+                            <param id="0" name="Object to create">verachouLevelUp</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">lion.X</param>
+                            <param id="3" name="Y">lion.Y</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5567629855902233" title="lion UI">
+        <event-group collapsed="1" description="" sid="5567629855902233" title="lion UI">
             <sub-events>
                 <comment>Display inventory</comment>
                 <event-block sid="6215635304056931">
@@ -591,6 +597,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>level up icon</comment>
                 <event-block sid="9340310791785168">
                     <conditions />
                     <actions>
@@ -627,6 +634,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>set lion button invisible when not enough veggie burger</comment>
                 <event-block sid="5987765974947958">
                     <conditions>
                         <condition id="0" name="Compare text" sid="9299623184567859" type="lionBtnTxt">
@@ -773,81 +781,98 @@
                                 <action id="-15" name="Set visible" sid="1163258078147171" type="trader">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6604564446092534">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="trader">
-                                    <param id="0" name="Instance variable">giveWhat</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
-                                </condition>
-                                <condition id="0" name="Compare value" sid="8363541479433845" type="inventory">
-                                    <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">9</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4818095063094279" type="trader">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-15" name="Set visible" sid="5366740981932467" type="traderBg">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="8980280911857299">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="trader">
-                                    <param id="0" name="Instance variable">getWhat</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Veggie burger&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="9232822429975491" type="trader">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6660161672704164">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="trader">
-                                    <param id="0" name="Instance variable">getWhat</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Tofu steak&quot;</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="trader">
-                                    <param id="0" name="Instance variable">giveWhat</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Tofu&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="7579484827464714" type="trader">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3850387678898212">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="trader">
-                                    <param id="0" name="Instance variable">giveWhat</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Veggie burger&quot;</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Is playing" sid="1240764160900848" type="lion">
-                                    <param id="0" name="Animation">&quot;vide&quot;</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="25922668259976" type="System">
-                                    <param id="0" name="First value">lion.PickedCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="7532409093500833" type="trader">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="6604564446092534">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="trader">
+                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="8363541479433845" type="inventory">
+                                            <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="4818095063094279" type="trader">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7910481850776827" type="traderBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8980280911857299">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="trader">
+                                            <param id="0" name="Instance variable">getWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Veggie burger&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="9232822429975491" type="trader">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1046038695352768" type="traderBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6660161672704164">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="trader">
+                                            <param id="0" name="Instance variable">getWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Tofu steak&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="trader">
+                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Tofu&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="7579484827464714" type="trader">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3305634149331586" type="traderBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3850387678898212">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="trader">
+                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Veggie burger&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="1240764160900848" type="lion">
+                                            <param id="0" name="Animation">&quot;vide&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="25922668259976" type="System">
+                                            <param id="0" name="First value">lion.PickedCount</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="7532409093500833" type="trader">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1395096652153999" type="traderBg">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
