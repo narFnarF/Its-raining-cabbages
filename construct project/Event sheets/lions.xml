@@ -12,6 +12,10 @@
                     <param id="0" name="Key">&quot;Veggie burger&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Add key" sid="4925790438116597" type="inventory">
+                    <param id="0" name="Key">&quot;Tofu steak&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-15" name="Set visible" sid="832393336658566" type="lionBtn">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -27,7 +31,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="8861246033139075" title="Attract and catch a lion">
+        <event-group collapsed="1" description="" sid="8861246033139075" title="Attract and catch a lion">
             <sub-events>
                 <variable constant="0" name="lionsCaught" sid="4410064742002127" static="0" type="number">0</variable>
                 <event-block sid="6931695193521489">
@@ -313,16 +317,20 @@
                     </actions>
                 </event-block>
                 <comment>collect stuff</comment>
+                <comment>I think i should use the &quot;ready to collect&quot; variable instead of &quot;what&apos;s this&quot;</comment>
                 <event-block sid="7797588851703369">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2003197018002655" type="Touch">
                             <param id="0" name="Object">lionBtn</param>
                         </condition>
-                        <condition id="0" name="Compare text" sid="2866117581069572" type="lionBtnTxt">
+                        <condition id="-8" name="Is boolean instance variable set" sid="9880221661362737" type="lion">
+                            <param id="0" name="Instance variable">readyToCollect</param>
+                        </condition>
+                        <condition disabled="1" id="0" name="Compare text" sid="2866117581069572" type="lionBtnTxt">
                             <param id="0" name="Text to compare">&quot;What&apos;s this?&quot;</param>
                             <param id="1" name="Case sensitivity">0</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="9011985208752714" type="lionBtn" />
+                        <condition disabled="1" id="-9" name="Is visible" sid="9011985208752714" type="lionBtn" />
                         <condition id="-9" inverted="1" name="Is visible" sid="2492774067926022" type="purchasePopup" />
                     </conditions>
                     <actions>
@@ -338,11 +346,18 @@
                             <param id="1" name="Parameter {n}">lion.numéro</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7931633059009934">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="23241940573779" title="lion level up and loot table">
             <sub-events>
+                <comment>todo: separate these 2 things (level up and loot table)</comment>
                 <event-block sid="8852444332401261">
                     <conditions>
                         <condition id="3" name="On touched object" sid="2047437592207103" type="Touch">
@@ -367,7 +382,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="731191703593424" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion, so that it can bring back better stuff.&quot;{###}1*lion.level +1{###}&quot;Veggie burger&quot;{###}&quot;Level up for &quot;{###}lion.numéro</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Give tofu steaks to your lion to upgrade it! Better lions can bring back better stuff. (You currently have &quot; &amp; inventory.Get(&quot;Tofu steak&quot;) &amp; &quot; tofu steaks.)&quot;{###}1*lion.level +1{###}&quot;Tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.numéro</param>
                         </action>
                     </actions>
                 </event-block>
@@ -392,6 +407,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>why is this in a separated function???</comment>
                 <event-block sid="4996067425529869">
                     <conditions>
                         <condition id="0" name="On function" sid="793618660616738" type="Function">
@@ -411,11 +427,21 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="6789418216464794">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;Tofu&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="6750290611819817">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1554831690008845" type="lion">
                                     <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">1</param>
+                                    <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
@@ -423,22 +449,6 @@
                                 <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">&quot;Useless lion poop&quot;</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6789418216464794">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1898350185642457" type="lion">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;tofu steak&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>
@@ -455,6 +465,22 @@
                                 <action id="5" name="Push" sid="9339451897100293" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">&quot;cucumber cut lenghtwise&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7076937583666608">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8720167481579013" type="lion">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="590681542246521" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;ta mère en short&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>
@@ -504,16 +530,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="5815176690063811">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="5512166945736168" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="9242907103306166" type="lionStatsTxt">
-                            <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>display timer</comment>
                 <event-block sid="1281589070565831">
                     <conditions>
@@ -541,6 +557,40 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4503237485293908" title="Trader">
+            <sub-events>
+                <comment>display conversion menu</comment>
+                <event-block sid="8812703073199238">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="3615162190377486" type="trader">
+                            <param id="0" name="Text">&quot;Create &quot; &amp; trader.getWhat &amp; &quot; from &quot; &amp; trader.giveWhat</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4935685582294332">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1964020888824892" type="Touch">
+                            <param id="0" name="Object">trader</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="46242753314526" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;give &quot; &amp; trader.giveWhat{###}&quot;So, you want to make a &quot; &amp; trader.getWhat &amp; &quot;?&quot;{###}trader.giveHowMany{###}trader.giveWhat{###}&quot;Create for &quot;{###}trader.getHowMany</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7394578765702792">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5033742324448273" type="Function">
+                            <param id="0" name="Name">&quot;give eggs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

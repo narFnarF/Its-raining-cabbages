@@ -587,8 +587,12 @@
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>
+            <object-type name="verachouLevelUp" sid="4539624746310134">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="purchase popup">
+        <object-folder expanded="0" name="purchase popup">
             <object-type name="purchasePopup" sid="269146194465256">
                 <plugin id="NinePatch" />
                 <container>
@@ -721,7 +725,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="lions">
+        <object-folder expanded="0" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -798,6 +802,20 @@
                 </container>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="trader">
+            <object-type name="trader" sid="5574383113778382">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="giveWhat" sid="3103701344531354" type="string" />
+                    <instance-variable name="giveHowMany" sid="1451616090028767" type="number" />
+                    <instance-variable name="getWhat" sid="2750451303680641" type="string" />
+                    <instance-variable name="getHowMany" sid="8038152053338172" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="traderTitle" sid="9400254462319746">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="cabbageIcon" sid="4395305785758166">
             <plugin id="Sprite" />
             <behaviors>
@@ -821,10 +839,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="verachouLevelUp" sid="4539624746310134">
-            <plugin id="Particles" />
-            <texture />
         </object-type>
     </object-folder>
     <families>

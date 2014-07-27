@@ -1687,7 +1687,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9344236190523339" title="purchase popup">
+        <event-group description="" sid="9344236190523339" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
@@ -1853,7 +1853,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7934955406918831">
+                <event-block sid="7934955406918831">
                     <conditions>
                         <condition id="3" name="On touched object" sid="9242316414086531" type="Touch">
                             <param id="0" name="Object">purchasePopupBuyBtn</param>
@@ -1921,23 +1921,17 @@
                             </actions>
                         </event-block>
                         <event-block sid="2740984466105858">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6149045076250918" type="purchasePopupBuyBtn">
-                                    <param id="0" name="Instance variable">currency</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Veggie burger&quot;</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action id="1" name="Set key" sid="4073815527669741" type="inventory">
-                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
-                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) - purchasePopupBuyBtn.price</param>
+                                    <param id="0" name="Key">purchasePopupBuyBtn.currency</param>
+                                    <param id="1" name="Value">inventory.Get(purchasePopupBuyBtn.currency) - purchasePopupBuyBtn.price</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="9723364976985796" title="adjust visibility of the Buy button">
+                <event-group description="" sid="9723364976985796" title="adjust visibility of the Buy button">
                     <sub-events>
                         <event-block sid="7276475911048179">
                             <conditions />
@@ -2016,6 +2010,23 @@
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                         <action id="-16" name="Set opacity" sid="1337190127550691" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5503990755743505">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7955789417352569" type="inventory">
+                                            <param id="0" name="Key">purchasePopupBuyBtn.currency</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">purchasePopupBuyBtn.price</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6247403400627584" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="2450689681600696" type="purchasePopupBuyBtnTxt">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
