@@ -236,7 +236,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9689064507054484" title="mission">
+        <event-group description="" sid="9689064507054484" title="mission">
             <sub-events>
                 <comment>send hunting</comment>
                 <event-block sid="1619034874208339">
@@ -370,7 +370,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2134108211466926" title="loot table">
+        <event-group description="" sid="2134108211466926" title="loot table">
             <sub-events>
                 <event-block sid="4996067425529869">
                     <conditions>
@@ -464,6 +464,15 @@
                                 <action id="0" name="Call function" sid="8639657845923099" type="Function">
                                     <param id="0" name="Name">&quot;text popup&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;The lion found:&quot; &amp; newline &amp; newline &amp; selectedItem &amp; newline &amp; newline &amp; &quot;It was added to your inventory.&quot;{###}&quot;OK&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1524885467119339" type="System">
+                                    <param id="0" name="Object to create">plus1</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="X">lionStatsTxt.X + lionStatsTxt.Width</param>
+                                    <param id="3" name="Y">lionStatsTxt.Y + lionStatsTxt.Height</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4136659729693715" type="plus1">
+                                    <param id="0" name="Text">&quot;+1 &quot; &amp; selectedItem</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -725,6 +734,15 @@
                                     <param id="0" name="Variable">giveWhat</param>
                                     <param id="1" name="Value">Function.Param(1)</param>
                                 </action>
+                                <action id="-3" name="Create object" sid="9555606144207156" type="System">
+                                    <param id="0" name="Object to create">plus1</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="X">inventoryDisplay.X + (inventoryDisplay.Width/1.2)</param>
+                                    <param id="3" name="Y">inventoryDisplay.Y + (inventoryDisplay.Height/2.5)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="1536630549794516" type="plus1">
+                                    <param id="0" name="Text">&quot;+&quot; &amp; giveHowMany &amp; &quot; &quot; &amp; giveWhat</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="1637847872114515">
@@ -773,7 +791,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="8295221066856348" title="UI trader">
+                <event-group collapsed="1" description="" sid="8295221066856348" title="UI trader">
                     <sub-events>
                         <event-block sid="6139000933248842">
                             <conditions />

@@ -78,8 +78,8 @@
                     <properties>
                         <text>+1</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,204,51</color>
+                        <font>Arial,-32,700,0</font>
+                        <color>153,255,153</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -111,10 +111,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
+                        <x>369.5</x>
                         <y>66</y>
                         <z>0</z>
-                        <width>253</width>
+                        <width>288</width>
                         <height>62</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
