@@ -253,7 +253,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1332184337820847" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}50*lion.level{###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.numéro</param>
+                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}round( lion.level ^ 1.3 * 300 -250 ){###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.numéro</param>
                         </action>
                     </actions>
                 </event-block>
@@ -370,7 +370,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2134108211466926" title="loot table">
+        <event-group collapsed="1" description="" sid="2134108211466926" title="loot table">
             <sub-events>
                 <event-block sid="4996067425529869">
                     <conditions>
@@ -480,7 +480,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="539147761278121" title="level up lion">
+        <event-group collapsed="1" description="" sid="539147761278121" title="level up lion">
             <sub-events>
                 <event-block sid="8852444332401261">
                     <conditions>
@@ -684,7 +684,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4503237485293908" title="Trader">
+        <event-group collapsed="1" description="" sid="4503237485293908" title="Trader">
             <sub-events>
                 <comment>display conversion menu</comment>
                 <event-block sid="8812703073199238">
