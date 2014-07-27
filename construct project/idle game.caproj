@@ -608,7 +608,8 @@
                 <plugin id="NinePatch" />
                 <instance-variables>
                     <instance-variable name="functionCall" sid="9188864498709404" type="string" />
-                    <instance-variable name="functionCallParams" sid="1830715055677984" type="number" />
+                    <instance-variable name="functionCallParams_nb" sid="1830715055677984" type="number" />
+                    <instance-variable name="functionCallParams_txt" sid="1273978999212721" type="string" />
                     <instance-variable name="price" sid="8457791532848926" type="number" />
                     <instance-variable name="currency" sid="7694556192140746" type="string" />
                 </instance-variables>
@@ -725,7 +726,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="lions">
+        <object-folder expanded="1" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -743,6 +744,8 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
@@ -769,6 +772,8 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
                 </container>
                 <texture />
             </object-type>
@@ -779,6 +784,8 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
                 </container>
             </object-type>
             <object-type global="1" name="lionRandomItems" sid="2847898352338322">
@@ -799,17 +806,62 @@
                     <type>lionBtnTxt</type>
                     <type>lionBtn</type>
                     <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
                 </container>
             </object-type>
+            <object-type name="lionGift" sid="6505178483040949">
+                <plugin id="Sprite" />
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8822494290821093" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.12069" y="0.166667" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.896552" y="0.151515" />
+                                <point x="0.982759" y="0.5" />
+                                <point x="0.913793" y="0.863636" />
+                                <point x="0.5" y="0.984848" />
+                                <point x="0.0862069" y="0.863636" />
+                                <point x="0.0172414" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lionLevelUpIcon" sid="3292323360026143">
+                <plugin id="Sprite" />
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3035814222332729" speed="5">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="trader">
+        <object-folder expanded="0" name="trader">
             <object-type name="trader" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
-                    <instance-variable name="giveWhat" sid="3103701344531354" type="string" />
-                    <instance-variable name="giveHowMany" sid="1451616090028767" type="number" />
                     <instance-variable name="getWhat" sid="2750451303680641" type="string" />
                     <instance-variable name="getHowMany" sid="8038152053338172" type="number" />
+                    <instance-variable name="giveWhat" sid="3103701344531354" type="string" />
+                    <instance-variable name="giveHowMany" sid="1451616090028767" type="number" />
                 </instance-variables>
             </object-type>
             <object-type name="traderTitle" sid="9400254462319746">
