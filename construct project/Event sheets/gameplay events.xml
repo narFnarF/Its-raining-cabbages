@@ -27,6 +27,10 @@
                     <param id="0" name="Variable">salads</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="8558147879022178" type="System">
+                    <param id="0" name="Variable">salads</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
             </actions>
         </event-block>
         <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
@@ -1746,7 +1750,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9344236190523339" title="purchase popup">
+        <event-group collapsed="1" description="" sid="9344236190523339" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
