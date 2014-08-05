@@ -2443,8 +2443,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>742</x>
-                        <y>1508</y>
+                        <x>751</x>
+                        <y>1413</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -2649,8 +2649,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>742</x>
-                        <y>1414</y>
+                        <x>747</x>
+                        <y>1504</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -2676,7 +2676,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>744</x>
-                        <y>1792</y>
+                        <y>1600</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -2727,8 +2727,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>742</x>
-                        <y>1603</y>
+                        <x>745</x>
+                        <y>1789</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -2773,9 +2773,9 @@
                 </instance>
                 <instance type="traderTitle" uid="137">
                     <properties>
-                        <text>Conversion menu</text>
+                        <text>Conversion menu:</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Black,-27,900,0</font>
+                        <font>Arial,-27,700,0</font>
                         <color>0,204,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2787,7 +2787,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>722</x>
-                        <y>1375</y>
+                        <y>1367</y>
                         <z>0</z>
                         <width>267</width>
                         <height>51</height>

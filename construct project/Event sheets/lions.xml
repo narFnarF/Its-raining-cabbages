@@ -236,7 +236,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9689064507054484" title="mission">
+        <event-group collapsed="1" description="" sid="9689064507054484" title="mission">
             <sub-events>
                 <comment>send hunting</comment>
                 <event-block sid="1619034874208339">
@@ -528,7 +528,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5567629855902233" title="lion UI">
+        <event-group description="" sid="5567629855902233" title="lion UI">
             <sub-events>
                 <comment>Display inventory</comment>
                 <event-block sid="6215635304056931">
@@ -644,7 +644,7 @@
                     </sub-events>
                 </event-block>
                 <comment>set lion button invisible when not enough veggie burger</comment>
-                <event-block sid="5987765974947958">
+                <event-block disabled="1" sid="5987765974947958">
                     <conditions>
                         <condition id="0" name="Compare text" sid="9299623184567859" type="lionBtnTxt">
                             <param id="0" name="Text to compare">&quot;Veggie burger&quot;</param>
@@ -660,7 +660,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7142561581569159">
+                        <event-block disabled="1" sid="7142561581569159">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="5254700425635496" type="inventory">
                                     <param id="0" name="Key">&quot;Veggie burger&quot;</param>

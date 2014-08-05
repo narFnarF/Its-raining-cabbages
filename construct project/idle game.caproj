@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>r107</version>
+    <version>r108</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -917,14 +917,14 @@
             </instance-variables>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>gameplay.xml</layout>
         <layout>Intro.xml</layout>
         <layout>spawned objects.xml</layout>
         <layout>savefile error.xml</layout>
         <layout>manual loading.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>gameplay events.xml</event-sheet>
         <event-sheet>intro events.xml</event-sheet>
         <event-sheet>verachou.xml</event-sheet>
