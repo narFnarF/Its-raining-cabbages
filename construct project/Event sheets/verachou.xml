@@ -242,6 +242,9 @@
                             <param id="0" name="Instance variable">hungry</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-36" name="Save" sid="7238721513471927" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3435124051775161">
@@ -262,6 +265,9 @@
                         <action id="-11" name="Add to" sid="7656805026918497" type="verachou">
                             <param id="0" name="Instance variable">IQ</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-36" name="Save" sid="2735573317550012" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -284,6 +290,9 @@
                     <actions>
                         <action id="-14" name="Toggle boolean" sid="3488958268494765" type="lightSwitch">
                             <param id="0" name="Instance variable">turnedOn</param>
+                        </action>
+                        <action id="-36" name="Save" sid="1577837444280939" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="2836053792104384" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -316,9 +325,8 @@
                                     <param id="1" name="Layer">&quot;game&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="14" name="Log" sid="3404733434750656" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;ici&quot;</param>
+                                <action id="-36" name="Save" sid="8386455966063994" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -328,8 +336,8 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6642581468452939" type="verachouEggIcon">
-                                    <param id="0" name="X">lerp(verachouEggIcon.X, verachouProgressBar.BBoxRight, 0.05)</param>
-                                    <param id="1" name="Y">lerp(verachouEggIcon.y, verachouProgressBar.Y, 0.05)</param>
+                                    <param id="0" name="X">lerp(verachouEggIcon.X, verachouProgressBar.BBoxRight, 0.05*dt*60)</param>
+                                    <param id="1" name="Y">lerp(verachouEggIcon.y, verachouProgressBar.Y, 0.05*dt*60)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -355,7 +363,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9383853222221445" title="grow up">
+        <event-group collapsed="1" description="" sid="9383853222221445" title="grow up">
             <sub-events>
                 <event-block sid="2657801181745593">
                     <conditions>
@@ -645,7 +653,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="769228176042275" title="update UI">
+        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -1018,7 +1026,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5241223115550638" title="progress bar">
+        <event-group collapsed="1" description="" sid="5241223115550638" title="progress bar">
             <sub-events>
                 <event-block sid="4536157492547079">
                     <conditions />
@@ -1028,7 +1036,7 @@
                             <param id="1" name="Value">clamp(verachouProgressBar.value, 0, verachouProgressBar.valueMax)</param>
                         </action>
                         <action id="-5" name="Set width" sid="4409336432596266" type="verachouProgressBar">
-                            <param id="0" name="Width">lerp(verachouProgressBar.Width, verachouProgressBar.value/verachouProgressBar.valueMax*verachouProgressBarBg.Width, 0.05)</param>
+                            <param id="0" name="Width">lerp(verachouProgressBar.Width, verachouProgressBar.value/verachouProgressBar.valueMax*verachouProgressBarBg.Width, 0.05*dt*60)</param>
                         </action>
                     </actions>
                 </event-block>

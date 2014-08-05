@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplay events</name>
     <events>
-        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[35,1,1],&quot;data&quot;:[[[&quot;No lions was harmed during the making of this game.&quot;]],[[&quot;Philosophy: Are the cabbages really falling from the sky... or is it the menhir that attracts them?&quot;]],[[&quot;Try to evolve the vérachou as quickly as you can, so that you can maximise its egg production.&quot;]],[[&quot;Even when the vérachou is asleep, he still get older... slowly bringing him on the path towards death.&quot;]],[[&quot;When the vérachou is asleep, it wont get hungry. Use this when you too get to sleep.&quot;]],[[&quot;I want these mother-f...ing cabbages out of this mother-f...ing plane!&quot;]],[[&quot;Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature.&quot;]],[[&quot;Ce menhir... C&apos;est un pic, un cap! Que dis-je? C&apos;est une péninsule!&quot;]],[[&quot;We can only hope that the fishes in the water love to eat cabbages.&quot;]],[[&quot;Freud would be proud of your menhir.&quot;]],[[&quot;Have your bought your anti-cabbages protecting helmet?&quot;]],[[&quot;Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again.&quot;]],[[&quot;Is the water just water, or a manifestation of universal entropy?&quot;]],[[&quot;Most of the cabbages in this game are actually imported from your Skyrim save file.&quot;]],[[&quot;Never underestimate the combined power of cabbages and gravity.&quot;]],[[&quot;Now hiring engineer to improve productivity of coleslaw salad factory.&quot;]],[[&quot;Rent-a-bee: 514-555-8385&quot;]],[[&quot;Scientist community actively trying to find a way to turn cabbages into clean energy. \&quot;We have so much of them anyway!\&quot;&quot;]],[[&quot;Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!&quot;]],[[&quot;The cabbages are restless. Consider sacrificing salad dressing to appease them.&quot;]],[[&quot;The name of the Boing 747 means that it can carry up to 747 cabbages.&quot;]],[[&quot;US government implement additional airport security following cabbage terrorist attack.&quot;]],[[&quot;Where’s the easy mode in this game?&quot;]],[[&quot;World hunger have been solved as cabbages enter population eating habits.&quot;]],[[&quot;The NSA cannot confirm nor deny whether it is spying on your bees.&quot;]],[[&quot;Is this art or fart?&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
+        <variable constant="0" name="JSONPourArraySillyMessages" sid="1182673124854165" static="0" type="text">{&quot;c2array&quot;:true,&quot;size&quot;:[35,1,1],&quot;data&quot;:[[[&quot;Try to evolve the vérachou as quickly as you can, so that you can maximize its egg production before it dies.&quot;]],[[&quot;No lions was harmed during the making of this game.&quot;]],[[&quot;Philosophy: Are the cabbages really falling from the sky... or is it the menhir that attracts them?&quot;]],[[&quot;Even when the vérachou is asleep, he still get older... slowly bringing him on the path towards death.&quot;]],[[&quot;When the vérachou is asleep, it wont get hungry. Use this when you too get to sleep.&quot;]],[[&quot;I want these mother-f...ing cabbages out of this mother-f...ing plane!&quot;]],[[&quot;Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature.&quot;]],[[&quot;Ce menhir... C&apos;est un pic, un cap! Que dis-je? C&apos;est une péninsule!&quot;]],[[&quot;We can only hope that the fishes in the water love to eat cabbages.&quot;]],[[&quot;Freud would be proud of your menhir.&quot;]],[[&quot;Have your bought your anti-cabbages protecting helmet?&quot;]],[[&quot;Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again.&quot;]],[[&quot;Is the water just water, or a manifestation of universal entropy?&quot;]],[[&quot;Most of the cabbages in this game are actually imported from your Skyrim save file.&quot;]],[[&quot;Never underestimate the combined power of cabbages and gravity.&quot;]],[[&quot;Now hiring engineer to improve productivity of coleslaw salad factory.&quot;]],[[&quot;Rent-a-bee: 514-555-8385&quot;]],[[&quot;Scientist community actively trying to find a way to turn cabbages into clean energy. \&quot;We have so much of them anyway!\&quot;&quot;]],[[&quot;Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!&quot;]],[[&quot;The cabbages are restless. Consider sacrificing salad dressing to appease them.&quot;]],[[&quot;The name of the Boing 747 means that it can carry up to 747 cabbages.&quot;]],[[&quot;US government implement additional airport security following cabbage terrorist attack.&quot;]],[[&quot;Where’s the easy mode in this game?&quot;]],[[&quot;World hunger have been solved as cabbages enter population eating habits.&quot;]],[[&quot;The NSA cannot confirm nor deny whether it is spying on your bees.&quot;]],[[&quot;Is this art or fart?&quot;]],[[&quot;How is it possible to make a rock larger?&quot;]],[[&quot;It is rumored that the menhir is actually an alien technology.&quot;]],[[&quot;What&apos;s the meaning of this game??&quot;]],[[&quot;Nobody seems to know where these cabbages come from.&quot;]],[[&quot;Your bees are working hard.&quot;]],[[&quot;Where does the menhir comes from?&quot;]],[[&quot;That menhir… What does it mean?&quot;]],[[&quot;A mighty lion is lurking around.&quot;]],[[&quot;A lion is poking its head around.&quot;]]]}</variable>
         <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
         <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
         <event-block sid="6829102839958492">
@@ -48,9 +48,18 @@
                         <action id="-36" name="Save" sid="6282600037916136" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="4501332724436306" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="4501332724436306" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Saving in progress...&quot;{###}&quot;nobr&quot;</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="4677038493967835" type="saveBtn">
+                            <param id="0" name="Opacity">10</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6130481896348527" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7301248580874645" type="saveBtn">
+                            <param id="0" name="Opacity">100</param>
                         </action>
                     </actions>
                 </event-block>
@@ -59,22 +68,22 @@
                         <condition id="-28" name="On save complete" sid="5213636866070556" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="9488686038622572" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="9488686038622572" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
                         </action>
-                        <action id="14" name="Log" sid="4881794402163457" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="4881794402163457" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">SaveStateJSON</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2349786055396418">
+                <event-block disabled="1" sid="2349786055396418">
                     <conditions>
                         <condition id="-29" name="On load complete" sid="6025335682815054" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="171037476735454" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="171037476735454" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Loading successful&quot;</param>
                         </action>
@@ -84,7 +93,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="3347646705997988" title="bees">
             <sub-events>
-                <event-block sid="4656210704997607">
+                <event-block collapsed="1" sid="4656210704997607">
                     <conditions>
                         <condition id="-11" name="For Each" sid="3721896483677029" type="System">
                             <param id="0" name="Object">bee</param>
@@ -595,6 +604,9 @@
                         <action id="-10" name="Set value" sid="4763626231264486" type="factory">
                             <param id="0" name="Instance variable">outputSalads</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-36" name="Save" sid="8398255009559349" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1351,7 +1363,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="901981960933352" title="bee button">
+                <event-group collapsed="1" description="" sid="901981960933352" title="bee button">
                     <sub-events>
                         <event-block disabled="1" sid="5263809454682485">
                             <conditions>
@@ -1376,9 +1388,8 @@
                                     <param id="0" name="Variable">salads</param>
                                     <param id="1" name="Value">btnBee.price</param>
                                 </action>
-                                <action id="14" name="Log" sid="7333274800985168" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">newline &amp; &quot;touched btnBee: &quot; &amp; bee.PickedCount</param>
+                                <action id="-36" name="Save" sid="9123035828001997" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1400,10 +1411,6 @@
                                             <param id="0" name="Instance variable">speed</param>
                                             <param id="1" name="Value">0.005</param>
                                         </action>
-                                        <action disabled="1" id="14" name="Log" sid="7479258912149777" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;type: bee speed: &quot; &amp; bee.PickedCount</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="1373537816387478">
@@ -1415,15 +1422,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="9392878356548108" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;type: buy bee (avant spawn): &quot; &amp; bee.PickedCount</param>
-                                        </action>
-                                        <action disabled="1" id="0" name="Spawn another object" sid="3952664423899618" type="btnBeeBack">
-                                            <param id="0" name="Object">bee</param>
-                                            <param id="1" name="Layer">&quot;game&quot;</param>
-                                            <param id="2" name="Image point">&quot;bee spawn&quot;</param>
-                                        </action>
                                         <action id="-3" name="Create object" sid="5409442867341612" type="System">
                                             <param id="0" name="Object to create">bee</param>
                                             <param id="1" name="Layer">&quot;game&quot;</param>
@@ -1445,10 +1443,6 @@
                                         <action id="-10" name="Set value" sid="4590974568236626" type="btnBee">
                                             <param id="0" name="Instance variable">type</param>
                                             <param id="1" name="Value">&quot;Bee speed&quot;</param>
-                                        </action>
-                                        <action id="14" name="Log" sid="6670977378552766" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;type: buy bee (après spawn): &quot; &amp; bee.PickedCount</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -1608,6 +1602,9 @@
                                 <action id="-10" name="Set value" sid="3649364748253099" type="btnUpgrade">
                                     <param id="0" name="Instance variable">price</param>
                                     <param id="1" name="Value">round(btnUpgrade.price * btnUpgrade.priceMutiplicator + btnUpgrade.priceAdditor)</param>
+                                </action>
+                                <action id="-36" name="Save" sid="719060786340821" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1942,8 +1939,12 @@
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
                         </action>
+                        <action id="-36" name="Save" sid="7101203495731496" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
+                        <comment>purchase confirmed!</comment>
                         <event-block sid="7338441655247254">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5467674846598704" type="purchasePopupBuyBtn">
