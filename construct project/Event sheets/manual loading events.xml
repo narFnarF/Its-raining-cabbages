@@ -59,5 +59,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="66366943825607">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7574137722883641" type="Touch">
+                    <param id="0" name="Object">txtLabel</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="7117710668203133" type="txtLabel">
+                    <param id="0" name="Text to compare">&quot;Go to Gameplay&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="948542714214916" type="System">
+                    <param id="0" name="Layout">gameplay</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

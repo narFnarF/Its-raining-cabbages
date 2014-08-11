@@ -13,7 +13,7 @@
             <actions>
                 <action disabled="1" id="-9" name="Destroy" sid="1476325153238355" type="cabbage" />
                 <action id="-16" name="Wait" sid="5999891422380538" type="System">
-                    <param id="0" name="Seconds">0.5</param>
+                    <param id="0" name="Seconds">0.2</param>
                 </action>
                 <action id="0" name="Call function" sid="3461923599023826" type="Function">
                     <param id="0" name="Name">&quot;notification&quot;</param>
@@ -33,7 +33,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="8792768240858758" title="Save">
+        <event-group description="" sid="8792768240858758" title="Save">
             <sub-events>
                 <event-block any="1" sid="7604520539040787">
                     <conditions>
@@ -86,6 +86,21 @@
                         <action disabled="1" id="0" name="Call function" sid="171037476735454" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Loading successful&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3693805639098864">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7066901252208626" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7104756166457194" type="menhir">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">saver.Get(&quot;menhir level&quot;)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4238990966910766" type="Function">
+                            <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -439,7 +454,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2814039206435919" title="menhir">
+        <event-group description="" sid="2814039206435919" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -487,7 +502,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1962647449018996" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}menhir.price{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}ceil( 3.3^(menhir.level) ){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -498,19 +513,36 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" sid="5619613339760502" type="menhir">
-                            <param id="0" name="Width">menhir.Width + 15</param>
+                        <action id="-11" name="Add to" sid="1975722203121804" type="menhir">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5653963810744893" type="menhir">
-                            <param id="0" name="Instance variable">price</param>
-                            <param id="1" name="Value">menhir.price*2 +3</param>
+                        <action id="0" name="Call function" sid="2145173180444869" type="Function">
+                            <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-5" name="Set width" sid="3720700351397225" type="beeCollectZone">
-                            <param id="0" name="Width">menhir.Width</param>
+                        <action id="0" name="Add key" sid="879578342709962" type="saver">
+                            <param id="0" name="Key">&quot;menhir level&quot;</param>
+                            <param id="1" name="Value">menhir.level</param>
                         </action>
                         <action id="0" name="Call function" sid="4387119365399737" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">menhirMsgArray.At(random(0, menhirMsgArray.Width))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7221167547525515">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8787980511620962" type="Function">
+                            <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="5619613339760502" type="menhir">
+                            <param id="0" name="Width">(menhir.level)*15+77</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="3720700351397225" type="beeCollectZone">
+                            <param id="0" name="Width">menhir.Width</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1088,7 +1120,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7615597092264397" title="debug">
+        <event-group description="" sid="7615597092264397" title="debug">
             <sub-events>
                 <event-block sid="9230813409032216">
                     <conditions>

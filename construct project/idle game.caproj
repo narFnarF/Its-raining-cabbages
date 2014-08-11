@@ -659,10 +659,14 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="price" sid="2406122236208806" type="number" />
+                    <instance-variable name="level" sid="1302145897562813" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="4019090817851407">
                         <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="9063371240552588">
+                        <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
@@ -788,7 +792,7 @@
                     <type>lionLevelUpIcon</type>
                 </container>
             </object-type>
-            <object-type global="1" name="lionRandomItems" sid="2847898352338322">
+            <object-type name="lionRandomItems" sid="2847898352338322">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="inventoryDisplay" sid="8665233173308308">
@@ -854,7 +858,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="trader">
+        <object-folder expanded="0" name="trader">
             <object-type name="trader" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
@@ -904,6 +908,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="saver" sid="8156493265982482">
+            <plugin id="Dictionary" />
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -917,7 +924,7 @@
             </instance-variables>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>gameplay.xml</layout>
         <layout>Intro.xml</layout>
         <layout>spawned objects.xml</layout>
