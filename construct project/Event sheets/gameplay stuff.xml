@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>gameplay stuff</name>
+    <events>
+        <event-group collapsed="1" description="" sid="8286149581313041" title="camera">
+            <sub-events>
+                <event-block sid="7452036870298714">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="461470036719477" type="Touch">
+                            <param id="0" name="Object">arrowCamera</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4756559406950533" type="screen">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">arrowCamera.goto</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5224733347865089" type="camera">
+                            <param id="0" name="Instance variable">screen</param>
+                            <param id="1" name="Value">screen.number</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7265822603748214">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7857482618290828" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="1599688234136488" type="screen">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">camera.screen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="6933512897303296" type="camera">
+                            <param id="0" name="X">lerp(camera.X, screen.X, 0.1*dt*60)</param>
+                            <param id="1" name="Y">lerp(camera.Y, screen.Y, 0.1*dt*60)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6531017720334755">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5043492847517545" type="Touch">
+                            <param id="0" name="Object">arrowLayout</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="4182088673496632" type="purchasePopup" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="671710275774179" type="System">
+                            <param id="0" name="Layout">arrowLayout.goto</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5809538651794419" title="Notifications">
+            <sub-events>
+                <event-group description="" sid="3373127521768589" title="Silly notifications">
+                    <sub-events>
+                        <event-block sid="3351956113656007">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="2683204853402891" type="System">
+                                    <param id="0" name="Interval (seconds)">47</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7815691982683778" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">sillyMessages.At( floor( random(0, sillyMessages.Width) ) )</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7051194549149644" title="Notification box">
+                    <sub-events>
+                        <event-block sid="4008492876518852">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="2614558667678372" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="1740071637189476" type="txtNotifications">
+                                    <param id="0" name="Instance variable">grand</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2576115468900753" type="txtNotifications">
+                                    <param id="0" name="Y">23</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1230529723461663">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2690118603809105" type="notificationBox">
+                                    <param id="0" name="Instance variable">ouverte</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="2335230733173366" type="notificationBox">
+                                    <param id="0" name="Height">lerp(notificationBox.Height, screen.Height, 0.2)</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="5248047263717285" type="txtNotifications">
+                                    <param id="0" name="Height">lerp(txtNotifications.Height, screen.Height, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9256392490111727">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4182422587160907" type="notificationBox">
+                                    <param id="0" name="Instance variable">ouverte</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="2271114065119186" type="notificationBox">
+                                    <param id="0" name="Height">lerp(notificationBox.Height, 73, 0.2)</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="129026006207576" type="txtNotifications">
+                                    <param id="0" name="Height">lerp(txtNotifications.Height, 66, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3306952286666225">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="3199464399313145" type="Touch">
+                                    <param id="0" name="Object">notificationBox</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3310808169397982">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7854924857770561" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5572289705858641" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3228668079021772">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="6064968522936261" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="9860001046856851" type="txtNotifications">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2870772467017314">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143655051395795" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="4697917754665632" type="txtNotifications">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="7850291712389564">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5540295360199629" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="866303902294505" type="notificationBox">
+                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8252794892255349">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="5291673362194709" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="3593734442279792" type="txtNotifications">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6986068898036857">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6683865256677001" type="txtNotifications">
+                                                    <param id="0" name="Instance variable">grand</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="6193827089382902" type="txtNotifications">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block collapsed="1" sid="3297061255133494">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9779909940571391" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1563127842587189" type="notificationBox">
+                            <param id="0" name="Animation">&quot;flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Vide la textbox, et push la nouvelle notification</comment>
+                        <event-block sid="8681305054990883">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="3949063803916931" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;nobr&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="8950452122555956" type="notifications">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1722859168537195">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1780504656744671" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="987647764436304" type="notifications">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">Function.Param(0) &amp; newline</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1198690373811865">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="2712988918937438" type="txtNotifications">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9756152489724751">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="2550594532501463" type="notifications">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set size" sid="1324575582996049" type="notifications">
+                                    <param id="0" name="Width">15</param>
+                                    <param id="1" name="Height">1</param>
+                                    <param id="2" name="Depth">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>remplis la textbox qu&apos;on vient juste de vider</comment>
+                        <event-block sid="6670611033980802">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="6264250690382946" type="notifications">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="5407355819552363" type="txtNotifications">
+                                    <param id="0" name="Text">notifications.CurValue &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4587465909699658" title="purchase popup">
+            <sub-events>
+                <event-block sid="6281950607139443">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6784177585961121" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="1" name="p_FUNCTION_CALL" sid="287497647354334" static="0" type="number">0</variable>
+                        <variable constant="1" name="P_DESCRIPTION" sid="5741935465883889" static="0" type="number">1</variable>
+                        <variable constant="1" name="p_PRICE" sid="424257490165207" static="0" type="number">2</variable>
+                        <variable constant="1" name="P_CURRENCY" sid="3240868740482591" static="0" type="number">3</variable>
+                        <variable constant="1" name="P_BUTTON_TXT" sid="6239323993807903" static="0" type="number">4</variable>
+                        <variable constant="1" name="P_FUNCTION_PARAMS_nb" sid="3325033692983624" static="0" type="number">5</variable>
+                        <variable constant="1" name="P_FUNCTION_PARAMS_txt" sid="1398298083204076" static="0" type="number">6</variable>
+                        <event-block sid="9802245080491284">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="6850287178539472" type="purchasePopup" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9896712579119286" type="purchasePopupDescriptionTxt">
+                                    <param id="0" name="Text">Function.Param(P_DESCRIPTION)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6650445298278178" type="purchasePopupBuyBtnTxt">
+                                    <param id="0" name="Text">Function.Param(P_BUTTON_TXT)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3060359656948211" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">price</param>
+                                    <param id="1" name="Value">Function.Param(P_PRICE)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="246493300881905" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">functionCall</param>
+                                    <param id="1" name="Value">Function.Param(P_FUNCTION_CALL)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5258603718979137" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">currency</param>
+                                    <param id="1" name="Value">Function.Param(P_CURRENCY)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5176423925186251" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;visible&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5611176068099713">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="2714737755001618" type="Function">
+                                            <param id="0" name="Index">P_PRICE</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="3282276299373799" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Text">Function.Param(P_PRICE) &amp; &quot; &quot; &amp; Function.Param(P_CURRENCY)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7344156158620036">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="682135298946195" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6031643195485533" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">functionCallParams_nb</param>
+                                            <param id="1" name="Value">Function.Param(P_FUNCTION_PARAMS_NB)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3574689375046939">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7586194232987119" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6214984255707836" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">functionCallParams_txt</param>
+                                            <param id="1" name="Value">Function.Param(P_FUNCTION_PARAMS_TXT)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7923359768041224">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="9854582410895571" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="4766569329467756" type="Touch">
+                            <param id="0" name="Object">purchasePopup</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4492177388878388" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="8753415885884471">
+                    <conditions>
+                        <condition id="0" name="On function" sid="230964524770024" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8485362911102587">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="2209173077311017" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;visible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="9051090239783525" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2839774470081691" type="purchasePopup">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6245977357847778" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7824358555234205" type="purchasePopupBuyBtnTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8940165489907321" type="purchasePopupDescriptionTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8778806275507514" type="purchasePopupDarkness">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7023674916253343">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="4285084261490894" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;invisible&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="6941552155971268" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5420468636339637" type="purchasePopup">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4650520600137766" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2058421114443208" type="purchasePopupBuyBtnTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8453289593378264" type="purchasePopupDescriptionTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9916589561088156" type="purchasePopupDarkness">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7934955406918831">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9242316414086531" type="Touch">
+                            <param id="0" name="Object">purchasePopupBuyBtn</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="7094822781108183" type="purchasePopupBuyBtn" />
+                        <condition id="-10" name="Compare opacity" sid="1899917743884863" type="purchasePopupBuyBtn">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5377940465416621" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
+                        </action>
+                        <action id="-36" name="Save" sid="7101203495731496" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>purchase confirmed!</comment>
+                        <event-block sid="7338441655247254">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5467674846598704" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">currency</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;salads&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="6583996586418001" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">purchasePopupBuyBtn.price</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3970839973935901">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8467418821610262" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">currency</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="5081682201868744" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Value">purchasePopupBuyBtn.price</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2740984466105858">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set key" sid="4073815527669741" type="inventory">
+                                    <param id="0" name="Key">purchasePopupBuyBtn.currency</param>
+                                    <param id="1" name="Value">inventory.Get(purchasePopupBuyBtn.currency) - purchasePopupBuyBtn.price</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="13824302831608">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5056556591704056" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Instance variable">functionCall</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1487484469212607" type="Function">
+                                    <param id="0" name="Name">purchasePopupBuyBtn.functionCall</param>
+                                    <param id="1" name="Parameter {n}">purchasePopupBuyBtn.functionCallParams_nb{###}purchasePopupBuyBtn.functionCallParams_txt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group collapsed="1" description="" sid="9723364976985796" title="adjust visibility of the Buy button">
+                    <sub-events>
+                        <event-block sid="7276475911048179">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="4195914585634596" type="purchasePopupBuyBtn">
+                                    <param id="0" name="Opacity">30</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8392869785145184" type="purchasePopupBuyBtnTxt">
+                                    <param id="0" name="Opacity">30</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="6262407022340205" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;adjust visibility&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7544582151148291">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3072460819785569" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">currency</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;salads&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="8851386619356966" type="System">
+                                            <param id="0" name="Variable">salads</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">purchasePopupBuyBtn.price</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="2440663851224176" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3198223474798477" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="978644222524949">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8382535366744848" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">currency</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;eggs&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="2737445583472778" type="System">
+                                            <param id="0" name="Variable">eggs</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">purchasePopupBuyBtn.price</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6587197439545074" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3861612619217183" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8916039954176321">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="880747003859192" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">currency</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Veggie burger&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="3931529223604202" type="System">
+                                            <param id="0" name="First value">inventory.Get(&quot;Veggie burger&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">purchasePopupBuyBtn.price</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="3816865793928418" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1337190127550691" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5503990755743505">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7955789417352569" type="inventory">
+                                            <param id="0" name="Key">purchasePopupBuyBtn.currency</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">purchasePopupBuyBtn.price</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6247403400627584" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="2450689681600696" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1564314069543243">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9631744906943528" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Instance variable">price</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6928596528410794" type="purchasePopupBuyBtn">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="5702193152151283" type="purchasePopupBuyBtnTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="6915278078437985" title="text popup">
+                    <sub-events>
+                        <event-block sid="1359478353731207">
+                            <conditions>
+                                <condition id="0" name="On function" sid="408578008528803" type="Function">
+                                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="1" name="TEXT" sid="1229490495965919" static="0" type="number">0</variable>
+                                <variable constant="1" name="TXT_BUTTON" sid="8746804029203494" static="0" type="number">1</variable>
+                                <event-block sid="8004655529436159">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4103462059281514" type="Function">
+                                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;{###}Function.Param(TEXT){###}0{###}&quot;&quot;{###}Function.Param(TXT_BUTTON){###}&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3740395054702946" title="debug">
+            <sub-events>
+                <event-block sid="9230813409032216">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="8203784927323504" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="557685072215698">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3704217256528622" type="Keyboard">
+                                    <param id="0" name="Key">49 (1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="5011214317580004" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7628263753625174" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 1000 salads&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5574790077687577">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="2164939528319908" type="Keyboard">
+                                    <param id="0" name="Key">50 (2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="961588235365985" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">10000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6772831669742584" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 10 000 salads&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9627662895136622">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="5620059868273281" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="8939851018959264" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6486740256561329" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 1000 eggs&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8706205130019801">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="6171091854646525" type="inventory">
+                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
+                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) + 5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="646716529375489">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="789024940462099" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="4867336889305898" type="inventory">
+                                    <param id="0" name="Key">&quot;Tofu&quot;</param>
+                                    <param id="1" name="Value">inventory.Get(&quot;Tofu&quot;) + 5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1946579498035535" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 Tofu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2673550343140702">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
+                                    <param id="0" name="Key">84 (T)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4640776345347283" type="System">
+                                    <param id="0" name="Object to create">cabbage</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="3755200330580629" type="cabbage">
+                                    <param id="0" name="Impulse">100</param>
+                                    <param id="1" name="Angle">-90</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="199859905082622">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
+                                    <param id="0" name="Key">82 (R)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3793089828323068">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6501843756353979" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-36" name="Save" sid="6983143950774245" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6785683011550147" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: Saving in progress...&quot;{###}&quot;nobr&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1518877078274311" title="time tracking">
+            <sub-events>
+                <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
+                <variable constant="0" name="totalTime" sid="2557565007336424" static="1" type="number">0</variable>
+                <event-block sid="6667438399068728">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3334152691655771" type="timeKeeper">
+                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3520161396299472" type="timeKeeper">
+                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                            <param id="1" name="Value">Date.UnixTimestamp</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4445412282639422">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="4072512887839301" type="System">
+                            <param id="0" name="Variable">deltaTime</param>
+                            <param id="1" name="Value">(date.UnixTimestamp - timeKeeper.lastTimeStamp) /1000</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3037005795663414" type="timeKeeper">
+                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                            <param id="1" name="Value">Date.UnixTimestamp</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6697561747331965" type="System">
+                            <param id="0" name="Variable">totalTime</param>
+                            <param id="1" name="Value">deltaTime</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6298881922052676" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                            <param id="1" name="Parameter {n}">deltaTime</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Debug shortcut</comment>
+                <event-block sid="5490210380852038">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="4926763517407425" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>15 minutes</comment>
+                        <event-block sid="9565896708669784">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6581870890977221" type="Keyboard">
+                                    <param id="0" name="Key">66 (B)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="2028321994046621" type="timeKeeper">
+                                    <param id="0" name="Instance variable">lastTimeStamp</param>
+                                    <param id="1" name="Value">1000 * 60 * 15</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>1 heure</comment>
+                        <event-block sid="257220804825817">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="9096590280505245" type="Keyboard">
+                                    <param id="0" name="Key">78 (N)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="3465359131945957" type="timeKeeper">
+                                    <param id="0" name="Instance variable">lastTimeStamp</param>
+                                    <param id="1" name="Value">1000 * 60 * 60 * 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>6 heures</comment>
+                        <event-block sid="8860725404091758">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6290289740175713" type="Keyboard">
+                                    <param id="0" name="Key">77 (M)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="4478290885112427" type="timeKeeper">
+                                    <param id="0" name="Instance variable">lastTimeStamp</param>
+                                    <param id="1" name="Value">1000 * 60 * 60 * 6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>1 journée</comment>
+                        <event-block sid="1957407101174712">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="4127048602775534" type="Keyboard">
+                                    <param id="0" name="Key">188 (,)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="252099197713404" type="timeKeeper">
+                                    <param id="0" name="Instance variable">lastTimeStamp</param>
+                                    <param id="1" name="Value">1000 * 60 * 60 * 24 * 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

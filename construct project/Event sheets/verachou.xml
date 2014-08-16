@@ -3,75 +3,28 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>verachou</name>
     <events>
-        <event-block disabled="1" sid="3820918889345804">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="9135518288077619" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="8235515923426217" type="verachou">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Value">&quot;unborn&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="8754673480950891" title="Time passing">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="2453235365361325" static="0" type="number">0</variable>
                 <event-block sid="6891274320217265">
                     <conditions>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="9227902663182997" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;unborn&quot;</param>
-                        </condition>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="947689688442004" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;dead&quot;</param>
+                        <condition id="0" name="On function" sid="5216105380087696" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9512050473778214">
+                        <event-block sid="1685999792269703">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="1860863763713713" type="System">
-                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="9227902663182997" type="verachou">
+                                    <param id="0" name="Instance variable">status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;unborn&quot;</param>
                                 </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="4087588214860005" type="verachou">
-                                    <param id="0" name="Instance variable">age</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="5390896910748681">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="5891311342140559" type="lightSwitch">
-                                            <param id="0" name="Instance variable">turnedOn</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-11" name="Add to" sid="4345176056331216" type="verachou">
-                                            <param id="0" name="Instance variable">hungryCounter</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="1784352281555666" type="verachou">
-                                            <param id="0" name="Instance variable">energyCounter</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="1911023966916177" type="verachou">
-                                            <param id="0" name="Instance variable">IQCounter</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="5630432467569522">
-                            <conditions>
-                                <condition id="0" name="On function" sid="5216105380087696" type="Function">
-                                    <param id="0" name="Name">&quot;user is back&quot;</param>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="947689688442004" type="verachou">
+                                    <param id="0" name="Instance variable">status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;dead&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -83,26 +36,32 @@
                                     <param id="0" name="Instance variable">age</param>
                                     <param id="1" name="Value">deltaTime</param>
                                 </action>
+                                <action id="-11" name="Add to" sid="8253461582700784" type="verachou">
+                                    <param id="0" name="Instance variable">hungryCounter</param>
+                                    <param id="1" name="Value">deltaTime</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="4916256050990617" type="verachou">
+                                    <param id="0" name="Instance variable">energyCounter</param>
+                                    <param id="1" name="Value">deltaTime</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="6086337707940455" type="verachou">
+                                    <param id="0" name="Instance variable">IQCounter</param>
+                                    <param id="1" name="Value">deltaTime</param>
+                                </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="8515393396401658">
+                                <event-block sid="5341655865873781">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="7139229001778884" type="lightSwitch">
-                                            <param id="0" name="Instance variable">turnedOn</param>
+                                        <condition id="-14" name="Compare variable" sid="7939307848731903" type="System">
+                                            <param id="0" name="Variable">deltaTime</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Add to" sid="8253461582700784" type="verachou">
-                                            <param id="0" name="Instance variable">hungryCounter</param>
-                                            <param id="1" name="Value">deltaTime</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="4916256050990617" type="verachou">
-                                            <param id="0" name="Instance variable">energyCounter</param>
-                                            <param id="1" name="Value">deltaTime</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="6086337707940455" type="verachou">
-                                            <param id="0" name="Instance variable">IQCounter</param>
-                                            <param id="1" name="Value">deltaTime</param>
+                                        <action id="14" name="Log" sid="9651300001211485" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;plus que 4 sec&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -271,7 +230,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8837413209552696">
+                <event-block disabled="1" sid="8837413209552696">
                     <conditions>
                         <condition id="3" name="On touched object" sid="8585086600605762" type="Touch">
                             <param id="0" name="Object">lightSwitch</param>
@@ -363,7 +322,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9383853222221445" title="grow up">
+        <event-group description="" sid="9383853222221445" title="grow up">
             <sub-events>
                 <event-block sid="2657801181745593">
                     <conditions>
@@ -653,7 +612,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
+        <event-group description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -681,7 +640,7 @@
                         <action id="-16" name="Set opacity" sid="6986939396338029" type="verachouGrowBtn">
                             <param id="0" name="Opacity">30</param>
                         </action>
-                        <action id="4" name="Set animation" sid="8440416327424395" type="lightSwitch">
+                        <action disabled="1" id="4" name="Set animation" sid="8440416327424395" type="lightSwitch">
                             <param id="0" name="Animation">&quot;off&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -883,7 +842,7 @@
                 </event-block>
                 <event-block sid="7041451913349169">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4335607764340006" type="lightSwitch">
+                        <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="4335607764340006" type="lightSwitch">
                             <param id="0" name="Instance variable">turnedOn</param>
                         </condition>
                         <condition id="-7" inverted="1" name="Compare instance variable" sid="2491493513818138" type="verachou">
@@ -968,7 +927,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6076633929689879">
+                <event-block disabled="1" sid="6076633929689879">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="2141232106602758" type="lightSwitch">
                             <param id="0" name="Instance variable">turnedOn</param>
@@ -1026,7 +985,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5241223115550638" title="progress bar">
+        <event-group description="" sid="5241223115550638" title="progress bar">
             <sub-events>
                 <event-block sid="4536157492547079">
                     <conditions />

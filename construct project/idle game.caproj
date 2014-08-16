@@ -30,6 +30,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -307,8 +308,8 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="UI">
-            <object-type name="arrow" sid="9018481897248055">
+        <object-folder expanded="1" name="UI">
+            <object-type name="arrowCamera" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="goto" sid="4017894354927551" type="number" />
@@ -386,6 +387,22 @@
             <object-type name="debugTextBox" sid="1463393681975661">
                 <plugin id="TextBox" />
             </object-type>
+            <object-type name="arrowLayout" sid="3468448305939629">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="goto" sid="7119143192806759" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6710477579799478">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801973543682937" speed="5">
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.441176" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
             <object-type name="solidBloc" sid="3710229597765973">
@@ -451,6 +468,11 @@
                     <instance-variable name="toEvolveCounter" sid="6339981050453749" type="number" />
                     <instance-variable name="toEvolve" sid="2145543609789773" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="5237604124599049">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
                         <frame duration="1" hotspotX="0.501639" hotspotY="0.5" />
@@ -911,6 +933,22 @@
         <object-type global="1" name="saver" sid="8156493265982482">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="timeKeeper" sid="7589780074901761">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="lastTimeStamp" sid="5998943843714928" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="7087179446488632">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9175592382971256" speed="5">
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.607843" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -930,15 +968,32 @@
         <layout>spawned objects.xml</layout>
         <layout>savefile error.xml</layout>
         <layout>manual loading.xml</layout>
+        <layout>Verachou.xml</layout>
+        <layout>create new game.xml</layout>
+        <layout>lions.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
-        <event-sheet>gameplay events.xml</event-sheet>
-        <event-sheet>intro events.xml</event-sheet>
-        <event-sheet>verachou.xml</event-sheet>
-        <event-sheet>main.xml</event-sheet>
-        <event-sheet>savefile error events.xml</event-sheet>
-        <event-sheet>manual loading events.xml</event-sheet>
-        <event-sheet>lions.xml</event-sheet>
+    <event-folder expanded="1">
+        <event-folder expanded="0" name="bee">
+            <event-sheet>bee events.xml</event-sheet>
+        </event-folder>
+        <event-folder expanded="1" name="verachou">
+            <event-sheet>verachou.xml</event-sheet>
+            <event-sheet>verachou main.xml</event-sheet>
+        </event-folder>
+        <event-folder expanded="1" name="lions">
+            <event-sheet>lions events.xml</event-sheet>
+            <event-sheet>lions events main.xml</event-sheet>
+        </event-folder>
+        <event-folder expanded="1" name="menus">
+            <event-sheet>savefile error events.xml</event-sheet>
+            <event-sheet>manual loading events.xml</event-sheet>
+            <event-sheet>intro events.xml</event-sheet>
+            <event-sheet>create new game events.xml</event-sheet>
+        </event-folder>
+        <event-sheet>v1 events.xml</event-sheet>
+        <event-sheet>v1 events main.xml</event-sheet>
+        <event-sheet>global events.xml</event-sheet>
+        <event-sheet>gameplay stuff.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

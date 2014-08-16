@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>lions</name>
+    <name>lions events</name>
     <events>
         <event-block sid="7271561405416356">
             <conditions>
@@ -154,7 +154,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2153991481750325" title="Time passing (lion)">
+        <event-group description="" sid="2153991481750325" title="Time passing (lion)">
             <sub-events>
                 <event-block sid="7787504753348459">
                     <conditions>

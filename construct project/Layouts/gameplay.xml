@@ -2,7 +2,7 @@
 <c2layout>
     <name>gameplay</name>
     <sid>8873350371196689</sid>
-    <event-sheet>main</event-sheet>
+    <event-sheet>v1 events main</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>
@@ -289,6 +289,39 @@
                         <opacity>0.100000001</opacity>
                     </world>
                 </instance>
+                <instance type="camera" uid="9">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <screen>1</screen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>319</x>
+                        <y>501</y>
+                        <z>0</z>
+                        <width>129.647994995</width>
+                        <height>118.260002136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502283096</hotspotX>
+                        <hotspotY>0.502283096</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -327,34 +360,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="arrow" uid="8">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <goto>6</goto>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>570</x>
-                        <y>923</y>
-                        <z>0</z>
-                        <width>123</width>
-                        <height>92</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -509,7 +514,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="52">
+                <instance type="arrowCamera" uid="52">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -537,7 +542,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="53">
+                <instance type="arrowCamera" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -554,7 +559,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>330.575439453</x>
-                        <y>933.999267578</y>
+                        <y>930.999267578</y>
                         <z>0</z>
                         <width>75</width>
                         <height>95</height>
@@ -565,7 +570,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="105">
+                <instance type="arrowCamera" uid="105">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -593,7 +598,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="107">
+                <instance type="arrowCamera" uid="107">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -621,7 +626,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="125">
+                <instance type="arrowCamera" uid="125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -649,7 +654,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="127">
+                <instance type="arrowCamera" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -677,7 +682,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="10">
+                <instance type="arrowCamera" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -705,7 +710,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="12">
+                <instance type="arrowCamera" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -730,6 +735,62 @@
                         <hotspotX>0.502645493</hotspotX>
                         <hotspotY>0.441176474</hotspotY>
                         <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrowLayout" uid="133">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <goto>verachou</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>71.564208984</x>
+                        <y>926.016174316</y>
+                        <z>0</z>
+                        <width>131</width>
+                        <height>99</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.441176474</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrowLayout" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <goto>lions</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>561</x>
+                        <y>906</y>
+                        <z>0</z>
+                        <width>131</width>
+                        <height>99</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.441176474</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1044,8 +1105,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>34</x>
-                        <y>823</y>
+                        <x>33</x>
+                        <y>813</y>
                         <z>0</z>
                         <width>204</width>
                         <height>128</height>
@@ -1102,8 +1163,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>341</x>
-                        <y>806</y>
+                        <x>340</x>
+                        <y>796</y>
                         <z>0</z>
                         <width>184.526580811</width>
                         <height>171.063278198</height>
@@ -1226,8 +1287,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>134</x>
-                        <y>834</y>
+                        <x>133</x>
+                        <y>824</y>
                         <z>0</z>
                         <width>7</width>
                         <height>261</height>
@@ -1265,8 +1326,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>531</x>
-                        <y>866</y>
+                        <x>530</x>
+                        <y>856</y>
                         <z>0</z>
                         <width>7</width>
                         <height>202</height>
@@ -1374,6 +1435,9 @@
                         <toEvolveCounter>0</toEvolveCounter>
                         <toEvolve>999999</toEvolve>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1424,8 +1488,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>331</x>
-                        <y>726</y>
+                        <x>330</x>
+                        <y>716</y>
                         <z>0</z>
                         <width>56.69430542</width>
                         <height>101.950286865</height>
@@ -2564,34 +2628,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="arrow" uid="133">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <goto>4</goto>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>73</x>
-                        <y>926</y>
-                        <z>0</z>
-                        <width>123</width>
-                        <height>92</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="verachouProgressBarBg" uid="134">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2627,7 +2663,7 @@
                         <x>-637</x>
                         <y>825</y>
                         <z>0</z>
-                        <width>223</width>
+                        <width>17</width>
                         <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3125,39 +3161,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="camera" uid="9">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <screen>1</screen>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>319</x>
-                        <y>501</y>
-                        <z>0</z>
-                        <width>129.647994995</width>
-                        <height>118.260002136</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502283096</hotspotX>
-                        <hotspotY>0.502283096</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="txtFactory" uid="21">
                     <properties>
                         <text>salad factory 88/20</text>
@@ -3176,8 +3179,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>251</x>
-                        <y>811</y>
+                        <x>250</x>
+                        <y>801</y>
                         <z>0</z>
                         <width>207</width>
                         <height>97</height>
@@ -3261,8 +3264,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>251</x>
-                        <y>881</y>
+                        <x>250</x>
+                        <y>871</y>
                         <z>0</z>
                         <width>177</width>
                         <height>9</height>
