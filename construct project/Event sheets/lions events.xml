@@ -5,7 +5,9 @@
     <events>
         <event-block sid="7271561405416356">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="5912934979328696" type="System" />
+                <condition id="0" name="On function" sid="1900235840500086" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Add key" sid="6501734551172856" type="inventory">
@@ -20,24 +22,27 @@
                     <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="832393336658566" type="lionBtn">
+                <action disabled="1" id="-15" name="Set visible" sid="832393336658566" type="lionBtn">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="3274956185944272" type="lionBtnTxt">
+                <action disabled="1" id="-15" name="Set visible" sid="3274956185944272" type="lionBtnTxt">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="0" name="Set text" sid="8236351730777131" type="lionBtnTxt">
+                <action disabled="1" id="0" name="Set text" sid="8236351730777131" type="lionBtnTxt">
                     <param id="0" name="Text">&quot;Veggie burger&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="1734872637507974" type="lion">
                     <param id="0" name="Animation">&quot;vide&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="14" name="Log" sid="2994051460575928" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;I has been first launched?&quot;</param>
+                </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="8861246033139075" title="Attract and catch a lion">
+        <event-group description="" sid="8861246033139075" title="Attract and catch a lion">
             <sub-events>
-                <variable constant="0" name="lionsCaught" sid="4410064742002127" static="0" type="number">0</variable>
                 <event-block sid="6931695193521489">
                     <conditions>
                         <condition id="3" name="On touched object" sid="154182526583012" type="Touch">
@@ -85,30 +90,41 @@
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="741790156868876" type="lion">
-                            <param id="0" name="Animation">&quot;burger&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action disabled="1" id="1" name="Set key" sid="8570618730427673" type="inventory">
-                            <param id="0" name="Key">&quot;Veggie burger&quot;</param>
-                            <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) -1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4969761850721982" type="lionBtn">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1134231834488876" type="lionBtnTxt">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="4013087732670253" type="System">
-                            <param id="0" name="Variable">lionsCaught</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3269335378874641" type="lion">
-                            <param id="0" name="Instance variable">initialWaitingTime</param>
-                            <param id="1" name="Value">(lionsCaught^2*2-1) *3600</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="lionsCaught" sid="4410064742002127" static="1" type="number">0</variable>
+                        <event-block sid="646871444431541">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="741790156868876" type="lion">
+                                    <param id="0" name="Animation">&quot;burger&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="1" name="Set key" sid="8570618730427673" type="inventory">
+                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
+                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) -1</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="4969761850721982" type="lionBtn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="1134231834488876" type="lionBtnTxt">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4013087732670253" type="System">
+                                    <param id="0" name="Variable">lionsCaught</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3269335378874641" type="lion">
+                                    <param id="0" name="Instance variable">initialWaitingTime</param>
+                                    <param id="1" name="Value">(lionsCaught^2*2-1) *3600</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="669955349998227" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;lionsCaught: &quot; &amp; lionsCaught</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>a wild lion appear!</comment>
                 <event-block sid="9311830431336701">
@@ -131,74 +147,35 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Holy fucking shit!! You tamed a wild lion!!!!&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="6916664121328055" type="lionBtn">
+                        <action disabled="1" id="-15" name="Set visible" sid="6916664121328055" type="lionBtn">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="8754493569209691" type="lionBtnTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="8754493569209691" type="lionBtnTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="834722415165299" type="lionBtnTxt">
+                        <action disabled="1" id="0" name="Set text" sid="834722415165299" type="lionBtnTxt">
                             <param id="0" name="Text">&quot;Mission&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="7028848428887822" type="lionStatsTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="7028848428887822" type="lionStatsTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="5302179005537658" type="lion">
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="3036949548228746" type="lionStatsTxt">
+                        <action disabled="1" id="0" name="Set text" sid="3036949548228746" type="lionStatsTxt">
                             <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2153991481750325" title="Time passing (lion)">
+        <event-group collapsed="1" description="" sid="2153991481750325" title="Time passing (lion)">
             <sub-events>
-                <event-block sid="7787504753348459">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="578657440933359" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2358375944982153">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="5652257284265094" type="lion">
-                                    <param id="0" name="Animation">&quot;burger&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="8345231994538978" type="lion">
-                                    <param id="0" name="Instance variable">initialWaitingTimeCounter</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1359486607450546">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="6746653383070517" type="lion">
-                                    <param id="0" name="Instance variable">away</param>
-                                </condition>
-                                <condition disabled="1" id="2" name="Is playing" sid="5583759977172031" type="lion">
-                                    <param id="0" name="Animation">&quot;hunting&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="8871450485973152" type="lion">
-                                    <param id="0" name="Instance variable">huntTimeCounter</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="6489574490127424">
                     <conditions>
                         <condition id="0" name="On function" sid="1690183194265365" type="Function">
-                            <param id="0" name="Name">&quot;user is back&quot;</param>
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -221,9 +198,6 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="4364618719479944" type="lion">
                                     <param id="0" name="Instance variable">away</param>
                                 </condition>
-                                <condition disabled="1" id="2" name="Is playing" sid="6674708172789586" type="lion">
-                                    <param id="0" name="Animation">&quot;hunting&quot;</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="331312261245504" type="lion">
@@ -236,7 +210,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9689064507054484" title="mission">
+        <event-group description="" sid="9689064507054484" title="mission">
             <sub-events>
                 <comment>send hunting</comment>
                 <event-block sid="1619034874208339">
@@ -267,12 +241,6 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
-                        <condition disabled="1" id="0" name="Compare text" sid="2106271194820847" type="lionBtnTxt">
-                            <param id="0" name="Text to compare">&quot;Mission&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                        <condition disabled="1" id="-9" name="Is visible" sid="9109653044822493" type="lionBtn" />
-                        <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="3247340579006094" type="purchasePopup" />
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="5756929177265737" type="lion">
@@ -283,7 +251,7 @@
                             <param id="0" name="Animation">&quot;hunting&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="5863963022666659" type="lionBtn">
+                        <action disabled="1" id="-15" name="Set visible" sid="5863963022666659" type="lionBtn">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="9119231584270827" type="lion">
@@ -332,7 +300,7 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Your lion is back.&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="4428528246688065" type="lionBtnTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="4428528246688065" type="lionBtnTxt">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -357,13 +325,13 @@
                             <param id="0" name="Name">&quot;lion collect&quot;</param>
                             <param id="1" name="Parameter {n}">lion.numéro</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="2296216844472755" type="lionBtn">
+                        <action disabled="1" id="-15" name="Set visible" sid="2296216844472755" type="lionBtn">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="7192935232123458" type="lionBtnTxt">
+                        <action disabled="1" id="-15" name="Set visible" sid="7192935232123458" type="lionBtnTxt">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="9592085812910434" type="lionBtnTxt">
+                        <action disabled="1" id="0" name="Set text" sid="9592085812910434" type="lionBtnTxt">
                             <param id="0" name="Text">&quot;Mission&quot;</param>
                         </action>
                     </actions>
@@ -515,7 +483,7 @@
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="3629245345554869" type="lionStatsTxt">
+                        <action disabled="1" id="0" name="Set text" sid="3629245345554869" type="lionStatsTxt">
                             <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
                         </action>
                         <action id="-3" name="Create object" sid="1240644864216046" type="System">
@@ -555,29 +523,99 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>display timer</comment>
-                <event-block sid="1281589070565831">
+                <comment>Bouton sous le lion (et countdown mission timer)</comment>
+                <event-block collapsed="1" sid="1450302224107253">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4093079800852948" type="lion">
-                            <param id="0" name="Instance variable">away</param>
+                        <condition id="-11" name="For Each" sid="8392477759745256" type="System">
+                            <param id="0" name="Object">lion</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4070638540249409" type="lionBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9895857410150675" type="lionBtnTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <variable constant="0" name="timeLeft" sid="1130105766608676" static="0" type="number">0</variable>
-                        <event-block sid="4943338732014603">
+                        <event-block sid="7259828854620549">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="8392477759745256" type="System">
-                                    <param id="0" name="Object">lion</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6777397201689934" type="lion">
+                                    <param id="0" name="Instance variable">readyToCollect</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1506408395375125" type="lion">
+                                    <param id="0" name="Instance variable">away</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="3268640388706525" type="lion">
+                                    <param id="0" name="Animation">&quot;vide&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="6973176828323663" type="lion">
+                                    <param id="0" name="Animation">&quot;burger&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="2779932561008699" type="System">
-                                    <param id="0" name="Variable">timeLeft</param>
-                                    <param id="1" name="Value">lion.huntTime - lion.huntTimeCounter</param>
+                                <action id="-15" name="Set visible" sid="3056638765087225" type="lionBtn">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="3956503598162824" type="lionBtnTxt">
-                                    <param id="0" name="Text">floor(timeLeft/3600) &amp; &quot;h &quot; &amp; floor(timeLeft/60%60) &amp; &quot;m &quot; &amp; ceil(timeLeft%60) &amp; &quot;s&quot;</param>
+                                <action id="-15" name="Set visible" sid="3522778458700357" type="lionBtnTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3289581219225681" type="lionBtnTxt">
+                                    <param id="0" name="Text">&quot;Mission&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9046797331335498">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="920751894376284" type="lion">
+                                    <param id="0" name="Instance variable">readyToCollect</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="1281589070565831">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4093079800852948" type="lion">
+                                    <param id="0" name="Instance variable">away</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="1845297538829174" type="lionBtnTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="timeLeft" sid="1130105766608676" static="0" type="number">0</variable>
+                                <event-block sid="4943338732014603">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2779932561008699" type="System">
+                                            <param id="0" name="Variable">timeLeft</param>
+                                            <param id="1" name="Value">lion.huntTime - lion.huntTimeCounter</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="3956503598162824" type="lionBtnTxt">
+                                            <param id="0" name="Text">floor(timeLeft/3600) &amp; &quot;h &quot; &amp; floor(timeLeft/60%60) &amp; &quot;m &quot; &amp; ceil(timeLeft%60) &amp; &quot;s&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5080762018042581">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="781799629974824" type="lion">
+                                    <param id="0" name="Animation">&quot;vide&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="9372071160575732" type="lionBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3049347014288289" type="lionBtnTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5264695196396367" type="lionBtnTxt">
+                                    <param id="0" name="Text">&quot;Veggie Burger&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -608,7 +646,11 @@
                 </event-block>
                 <comment>level up icon</comment>
                 <event-block sid="9340310791785168">
-                    <conditions />
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9269498570856221" type="System">
+                            <param id="0" name="Object">lion</param>
+                        </condition>
+                    </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="3338544908571421" type="lionLevelUpIcon">
                             <param id="0" name="Visibility">0</param>
@@ -676,6 +718,34 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="4008582418307442" type="lionBtnTxt">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2740574653198313">
+                    <conditions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9370045856156224" type="lionStatsTxt">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6756925395035218" type="lionStatsTxt">
+                            <param id="0" name="Text">&quot;Level &quot; &amp; lion.level</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3634794479239336">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="3183264511655724" type="lion">
+                                    <param id="0" name="Animation">&quot;burger&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="5056778721279071" type="lion">
+                                    <param id="0" name="Animation">&quot;vide&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="8666336641816741" type="lionStatsTxt">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>

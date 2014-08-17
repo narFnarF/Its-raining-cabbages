@@ -2141,6 +2141,9 @@
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2173,6 +2176,9 @@
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2205,6 +2211,9 @@
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2237,6 +2246,9 @@
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

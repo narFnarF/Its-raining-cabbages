@@ -835,7 +835,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1518877078274311" title="time tracking">
+        <event-group description="" sid="1518877078274311" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="totalTime" sid="2557565007336424" static="1" type="number">0</variable>
@@ -851,6 +851,10 @@
                         <action id="-10" name="Set value" sid="3520161396299472" type="timeKeeper">
                             <param id="0" name="Instance variable">lastTimeStamp</param>
                             <param id="1" name="Value">Date.UnixTimestamp</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8401673983049695" type="Function">
+                            <param id="0" name="Name">&quot;first launch&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -876,7 +880,7 @@
                     </actions>
                 </event-block>
                 <comment>Debug shortcut</comment>
-                <event-block sid="5490210380852038">
+                <event-block collapsed="1" sid="5490210380852038">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="4926763517407425" type="System" />
                     </conditions>
@@ -894,6 +898,10 @@
                                     <param id="0" name="Instance variable">lastTimeStamp</param>
                                     <param id="1" name="Value">1000 * 60 * 15</param>
                                 </action>
+                                <action id="0" name="Call function" sid="4678751035994771" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: 15 minutes passed&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>1 heure</comment>
@@ -907,6 +915,10 @@
                                 <action id="-12" name="Subtract from" sid="3465359131945957" type="timeKeeper">
                                     <param id="0" name="Instance variable">lastTimeStamp</param>
                                     <param id="1" name="Value">1000 * 60 * 60 * 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6289935894736515" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: 1 hour passed&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -922,6 +934,10 @@
                                     <param id="0" name="Instance variable">lastTimeStamp</param>
                                     <param id="1" name="Value">1000 * 60 * 60 * 6</param>
                                 </action>
+                                <action id="0" name="Call function" sid="3474954669847364" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: 6 hours passed&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>1 journée</comment>
@@ -935,6 +951,10 @@
                                 <action id="-12" name="Subtract from" sid="252099197713404" type="timeKeeper">
                                     <param id="0" name="Instance variable">lastTimeStamp</param>
                                     <param id="1" name="Value">1000 * 60 * 60 * 24 * 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="904388461994862" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: 24 hours passed&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

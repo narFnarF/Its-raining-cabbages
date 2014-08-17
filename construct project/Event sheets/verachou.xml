@@ -49,23 +49,6 @@
                                     <param id="1" name="Value">deltaTime</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="5341655865873781">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="7939307848731903" type="System">
-                                            <param id="0" name="Variable">deltaTime</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="14" name="Log" sid="9651300001211485" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;plus que 4 sec&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -227,35 +210,6 @@
                         </action>
                         <action id="-36" name="Save" sid="2735573317550012" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="8837413209552696">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="8585086600605762" type="Touch">
-                            <param id="0" name="Object">lightSwitch</param>
-                        </condition>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="3688812081772244" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;unborn&quot;</param>
-                        </condition>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="4066012102777991" type="verachou">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;dead&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="3488958268494765" type="lightSwitch">
-                            <param id="0" name="Instance variable">turnedOn</param>
-                        </action>
-                        <action id="-36" name="Save" sid="1577837444280939" type="System">
-                            <param id="0" name="Slot">&quot;mysave&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="2836053792104384" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Turning off the light puts the Vérachou to sleep. Its stats won&apos;t change but it won&apos;t gain energy either. It still ages though. Useful if you are unavailable for a long time (while you sleep for example)&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -612,7 +566,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="769228176042275" title="update UI">
+        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />
@@ -669,6 +623,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="" sid="9038698377792454" title="progress bar">
+                    <sub-events>
+                        <comment>adjust the size of the progress bar. Clamp it between 0 and the max. Adjust the size to lerp of the value.</comment>
+                        <event-block sid="4536157492547079">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="3868799629860822" type="verachouProgressBar">
+                                    <param id="0" name="Instance variable">value</param>
+                                    <param id="1" name="Value">clamp(verachouProgressBar.value, 0, verachouProgressBar.valueMax)</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="4409336432596266" type="verachouProgressBar">
+                                    <param id="0" name="Width">lerp(verachouProgressBar.Width, verachouProgressBar.value/verachouProgressBar.valueMax*verachouProgressBarBg.Width, 0.05*dt*60)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="4505917943254388">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="788730525699863" type="heart">
@@ -980,22 +951,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="6624265329456627" type="verachouProgressBarBg">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="5241223115550638" title="progress bar">
-            <sub-events>
-                <event-block sid="4536157492547079">
-                    <conditions />
-                    <actions>
-                        <action id="-10" name="Set value" sid="3868799629860822" type="verachouProgressBar">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">clamp(verachouProgressBar.value, 0, verachouProgressBar.valueMax)</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="4409336432596266" type="verachouProgressBar">
-                            <param id="0" name="Width">lerp(verachouProgressBar.Width, verachouProgressBar.value/verachouProgressBar.valueMax*verachouProgressBarBg.Width, 0.05*dt*60)</param>
                         </action>
                     </actions>
                 </event-block>

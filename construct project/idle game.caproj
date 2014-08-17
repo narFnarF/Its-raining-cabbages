@@ -308,7 +308,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="UI">
+        <object-folder expanded="0" name="UI">
             <object-type name="arrowCamera" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -765,6 +765,11 @@
                     <instance-variable name="away" sid="9952528029607261" type="boolean" />
                     <instance-variable comment="when the lion is back and ready to collect" name="readyToCollect" sid="3188355233868491" type="boolean" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="8847791984893872">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
