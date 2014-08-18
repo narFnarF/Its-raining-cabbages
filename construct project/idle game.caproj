@@ -403,6 +403,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="FPSTxt" sid="9025536709654262">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
             <object-type name="solidBloc" sid="3710229597765973">
@@ -954,9 +957,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FPSTxt" sid="9025536709654262">
-            <plugin id="Text" />
-        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -987,7 +987,6 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-folder expanded="0" name="factory">
-            <event-sheet>factory events test.xml</event-sheet>
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>

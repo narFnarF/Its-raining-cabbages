@@ -578,7 +578,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="863738981092451" title="Store">
+        <event-group collapsed="1" description="" sid="863738981092451" title="Store">
             <sub-events>
                 <comment>Warning: Ugly code! I should seriously consider recoding the whole thing.</comment>
                 <event-group description="" sid="3529658980017324" title="function: update store buttons">
