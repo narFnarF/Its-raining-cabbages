@@ -835,7 +835,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1518877078274311" title="time tracking">
+        <event-group collapsed="1" description="" sid="1518877078274311" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="totalTime" sid="2557565007336424" static="1" type="number">0</variable>
@@ -962,5 +962,27 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9101440198954226">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7734889423413394" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="909778718238512" type="FPSTxt">
+                    <param id="0" name="Text">fps &amp; &quot; fps&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2622396108563425">
+            <conditions>
+                <condition id="-18" name="On created" sid="7618134970470682" type="plus1" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9721580458851297" type="plus1">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>bee events</name>
+    <name>factory events test</name>
     <events>
-        <event-group collapsed="1" description="" sid="5191553737319209" title="bees2">
+        <event-group description="" sid="5191553737319209" title="bees2">
             <sub-events>
                 <event-block collapsed="1" sid="4656210704997607">
                     <conditions>
@@ -208,7 +208,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6899221368774259" title="cabbages2">
+        <event-group description="" sid="6899221368774259" title="cabbages2">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>

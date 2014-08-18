@@ -878,7 +878,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <goto>gameplay</goto>
+                        <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

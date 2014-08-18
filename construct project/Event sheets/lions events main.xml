@@ -5,5 +5,6 @@
     <events>
         <include>gameplay stuff</include>
         <include>lions events</include>
+        <include>global events</include>
     </events>
 </c2eventsheet>

@@ -213,7 +213,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <goto>gameplay</goto>
+                        <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -223,34 +223,6 @@
                     <world>
                         <x>772.026489258</x>
                         <y>908.088256836</y>
-                        <z>0</z>
-                        <width>143</width>
-                        <height>93</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="arrowLayout" uid="8">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <goto>gameplay</goto>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>789</x>
-                        <y>1922</y>
                         <z>0</z>
                         <width>143</width>
                         <height>93</height>
