@@ -55,7 +55,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5809538651794419" title="Notifications">
+        <event-group description="" sid="5809538651794419" title="Notifications">
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>

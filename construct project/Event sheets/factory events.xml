@@ -278,20 +278,6 @@
                         <action id="-9" name="Destroy" sid="1064577704347243" type="cabbage" />
                     </actions>
                 </event-block>
-                <event-block sid="484507871328815">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8009287891295909" type="cabbage">
-                            <param id="0" name="Object">factory</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="8062350698082828" type="cabbage" />
-                        <action id="-10" name="Set value" sid="6438965156851902" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Value">min(factory.inputCabbages+1, factory.maxInputCapacity)</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="8945611553218828">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6654809113892262" type="cabbage">
@@ -328,6 +314,30 @@
                     <param id="0" name="Text">&quot;Eggs: &quot; &amp; eggs &amp; newline</param>
                 </action>
             </actions>
+            <sub-events>
+                <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
+                <event-block sid="1102505970006273">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="3265728639096212" type="bucketArray">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7719367649533081" type="System">
+                            <param id="0" name="Variable">cabbagesPerMinutes</param>
+                            <param id="1" name="Value">bucketArray.CurValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8689506550021848">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Append text" sid="4187583685750526" type="globalStats">
+                            <param id="0" name="Text">&quot;Cabbages per minute: &quot; &amp; cabbagesPerMinutes &amp; newline</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
             <sub-events>
@@ -427,7 +437,63 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
+        <event-group description="" sid="6516691976608457" title="bucket">
+            <sub-events>
+                <event-block sid="484507871328815">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8009287891295909" type="cabbage">
+                            <param id="0" name="Object">bucket</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8062350698082828" type="cabbage" />
+                        <action id="-11" name="Add to" sid="223804219457699" type="bucket">
+                            <param id="0" name="Instance variable">cabbages</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4005442639731797" type="bucket">
+                            <param id="0" name="Instance variable">cabbages</param>
+                            <param id="1" name="Value">clamp(bucket.cabbages, 0, bucket.capacity)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="6438965156851902" type="factory">
+                            <param id="0" name="Instance variable">inputCabbages</param>
+                            <param id="1" name="Value">min(factory.inputCabbages+1, factory.maxInputCapacity)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="7678045215561208" type="bucketArray">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">bucketArray.At(0) +1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5947295628380643">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="3182510599812393" type="bucketTxt">
+                            <param id="0" name="Text">bucket.cabbages &amp; &quot;/&quot; &amp; bucket.capacity</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2808191493285314">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4021333792367518" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="369818218820939" type="bucketArray">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="6" name="Pop" sid="9967057970720607" type="bucketArray">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -479,7 +545,7 @@
                         <condition id="-1" name="Every tick" sid="4652686779385674" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1938044047557305" type="txtFactory">
+                        <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
                             <param id="0" name="Text">&quot;salads factory&quot; &amp; newline &amp; factory.inputCabbages &amp; &quot;/&quot; &amp; factory.maxInputCapacity</param>
                         </action>
                         <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">

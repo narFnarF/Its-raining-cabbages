@@ -600,7 +600,7 @@
                         <condition id="-1" name="Every tick" sid="4652686779385674" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1938044047557305" type="txtFactory">
+                        <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
                             <param id="0" name="Text">&quot;salads factory&quot; &amp; newline &amp; factory.inputCabbages &amp; &quot;/&quot; &amp; factory.maxInputCapacity</param>
                         </action>
                         <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">

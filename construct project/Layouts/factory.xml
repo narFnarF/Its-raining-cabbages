@@ -909,8 +909,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>830</x>
-                        <y>818</y>
+                        <x>840</x>
+                        <y>788</y>
                         <z>0</z>
                         <width>204</width>
                         <height>128</height>
@@ -967,11 +967,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1137</x>
-                        <y>801</y>
+                        <x>1340</x>
+                        <y>763</y>
                         <z>0</z>
-                        <width>184.526580811</width>
-                        <height>171.063278198</height>
+                        <width>163.833404541</width>
+                        <height>151.879898071</height>
                         <depth>0</depth>
                         <hotspotX>0.506437778</hotspotX>
                         <hotspotY>0.513888896</hotspotY>
@@ -1091,54 +1091,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>930</x>
-                        <y>829</y>
+                        <x>939</x>
+                        <y>782</y>
                         <z>0</z>
                         <width>7</width>
                         <height>261</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.124453664</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="solidBloc" uid="283">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Bounding box</collision-mask>
-                                <prevent-rotation>Yes</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1327</x>
-                        <y>861</y>
-                        <z>0</z>
-                        <width>7</width>
-                        <height>202</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.740892887</angle>
+                        <angle>-1.252300501</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1221,8 +1182,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1127</x>
-                        <y>721</y>
+                        <x>1357.48828125</x>
+                        <y>702.809936523</y>
                         <z>0</z>
                         <width>56.69430542</width>
                         <height>101.950286865</height>
@@ -1281,6 +1242,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="bucket" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <capacity>5</capacity>
+                        <cabbages>0</cabbages>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1151</x>
+                        <y>846</y>
+                        <z>0</z>
+                        <width>167</width>
+                        <height>94</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502994001</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1298,14 +1288,41 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtFactory" uid="288">
+                <instance type="bucketTxt" uid="283">
                     <properties>
-                        <text>salad factory 88/20</text>
+                        <text>88/20</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1074</x>
+                        <y>836</y>
+                        <z>0</z>
+                        <width>149</width>
+                        <height>46</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="factoryTxt" uid="288">
+                    <properties>
+                        <text>88/20</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -1316,11 +1333,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1046</x>
-                        <y>801</y>
+                        <x>1261</x>
+                        <y>766</y>
                         <z>0</z>
-                        <width>207</width>
-                        <height>97</height>
+                        <width>153</width>
+                        <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1401,10 +1418,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1046</x>
-                        <y>871</y>
+                        <x>1260.476074219</x>
+                        <y>824.473754883</y>
                         <z>0</z>
-                        <width>177</width>
+                        <width>157.930053711</width>
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1757,6 +1774,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="bucketArray" uid="296">
+            <properties>
+                <width>60</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

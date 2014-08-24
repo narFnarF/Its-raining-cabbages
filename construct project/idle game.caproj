@@ -8,7 +8,7 @@
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>17300</saved-with-version>
+    <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -43,6 +43,7 @@
         <height>960</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
     <first-layout>Intro</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -177,7 +178,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -191,10 +192,6 @@
                     <instance-variable name="convertedInLastMinute" sid="6853493073040225" type="number" />
                     <instance-variable name="currentProductionPerMinute" sid="5311232562546029" type="number" />
                 </instance-variables>
-                <container>
-                    <type>factory</type>
-                    <type>factoryNotification</type>
-                </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
                         <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
@@ -214,7 +211,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="txtFactory" sid="146299065524885">
+            <object-type name="factoryTxt" sid="146299065524885">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="5769377757837101">
@@ -224,10 +221,6 @@
             </object-type>
             <object-type name="factoryNotification" sid="3803439497545899">
                 <plugin id="Sprite" />
-                <container>
-                    <type>factory</type>
-                    <type>factoryNotification</type>
-                </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
@@ -267,6 +260,29 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="bucketTxt" sid="9054213322709587">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="bucket" sid="3644795865062729">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="capacity" sid="9475304309134901" type="number" />
+                    <instance-variable name="cabbages" sid="3321211388495565" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="9319293075286822">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3322504650715733" speed="5">
+                        <frame duration="1" hotspotX="0.502994" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="bucketArray" sid="7596336318687071">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="notifications">

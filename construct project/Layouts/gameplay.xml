@@ -3173,7 +3173,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtFactory" uid="21">
+                <instance type="factoryTxt" uid="21">
                     <properties>
                         <text>salad factory 88/20</text>
                         <initial-visibility>Visible</initial-visibility>
