@@ -71,7 +71,7 @@
                 <condition id="-2" name="On start of layout" sid="3303152092615089" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="1286344703649095" type="btnUpgrade">
+                <action id="0" name="Set text" sid="1286344703649095" type="btnUpgrade_old">
                     <param id="0" name="Text">projectversion</param>
                 </action>
             </actions>

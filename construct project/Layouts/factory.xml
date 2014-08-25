@@ -255,7 +255,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="btnUpgradeBack" uid="256">
+                <instance type="btnUpgradeBack_old" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -268,10 +268,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>842</x>
-                        <y>1484</y>
+                        <x>827</x>
+                        <y>1369</y>
                         <z>0</z>
-                        <width>527</width>
+                        <width>569</width>
                         <height>106</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -293,8 +293,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>819</x>
-                        <y>2425</y>
+                        <x>857</x>
+                        <y>2419</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
@@ -305,7 +305,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgradeBack" uid="258">
+                <instance type="btnUpgradeBack_old" uid="258">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -318,8 +318,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>842</x>
-                        <y>1735</y>
+                        <x>1484</x>
+                        <y>1727</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
@@ -330,7 +330,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgradeBack" uid="259">
+                <instance type="btnUpgradeBack_old" uid="259">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -343,10 +343,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>842</x>
-                        <y>1607</y>
+                        <x>823</x>
+                        <y>1712</y>
                         <z>0</z>
-                        <width>527</width>
+                        <width>569</width>
                         <height>106</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -368,8 +368,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>819</x>
-                        <y>2547</y>
+                        <x>857</x>
+                        <y>2541</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
@@ -393,8 +393,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>819</x>
-                        <y>2669</y>
+                        <x>857</x>
+                        <y>2663</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
@@ -418,8 +418,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>822</x>
-                        <y>2791</y>
+                        <x>860</x>
+                        <y>2785</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
@@ -615,7 +615,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="btnUpgrade" uid="269">
+                <instance type="btnUpgrade_old" uid="269">
                     <properties>
                         <text>Factory storage...... aksjdhfkahsjdf kjashdf kjhasd fk</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -637,8 +637,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>851</x>
-                        <y>1497</y>
+                        <x>1493</x>
+                        <y>1489</y>
                         <z>0</z>
                         <width>515</width>
                         <height>83</height>
@@ -649,7 +649,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgrade" uid="270">
+                <instance type="btnUpgrade_old" uid="270">
                     <properties>
                         <text>factory speed .......... alsdjkfl asjkdf lasjdf lkjasd</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -671,8 +671,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>851</x>
-                        <y>1741</y>
+                        <x>1493</x>
+                        <y>1733</y>
                         <z>0</z>
                         <width>515</width>
                         <height>87</height>
@@ -706,8 +706,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>823</x>
-                        <y>2440</y>
+                        <x>861</x>
+                        <y>2434</y>
                         <z>0</z>
                         <width>515</width>
                         <height>83</height>
@@ -741,8 +741,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>823</x>
-                        <y>2561</y>
+                        <x>861</x>
+                        <y>2555</y>
                         <z>0</z>
                         <width>515</width>
                         <height>83</height>
@@ -776,8 +776,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>823</x>
-                        <y>2681</y>
+                        <x>861</x>
+                        <y>2675</y>
                         <z>0</z>
                         <width>515</width>
                         <height>83</height>
@@ -811,8 +811,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>823</x>
-                        <y>2802</y>
+                        <x>861</x>
+                        <y>2796</y>
                         <z>0</z>
                         <width>515</width>
                         <height>83</height>
@@ -823,7 +823,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgrade" uid="275">
+                <instance type="btnUpgrade_old" uid="275">
                     <properties>
                         <text>factory productivity.......... alsdjkfl asjkdf lasjdf lkjasd</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -845,8 +845,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>851</x>
-                        <y>1619</y>
+                        <x>1556</x>
+                        <y>1607</y>
                         <z>0</z>
                         <width>515</width>
                         <height>87</height>
@@ -959,11 +959,15 @@
                         <outputSalads>0</outputSalads>
                         <productivity>1</productivity>
                         <timer>0</timer>
-                        <timerLength>10</timerLength>
+                        <timerMax>10</timerMax>
                         <speed>1</speed>
                         <convertedInLastMinute>0</convertedInLastMinute>
                         <currentProductionPerMinute>0</currentProductionPerMinute>
+                        <level>1</level>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1047,7 +1051,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="NoSave" />
+                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1156,6 +1160,7 @@
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
+                        <level>0</level>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1174,11 +1179,14 @@
                 </instance>
                 <instance type="factoryNotification" uid="286">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1242,7 +1250,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bucket" uid="8">
+                <instance type="silo" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1250,8 +1258,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <capacity>5</capacity>
+                        <capacity>1</capacity>
                         <cabbages>0</cabbages>
+                        <level>1</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -1267,6 +1276,60 @@
                         <depth>0</depth>
                         <hotspotX>0.502994001</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="factoryUpgradeBtn" uid="298">
+                    <properties>
+                        <text>Upgrade factory&apos;s productivity. Current: 88  Cost: 888 888</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-29,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>829</x>
+                        <y>1722</y>
+                        <z>0</z>
+                        <width>554</width>
+                        <height>89</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="siloUpgradeBtn" uid="299">
+                    <properties>
+                        <text>Upgrade silo&apos;s capacity. Current: 88  Cost: 888 888</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-29,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>831</x>
+                        <y>1383</y>
+                        <z>0</z>
+                        <width>552</width>
+                        <height>89</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1288,7 +1351,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bucketTxt" uid="283">
+                <instance type="siloTxt" uid="283">
                     <properties>
                         <text>88/20</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1775,9 +1838,16 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="bucketArray" uid="296">
+        <instance type="siloHistory" uid="296">
             <properties>
                 <width>60</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="factoryHistory" uid="297">
+            <properties>
+                <width>6</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>

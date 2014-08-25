@@ -80,7 +80,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="bee stuff">
+        <object-folder expanded="1" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -90,7 +90,13 @@
                     <instance-variable name="cabbageID" sid="8587644090087937" type="number" />
                     <instance-variable name="targetX" sid="2658733998509146" type="number" />
                     <instance-variable name="targetY" sid="888475734182301" type="number" />
+                    <instance-variable name="level" sid="6128146278882916" type="number" />
                 </instance-variables>
+                <container>
+                    <type>btnBee</type>
+                    <type>btnBeeBack</type>
+                    <type>bee</type>
+                </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
                         <frame duration="1" hotspotX="0.74026" hotspotY="0.828125" />
@@ -132,6 +138,7 @@
                 <container>
                     <type>btnBee</type>
                     <type>btnBeeBack</type>
+                    <type>bee</type>
                 </container>
             </object-type>
             <object-type name="btnBeeBack" sid="6009999432359583">
@@ -144,6 +151,7 @@
                 <container>
                     <type>btnBee</type>
                     <type>btnBeeBack</type>
+                    <type>bee</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
@@ -178,7 +186,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -187,11 +195,17 @@
                     <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
-                    <instance-variable name="timerLength" sid="6847551949910904" type="number" />
+                    <instance-variable name="timerMax" sid="6847551949910904" type="number" />
                     <instance-variable name="speed" sid="4558002097740508" type="number" />
                     <instance-variable name="convertedInLastMinute" sid="6853493073040225" type="number" />
                     <instance-variable name="currentProductionPerMinute" sid="5311232562546029" type="number" />
+                    <instance-variable name="level" sid="8246387739080951" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="3067676385396211">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
                         <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
@@ -221,6 +235,11 @@
             </object-type>
             <object-type name="factoryNotification" sid="3803439497545899">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Persist" sid="4079718349287599">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
@@ -228,7 +247,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="btnUpgrade" sid="3947049937687157">
+            <object-type name="btnUpgrade_old" sid="3947049937687157">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="type" sid="6915415841375174" type="string" />
@@ -238,11 +257,11 @@
                     <instance-variable name="itsCabbageId" sid="7581341157815091" type="number" />
                 </instance-variables>
                 <container>
-                    <type>btnUpgrade</type>
-                    <type>btnUpgradeBack</type>
+                    <type>btnUpgrade_old</type>
+                    <type>btnUpgradeBack_old</type>
                 </container>
             </object-type>
-            <object-type name="btnUpgradeBack" sid="2766913013001252">
+            <object-type name="btnUpgradeBack_old" sid="2766913013001252">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="3565957130775504">
@@ -250,8 +269,8 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>btnUpgrade</type>
-                    <type>btnUpgradeBack</type>
+                    <type>btnUpgrade_old</type>
+                    <type>btnUpgradeBack_old</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
@@ -261,14 +280,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bucketTxt" sid="9054213322709587">
+            <object-type name="siloTxt" sid="9054213322709587">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="bucket" sid="3644795865062729">
+            <object-type name="silo" sid="3644795865062729">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="capacity" sid="9475304309134901" type="number" />
                     <instance-variable name="cabbages" sid="3321211388495565" type="number" />
+                    <instance-variable name="level" sid="4295317832790693" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="9319293075286822">
@@ -281,8 +301,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="bucketArray" sid="7596336318687071">
+            <object-type global="1" name="siloHistory" sid="7596336318687071">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="factoryHistory" sid="1757212072694836">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="siloUpgradeBtn" sid="1426435039234259">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="factoryUpgradeBtn" sid="2470023037519244">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="notifications">
@@ -421,6 +450,14 @@
             </object-type>
             <object-type name="FPSTxt" sid="9025536709654262">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="globalStats2" sid="2437325743335131">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8322566797672151">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="props">
@@ -745,8 +782,8 @@
                     <behavior-type name="Physics" sid="1936616672555206">
                         <behavior id="Physics" />
                     </behavior-type>
-                    <behavior-type name="NoSave" sid="9790473529950608">
-                        <behavior id="NoSave" />
+                    <behavior-type name="Persist" sid="193605268883753">
+                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
@@ -1010,7 +1047,7 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="lions">
+        <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
             <event-sheet>lions events main.xml</event-sheet>
         </event-folder>

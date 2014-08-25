@@ -290,7 +290,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4587465909699658" title="purchase popup">
+        <event-group description="" sid="4587465909699658" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>

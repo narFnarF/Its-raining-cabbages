@@ -117,7 +117,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgrade" uid="58">
+                <instance type="btnUpgrade_old" uid="58">
                     <properties>
                         <text>v123</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -151,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnUpgradeBack" uid="64">
+                <instance type="btnUpgradeBack_old" uid="64">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
