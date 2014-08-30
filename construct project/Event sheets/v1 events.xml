@@ -1337,11 +1337,7 @@
                                                     <param id="2" name="Value">&quot;Buy bee&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="6442478230414151" type="btnBee">
-                                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.beeNb &amp; newline &amp; &quot;Cost:     &quot; &amp; btnBee.price</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                         </event-block>
                                         <event-block sid="5951415098852403">
                                             <conditions>
@@ -1362,11 +1358,7 @@
                                                     <param id="3" name="Value">bee.numéro</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="6834870799646872" type="btnBee">
-                                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.numéro &amp; &quot; speed: Current: &quot; &amp; bee.speed*100 &amp; newline &amp; &quot;Cost:     &quot; &amp; btnBee.price</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1381,18 +1373,9 @@
                                 <condition id="3" name="On touched object" sid="7689685742471483" type="Touch">
                                     <param id="0" name="Object">btnBee</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="2354286388407915" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">btnBee.price</param>
-                                </condition>
                                 <condition id="-9" inverted="1" name="Is visible" sid="3268661961810302" type="purchasePopup" />
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="2961524409026808" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">btnBee.price</param>
-                                </action>
                                 <action id="-36" name="Save" sid="9123035828001997" type="System">
                                     <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
@@ -1440,10 +1423,6 @@
                                         <action id="-10" name="Set value" sid="1317549052721104" type="bee">
                                             <param id="0" name="Instance variable">numéro</param>
                                             <param id="1" name="Value">btnBee.beeNb</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="198699277390071" type="btnBee">
-                                            <param id="0" name="Instance variable">price</param>
-                                            <param id="1" name="Value">btnBee.price/100</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="4590974568236626" type="btnBee">
                                             <param id="0" name="Instance variable">type</param>
@@ -1501,10 +1480,6 @@
                                 <event-block sid="6370667092449423">
                                     <conditions />
                                     <actions>
-                                        <action id="-10" name="Set value" sid="947850083466155" type="btnBee">
-                                            <param id="0" name="Instance variable">price</param>
-                                            <param id="1" name="Value">round(btnBee.price * btnBee.priceMutiplicator + btnBee.priceAdditor)</param>
-                                        </action>
                                         <action id="-16" name="Wait" sid="9269133940496513" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
@@ -1533,10 +1508,6 @@
                                             <param id="2" name="X">btnBee.X + 95</param>
                                             <param id="3" name="Y">btnBee.Y + (btnBee.Height*0.6)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="1663835911729626" type="btnBee">
-                                            <param id="0" name="Instance variable">itsCabbageId</param>
-                                            <param id="1" name="Value">cabbageIcon.UID</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="9482698081606579" type="cabbageIcon">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
@@ -1548,9 +1519,6 @@
                                             <param id="0" name="Object">btnBee</param>
                                         </condition>
                                         <condition id="-9" name="Is visible" sid="1305187261741058" type="btnBee" />
-                                        <condition id="-14" name="Pick by unique ID" sid="3646594483788783" type="cabbageIcon">
-                                            <param id="0" name="Unique ID">btnBee.itsCabbageId</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-15" name="Set visible" sid="7811454329883462" type="cabbageIcon">

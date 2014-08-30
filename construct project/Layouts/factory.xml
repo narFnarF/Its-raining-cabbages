@@ -696,12 +696,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Bee speed</type>
                         <beeNb>1</beeNb>
-                        <price>2000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Bee speed</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -731,12 +728,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>2</beeNb>
-                        <price>100</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -766,12 +760,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>3</beeNb>
-                        <price>3000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -801,12 +792,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>4</beeNb>
-                        <price>10000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -972,7 +960,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1340</x>
-                        <y>763</y>
+                        <y>783</y>
                         <z>0</z>
                         <width>163.833404541</width>
                         <height>151.879898071</height>
@@ -1160,8 +1148,11 @@
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
-                        <level>0</level>
+                        <level>8</level>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1190,8 +1181,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1357.48828125</x>
-                        <y>702.809936523</y>
+                        <x>1357</x>
+                        <y>723</y>
                         <z>0</z>
                         <width>56.69430542</width>
                         <height>101.950286865</height>
@@ -1268,8 +1259,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1151</x>
-                        <y>846</y>
+                        <x>1155</x>
+                        <y>814</y>
                         <z>0</z>
                         <width>167</width>
                         <height>94</height>
@@ -1334,6 +1325,147 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="solidBloc" uid="300">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Bounding box</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1193.83605957</x>
+                        <y>838.169433594</y>
+                        <z>0</z>
+                        <width>7</width>
+                        <height>156.291259766</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="301">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <numéro>2</numéro>
+                        <speed>0</speed>
+                        <status>not born</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <level>0</level>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>765</x>
+                        <y>2605</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="302">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <numéro>3</numéro>
+                        <speed>0</speed>
+                        <status>not born</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <level>0</level>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>768</x>
+                        <y>2721</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="303">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <numéro>4</numéro>
+                        <speed>0</speed>
+                        <status>not born</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <level>0</level>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>768</x>
+                        <y>2840</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1357,7 +1489,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1366,10 +1498,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1074</x>
-                        <y>836</y>
+                        <x>1074.637207031</x>
+                        <y>793.160339355</y>
                         <z>0</z>
-                        <width>149</width>
+                        <width>85.899414063</width>
                         <height>46</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1380,11 +1512,11 @@
                 </instance>
                 <instance type="factoryTxt" uid="288">
                     <properties>
-                        <text>88/20</text>
+                        <text>12345</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1396,8 +1528,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1261</x>
-                        <y>766</y>
+                        <x>1270.706054688</x>
+                        <y>815.122680664</y>
                         <z>0</z>
                         <width>153</width>
                         <height>48</height>
@@ -1481,8 +1613,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1260.476074219</x>
-                        <y>824.473754883</y>
+                        <x>1114.4140625</x>
+                        <y>839.144836426</y>
                         <z>0</z>
                         <width>157.930053711</width>
                         <height>9</height>

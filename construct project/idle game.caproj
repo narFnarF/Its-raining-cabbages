@@ -92,6 +92,11 @@
                     <instance-variable name="targetY" sid="888475734182301" type="number" />
                     <instance-variable name="level" sid="6128146278882916" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="8469844386374516">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>btnBee</type>
                     <type>btnBeeBack</type>
@@ -128,12 +133,9 @@
             <object-type name="btnBee" sid="5490029273198872">
                 <plugin id="Text" />
                 <instance-variables>
-                    <instance-variable name="type" sid="4003687732661722" type="string" />
                     <instance-variable name="beeNb" sid="7230698741477582" type="number" />
-                    <instance-variable name="price" sid="9467765411504432" type="number" />
-                    <instance-variable name="priceMutiplicator" sid="1536403289043156" type="number" />
-                    <instance-variable name="priceAdditor" sid="4298812065567865" type="number" />
-                    <instance-variable name="itsCabbageId" sid="6790518584655663" type="number" />
+                    <instance-variable name="type" sid="4003687732661722" type="string" />
+                    <instance-variable name="cost" sid="3318234215369156" type="number" />
                 </instance-variables>
                 <container>
                     <type>btnBee</type>

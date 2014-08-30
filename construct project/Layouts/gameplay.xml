@@ -892,12 +892,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Bee speed</type>
                         <beeNb>1</beeNb>
-                        <price>2000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Bee speed</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -927,12 +924,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>2</beeNb>
-                        <price>100</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -962,12 +956,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>3</beeNb>
-                        <price>3000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -997,12 +988,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <type>Buy bee</type>
                         <beeNb>4</beeNb>
-                        <price>10000</price>
-                        <priceMutiplicator>9.8</priceMutiplicator>
-                        <priceAdditor>0</priceAdditor>
-                        <itsCabbageId>-1</itsCabbageId>
+                        <type>Buy bee</type>
+                        <cost>0</cost>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1397,6 +1385,9 @@
                         <targetY>0</targetY>
                         <level>0</level>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
