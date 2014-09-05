@@ -1255,22 +1255,12 @@
                             <actions />
                             <sub-events>
                                 <event-block sid="7506937325192603">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="2580005199947878" type="System">
-                                            <param id="0" name="Object">btnUpgrade_old</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions />
                                     <sub-events>
                                         <variable constant="0" name="current" sid="40234869625805" static="0" type="text"></variable>
                                         <event-block sid="1541945969700442">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="5089665977665712" type="btnUpgrade_old">
-                                                    <param id="0" name="Instance variable">type</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Factory storage&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="-9" name="Set value" sid="1181021674779154" type="System">
                                                     <param id="0" name="Variable">current</param>
@@ -1279,13 +1269,7 @@
                                             </actions>
                                         </event-block>
                                         <event-block sid="9402589309631088">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="8001755371122147" type="btnUpgrade_old">
-                                                    <param id="0" name="Instance variable">type</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Factory productivity&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="-9" name="Set value" sid="2209441124344638" type="System">
                                                     <param id="0" name="Variable">current</param>
@@ -1294,28 +1278,11 @@
                                             </actions>
                                         </event-block>
                                         <event-block sid="8319868594874701">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="7598903976643878" type="btnUpgrade_old">
-                                                    <param id="0" name="Instance variable">type</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Factory speed&quot;</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="-9" name="Set value" sid="7226610774421443" type="System">
                                                     <param id="0" name="Variable">current</param>
                                                     <param id="1" name="Value">left( str(factory.timerMax/factory.speed ), 4) &amp; &quot; sec.&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="9203974679798158">
-                                            <conditions />
-                                            <actions>
-                                                <action disabled="1" id="0" name="Set text" sid="5666948015427856" type="btnUpgrade_old">
-                                                    <param id="0" name="Text">replace(btnUpgrade_old.Text, &quot;%current&quot;, current)</param>
-                                                </action>
-                                                <action id="0" name="Set text" sid="5821101486454752" type="btnUpgrade_old">
-                                                    <param id="0" name="Text">btnUpgrade_old.type &amp; &quot;: Current: &quot; &amp; current &amp; newline &amp; &quot;Cost:     &quot; &amp; btnUpgrade_old.price</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1329,23 +1296,8 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="8578187810401991">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="4605818992135798" type="btnBee">
-                                                    <param id="0" name="Instance variable">type</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Buy bee&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
                                         <event-block sid="5951415098852403">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="1331339139468609" type="btnBee">
-                                                    <param id="0" name="Instance variable">type</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Bee speed&quot;</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="155247499787677" type="bee">
                                                     <param id="0" name="Instance variable">numéro</param>
                                                     <param id="1" name="Comparison">0</param>
@@ -1383,11 +1335,6 @@
                             <sub-events>
                                 <event-block sid="4479922774084822">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="2799326765194787" type="btnBee">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Bee speed&quot;</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="1628568381434662" type="bee">
                                             <param id="0" name="Instance variable">numéro</param>
                                             <param id="1" name="Comparison">0</param>
@@ -1402,19 +1349,13 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="1373537816387478">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="7868044164676858" type="btnBee">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Buy bee&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="-3" name="Create object" sid="5409442867341612" type="System">
                                             <param id="0" name="Object to create">bee</param>
                                             <param id="1" name="Layer">&quot;game&quot;</param>
-                                            <param id="2" name="X">btnBeeBack.ImagePointX(&quot;bee spawn&quot;)</param>
-                                            <param id="3" name="Y">btnBeeBack.ImagePointY(&quot;bee spawn&quot;)</param>
+                                            <param id="2" name="X">btnBeeBackground.ImagePointX(&quot;bee spawn&quot;)</param>
+                                            <param id="3" name="Y">btnBeeBackground.ImagePointY(&quot;bee spawn&quot;)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="9807869303637682" type="bee">
                                             <param id="0" name="Instance variable">speed</param>
@@ -1423,10 +1364,6 @@
                                         <action id="-10" name="Set value" sid="1317549052721104" type="bee">
                                             <param id="0" name="Instance variable">numéro</param>
                                             <param id="1" name="Value">btnBee.beeNb</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="4590974568236626" type="btnBee">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Value">&quot;Bee speed&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -1533,7 +1470,7 @@
                                 <condition id="-1" name="Every tick" sid="883399586760017" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="8877951003677457" type="btnBeeBack">
+                                <action id="-3" name="Set position" sid="8877951003677457" type="btnBeeBackground">
                                     <param id="0" name="X">btnBee.X-20</param>
                                     <param id="1" name="Y">btnBee.Y-20</param>
                                 </action>
@@ -1556,39 +1493,16 @@
                         </event-block>
                         <event-block sid="3088460644845565">
                             <conditions>
-                                <condition id="3" name="On touched object" sid="7776650535697001" type="Touch">
-                                    <param id="0" name="Object">btnUpgrade_old</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="3018309603511795" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">btnUpgrade_old.price</param>
-                                </condition>
-                                <condition id="-9" name="Is visible" sid="5779554108973548" type="btnUpgrade_old" />
                                 <condition id="-9" inverted="1" name="Is visible" sid="9722674533762943" type="purchasePopup" />
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="6185282127400281" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">btnUpgrade_old.price</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3649364748253099" type="btnUpgrade_old">
-                                    <param id="0" name="Instance variable">price</param>
-                                    <param id="1" name="Value">round(btnUpgrade_old.price * btnUpgrade_old.priceMutiplicator + btnUpgrade_old.priceAdditor)</param>
-                                </action>
                                 <action id="-36" name="Save" sid="719060786340821" type="System">
                                     <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="8609332596599255">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="35763867617971" type="btnUpgrade_old">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Factory storage&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="-11" name="Add to" sid="7176420285304783" type="factory">
                                             <param id="0" name="Instance variable">maxInputCapacity</param>
@@ -1605,13 +1519,7 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="5710293262536803">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="7515801740595788" type="btnUpgrade_old">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Factory productivity&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="-11" name="Add to" sid="2461122159163351" type="factory">
                                             <param id="0" name="Instance variable">productivity</param>
@@ -1628,13 +1536,7 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="8327449698507438">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="3632959006200879" type="btnUpgrade_old">
-                                            <param id="0" name="Instance variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Factory speed&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="-11" name="Add to" sid="7548431516900238" type="factory">
                                             <param id="0" name="Instance variable">timerMax</param>
@@ -1667,36 +1569,15 @@
                                 <event-block sid="3964708812298284">
                                     <conditions>
                                         <condition id="-2" name="On start of layout" sid="6518724184531598" type="System" />
-                                        <condition id="-11" name="For Each" sid="5308978796316074" type="System">
-                                            <param id="0" name="Object">btnUpgrade_old</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="1744476452956423" type="System">
-                                            <param id="0" name="Object to create">cabbageIcon</param>
-                                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                                            <param id="2" name="X">btnUpgrade_old.X + 95</param>
-                                            <param id="3" name="Y">btnUpgrade_old.Y + (btnUpgrade_old.Height*0.6)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="1663835911729626" type="btnUpgrade_old">
-                                            <param id="0" name="Instance variable">itsCabbageId</param>
-                                            <param id="1" name="Value">cabbageIcon.UID</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="9482698081606579" type="cabbageIcon">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="5750254673565848">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="2826067516602943" type="System">
-                                            <param id="0" name="Object">btnUpgrade_old</param>
-                                        </condition>
-                                        <condition id="-9" name="Is visible" sid="1305187261741058" type="btnUpgrade_old" />
-                                        <condition id="-14" name="Pick by unique ID" sid="3646594483788783" type="cabbageIcon">
-                                            <param id="0" name="Unique ID">btnUpgrade_old.itsCabbageId</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="-15" name="Set visible" sid="7811454329883462" type="cabbageIcon">
                                             <param id="0" name="Visibility">1</param>
@@ -1709,12 +1590,7 @@
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="5358023888998305" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="5033591913728195" type="btnUpgradeBack_old">
-                                    <param id="0" name="X">btnUpgrade_old.X-20</param>
-                                    <param id="1" name="Y">btnUpgrade_old.Y-20</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>

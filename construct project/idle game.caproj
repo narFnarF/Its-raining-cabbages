@@ -12,7 +12,6 @@
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -98,9 +97,9 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>btnBee</type>
-                    <type>btnBeeBack</type>
                     <type>bee</type>
+                    <type>btnBee</type>
+                    <type>btnBeeBackground</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
@@ -134,26 +133,30 @@
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="beeNb" sid="7230698741477582" type="number" />
-                    <instance-variable name="type" sid="4003687732661722" type="string" />
                     <instance-variable name="cost" sid="3318234215369156" type="number" />
                 </instance-variables>
-                <container>
-                    <type>btnBee</type>
-                    <type>btnBeeBack</type>
-                    <type>bee</type>
-                </container>
-            </object-type>
-            <object-type name="btnBeeBack" sid="6009999432359583">
-                <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="NoSave" sid="5184238594130307">
-                        <behavior id="NoSave" />
+                    <behavior-type name="Persist" sid="1550309732993426">
+                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>btnBee</type>
-                    <type>btnBeeBack</type>
                     <type>bee</type>
+                    <type>btnBee</type>
+                    <type>btnBeeBackground</type>
+                </container>
+            </object-type>
+            <object-type name="btnBeeBackground" sid="6009999432359583">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Persist" sid="7272064174887766">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>bee</type>
+                    <type>btnBee</type>
+                    <type>btnBeeBackground</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
@@ -162,14 +165,6 @@
                         </frame>
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="buyBeesButton" sid="8260176431510501">
-                <plugin id="Button" />
-                <instance-variables>
-                    <instance-variable name="price" sid="8032522824403215" type="number" />
-                    <instance-variable name="text" sid="382682042274087" type="string" />
-                    <instance-variable name="beeNb" sid="8354818448560706" type="number" />
-                </instance-variables>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="textboxes">
@@ -188,7 +183,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -249,31 +244,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="btnUpgrade_old" sid="3947049937687157">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="type" sid="6915415841375174" type="string" />
-                    <instance-variable name="price" sid="5950407521339703" type="number" />
-                    <instance-variable name="priceMutiplicator" sid="159484438039128" type="number" />
-                    <instance-variable name="priceAdditor" sid="7885002291117093" type="number" />
-                    <instance-variable name="itsCabbageId" sid="7581341157815091" type="number" />
-                </instance-variables>
-                <container>
-                    <type>btnUpgrade_old</type>
-                    <type>btnUpgradeBack_old</type>
-                </container>
-            </object-type>
-            <object-type name="btnUpgradeBack_old" sid="2766913013001252">
+            <object-type name="btnUpgradeBg" sid="2766913013001252">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="3565957130775504">
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>btnUpgrade_old</type>
-                    <type>btnUpgradeBack_old</type>
-                </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0">
@@ -810,7 +787,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="lions">
+        <object-folder expanded="1" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>

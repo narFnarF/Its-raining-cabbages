@@ -55,7 +55,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5809538651794419" title="Notifications">
+        <event-group collapsed="1" description="" sid="5809538651794419" title="Notifications">
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
@@ -290,7 +290,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4587465909699658" title="purchase popup">
+        <event-group collapsed="1" description="" sid="4587465909699658" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
