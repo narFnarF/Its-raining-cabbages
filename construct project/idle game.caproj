@@ -27,7 +27,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
@@ -98,9 +97,6 @@
                     </behavior-type>
                     <behavior-type name="Bullet" sid="1818596033610981">
                         <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="8Direction" sid="4778688149218808">
-                        <behavior id="EightDir" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
