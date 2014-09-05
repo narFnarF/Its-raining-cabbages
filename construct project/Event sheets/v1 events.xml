@@ -1299,15 +1299,15 @@
                                         <event-block sid="5951415098852403">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="155247499787677" type="bee">
-                                                    <param id="0" name="Instance variable">numéro</param>
+                                                    <param id="0" name="Instance variable">nb</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">btnBee.beeNb</param>
+                                                    <param id="2" name="Value">btnBee.nb</param>
                                                 </condition>
                                                 <condition disabled="1" id="-33" name="Pick by comparison" sid="124069181311306" type="System">
                                                     <param id="0" name="Object">bee</param>
-                                                    <param id="1" name="Expression">btnBee.beeNb</param>
+                                                    <param id="1" name="Expression">btnBee.nb</param>
                                                     <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">bee.numéro</param>
+                                                    <param id="3" name="Value">bee.nb</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -1336,9 +1336,9 @@
                                 <event-block sid="4479922774084822">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="1628568381434662" type="bee">
-                                            <param id="0" name="Instance variable">numéro</param>
+                                            <param id="0" name="Instance variable">nb</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">btnBee.beeNb</param>
+                                            <param id="2" name="Value">btnBee.nb</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1362,8 +1362,8 @@
                                             <param id="1" name="Value">0.01</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="1317549052721104" type="bee">
-                                            <param id="0" name="Instance variable">numéro</param>
-                                            <param id="1" name="Value">btnBee.beeNb</param>
+                                            <param id="0" name="Instance variable">nb</param>
+                                            <param id="1" name="Value">btnBee.nb</param>
                                         </action>
                                     </actions>
                                     <sub-events>

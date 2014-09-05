@@ -258,7 +258,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>0</numéro>
+                        <nb>0</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -293,7 +293,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>1</numéro>
+                        <nb>1</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -328,7 +328,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>2</numéro>
+                        <nb>2</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -363,7 +363,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>3</numéro>
+                        <nb>3</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>

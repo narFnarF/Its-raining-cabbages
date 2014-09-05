@@ -603,7 +603,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>1</beeNb>
+                        <nb>1</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -637,7 +637,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>2</beeNb>
+                        <nb>2</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -671,7 +671,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>3</beeNb>
+                        <nb>3</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -705,7 +705,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>4</beeNb>
+                        <nb>4</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -1023,7 +1023,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>1</numéro>
+                        <nb>1</nb>
                         <speed>0.02</speed>
                         <status>collect</status>
                         <cabbageID>-1</cabbageID>
@@ -1033,6 +1033,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1140,10 +1150,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1135.746826172</x>
+                        <x>1119.790405273</x>
                         <y>814</y>
                         <z>0</z>
-                        <width>128.72277832</width>
+                        <width>97</width>
                         <height>94</height>
                         <depth>0</depth>
                         <hotspotX>0.502994001</hotspotX>
@@ -1214,7 +1224,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>2</numéro>
+                        <nb>2</nb>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
@@ -1224,6 +1234,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1248,7 +1268,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>3</numéro>
+                        <nb>3</nb>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
@@ -1258,6 +1278,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1282,7 +1312,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>4</numéro>
+                        <nb>4</nb>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
@@ -1292,6 +1322,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1325,13 +1365,38 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="factoryProgressBarBg" uid="41">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1129.11730957</x>
+                        <y>839.766967773</y>
+                        <z>0</z>
+                        <width>126.361083984</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.555555582</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="siloTxt" uid="283">
                     <properties>
                         <text>88/20</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1340,10 +1405,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1074.637207031</x>
-                        <y>793.160339355</y>
+                        <x>1081.872436523</x>
+                        <y>792.126464844</y>
                         <z>0</z>
-                        <width>85.899414063</width>
+                        <width>82</width>
                         <height>46</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1370,7 +1435,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1270.706054688</x>
+                        <x>1259.706054688</x>
                         <y>815.122680664</y>
                         <z>0</z>
                         <width>153</width>
@@ -1521,45 +1586,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="solidBloc" uid="300">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Bounding box</collision-mask>
-                                <prevent-rotation>Yes</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1185.510986328</x>
-                        <y>838.166870117</y>
-                        <z>0</z>
-                        <width>7</width>
-                        <height>136.31628418</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="factoryProgressBar" uid="291">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1573,10 +1599,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1116.081542969</x>
-                        <y>838.313598633</y>
+                        <x>1128.995727539</x>
+                        <y>839.347473145</y>
                         <z>0</z>
-                        <width>117.990356445</width>
+                        <width>58.297233582</width>
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

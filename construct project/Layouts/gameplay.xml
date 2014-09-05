@@ -824,7 +824,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>1</beeNb>
+                        <nb>1</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -858,7 +858,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>2</beeNb>
+                        <nb>2</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -892,7 +892,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>3</beeNb>
+                        <nb>3</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -926,7 +926,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <beeNb>4</beeNb>
+                        <nb>4</nb>
                         <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
@@ -1283,7 +1283,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>1</numéro>
+                        <nb>1</nb>
                         <speed>0.02</speed>
                         <status>collect</status>
                         <cabbageID>-1</cabbageID>
@@ -1293,6 +1293,16 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2037,7 +2047,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>0</numéro>
+                        <nb>0</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2072,7 +2082,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>1</numéro>
+                        <nb>1</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2107,7 +2117,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>2</numéro>
+                        <nb>2</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>
@@ -2142,7 +2152,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <numéro>3</numéro>
+                        <nb>3</nb>
                         <level>0</level>
                         <initialWaitingTime>3600</initialWaitingTime>
                         <initialWaitingTimeCounter>0</initialWaitingTimeCounter>

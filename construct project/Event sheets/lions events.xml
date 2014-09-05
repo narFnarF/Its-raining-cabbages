@@ -60,7 +60,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="9695966858525175" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;place burger&quot;{###}&quot;You want to place a veggie burger here?&quot;{###}1{###}&quot;Veggie burger&quot;{###}&quot;Place &quot;{###}lion.numéro</param>
+                                    <param id="1" name="Parameter {n}">&quot;place burger&quot;{###}&quot;You want to place a veggie burger here?&quot;{###}1{###}&quot;Veggie burger&quot;{###}&quot;Place &quot;{###}lion.nb</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -85,7 +85,7 @@
                             <param id="0" name="Name">&quot;place burger&quot;</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="7763418387275897" type="lion">
-                            <param id="0" name="Instance variable">numéro</param>
+                            <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
@@ -198,7 +198,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1332184337820847" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}round( lion.level ^ 1.3 * 300 -250 ){###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.numéro</param>
+                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}round( lion.level ^ 1.3 * 300 -250 ){###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -208,7 +208,7 @@
                             <param id="0" name="Name">&quot;send hunting&quot;</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="8474202682753439" type="lion">
-                            <param id="0" name="Instance variable">numéro</param>
+                            <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
@@ -285,7 +285,7 @@
                         </action>
                         <action id="0" name="Call function" sid="3971551897337545" type="Function">
                             <param id="0" name="Name">&quot;lion collect&quot;</param>
-                            <param id="1" name="Parameter {n}">lion.numéro</param>
+                            <param id="1" name="Parameter {n}">lion.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -299,7 +299,7 @@
                             <param id="0" name="Name">&quot;lion collect&quot;</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="3170908716291094" type="lion">
-                            <param id="0" name="Instance variable">numéro</param>
+                            <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
@@ -413,7 +413,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="731191703593424" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Give tofu steaks to your lion to upgrade it! Better lions can bring back better stuff. (You currently have &quot; &amp; inventory.Get(&quot;Tofu steak&quot;) &amp; &quot; tofu steaks.)&quot;{###}1*lion.level{###}&quot;Tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.numéro</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Give tofu steaks to your lion to upgrade it! Better lions can bring back better stuff. (You currently have &quot; &amp; inventory.Get(&quot;Tofu steak&quot;) &amp; &quot; tofu steaks.)&quot;{###}1*lion.level{###}&quot;Tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -423,7 +423,7 @@
                             <param id="0" name="Name">&quot;lion level up&quot;</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="9488211384240661" type="lion">
-                            <param id="0" name="Instance variable">numéro</param>
+                            <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
