@@ -27,6 +27,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
@@ -84,12 +85,12 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="nb" sid="3220576457764413" type="number" />
+                    <instance-variable name="level" sid="6128146278882916" type="number" />
                     <instance-variable name="speed" sid="1991404268606079" type="number" />
                     <instance-variable name="status" sid="2282952334753853" type="string" />
                     <instance-variable name="cabbageID" sid="8587644090087937" type="number" />
                     <instance-variable name="targetX" sid="2658733998509146" type="number" />
                     <instance-variable name="targetY" sid="888475734182301" type="number" />
-                    <instance-variable name="level" sid="6128146278882916" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="8469844386374516">
@@ -97,6 +98,9 @@
                     </behavior-type>
                     <behavior-type name="Bullet" sid="1818596033610981">
                         <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="4778688149218808">
+                        <behavior id="EightDir" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">

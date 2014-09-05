@@ -1024,22 +1024,33 @@
                     </properties>
                     <instance-variables>
                         <nb>1</nb>
+                        <level>8</level>
                         <speed>0.02</speed>
                         <status>collect</status>
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
-                        <level>8</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1225,22 +1236,33 @@
                     </properties>
                     <instance-variables>
                         <nb>2</nb>
+                        <level>0</level>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
-                        <level>0</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1269,22 +1291,33 @@
                     </properties>
                     <instance-variables>
                         <nb>3</nb>
+                        <level>0</level>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
-                        <level>0</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -1313,22 +1346,33 @@
                     </properties>
                     <instance-variables>
                         <nb>4</nb>
+                        <level>0</level>
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
                         <targetY>0</targetY>
-                        <level>0</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
