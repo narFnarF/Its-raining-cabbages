@@ -768,11 +768,12 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="cabbages stuff">
+        <object-folder expanded="1" name="cabbages stuff">
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
+                    <instance-variable name="dropped" sid="5336754280462448" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1936616672555206">

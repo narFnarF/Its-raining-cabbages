@@ -1125,6 +1125,7 @@
                     </properties>
                     <instance-variables>
                         <beeTargeted>false</beeTargeted>
+                        <dropped>false</dropped>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
