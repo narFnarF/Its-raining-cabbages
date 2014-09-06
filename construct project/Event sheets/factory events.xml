@@ -37,7 +37,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="2084841826371189" title="bees">
+        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -317,7 +317,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" inactive="1" sid="4722972286636748" title="old bees">
+                <event-group collapsed="1" description="" inactive="1" sid="4722972286636748" title="old bees">
                     <sub-events>
                         <event-block sid="4656210704997607">
                             <conditions>
@@ -513,6 +513,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <comment>set bee size and speed according to level</comment>
                 <event-block sid="2871324038600675">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="2796770552786223" type="System">
@@ -521,17 +522,26 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="1" name="BEE_LEVEL_max" sid="4906541453482659" static="0" type="number">20</variable>
-                        <variable constant="1" name="BEE_SPEED_MIN" sid="3610765890930963" static="0" type="number">100</variable>
+                        <variable constant="1" name="BEE_SPEED_MIN" sid="3610765890930963" static="0" type="number">75</variable>
                         <variable constant="1" name="BEE_SPEED_max" sid="7451067633756949" static="0" type="number">500</variable>
+                        <variable constant="1" name="BEE_LEVEL_max" sid="4906541453482659" static="0" type="number">20</variable>
                         <variable constant="0" name="beeSpeedPerLevel" sid="8645212852944001" static="0" type="number">0</variable>
-                        <event-block sid="8025525574569224">
+                        <event-block sid="8562369334992931">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="9011394505799597" type="System">
                                     <param id="0" name="Variable">beeSpeedPerLevel</param>
-                                    <param id="1" name="Value">(BEE_LEVEL_MAX - BEE_SPEED_MIN) / BEE_LEVEL_MAX</param>
+                                    <param id="1" name="Value">(BEE_speed_MAX - BEE_SPEED_MIN) / BEE_LEVEL_MAX</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8025525574569224">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="9124986747763716" type="System">
+                                    <param id="0" name="Object">bee</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="-10" name="Set value" sid="5234205780852771" type="bee">
                                     <param id="0" name="Instance variable">speed</param>
                                     <param id="1" name="Value">bee.level * beeSpeedPerLevel + BEE_SPEED_MIN</param>
@@ -1218,7 +1228,15 @@
                         </action>
                         <action id="-10" name="Set value" sid="3583279995788074" type="bee">
                             <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;collect&quot;</param>
+                            <param id="1" name="Value">&quot;standby&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3871501648854781" type="bee">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">menhir.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6334507843936861" type="bee">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">menhir.y</param>
                         </action>
                     </actions>
                     <sub-events>
