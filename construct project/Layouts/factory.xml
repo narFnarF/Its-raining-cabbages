@@ -905,6 +905,7 @@
                     <instance-variables>
                         <beeTargeted>false</beeTargeted>
                         <dropped>false</dropped>
+                        <status>falling</status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -1013,50 +1014,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="bee" uid="285">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <nb>1</nb>
-                        <level>8</level>
-                        <speed>0.02</speed>
-                        <status>collect</status>
-                        <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>951</x>
-                        <y>466</y>
-                        <z>0</z>
-                        <width>37</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.740259767</hotspotX>
-                        <hotspotY>0.828125</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1226,8 +1183,8 @@
                     </properties>
                     <instance-variables>
                         <nb>2</nb>
-                        <level>5</level>
-                        <speed>0.03</speed>
+                        <level>0</level>
+                        <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
                         <targetX>0</targetX>
@@ -1339,6 +1296,138 @@
                     <world>
                         <x>768</x>
                         <y>2840</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="58">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                        <level>8</level>
+                        <speed>0</speed>
+                        <status>standby</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>858</x>
+                        <y>449</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="42">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                        <level>1</level>
+                        <speed>100</speed>
+                        <status>standby</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1281</x>
+                        <y>531</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.740259767</hotspotX>
+                        <hotspotY>0.828125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bee" uid="43">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>1</nb>
+                        <level>20</level>
+                        <speed>100</speed>
+                        <status>standby</status>
+                        <cabbageID>-1</cabbageID>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1354</x>
+                        <y>540</y>
                         <z>0</z>
                         <width>37</width>
                         <height>30</height>

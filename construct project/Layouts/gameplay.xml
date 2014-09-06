@@ -1126,6 +1126,7 @@
                     <instance-variables>
                         <beeTargeted>false</beeTargeted>
                         <dropped>false</dropped>
+                        <status>falling</status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

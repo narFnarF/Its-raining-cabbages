@@ -39,23 +39,19 @@
         </event-block>
         <event-group description="" sid="2084841826371189" title="bees">
             <sub-events>
+                <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="3887936076787394" type="cabbage">
-                            <param id="0" name="Object">menhir</param>
+                        <condition id="1" name="Is overlapping another object" sid="3887936076787394" type="cabbage">
+                            <param id="0" name="Object">beeCollectZone</param>
                         </condition>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="5386679570196106" type="bee">
-                            <param id="0" name="Instance variable">cabbageID</param>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="4270950706094577" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">cabbage.UID</param>
+                            <param id="2" name="Value">&quot;targeted&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="14" name="Log" sid="7381179678333223" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;cabb picked: &quot; &amp; cabbage.PickedCount</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="9799883833274947">
                             <conditions>
@@ -70,9 +66,9 @@
                                 <condition id="-7" name="Compare instance variable" sid="4590388548686601" type="bee">
                                     <param id="0" name="Instance variable">status</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;collect&quot;</param>
+                                    <param id="2" name="Value">&quot;standby&quot;</param>
                                 </condition>
-                                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="8190315149234436" type="bee">
+                                <condition id="-15" name="Pick nearest/furthest" sid="8190315149234436" type="bee">
                                     <param id="0" name="Which">0</param>
                                     <param id="1" name="X">cabbage.X</param>
                                     <param id="2" name="Y">cabbage.Y</param>
@@ -83,26 +79,36 @@
                                     <param id="0" name="Instance variable">cabbageID</param>
                                     <param id="1" name="Value">cabbage.UID</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="528277845526578" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;bee picked: &quot; &amp; bee.PickedCount</param>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="9155821856797722" type="bee">
+                                    <param id="0" name="Speed">bee.speed</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5704257378504439" type="bee">
+                                    <param id="0" name="Instance variable">status</param>
+                                    <param id="1" name="Value">&quot;reach&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Set bee angle towards target</comment>
                 <event-block sid="2154269036677145">
                     <conditions>
+                        <condition id="-1" name="Every tick" sid="6865628378545892" type="System" />
                         <condition id="-11" name="For Each" sid="4229773765782163" type="System">
                             <param id="0" name="Object">bee</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3661523991587131" type="cabbage">
-                            <param id="0" name="Unique ID">bee.cabbageID</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="5188710453976322" type="bee">
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;collect&quot;</param>
+                            <param id="2" name="Value">&quot;reach&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="6035604177375253" type="bee">
+                            <param id="0" name="Instance variable">cabbageID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3661523991587131" type="cabbage">
+                            <param id="0" name="Unique ID">bee.cabbageID</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -114,35 +120,15 @@
                             <param id="0" name="Instance variable">targetY</param>
                             <param id="1" name="Value">cabbage.y</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1023252381393695">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5180689789745813" type="bee">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;collect&quot;</param>
-                        </condition>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="6035604177375253" type="bee">
-                            <param id="0" name="Instance variable">cabbageID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="5516315285001331" type="bee">
-                            <param id="0" name="Speed">bee.speed*10000</param>
-                        </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="2175188318583767" type="bee">
                             <param id="0" name="Angle">angle(bee.x, bee.y, bee.targetX, bee.targetY)</param>
                         </action>
                     </actions>
                 </event-block>
+                <comment>When cabbage is destroyed, bee stop to follow it</comment>
                 <event-block sid="6267603040115168">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="4992282464990348" type="cabbage">
-                            <param id="0" name="Object">water</param>
-                        </condition>
+                        <condition id="-19" name="On destroyed" sid="4992282464990348" type="cabbage" />
                         <condition id="-7" name="Compare instance variable" sid="130254788486405" type="bee">
                             <param id="0" name="Instance variable">cabbageID</param>
                             <param id="1" name="Comparison">0</param>
@@ -150,54 +136,132 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="7186665246581015" type="bee">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;standby&quot;</param>
+                        </action>
                         <action id="-10" name="Set value" sid="849613519185223" type="bee">
                             <param id="0" name="Instance variable">cabbageID</param>
                             <param id="1" name="Value">-1</param>
                         </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="6952295050918162" type="bee">
+                            <param id="0" name="Speed">0</param>
+                        </action>
                     </actions>
                 </event-block>
+                <comment>Bee reaches its target</comment>
                 <event-block sid="947655980647461">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1734838404821996" type="bee">
                             <param id="0" name="Object">cabbage</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8317241941046166" type="bee">
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="8317241941046166" type="bee">
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;collect&quot;</param>
+                            <param id="2" name="Value">&quot;carry&quot;</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6144658683921148" type="cabbage">
-                            <param id="0" name="Instance variable">dropped</param>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="6144658683921148" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;carried&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="5153066562317055" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dropped&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="9336870936294197" type="bee">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;carry&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5171450043483633" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;carried&quot;</param>
+                        </action>
                         <action id="-10" name="Set value" sid="336157156176762" type="bee">
                             <param id="0" name="Instance variable">cabbageID</param>
                             <param id="1" name="Value">cabbage.UID</param>
                         </action>
-                        <action disabled="1" id="-16" name="Wait" sid="2662717430054814" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9336870936294197" type="bee">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;drop&quot;</param>
-                        </action>
                         <action id="-10" name="Set value" sid="3412178056395661" type="bee">
                             <param id="0" name="Instance variable">targetX</param>
-                            <param id="1" name="Value">beeDropZone.X</param>
+                            <param id="1" name="Value">beeDropZone.X + random(0, beeDropZone.Width)</param>
                         </action>
                         <action id="-10" name="Set value" sid="3779074618321826" type="bee">
                             <param id="0" name="Instance variable">targetY</param>
                             <param id="1" name="Value">beeDropZone.Y</param>
                         </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="1824619036315985" type="bee">
+                        <action behavior="Bullet" id="0" name="Set speed" sid="7214419768594568" type="bee">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="291691425577019" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="1824619036315985" type="bee">
                             <param id="0" name="Speed">bee.speed*10000</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="2945258023184808" type="bee">
+                            <param id="0" name="Speed">bee.speed</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="7992298003005721" type="bee">
                             <param id="0" name="Angle">angle(bee.x, bee.y, bee.targetX, bee.targetY)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <variable constant="0" name="carryingBee" sid="833235723399548" static="0" type="number">0</variable>
+                        <event-block sid="7286478610125236">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="9520591031319729" type="System">
+                                    <param id="0" name="Variable">carryingBee</param>
+                                    <param id="1" name="Value">bee.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="546145989318885">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="3039008178358815" type="System">
+                                            <param id="0" name="Object">bee</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="9333299254115757" type="bee">
+                                            <param id="0" name="Instance variable">cabbageID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">cabbage.UID</param>
+                                        </condition>
+                                        <condition disabled="1" id="-8" name="Compare two values" sid="6979787854060379" type="System">
+                                            <param id="0" name="First value">bee.UID</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">carryingBee</param>
+                                        </condition>
+                                        <condition id="-14" inverted="1" name="Pick by unique ID" sid="7165026623834462" type="bee">
+                                            <param id="0" name="Unique ID">carryingBee</param>
+                                        </condition>
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="2781180305648184" type="bee">
+                                            <param id="0" name="Instance variable">status</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;reach&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6845360168268491" type="bee">
+                                            <param id="0" name="Instance variable">status</param>
+                                            <param id="1" name="Value">&quot;standby&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5110690974753663" type="bee">
+                                            <param id="0" name="Instance variable">cabbageID</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="6004259317496677" type="bee">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <comment>bee arrived at drop zone</comment>
                 <event-block sid="2099231501852657">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4781094519941076" type="bee">
@@ -208,44 +272,39 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-16" name="Wait" sid="8939133868122431" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
                         <action id="-10" name="Set value" sid="6132063981628151" type="bee">
                             <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;collect&quot;</param>
+                            <param id="1" name="Value">&quot;standby&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="7347712858455369" type="bee">
                             <param id="0" name="Instance variable">cabbageID</param>
                             <param id="1" name="Value">-1</param>
                         </action>
-                        <action disabled="1" id="-16" name="Wait" sid="1335839871393251" type="System">
-                            <param id="0" name="Seconds">1</param>
+                        <action id="-10" name="Set value" sid="3803167897397715" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;dropped&quot;</param>
                         </action>
                         <action id="11" name="Set collisions enabled" sid="6381476093996676" type="cabbage">
                             <param id="0" name="Collisions">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="190576152153481" type="cabbage">
-                            <param id="0" name="Instance variable">dropped</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="1891311115848514" type="bee">
                             <param id="0" name="Speed">0</param>
                         </action>
                     </actions>
                 </event-block>
+                <comment>Cabbages follow the bees transporting them.</comment>
                 <event-block sid="6137659424801668">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1194268838473686" type="System">
                             <param id="0" name="Object">bee</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="8767773629815788" type="cabbage">
-                            <param id="0" name="Unique ID">bee.cabbageID</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="3995016041516266" type="bee">
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;drop&quot;</param>
+                            <param id="2" name="Value">&quot;carry&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="8767773629815788" type="cabbage">
+                            <param id="0" name="Unique ID">bee.cabbageID</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -454,19 +513,39 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="6178075461742297">
+                <event-block sid="2871324038600675">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="546504952001028" type="System" />
+                        <condition id="-6" name="Every X seconds" sid="2796770552786223" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="9" name="Set scale" sid="6500660037428854" type="bee">
-                            <param id="0" name="Scale">bee.speed*5+0.08</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="1" name="BEE_LEVEL_max" sid="4906541453482659" static="0" type="number">20</variable>
+                        <variable constant="1" name="BEE_SPEED_MIN" sid="3610765890930963" static="0" type="number">100</variable>
+                        <variable constant="1" name="BEE_SPEED_max" sid="7451067633756949" static="0" type="number">500</variable>
+                        <variable constant="0" name="beeSpeedPerLevel" sid="8645212852944001" static="0" type="number">0</variable>
+                        <event-block sid="8025525574569224">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="9011394505799597" type="System">
+                                    <param id="0" name="Variable">beeSpeedPerLevel</param>
+                                    <param id="1" name="Value">(BEE_LEVEL_MAX - BEE_SPEED_MIN) / BEE_LEVEL_MAX</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5234205780852771" type="bee">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Value">bee.level * beeSpeedPerLevel + BEE_SPEED_MIN</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="6811479745736546" type="bee">
+                                    <param id="0" name="Scale">bee.level /75 +0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1464147514479229" title="cabbages">
+        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -739,7 +818,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="775314833482713" title="factory">
+        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -944,7 +1023,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="901981960933352" title="upgrade bees">
+        <event-group description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">
@@ -1124,7 +1203,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="2099114977742744" type="bee">
                             <param id="0" name="Instance variable">speed</param>
-                            <param id="1" name="Value">0.01</param>
+                            <param id="1" name="Value">100</param>
                         </action>
                         <action id="14" name="Log" sid="3692060990308697" type="Browser">
                             <param id="0" name="Type">0</param>

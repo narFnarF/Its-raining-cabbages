@@ -774,6 +774,7 @@
                 <instance-variables>
                     <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
                     <instance-variable name="dropped" sid="5336754280462448" type="boolean" />
+                    <instance-variable name="status" sid="9406756358246947" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1936616672555206">
