@@ -1026,14 +1026,6 @@
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Value">&quot;standby&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="3871501648854781" type="bee">
-                            <param id="0" name="Instance variable">targetX</param>
-                            <param id="1" name="Value">menhir.X</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6334507843936861" type="bee">
-                            <param id="0" name="Instance variable">targetX</param>
-                            <param id="1" name="Value">menhir.y</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1812011707837541">

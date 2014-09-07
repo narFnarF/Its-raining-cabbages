@@ -83,7 +83,7 @@
                 <plugin id="AJAX" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="bee stuff">
+        <object-folder expanded="1" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -92,8 +92,6 @@
                     <instance-variable name="speed" sid="1991404268606079" type="number" />
                     <instance-variable name="status" sid="2282952334753853" type="string" />
                     <instance-variable name="cabbageID" sid="8587644090087937" type="number" />
-                    <instance-variable name="targetX" sid="2658733998509146" type="number" />
-                    <instance-variable name="targetY" sid="888475734182301" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="8469844386374516">

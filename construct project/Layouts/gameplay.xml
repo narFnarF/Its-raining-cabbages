@@ -1295,8 +1295,6 @@
                         <speed>0.02</speed>
                         <status>collect</status>
                         <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />

@@ -185,16 +185,7 @@
                                                     <param id="0" name="Unique ID">bee.cabbageID</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="8275670695726487" type="bee">
-                                                    <param id="0" name="Instance variable">targetX</param>
-                                                    <param id="1" name="Value">cabbage.x</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="3800810249281861" type="bee">
-                                                    <param id="0" name="Instance variable">targetY</param>
-                                                    <param id="1" name="Value">cabbage.Y</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                             <sub-events>
                                                 <event-block sid="2053981438310166">
                                                     <conditions>
@@ -208,14 +199,6 @@
                                                         </action>
                                                         <action id="11" name="Set collisions enabled" sid="3977052059784903" type="cabbage">
                                                             <param id="0" name="Collisions">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="7617252212296585" type="bee">
-                                                            <param id="0" name="Instance variable">targetX</param>
-                                                            <param id="1" name="Value">beeDropZone.X + random(0, beeDropZone.Width/2)</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="3972905951695338" type="bee">
-                                                            <param id="0" name="Instance variable">targetY</param>
-                                                            <param id="1" name="Value">beeDropZone.Y</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="8886617510009356" type="bee">
                                                             <param id="0" name="Instance variable">status</param>
@@ -233,12 +216,7 @@
                                             <param id="0" name="UID">bee.cabbageID</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="6101844515905816" type="bee">
-                                            <param id="0" name="X">lerp(bee.X, bee.targetX, bee.speed*dt*60)</param>
-                                            <param id="1" name="Y">lerp(bee.Y, bee.targetY, bee.speed*dt*60)</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -251,12 +229,7 @@
                                     <param id="2" name="Value">&quot;drop&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="374014145128332" type="bee">
-                                    <param id="0" name="X">lerp(bee.X, bee.targetX, bee.speed*dt*60)</param>
-                                    <param id="1" name="Y">lerp(bee.Y, bee.targetY, bee.speed*dt*60)</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="6185740159736688">
                                     <conditions>

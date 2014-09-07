@@ -1188,8 +1188,6 @@
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -1232,8 +1230,6 @@
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -1276,8 +1272,6 @@
                         <speed>0</speed>
                         <status>not born</status>
                         <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -1320,8 +1314,6 @@
                         <speed>0</speed>
                         <status>standby</status>
                         <cabbageID>-1</cabbageID>
-                        <targetX>0</targetX>
-                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
