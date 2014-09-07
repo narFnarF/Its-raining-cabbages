@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>r108a</version>
+    <version>r108b</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -1043,7 +1043,7 @@
             <layout>create new game.xml</layout>
         </layout-folder>
         <layout-folder expanded="0" name="old or useless">
-            <layout>gameplay.xml</layout>
+            <layout>gameplay (old).xml</layout>
             <layout>spawned objects.xml</layout>
         </layout-folder>
         <layout>Verachou.xml</layout>

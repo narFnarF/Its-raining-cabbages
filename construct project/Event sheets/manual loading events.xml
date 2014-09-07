@@ -17,7 +17,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="7619808489055349" type="System">
-                    <param id="0" name="Layout">gameplay</param>
+                    <param id="0" name="Layout">gameplay (old)</param>
                 </action>
             </actions>
         </event-block>
@@ -71,7 +71,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="948542714214916" type="System">
-                    <param id="0" name="Layout">gameplay</param>
+                    <param id="0" name="Layout">factory</param>
                 </action>
             </actions>
         </event-block>
