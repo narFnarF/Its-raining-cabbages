@@ -298,7 +298,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="notifications">
+        <object-folder expanded="0" name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -732,7 +732,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="menhir">
+        <object-folder expanded="1" name="menhir">
             <object-type name="menhir" sid="1702331039481137">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -743,8 +743,8 @@
                     <behavior-type name="Physics" sid="4019090817851407">
                         <behavior id="Physics" />
                     </behavior-type>
-                    <behavior-type name="NoSave" sid="9063371240552588">
-                        <behavior id="NoSave" />
+                    <behavior-type name="Persist" sid="5534419827777112">
+                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
@@ -1049,11 +1049,11 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="lions">
+        <event-folder expanded="0" name="lions">
             <event-sheet>lions events.xml</event-sheet>
             <event-sheet>lions events main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="menus">
+        <event-folder expanded="1" name="menus">
             <event-sheet>savefile error events.xml</event-sheet>
             <event-sheet>manual loading events.xml</event-sheet>
             <event-sheet>intro events.xml</event-sheet>

@@ -133,7 +133,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3693805639098864">
+                <event-block disabled="1" sid="3693805639098864">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7066901252208626" type="System" />
                     </conditions>

@@ -779,10 +779,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>828</x>
-                        <y>810</y>
+                        <y>847</y>
                         <z>0</z>
-                        <width>216</width>
-                        <height>132</height>
+                        <width>182</width>
+                        <height>151</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -878,7 +878,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="NoSave" />
+                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1315,7 +1315,7 @@
                     </properties>
                     <instance-variables>
                         <nb>1</nb>
-                        <level>8</level>
+                        <level>5</level>
                         <speed>0</speed>
                         <status>standby</status>
                         <cabbageID>-1</cabbageID>

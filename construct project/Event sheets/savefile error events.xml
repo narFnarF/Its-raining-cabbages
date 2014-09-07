@@ -8,8 +8,8 @@
                 <condition id="0" name="On any touch start" sid="705138946179585" type="Touch" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="4973557677273387" type="System">
-                    <param id="0" name="Layout">Intro</param>
+                <action id="-37" name="Load" sid="4973557677273387" type="System">
+                    <param id="0" name="Slot">&quot;new game&quot;</param>
                 </action>
             </actions>
         </event-block>
