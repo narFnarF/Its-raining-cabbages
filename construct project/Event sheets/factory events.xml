@@ -1038,6 +1038,7 @@
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">
                     <conditions>
+                        <condition id="-1" name="Every tick" sid="9437873035562241" type="System" />
                         <condition id="-11" name="For Each" sid="3700035293464394" type="System">
                             <param id="0" name="Object">btnBee</param>
                         </condition>
@@ -1049,6 +1050,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>pour acheter</comment>
                         <event-block sid="39501312460836">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="2062806322392199" type="bee">
@@ -1060,13 +1062,14 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="9354096091450153" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">(bee.nb-1)^2 * 1000 - 900</param>
+                                    <param id="1" name="Value">10^bee.nb*2</param>
                                 </action>
                                 <action id="0" name="Set text" sid="4373928098048421" type="btnBee">
                                     <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.nb &amp; newline &amp; &quot;Cost: &quot; &amp; btnBee.cost</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>pour upgrader</comment>
                         <event-block sid="3541783187048468">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8837914882428714" type="bee">
@@ -1083,13 +1086,14 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8243264933951822" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">round( (2.5^(bee.level*0.7) + (100*bee.level)) * bee.nb )</param>
+                                    <param id="1" name="Value">round( (2.5^(bee.level*0.7) + (400*bee.level)) * bee.nb )</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6673935572017718" type="btnBee">
-                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: Current: &quot; &amp; bee.speed*400 &amp; newline &amp; &quot;Cost: &quot; &amp;btnBee.cost</param>
+                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp;btnBee.cost</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>reached max</comment>
                         <event-block sid="5156212411957832">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="102879498721571" type="bee">
@@ -1119,15 +1123,15 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="6292504427006569" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="6292504427006569" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">newline</param>
                         </action>
-                        <action id="14" name="Log" sid="568440259920847" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="568440259920847" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Bee id: &quot; &amp; bee.UID</param>
                         </action>
-                        <action id="14" name="Log" sid="8879633768608944" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="8879633768608944" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;picked: &quot; &amp; bee.PickedCount</param>
                         </action>
@@ -1146,11 +1150,11 @@
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;buy bee&quot;{###}&quot;buy&quot;{###}btnBee.cost{###}&quot;salads&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
                                 </action>
-                                <action id="14" name="Log" sid="9302628419228142" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="9302628419228142" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;picked: &quot; &amp; bee.PickedCount</param>
                                 </action>
-                                <action id="14" name="Log" sid="8758512623468877" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="8758512623468877" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Bee id: &quot; &amp; bee.UID</param>
                                 </action>
@@ -1174,11 +1178,11 @@
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;upgrade bee&quot;{###}&quot;upgrade&quot;{###}btnBee.cost{###}&quot;salads&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
                                 </action>
-                                <action id="14" name="Log" sid="2079872421358403" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="2079872421358403" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;picked: &quot; &amp; bee.PickedCount</param>
                                 </action>
-                                <action id="14" name="Log" sid="3489711072837746" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="3489711072837746" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Bee id: &quot; &amp; bee.UID</param>
                                 </action>
@@ -1211,15 +1215,15 @@
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2099114977742744" type="bee">
+                        <action disabled="1" id="-10" name="Set value" sid="2099114977742744" type="bee">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Value">100</param>
                         </action>
-                        <action id="14" name="Log" sid="3692060990308697" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="3692060990308697" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;picked: &quot; &amp; bee.PickedCount</param>
                         </action>
-                        <action id="14" name="Log" sid="4265272728245943" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="4265272728245943" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Bee id: &quot; &amp; bee.UID</param>
                         </action>
@@ -1327,11 +1331,11 @@
                                     <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="1730133778243352" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="1730133778243352" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;picked: &quot; &amp; bee.PickedCount</param>
                                 </action>
-                                <action id="14" name="Log" sid="9019200448924327" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="9019200448924327" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Bee id: &quot; &amp; bee.UID</param>
                                 </action>
