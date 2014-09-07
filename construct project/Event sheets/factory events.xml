@@ -481,7 +481,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
+        <event-group description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -576,6 +576,17 @@
                         </action>
                         <action id="-5" name="Set width" sid="3720700351397225" type="beeCollectZone">
                             <param id="0" name="Width">menhir.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7882184789721743">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2815246997573815" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8773395894568692" type="Function">
+                            <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
