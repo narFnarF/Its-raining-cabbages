@@ -481,7 +481,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5689100297767431" title="menhir">
+        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -644,7 +644,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
+        <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -761,6 +761,10 @@
                         <action id="-10" name="Add to" sid="8863909412698543" type="System">
                             <param id="0" name="Variable">salads</param>
                             <param id="1" name="Value">factory.outputSalads</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3737990909380714" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Collected &quot; &amp; factory.outputSalads &amp; &quot; salads.&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="4763626231264486" type="factory">
                             <param id="0" name="Instance variable">outputSalads</param>
