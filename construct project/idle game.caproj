@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>r108</version>
+    <version>r108a</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -1036,13 +1036,13 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="menus">
+        <layout-folder expanded="1" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
             <layout>create new game.xml</layout>
         </layout-folder>
-        <layout-folder expanded="1" name="old or useless">
+        <layout-folder expanded="0" name="old or useless">
             <layout>gameplay.xml</layout>
             <layout>spawned objects.xml</layout>
         </layout-folder>

@@ -13,6 +13,21 @@
                     <param id="0" name="Slot">&quot;new game&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="5397898963084047">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="5838588891255019" type="txtLabel">
+                            <param id="0" name="Text to compare">&quot;version&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5181280425695908" type="txtLabel">
+                            <param id="0" name="Text">projectversion</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="982771922025691">
             <conditions>
