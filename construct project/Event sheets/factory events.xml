@@ -30,7 +30,7 @@
                     <param id="0" name="Variable">salads</param>
                     <param id="1" name="Value">1000</param>
                 </action>
-                <action id="5" name="Push" sid="2823179925859601" type="sillyMessages">
+                <action disabled="1" id="5" name="Push" sid="2823179925859601" type="sillyMessages">
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Value">&quot;Si tu vois juste cette notification, ça veut dire que c&apos;est pété. Sinon, tu peux deleter cette ligne&quot;</param>
                     <param id="2" name="Axis">0</param>
@@ -1033,7 +1033,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="901981960933352" title="upgrade bees">
+        <event-group collapsed="1" description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">

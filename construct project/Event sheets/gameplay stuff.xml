@@ -55,10 +55,58 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5809538651794419" title="Notifications">
+        <event-group description="" sid="5809538651794419" title="Notifications">
             <sub-events>
-                <event-group description="" sid="3373127521768589" title="Silly notifications">
+                <event-group collapsed="1" description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
+                        <event-block sid="3637024882119976">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8150831797504466" type="Function">
+                                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="728578133376212" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;factory&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="3699607571925918" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Loading JSON with silly messages&quot;</param>
+                                </action>
+                                <action id="1" name="Request project file" sid="2752477227894716" type="AJAX">
+                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                    <param id="1" name="File">silly_messages.json</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="737640445862742">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="6449486627755417" type="AJAX">
+                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Load" sid="7945392547159848" type="sillyMessages">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6708560099696989">
+                            <conditions>
+                                <condition id="1" name="On error" sid="2082635357422853" type="AJAX">
+                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set size" sid="3229491906643753" type="sillyMessages">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">1</param>
+                                    <param id="2" name="Depth">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="3351956113656007">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="2683204853402891" type="System">
@@ -72,9 +120,15 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="9206526635970363">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="3288628066722548" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="7051194549149644" title="Notification box">
+                <event-group collapsed="1" description="" sid="7051194549149644" title="Notification box">
                     <sub-events>
                         <event-block sid="4008492876518852">
                             <conditions>
@@ -207,7 +261,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block collapsed="1" sid="3297061255133494">
+                <event-block sid="3297061255133494">
                     <conditions>
                         <condition id="0" name="On function" sid="9779909940571391" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -249,14 +303,30 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1198690373811865">
+                        <event-block sid="1951331004917804">
                             <conditions />
                             <actions>
-                                <action id="0" name="Set text" sid="2712988918937438" type="txtNotifications">
-                                    <param id="0" name="Text">&quot;&quot;</param>
+                                <action id="0" name="Call function" sid="7313793373593471" type="Function">
+                                    <param id="0" name="Name">&quot;refresh notifications&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Refresh the notification box</comment>
+                <event-block sid="6136545302500118">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4463989980660938" type="Function">
+                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2712988918937438" type="txtNotifications">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
                         <event-block sid="9756152489724751">
                             <conditions>
                                 <condition id="7" name="Compare size" sid="2550594532501463" type="notifications">
@@ -273,7 +343,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>remplis la textbox qu&apos;on vient juste de vider</comment>
                         <event-block sid="6670611033980802">
                             <conditions>
                                 <condition id="3" name="For each element" sid="6264250690382946" type="notifications">
@@ -287,6 +356,17 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="2011078086224444">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7200842942564816" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3076962427945874" type="Function">
+                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

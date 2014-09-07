@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
@@ -78,8 +79,11 @@
             <object-type name="Keyboard" sid="8221280292440799">
                 <plugin id="Keyboard" />
             </object-type>
+            <object-type name="AJAX" sid="3132682189607884">
+                <plugin id="AJAX" />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="bee stuff">
+        <object-folder expanded="0" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -171,7 +175,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -294,7 +298,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="notifications">
+        <object-folder expanded="1" name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -768,7 +772,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="cabbages stuff">
+        <object-folder expanded="0" name="cabbages stuff">
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1069,11 +1073,12 @@
         <global-instance type="Function" uid="5" />
         <global-instance type="Mouse" uid="30" />
         <global-instance type="Keyboard" uid="40" />
+        <global-instance type="AJAX" uid="42" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
-        <file-folder expanded="1" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
@@ -1081,5 +1086,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="silly_messages.json" />
     </files-folder>
 </c2project>
