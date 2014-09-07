@@ -1178,7 +1178,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9599963043552251" title="upgrade factory">
+        <event-group description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryCost" sid="4062049571430355" static="0" type="number">0</variable>
@@ -1211,7 +1211,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1739147492558582" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Upgrade the silo&quot;{###}siloCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}siloCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1232,7 +1232,7 @@
                         </action>
                         <action id="0" name="Call function" sid="537098952521533" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;You improved the storage of the silo. It can now store &quot; &amp; silo.capacity &amp; &quot; cabbages before having to throw them away.&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You improved the storage of the silo. It can now store &quot; &amp; silo.capacity &amp; &quot; cabbages before having to throw them away. (Your silo is big now. Are you trying to compensate for something??)&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1246,7 +1246,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="4725828261511926" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade factory&quot;{###}&quot;Upgrade the factory&quot;{###}factoryCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade factory&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}factoryCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1267,7 +1267,7 @@
                         </action>
                         <action id="0" name="Call function" sid="371803911681976" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;You improved the productivity of the factory. It will now transform &quot; &amp; factory.productivity &amp; &quot; cabbages at a time.&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You improved the productivity of the factory. It will now transform &quot; &amp; factory.productivity &amp; &quot; cabbages in one go. (Smash ALL the cabbages!!)&quot;</param>
                         </action>
                     </actions>
                 </event-block>

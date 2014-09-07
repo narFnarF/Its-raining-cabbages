@@ -41,7 +41,7 @@
                         <action id="-36" name="Save" sid="6282600037916136" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="8931207912499693" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="8931207912499693" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Saving in progress...&quot;{###}&quot;nobr&quot;</param>
                         </action>
@@ -57,7 +57,7 @@
                         <action id="-36" name="Save" sid="2477216391478845" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="4501332724436306" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="4501332724436306" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Saving in progress...&quot;{###}&quot;nobr&quot;</param>
                         </action>
@@ -77,15 +77,24 @@
                         <condition id="-28" name="On save complete" sid="5213636866070556" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="9488686038622572" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="9488686038622572" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
                         </action>
-                        <action disabled="1" id="14" name="Log" sid="4881794402163457" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">SaveStateJSON</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="4217253360894964">
+                            <conditions>
+                                <condition id="-18" inverted="1" name="Is in preview" sid="3759092013327661" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="4881794402163457" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">SaveStateJSON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8721538241536801">
                     <conditions>
