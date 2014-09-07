@@ -1098,9 +1098,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <capacity>1</capacity>
+                        <capacity>2</capacity>
                         <cabbages>0</cabbages>
-                        <level>1</level>
+                        <level>2</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
