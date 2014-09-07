@@ -37,7 +37,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
+        <event-group description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -149,7 +149,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Bee reaches its target</comment>
+                <comment>Bee catches a cabbage</comment>
                 <event-block sid="947655980647461">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1734838404821996" type="bee">
@@ -184,11 +184,11 @@
                             <param id="0" name="Instance variable">cabbageID</param>
                             <param id="1" name="Value">cabbage.UID</param>
                         </action>
-                        <action id="-10" name="Set value" sid="3412178056395661" type="bee">
+                        <action disabled="1" id="-10" name="Set value" sid="3412178056395661" type="bee">
                             <param id="0" name="Instance variable">targetX</param>
                             <param id="1" name="Value">beeDropZone.X + random(0, beeDropZone.Width)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="3779074618321826" type="bee">
+                        <action disabled="1" id="-10" name="Set value" sid="3779074618321826" type="bee">
                             <param id="0" name="Instance variable">targetY</param>
                             <param id="1" name="Value">beeDropZone.Y</param>
                         </action>
@@ -205,7 +205,7 @@
                             <param id="0" name="Speed">bee.speed</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="7992298003005721" type="bee">
-                            <param id="0" name="Angle">angle(bee.x, bee.y, bee.targetX, bee.targetY)</param>
+                            <param id="0" name="Angle">angle(bee.x, bee.y, beeDropZone.X + random(0, beeDropZone.Width), beeDropZone.Y)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -314,6 +314,29 @@
                         </action>
                         <action id="11" name="Set collisions enabled" sid="2369892431847469" type="cabbage">
                             <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>bug fix: restart stuck bees if changing layout during the Wait period</comment>
+                <event-block sid="4847684563746769">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6233481806747317" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="7475047245678389" type="bee">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;carry&quot;</param>
+                        </condition>
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="7720793396621586" type="bee">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="1497514936299948" type="bee">
+                            <param id="0" name="Speed">bee.speed</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6444711576750369" type="bee">
+                            <param id="0" name="Angle">angle(bee.x, bee.y, beeDropZone.X + random(0, beeDropZone.Width), beeDropZone.Y)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -826,7 +849,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="775314833482713" title="factory">
+        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
