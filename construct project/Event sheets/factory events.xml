@@ -674,7 +674,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5689100297767431" title="menhir">
+        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -792,10 +792,6 @@
                             <param id="0" name="Instance variable">cabbages</param>
                             <param id="1" name="Value">clamp(silo.cabbages, 0, silo.capacity)</param>
                         </action>
-                        <action disabled="1" id="-10" name="Set value" sid="6438965156851902" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Value">min(factory.inputCabbages+1, factory.maxInputCapacity)</param>
-                        </action>
                         <action id="2" name="Set at X" sid="7678045215561208" type="siloHistory">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">siloHistory.At(0) +1</param>
@@ -830,28 +826,49 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
+        <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="320209268615678" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition disabled="1" id="-7" name="Compare instance variable" sid="3068722718029463" type="silo">
-                            <param id="0" name="Instance variable">cabbages</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="2889545587355566" type="factory">
-                            <param id="0" name="Instance variable">timer</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">
-                            <param id="0" name="Width">126 * (factory.timer) / factory.timerMax</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="55156254754671">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3068722718029463" type="silo">
+                                    <param id="0" name="Instance variable">cabbages</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="2889545587355566" type="factory">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">
+                                    <param id="0" name="Width">126 * (factory.timer) / factory.timerMax</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5820705769653261">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3423918890411696" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2908935007111563" type="factory">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="3696408234446436" type="factoryProgressBar">
+                                    <param id="0" name="Width">126 * (factory.timer) / factory.timerMax</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="3660702038229175">
                     <conditions>
@@ -889,14 +906,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="9902963667675152" type="factoryNotification">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action disabled="1" id="-11" name="Add to" sid="1682906035119718" type="factory">
-                            <param id="0" name="Instance variable">outputSalads</param>
-                            <param id="1" name="Value">min(factory.productivity, factory.inputCabbages)</param>
-                        </action>
-                        <action disabled="1" id="-12" name="Subtract from" sid="6073603061076382" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Value">min(factory.productivity, factory.inputCabbages)</param>
                         </action>
                     </actions>
                 </event-block>

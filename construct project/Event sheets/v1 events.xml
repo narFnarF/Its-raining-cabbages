@@ -394,10 +394,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8062350698082828" type="cabbage" />
-                        <action id="-10" name="Set value" sid="6438965156851902" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Value">min(factory.inputCabbages+1, factory.maxInputCapacity)</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8945611553218828">
@@ -436,9 +432,6 @@
                         </action>
                         <action disabled="1" id="1" name="Append text" sid="4198186552769851" type="globalStats">
                             <param id="0" name="Text">&quot;Cucumbers cut lenghtwise: &quot; &amp; 0 &amp; newline</param>
-                        </action>
-                        <action id="1" name="Append text" sid="7094839605858453" type="globalStats">
-                            <param id="0" name="Text">&quot;Salads per minute: &quot; &amp; round(factory.currentProductionPerMinute) &amp; newline</param>
                         </action>
                     </actions>
                 </event-block>
@@ -555,18 +548,8 @@
                         <condition id="-6" name="Every X seconds" sid="320209268615678" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="3068722718029463" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="2889545587355566" type="factory">
-                            <param id="0" name="Instance variable">timer</param>
-                            <param id="1" name="Value">factory.speed</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="3660702038229175">
                     <conditions>
@@ -577,18 +560,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="3226974522644266" type="factory">
-                            <param id="0" name="Instance variable">convertedInLastMinute</param>
-                            <param id="1" name="Value">min(factory.productivity, factory.inputCabbages)</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="1682906035119718" type="factory">
-                            <param id="0" name="Instance variable">outputSalads</param>
-                            <param id="1" name="Value">min(factory.productivity, factory.inputCabbages)</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="6073603061076382" type="factory">
-                            <param id="0" name="Instance variable">inputCabbages</param>
-                            <param id="1" name="Value">min(factory.productivity, factory.inputCabbages)</param>
-                        </action>
                         <action id="-10" name="Set value" sid="6717610270941805" type="factory">
                             <param id="0" name="Instance variable">timer</param>
                             <param id="1" name="Value">0</param>
@@ -600,9 +571,6 @@
                         <condition id="-1" name="Every tick" sid="4652686779385674" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
-                            <param id="0" name="Text">&quot;salads factory&quot; &amp; newline &amp; factory.inputCabbages &amp; &quot;/&quot; &amp; factory.maxInputCapacity</param>
-                        </action>
                         <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">
                             <param id="0" name="Width">factory.Width * factory.timer / factory.timerMax</param>
                         </action>
@@ -677,10 +645,6 @@
                         <action id="-9" name="Set value" sid="1480010761020036" type="System">
                             <param id="0" name="Variable">deltaTime</param>
                             <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="4002247624856806" type="factory">
-                            <param id="0" name="Instance variable">outputSalads</param>
-                            <param id="1" name="Value">round( factory.currentProductionPerMinute/60 * deltaTime )</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1001,36 +965,6 @@
                             <param id="1" name="Parameter {n}">&quot;You&apos;ve been playing for a total of &quot; &amp; totalTime/60/60 &amp; &quot; hours.&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="7501014718838966">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="4207835167342868" type="System">
-                                    <param id="0" name="First value">factory.convertedInLastMinute</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">factory.currentProductionPerMinute</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="545778202321373" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Whoohoo! Your improvements now produce &quot; &amp;  factory.convertedInLastMinute  &amp; &quot; salads per minute.&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="907143506829863">
-                            <conditions />
-                            <actions>
-                                <action id="-10" name="Set value" sid="9197125425490681" type="factory">
-                                    <param id="0" name="Instance variable">currentProductionPerMinute</param>
-                                    <param id="1" name="Value">factory.convertedInLastMinute</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4636080341873149" type="factory">
-                                    <param id="0" name="Instance variable">convertedInLastMinute</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Debug shortcut</comment>
                 <event-block sid="5490210380852038">
@@ -1259,30 +1193,12 @@
                                     <actions />
                                     <sub-events>
                                         <variable constant="0" name="current" sid="40234869625805" static="0" type="text"></variable>
-                                        <event-block sid="1541945969700442">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="1181021674779154" type="System">
-                                                    <param id="0" name="Variable">current</param>
-                                                    <param id="1" name="Value">factory.maxInputCapacity</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="9402589309631088">
                                             <conditions />
                                             <actions>
                                                 <action id="-9" name="Set value" sid="2209441124344638" type="System">
                                                     <param id="0" name="Variable">current</param>
                                                     <param id="1" name="Value">factory.productivity</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="8319868594874701">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="7226610774421443" type="System">
-                                                    <param id="0" name="Variable">current</param>
-                                                    <param id="1" name="Value">left( str(factory.timerMax/factory.speed ), 4) &amp; &quot; sec.&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1504,17 +1420,9 @@
                                 <event-block sid="8609332596599255">
                                     <conditions />
                                     <actions>
-                                        <action id="-11" name="Add to" sid="7176420285304783" type="factory">
-                                            <param id="0" name="Instance variable">maxInputCapacity</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action disabled="1" id="-11" name="Add to" sid="4145194181882132" type="factory">
                                             <param id="0" name="Instance variable">timerMax</param>
                                             <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="5252264666026169" type="Function">
-                                            <param id="0" name="Name">&quot;notification&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;You improved the storage of the factory. It can now store &quot; &amp; factory.maxInputCapacity &amp; &quot; cabbages before having to throw them away.&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1541,10 +1449,6 @@
                                         <action id="-11" name="Add to" sid="7548431516900238" type="factory">
                                             <param id="0" name="Instance variable">timerMax</param>
                                             <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="2450256733929545" type="factory">
-                                            <param id="0" name="Instance variable">speed</param>
-                                            <param id="1" name="Value">factory.speed*1.2</param>
                                         </action>
                                         <action id="0" name="Call function" sid="2739296384539685" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>

@@ -823,15 +823,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <inputCabbages>0</inputCabbages>
-                        <maxInputCapacity>5</maxInputCapacity>
                         <outputSalads>0</outputSalads>
                         <productivity>1</productivity>
                         <timer>0</timer>
                         <timerMax>10</timerMax>
-                        <speed>1</speed>
-                        <convertedInLastMinute>0</convertedInLastMinute>
-                        <currentProductionPerMinute>0</currentProductionPerMinute>
                         <level>1</level>
                     </instance-variables>
                     <behavior-instances>
