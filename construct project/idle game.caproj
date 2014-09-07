@@ -1036,7 +1036,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+        <event-folder expanded="0" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
