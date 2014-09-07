@@ -179,11 +179,11 @@
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
+                    <instance-variable name="level" sid="8246387739080951" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
+                    <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
                     <instance-variable name="timerMax" sid="6847551949910904" type="number" />
-                    <instance-variable name="level" sid="8246387739080951" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="3067676385396211">
@@ -1036,7 +1036,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
