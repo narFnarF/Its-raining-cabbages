@@ -157,6 +157,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <label>Trade zone</label>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -172,7 +173,7 @@
                         <height>92</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
@@ -185,6 +186,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <label>Lions</label>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -200,7 +202,7 @@
                         <height>92</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
@@ -213,6 +215,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <label>Bees</label>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -228,7 +231,7 @@
                         <height>93</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>3.141592741</angle>
                         <opacity>1</opacity>
                     </world>

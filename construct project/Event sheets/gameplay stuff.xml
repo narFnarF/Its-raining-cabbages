@@ -1064,5 +1064,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="2147083929799531">
+            <conditions>
+                <condition id="-18" name="On created" sid="9188640435135716" type="arrows" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="9452667948088014" type="System">
+                    <param id="0" name="Object to create">arrowLabel</param>
+                    <param id="1" name="Layer">arrows.LayerNumber</param>
+                    <param id="2" name="X">arrows.X</param>
+                    <param id="3" name="Y">arrows.Y</param>
+                </action>
+                <action id="0" name="Set text" sid="8083444771765088" type="arrowLabel">
+                    <param id="0" name="Text">arrows.label</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

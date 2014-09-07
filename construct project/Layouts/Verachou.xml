@@ -878,6 +878,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <label>Bees</label>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -893,7 +894,7 @@
                         <height>98.725212097</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.441176474</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

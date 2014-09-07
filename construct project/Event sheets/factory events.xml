@@ -644,7 +644,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="775314833482713" title="factory">
+        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>

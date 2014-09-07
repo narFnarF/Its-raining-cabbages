@@ -175,7 +175,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -345,7 +345,7 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6799261809530454" speed="5">
-                        <frame duration="1" hotspotX="0.502645" hotspotY="0.441176" />
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -423,7 +423,7 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801973543682937" speed="5">
-                        <frame duration="1" hotspotX="0.502645" hotspotY="0.441176" />
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -434,6 +434,14 @@
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="8322566797672151">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="arrowLabel" sid="646455290385136">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8736571886796099">
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
@@ -1019,6 +1027,15 @@
                 <instance-variable name="energyCost" sid="1507618704537177" type="number" />
             </instance-variables>
         </family>
+        <family name="arrows" plugin-id="Sprite" sid="7275680179902792">
+            <members>
+                <member>arrowCamera</member>
+                <member>arrowLayout</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="label" sid="6512711138914009" type="string" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout-folder expanded="0" name="menus">
@@ -1027,7 +1044,7 @@
             <layout>manual loading.xml</layout>
             <layout>create new game.xml</layout>
         </layout-folder>
-        <layout-folder expanded="0" name="old or useless">
+        <layout-folder expanded="1" name="old or useless">
             <layout>gameplay.xml</layout>
             <layout>spawned objects.xml</layout>
         </layout-folder>
