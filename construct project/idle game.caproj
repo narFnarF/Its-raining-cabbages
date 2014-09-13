@@ -944,14 +944,14 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="trader">
+        <object-folder expanded="1" name="trader">
             <object-type name="trader" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
-                    <instance-variable name="getWhat" sid="2750451303680641" type="string" />
-                    <instance-variable name="getHowMany" sid="8038152053338172" type="number" />
-                    <instance-variable name="giveWhat" sid="3103701344531354" type="string" />
-                    <instance-variable name="giveHowMany" sid="1451616090028767" type="number" />
+                    <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
+                    <instance-variable name="receiveHowMany" sid="8038152053338172" type="number" />
+                    <instance-variable name="payWhat" sid="3103701344531354" type="string" />
+                    <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
                 </instance-variables>
                 <container>
                     <type>trader</type>
@@ -1051,7 +1051,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+        <event-folder expanded="0" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
@@ -1059,7 +1059,7 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="lions">
+        <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
             <event-sheet>lions events main.xml</event-sheet>
         </event-folder>

@@ -230,6 +230,10 @@
                             <param id="0" name="Instance variable">huntTime</param>
                             <param id="1" name="Value">(lion.huntTime + random(lion.huntTime*0.7, lion.huntTime*1.5) ) *60</param>
                         </action>
+                        <action id="0" name="Call function" sid="6447290602517034" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;sent lion on mission&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>lions is back from hunting</comment>
@@ -291,7 +295,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2134108211466926" title="loot table">
+        <event-group collapsed="1" description="" sid="2134108211466926" title="lion collect &amp; loot table">
             <sub-events>
                 <event-block sid="4996067425529869">
                     <conditions>
@@ -395,13 +399,17 @@
                                 <action id="0" name="Set text" sid="4136659729693715" type="plus1">
                                     <param id="0" name="Text">&quot;+1 &quot; &amp; selectedItem</param>
                                 </action>
+                                <action id="0" name="Call function" sid="3786849118353792" type="Function">
+                                    <param id="0" name="Name">&quot;count&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;lion collected &quot; &amp; selectedItem</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="539147761278121" title="level up lion">
+        <event-group collapsed="1" description="" sid="539147761278121" title="level up lion">
             <sub-events>
                 <event-block sid="8852444332401261">
                     <conditions>
@@ -438,6 +446,10 @@
                             <param id="1" name="Layer">&quot;game&quot;</param>
                             <param id="2" name="X">lion.X</param>
                             <param id="3" name="Y">lion.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1382448004876578" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -662,14 +674,14 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4503237485293908" title="Trader">
+        <event-group description="" sid="4503237485293908" title="Trader">
             <sub-events>
                 <comment>display conversion menu</comment>
                 <event-block sid="8812703073199238">
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="3615162190377486" type="trader">
-                            <param id="0" name="Text">&quot;Create &quot; &amp; trader.getWhat &amp; &quot; from &quot; &amp; trader.giveWhat</param>
+                            <param id="0" name="Text">&quot;Create &quot; &amp; trader.receiveWhat &amp; &quot; from &quot; &amp; trader.payWhat</param>
                         </action>
                     </actions>
                 </event-block>
@@ -687,7 +699,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="46242753314526" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;give stuff&quot;{###}&quot;So, you want to make &quot; &amp; trader.getHowMany &amp; &quot; &quot; &amp; trader.getWhat &amp; &quot;?&quot;{###}trader.giveHowMany{###}trader.giveWhat{###}&quot;Create from &quot;{###}trader.getHowMany{###}trader.getWhat</param>
+                            <param id="1" name="Parameter {n}">&quot;give stuff&quot;{###}&quot;So, you want to make &quot; &amp; trader.receiveHowMany &amp; &quot; &quot; &amp; trader.receiveWhat &amp; &quot;?&quot;{###}trader.payHowMuch{###}trader.payWhat{###}&quot;Create from &quot;{###}trader.receiveHowMany{###}trader.receiveWhat</param>
                         </action>
                     </actions>
                 </event-block>
@@ -720,6 +732,10 @@
                                 </action>
                                 <action id="0" name="Set text" sid="1536630549794516" type="plus1">
                                     <param id="0" name="Text">&quot;+&quot; &amp; giveHowMany &amp; &quot; &quot; &amp; giveWhat</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1803969728280516" type="Function">
+                                    <param id="0" name="Name">&quot;count&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;crafted &quot; &amp; giveWhat{###}giveHowMany</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -785,7 +801,7 @@
                                 <event-block sid="6604564446092534">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="trader">
-                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
                                         </condition>
@@ -807,7 +823,7 @@
                                 <event-block sid="8980280911857299">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="trader">
-                                            <param id="0" name="Instance variable">getWhat</param>
+                                            <param id="0" name="Instance variable">receiveWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Veggie burger&quot;</param>
                                         </condition>
@@ -824,12 +840,12 @@
                                 <event-block sid="6660161672704164">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="trader">
-                                            <param id="0" name="Instance variable">getWhat</param>
+                                            <param id="0" name="Instance variable">receiveWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Tofu steak&quot;</param>
                                         </condition>
                                         <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="trader">
-                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Tofu&quot;</param>
                                         </condition>
@@ -846,7 +862,7 @@
                                 <event-block sid="3850387678898212">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="trader">
-                                            <param id="0" name="Instance variable">giveWhat</param>
+                                            <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Veggie burger&quot;</param>
                                         </condition>

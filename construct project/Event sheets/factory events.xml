@@ -32,7 +32,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="2084841826371189" title="bees">
+        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -362,7 +362,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1464147514479229" title="cabbages">
+        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -418,7 +418,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3792616009665136" title="Display stats">
+        <event-group collapsed="1" description="" sid="3792616009665136" title="Display stats">
             <sub-events>
                 <event-block sid="45482806854828">
                     <conditions />
@@ -434,7 +434,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
+                        <event-group collapsed="1" description="" inactive="1" sid="5993132769924056" title="display salads per minute">
                             <sub-events>
                                 <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
                                 <variable constant="0" name="saladsPerMinute" sid="6262903764462939" static="0" type="number">0</variable>
@@ -481,7 +481,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5689100297767431" title="menhir">
+        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -558,6 +558,10 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">menhirMsgArray.At(random(0, menhirMsgArray.Width))</param>
                         </action>
+                        <action id="0" name="Call function" sid="1581205435723202" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;menhir enlarged&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7221167547525515">
@@ -588,7 +592,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6516691976608457" title="bucket">
+        <event-group collapsed="1" description="" sid="6516691976608457" title="silo">
             <sub-events>
                 <event-block sid="484507871328815">
                     <conditions>
@@ -609,6 +613,10 @@
                         <action id="2" name="Set at X" sid="7678045215561208" type="siloHistory">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">siloHistory.At(0) +1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8390430814088886" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;collected cabbage&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -701,6 +709,10 @@
                             <param id="0" name="Instance variable">outputSalads</param>
                             <param id="1" name="Value">min(factory.productivity, silo.cabbages)</param>
                         </action>
+                        <action id="0" name="Call function" sid="3936196164942215" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;salad created&quot;{###}min(factory.productivity, silo.cabbages)</param>
+                        </action>
                         <action id="5" name="Push" sid="7591360043556266" type="factoryHistory">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Value">min(factory.productivity, silo.cabbages)</param>
@@ -757,6 +769,10 @@
                         <action id="-10" name="Add to" sid="8863909412698543" type="System">
                             <param id="0" name="Variable">salads</param>
                             <param id="1" name="Value">factory.outputSalads</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7646556317054824" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;collected cabbages&quot;{###}factory.outputSalads</param>
                         </action>
                         <action id="0" name="Call function" sid="3737990909380714" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -834,6 +850,10 @@
                                             <param id="0" name="Instance variable">outputSalads</param>
                                             <param id="1" name="Value">round( saladsPerMinute/60 * deltaTime )</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="4471530622481233" type="Function">
+                                            <param id="0" name="Name">&quot;count&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;salad created&quot;{###}round( saladsPerMinute/60 * deltaTime )</param>
+                                        </action>
                                         <action id="-11" name="Add to" sid="3470979033387305" type="silo">
                                             <param id="0" name="Instance variable">cabbages</param>
                                             <param id="1" name="Value">round(cabbagesPerMinutes/60 * deltaTime)</param>
@@ -841,6 +861,10 @@
                                         <action id="-10" name="Set value" sid="1830524545437355" type="silo">
                                             <param id="0" name="Instance variable">cabbages</param>
                                             <param id="1" name="Value">clamp(silo.cabbages, 0, silo.capacity)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5463902685024431" type="Function">
+                                            <param id="0" name="Name">&quot;count&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;collected cabbage&quot;{###}round(cabbagesPerMinutes/60 * deltaTime)</param>
                                         </action>
                                         <action id="14" name="Log" sid="7471725173610501" type="Browser">
                                             <param id="0" name="Type">0</param>
@@ -862,7 +886,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="901981960933352" title="upgrade bees">
+        <event-group collapsed="1" description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">
@@ -1015,6 +1039,10 @@
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="6391616559678393" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;bought bee&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="8500980198966451" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
@@ -1111,13 +1139,17 @@
                                     <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="3485256335391318" type="Function">
+                                    <param id="0" name="Name">&quot;count&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;upgraded a bee&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9599963043552251" title="upgrade factory">
+        <event-group collapsed="1" description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryCost" sid="4062049571430355" static="0" type="number">0</variable>
@@ -1173,6 +1205,10 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;You improved the storage of the silo. It can now store &quot; &amp; silo.capacity &amp; &quot; cabbages before having to throw them away. (Your silo is big now. Are you trying to compensate for something??)&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="7259067541743239" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgraded silo&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1214298759564089">
@@ -1207,6 +1243,10 @@
                         <action id="0" name="Call function" sid="371803911681976" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;You improved the productivity of the factory. It will now transform &quot; &amp; factory.productivity &amp; &quot; cabbages in one go. (Smash ALL the cabbages!!)&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5988809998342969" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgraded factory&quot;</param>
                         </action>
                     </actions>
                 </event-block>

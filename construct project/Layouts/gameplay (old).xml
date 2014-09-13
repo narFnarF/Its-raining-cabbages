@@ -2721,10 +2721,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <getWhat>Veggie burger</getWhat>
-                        <getHowMany>1</getHowMany>
-                        <giveWhat>eggs</giveWhat>
-                        <giveHowMany>400</giveHowMany>
+                        <receiveWhat>Veggie burger</receiveWhat>
+                        <receiveHowMany>1</receiveHowMany>
+                        <payWhat>eggs</payWhat>
+                        <payHowMuch>400</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2781,10 +2781,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <getWhat>Tofu steak</getWhat>
-                        <getHowMany>1</getHowMany>
-                        <giveWhat>Tofu</giveWhat>
-                        <giveHowMany>3</giveHowMany>
+                        <receiveWhat>Tofu steak</receiveWhat>
+                        <receiveHowMany>1</receiveHowMany>
+                        <payWhat>Tofu</payWhat>
+                        <payHowMuch>3</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2814,10 +2814,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <getWhat>salads</getWhat>
-                        <getHowMany>15000</getHowMany>
-                        <giveWhat>Useless lion poop</giveWhat>
-                        <giveHowMany>10</giveHowMany>
+                        <receiveWhat>salads</receiveWhat>
+                        <receiveHowMany>15000</receiveHowMany>
+                        <payWhat>Useless lion poop</payWhat>
+                        <payHowMuch>10</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2847,10 +2847,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <getWhat>Tofu steak</getWhat>
-                        <getHowMany>5</getHowMany>
-                        <giveWhat>Veggie burger</giveWhat>
-                        <giveHowMany>1</giveHowMany>
+                        <receiveWhat>Tofu steak</receiveWhat>
+                        <receiveHowMany>5</receiveHowMany>
+                        <payWhat>Veggie burger</payWhat>
+                        <payHowMuch>1</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2880,10 +2880,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <getWhat>6666</getWhat>
-                        <getHowMany>0</getHowMany>
-                        <giveWhat>666</giveWhat>
-                        <giveHowMany>0</giveHowMany>
+                        <receiveWhat>6666</receiveWhat>
+                        <receiveHowMany>0</receiveHowMany>
+                        <payWhat>666</payWhat>
+                        <payHowMuch>0</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
