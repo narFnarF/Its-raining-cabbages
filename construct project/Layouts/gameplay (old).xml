@@ -3636,7 +3636,6 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="saver" uid="149" />
     </nonworld-instances>
     <effects />
 </c2layout>

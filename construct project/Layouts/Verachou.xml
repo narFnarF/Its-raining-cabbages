@@ -1192,6 +1192,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="stats" uid="269" />
+    </nonworld-instances>
     <effects />
 </c2layout>

@@ -32,7 +32,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
+        <event-group description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -362,7 +362,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
+        <event-group description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -418,7 +418,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3792616009665136" title="Display stats">
+        <event-group description="" sid="3792616009665136" title="Display stats">
             <sub-events>
                 <event-block sid="45482806854828">
                     <conditions />
@@ -434,7 +434,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group collapsed="1" description="" inactive="1" sid="5993132769924056" title="display salads per minute">
+                        <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
                             <sub-events>
                                 <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
                                 <variable constant="0" name="saladsPerMinute" sid="6262903764462939" static="0" type="number">0</variable>
@@ -481,7 +481,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
+        <event-group description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -554,10 +554,6 @@
                             <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action disabled="1" id="0" name="Add key" sid="879578342709962" type="saver">
-                            <param id="0" name="Key">&quot;menhir level&quot;</param>
-                            <param id="1" name="Value">menhir.level</param>
-                        </action>
                         <action id="0" name="Call function" sid="4387119365399737" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">menhirMsgArray.At(random(0, menhirMsgArray.Width))</param>
@@ -592,7 +588,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6516691976608457" title="bucket">
+        <event-group description="" sid="6516691976608457" title="bucket">
             <sub-events>
                 <event-block sid="484507871328815">
                     <conditions>
@@ -644,7 +640,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
+        <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -1121,7 +1117,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9599963043552251" title="upgrade factory">
+        <event-group description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryCost" sid="4062049571430355" static="0" type="number">0</variable>

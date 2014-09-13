@@ -94,10 +94,6 @@
                         <condition id="-2" name="On start of layout" sid="7066901252208626" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="7104756166457194" type="menhir">
-                            <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Value">saver.Get(&quot;menhir level&quot;)</param>
-                        </action>
                         <action id="0" name="Call function" sid="4238990966910766" type="Function">
                             <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -486,10 +482,6 @@
                         <action id="0" name="Call function" sid="2145173180444869" type="Function">
                             <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Add key" sid="879578342709962" type="saver">
-                            <param id="0" name="Key">&quot;menhir level&quot;</param>
-                            <param id="1" name="Value">menhir.level</param>
                         </action>
                         <action id="0" name="Call function" sid="4387119365399737" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>

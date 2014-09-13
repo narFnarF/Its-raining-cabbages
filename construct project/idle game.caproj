@@ -83,7 +83,7 @@
                 <plugin id="AJAX" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="bee stuff">
+        <object-folder expanded="0" name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -994,9 +994,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="saver" sid="8156493265982482">
-            <plugin id="Dictionary" />
-        </object-type>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1012,6 +1009,9 @@
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.607843" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="stats" sid="8704913547318958">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families>
@@ -1036,7 +1036,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="1" name="menus">
+        <layout-folder expanded="0" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
@@ -1051,7 +1051,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>

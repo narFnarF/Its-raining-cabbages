@@ -1042,6 +1042,64 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="3791512196189419" title="stats tracker">
+            <sub-events>
+                <event-block sid="5582069448512238">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1395572864397932" type="Function">
+                            <param id="0" name="Name">&quot;count&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="item" sid="4607276310527662" static="0" type="text"></variable>
+                        <variable constant="0" name="number" sid="1763759199186607" static="0" type="number">1</variable>
+                        <event-block sid="6348617493765248">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9725102765056744" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="14" name="Log" sid="9217720628145105" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ici c&apos;est 2&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7376329654779988" type="System">
+                                    <param id="0" name="Variable">number</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8317053382347331">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9088780941614479" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="14" name="Log" sid="4279756877449613" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ici c&apos;est 1&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4074067565387792" type="System">
+                                    <param id="0" name="Variable">item</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Add key" sid="6601962937712169" type="stats">
+                                    <param id="0" name="Key">item</param>
+                                    <param id="1" name="Value">stats.Get(item)+number</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="9101440198954226">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="7734889423413394" type="System">
