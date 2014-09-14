@@ -539,7 +539,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>875</x>
-                        <y>929</y>
+                        <y>919</y>
                         <z>0</z>
                         <width>131</width>
                         <height>99</height>
@@ -568,7 +568,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1364</x>
-                        <y>909</y>
+                        <y>919</y>
                         <z>0</z>
                         <width>131</width>
                         <height>99</height>
