@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplay stuff</name>
     <events>
+        <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
+        <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
         <event-group collapsed="1" description="" sid="8286149581313041" title="camera">
             <sub-events>
                 <event-block sid="7452036870298714">

@@ -674,7 +674,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4503237485293908" title="Trader">
+        <event-group collapsed="1" description="" sid="4503237485293908" title="Trader">
             <sub-events>
                 <comment>display conversion menu</comment>
                 <event-block sid="8812703073199238">

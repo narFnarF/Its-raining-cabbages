@@ -944,7 +944,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="trader">
+        <object-folder expanded="0" name="trader">
             <object-type name="trader" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
@@ -1051,7 +1051,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+        <event-folder expanded="0" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
@@ -1059,7 +1059,7 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="lions">
+        <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
             <event-sheet>lions events main.xml</event-sheet>
         </event-folder>

@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>v1 events</name>
     <events>
-        <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
-        <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
         <event-block sid="6829102839958492">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7480100364455012" type="System" />
