@@ -1065,10 +1065,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="9217720628145105" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;ici c&apos;est 2&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="7376329654779988" type="System">
                                     <param id="0" name="Variable">number</param>
                                     <param id="1" name="Value">Function.Param(1)</param>
@@ -1084,10 +1080,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="4279756877449613" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;ici c&apos;est 1&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="4074067565387792" type="System">
                                     <param id="0" name="Variable">item</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
@@ -1095,6 +1087,10 @@
                                 <action id="0" name="Add key" sid="6601962937712169" type="stats">
                                     <param id="0" name="Key">item</param>
                                     <param id="1" name="Value">stats.Get(item)+number</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5755164751773944" type="Function">
+                                    <param id="0" name="Name">&quot;count for quests&quot;</param>
+                                    <param id="1" name="Parameter {n}">item{###}number</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1258,7 +1254,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="8090691704615315" type="System">
                                     <param id="0" name="Variable">questNb</param>
-                                    <param id="1" name="Value">random(quests.Width)</param>
+                                    <param id="1" name="Value">floor( random(quests.Width) )</param>
                                 </action>
                                 <action id="5" name="Push" sid="5827658812149505" type="questsActive">
                                     <param id="0" name="Where">1</param>
@@ -1275,13 +1271,73 @@
                                     <param id="1" name="Y">questsActive.COMPTEUR</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
+                                <action id="14" name="Log" sid="4826200966126187" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;The random number for questNb was: &quot; &amp; questNb</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4448643982575324">
+                    </sub-events>
+                </event-block>
+                <comment>incrémente les compteurs des quests actives</comment>
+                <event-block sid="1600280941069597">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3037980305883242" type="Function">
+                            <param id="0" name="Name">&quot;count for quests&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="item" sid="4579937835721647" static="0" type="text"></variable>
+                        <variable constant="0" name="number" sid="2399639564052264" static="0" type="number">1</variable>
+                        <event-block sid="5680776229386359">
                             <conditions />
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="5444114075658525" type="System">
+                                    <param id="0" name="Variable">item</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3538637560929431" type="System">
+                                    <param id="0" name="Variable">number</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>si l&apos;item correspond à une des quests actives, incrémente le compteur de cette quest</comment>
+                        <event-block sid="3842650388759443">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="5262885687326218" type="questsActive">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="9465820713642602" type="System">
+                                    <param id="0" name="First value">quests.At(questsActive.CurValue,quests.TYPE)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">item</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="8920271794283739" type="questsActive">
+                                    <param id="0" name="X">questsActive.CurX</param>
+                                    <param id="1" name="Y">questsActive.COMPTEUR</param>
+                                    <param id="2" name="Value">questsActive.At(questsActive.CurX,questsActive.COMPTEUR) + number</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Quest is completed and ready to collect</comment>
+                <event-block sid="259686938858666">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="7656949406856342" type="questsActive">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="868854543941601" type="System">
+                            <param id="0" name="First value">questsActive.At(questsActive.CurX,questsActive.COMPTEUR)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">quests.At(questsActive.CurValue, quests.COMBIEN)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
