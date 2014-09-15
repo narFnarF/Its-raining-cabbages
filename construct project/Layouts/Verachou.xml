@@ -1224,6 +1224,31 @@
     </layers>
     <nonworld-instances>
         <instance type="stats" uid="269" />
+        <instance type="quests" uid="270">
+            <properties>
+                <width>0</width>
+                <height>5</height>
+                <depth>1</depth>
+            </properties>
+            <instance-variables>
+                <TYPE>0</TYPE>
+                <COMBIEN>1</COMBIEN>
+                <REWARD_TYPE>2</REWARD_TYPE>
+                <REWARD_COMBIEN>3</REWARD_COMBIEN>
+                <TIME_COMPLETED>4</TIME_COMPLETED>
+            </instance-variables>
+        </instance>
+        <instance type="questsActive" uid="275">
+            <properties>
+                <width>0</width>
+                <height>2</height>
+                <depth>1</depth>
+            </properties>
+            <instance-variables>
+                <QUEST_NB>0</QUEST_NB>
+                <COMPTEUR>1</COMPTEUR>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

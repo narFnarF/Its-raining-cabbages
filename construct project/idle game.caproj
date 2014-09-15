@@ -1013,6 +1013,23 @@
         <object-type global="1" name="stats" sid="8704913547318958">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type global="1" name="quests" sid="6221647988755415">
+            <plugin id="Arr" />
+            <instance-variables>
+                <instance-variable name="TYPE" sid="5534887068566877" type="number" />
+                <instance-variable name="COMBIEN" sid="2971438272276045" type="number" />
+                <instance-variable name="REWARD_TYPE" sid="3839766439093707" type="number" />
+                <instance-variable name="REWARD_COMBIEN" sid="2741491337674447" type="number" />
+                <instance-variable name="TIME_COMPLETED" sid="6448198071465804" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type global="1" name="questsActive" sid="6986233691407419">
+            <plugin id="Arr" />
+            <instance-variables>
+                <instance-variable name="QUEST_NB" sid="9012428090334165" type="number" />
+                <instance-variable name="COMPTEUR" sid="3139671826329158" type="number" />
+            </instance-variables>
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1051,7 +1068,7 @@
         <layout>factory.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
@@ -1059,7 +1076,7 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="lions">
+        <event-folder expanded="0" name="lions">
             <event-sheet>lions events.xml</event-sheet>
             <event-sheet>lions events main.xml</event-sheet>
         </event-folder>
