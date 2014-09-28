@@ -1308,17 +1308,7 @@
                                             <param id="0" name="Object">btnBee</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="1744476452956423" type="System">
-                                            <param id="0" name="Object to create">cabbageIcon</param>
-                                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                                            <param id="2" name="X">btnBee.X + 95</param>
-                                            <param id="3" name="Y">btnBee.Y + (btnBee.Height*0.6)</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9482698081606579" type="cabbageIcon">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                                 <event-block sid="5750254673565848">
                                     <conditions>
@@ -1327,11 +1317,7 @@
                                         </condition>
                                         <condition id="-9" name="Is visible" sid="1305187261741058" type="btnBee" />
                                     </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="7811454329883462" type="cabbageIcon">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -1428,19 +1414,7 @@
                                     <conditions>
                                         <condition id="-2" name="On start of layout" sid="6518724184531598" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="9482698081606579" type="cabbageIcon">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5750254673565848">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="7811454329883462" type="cabbageIcon">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-group>
