@@ -6,5 +6,13 @@
         <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
         <include>gameplay stuff</include>
         <include>global events</include>
+        <event-block sid="9410450147324793">
+            <conditions>
+                <condition id="0" name="On function" sid="6065604003673307" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
