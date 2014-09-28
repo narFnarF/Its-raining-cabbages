@@ -538,8 +538,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>875</x>
-                        <y>919</y>
+                        <x>640</x>
+                        <y>1047</y>
                         <z>0</z>
                         <width>131</width>
                         <height>99</height>
@@ -596,15 +596,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1358</x>
-                        <y>265</y>
+                        <x>875</x>
+                        <y>917</y>
                         <z>0</z>
                         <width>131</width>
                         <height>99</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>3.141592741</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -936,6 +936,7 @@
                         <beeTargeted>false</beeTargeted>
                         <dropped>false</dropped>
                         <status>falling</status>
+                        <carriedDuration>0</carriedDuration>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

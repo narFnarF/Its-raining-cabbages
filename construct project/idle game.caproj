@@ -773,13 +773,14 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="cabbages stuff">
+        <object-folder expanded="1" name="cabbages stuff">
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
                     <instance-variable name="dropped" sid="5336754280462448" type="boolean" />
                     <instance-variable name="status" sid="9406756358246947" type="string" />
+                    <instance-variable name="carriedDuration" sid="6896696954568411" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="1936616672555206">
@@ -992,9 +993,6 @@
             <object-type global="1" name="stats" sid="8704913547318958">
                 <plugin id="Dictionary" />
             </object-type>
-            <object-type name="statsTxt" sid="7530537671413915">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="questsTxt" sid="5168085700003491">
                 <plugin id="Text" />
             </object-type>
@@ -1065,7 +1063,7 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>

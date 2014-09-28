@@ -358,7 +358,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
+        <event-group description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -410,6 +410,36 @@
                             <param id="0" name="Angle">-90</param>
                         </action>
                         <action id="-9" name="Destroy" sid="192578142204367" type="cabbage" />
+                    </actions>
+                </event-block>
+                <event-block sid="2996896806753368">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1047765879412426" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;carried&quot;</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="8546957919553539" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7185923291336647" type="cabbage">
+                            <param id="0" name="Instance variable">carriedDuration</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5988526000627273">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6818960432122837" type="cabbage">
+                            <param id="0" name="Instance variable">carriedDuration</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9871609296974253" type="cabbage" />
                     </actions>
                 </event-block>
             </sub-events>
