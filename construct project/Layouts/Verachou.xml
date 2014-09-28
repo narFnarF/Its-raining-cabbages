@@ -1247,6 +1247,7 @@
             <instance-variables>
                 <QUEST_NB>0</QUEST_NB>
                 <COMPTEUR>1</COMPTEUR>
+                <NAME>2</NAME>
             </instance-variables>
         </instance>
     </nonworld-instances>

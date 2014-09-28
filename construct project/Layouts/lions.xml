@@ -157,7 +157,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <label>Trade zone</label>
+                        <label>Crafting area</label>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>

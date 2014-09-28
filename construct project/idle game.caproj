@@ -1028,6 +1028,7 @@
             <instance-variables>
                 <instance-variable name="QUEST_NB" sid="9012428090334165" type="number" />
                 <instance-variable name="COMPTEUR" sid="3139671826329158" type="number" />
+                <instance-variable name="NAME" sid="134910205284624" type="number" />
             </instance-variables>
         </object-type>
     </object-folder>
