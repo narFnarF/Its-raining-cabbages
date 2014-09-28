@@ -1067,6 +1067,7 @@
         <layout>Verachou.xml</layout>
         <layout>lions.xml</layout>
         <layout>factory.xml</layout>
+        <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-folder expanded="1" name="factory">
@@ -1090,6 +1091,7 @@
         <event-sheet>v1 events.xml</event-sheet>
         <event-sheet>global events.xml</event-sheet>
         <event-sheet>gameplay stuff.xml</event-sheet>
+        <event-sheet>quests screen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

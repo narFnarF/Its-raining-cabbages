@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>quests screen</name>
+    <events>
+        <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
+        <include>gameplay stuff</include>
+        <include>global events</include>
+    </events>
+</c2eventsheet>

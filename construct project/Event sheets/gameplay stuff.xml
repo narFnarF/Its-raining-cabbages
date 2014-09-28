@@ -1136,7 +1136,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="491892557047817" title="Quests">
+        <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate array</comment>
                 <event-block collapsed="1" sid="7279855106640701">
