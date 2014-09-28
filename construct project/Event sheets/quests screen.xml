@@ -14,5 +14,91 @@
             </conditions>
             <actions />
         </event-block>
+        <event-block sid="7334555190214475">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4419579759884234" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2804383874282349" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Set text" sid="1921765072029155" type="questsTxt">
+                    <param id="0" name="Text">&quot;Quests:&quot; &amp; newline &amp; newline</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6145361355042384" type="questCollectBtn">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="type" sid="986228318847997" static="0" type="text"></variable>
+                <variable constant="0" name="current" sid="4257023409419588" static="0" type="number">0</variable>
+                <variable constant="0" name="needed" sid="807487963497305" static="0" type="number">0</variable>
+                <event-block sid="2501920317254854">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="6435063005104568" type="questsActive">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3449282206342474" type="System">
+                            <param id="0" name="Variable">type</param>
+                            <param id="1" name="Value">quests.At(questsActive.CurValue, quests.TYPE)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8193095849880722" type="System">
+                            <param id="0" name="Variable">current</param>
+                            <param id="1" name="Value">questsActive.At( questsActive.CurX , questsActive.COMPTEUR)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5752944545936393" type="System">
+                            <param id="0" name="Variable">needed</param>
+                            <param id="1" name="Value">quests.At(questsActive.CurValue, quests.COMBIEN)</param>
+                        </action>
+                        <action id="1" name="Append text" sid="2064393449414431" type="questsTxt">
+                            <param id="0" name="Text">type &amp; &quot; : &quot; &amp; current &amp; &quot;/&quot; &amp; needed &amp; newline</param>
+                        </action>
+                        <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
+                            <param id="0" name="Text">&quot;Reward: &quot; &amp; quests.At( questsActive.CurX, quests.REWARD_COMBIEN) &amp; &quot; &quot; &amp; quests.At( questsActive.CurX, quests.REWARD_TYPE) &amp; newline</param>
+                        </action>
+                        <action id="1" name="Append text" sid="1544542140996164" type="questsTxt">
+                            <param id="0" name="Text">newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6289171220853826">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4302348937813878" type="System">
+                                    <param id="0" name="First value">current</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">needed</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="513331422236979" type="questCollectBtn">
+                                    <param id="0" name="Instance variable">nb</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">questsActive.CurX</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="7467857107003006" type="questCollectBtn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="728465832505418">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7452122217507895" type="Touch">
+                    <param id="0" name="Object">questCollectBtn</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4128640568667899" type="questCollectBtn" />
+            </conditions>
+            <actions>
+                <action id="9" name="Delete" sid="9923195743433471" type="questsActive">
+                    <param id="0" name="Index">questCollectBtn.nb</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
