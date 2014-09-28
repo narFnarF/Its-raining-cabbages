@@ -99,6 +99,58 @@
                     <param id="1" name="Axis">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="3708842561673062">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9668818954276195" type="System">
+                            <param id="0" name="First value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_TYPE)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="2878278521260625" type="System">
+                            <param id="0" name="Variable">salads</param>
+                            <param id="1" name="Value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_COMBIEN)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5643432659243605">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7155049699546655" type="System">
+                            <param id="0" name="First value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_TYPE)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;eggs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4205030221255959" type="System">
+                            <param id="0" name="Variable">eggs</param>
+                            <param id="1" name="Value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_COMBIEN)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="700493605426047">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8505731111791777" type="System">
+                            <param id="0" name="First value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_TYPE)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;eggs&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="4581209568065856" type="System">
+                            <param id="0" name="First value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.NAME), quests.REWARD_TYPE)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="7835841439251595" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;Rewards of that type aren&apos;t implemented yet. Only eggs and salads can be rewarded at the moment.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

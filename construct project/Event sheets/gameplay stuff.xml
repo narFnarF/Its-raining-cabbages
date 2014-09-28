@@ -1136,10 +1136,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
+        <event-group description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate array</comment>
-                <event-block collapsed="1" sid="7279855106640701">
+                <event-block sid="7279855106640701">
                     <conditions>
                         <condition id="6" name="Is empty" sid="9714930816914019" type="quests" />
                     </conditions>
@@ -1191,17 +1191,17 @@
                                 <action id="3" name="Set at XY" sid="8148224095839461" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.COMBIEN</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">3</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="374426400358075" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_TYPE</param>
-                                    <param id="2" name="Value">&quot;salads&quot;</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3914224869184209" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
-                                    <param id="2" name="Value">66666666666</param>
+                                    <param id="2" name="Value">30</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1221,17 +1221,17 @@
                                 <action id="3" name="Set at XY" sid="5361745736462853" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.COMBIEN</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3223865245143364" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_TYPE</param>
-                                    <param id="2" name="Value">&quot;salads&quot;</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="2790353551454398" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
-                                    <param id="2" name="Value">88888888888</param>
+                                    <param id="2" name="Value">20</param>
                                 </action>
                             </actions>
                         </event-block>
