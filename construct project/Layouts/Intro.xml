@@ -146,7 +146,7 @@
                     <properties>
                         <text>version</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16,400,0</font>
+                        <font>Arial,-21,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
@@ -163,7 +163,7 @@
                         <x>9</x>
                         <y>908</y>
                         <z>0</z>
-                        <width>94</width>
+                        <width>396</width>
                         <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

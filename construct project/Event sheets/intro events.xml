@@ -23,7 +23,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="5181280425695908" type="txtLabel">
-                            <param id="0" name="Text">projectversion</param>
+                            <param id="0" name="Text">projectversion &amp; &quot;(are you running the latest one?)&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -69,7 +69,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="572006554579995">
+        <event-block disabled="1" sid="572006554579995">
             <conditions>
                 <condition id="-29" name="On load complete" sid="1582341082064107" type="System" />
             </conditions>
@@ -80,22 +80,21 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2178317074950907">
+        <event-block disabled="1" sid="2178317074950907">
             <conditions>
                 <condition id="-30" name="On load failed" sid="916172357455549" type="System" />
             </conditions>
-            <actions>
-                <action id="14" name="Log" sid="6684695453931849" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;load failed&quot;</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="5697039993662718">
             <conditions>
                 <condition id="-30" name="On load failed" sid="295083211596474" type="System" />
             </conditions>
             <actions>
+                <action id="14" name="Log" sid="6684695453931849" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;load failed&quot;</param>
+                </action>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
                     <param id="0" name="Message">&quot;Oh oh! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? Or maybe your savefile got corrupted (often occurs every time I release a new version). You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
