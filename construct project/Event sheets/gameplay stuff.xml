@@ -1138,8 +1138,8 @@
         </event-block>
         <event-group description="" sid="491892557047817" title="Quests">
             <sub-events>
-                <comment>Populate array</comment>
-                <event-block sid="7279855106640701">
+                <comment>Populate quests array</comment>
+                <event-block collapsed="1" sid="7279855106640701">
                     <conditions>
                         <condition id="6" name="Is empty" sid="9714930816914019" type="quests" />
                     </conditions>
@@ -1160,7 +1160,7 @@
                                 </action>
                                 <action id="3" name="Set at XY" sid="7713418871905295" type="quests">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.COMBIEN</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
                                     <param id="2" name="Value">5000</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="937403644824548" type="quests">
@@ -1190,7 +1190,7 @@
                                 </action>
                                 <action id="3" name="Set at XY" sid="8148224095839461" type="quests">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.COMBIEN</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
                                     <param id="2" name="Value">3</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="374426400358075" type="quests">
@@ -1220,7 +1220,7 @@
                                 </action>
                                 <action id="3" name="Set at XY" sid="5361745736462853" type="quests">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.COMBIEN</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3223865245143364" type="quests">
@@ -1278,6 +1278,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>add the new quest</comment>
+                                <variable constant="0" name="multiplicator" sid="4759297500313883" static="0" type="number">0</variable>
                                 <event-block sid="9959756084248528">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="4425954621093876" type="System">
@@ -1287,6 +1288,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action disabled="1" id="14" name="Log" sid="4826200966126187" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;The random number for questNb was: &quot; &amp; questNb</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9889340557609012" type="System">
+                                            <param id="0" name="Variable">multiplicator</param>
+                                            <param id="1" name="Value">quests.At(questNb, quests.TIME_COMPLETED) +1</param>
+                                        </action>
                                         <action id="5" name="Push" sid="5827658812149505" type="questsActive">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Value">&quot;-&quot;</param>
@@ -1297,27 +1306,44 @@
                                             <param id="1" name="Y">questsActive.QUEST_NB</param>
                                             <param id="2" name="Value">questNb</param>
                                         </action>
+                                        <action id="3" name="Set at XY" sid="3383024835825174" type="questsActive">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">questsActive.REQUIS</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * multiplicator</param>
+                                        </action>
                                         <action id="3" name="Set at XY" sid="7125581418687803" type="questsActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.COMPTEUR</param>
+                                            <param id="1" name="Y">questsActive.REQUIS_COMPTEUR</param>
                                             <param id="2" name="Value">0</param>
                                         </action>
-                                        <action disabled="1" id="3" name="Set at XY" sid="6729477730997606" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="6729477730997606" type="questsActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.NAME</param>
+                                            <param id="1" name="Y">questsActive.TYPE</param>
                                             <param id="2" name="Value">quests.At(questNb, quests.TYPE)</param>
                                         </action>
-                                        <action id="14" name="Log" sid="4826200966126187" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;The random number for questNb was: &quot; &amp; questNb</param>
+                                        <action id="3" name="Set at XY" sid="8841412181543324" type="questsActive">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">questsActive.REWARD_COMBIEN</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_COMBIEN) * multiplicator</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="7868816511933798" type="questsActive">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">questsActive.REWARD_TYPE</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_TYPE)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="7015339939459223">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>incrémente les compteurs des quests actives</comment>
+                <comment>increases the counters of active quests when their events occurs</comment>
                 <event-block sid="1600280941069597">
                     <conditions>
                         <condition id="0" name="On function" sid="3037980305883242" type="Function">
@@ -1356,26 +1382,12 @@
                             <actions>
                                 <action id="3" name="Set at XY" sid="8920271794283739" type="questsActive">
                                     <param id="0" name="X">questsActive.CurX</param>
-                                    <param id="1" name="Y">questsActive.COMPTEUR</param>
-                                    <param id="2" name="Value">questsActive.At(questsActive.CurX,questsActive.COMPTEUR) + number</param>
+                                    <param id="1" name="Y">questsActive.REQUIS_COMPTEUR</param>
+                                    <param id="2" name="Value">questsActive.At(questsActive.CurX,questsActive.REQUIS_COMPTEUR) + number</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <comment>Quest is completed and ready to collect</comment>
-                <event-block sid="259686938858666">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="7656949406856342" type="questsActive">
-                            <param id="0" name="Axes">2</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="868854543941601" type="System">
-                            <param id="0" name="First value">questsActive.At(questsActive.CurX,questsActive.COMPTEUR)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">quests.At(questsActive.CurValue, quests.COMBIEN)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

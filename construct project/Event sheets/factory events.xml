@@ -358,7 +358,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1464147514479229" title="cabbages">
+        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -435,7 +435,7 @@
                         <condition id="-7" name="Compare instance variable" sid="6818960432122837" type="cabbage">
                             <param id="0" name="Instance variable">carriedDuration</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">20</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -674,7 +674,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
+        <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -909,6 +909,22 @@
                                             <param id="1" name="Message">&quot;created cabbages: &quot; &amp; round(cabbagesPerMinutes/60 * deltaTime)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="6517285522779794">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1570629445500485" type="factory">
+                                                    <param id="0" name="Instance variable">outputSalads</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="8956448592273051" type="factoryNotification">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

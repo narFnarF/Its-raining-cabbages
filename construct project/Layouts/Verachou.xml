@@ -1232,7 +1232,7 @@
             </properties>
             <instance-variables>
                 <TYPE>0</TYPE>
-                <COMBIEN>1</COMBIEN>
+                <REQUIS>1</REQUIS>
                 <REWARD_TYPE>2</REWARD_TYPE>
                 <REWARD_COMBIEN>3</REWARD_COMBIEN>
                 <TIME_COMPLETED>4</TIME_COMPLETED>
@@ -1241,13 +1241,16 @@
         <instance type="questsActive" uid="275">
             <properties>
                 <width>0</width>
-                <height>2</height>
+                <height>6</height>
                 <depth>1</depth>
             </properties>
             <instance-variables>
                 <QUEST_NB>0</QUEST_NB>
-                <COMPTEUR>1</COMPTEUR>
-                <NAME>2</NAME>
+                <TYPE>1</TYPE>
+                <REQUIS>2</REQUIS>
+                <REQUIS_COMPTEUR>3</REQUIS_COMPTEUR>
+                <REWARD_TYPE>4</REWARD_TYPE>
+                <REWARD_COMBIEN>5</REWARD_COMBIEN>
             </instance-variables>
         </instance>
     </nonworld-instances>
