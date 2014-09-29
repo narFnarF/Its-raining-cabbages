@@ -133,10 +133,14 @@
                             <actions>
                                 <action id="14" name="Log" sid="4453099367722621" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Version numbers are not matching.&quot;</param>
+                                    <param id="1" name="Message">&quot;Version numbers are not matching. Upgrading from: &quot; &amp; versionNumberSaved</param>
                                 </action>
                                 <action disabled="1" id="-2" name="Go to layout" sid="1277380685019034" type="System">
                                     <param id="0" name="Layout">savefile error</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9392244255693984" type="System">
+                                    <param id="0" name="Variable">versionNumberSaved</param>
+                                    <param id="1" name="Value">projectversion &amp; &quot; &quot; &amp; versionNumberSaved</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -246,6 +246,11 @@
             </object-type>
             <object-type name="siloTxt" sid="9054213322709587">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9586923452024129">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="silo" sid="3644795865062729">
                 <plugin id="Sprite" />
@@ -400,6 +405,11 @@
             </object-type>
             <object-type name="saveBtn" sid="4336163140375962">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3067014009371409">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
                         <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
@@ -427,6 +437,11 @@
             </object-type>
             <object-type name="FPSTxt" sid="9025536709654262">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3237331307166794">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="globalStats2" sid="2437325743335131">
                 <plugin id="Text" />
@@ -809,6 +824,11 @@
             </object-type>
             <object-type name="cabbagesSpawnArea" sid="3837656882855279">
                 <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3205247853103715">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <texture />
             </object-type>
         </object-folder>
@@ -1050,7 +1070,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="menus">
+        <layout-folder expanded="1" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
