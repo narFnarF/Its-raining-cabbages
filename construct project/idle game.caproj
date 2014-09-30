@@ -835,7 +835,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="lions">
+        <object-folder expanded="0" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>

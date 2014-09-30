@@ -1136,10 +1136,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
+        <event-group description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate quests array</comment>
-                <event-block collapsed="1" sid="7279855106640701">
+                <event-block sid="7279855106640701">
                     <conditions>
                         <condition id="6" name="Is empty" sid="9714930816914019" type="quests" />
                     </conditions>
@@ -1292,6 +1292,36 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8216760444854503">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="6811609292434543" type="quests">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">0</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="4577959863009538" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="2" name="Value">&quot;crafted Tofu steak&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="1855871708479701" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="6621627859332368" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="858847788096265" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="2" name="Value">15</param>
                                 </action>
                             </actions>
                         </event-block>
