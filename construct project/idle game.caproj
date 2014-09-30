@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>r109</version>
+    <version>r109a</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -173,7 +173,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -294,6 +294,9 @@
                         <frame duration="1" hotspotX="0" hotspotY="0.555556" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="siloHistoryForStats" sid="7153178140964365">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="notifications">
@@ -788,7 +791,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="cabbages stuff">
+        <object-folder expanded="0" name="cabbages stuff">
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -991,7 +994,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="quests">
+        <object-folder expanded="0" name="quests">
             <object-type global="1" name="quests" sid="6221647988755415">
                 <plugin id="Arr" />
                 <instance-variables>
@@ -1069,8 +1072,8 @@
             </instance-variables>
         </family>
     </families>
-    <layout-folder expanded="1">
-        <layout-folder expanded="1" name="menus">
+    <layout-folder expanded="0">
+        <layout-folder expanded="0" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
@@ -1086,7 +1089,7 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+        <event-folder expanded="0" name="factory">
             <event-sheet>factory events main.xml</event-sheet>
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>

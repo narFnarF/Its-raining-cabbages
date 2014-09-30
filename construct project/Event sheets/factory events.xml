@@ -28,7 +28,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
+        <event-group description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -358,7 +358,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
+        <event-group description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -444,7 +444,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3792616009665136" title="Display stats">
+        <event-group description="" sid="3792616009665136" title="Display stats">
             <sub-events>
                 <event-block sid="45482806854828">
                     <conditions />
@@ -460,7 +460,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group collapsed="1" description="" inactive="1" sid="5993132769924056" title="display salads per minute">
+                        <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
                             <sub-events>
                                 <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
                                 <variable constant="0" name="saladsPerMinute" sid="6262903764462939" static="0" type="number">0</variable>
@@ -507,7 +507,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
+        <event-group description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -618,7 +618,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6516691976608457" title="silo">
+        <event-group description="" sid="6516691976608457" title="silo">
             <sub-events>
                 <event-block sid="484507871328815">
                     <conditions>
@@ -639,6 +639,10 @@
                         <action id="2" name="Set at X" sid="7678045215561208" type="siloHistory">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">siloHistory.At(0) +1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="2616213007351001" type="siloHistoryForStats">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">siloHistoryForStats.At(0) +1</param>
                         </action>
                         <action id="0" name="Call function" sid="8390430814088886" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
@@ -670,12 +674,22 @@
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Axis">0</param>
                         </action>
+                        <action id="5" name="Push" sid="1398649759128309" type="siloHistoryForStats">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="6" name="Pop" sid="9339122551503189" type="siloHistoryForStats">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
+                <comment>Update the timer and the display of the timer (the progress bar)</comment>
                 <event-block sid="5141845029994906">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="320209268615678" type="System">
@@ -697,9 +711,6 @@
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-5" name="Set width" sid="3338514498940819" type="factoryProgressBar">
-                                    <param id="0" name="Width">126 * (factory.timer) / factory.timerMax</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5820705769653261">
@@ -711,6 +722,11 @@
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6295968685746473">
+                            <conditions />
+                            <actions>
                                 <action id="-5" name="Set width" sid="3696408234446436" type="factoryProgressBar">
                                     <param id="0" name="Width">126 * (factory.timer) / factory.timerMax</param>
                                 </action>
@@ -718,6 +734,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>When the timer reaches the end</comment>
                 <event-block sid="3660702038229175">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5502768402390622" type="factory">
@@ -751,6 +768,10 @@
                         <action id="2" name="Set at X" sid="4011698862903145" type="siloHistory">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">siloHistory.At(0) - min(factory.productivity, silo.cabbages)</param>
+                        </action>
+                        <action disabled="1" id="2" name="Set at X" sid="5025006696241985" type="siloHistoryForStats">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">siloHistoryForStats.At(0) - min(factory.productivity, silo.cabbages)</param>
                         </action>
                         <action id="-12" name="Subtract from" sid="9261691216143033" type="silo">
                             <param id="0" name="Instance variable">cabbages</param>
@@ -831,6 +852,7 @@
                     <sub-events>
                         <variable constant="0" name="deltaTime" sid="4268310958895833" static="0" type="number">0</variable>
                         <variable constant="0" name="cabbagesPerMinutes" sid="358729675507374" static="0" type="number">0</variable>
+                        <variable constant="0" name="cabbagesPerMinutesForStats" sid="7127339580121261" static="0" type="number">0</variable>
                         <variable constant="0" name="saladsPerMinute" sid="8047274287541954" static="0" type="number">0</variable>
                         <event-block sid="3932992868988127">
                             <conditions>
@@ -857,6 +879,19 @@
                                         <action id="-10" name="Add to" sid="867071793069171" type="System">
                                             <param id="0" name="Variable">cabbagesPerMinutes</param>
                                             <param id="1" name="Value">siloHistory.CurValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6230811340631482">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="9776934036151543" type="siloHistoryForStats">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="1561104781810832" type="System">
+                                            <param id="0" name="Variable">cabbagesPerMinutesForStats</param>
+                                            <param id="1" name="Value">siloHistoryForStats.CurValue</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -894,7 +929,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="5463902685024431" type="Function">
                                             <param id="0" name="Name">&quot;count&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;collected cabbage&quot;{###}round(cabbagesPerMinutes/60 * deltaTime)</param>
+                                            <param id="1" name="Parameter {n}">&quot;collected cabbage&quot;{###}round(cabbagesPerMinutesForStats/60 * deltaTime)</param>
                                         </action>
                                         <action id="14" name="Log" sid="7471725173610501" type="Browser">
                                             <param id="0" name="Type">0</param>
@@ -907,6 +942,10 @@
                                         <action id="14" name="Log" sid="1620877186391191" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;created cabbages: &quot; &amp; round(cabbagesPerMinutes/60 * deltaTime)</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="4800144259585055" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;created cabbages for stats: &quot; &amp; round(cabbagesPerMinutesForStats/60 * deltaTime)</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -932,7 +971,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="901981960933352" title="upgrade bees">
+        <event-group description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">
@@ -1195,7 +1234,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9599963043552251" title="upgrade factory">
+        <event-group description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryCost" sid="4062049571430355" static="0" type="number">0</variable>

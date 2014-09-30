@@ -16,7 +16,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="5543309227872803">
+        <event-block sid="5543309227872803">
             <conditions>
                 <condition id="0" name="On key pressed" sid="316671489470019" type="Keyboard">
                     <param id="0" name="Key">80 (P)</param>

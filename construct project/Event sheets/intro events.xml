@@ -23,7 +23,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="5181280425695908" type="txtLabel">
-                            <param id="0" name="Text">projectversion &amp; &quot;(are you running the latest one?)&quot;</param>
+                            <param id="0" name="Text">projectversion &amp; &quot;(is this the latest one?)&quot;</param>
                         </action>
                     </actions>
                 </event-block>

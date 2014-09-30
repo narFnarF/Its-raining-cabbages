@@ -1253,6 +1253,13 @@
                 <REWARD_COMBIEN>5</REWARD_COMBIEN>
             </instance-variables>
         </instance>
+        <instance type="siloHistoryForStats" uid="91">
+            <properties>
+                <width>60</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
