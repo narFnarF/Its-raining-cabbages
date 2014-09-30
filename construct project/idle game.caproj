@@ -173,7 +173,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="factory stuff">
+        <object-folder expanded="0" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -835,7 +835,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="lions">
+        <object-folder expanded="1" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -968,8 +968,8 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="trader">
-            <object-type name="trader" sid="5574383113778382">
+        <object-folder expanded="1" name="trader">
+            <object-type name="traderTxt" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
@@ -978,7 +978,7 @@
                     <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
                 </instance-variables>
                 <container>
-                    <type>trader</type>
+                    <type>traderTxt</type>
                     <type>traderBg</type>
                 </container>
             </object-type>
@@ -988,7 +988,7 @@
             <object-type name="traderBg" sid="669454111504386">
                 <plugin id="NinePatch" />
                 <container>
-                    <type>trader</type>
+                    <type>traderTxt</type>
                     <type>traderBg</type>
                 </container>
                 <texture />
@@ -1072,7 +1072,7 @@
             </instance-variables>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout-folder expanded="0" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
@@ -1089,17 +1089,15 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
-            <event-sheet>factory events main.xml</event-sheet>
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="verachou">
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="lions">
+        <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
-            <event-sheet>lions events main.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="menus">
             <event-sheet>savefile error events.xml</event-sheet>

@@ -2,7 +2,7 @@
 <c2layout>
     <name>factory</name>
     <sid>9664383942492218</sid>
-    <event-sheet>factory events main</event-sheet>
+    <event-sheet>factory events</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>

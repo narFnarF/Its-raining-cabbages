@@ -1136,10 +1136,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="491892557047817" title="Quests">
+        <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate quests array</comment>
-                <event-block sid="7279855106640701">
+                <event-block collapsed="1" sid="7279855106640701">
                     <conditions>
                         <condition id="6" name="Is empty" sid="9714930816914019" type="quests" />
                     </conditions>

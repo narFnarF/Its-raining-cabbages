@@ -2,7 +2,7 @@
 <c2layout>
     <name>lions</name>
     <sid>7447136426492974</sid>
-    <event-sheet>lions events main</event-sheet>
+    <event-sheet>lions events</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>
@@ -873,7 +873,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="217">
+                <instance type="traderTxt" uid="217">
                     <properties>
                         <text>Create veggie burger with eggs</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -933,7 +933,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="219">
+                <instance type="traderTxt" uid="219">
                     <properties>
                         <text>Create tofu steakwith tofu</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -966,7 +966,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="220">
+                <instance type="traderTxt" uid="220">
                     <properties>
                         <text>Create salads with lion poop</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -999,7 +999,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="221">
+                <instance type="traderTxt" uid="221">
                     <properties>
                         <text>Create tofu steak from veggie burger</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1032,7 +1032,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="222">
+                <instance type="traderTxt" uid="222">
                     <properties>
                         <text>Create xxxxxxxxx with yyyyyyyyy</text>
                         <initial-visibility>Visible</initial-visibility>

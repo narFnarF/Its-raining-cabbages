@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>factory events</name>
     <events>
+        <include>gameplay stuff</include>
+        <include>global events</include>
         <event-block sid="9542002391878686">
             <conditions>
                 <condition id="0" name="On function" sid="9142559592817151" type="Function">
@@ -28,7 +30,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="2084841826371189" title="bees">
+        <event-group collapsed="1" description="" sid="2084841826371189" title="bees">
             <sub-events>
                 <comment>Cabbage is ready for pickup. The closest bee targets it.</comment>
                 <event-block sid="7183926705466346">
@@ -358,7 +360,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1464147514479229" title="cabbages">
+        <event-group collapsed="1" description="" sid="1464147514479229" title="cabbages">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -444,7 +446,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3792616009665136" title="Display stats">
+        <event-group collapsed="1" description="" sid="3792616009665136" title="Display stats">
             <sub-events>
                 <event-block sid="45482806854828">
                     <conditions />
@@ -460,7 +462,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
+                        <event-group collapsed="1" description="" inactive="1" sid="5993132769924056" title="display salads per minute">
                             <sub-events>
                                 <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
                                 <variable constant="0" name="saladsPerMinute" sid="6262903764462939" static="0" type="number">0</variable>
@@ -507,7 +509,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5689100297767431" title="menhir">
+        <event-group collapsed="1" description="" sid="5689100297767431" title="menhir">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -618,7 +620,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6516691976608457" title="silo">
+        <event-group collapsed="1" description="" sid="6516691976608457" title="silo">
             <sub-events>
                 <event-block sid="484507871328815">
                     <conditions>
@@ -687,10 +689,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="775314833482713" title="factory">
+        <event-group collapsed="1" description="" sid="775314833482713" title="factory">
             <sub-events>
                 <comment>Update the timer and the display of the timer (the progress bar)</comment>
-                <event-block sid="5141845029994906">
+                <event-block collapsed="1" sid="5141845029994906">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="320209268615678" type="System">
                             <param id="0" name="Interval (seconds)">1</param>
@@ -842,7 +844,7 @@
                     </actions>
                 </event-block>
                 <comment>Ignore les &quot;time has passed&quot;, sauf si ça fait plus que 5 secondes</comment>
-                <event-block sid="6103865738262394">
+                <event-block collapsed="1" sid="6103865738262394">
                     <conditions>
                         <condition id="0" name="On function" sid="7823444868000431" type="Function">
                             <param id="0" name="Name">&quot;time has passed&quot;</param>
@@ -971,7 +973,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="901981960933352" title="upgrade bees">
+        <event-group collapsed="1" description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
                 <comment>updates UI boutons</comment>
                 <event-block sid="6091811762978645">
@@ -1234,7 +1236,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9599963043552251" title="upgrade factory">
+        <event-group collapsed="1" description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryCost" sid="4062049571430355" static="0" type="number">0</variable>

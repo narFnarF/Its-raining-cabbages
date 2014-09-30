@@ -2712,7 +2712,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="136">
+                <instance type="traderTxt" uid="136">
                     <properties>
                         <text>Create veggie burger with eggs</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2772,7 +2772,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="138">
+                <instance type="traderTxt" uid="138">
                     <properties>
                         <text>Create tofu steakwith tofu</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2805,7 +2805,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="139">
+                <instance type="traderTxt" uid="139">
                     <properties>
                         <text>Create salads with lion poop</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2838,7 +2838,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="140">
+                <instance type="traderTxt" uid="140">
                     <properties>
                         <text>Create tofu steak from veggie burger</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2871,7 +2871,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trader" uid="141">
+                <instance type="traderTxt" uid="141">
                     <properties>
                         <text>Create xxxxxxxxx with yyyyyyyyy</text>
                         <initial-visibility>Visible</initial-visibility>

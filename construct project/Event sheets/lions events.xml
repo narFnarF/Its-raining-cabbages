@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>lions events</name>
     <events>
+        <include>global events</include>
+        <include>gameplay stuff</include>
         <event-block sid="7271561405416356">
             <conditions>
                 <condition id="0" name="On function" sid="1900235840500086" type="Function">
@@ -674,23 +676,23 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4503237485293908" title="Trader">
+        <event-group description="" sid="4503237485293908" title="Trader">
             <sub-events>
                 <comment>display conversion menu</comment>
                 <event-block sid="8812703073199238">
                     <conditions />
                     <actions>
-                        <action id="0" name="Set text" sid="3615162190377486" type="trader">
-                            <param id="0" name="Text">&quot;Create &quot; &amp; trader.receiveWhat &amp; &quot; from &quot; &amp; trader.payWhat</param>
+                        <action id="0" name="Set text" sid="3615162190377486" type="traderTxt">
+                            <param id="0" name="Text">&quot;Create &quot; &amp; traderTxt.receiveWhat &amp; &quot; from &quot; &amp; traderTxt.payWhat</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="4935685582294332">
                     <conditions>
                         <condition id="3" name="On touched object" sid="1964020888824892" type="Touch">
-                            <param id="0" name="Object">trader</param>
+                            <param id="0" name="Object">traderTxt</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="41187694723071" type="trader" />
+                        <condition id="-9" name="Is visible" sid="41187694723071" type="traderTxt" />
                         <condition id="4" inverted="1" name="Is touching object" sid="797895827098134" type="Touch">
                             <param id="0" name="Object">notificationBox</param>
                         </condition>
@@ -699,7 +701,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="46242753314526" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;give stuff&quot;{###}&quot;So, you want to make &quot; &amp; trader.receiveHowMany &amp; &quot; &quot; &amp; trader.receiveWhat &amp; &quot;?&quot;{###}trader.payHowMuch{###}trader.payWhat{###}&quot;Create from &quot;{###}trader.receiveHowMany{###}trader.receiveWhat</param>
+                            <param id="1" name="Parameter {n}">&quot;give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany{###}traderTxt.receiveWhat</param>
                         </action>
                     </actions>
                 </event-block>
@@ -785,12 +787,12 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="8295221066856348" title="UI trader">
+                <event-group description="" sid="8295221066856348" title="UI trader">
                     <sub-events>
                         <event-block sid="6139000933248842">
                             <conditions />
                             <actions>
-                                <action id="-15" name="Set visible" sid="1163258078147171" type="trader">
+                                <action id="-15" name="Set visible" sid="1163258078147171" type="traderTxt">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="5366740981932467" type="traderBg">
@@ -800,7 +802,7 @@
                             <sub-events>
                                 <event-block sid="6604564446092534">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="trader">
+                                        <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="traderTxt">
                                             <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
@@ -812,7 +814,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="4818095063094279" type="trader">
+                                        <action id="-15" name="Set visible" sid="4818095063094279" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="7910481850776827" type="traderBg">
@@ -822,14 +824,14 @@
                                 </event-block>
                                 <event-block sid="8980280911857299">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="trader">
+                                        <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="traderTxt">
                                             <param id="0" name="Instance variable">receiveWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Veggie burger&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="9232822429975491" type="trader">
+                                        <action id="-15" name="Set visible" sid="9232822429975491" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="1046038695352768" type="traderBg">
@@ -839,19 +841,19 @@
                                 </event-block>
                                 <event-block sid="6660161672704164">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="trader">
+                                        <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="traderTxt">
                                             <param id="0" name="Instance variable">receiveWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Tofu steak&quot;</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="trader">
+                                        <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="traderTxt">
                                             <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Tofu&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="7579484827464714" type="trader">
+                                        <action id="-15" name="Set visible" sid="7579484827464714" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="3305634149331586" type="traderBg">
@@ -861,7 +863,7 @@
                                 </event-block>
                                 <event-block sid="3850387678898212">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="trader">
+                                        <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="traderTxt">
                                             <param id="0" name="Instance variable">payWhat</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Veggie burger&quot;</param>
@@ -876,7 +878,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="7532409093500833" type="trader">
+                                        <action id="-15" name="Set visible" sid="7532409093500833" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="1395096652153999" type="traderBg">
