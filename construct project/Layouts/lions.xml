@@ -423,7 +423,7 @@
                     <properties>
                         <text>What&apos;s this?</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -476,7 +476,7 @@
                     <properties>
                         <text>What&apos;s this?</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -529,7 +529,7 @@
                     <properties>
                         <text>What&apos;s this?</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -582,7 +582,7 @@
                     <properties>
                         <text>What&apos;s this?</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -1045,10 +1045,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>6666</receiveWhat>
+                        <receiveWhat>placeholder</receiveWhat>
                         <receiveHowMany>0</receiveHowMany>
-                        <payWhat>666</payWhat>
-                        <payHowMuch>0</payHowMuch>
+                        <payWhat>placeholder</payWhat>
+                        <payHowMuch>99999999</payHowMuch>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

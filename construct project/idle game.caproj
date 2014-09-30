@@ -1089,14 +1089,14 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+        <event-folder expanded="0" name="factory">
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="verachou">
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="lions">
+        <event-folder expanded="0" name="lions">
             <event-sheet>lions events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="menus">

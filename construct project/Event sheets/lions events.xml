@@ -683,7 +683,7 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="3615162190377486" type="traderTxt">
-                            <param id="0" name="Text">&quot;Create &quot; &amp; traderTxt.receiveWhat &amp; &quot; from &quot; &amp; traderTxt.payWhat</param>
+                            <param id="0" name="Text">&quot;Craft &quot; &amp; traderTxt.receiveWhat &amp; &quot; from &quot; &amp; traderTxt.payWhat</param>
                         </action>
                     </actions>
                 </event-block>
@@ -807,7 +807,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
                                         </condition>
-                                        <condition id="0" name="Compare value" sid="8363541479433845" type="inventory">
+                                        <condition disabled="1" id="0" name="Compare value" sid="8363541479433845" type="inventory">
                                             <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">9</param>
