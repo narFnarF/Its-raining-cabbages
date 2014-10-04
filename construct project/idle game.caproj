@@ -1096,7 +1096,7 @@
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="lions">
+        <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="menus">
