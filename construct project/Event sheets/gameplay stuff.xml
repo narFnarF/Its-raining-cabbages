@@ -1493,7 +1493,7 @@
         <event-block sid="8859242035702622">
             <conditions>
                 <condition id="0" name="On function" sid="6283808490287199" type="Function">
-                    <param id="0" name="Name">&quot;has item&quot;</param>
+                    <param id="0" name="Name">&quot;has enough&quot;</param>
                 </condition>
             </conditions>
             <actions />
