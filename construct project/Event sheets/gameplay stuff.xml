@@ -372,7 +372,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4587465909699658" title="purchase popup">
+        <event-group collapsed="1" description="" sid="4587465909699658" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
@@ -567,48 +567,12 @@
                         <action id="-36" name="Save" sid="7101203495731496" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="8320284252014023" type="Function">
+                            <param id="0" name="Name">&quot;pay items&quot;</param>
+                            <param id="1" name="Parameter {n}">purchasePopupBuyBtn.currency{###}purchasePopupBuyBtn.price</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <comment>purchase confirmed!</comment>
-                        <event-block sid="7338441655247254">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="5467674846598704" type="purchasePopupBuyBtn">
-                                    <param id="0" name="Instance variable">currency</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;salads&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Subtract from" sid="6583996586418001" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">purchasePopupBuyBtn.price</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3970839973935901">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8467418821610262" type="purchasePopupBuyBtn">
-                                    <param id="0" name="Instance variable">currency</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;eggs&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Subtract from" sid="5081682201868744" type="System">
-                                    <param id="0" name="Variable">eggs</param>
-                                    <param id="1" name="Value">purchasePopupBuyBtn.price</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2740984466105858">
-                            <conditions />
-                            <actions>
-                                <action id="1" name="Set key" sid="4073815527669741" type="inventory">
-                                    <param id="0" name="Key">purchasePopupBuyBtn.currency</param>
-                                    <param id="1" name="Value">inventory.Get(purchasePopupBuyBtn.currency) - purchasePopupBuyBtn.price</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="13824302831608">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5056556591704056" type="purchasePopupBuyBtn">
@@ -1052,7 +1016,7 @@
         <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate quests array</comment>
-                <event-block collapsed="1" sid="7279855106640701">
+                <event-block sid="7279855106640701">
                     <conditions>
                         <condition id="6" name="Is empty" sid="9714930816914019" type="quests" />
                     </conditions>
@@ -1086,6 +1050,11 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">25</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="8540218767130673" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1812636108139311">
@@ -1115,6 +1084,11 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="1821867836400013" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1146,6 +1120,11 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">20</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="9028325991925236" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2650218062530403">
@@ -1175,6 +1154,11 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">20</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="7570481430444809" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1206,6 +1190,11 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="6695639891564201" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="8216760444854503">
@@ -1236,12 +1225,17 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">15</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="1431994238890996" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Fill the active quest array</comment>
-                <event-block collapsed="1" sid="8800881272097823">
+                <event-block sid="8800881272097823">
                     <conditions>
                         <condition id="7" name="Compare size" sid="2186805991011497" type="questsActive">
                             <param id="0" name="Axis">0</param>
@@ -1281,7 +1275,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>add the new quest</comment>
-                                <variable constant="0" name="multiplicator" sid="4759297500313883" static="0" type="number">0</variable>
+                                <variable constant="0" name="timeCompleted" sid="4759297500313883" static="0" type="number">0</variable>
                                 <event-block sid="9959756084248528">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="4425954621093876" type="System">
@@ -1296,7 +1290,7 @@
                                             <param id="1" name="Message">&quot;The random number for questNb was: &quot; &amp; questNb</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="9889340557609012" type="System">
-                                            <param id="0" name="Variable">multiplicator</param>
+                                            <param id="0" name="Variable">timeCompleted</param>
                                             <param id="1" name="Value">quests.At(questNb, quests.TIME_COMPLETED) +1</param>
                                         </action>
                                         <action id="5" name="Push" sid="5827658812149505" type="questsActive">
@@ -1312,7 +1306,7 @@
                                         <action id="3" name="Set at XY" sid="3383024835825174" type="questsActive">
                                             <param id="0" name="X">0</param>
                                             <param id="1" name="Y">questsActive.REQUIS</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * multiplicator</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * timeCompleted</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="7125581418687803" type="questsActive">
                                             <param id="0" name="X">0</param>
@@ -1327,7 +1321,7 @@
                                         <action id="3" name="Set at XY" sid="8841412181543324" type="questsActive">
                                             <param id="0" name="X">0</param>
                                             <param id="1" name="Y">questsActive.REWARD_COMBIEN</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_COMBIEN) * multiplicator</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_COMBIEN) * timeCompleted</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="7868816511933798" type="questsActive">
                                             <param id="0" name="X">0</param>

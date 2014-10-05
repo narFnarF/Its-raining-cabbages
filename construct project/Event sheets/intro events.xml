@@ -9,7 +9,7 @@
                 <condition id="-2" name="On start of layout" sid="3303152092615089" type="System" />
             </conditions>
             <actions>
-                <action id="-36" name="Save" sid="5165186535157693" type="System">
+                <action disabled="1" id="-36" name="Save" sid="5165186535157693" type="System">
                     <param id="0" name="Slot">&quot;new game&quot;</param>
                 </action>
             </actions>
@@ -22,7 +22,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="5181280425695908" type="txtLabel">
+                        <action id="0" name="Set text" sid="4065297024280591" type="txtLabel">
+                            <param id="0" name="Text">projectversion</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="5181280425695908" type="txtLabel">
                             <param id="0" name="Text">projectversion &amp; &quot;(is this the latest one?)&quot;</param>
                         </action>
                     </actions>
@@ -96,7 +99,7 @@
                     <param id="1" name="Message">&quot;load failed&quot;</param>
                 </action>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
-                    <param id="0" name="Message">&quot;Oh oh! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? Or maybe your savefile got corrupted (often occurs every time I release a new version). You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="0" name="Message">&quot;Oh oh! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>

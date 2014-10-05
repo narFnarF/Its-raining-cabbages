@@ -1236,6 +1236,7 @@
                 <REWARD_TYPE>2</REWARD_TYPE>
                 <REWARD_COMBIEN>3</REWARD_COMBIEN>
                 <TIME_COMPLETED>4</TIME_COMPLETED>
+                <MULTIPLICATOR>5</MULTIPLICATOR>
             </instance-variables>
         </instance>
         <instance type="questsActive" uid="275">

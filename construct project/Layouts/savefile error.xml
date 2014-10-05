@@ -29,7 +29,7 @@
             <instances>
                 <instance type="txtLabel" uid="95">
                     <properties>
-                        <text>Your savefile is from an old version of the game. You need to create a new one. Touch anywhere to go back, then select &quot;New Game&quot;.</text>
+                        <text>Your savefile is from an old version of the game. You need to create a new one. Restart the game (refresh the page) and select &quot;New Game&quot;. Sorry! -narF</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
@@ -48,8 +48,8 @@
                         <x>71</x>
                         <y>329</y>
                         <z>0</z>
-                        <width>501</width>
-                        <height>310</height>
+                        <width>496</width>
+                        <height>361</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

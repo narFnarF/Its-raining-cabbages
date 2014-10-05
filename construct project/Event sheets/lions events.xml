@@ -43,7 +43,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="8861246033139075" title="Attract and catch a lion">
+        <event-group collapsed="1" description="" sid="8861246033139075" title="Attract and catch a lion">
             <sub-events>
                 <event-block sid="6931695193521489">
                     <conditions>
@@ -143,7 +143,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2153991481750325" title="Time passing (lion)">
+        <event-group collapsed="1" description="" sid="2153991481750325" title="Time passing (lion)">
             <sub-events>
                 <event-block sid="6489574490127424">
                     <conditions>
@@ -183,7 +183,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9689064507054484" title="mission">
+        <event-group collapsed="1" description="" sid="9689064507054484" title="mission">
             <sub-events>
                 <comment>send hunting</comment>
                 <event-block sid="1619034874208339">
@@ -297,7 +297,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2134108211466926" title="lion collect &amp; loot table">
+        <event-group collapsed="1" description="" sid="2134108211466926" title="lion collect &amp; loot table">
             <sub-events>
                 <event-block sid="4996067425529869">
                     <conditions>
@@ -384,9 +384,13 @@
                                     <param id="0" name="Variable">selectedItem</param>
                                     <param id="1" name="Value">lionRandomItems.At(random(0, lionRandomItems.Width))</param>
                                 </action>
-                                <action id="0" name="Add key" sid="6753467516477928" type="inventory">
+                                <action disabled="1" id="0" name="Add key" sid="6753467516477928" type="inventory">
                                     <param id="0" name="Key">selectedItem</param>
                                     <param id="1" name="Value">inventory.Get(selectedItem) +1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7810652467157797" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">selectedItem{###}1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="8639657845923099" type="Function">
                                     <param id="0" name="Name">&quot;text popup&quot;</param>
@@ -411,7 +415,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="539147761278121" title="level up lion">
+        <event-group collapsed="1" description="" sid="539147761278121" title="level up lion">
             <sub-events>
                 <event-block sid="8852444332401261">
                     <conditions>
@@ -457,7 +461,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5567629855902233" title="lion UI">
+        <event-group collapsed="1" description="" sid="5567629855902233" title="lion UI">
             <sub-events>
                 <comment>Display inventory</comment>
                 <event-block sid="6215635304056931">
@@ -485,7 +489,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Bouton sous le lion (et countdown mission timer)</comment>
-                <event-block sid="1450302224107253">
+                <event-block collapsed="1" sid="1450302224107253">
                     <conditions>
                         <condition id="-11" name="For Each" sid="8392477759745256" type="System">
                             <param id="0" name="Object">lion</param>
@@ -676,7 +680,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4503237485293908" title="Trader">
+        <event-group collapsed="1" description="" sid="4503237485293908" title="Trader">
             <sub-events>
                 <comment>display conversion menu</comment>
                 <event-block sid="8812703073199238">
@@ -701,14 +705,14 @@
                     <actions>
                         <action id="0" name="Call function" sid="46242753314526" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany{###}traderTxt.receiveWhat</param>
+                            <param id="1" name="Parameter {n}">&quot;trader give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany{###}traderTxt.receiveWhat</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="7394578765702792">
                     <conditions>
                         <condition id="0" name="On function" sid="5033742324448273" type="Function">
-                            <param id="0" name="Name">&quot;give stuff&quot;</param>
+                            <param id="0" name="Name">&quot;trader give stuff&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -726,6 +730,10 @@
                                     <param id="0" name="Variable">giveWhat</param>
                                     <param id="1" name="Value">Function.Param(1)</param>
                                 </action>
+                                <action id="0" name="Call function" sid="4241144444914243" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">giveWhat{###}giveHowMany</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="9555606144207156" type="System">
                                     <param id="0" name="Object to create">plus1</param>
                                     <param id="1" name="Layer">&quot;game&quot;</param>
@@ -740,50 +748,6 @@
                                     <param id="1" name="Parameter {n}">&quot;crafted &quot; &amp; giveWhat{###}giveHowMany</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="1637847872114515">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="4249281582628369" type="System">
-                                            <param id="0" name="Variable">giveWhat</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;salads&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="2823914048774836" type="System">
-                                            <param id="0" name="Variable">salads</param>
-                                            <param id="1" name="Value">giveHowMany</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="55013524533809">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="9107347060905713" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="269612170514602" type="System">
-                                            <param id="0" name="Variable">giveWhat</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;eggs&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="6764316264903987" type="System">
-                                            <param id="0" name="Variable">eggs</param>
-                                            <param id="1" name="Value">giveHowMany</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="1099512010759006">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="9353645946781866" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Add key" sid="8319102981853874" type="inventory">
-                                            <param id="0" name="Key">giveWhat</param>
-                                            <param id="1" name="Value">inventory.Get(giveWhat) + giveHowMany</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

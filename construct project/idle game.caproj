@@ -173,7 +173,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder expanded="1" name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -835,7 +835,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="lions">
+        <object-folder expanded="0" name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -968,7 +968,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="trader">
+        <object-folder expanded="0" name="trader">
             <object-type name="traderTxt" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
@@ -994,7 +994,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="quests">
+        <object-folder expanded="1" name="quests">
             <object-type global="1" name="quests" sid="6221647988755415">
                 <plugin id="Arr" />
                 <instance-variables>
@@ -1003,6 +1003,7 @@
                     <instance-variable name="REWARD_TYPE" sid="3839766439093707" type="number" />
                     <instance-variable name="REWARD_COMBIEN" sid="2741491337674447" type="number" />
                     <instance-variable name="TIME_COMPLETED" sid="6448198071465804" type="number" />
+                    <instance-variable name="MULTIPLICATOR" sid="6669183742312442" type="number" />
                 </instance-variables>
             </object-type>
             <object-type global="1" name="questsActive" sid="6986233691407419">
@@ -1073,7 +1074,7 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout-folder expanded="0" name="menus">
+        <layout-folder expanded="1" name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
@@ -1089,7 +1090,7 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-folder expanded="0" name="factory">
+        <event-folder expanded="1" name="factory">
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
         <event-folder expanded="0" name="verachou">
@@ -1099,7 +1100,7 @@
         <event-folder expanded="1" name="lions">
             <event-sheet>lions events.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="menus">
+        <event-folder expanded="1" name="menus">
             <event-sheet>savefile error events.xml</event-sheet>
             <event-sheet>manual loading events.xml</event-sheet>
             <event-sheet>intro events.xml</event-sheet>

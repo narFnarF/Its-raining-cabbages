@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>savefile error events</name>
     <events>
-        <event-block sid="664840260410674">
+        <event-block disabled="1" sid="664840260410674">
             <conditions>
                 <condition id="0" name="On any touch start" sid="705138946179585" type="Touch" />
             </conditions>
