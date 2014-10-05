@@ -1013,7 +1013,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="491892557047817" title="Quests">
+        <event-group description="" sid="491892557047817" title="Quests">
             <sub-events>
                 <comment>Populate quests array</comment>
                 <event-block sid="7279855106640701">
@@ -1050,11 +1050,6 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">25</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8540218767130673" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1812636108139311">
@@ -1084,11 +1079,6 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="1821867836400013" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1120,11 +1110,6 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">20</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9028325991925236" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2650218062530403">
@@ -1154,11 +1139,6 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">20</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="7570481430444809" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1190,11 +1170,6 @@
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="6695639891564201" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="8216760444854503">
@@ -1224,11 +1199,6 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">15</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="1431994238890996" type="quests">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.MULTIPLICATOR</param>
-                                    <param id="2" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
