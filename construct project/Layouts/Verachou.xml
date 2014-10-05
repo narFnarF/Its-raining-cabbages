@@ -1227,30 +1227,33 @@
         <instance type="quests" uid="270">
             <properties>
                 <width>0</width>
-                <height>5</height>
+                <height>6</height>
                 <depth>1</depth>
             </properties>
             <instance-variables>
                 <TYPE>0</TYPE>
-                <REQUIS>1</REQUIS>
-                <REWARD_TYPE>2</REWARD_TYPE>
-                <REWARD_COMBIEN>3</REWARD_COMBIEN>
-                <TIME_COMPLETED>4</TIME_COMPLETED>
+                <BASED_ON>1</BASED_ON>
+                <REQUIS>2</REQUIS>
+                <REWARD_TYPE>3</REWARD_TYPE>
+                <REWARD_COMBIEN>4</REWARD_COMBIEN>
+                <TIME_COMPLETED>5</TIME_COMPLETED>
             </instance-variables>
         </instance>
         <instance type="questsActive" uid="275">
             <properties>
                 <width>0</width>
-                <height>6</height>
+                <height>8</height>
                 <depth>1</depth>
             </properties>
             <instance-variables>
                 <QUEST_NB>0</QUEST_NB>
                 <TYPE>1</TYPE>
-                <REQUIS>2</REQUIS>
-                <REQUIS_COMPTEUR>3</REQUIS_COMPTEUR>
-                <REWARD_TYPE>4</REWARD_TYPE>
-                <REWARD_COMBIEN>5</REWARD_COMBIEN>
+                <BASED_ON>2</BASED_ON>
+                <REQUIS>3</REQUIS>
+                <REQUIS_COMPTEUR>4</REQUIS_COMPTEUR>
+                <REWARD_TYPE>5</REWARD_TYPE>
+                <REWARD_COMBIEN>6</REWARD_COMBIEN>
+                <TIME_COMPLETED>7</TIME_COMPLETED>
             </instance-variables>
         </instance>
         <instance type="siloHistoryForStats" uid="91">

@@ -1035,6 +1035,11 @@
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;collected cabbage&quot;</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="75036550023554" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;events&quot;</param>
+                                </action>
                                 <action id="3" name="Set at XY" sid="7713418871905295" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
@@ -1064,6 +1069,11 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;sent lion on mission&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="7767036831512541" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;events&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="8148224095839461" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1095,6 +1105,11 @@
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;menhir enlarged&quot;</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="9226759553491353" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
+                                </action>
                                 <action id="3" name="Set at XY" sid="5361745736462853" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
@@ -1124,6 +1139,11 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;upgraded silo&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="3689686718538622" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3419590376421694" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1155,6 +1175,11 @@
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
                                 </action>
+                                <action id="3" name="Set at XY" sid="6776668399508766" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
+                                </action>
                                 <action id="3" name="Set at XY" sid="8608138663654735" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
@@ -1184,6 +1209,11 @@
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.TYPE</param>
                                     <param id="2" name="Value">&quot;crafted Tofu steak&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="8304047984556065" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;events&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="1855871708479701" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1298,6 +1328,16 @@
                                             <param id="1" name="Y">questsActive.REWARD_TYPE</param>
                                             <param id="2" name="Value">quests.At(questNb, quests.REWARD_TYPE)</param>
                                         </action>
+                                        <action id="3" name="Set at XY" sid="838286451667491" type="questsActive">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">questsActive.BASED_ON</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.BASED_ON)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="9090397597609332" type="questsActive">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">questsActive.TIME_COMPLETED</param>
+                                            <param id="2" name="Value">quests.At(questNb, quests.TIME_COMPLETED)</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="7015339939459223">
@@ -1311,7 +1351,7 @@
                     </sub-events>
                 </event-block>
                 <comment>increases the counters of active quests when their events occurs</comment>
-                <event-block collapsed="1" sid="1600280941069597">
+                <event-block sid="1600280941069597">
                     <conditions>
                         <condition id="0" name="On function" sid="3037980305883242" type="Function">
                             <param id="0" name="Name">&quot;count for quests&quot;</param>
