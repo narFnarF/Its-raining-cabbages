@@ -76,7 +76,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="6089298859385344" type="System">
                             <param id="0" name="Variable">requiredLevel</param>
-                            <param id="1" name="Value">timeCompleted + 2</param>
+                            <param id="1" name="Value">needed</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -119,7 +119,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>if the event occured</comment>
+                        <comment>check if the event occured</comment>
                         <event-block sid="6289171220853826">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="8495334805079082" type="System">
@@ -144,7 +144,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>if the level required is met</comment>
+                        <comment>check if the level required is met</comment>
                         <event-block sid="4018400704155451">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="1638053512353147" type="System">
@@ -166,51 +166,6 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="361758039589434" type="questCollectBtn">
                                     <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="6627008382657102">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="7522537678920855" type="System">
-                                            <param id="0" name="Variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;upgraded silo&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="4027545125457705" type="silo">
-                                            <param id="0" name="Instance variable">level</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">requiredLevel</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                                <event-block disabled="1" sid="6458809537282917">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="3455051096135969" type="System">
-                                            <param id="0" name="Variable">type</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;menhir enlarged&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="6397065843395494" type="menhir">
-                                            <param id="0" name="Instance variable">level</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">requiredLevel</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="1776863580228848" type="questCollectBtn">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block disabled="1" sid="3832192601702718">
-                            <conditions />
-                            <actions>
-                                <action id="14" name="Log" sid="2949305529272096" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;get level of &quot; &amp; type &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, type)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -283,6 +238,21 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="7261655952238127">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9945795479560111" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="1360383748293811" type="questsActive">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">questsActive.Height</param>
+                    <param id="2" name="Depth">questsActive.Depth</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

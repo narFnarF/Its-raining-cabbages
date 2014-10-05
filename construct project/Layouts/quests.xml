@@ -15,7 +15,7 @@
     <layers>
         <layer name="background" sid="6350718701652926">
             <initially-visible>1</initially-visible>
-            <background-color>124,76,186</background-color>
+            <background-color>207,191,253</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -137,7 +137,7 @@
                         <y>166</y>
                         <z>0</z>
                         <width>459</width>
-                        <height>305</height>
+                        <height>611</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -187,7 +187,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>582</x>
+                        <x>579</x>
                         <y>278</y>
                         <z>0</z>
                         <width>144.273925781</width>
@@ -212,8 +212,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>586</x>
-                        <y>424</y>
+                        <x>579</x>
+                        <y>394</y>
+                        <z>0</z>
+                        <width>144.273925781</width>
+                        <height>54.590137482</height>
+                        <depth>0</depth>
+                        <hotspotX>0.659459472</hotspotX>
+                        <hotspotY>0.642857134</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="questCollectBtn" uid="318">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>2</nb>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>579</x>
+                        <y>511</y>
                         <z>0</z>
                         <width>144.273925781</width>
                         <height>54.590137482</height>

@@ -415,7 +415,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="539147761278121" title="level up lion">
+        <event-group description="" sid="539147761278121" title="level up lion">
             <sub-events>
                 <event-block sid="8852444332401261">
                     <conditions>

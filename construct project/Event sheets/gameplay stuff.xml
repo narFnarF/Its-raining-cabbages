@@ -1113,7 +1113,7 @@
                                 <action id="3" name="Set at XY" sid="5361745736462853" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3223865245143364" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1121,6 +1121,41 @@
                                     <param id="2" name="Value">&quot;eggs&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="2790353551454398" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="2" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="695712698286178">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="3611676138310731" type="quests">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">0</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="4462730470557304" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="2" name="Value">&quot;upgraded silo&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="3125003113425422" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="5512316205045969" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="2" name="Value">3</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="9877953879901383" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="8518472481554586" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">20</param>
@@ -1138,7 +1173,7 @@
                                 <action id="3" name="Set at XY" sid="5176685822262924" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.TYPE</param>
-                                    <param id="2" name="Value">&quot;upgraded silo&quot;</param>
+                                    <param id="2" name="Value">&quot;upgraded factory&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3689686718538622" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1148,7 +1183,7 @@
                                 <action id="3" name="Set at XY" sid="3419590376421694" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="5647535470864577" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1178,12 +1213,12 @@
                                 <action id="3" name="Set at XY" sid="6776668399508766" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.BASED_ON</param>
-                                    <param id="2" name="Value">&quot;events&quot;</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="8608138663654735" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">6</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="3023826202342764" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1191,6 +1226,41 @@
                                     <param id="2" name="Value">&quot;eggs&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="9780164397544763" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="2" name="Value">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8657668456293061">
+                            <conditions />
+                            <actions>
+                                <action id="5" name="Push" sid="2654116685708559" type="quests">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">0</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="6257251250976921" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="9222163613203965" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="1186714906091842" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="2182779350224561" type="quests">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="2" name="Value">&quot;eggs&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="2152671834436977" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">30</param>
@@ -1240,7 +1310,7 @@
                         <condition id="7" name="Compare size" sid="2186805991011497" type="questsActive">
                             <param id="0" name="Axis">0</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1303,11 +1373,6 @@
                                             <param id="1" name="Y">questsActive.QUEST_NB</param>
                                             <param id="2" name="Value">questNb</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="3383024835825174" type="questsActive">
-                                            <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.REQUIS</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * timeCompleted</param>
-                                        </action>
                                         <action id="3" name="Set at XY" sid="7125581418687803" type="questsActive">
                                             <param id="0" name="X">0</param>
                                             <param id="1" name="Y">questsActive.REQUIS_COMPTEUR</param>
@@ -1340,9 +1405,39 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="9811811316236472">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="745702932618215" type="questsActive">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">questsActive.BASED_ON</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;events&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="3383024835825174" type="questsActive">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">questsActive.REQUIS</param>
+                                                    <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * timeCompleted</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="7015339939459223">
-                                            <conditions />
-                                            <actions />
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="5047077066312074" type="questsActive">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">questsActive.BASED_ON</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;level&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="9282909032833468" type="questsActive">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">questsActive.REQUIS</param>
+                                                    <param id="2" name="Value">quests.At(questNb, quests.REQUIS) + timeCompleted -1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1698,6 +1793,68 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9628334661304474">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8852055228920513" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="highestLevel" sid="2624533079751197" static="0" type="number">0</variable>
+                        <event-block sid="9596325029552226">
+                            <conditions>
+                                <condition id="-10" name="For" sid="1454963003510416" type="System">
+                                    <param id="0" name="Name">&quot;for each bees&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6183630558782614" type="System">
+                                    <param id="0" name="Variable">highestLevel</param>
+                                    <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;bee&quot; &amp; loopindex) )</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="7603576844309118" type="Function">
+                                    <param id="0" name="Value">highestLevel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9117511579861545">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5786252756778454" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="highestLevel" sid="5325541339066129" static="0" type="number">0</variable>
+                        <event-block sid="7092151855011318">
+                            <conditions>
+                                <condition id="-10" name="For" sid="9314038853399669" type="System">
+                                    <param id="0" name="Name">&quot;for each lion&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9186243550368853" type="System">
+                                    <param id="0" name="Variable">highestLevel</param>
+                                    <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;lion&quot; &amp; loopindex) )</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="2019375538894794" type="Function">
+                                    <param id="0" name="Value">highestLevel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <comment>Update the LevelOfStuff dictionary</comment>
@@ -1779,18 +1936,39 @@
             </sub-events>
         </event-block>
         <variable constant="0" name="test" sid="2451419822543461" static="0" type="text"></variable>
-        <event-block disabled="1" sid="7857195039675063">
+        <event-block sid="7857195039675063">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
                     <param id="0" name="Interval (seconds)">1.0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="14" name="Log" sid="7356427173954862" type="Browser">
+                <action disabled="1" id="14" name="Log" sid="7356427173954862" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
+                </action>
+                <action id="14" name="Log" sid="603900117967642" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block disabled="1" sid="1219178643564598">
+                    <conditions>
+                        <condition id="-10" name="For" sid="4669707959666479" type="System">
+                            <param id="0" name="Name">&quot;for testing&quot;</param>
+                            <param id="1" name="Start index">0.1</param>
+                            <param id="2" name="End index">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="2178742663360152" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">loopindex</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
