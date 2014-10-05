@@ -1592,5 +1592,123 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="6105023249146346">
+            <conditions>
+                <condition id="0" name="On function" sid="8088174606694421" type="Function">
+                    <param id="0" name="Name">&quot;get level of&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="object" sid="2145611276388691" static="0" type="text"></variable>
+                <variable constant="0" name="nb" sid="5592120697360917" static="0" type="number">-1</variable>
+                <event-block sid="6741069435664433">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="9594205768738647" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="100407930723748">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8438994998921181" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="771746848430093" type="System">
+                                    <param id="0" name="Variable">nb</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="717714960621568">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2230298063117914" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;silo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="1545457096892311" type="Function">
+                            <param id="0" name="Value">silo.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1203884031873822">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7013872519951808" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;menhir&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="1874591194125204" type="Function">
+                            <param id="0" name="Value">menhir.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1633810353485243">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1156849655515009" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;factory&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="8376672873585561" type="Function">
+                            <param id="0" name="Value">factory.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6698492573536238">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4316896546530045" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;lion&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7344660257838274" type="lion">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">nb</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="209042375082667" type="Function">
+                            <param id="0" name="Value">lion.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3774830479798836">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="738891220337197" type="System">
+                            <param id="0" name="Variable">object</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;bee&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9876285868107443" type="bee">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">nb</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="2639043531631655" type="Function">
+                            <param id="0" name="Value">bee.level</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
