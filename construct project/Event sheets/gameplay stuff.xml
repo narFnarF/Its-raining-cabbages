@@ -1394,149 +1394,199 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="5552169774995285">
-            <conditions>
-                <condition id="0" name="On function" sid="4714403748334672" type="Function">
-                    <param id="0" name="Name">&quot;get/pay item&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group collapsed="1" description="" sid="1941189896919642" title="item management functions">
             <sub-events>
-                <variable constant="0" name="item" sid="4411175914399848" static="0" type="text"></variable>
-                <variable constant="0" name="quantity" sid="1949028598309919" static="0" type="number">0</variable>
-                <event-block sid="3232642925124048">
-                    <conditions />
+                <event-block sid="8859242035702622">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6283808490287199" type="Function">
+                            <param id="0" name="Name">&quot;has enough&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="item" sid="5408752426648534" static="0" type="text"></variable>
+                        <variable constant="0" name="quantity" sid="1524351940634243" static="0" type="number">0</variable>
+                        <event-block sid="1165843456088112">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="6341372517652042" type="System">
+                                    <param id="0" name="Variable">item</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5299464048258234" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8392742137749958" type="Function">
+                                    <param id="0" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="5833157123520146" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;inventory count: &quot; &amp; inventory.Get(item)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4839799779025455">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7180471014559387" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;salads&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1008440217057666" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">quantity</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="6065400773479147" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7845391516482538">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5805155418335902" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="9656090572030751" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">quantity</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="9949195897012741" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6724104794596719">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4210083353211909" type="inventory">
+                                    <param id="0" name="Key">item</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">quantity</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="2907005606220845" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9807653931201834">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="8327142965387726" type="inventory">
+                                    <param id="0" name="Key">item</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="5214320153357471" type="System">
+                                    <param id="0" name="First value">0</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">quantity</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="9183328972106912" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5552169774995285">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4714403748334672" type="Function">
+                            <param id="0" name="Name">&quot;get items&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="item" sid="4411175914399848" static="0" type="text"></variable>
+                        <variable constant="0" name="quantity" sid="1949028598309919" static="0" type="number">0</variable>
+                        <event-block sid="3232642925124048">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="6843812082451168" type="System">
+                                    <param id="0" name="Variable">item</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1256132166105392" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2908040355144644">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4168226370309192" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;salads&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="7202284481715298" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">quantity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2534870820465872">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7669358443968965" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="3493855044605405" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Value">quantity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7379876529632552">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="1686760117414181" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;salads&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="5836822982254876" type="System">
+                                    <param id="0" name="First value">item</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="4214430299669004" type="inventory">
+                                    <param id="0" name="Key">item</param>
+                                    <param id="1" name="Value">inventory.Get(item) + quantity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>The Pay Items function simply call the Get Items function with a negative sign in front</comment>
+                <event-block sid="5374781669234012">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3553795092327042" type="Function">
+                            <param id="0" name="Name">&quot;pay items&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="6843812082451168" type="System">
-                            <param id="0" name="Variable">item</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1256132166105392" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
+                        <action id="0" name="Call function" sid="2053424480974023" type="Function">
+                            <param id="0" name="Name">&quot;get items&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0){###}-Function.Param(1)</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="8859242035702622">
-            <conditions>
-                <condition id="0" name="On function" sid="6283808490287199" type="Function">
-                    <param id="0" name="Name">&quot;has enough&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <variable constant="0" name="item" sid="5408752426648534" static="0" type="text"></variable>
-                <variable constant="0" name="quantity" sid="1524351940634243" static="0" type="number">0</variable>
-                <event-block sid="1165843456088112">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="6341372517652042" type="System">
-                            <param id="0" name="Variable">item</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5299464048258234" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                        </action>
-                        <action id="1" name="Set return value" sid="8392742137749958" type="Function">
-                            <param id="0" name="Value">&quot;false&quot;</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="5833157123520146" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;inventory count: &quot; &amp; inventory.Get(item)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4839799779025455">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="7180471014559387" type="System">
-                            <param id="0" name="First value">item</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;salads&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="1008440217057666" type="System">
-                            <param id="0" name="Variable">salads</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">quantity</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="6065400773479147" type="Function">
-                            <param id="0" name="Value">&quot;true&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7845391516482538">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="5805155418335902" type="System">
-                            <param id="0" name="First value">item</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;eggs&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="9656090572030751" type="System">
-                            <param id="0" name="Variable">eggs</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">quantity</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="9949195897012741" type="Function">
-                            <param id="0" name="Value">&quot;true&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6724104794596719">
-                    <conditions>
-                        <condition id="0" name="Compare value" sid="4210083353211909" type="inventory">
-                            <param id="0" name="Key">item</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">quantity</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="2907005606220845" type="Function">
-                            <param id="0" name="Value">&quot;true&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9807653931201834">
-                    <conditions>
-                        <condition id="3" inverted="1" name="Has key" sid="8327142965387726" type="inventory">
-                            <param id="0" name="Key">item</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="5214320153357471" type="System">
-                            <param id="0" name="First value">0</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">quantity</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="9183328972106912" type="Function">
-                            <param id="0" name="Value">&quot;true&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="5389400433944584">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="215364554660254" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="6723021645369559" type="System">
-                    <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;pet&quot;, 0)</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;true&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="14" name="Log" sid="7122394494936179" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;oh yeah!&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
