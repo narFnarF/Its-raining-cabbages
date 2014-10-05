@@ -1263,6 +1263,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="levelOfStuff" uid="317" />
     </nonworld-instances>
     <effects />
 </c2layout>

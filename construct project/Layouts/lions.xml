@@ -908,7 +908,7 @@
                 </instance>
                 <instance type="traderTitle" uid="218">
                     <properties>
-                        <text>Conversion menu:</text>
+                        <text>Crafting menu:</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,700,0</font>
                         <color>0,204,0</color>
