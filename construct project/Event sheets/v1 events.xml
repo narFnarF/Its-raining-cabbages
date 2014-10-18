@@ -30,7 +30,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="8792768240858758" title="Save old">
+        <event-group description="" sid="8792768240858758" title="Save old">
             <sub-events>
                 <event-block any="1" sid="7604520539040787">
                     <conditions>
@@ -99,7 +99,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3347646705997988" title="bees old">
+        <event-group description="" sid="3347646705997988" title="bees old">
             <sub-events>
                 <event-block sid="4656210704997607">
                     <conditions>
@@ -277,7 +277,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="567087151684171" title="camera old">
+        <event-group description="" sid="567087151684171" title="camera old">
             <sub-events>
                 <event-block sid="7452036870298714">
                     <conditions>
@@ -316,7 +316,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9491979833701507" title="cabbages old">
+        <event-group description="" sid="9491979833701507" title="cabbages old">
             <sub-events>
                 <event-block sid="4564010549883487">
                     <conditions>
@@ -382,7 +382,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5098640981762788" title="UI old">
+        <event-group description="" sid="5098640981762788" title="UI old">
             <sub-events>
                 <event-block sid="3071285974674716">
                     <conditions />
@@ -413,7 +413,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2814039206435919" title="menhir old">
+        <event-group description="" sid="2814039206435919" title="menhir old">
             <sub-events>
                 <event-block sid="9492347724520134">
                     <conditions>
@@ -503,7 +503,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2599602954484774" title="factory old">
+        <event-group description="" sid="2599602954484774" title="factory old">
             <sub-events>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -637,7 +637,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="7051194549149644" title="Notification box old">
+                <event-group description="" sid="7051194549149644" title="Notification box old">
                     <sub-events>
                         <event-block sid="4008492876518852">
                             <conditions>
@@ -682,7 +682,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="3306952286666225">
+                        <event-block sid="3306952286666225">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="3199464399313145" type="Touch">
                                     <param id="0" name="Object">notificationBox</param>
@@ -770,7 +770,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block collapsed="1" sid="3297061255133494">
+                <event-block sid="3297061255133494">
                     <conditions>
                         <condition id="0" name="On function" sid="9779909940571391" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -853,7 +853,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2726329761105019" title="time tracking old">
+        <event-group description="" sid="2726329761105019" title="time tracking old">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="lastTimeStamp" sid="5191961541009302" static="1" type="number">0</variable>
@@ -987,7 +987,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7615597092264397" title="debug old">
+        <event-group description="" sid="7615597092264397" title="debug old">
             <sub-events>
                 <event-block sid="9230813409032216">
                     <conditions>
@@ -1130,7 +1130,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6204455573469562" title="Store old">
+        <event-group description="" sid="6204455573469562" title="Store old">
             <sub-events>
                 <event-group description="" sid="3529658980017324" title="function: update store buttons old">
                     <sub-events>
@@ -1428,7 +1428,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9344236190523339" title="purchase popup old">
+        <event-group description="" sid="9344236190523339" title="purchase popup old">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
@@ -1536,7 +1536,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8753415885884471">
+                <event-block sid="8753415885884471">
                     <conditions>
                         <condition id="0" name="On function" sid="230964524770024" type="Function">
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
@@ -1682,7 +1682,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="9723364976985796" title="adjust visibility of the Buy button old">
+                <event-group description="" sid="9723364976985796" title="adjust visibility of the Buy button old">
                     <sub-events>
                         <event-block sid="7276475911048179">
                             <conditions />

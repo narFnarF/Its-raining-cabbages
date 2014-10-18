@@ -566,7 +566,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="769228176042275" title="update UI">
+        <event-group description="" sid="769228176042275" title="update UI">
             <sub-events>
                 <event-block sid="8537194233682496">
                     <conditions />

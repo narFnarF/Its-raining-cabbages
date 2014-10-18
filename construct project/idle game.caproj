@@ -8,7 +8,7 @@
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>17800</saved-with-version>
+    <saved-with-version>18400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -59,8 +59,8 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
-        <object-folder expanded="0" name="plugins">
+    <object-folder>
+        <object-folder name="plugins">
             <object-type name="Browser" sid="5129043714455325">
                 <plugin id="Browser" />
             </object-type>
@@ -83,7 +83,7 @@
                 <plugin id="AJAX" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="bee stuff">
+        <object-folder name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -101,7 +101,7 @@
                         <behavior id="Bullet" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
                         <frame duration="1" hotspotX="0.74026" hotspotY="0.828125" />
                         <frame duration="1" hotspotX="0.723404" hotspotY="0.807407" />
@@ -110,7 +110,7 @@
             </object-type>
             <object-type name="beeCollectZone" sid="8514725442516342">
                 <plugin id="Sprite" />
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1705140010114099" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -123,7 +123,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6993862622659614" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
@@ -148,7 +148,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0">
                             <image-point name="bee spawn" x="0.516" y="0.7" />
@@ -157,7 +157,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="textboxes">
+        <object-folder name="textboxes">
             <object-type name="plus1" sid="9026095487772363">
                 <plugin id="Text" />
                 <behaviors>
@@ -173,7 +173,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="factory stuff">
+        <object-folder name="factory stuff">
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -188,7 +188,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
                         <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
                     </animation>
@@ -201,7 +201,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5605835646574217" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.555556" />
                     </animation>
@@ -222,7 +222,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
                         <frame duration="1" hotspotX="0.508772" hotspotY="0.629268" />
@@ -236,7 +236,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9107196670659306" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0">
                             <image-point name="bee spawn" x="0.516" y="0.7" />
@@ -264,7 +264,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3322504650715733" speed="5">
                         <frame duration="1" hotspotX="0.502994" hotspotY="0.5" />
                     </animation>
@@ -289,7 +289,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6717182044711645" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.555556" />
                     </animation>
@@ -299,7 +299,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="notifications">
+        <object-folder name="notifications">
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -310,7 +310,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3571457017003339" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
@@ -338,7 +338,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="UI">
+        <object-folder name="UI">
             <object-type name="arrowCamera" sid="9018481897248055">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -349,7 +349,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6799261809530454" speed="5">
                         <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
                     </animation>
@@ -368,7 +368,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4781535449343194" speed="5">
                         <frame duration="1" hotspotX="0.502283" hotspotY="0.502283" />
                     </animation>
@@ -400,7 +400,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9558079890219215" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -413,7 +413,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
                         <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
                     </animation>
@@ -432,7 +432,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801973543682937" speed="5">
                         <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
                     </animation>
@@ -463,7 +463,7 @@
                 </behaviors>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="props">
+        <object-folder name="props">
             <object-type name="solidBloc" sid="3710229597765973">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -474,7 +474,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4478074572537306" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -487,7 +487,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914258321610921" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -512,14 +512,14 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830266739533531" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="verachou">
+        <object-folder name="verachou">
             <object-type name="verachou" sid="345317527254927">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -548,7 +548,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
                         <frame duration="1" hotspotX="0.501639" hotspotY="0.5" />
                     </animation>
@@ -583,7 +583,7 @@
             </object-type>
             <object-type name="verachouFeedBtn" sid="1869117220261939">
                 <plugin id="Sprite" />
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8507912904868358" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -591,7 +591,7 @@
             </object-type>
             <object-type name="verachouStudyBtn" sid="6506717338388186">
                 <plugin id="Sprite" />
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1700243232574993" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -602,7 +602,7 @@
                 <instance-variables>
                     <instance-variable name="nb" sid="1112557148176972" type="number" />
                 </instance-variables>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="9290783877406575" speed="5">
                         <frame duration="1" hotspotX="0.509009" hotspotY="0.82" />
                     </animation>
@@ -617,7 +617,7 @@
                     <instance-variable name="nb" sid="1867126846187975" type="number" />
                     <instance-variable name="type" sid="8525387831059956" type="string" />
                 </instance-variables>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="5656164001952044" speed="5">
                         <frame duration="1" hotspotX="0.508772" hotspotY="0.431579" />
                     </animation>
@@ -634,7 +634,7 @@
                 <instance-variables>
                     <instance-variable name="turnedOn" sid="3718597580846417" type="boolean" />
                 </instance-variables>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="8727848375741922" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -645,7 +645,7 @@
             </object-type>
             <object-type name="verachouGrowBtn" sid="761117717822557">
                 <plugin id="Sprite" />
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330031687124053" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -653,7 +653,7 @@
             </object-type>
             <object-type name="verachouEggIcon" sid="1822700665624996">
                 <plugin id="Sprite" />
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339122616548337" speed="5">
                         <frame duration="1" hotspotX="0.66" hotspotY="0.5" />
                     </animation>
@@ -666,7 +666,7 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806741008849285" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -689,7 +689,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="purchase popup">
+        <object-folder name="purchase popup">
             <object-type name="purchasePopup" sid="269146194465256">
                 <plugin id="NinePatch" />
                 <container>
@@ -751,7 +751,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="menhir">
+        <object-folder name="menhir">
             <object-type name="menhir" sid="1702331039481137">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -766,7 +766,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3215945281272706" speed="2">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
                             <collision-poly>
@@ -791,7 +791,7 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="cabbages stuff">
+        <object-folder name="cabbages stuff">
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -808,7 +808,7 @@
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023358627610028" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
                             <collision-poly>
@@ -835,7 +835,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="lions">
+        <object-folder name="lions">
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -861,7 +861,7 @@
                     <type>lionGift</type>
                     <type>lionLevelUpIcon</type>
                 </container>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
                         <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
                     </animation>
@@ -934,7 +934,7 @@
                     <type>lionGift</type>
                     <type>lionLevelUpIcon</type>
                 </container>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8822494290821093" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
@@ -961,14 +961,14 @@
                     <type>lionGift</type>
                     <type>lionLevelUpIcon</type>
                 </container>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3035814222332729" speed="5">
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="trader">
+        <object-folder name="trader">
             <object-type name="traderTxt" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
@@ -994,7 +994,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="quests">
+        <object-folder name="quests">
             <object-type global="1" name="quests" sid="6221647988755415">
                 <plugin id="Arr" />
                 <instance-variables>
@@ -1030,7 +1030,7 @@
                 <instance-variables>
                     <instance-variable name="nb" sid="624509774830988" type="number" />
                 </instance-variables>
-                <animation-folder expanded="1">
+                <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101373270952746" speed="5">
                         <frame duration="1" hotspotX="0.659459" hotspotY="0.642857" />
                     </animation>
@@ -1050,7 +1050,7 @@
                     <behavior id="Persist" />
                 </behavior-type>
             </behaviors>
-            <animation-folder expanded="1">
+            <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9175592382971256" speed="5">
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.607843" />
                 </animation>
@@ -1078,34 +1078,38 @@
             </instance-variables>
         </family>
     </families>
-    <layout-folder expanded="1">
-        <layout-folder expanded="0" name="menus">
+    <layout-folder>
+        <layout-folder name="menus">
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
             <layout>create new game.xml</layout>
         </layout-folder>
-        <layout-folder expanded="0" name="old or useless">
+        <layout-folder name="old or useless">
             <layout>gameplay (old).xml</layout>
             <layout>spawned objects.xml</layout>
+        </layout-folder>
+        <layout-folder name="global layers">
+            <layout>notifications bar.xml</layout>
+            <layout>purchase popup.xml</layout>
         </layout-folder>
         <layout>Verachou.xml</layout>
         <layout>lions.xml</layout>
         <layout>factory.xml</layout>
         <layout>quests.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
-        <event-folder expanded="1" name="factory">
+    <event-folder>
+        <event-folder name="factory">
             <event-sheet>factory events.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="0" name="verachou">
+        <event-folder name="verachou">
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="lions">
+        <event-folder name="lions">
             <event-sheet>lions events.xml</event-sheet>
         </event-folder>
-        <event-folder expanded="1" name="menus">
+        <event-folder name="menus">
             <event-sheet>savefile error events.xml</event-sheet>
             <event-sheet>manual loading events.xml</event-sheet>
             <event-sheet>intro events.xml</event-sheet>
@@ -1128,10 +1132,10 @@
         <global-instance type="Keyboard" uid="40" />
         <global-instance type="AJAX" uid="42" />
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
-    <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

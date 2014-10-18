@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="salads" sid="1138619170543519" static="0" type="number">0</variable>
         <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
-        <event-group collapsed="1" description="" sid="8286149581313041" title="camera">
+        <event-group description="" sid="8286149581313041" title="camera">
             <sub-events>
                 <event-block sid="7452036870298714">
                     <conditions>
@@ -57,9 +57,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5809538651794419" title="Notifications">
+        <event-group description="" sid="5809538651794419" title="Notifications">
             <sub-events>
-                <event-group collapsed="1" description="" sid="3373127521768589" title="Silly notifications">
+                <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
                         <event-block sid="3637024882119976">
                             <conditions>
@@ -130,7 +130,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="7051194549149644" title="Notification box">
+                <event-group description="" sid="7051194549149644" title="Notification box">
                     <sub-events>
                         <event-block sid="4008492876518852">
                             <conditions>
@@ -372,7 +372,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4587465909699658" title="purchase popup">
+        <event-group description="" sid="4587465909699658" title="purchase popup">
             <sub-events>
                 <event-block sid="6281950607139443">
                     <conditions>
@@ -480,7 +480,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8753415885884471">
+                <event-block sid="8753415885884471">
                     <conditions>
                         <condition id="0" name="On function" sid="230964524770024" type="Function">
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
@@ -651,7 +651,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3740395054702946" title="debug">
+        <event-group description="" sid="3740395054702946" title="debug">
             <sub-events>
                 <event-block sid="9230813409032216">
                     <conditions>
@@ -794,7 +794,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1518877078274311" title="time tracking">
+        <event-group description="" sid="1518877078274311" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
                 <variable constant="0" name="totalTime" sid="2557565007336424" static="1" type="number">0</variable>
@@ -839,7 +839,7 @@
                     </actions>
                 </event-block>
                 <comment>Debug shortcut</comment>
-                <event-block collapsed="1" sid="5490210380852038">
+                <event-block sid="5490210380852038">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="4926763517407425" type="System" />
                     </conditions>
@@ -921,7 +921,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3791512196189419" title="stats tracker">
+        <event-group description="" sid="3791512196189419" title="stats tracker">
             <sub-events>
                 <event-block sid="5582069448512238">
                     <conditions>
@@ -1493,7 +1493,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1941189896919642" title="item management functions">
+        <event-group description="" sid="1941189896919642" title="item management functions">
             <sub-events>
                 <event-block sid="8859242035702622">
                     <conditions>
