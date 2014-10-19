@@ -930,7 +930,7 @@
                 </instance>
                 <instance type="traderTxt" uid="217">
                     <properties>
-                        <text>Create veggie burger with eggs</text>
+                        <text>veggie burger with eggs</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -996,7 +996,7 @@
                 </instance>
                 <instance type="traderTxt" uid="219">
                     <properties>
-                        <text>Create tofu steakwith tofu</text>
+                        <text>tofu steakwith tofu</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1032,7 +1032,7 @@
                 </instance>
                 <instance type="traderTxt" uid="220">
                     <properties>
-                        <text>Create salads with lion poop</text>
+                        <text>salads with lion poop</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1068,7 +1068,7 @@
                 </instance>
                 <instance type="traderTxt" uid="221">
                     <properties>
-                        <text>Create tofu steak from veggie burger</text>
+                        <text>tofu steak from veggie burger</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1104,7 +1104,7 @@
                 </instance>
                 <instance type="traderTxt" uid="222">
                     <properties>
-                        <text>Create xxxxxxxxx with yyyyyyyyy</text>
+                        <text>placeholder</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>

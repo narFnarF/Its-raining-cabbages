@@ -685,7 +685,10 @@
                         <condition id="3" name="On touched object" sid="1964020888824892" type="Touch">
                             <param id="0" name="Object">traderTxt</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="41187694723071" type="traderTxt" />
+                        <condition id="-10" name="Compare opacity" sid="41187694723071" type="traderTxt">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
                         <condition id="4" inverted="1" name="Is touching object" sid="797895827098134" type="Touch">
                             <param id="0" name="Object">notificationBox</param>
                         </condition>
@@ -745,11 +748,17 @@
                         <event-block sid="6139000933248842">
                             <conditions />
                             <actions>
-                                <action id="-15" name="Set visible" sid="1163258078147171" type="traderTxt">
+                                <action disabled="1" id="-15" name="Set visible" sid="1163258078147171" type="traderTxt">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="5366740981932467" type="traderBg">
+                                <action id="-16" name="Set opacity" sid="4783170809078315" type="traderTxt">
+                                    <param id="0" name="Opacity">30</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="5366740981932467" type="traderBg">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4263265633506565" type="traderBg">
+                                    <param id="0" name="Opacity">30</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -767,11 +776,17 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="4818095063094279" type="traderTxt">
+                                        <action disabled="1" id="-15" name="Set visible" sid="4818095063094279" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="7910481850776827" type="traderBg">
+                                        <action disabled="1" id="-15" name="Set visible" sid="7910481850776827" type="traderBg">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1628707141993954" type="traderTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3981116374128811" type="traderBg">
+                                            <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -784,11 +799,17 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="9232822429975491" type="traderTxt">
+                                        <action disabled="1" id="-15" name="Set visible" sid="9232822429975491" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="1046038695352768" type="traderBg">
+                                        <action disabled="1" id="-15" name="Set visible" sid="1046038695352768" type="traderBg">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="812560686496585" type="traderTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="8057078556505454" type="traderBg">
+                                            <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -806,11 +827,17 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="7579484827464714" type="traderTxt">
+                                        <action disabled="1" id="-15" name="Set visible" sid="7579484827464714" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="3305634149331586" type="traderBg">
+                                        <action disabled="1" id="-15" name="Set visible" sid="3305634149331586" type="traderBg">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1815159258567452" type="traderTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="8576615757716793" type="traderBg">
+                                            <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -831,11 +858,17 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="7532409093500833" type="traderTxt">
+                                        <action disabled="1" id="-15" name="Set visible" sid="7532409093500833" type="traderTxt">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="1395096652153999" type="traderBg">
+                                        <action disabled="1" id="-15" name="Set visible" sid="1395096652153999" type="traderBg">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3617151543275878" type="traderTxt">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="7729954359718138" type="traderBg">
+                                            <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
