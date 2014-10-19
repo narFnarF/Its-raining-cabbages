@@ -1310,7 +1310,7 @@
                         <condition id="7" name="Compare size" sid="2186805991011497" type="questsActive">
                             <param id="0" name="Axis">0</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">3</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions />
