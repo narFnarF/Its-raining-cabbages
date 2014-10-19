@@ -1099,15 +1099,9 @@
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-folder name="factory">
-            <event-sheet>factory events.xml</event-sheet>
-        </event-folder>
         <event-folder name="verachou">
             <event-sheet>verachou.xml</event-sheet>
             <event-sheet>verachou main.xml</event-sheet>
-        </event-folder>
-        <event-folder name="lions">
-            <event-sheet>lions events.xml</event-sheet>
         </event-folder>
         <event-folder name="menus">
             <event-sheet>savefile error events.xml</event-sheet>
@@ -1115,10 +1109,16 @@
             <event-sheet>intro events.xml</event-sheet>
             <event-sheet>create new game events.xml</event-sheet>
         </event-folder>
-        <event-sheet>v1 events.xml</event-sheet>
-        <event-sheet>global events.xml</event-sheet>
-        <event-sheet>gameplay stuff.xml</event-sheet>
+        <event-folder name="old">
+            <event-sheet>v1 events.xml</event-sheet>
+        </event-folder>
+        <event-folder name="general">
+            <event-sheet>gameplay stuff.xml</event-sheet>
+            <event-sheet>global events.xml</event-sheet>
+        </event-folder>
         <event-sheet>quests screen.xml</event-sheet>
+        <event-sheet>factory events.xml</event-sheet>
+        <event-sheet>lions events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
