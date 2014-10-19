@@ -651,6 +651,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -785,6 +788,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -811,6 +817,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -837,6 +846,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -863,6 +875,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -895,6 +910,9 @@
                         <payWhat>eggs</payWhat>
                         <payHowMuch>400</payHowMuch>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -955,6 +973,9 @@
                         <payWhat>Tofu</payWhat>
                         <payHowMuch>3</payHowMuch>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -984,10 +1005,13 @@
                     </properties>
                     <instance-variables>
                         <receiveWhat>salads</receiveWhat>
-                        <receiveHowMany>15000</receiveHowMany>
-                        <payWhat>Useless lion poop</payWhat>
-                        <payHowMuch>10</payHowMuch>
+                        <receiveHowMany>7000</receiveHowMany>
+                        <payWhat>lion poop</payWhat>
+                        <payHowMuch>5</payHowMuch>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1021,6 +1045,9 @@
                         <payWhat>Veggie burger</payWhat>
                         <payHowMuch>1</payHowMuch>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1054,6 +1081,9 @@
                         <payWhat>placeholder</payWhat>
                         <payHowMuch>99999999</payHowMuch>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1293,6 +1323,36 @@
                     <world>
                         <x>1218</x>
                         <y>931</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FPSTxt" uid="326">
+                    <properties>
+                        <text>FPS 60</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1210</x>
+                        <y>1932</y>
                         <z>0</z>
                         <width>100</width>
                         <height>26</height>

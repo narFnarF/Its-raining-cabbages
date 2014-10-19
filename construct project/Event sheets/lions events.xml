@@ -337,9 +337,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
+                                <action id="5" name="Push" sid="9339451897100293" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;Useless lion poop&quot;</param>
+                                    <param id="1" name="Value">&quot;pills&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>
@@ -353,25 +353,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="9339451897100293" type="lionRandomItems">
+                                <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;cucumber cut lenghtwise&quot;</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7076937583666608">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8720167481579013" type="lion">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="590681542246521" type="lionRandomItems">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;ta mère en short&quot;</param>
+                                    <param id="1" name="Value">&quot;lion poop&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>

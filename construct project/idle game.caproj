@@ -977,6 +977,11 @@
                     <instance-variable name="payWhat" sid="3103701344531354" type="string" />
                     <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="682004431540147">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>traderTxt</type>
                     <type>traderBg</type>
@@ -987,6 +992,11 @@
             </object-type>
             <object-type name="traderBg" sid="669454111504386">
                 <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8956811240957274">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>traderTxt</type>
                     <type>traderBg</type>
