@@ -687,7 +687,7 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="3615162190377486" type="traderTxt">
-                            <param id="0" name="Text">&quot;Craft &quot; &amp; traderTxt.receiveWhat &amp; &quot; from &quot; &amp; traderTxt.payWhat</param>
+                            <param id="0" name="Text">traderTxt.receiveWhat &amp; &quot; (from &quot; &amp; traderTxt.payWhat &amp; &quot;)&quot;</param>
                         </action>
                     </actions>
                 </event-block>
