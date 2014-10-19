@@ -460,6 +460,9 @@
                         <action id="1" name="Append text" sid="8726920358585833" type="globalStats">
                             <param id="0" name="Text">&quot;Eggs: &quot; &amp; eggs &amp; newline</param>
                         </action>
+                        <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
+                            <param id="0" name="Text">&quot;Honey: &quot; &amp; inventory.Get(&quot;honey&quot;) &amp; newline</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
@@ -559,7 +562,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1962647449018996" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}ceil( 3.3^(menhir.level) ){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}round( menhir.level*1.5 ){###}&quot;pills&quot;{###}&quot;Enlarge with &quot;</param>
                         </action>
                         <action disabled="1" id="14" name="Log" sid="6671955709198882" type="Browser">
                             <param id="0" name="Type">0</param>
@@ -1026,7 +1029,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8243264933951822" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (400*bee.level)) * bee.nb )</param>
+                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb - (400*bee.level/bee.nb) )</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6673935572017718" type="btnBee">
                                     <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp;btnBee.cost &amp; &quot; salads&quot;</param>

@@ -1583,9 +1583,9 @@
                                     <param id="0" name="Key">item</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="5214320153357471" type="System">
-                                    <param id="0" name="First value">0</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">quantity</param>
+                                    <param id="0" name="First value">quantity</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1636,6 +1636,7 @@
                         </event-block>
                         <event-block sid="2534870820465872">
                             <conditions>
+                                <condition id="-22" name="Else" sid="6846872788613824" type="System" />
                                 <condition id="-8" name="Compare two values" sid="7669358443968965" type="System">
                                     <param id="0" name="First value">item</param>
                                     <param id="1" name="Comparison">0</param>
@@ -1651,16 +1652,7 @@
                         </event-block>
                         <event-block sid="7379876529632552">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="1686760117414181" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;salads&quot;</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="5836822982254876" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="1620452560088434" type="System" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Add key" sid="4214430299669004" type="inventory">
@@ -1687,288 +1679,314 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="6105023249146346">
-            <conditions>
-                <condition id="0" name="On function" sid="8088174606694421" type="Function">
-                    <param id="0" name="Name">&quot;get level of&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="7148030219305508" title="function get leve of and its dictionary">
             <sub-events>
-                <variable constant="0" name="object" sid="2145611276388691" static="0" type="text"></variable>
-                <variable constant="0" name="nb" sid="5592120697360917" static="0" type="number">-1</variable>
-                <event-block sid="6741069435664433">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="9594205768738647" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="1" name="Set return value" sid="7509772723724441" type="Function">
-                            <param id="0" name="Value">-1</param>
-                        </action>
-                    </actions>
+                <event-block sid="6105023249146346">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8088174606694421" type="Function">
+                            <param id="0" name="Name">&quot;get level of&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="100407930723748">
+                        <variable constant="0" name="object" sid="2145611276388691" static="0" type="text"></variable>
+                        <variable constant="0" name="nb" sid="5592120697360917" static="0" type="number">-1</variable>
+                        <event-block sid="6741069435664433">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="9594205768738647" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="7509772723724441" type="Function">
+                                    <param id="0" name="Value">-1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="100407930723748">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8438994998921181" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="771746848430093" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1535992007116009">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="8438994998921181" type="System">
-                                    <param id="0" name="First value">Function.ParamCount</param>
+                                <condition id="3" name="Has key" sid="883219810443798" type="levelOfStuff">
+                                    <param id="0" name="Key">object</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="7185154898714743" type="Function">
+                                    <param id="0" name="Value">levelOfStuff.Get(object)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1717747152960079">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="1947450560009714" type="levelOfStuff">
+                                    <param id="0" name="Key">object &amp; nb</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="1311832726067814" type="Function">
+                                    <param id="0" name="Value">levelOfStuff.Get(object &amp; nb)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>To help with the quest completion stuff, this function can also return the level of stuff based on the name of a quest</comment>
+                        <event-block sid="9026088407009179">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9316540485864289" type="System">
+                                    <param id="0" name="Variable">object</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">2</param>
+                                    <param id="2" name="Value">&quot;upgraded silo&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="771746848430093" type="System">
-                                    <param id="0" name="Variable">nb</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
+                                <action id="1" name="Set return value" sid="8723062000059482" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;silo&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="1535992007116009">
-                    <conditions>
-                        <condition id="3" name="Has key" sid="883219810443798" type="levelOfStuff">
-                            <param id="0" name="Key">object</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="7185154898714743" type="Function">
-                            <param id="0" name="Value">levelOfStuff.Get(object)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1717747152960079">
-                    <conditions>
-                        <condition id="3" name="Has key" sid="1947450560009714" type="levelOfStuff">
-                            <param id="0" name="Key">object &amp; nb</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="1311832726067814" type="Function">
-                            <param id="0" name="Value">levelOfStuff.Get(object &amp; nb)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>To help with the quest completion stuff, this function can also return the level of stuff based on the name of a quest</comment>
-                <event-block sid="9026088407009179">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="9316540485864289" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;upgraded silo&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="8723062000059482" type="Function">
-                            <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;silo&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7265010664547577">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="5448901889741325" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;upgraded factory&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="7532117780558454" type="Function">
-                            <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;factory&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2105659679029794">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6848396159697176" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;menhir enlarged&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="9329806535538864" type="Function">
-                            <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9628334661304474">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8852055228920513" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="highestLevel" sid="2624533079751197" static="0" type="number">0</variable>
-                        <event-block sid="9596325029552226">
+                        <event-block sid="7265010664547577">
                             <conditions>
-                                <condition id="-10" name="For" sid="1454963003510416" type="System">
-                                    <param id="0" name="Name">&quot;for each bees&quot;</param>
-                                    <param id="1" name="Start index">1</param>
-                                    <param id="2" name="End index">4</param>
+                                <condition id="-14" name="Compare variable" sid="5448901889741325" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;upgraded factory&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="6183630558782614" type="System">
-                                    <param id="0" name="Variable">highestLevel</param>
-                                    <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;bee&quot; &amp; loopindex) )</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="7603576844309118" type="Function">
-                                    <param id="0" name="Value">highestLevel</param>
+                                <action id="1" name="Set return value" sid="7532117780558454" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;factory&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="9117511579861545">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="5786252756778454" type="System">
-                            <param id="0" name="Variable">object</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="highestLevel" sid="5325541339066129" static="0" type="number">0</variable>
-                        <event-block sid="7092151855011318">
+                        <event-block sid="2105659679029794">
                             <conditions>
-                                <condition id="-10" name="For" sid="9314038853399669" type="System">
-                                    <param id="0" name="Name">&quot;for each lion&quot;</param>
-                                    <param id="1" name="Start index">0</param>
-                                    <param id="2" name="End index">3</param>
+                                <condition id="-14" name="Compare variable" sid="6848396159697176" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;menhir enlarged&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="9186243550368853" type="System">
-                                    <param id="0" name="Variable">highestLevel</param>
-                                    <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;lion&quot; &amp; loopindex) )</param>
+                                <action id="1" name="Set return value" sid="9329806535538864" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
                                 </action>
-                                <action id="1" name="Set return value" sid="2019375538894794" type="Function">
-                                    <param id="0" name="Value">highestLevel</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9628334661304474">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8852055228920513" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="highestLevel" sid="2624533079751197" static="0" type="number">0</variable>
+                                <event-block sid="9596325029552226">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="1454963003510416" type="System">
+                                            <param id="0" name="Name">&quot;for each bees&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6183630558782614" type="System">
+                                            <param id="0" name="Variable">highestLevel</param>
+                                            <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;bee&quot; &amp; loopindex) )</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="7603576844309118" type="Function">
+                                            <param id="0" name="Value">highestLevel</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9117511579861545">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5786252756778454" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="highestLevel" sid="5325541339066129" static="0" type="number">0</variable>
+                                <event-block sid="7092151855011318">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="9314038853399669" type="System">
+                                            <param id="0" name="Name">&quot;for each lion&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9186243550368853" type="System">
+                                            <param id="0" name="Variable">highestLevel</param>
+                                            <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;lion&quot; &amp; loopindex) )</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="2019375538894794" type="Function">
+                                            <param id="0" name="Value">highestLevel</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Update the LevelOfStuff dictionary</comment>
+                <event-block sid="6830528871241407">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="5938351330377128" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9406243201150277">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="9031236324583072" type="System">
+                                    <param id="0" name="Object">factory</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="6742326153993212" type="levelOfStuff">
+                                    <param id="0" name="Key">&quot;factory&quot;</param>
+                                    <param id="1" name="Value">factory.level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1918155221784874">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="8416695208209997" type="System">
+                                    <param id="0" name="Object">silo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="2188889443211175" type="levelOfStuff">
+                                    <param id="0" name="Key">&quot;silo&quot;</param>
+                                    <param id="1" name="Value">silo.level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5833652691380659">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="4723624388329408" type="System">
+                                    <param id="0" name="Object">menhir</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5932998015495405" type="levelOfStuff">
+                                    <param id="0" name="Key">&quot;menhir&quot;</param>
+                                    <param id="1" name="Value">menhir.level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8658175083266432">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="2323743621268645" type="System">
+                                    <param id="0" name="Object">bee</param>
+                                    <param id="1" name="Expression">bee.nb</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="8247119183006444" type="levelOfStuff">
+                                    <param id="0" name="Key">&quot;bee&quot; &amp; bee.nb</param>
+                                    <param id="1" name="Value">bee.level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9522629178490693">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="9041256989344952" type="System">
+                                    <param id="0" name="Object">lion</param>
+                                    <param id="1" name="Expression">lion.nb</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="3236785143223637" type="levelOfStuff">
+                                    <param id="0" name="Key">&quot;lion&quot; &amp; lion.nb</param>
+                                    <param id="1" name="Value">lion.level</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <comment>Update the LevelOfStuff dictionary</comment>
-        <event-block sid="6830528871241407">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="5938351330377128" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9406243201150277">
-                    <conditions>
-                        <condition id="-19" name="Pick all" sid="9031236324583072" type="System">
-                            <param id="0" name="Object">factory</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="6742326153993212" type="levelOfStuff">
-                            <param id="0" name="Key">&quot;factory&quot;</param>
-                            <param id="1" name="Value">factory.level</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1918155221784874">
-                    <conditions>
-                        <condition id="-19" name="Pick all" sid="8416695208209997" type="System">
-                            <param id="0" name="Object">silo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="2188889443211175" type="levelOfStuff">
-                            <param id="0" name="Key">&quot;silo&quot;</param>
-                            <param id="1" name="Value">silo.level</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5833652691380659">
-                    <conditions>
-                        <condition id="-19" name="Pick all" sid="4723624388329408" type="System">
-                            <param id="0" name="Object">menhir</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="5932998015495405" type="levelOfStuff">
-                            <param id="0" name="Key">&quot;menhir&quot;</param>
-                            <param id="1" name="Value">menhir.level</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8658175083266432">
-                    <conditions>
-                        <condition id="-24" name="For Each (ordered)" sid="2323743621268645" type="System">
-                            <param id="0" name="Object">bee</param>
-                            <param id="1" name="Expression">bee.nb</param>
-                            <param id="2" name="Order">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="8247119183006444" type="levelOfStuff">
-                            <param id="0" name="Key">&quot;bee&quot; &amp; bee.nb</param>
-                            <param id="1" name="Value">bee.level</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9522629178490693">
-                    <conditions>
-                        <condition id="-24" name="For Each (ordered)" sid="9041256989344952" type="System">
-                            <param id="0" name="Object">lion</param>
-                            <param id="1" name="Expression">lion.nb</param>
-                            <param id="2" name="Order">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="3236785143223637" type="levelOfStuff">
-                            <param id="0" name="Key">&quot;lion&quot; &amp; lion.nb</param>
-                            <param id="1" name="Value">lion.level</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
+        </event-group>
         <variable constant="0" name="test" sid="2451419822543461" static="0" type="text"></variable>
-        <event-block sid="7857195039675063">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="14" name="Log" sid="7356427173954862" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
-                </action>
-                <action id="14" name="Log" sid="603900117967642" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
-                </action>
-            </actions>
+        <event-group description="" sid="8627174315040763" title="Test">
             <sub-events>
-                <event-block disabled="1" sid="1219178643564598">
+                <event-block sid="7857195039675063">
                     <conditions>
-                        <condition id="-10" name="For" sid="4669707959666479" type="System">
-                            <param id="0" name="Name">&quot;for testing&quot;</param>
-                            <param id="1" name="Start index">0.1</param>
-                            <param id="2" name="End index">0.5</param>
+                        <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-18" name="Is in preview" sid="9352069562153163" type="System" />
+                        <condition id="-14" inverted="1" name="Compare variable" sid="1921318754708944" type="System">
+                            <param id="0" name="Variable">test</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="2178742663360152" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="7356427173954862" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">loopindex</param>
+                            <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="603900117967642" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
+                        </action>
+                        <action id="14" name="Log" sid="9045593110141554" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;get 1 &quot; &amp; test</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3840601818182724" type="Function">
+                            <param id="0" name="Name">&quot;get items&quot;</param>
+                            <param id="1" name="Parameter {n}">test{###}1</param>
+                        </action>
+                        <action id="14" name="Log" sid="6718811485714455" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Has enough 5 &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;has enough&quot;, test, 5)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="1219178643564598">
+                            <conditions>
+                                <condition id="-10" name="For" sid="4669707959666479" type="System">
+                                    <param id="0" name="Name">&quot;for testing&quot;</param>
+                                    <param id="1" name="Start index">0.1</param>
+                                    <param id="2" name="End index">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="2178742663360152" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">loopindex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
