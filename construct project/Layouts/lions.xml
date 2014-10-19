@@ -930,7 +930,7 @@
                 </instance>
                 <instance type="traderTxt" uid="217">
                     <properties>
-                        <text>veggie burger with eggs</text>
+                        <text>veggie burger (from tofu steak)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -943,8 +943,8 @@
                     <instance-variables>
                         <receiveWhat>Veggie burger</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
-                        <payWhat>eggs</payWhat>
-                        <payHowMuch>400</payHowMuch>
+                        <payWhat>Tofu steak</payWhat>
+                        <payHowMuch>5</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -996,7 +996,7 @@
                 </instance>
                 <instance type="traderTxt" uid="219">
                     <properties>
-                        <text>tofu steakwith tofu</text>
+                        <text>tofu steak (from tofu)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1032,7 +1032,7 @@
                 </instance>
                 <instance type="traderTxt" uid="220">
                     <properties>
-                        <text>salads with lion poop</text>
+                        <text>salads (from lion poop)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1068,7 +1068,7 @@
                 </instance>
                 <instance type="traderTxt" uid="221">
                     <properties>
-                        <text>tofu steak from veggie burger</text>
+                        <text>tofu steak (from veggie burger)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
