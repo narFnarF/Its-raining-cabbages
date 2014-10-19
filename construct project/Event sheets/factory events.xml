@@ -1002,10 +1002,10 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="9354096091450153" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">10^bee.nb*2</param>
+                                    <param id="1" name="Value">round( 10^(bee.nb-1)/3 )</param>
                                 </action>
                                 <action id="0" name="Set text" sid="4373928098048421" type="btnBee">
-                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.nb &amp; newline &amp; &quot;Cost: &quot; &amp; btnBee.cost</param>
+                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.nb &amp; newline &amp; &quot;Cost: &quot; &amp; btnBee.cost &amp; &quot; honey&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1026,10 +1026,10 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8243264933951822" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">round( (2.5^(bee.level*0.7) + (400*bee.level)) * bee.nb )</param>
+                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (400*bee.level)) * bee.nb )</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6673935572017718" type="btnBee">
-                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp;btnBee.cost</param>
+                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp;btnBee.cost &amp; &quot; salads&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1075,7 +1075,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="2569579425709768" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;buy bee&quot;{###}&quot;Wanna buy a bee?&quot; &amp; newline &amp; &quot;(Bee&apos;s be like &apos;&apos;bzz bzz!&apos;&apos;)&quot;{###}btnBee.cost{###}&quot;salads&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
+                                    <param id="1" name="Parameter {n}">&quot;buy bee&quot;{###}&quot;Wanna buy a bee?&quot; &amp; newline &amp; &quot;(Bee&apos;s be like &apos;&apos;bzz bzz!&apos;&apos;)&quot;{###}btnBee.cost{###}&quot;honey&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
                                 </action>
                             </actions>
                         </event-block>
