@@ -881,6 +881,11 @@
             </object-type>
             <object-type name="lionBtn" sid="5989880898955489">
                 <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9363507014872155">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
@@ -893,6 +898,11 @@
             </object-type>
             <object-type name="lionBtnTxt" sid="9902903114487378">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6667317526628925">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
@@ -915,6 +925,11 @@
             </object-type>
             <object-type name="lionStatsTxt" sid="3154089353528074">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8219478190353372">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
@@ -926,6 +941,11 @@
             </object-type>
             <object-type name="lionGift" sid="6505178483040949">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1898658030584963">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
@@ -953,6 +973,11 @@
             </object-type>
             <object-type name="lionLevelUpIcon" sid="3292323360026143">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="2772117969696449">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>lion</type>
                     <type>lionBtnTxt</type>
@@ -989,6 +1014,11 @@
             </object-type>
             <object-type name="traderTitle" sid="9400254462319746">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="4749103759458342">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="traderBg" sid="669454111504386">
                 <plugin id="NinePatch" />
