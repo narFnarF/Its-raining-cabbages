@@ -705,7 +705,7 @@
                                     <param id="1" name="Value">1000</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5847947475852701" type="Function">
-                                    <param id="0" name="Name">&quot;get item&quot;</param>
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;tofu&quot;{###}5</param>
                                 </action>
                                 <action id="0" name="Call function" sid="6486740256561329" type="Function">
@@ -714,31 +714,10 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8706205130019801">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
-                                    <param id="0" name="Key">87 (W)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="0" name="Add key" sid="6171091854646525" type="inventory">
-                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
-                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) + 5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="5831153994775529" type="Function">
-                                    <param id="0" name="Name">&quot;get item&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="646716529375489">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="789024940462099" type="Keyboard">
-                                    <param id="0" name="Key">69 (E)</param>
+                                    <param id="0" name="Key">87 (W)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -751,9 +730,40 @@
                                     <param id="1" name="Parameter {n}">&quot;debug 5 tofu steak&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9608158545745486" type="Function">
-                                    <param id="0" name="Name">&quot;get item&quot;</param>
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}5</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8706205130019801">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Add key" sid="6171091854646525" type="inventory">
+                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
+                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) + 5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5831153994775529" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="199859905082622">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
+                                    <param id="0" name="Key">82 (R)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
                             </actions>
                         </event-block>
                         <event-block sid="2673550343140702">
@@ -774,16 +784,6 @@
                                     <param id="1" name="Angle">-90</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="199859905082622">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
-                                    <param id="0" name="Key">82 (R)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
                             </actions>
                         </event-block>
                         <event-block sid="3793089828323068">
