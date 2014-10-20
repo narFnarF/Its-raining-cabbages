@@ -941,9 +941,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>Veggie burger</receiveWhat>
+                        <receiveWhat>veggie burger</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
-                        <payWhat>Tofu steak</payWhat>
+                        <payWhat>tofu steak</payWhat>
                         <payHowMuch>5</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
@@ -1007,9 +1007,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>Tofu steak</receiveWhat>
+                        <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
-                        <payWhat>Tofu</payWhat>
+                        <payWhat>tofu</payWhat>
                         <payHowMuch>3</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
@@ -1079,9 +1079,9 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>Tofu steak</receiveWhat>
+                        <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>5</receiveHowMany>
-                        <payWhat>Veggie burger</payWhat>
+                        <payWhat>veggie burger</payWhat>
                         <payHowMuch>1</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
@@ -1104,7 +1104,7 @@
                 </instance>
                 <instance type="traderTxt" uid="222">
                     <properties>
-                        <text>placeholder</text>
+                        <text>cucumber cut lenghtwise</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1115,7 +1115,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>placeholder</receiveWhat>
+                        <receiveWhat>cucumber cut lengthwise</receiveWhat>
                         <receiveHowMany>0</receiveHowMany>
                         <payWhat>placeholder</payWhat>
                         <payHowMuch>99999999</payHowMuch>
