@@ -13,15 +13,11 @@
             </conditions>
             <actions>
                 <action id="0" name="Add key" sid="6501734551172856" type="inventory">
-                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
+                    <param id="0" name="Key">&quot;veggie burger&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="0" name="Add key" sid="4925790438116597" type="inventory">
-                    <param id="0" name="Key">&quot;Tofu steak&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="2714943921733029" type="inventory">
-                    <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
+                    <param id="0" name="Key">&quot;tofu steak&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="4" name="Set animation" sid="1734872637507974" type="lion">
@@ -62,7 +58,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="9695966858525175" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;place burger&quot;{###}&quot;You want to place a veggie burger here?&quot;{###}1{###}&quot;Veggie burger&quot;{###}&quot;Place &quot;{###}lion.nb</param>
+                                    <param id="1" name="Parameter {n}">&quot;place burger&quot;{###}&quot;You want to place a veggie burger here?&quot;{###}1{###}&quot;veggie burger&quot;{###}&quot;Place &quot;{###}lion.nb</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -421,7 +417,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="731191703593424" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion so that it brings back more stuff from its missions&quot;{###}1*lion.level{###}&quot;Tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.nb</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion so that it brings back more stuff from its missions&quot;{###}1*lion.level{###}&quot;tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -611,12 +607,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="3338544908571421" type="lionLevelUpIcon">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-16" name="Set opacity" sid="3338544908571421" type="lionLevelUpIcon">
+                            <param id="0" name="Opacity">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="3464443409787382">
+                        <event-block sid="5299820201124791">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="381243711385724" type="lion">
                                     <param id="0" name="Instance variable">away</param>
@@ -630,17 +626,28 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="6571459701781667" type="lion">
                                     <param id="0" name="Animation">&quot;burger&quot;</param>
                                 </condition>
-                                <condition id="0" name="Compare value" sid="8607721108156146" type="inventory">
-                                    <param id="0" name="Key">&quot;Tofu steak&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">lion.level</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="356980430263744" type="lionLevelUpIcon">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-16" name="Set opacity" sid="2450797782384312" type="lionLevelUpIcon">
+                                    <param id="0" name="Opacity">10</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="3464443409787382">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8745652468282116" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;tofu steak&quot;, 1*lion.level)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;true&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="356980430263744" type="lionLevelUpIcon">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
