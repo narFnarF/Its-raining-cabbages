@@ -1043,7 +1043,7 @@
                                 <action id="3" name="Set at XY" sid="7713418871905295" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REQUIS</param>
-                                    <param id="2" name="Value">5000</param>
+                                    <param id="2" name="Value">1000</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="937403644824548" type="quests">
                                     <param id="0" name="X">0</param>
@@ -1053,7 +1053,7 @@
                                 <action id="3" name="Set at XY" sid="4611435518128285" type="quests">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">quests.REWARD_COMBIEN</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
