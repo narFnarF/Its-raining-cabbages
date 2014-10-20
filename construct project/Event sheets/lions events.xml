@@ -326,6 +326,11 @@
                                     <param id="1" name="Value">&quot;honey&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
+                                <action id="5" name="Push" sid="7508175935456881" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;tofu&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6750290611819817">
@@ -756,96 +761,6 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-group description="" inactive="1" sid="1120216034734431" title="old">
-                                    <sub-events>
-                                        <event-block sid="6604564446092534">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="6272491043020303" type="traderTxt">
-                                                    <param id="0" name="Instance variable">payWhat</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Useless lion poop&quot;</param>
-                                                </condition>
-                                                <condition disabled="1" id="0" name="Compare value" sid="8363541479433845" type="inventory">
-                                                    <param id="0" name="Key">&quot;Useless lion poop&quot;</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Value">9</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Set opacity" sid="1628707141993954" type="traderTxt">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="3981116374128811" type="traderBg">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="8980280911857299">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="4627153517448779" type="traderTxt">
-                                                    <param id="0" name="Instance variable">receiveWhat</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Veggie burger&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Set opacity" sid="812560686496585" type="traderTxt">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="8057078556505454" type="traderBg">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="6660161672704164">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="7524549797338785" type="traderTxt">
-                                                    <param id="0" name="Instance variable">receiveWhat</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Tofu steak&quot;</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="4889950246522772" type="traderTxt">
-                                                    <param id="0" name="Instance variable">payWhat</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Tofu&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Set opacity" sid="1815159258567452" type="traderTxt">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="8576615757716793" type="traderBg">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="3850387678898212">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="8675035546769433" type="traderTxt">
-                                                    <param id="0" name="Instance variable">payWhat</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Veggie burger&quot;</param>
-                                                </condition>
-                                                <condition id="2" inverted="1" name="Is playing" sid="1240764160900848" type="lion">
-                                                    <param id="0" name="Animation">&quot;vide&quot;</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="25922668259976" type="System">
-                                                    <param id="0" name="First value">lion.PickedCount</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">4</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Set opacity" sid="3617151543275878" type="traderTxt">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="7729954359718138" type="traderBg">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-group>
                                 <event-block sid="9582575824833593">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="9296108822785677" type="System">
