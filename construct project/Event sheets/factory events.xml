@@ -460,6 +460,9 @@
                         <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
                             <param id="0" name="Text">&quot;Honey: &quot; &amp; inventory.Get(&quot;honey&quot;) &amp; newline</param>
                         </action>
+                        <action id="1" name="Append text" sid="7549619855654483" type="globalStats">
+                            <param id="0" name="Text">&quot;Pills: &quot; &amp; inventory.Get(&quot;pills&quot;) &amp; newline</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
