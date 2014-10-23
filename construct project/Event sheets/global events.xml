@@ -111,6 +111,8 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>Permettre ou non de réutiliser une vieille savefile</comment>
+                        <variable constant="1" name="ALLOW_OLD_SAVEFILE" sid="7658853365759066" static="0" type="text">true</variable>
                         <event-block sid="5160525587991394">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="8796818999843201" type="System">
@@ -135,14 +137,27 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Version numbers are not matching. Upgrading from: &quot; &amp; versionNumberSaved</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="1277380685019034" type="System">
-                                    <param id="0" name="Layout">savefile error</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="9392244255693984" type="System">
                                     <param id="0" name="Variable">versionNumberSaved</param>
                                     <param id="1" name="Value">projectversion &amp; &quot; &quot; &amp; versionNumberSaved</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="337009768600983">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4630246646121986" type="System">
+                                            <param id="0" name="Variable">ALLOW_OLD_SAVEFILE</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;false&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1277380685019034" type="System">
+                                            <param id="0" name="Layout">savefile error</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
