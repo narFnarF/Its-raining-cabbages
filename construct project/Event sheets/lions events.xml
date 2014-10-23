@@ -412,6 +412,10 @@
                         <condition id="3" name="On touched object" sid="2047437592207103" type="Touch">
                             <param id="0" name="Object">lionLevelUpIcon</param>
                         </condition>
+                        <condition id="-10" name="Compare opacity" sid="4327920293646821" type="lionLevelUpIcon">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
                         <condition id="-9" name="Is visible" sid="98828735163449" type="lionLevelUpIcon" />
                     </conditions>
                     <actions>
