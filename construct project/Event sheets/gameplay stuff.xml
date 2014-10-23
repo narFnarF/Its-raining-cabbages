@@ -135,7 +135,7 @@
                 </event-group>
                 <event-group description="" sid="7051194549149644" title="Notification box">
                     <sub-events>
-                        <variable constant="0" name="speed" sid="2144318682713438" static="0" type="number">0.2</variable>
+                        <variable constant="0" name="speed" sid="2144318682713438" static="0" type="number">7</variable>
                         <variable constant="0" name="height" sid="7420510770361168" static="1" type="number">0</variable>
                         <event-block sid="6513635833184217">
                             <conditions>
@@ -156,7 +156,7 @@
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="4266076206128899" type="mask">
-                                    <param id="0" name="Height">lerp(mask.Height, 0, speed)</param>
+                                    <param id="0" name="Height">lerp(mask.Height, 0, speed*dt)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -168,7 +168,7 @@
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="6364752884756549" type="mask">
-                                    <param id="0" name="Height">lerp(mask.Height, height, speed)</param>
+                                    <param id="0" name="Height">lerp(mask.Height, height, speed*dt)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -188,6 +188,9 @@
                                         <action id="-13" name="Set boolean" sid="8072939171330745" type="notificationBox">
                                             <param id="0" name="Instance variable">open</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="7303911104780691" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
                                         </action>
                                         <action id="3" name="Set font size" sid="1334635638218858" type="notificationTxt">
                                             <param id="0" name="Size (pt)">18</param>
