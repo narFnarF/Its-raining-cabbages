@@ -558,6 +558,10 @@
                         <condition id="3" name="On touched object" sid="9851013573800295" type="Touch">
                             <param id="0" name="Object">menhir</param>
                         </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="7828259712455822" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5111521637168071" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="1962647449018996" type="Function">
@@ -808,6 +812,9 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="6596752157258402" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5720825913206453" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="4127942007554423" type="factory">
@@ -1059,6 +1066,9 @@
                             <param id="0" name="Object">btnBee</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="3268661961810302" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7422628616435672" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="5329670738527803" type="bee">
                             <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
@@ -1268,6 +1278,9 @@
                             <param id="0" name="Object">siloUpgradeBtn</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="6391134490151377" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9425196663599165" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="1739147492558582" type="Function">
@@ -1307,6 +1320,9 @@
                             <param id="0" name="Object">factoryUpgradeBtn</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="7111002657386647" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6968637382393077" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="4725828261511926" type="Function">

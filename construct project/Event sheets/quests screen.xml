@@ -179,6 +179,10 @@
                     <param id="0" name="Object">questCollectBtn</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="4128640568667899" type="questCollectBtn" />
+                <condition id="-9" inverted="1" name="Is visible" sid="3794623327599527" type="purchasePopup" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1508772461475354" type="notificationBox">
+                    <param id="0" name="Instance variable">open</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
