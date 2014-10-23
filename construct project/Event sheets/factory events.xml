@@ -18,7 +18,7 @@
                 </action>
                 <action id="0" name="Call function" sid="9452003913814785" type="Function">
                     <param id="0" name="Name">&quot;notification&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly ass game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms them into coleslaw salads. With salads, you can buy more bees, menhir enlargements and factory upgrades.&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sooo, you wanna play this silly game?&quot; &amp; newline &amp; &quot;Click here to expend this notification box.&quot; &amp; newline &amp; newline &amp; &quot;Cabbages are falling from the sky. The bees can collect them when they fall on the menhir. The factory transforms cabbages into salads. With salads, you can buy improvements to your factory. Also, catch lions and send them on mission to bring back stuff to improve your bees and menhir. Have fun!&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="2989521767212447" type="System">
                     <param id="0" name="Variable">eggs</param>

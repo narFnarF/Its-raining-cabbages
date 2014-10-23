@@ -122,12 +122,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9206526635970363">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="3288628066722548" type="System" />
-                            </conditions>
-                            <actions />
-                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="7051194549149644" title="Notification box">
@@ -1691,7 +1685,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7148030219305508" title="function get leve of and its dictionary">
+        <event-group description="" sid="7148030219305508" title="function Get Level Of, and its dictionary">
             <sub-events>
                 <event-block sid="6105023249146346">
                     <conditions>
