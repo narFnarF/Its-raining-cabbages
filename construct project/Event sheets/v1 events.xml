@@ -642,12 +642,9 @@
                         <event-block sid="4008492876518852">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="2614558667678372" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="1740071637189476" type="txtNotifications">
-                                    <param id="0" name="Instance variable">grand</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="2576115468900753" type="txtNotifications">
+                                <action id="-2" name="Set Y" sid="2576115468900753" type="notificationTxt">
                                     <param id="0" name="Y">23</param>
                                 </action>
                             </actions>
@@ -655,30 +652,30 @@
                         <event-block sid="1230529723461663">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="2690118603809105" type="notificationBox">
-                                    <param id="0" name="Instance variable">ouverte</param>
+                                    <param id="0" name="Instance variable">open</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="2335230733173366" type="notificationBox">
                                     <param id="0" name="Height">lerp(notificationBox.Height, screen.Height, 0.2)</param>
                                 </action>
-                                <action id="-6" name="Set height" sid="5248047263717285" type="txtNotifications">
-                                    <param id="0" name="Height">lerp(txtNotifications.Height, screen.Height, 0.2)</param>
+                                <action id="-6" name="Set height" sid="5248047263717285" type="notificationTxt">
+                                    <param id="0" name="Height">lerp(notificationTxt.Height, screen.Height, 0.2)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="9256392490111727">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4182422587160907" type="notificationBox">
-                                    <param id="0" name="Instance variable">ouverte</param>
+                                    <param id="0" name="Instance variable">open</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="2271114065119186" type="notificationBox">
                                     <param id="0" name="Height">lerp(notificationBox.Height, 73, 0.2)</param>
                                 </action>
-                                <action id="-6" name="Set height" sid="129026006207576" type="txtNotifications">
-                                    <param id="0" name="Height">lerp(txtNotifications.Height, 66, 0.2)</param>
+                                <action id="-6" name="Set height" sid="129026006207576" type="notificationTxt">
+                                    <param id="0" name="Height">lerp(notificationTxt.Height, 66, 0.2)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -693,36 +690,28 @@
                                 <event-block sid="3310808169397982">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7854924857770561" type="notificationBox">
-                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="0" name="Instance variable">open</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="5572289705858641" type="notificationBox">
-                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="0" name="Instance variable">open</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="3228668079021772">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="6064968522936261" type="txtNotifications">
-                                                    <param id="0" name="Instance variable">grand</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="9860001046856851" type="txtNotifications">
+                                                <action id="-15" name="Set visible" sid="9860001046856851" type="notificationTxt">
                                                     <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="2870772467017314">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143655051395795" type="txtNotifications">
-                                                    <param id="0" name="Instance variable">grand</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="4697917754665632" type="txtNotifications">
+                                                <action id="-15" name="Set visible" sid="4697917754665632" type="notificationTxt">
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
                                             </actions>
@@ -735,31 +724,23 @@
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="866303902294505" type="notificationBox">
-                                            <param id="0" name="Instance variable">ouverte</param>
+                                            <param id="0" name="Instance variable">open</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="8252794892255349">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="5291673362194709" type="txtNotifications">
-                                                    <param id="0" name="Instance variable">grand</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="3593734442279792" type="txtNotifications">
+                                                <action id="-15" name="Set visible" sid="3593734442279792" type="notificationTxt">
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="6986068898036857">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6683865256677001" type="txtNotifications">
-                                                    <param id="0" name="Instance variable">grand</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="6193827089382902" type="txtNotifications">
+                                                <action id="-15" name="Set visible" sid="6193827089382902" type="notificationTxt">
                                                     <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
@@ -815,7 +796,7 @@
                         <event-block sid="1198690373811865">
                             <conditions />
                             <actions>
-                                <action id="0" name="Set text" sid="2712988918937438" type="txtNotifications">
+                                <action id="0" name="Set text" sid="2712988918937438" type="notificationTxt">
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -844,7 +825,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="5407355819552363" type="txtNotifications">
+                                <action id="1" name="Append text" sid="5407355819552363" type="notificationTxt">
                                     <param id="0" name="Text">notifications.CurValue &amp; newline</param>
                                 </action>
                             </actions>

@@ -3623,7 +3623,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ouverte>false</ouverte>
+                        <open>false</open>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -3643,7 +3643,7 @@
                         <opacity>0.899999976</opacity>
                     </world>
                 </instance>
-                <instance type="txtNotifications" uid="36">
+                <instance type="notificationTxt" uid="36">
                     <properties>
                         <text>Notification log............................ No notifications received yet</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -3655,9 +3655,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <instance-variables>
-                        <grand>false</grand>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
                     </behavior-instances>
@@ -3676,7 +3673,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtNotifications" uid="35">
+                <instance type="notificationTxt" uid="35">
                     <properties>
                         <text>Notification log............................ No notifications received yet</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -3688,9 +3685,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>6</line-height>
                     </properties>
-                    <instance-variables>
-                        <grand>true</grand>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
                     </behavior-instances>

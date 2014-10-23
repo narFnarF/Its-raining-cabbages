@@ -48,7 +48,7 @@
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
-        <prop name="Enable WebGL">Off</prop>
+        <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
@@ -303,7 +303,7 @@
             <object-type name="notificationBox" sid="4820868941892838">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="ouverte" sid="3708815445241575" type="boolean" />
+                    <instance-variable name="open" sid="3708815445241575" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="NoSave" sid="1545521745320206">
@@ -323,11 +323,8 @@
             <object-type global="1" name="notifications" sid="5194667752447656">
                 <plugin id="Arr" />
             </object-type>
-            <object-type name="txtNotifications" sid="9963654768141708">
+            <object-type name="notificationTxt" sid="9963654768141708">
                 <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="grand" sid="2051567679053458" type="boolean" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="NoSave" sid="9962413741718986">
                         <behavior id="NoSave" />
@@ -336,6 +333,14 @@
             </object-type>
             <object-type global="1" name="sillyMessages" sid="110751735252375">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="mask" sid="6875210335898705">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3914035558437269" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="UI">
