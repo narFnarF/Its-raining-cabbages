@@ -1960,7 +1960,7 @@
                                     <param id="1" name="Value">right(nbEnString, len(nbEnString)-1 )</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="1963212847544703" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, pet)</param>
+                                    <param id="0" name="Value">&quot;-&quot; &amp; Function.Call(&quot;format numbers&quot;, pet)</param>
                                 </action>
                             </actions>
                         </event-block>
