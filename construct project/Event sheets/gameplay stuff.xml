@@ -1909,6 +1909,7 @@
             <actions />
             <sub-events>
                 <variable constant="0" name="nb" sid="1161139136157848" static="0" type="number">0</variable>
+                <variable constant="0" name="nbEnString" sid="1674047688099716" static="0" type="text"></variable>
                 <event-block sid="450935738229898">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="217348802808419" type="System">
@@ -1922,31 +1923,135 @@
                             <param id="0" name="Variable">nb</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="5997295844665993" type="System">
+                            <param id="0" name="Variable">nbEnString</param>
+                            <param id="1" name="Value">nb</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="1038947810386545">
+                <event-block sid="3618869554575641">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="2386979638834767" type="System">
-                            <param id="0" name="First value">find(nb&amp;&quot;&quot;, &quot;.&quot;)</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">-1</param>
-                        </condition>
+                        <condition id="-22" name="Else" sid="2601472457747955" type="System" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set return value" sid="3674361882445369" type="Function">
-                            <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, nb) &amp; tokenat(nb&amp;&quot;&quot;, -1, &quot;.&quot;)</param>
+                        <action id="14" name="Log" sid="6248993243317522" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;Missing params in my function &apos;&apos;format numbers&apos;&apos;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>si on trouve un signe négatif (-)</comment>
+                <event-block sid="522152142260202">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5360287300456719" type="System">
+                            <param id="0" name="First value">find(nbEnString, &quot;-&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="pet" sid="1305786374340551" static="0" type="number">0</variable>
+                        <event-block sid="6919004113893203">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1954887509609829" type="System">
+                                    <param id="0" name="Variable">pet</param>
+                                    <param id="1" name="Value">right(nbEnString, len(nbEnString)-1 )</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="1963212847544703" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, pet)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>si on trouve un point (.)</comment>
+                <event-block sid="1038947810386545">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9018580425165664" type="System" />
+                        <condition id="-8" name="Compare two values" sid="2386979638834767" type="System">
+                            <param id="0" name="First value">find(nbEnString, &quot;.&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="before" sid="3965956413488448" static="0" type="text"></variable>
+                        <variable constant="0" name="after" sid="8814661735344569" static="0" type="text"></variable>
+                        <event-block sid="3447422450514927">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="390630018661726" type="System">
+                                    <param id="0" name="Variable">before</param>
+                                    <param id="1" name="Value">left(nbEnString, find(nbEnString, &quot;.&quot;) )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3663467145945809" type="System">
+                                    <param id="0" name="Variable">after</param>
+                                    <param id="1" name="Value">right(nbEnString, len(nbEnString) - find(nbEnString, &quot;.&quot;) )</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="3674361882445369" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; after</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9867874910223172">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9828550093184184" type="System" />
+                        <condition id="-8" name="Compare two values" sid="3296298677109939" type="System">
+                            <param id="0" name="First value">len(nbEnString)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="before" sid="5272775268292553" static="0" type="text"></variable>
+                        <variable constant="0" name="after" sid="8583431075654013" static="0" type="text"></variable>
+                        <event-block sid="5892547108782557">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="573215124213797" type="System">
+                                    <param id="0" name="Variable">before</param>
+                                    <param id="1" name="Value">left(nbEnString, len(nbEnString)-3 )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6671656864756715" type="System">
+                                    <param id="0" name="Variable">after</param>
+                                    <param id="1" name="Value">right(nbEnString, 3)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="7103734479322573" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; &quot; &quot; &amp; after</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5085102940836054">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2844163495237057" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="9886051273407463" type="Function">
+                            <param id="0" name="Value">nbEnString</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="4358293626232408">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="7038383874706338" type="System">
-                            <param id="0" name="First value">len(nb+&quot;&quot;)</param>
+                            <param id="0" name="First value">len(str(nb))</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="1924757299030978" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -1966,44 +2071,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="7356427173954862" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="603900117967642" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;get level of&quot;, test)</param>
-                        </action>
                         <action id="14" name="Log" sid="9045593110141554" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;get 1 &quot; &amp; test</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3840601818182724" type="Function">
-                            <param id="0" name="Name">&quot;get items&quot;</param>
-                            <param id="1" name="Parameter {n}">test{###}1</param>
-                        </action>
-                        <action id="14" name="Log" sid="6718811485714455" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Has enough 5 &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;has enough&quot;, test, 5)</param>
+                            <param id="1" name="Message">&quot;format number &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;format numbers&quot;, test)</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="1219178643564598">
-                            <conditions>
-                                <condition id="-10" name="For" sid="4669707959666479" type="System">
-                                    <param id="0" name="Name">&quot;for testing&quot;</param>
-                                    <param id="1" name="Start index">0.1</param>
-                                    <param id="2" name="End index">0.5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="2178742663360152" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">loopindex</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                </event-block>
+                <event-block sid="7579173022116207">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6575268597232095" type="System" />
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
