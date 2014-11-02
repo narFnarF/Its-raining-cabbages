@@ -457,6 +457,9 @@
                         <action id="1" name="Append text" sid="8726920358585833" type="globalStats">
                             <param id="0" name="Text">&quot;Eggs: &quot; &amp; Function.Call(&quot;format numbers&quot;, eggs) &amp; newline</param>
                         </action>
+                        <action id="1" name="Append text" sid="5318087948879611" type="globalStats">
+                            <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
+                        </action>
                         <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
                             <param id="0" name="Text">&quot;Honey: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;honey&quot;) ) &amp; newline</param>
                         </action>
