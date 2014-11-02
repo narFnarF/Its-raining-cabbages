@@ -797,7 +797,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
-                            <param id="0" name="Text">factory.outputSalads</param>
+                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, factory.outputSalads )</param>
                         </action>
                     </actions>
                 </event-block>
@@ -839,7 +839,7 @@
                         </action>
                         <action id="0" name="Call function" sid="3737990909380714" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Collected &quot; &amp; factory.outputSalads &amp; &quot; salads.&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Collected &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.outputSalads) &amp; &quot; salads.&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="4763626231264486" type="factory">
                             <param id="0" name="Instance variable">outputSalads</param>

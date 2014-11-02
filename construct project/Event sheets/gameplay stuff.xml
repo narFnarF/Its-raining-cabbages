@@ -385,7 +385,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="3282276299373799" type="purchasePopupBuyBtnTxt">
-                                            <param id="0" name="Text">Function.Param(P_PRICE) &amp; &quot; &quot; &amp; Function.Param(P_CURRENCY)</param>
+                                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, Function.Param(P_PRICE) ) &amp; &quot; &quot; &amp; Function.Param(P_CURRENCY)</param>
                                         </action>
                                     </actions>
                                 </event-block>

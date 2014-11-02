@@ -20,6 +20,10 @@
                     <param id="0" name="Key">&quot;tofu steak&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Add key" sid="7353444658677507" type="inventory">
+                    <param id="0" name="Key">&quot;honey&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="4" name="Set animation" sid="1734872637507974" type="lion">
                     <param id="0" name="Animation">&quot;vide&quot;</param>
                     <param id="1" name="From">1</param>
