@@ -1040,7 +1040,7 @@
             </object-type>
         </object-folder>
         <object-folder name="quests">
-            <object-type global="1" name="quests" sid="6221647988755415">
+            <object-type name="quests" sid="6221647988755415">
                 <plugin id="Arr" />
                 <instance-variables>
                     <instance-variable name="TYPE" sid="5534887068566877" type="number" />

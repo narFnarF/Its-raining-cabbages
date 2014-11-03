@@ -256,7 +256,7 @@
         <event-block sid="7261655952238127">
             <conditions>
                 <condition id="0" name="On key pressed" sid="9945795479560111" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">82 (R)</param>
                 </condition>
                 <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
             </conditions>
@@ -265,6 +265,20 @@
                     <param id="0" name="Width">0</param>
                     <param id="1" name="Height">questsActive.Height</param>
                     <param id="2" name="Depth">questsActive.Depth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3770053310295717">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8134389338283201" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="4852406027434411" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="4001920605057085" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">quests.AsJSON</param>
                 </action>
             </actions>
         </event-block>

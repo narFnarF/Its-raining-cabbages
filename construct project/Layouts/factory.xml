@@ -1461,7 +1461,7 @@
                         <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -1473,10 +1473,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1259.706054688</x>
-                        <y>815.122680664</y>
+                        <y>784.122680664</y>
                         <z>0</z>
                         <width>153</width>
-                        <height>48</height>
+                        <height>69</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
