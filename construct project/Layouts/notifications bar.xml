@@ -13,6 +13,23 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
+        <layer name="Layer 0" sid="6439981873514368">
+            <initially-visible>1</initially-visible>
+            <background-color>255,204,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
         <layer name="notifications" sid="5769901810952235">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -74,8 +91,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>13</x>
-                        <y>6</y>
+                        <x>12</x>
+                        <y>3</y>
                         <z>0</z>
                         <width>609</width>
                         <height>950</height>
@@ -93,7 +110,7 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <blend-mode>10</blend-mode>
+                    <blend-mode>8</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
