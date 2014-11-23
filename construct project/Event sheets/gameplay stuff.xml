@@ -1180,6 +1180,84 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="6362194391087918">
+                    <conditions>
+                        <condition id="-23" name="While" sid="4930884065722942" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="5677510231704708" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;while&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4822536761671897">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="2995566617225889" type="quest">
+                                    <param id="0" name="Key">&quot;active&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2569256203604001" type="System">
+                                    <param id="0" name="First value">quest.PickedCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Stop loop" sid="6945376659023791" type="System" />
+                                <action disabled="1" id="14" name="Log" sid="7472565910247159" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;stop loop&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="241246972396805">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1231061346168539" type="System" />
+                                <condition id="-16" name="Pick random instance" sid="8685397363659761" type="System">
+                                    <param id="0" name="Object">quest</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="14" name="Log" sid="3774929593251677" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;pick&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="5365843739753043" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;picked: &quot; &amp; quest.PickedCount</param>
+                                </action>
+                                <action id="0" name="Add key" sid="7491156718909943" type="quest">
+                                    <param id="0" name="Key">&quot;active&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>added security in case there isn&apos;t enough quests and they are all active</comment>
+                        <event-block sid="242103884420269">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="2088218220977623" type="quest">
+                                    <param id="0" name="Key">&quot;active&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6868472968524563" type="System">
+                                    <param id="0" name="First value">quest.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">quest.Count</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Stop loop" sid="9741188645416725" type="System" />
+                                <action id="14" name="Log" sid="9042183705280158" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;There isn&apos;t enough quests in the list&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="491892557047817" title="Quests (old)">
