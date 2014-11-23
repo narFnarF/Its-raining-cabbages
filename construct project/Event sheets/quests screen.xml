@@ -49,30 +49,30 @@
                 <variable constant="0" name="requiredLevel" sid="6763165510463565" static="0" type="number">0</variable>
                 <event-block sid="2501920317254854">
                     <conditions>
-                        <condition id="3" name="For each element" sid="6435063005104568" type="questsActive">
+                        <condition id="3" name="For each element" sid="6435063005104568" type="questsOldActive">
                             <param id="0" name="Axes">2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="3449282206342474" type="System">
                             <param id="0" name="Variable">type</param>
-                            <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.TYPE)</param>
+                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.TYPE)</param>
                         </action>
                         <action id="-9" name="Set value" sid="8193095849880722" type="System">
                             <param id="0" name="Variable">current</param>
-                            <param id="1" name="Value">questsActive.At( questsActive.CurX , questsActive.REQUIS_COMPTEUR)</param>
+                            <param id="1" name="Value">questsOldActive.At( questsOldActive.CurX , questsOldActive.REQUIS_COMPTEUR)</param>
                         </action>
                         <action id="-9" name="Set value" sid="5752944545936393" type="System">
                             <param id="0" name="Variable">needed</param>
-                            <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.REQUIS)</param>
+                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REQUIS)</param>
                         </action>
                         <action id="-9" name="Set value" sid="1256748454639034" type="System">
                             <param id="0" name="Variable">basedOn</param>
-                            <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.BASED_ON)</param>
+                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.BASED_ON)</param>
                         </action>
                         <action id="-9" name="Set value" sid="427686815531907" type="System">
                             <param id="0" name="Variable">timeCompleted</param>
-                            <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.TIME_COMPLETED)</param>
+                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.TIME_COMPLETED)</param>
                         </action>
                         <action id="-9" name="Set value" sid="6089298859385344" type="System">
                             <param id="0" name="Variable">requiredLevel</param>
@@ -115,11 +115,11 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="1095050971287049" type="System">
                                     <param id="0" name="Variable">rewardCombien</param>
-                                    <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.REWARD_COMBIEN)</param>
+                                    <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REWARD_COMBIEN)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8748497312279159" type="System">
                                     <param id="0" name="Variable">rewardType</param>
-                                    <param id="1" name="Value">questsActive.At(questsActive.CurX, questsActive.REWARD_TYPE)</param>
+                                    <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REWARD_TYPE)</param>
                                 </action>
                                 <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
                                     <param id="0" name="Text">&quot;Reward: &quot; &amp; Function.Call(&quot;format numbers&quot;, rewardCombien)  &amp; &quot; &quot; &amp; rewardType &amp; newline</param>
@@ -145,7 +145,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="513331422236979" type="questCollectBtn">
                                     <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">questsActive.CurX</param>
+                                    <param id="2" name="Value">questsOldActive.CurX</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -170,7 +170,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="7171812246146357" type="questCollectBtn">
                                     <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">questsActive.CurX</param>
+                                    <param id="2" name="Value">questsOldActive.CurX</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -203,11 +203,11 @@
                     <actions>
                         <action id="-9" name="Set value" sid="3381097661341825" type="System">
                             <param id="0" name="Variable">rewardType</param>
-                            <param id="1" name="Value">questsActive.At(questCollectBtn.nb, questsActive.REWARD_TYPE)</param>
+                            <param id="1" name="Value">questsOldActive.At(questCollectBtn.nb, questsOldActive.REWARD_TYPE)</param>
                         </action>
                         <action id="-9" name="Set value" sid="1855593493610919" type="System">
                             <param id="0" name="Variable">rewardCombien</param>
-                            <param id="1" name="Value">questsActive.At(questCollectBtn.nb, questsActive.REWARD_COMBIEN)</param>
+                            <param id="1" name="Value">questsOldActive.At(questCollectBtn.nb, questsOldActive.REWARD_COMBIEN)</param>
                         </action>
                         <action id="0" name="Call function" sid="881287469971068" type="Function">
                             <param id="0" name="Name">&quot;get items&quot;</param>
@@ -220,7 +220,7 @@
                             <param id="3" name="Y">questCollectBtn.Y</param>
                         </action>
                         <action id="0" name="Set text" sid="8466090065484387" type="plus1">
-                            <param id="0" name="Text">&quot;+&quot; &amp; questsActive.At(questCollectBtn.nb, questsActive.REWARD_COMBIEN) &amp; &quot; &quot; &amp; questsActive.At(questCollectBtn.nb, questsActive.REWARD_TYPE)</param>
+                            <param id="0" name="Text">&quot;+&quot; &amp; questsOldActive.At(questCollectBtn.nb, questsOldActive.REWARD_COMBIEN) &amp; &quot; &quot; &amp; questsOldActive.At(questCollectBtn.nb, questsOldActive.REWARD_TYPE)</param>
                         </action>
                         <action id="-36" name="Save" sid="3408430030868095" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
@@ -238,14 +238,14 @@
                     <actions>
                         <action id="-9" name="Set value" sid="1981103939705308" type="System">
                             <param id="0" name="Variable">timeCompleted</param>
-                            <param id="1" name="Value">quests.At( questsActive.At(questCollectBtn.nb, questsActive.QUEST_NB) , quests.TIME_COMPLETED )</param>
+                            <param id="1" name="Value">questsOld.At( questsOldActive.At(questCollectBtn.nb, questsOldActive.QUEST_NB) , questsOld.TIME_COMPLETED )</param>
                         </action>
-                        <action id="3" name="Set at XY" sid="4904213940442057" type="quests">
-                            <param id="0" name="X">questsActive.At(questCollectBtn.nb, questsActive.QUEST_NB)</param>
-                            <param id="1" name="Y">quests.TIME_COMPLETED</param>
+                        <action id="3" name="Set at XY" sid="4904213940442057" type="questsOld">
+                            <param id="0" name="X">questsOldActive.At(questCollectBtn.nb, questsOldActive.QUEST_NB)</param>
+                            <param id="1" name="Y">questsOld.TIME_COMPLETED</param>
                             <param id="2" name="Value">timeCompleted + 1</param>
                         </action>
-                        <action id="9" name="Delete" sid="9923195743433471" type="questsActive">
+                        <action id="9" name="Delete" sid="9923195743433471" type="questsOldActive">
                             <param id="0" name="Index">questCollectBtn.nb</param>
                             <param id="1" name="Axis">0</param>
                         </action>
@@ -261,10 +261,10 @@
                 <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
             </conditions>
             <actions>
-                <action id="1" name="Set size" sid="1360383748293811" type="questsActive">
+                <action id="1" name="Set size" sid="1360383748293811" type="questsOldActive">
                     <param id="0" name="Width">0</param>
-                    <param id="1" name="Height">questsActive.Height</param>
-                    <param id="2" name="Depth">questsActive.Depth</param>
+                    <param id="1" name="Height">questsOldActive.Height</param>
+                    <param id="2" name="Depth">questsOldActive.Depth</param>
                 </action>
             </actions>
         </event-block>
@@ -278,7 +278,7 @@
             <actions>
                 <action id="14" name="Log" sid="4001920605057085" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">quests.AsJSON</param>
+                    <param id="1" name="Message">questsOld.AsJSON</param>
                 </action>
             </actions>
         </event-block>

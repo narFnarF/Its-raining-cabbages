@@ -988,11 +988,11 @@
                 <event-block sid="7279855106640701">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="2433800826816842" type="System" />
-                        <condition disabled="1" id="6" name="Is empty" sid="9714930816914019" type="quests" />
+                        <condition disabled="1" id="6" name="Is empty" sid="9714930816914019" type="questsOld" />
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="1015967897041798" type="System">
-                            <param id="0" name="Object to create">quests</param>
+                            <param id="0" name="Object to create">questsOld</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">0</param>
@@ -1002,34 +1002,34 @@
                         <event-block sid="9075636407455115">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="769423002716806" type="quests">
+                                <action id="5" name="Push" sid="769423002716806" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8920389030705387" type="quests">
+                                <action id="3" name="Set at XY" sid="8920389030705387" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;collected cabbage&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="75036550023554" type="quests">
+                                <action id="3" name="Set at XY" sid="75036550023554" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="7713418871905295" type="quests">
+                                <action id="3" name="Set at XY" sid="7713418871905295" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">1000</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="937403644824548" type="quests">
+                                <action id="3" name="Set at XY" sid="937403644824548" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="4611435518128285" type="quests">
+                                <action id="3" name="Set at XY" sid="4611435518128285" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1037,34 +1037,34 @@
                         <event-block sid="5177110671020617">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="7179025635741783" type="quests">
+                                <action id="5" name="Push" sid="7179025635741783" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8443057634802081" type="quests">
+                                <action id="3" name="Set at XY" sid="8443057634802081" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;salad created&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="1597102733097187" type="quests">
+                                <action id="3" name="Set at XY" sid="1597102733097187" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="6404898729232917" type="quests">
+                                <action id="3" name="Set at XY" sid="6404898729232917" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">200</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5473046774790055" type="quests">
+                                <action id="3" name="Set at XY" sid="5473046774790055" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8632867208456609" type="quests">
+                                <action id="3" name="Set at XY" sid="8632867208456609" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1072,34 +1072,34 @@
                         <event-block sid="1812636108139311">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="7339615800036647" type="quests">
+                                <action id="5" name="Push" sid="7339615800036647" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="2481486434142097" type="quests">
+                                <action id="3" name="Set at XY" sid="2481486434142097" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;sent lion on mission&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="7767036831512541" type="quests">
+                                <action id="3" name="Set at XY" sid="7767036831512541" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8148224095839461" type="quests">
+                                <action id="3" name="Set at XY" sid="8148224095839461" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="374426400358075" type="quests">
+                                <action id="3" name="Set at XY" sid="374426400358075" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3914224869184209" type="quests">
+                                <action id="3" name="Set at XY" sid="3914224869184209" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1107,34 +1107,34 @@
                         <event-block sid="7003668612194302">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="1213239302626948" type="quests">
+                                <action id="5" name="Push" sid="1213239302626948" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5321433794512897" type="quests">
+                                <action id="3" name="Set at XY" sid="5321433794512897" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;menhir enlarged&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9226759553491353" type="quests">
+                                <action id="3" name="Set at XY" sid="9226759553491353" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5361745736462853" type="quests">
+                                <action id="3" name="Set at XY" sid="5361745736462853" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3223865245143364" type="quests">
+                                <action id="3" name="Set at XY" sid="3223865245143364" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu steak&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="2790353551454398" type="quests">
+                                <action id="3" name="Set at XY" sid="2790353551454398" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1142,34 +1142,34 @@
                         <event-block sid="695712698286178">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="3611676138310731" type="quests">
+                                <action id="5" name="Push" sid="3611676138310731" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="4462730470557304" type="quests">
+                                <action id="3" name="Set at XY" sid="4462730470557304" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;upgraded silo&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3125003113425422" type="quests">
+                                <action id="3" name="Set at XY" sid="3125003113425422" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5512316205045969" type="quests">
+                                <action id="3" name="Set at XY" sid="5512316205045969" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">3</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9877953879901383" type="quests">
+                                <action id="3" name="Set at XY" sid="9877953879901383" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;honey&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8518472481554586" type="quests">
+                                <action id="3" name="Set at XY" sid="8518472481554586" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1177,34 +1177,34 @@
                         <event-block sid="2650218062530403">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="7593944565632985" type="quests">
+                                <action id="5" name="Push" sid="7593944565632985" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5176685822262924" type="quests">
+                                <action id="3" name="Set at XY" sid="5176685822262924" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;upgraded factory&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3689686718538622" type="quests">
+                                <action id="3" name="Set at XY" sid="3689686718538622" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3419590376421694" type="quests">
+                                <action id="3" name="Set at XY" sid="3419590376421694" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5647535470864577" type="quests">
+                                <action id="3" name="Set at XY" sid="5647535470864577" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9072136904325457" type="quests">
+                                <action id="3" name="Set at XY" sid="9072136904325457" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1212,34 +1212,34 @@
                         <event-block sid="5303930164954969">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="2202801795223157" type="quests">
+                                <action id="5" name="Push" sid="2202801795223157" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3594690948997284" type="quests">
+                                <action id="3" name="Set at XY" sid="3594690948997284" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="6776668399508766" type="quests">
+                                <action id="3" name="Set at XY" sid="6776668399508766" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="8608138663654735" type="quests">
+                                <action id="3" name="Set at XY" sid="8608138663654735" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">4</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="3023826202342764" type="quests">
+                                <action id="3" name="Set at XY" sid="3023826202342764" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9780164397544763" type="quests">
+                                <action id="3" name="Set at XY" sid="9780164397544763" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
                             </actions>
@@ -1247,34 +1247,34 @@
                         <event-block sid="8657668456293061">
                             <conditions />
                             <actions>
-                                <action id="5" name="Push" sid="2654116685708559" type="quests">
+                                <action id="5" name="Push" sid="2654116685708559" type="questsOld">
                                     <param id="0" name="Where">1</param>
                                     <param id="1" name="Value">0</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="6257251250976921" type="quests">
+                                <action id="3" name="Set at XY" sid="6257251250976921" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.TYPE</param>
+                                    <param id="1" name="Y">questsOld.TYPE</param>
                                     <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="9222163613203965" type="quests">
+                                <action id="3" name="Set at XY" sid="9222163613203965" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.BASED_ON</param>
+                                    <param id="1" name="Y">questsOld.BASED_ON</param>
                                     <param id="2" name="Value">&quot;level&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="1186714906091842" type="quests">
+                                <action id="3" name="Set at XY" sid="1186714906091842" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REQUIS</param>
+                                    <param id="1" name="Y">questsOld.REQUIS</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="2182779350224561" type="quests">
+                                <action id="3" name="Set at XY" sid="2182779350224561" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_TYPE</param>
+                                    <param id="1" name="Y">questsOld.REWARD_TYPE</param>
                                     <param id="2" name="Value">&quot;salads&quot;</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="2152671834436977" type="quests">
+                                <action id="3" name="Set at XY" sid="2152671834436977" type="questsOld">
                                     <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">quests.REWARD_COMBIEN</param>
+                                    <param id="1" name="Y">questsOld.REWARD_COMBIEN</param>
                                     <param id="2" name="Value">1000</param>
                                 </action>
                             </actions>
@@ -1284,7 +1284,7 @@
                 <comment>Fill the active quest array</comment>
                 <event-block sid="8800881272097823">
                     <conditions>
-                        <condition id="7" name="Compare size" sid="2186805991011497" type="questsActive">
+                        <condition id="7" name="Compare size" sid="2186805991011497" type="questsOldActive">
                             <param id="0" name="Axis">0</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">3</param>
@@ -1298,7 +1298,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="8090691704615315" type="System">
                                     <param id="0" name="Variable">questNb</param>
-                                    <param id="1" name="Value">floor( random(quests.Width) )</param>
+                                    <param id="1" name="Value">floor( random(questsOld.Width) )</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1306,10 +1306,10 @@
                                 <comment>verity the new quest we&apos;re trying to add isn&apos;t already in</comment>
                                 <event-block sid="5272995190626545">
                                     <conditions>
-                                        <condition id="3" name="For each element" sid="1733146212454301" type="questsActive">
+                                        <condition id="3" name="For each element" sid="1733146212454301" type="questsOldActive">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
-                                        <condition id="4" name="Compare current value" sid="3204179163163283" type="questsActive">
+                                        <condition id="4" name="Compare current value" sid="3204179163163283" type="questsOldActive">
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Value">questNb</param>
                                         </condition>
@@ -1338,81 +1338,81 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="9889340557609012" type="System">
                                             <param id="0" name="Variable">timeCompleted</param>
-                                            <param id="1" name="Value">quests.At(questNb, quests.TIME_COMPLETED) +1</param>
+                                            <param id="1" name="Value">questsOld.At(questNb, questsOld.TIME_COMPLETED) +1</param>
                                         </action>
-                                        <action id="5" name="Push" sid="5827658812149505" type="questsActive">
+                                        <action id="5" name="Push" sid="5827658812149505" type="questsOldActive">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Value">&quot;-&quot;</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="7851689848470069" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="7851689848470069" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.QUEST_NB</param>
+                                            <param id="1" name="Y">questsOldActive.QUEST_NB</param>
                                             <param id="2" name="Value">questNb</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="7125581418687803" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="7125581418687803" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.REQUIS_COMPTEUR</param>
+                                            <param id="1" name="Y">questsOldActive.REQUIS_COMPTEUR</param>
                                             <param id="2" name="Value">0</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="6729477730997606" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="6729477730997606" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.TYPE</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.TYPE)</param>
+                                            <param id="1" name="Y">questsOldActive.TYPE</param>
+                                            <param id="2" name="Value">questsOld.At(questNb, questsOld.TYPE)</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="8841412181543324" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="8841412181543324" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.REWARD_COMBIEN</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_COMBIEN) * timeCompleted</param>
+                                            <param id="1" name="Y">questsOldActive.REWARD_COMBIEN</param>
+                                            <param id="2" name="Value">questsOld.At(questNb, questsOld.REWARD_COMBIEN) * timeCompleted</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="7868816511933798" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="7868816511933798" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.REWARD_TYPE</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.REWARD_TYPE)</param>
+                                            <param id="1" name="Y">questsOldActive.REWARD_TYPE</param>
+                                            <param id="2" name="Value">questsOld.At(questNb, questsOld.REWARD_TYPE)</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="838286451667491" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="838286451667491" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.BASED_ON</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.BASED_ON)</param>
+                                            <param id="1" name="Y">questsOldActive.BASED_ON</param>
+                                            <param id="2" name="Value">questsOld.At(questNb, questsOld.BASED_ON)</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="9090397597609332" type="questsActive">
+                                        <action id="3" name="Set at XY" sid="9090397597609332" type="questsOldActive">
                                             <param id="0" name="X">0</param>
-                                            <param id="1" name="Y">questsActive.TIME_COMPLETED</param>
-                                            <param id="2" name="Value">quests.At(questNb, quests.TIME_COMPLETED)</param>
+                                            <param id="1" name="Y">questsOldActive.TIME_COMPLETED</param>
+                                            <param id="2" name="Value">questsOld.At(questNb, questsOld.TIME_COMPLETED)</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="9811811316236472">
                                             <conditions>
-                                                <condition id="1" name="Compare at XY" sid="745702932618215" type="questsActive">
+                                                <condition id="1" name="Compare at XY" sid="745702932618215" type="questsOldActive">
                                                     <param id="0" name="X">0</param>
-                                                    <param id="1" name="Y">questsActive.BASED_ON</param>
+                                                    <param id="1" name="Y">questsOldActive.BASED_ON</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">&quot;events&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="3383024835825174" type="questsActive">
+                                                <action id="3" name="Set at XY" sid="3383024835825174" type="questsOldActive">
                                                     <param id="0" name="X">0</param>
-                                                    <param id="1" name="Y">questsActive.REQUIS</param>
-                                                    <param id="2" name="Value">quests.At(questNb, quests.REQUIS) * timeCompleted</param>
+                                                    <param id="1" name="Y">questsOldActive.REQUIS</param>
+                                                    <param id="2" name="Value">questsOld.At(questNb, questsOld.REQUIS) * timeCompleted</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="7015339939459223">
                                             <conditions>
-                                                <condition id="1" name="Compare at XY" sid="5047077066312074" type="questsActive">
+                                                <condition id="1" name="Compare at XY" sid="5047077066312074" type="questsOldActive">
                                                     <param id="0" name="X">0</param>
-                                                    <param id="1" name="Y">questsActive.BASED_ON</param>
+                                                    <param id="1" name="Y">questsOldActive.BASED_ON</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">&quot;level&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="9282909032833468" type="questsActive">
+                                                <action id="3" name="Set at XY" sid="9282909032833468" type="questsOldActive">
                                                     <param id="0" name="X">0</param>
-                                                    <param id="1" name="Y">questsActive.REQUIS</param>
-                                                    <param id="2" name="Value">quests.At(questNb, quests.REQUIS) + timeCompleted -1</param>
+                                                    <param id="1" name="Y">questsOldActive.REQUIS</param>
+                                                    <param id="2" name="Value">questsOld.At(questNb, questsOld.REQUIS) + timeCompleted -1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1449,20 +1449,20 @@
                         <comment>si l&apos;item correspond à une des quests actives, incrémente le compteur de cette quest</comment>
                         <event-block sid="3842650388759443">
                             <conditions>
-                                <condition id="3" name="For each element" sid="5262885687326218" type="questsActive">
+                                <condition id="3" name="For each element" sid="5262885687326218" type="questsOldActive">
                                     <param id="0" name="Axes">2</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="9465820713642602" type="System">
-                                    <param id="0" name="First value">quests.At(questsActive.CurValue,quests.TYPE)</param>
+                                    <param id="0" name="First value">questsOld.At(questsOldActive.CurValue,questsOld.TYPE)</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">item</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set at XY" sid="8920271794283739" type="questsActive">
-                                    <param id="0" name="X">questsActive.CurX</param>
-                                    <param id="1" name="Y">questsActive.REQUIS_COMPTEUR</param>
-                                    <param id="2" name="Value">questsActive.At(questsActive.CurX,questsActive.REQUIS_COMPTEUR) + number</param>
+                                <action id="3" name="Set at XY" sid="8920271794283739" type="questsOldActive">
+                                    <param id="0" name="X">questsOldActive.CurX</param>
+                                    <param id="1" name="Y">questsOldActive.REQUIS_COMPTEUR</param>
+                                    <param id="2" name="Value">questsOldActive.At(questsOldActive.CurX,questsOldActive.REQUIS_COMPTEUR) + number</param>
                                 </action>
                             </actions>
                         </event-block>
