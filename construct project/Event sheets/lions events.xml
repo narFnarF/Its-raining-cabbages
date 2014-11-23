@@ -24,6 +24,14 @@
                     <param id="0" name="Key">&quot;honey&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Add key" sid="5549406904430896" type="inventory">
+                    <param id="0" name="Key">&quot;pills&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="3942998776307547" type="inventory">
+                    <param id="0" name="Key">&quot;lion poop&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="4" name="Set animation" sid="1734872637507974" type="lion">
                     <param id="0" name="Animation">&quot;vide&quot;</param>
                     <param id="1" name="From">1</param>
