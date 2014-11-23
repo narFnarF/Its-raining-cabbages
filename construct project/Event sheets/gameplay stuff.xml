@@ -982,7 +982,207 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="491892557047817" title="Quests">
+        <event-group description="" sid="5019531696412462" title="Quests">
+            <sub-events>
+                <comment>don,t forget to turn them active after</comment>
+                <comment>do i need to do this every 5 sec? Maybe just after loading?</comment>
+                <event-block any="1" sid="6857513590205514">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
+                        <condition id="-6" name="Every X seconds" sid="9909417375595063" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="490156298574645" type="quest">
+                            <param id="0" name="Key">&quot;available&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8585534021451595">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="5607218444451159" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected cabbage&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="1519725486883082" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;events&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="2283073877377327" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                                <action id="0" name="Add key" sid="736123044141635" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;tofu&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="4320562506548784" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Add key" sid="5175311690821435" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9213066681281293">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;salad created&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="7293421529000359" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;events&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="1709766495234241" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">200</param>
+                                </action>
+                                <action id="0" name="Add key" sid="1829625371758647" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;tofu&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="4460195921006927" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Add key" sid="6190521305394875" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2471713764657516">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7908255381749557" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;sent lion on mission&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="2582959673467716" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;events&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="5499877976024832" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Add key" sid="2022116832618359" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;tofu&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="6861922683888577" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Add key" sid="7558972401324848" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game</comment>
+                        <event-block any="1" sid="3491830434832082">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4468448352658223" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has key" sid="9294063781309652" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4154465609722873" type="quest" />
+                                <action id="14" name="Log" sid="9095369396060818" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;We&apos;ve detected that a quest is outdated (from a previous version of the game) so we deleted it.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2089964565695481">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4058368446126709" type="Function">
+                            <param id="0" name="Name">&quot;get or create&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="name" sid="626921950708316" static="0" type="text"></variable>
+                        <event-block sid="7848143035200872">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3895654702598826" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1711338423089351" type="System">
+                                    <param id="0" name="Variable">name</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="1721197268347303" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;get or create: [&quot; &amp; name &amp; &quot;]&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5837547847958386">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="3970380100115832" type="quest">
+                                            <param id="0" name="Key">&quot;type&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">name</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="2909424090689527" type="Function">
+                                            <param id="0" name="Value">quest.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>I hope it&apos;s not bad to create something on layer 0...</comment>
+                                <event-block sid="732106477943137">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7720656800834397" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="1819573991482964" type="System">
+                                            <param id="0" name="Object to create">quest</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="8917959483756377" type="quest">
+                                            <param id="0" name="Key">&quot;type&quot;</param>
+                                            <param id="1" name="Value">name</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="3872102446347054" type="Function">
+                                            <param id="0" name="Value">quest.UID</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="3920182155067567" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;The quest [&quot; &amp; name &amp; &quot;] was non-existing so we created it&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="491892557047817" title="Quests (old)">
             <sub-events>
                 <comment>Populate quests array</comment>
                 <event-block sid="7279855106640701">
@@ -999,7 +1199,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="9075636407455115">
+                        <event-block disabled="1" sid="9075636407455115">
                             <conditions />
                             <actions>
                                 <action id="5" name="Push" sid="769423002716806" type="questsOld">
@@ -1034,7 +1234,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5177110671020617">
+                        <event-block disabled="1" sid="5177110671020617">
                             <conditions />
                             <actions>
                                 <action id="5" name="Push" sid="7179025635741783" type="questsOld">
@@ -1069,7 +1269,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1812636108139311">
+                        <event-block disabled="1" sid="1812636108139311">
                             <conditions />
                             <actions>
                                 <action id="5" name="Push" sid="7339615800036647" type="questsOld">
