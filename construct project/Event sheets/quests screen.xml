@@ -49,30 +49,38 @@
                 <variable constant="0" name="requiredLevel" sid="6763165510463565" static="0" type="number">0</variable>
                 <event-block sid="2501920317254854">
                     <conditions>
-                        <condition id="3" name="For each element" sid="6435063005104568" type="questsOldActive">
+                        <condition disabled="1" id="3" name="For each element" sid="6435063005104568" type="questsOldActive">
                             <param id="0" name="Axes">2</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="9934806301647427" type="System">
+                            <param id="0" name="Object">quest</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="2778975776645327" type="quest">
+                            <param id="0" name="Key">&quot;active&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="3449282206342474" type="System">
                             <param id="0" name="Variable">type</param>
-                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.TYPE)</param>
+                            <param id="1" name="Value">quest.Get(&quot;type&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="8193095849880722" type="System">
                             <param id="0" name="Variable">current</param>
-                            <param id="1" name="Value">questsOldActive.At( questsOldActive.CurX , questsOldActive.REQUIS_COMPTEUR)</param>
+                            <param id="1" name="Value">quest.Get(&quot;needed counter&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="5752944545936393" type="System">
                             <param id="0" name="Variable">needed</param>
-                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REQUIS)</param>
+                            <param id="1" name="Value">quest.Get(&quot;needed&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="1256748454639034" type="System">
                             <param id="0" name="Variable">basedOn</param>
-                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.BASED_ON)</param>
+                            <param id="1" name="Value">quest.Get(&quot;based on&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="427686815531907" type="System">
                             <param id="0" name="Variable">timeCompleted</param>
-                            <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.TIME_COMPLETED)</param>
+                            <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="6089298859385344" type="System">
                             <param id="0" name="Variable">requiredLevel</param>

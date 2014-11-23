@@ -678,10 +678,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="0" name="Add key" sid="4867336889305898" type="inventory">
-                                    <param id="0" name="Key">&quot;Tofu&quot;</param>
-                                    <param id="1" name="Value">inventory.Get(&quot;Tofu&quot;) + 5</param>
-                                </action>
                                 <action id="0" name="Call function" sid="1946579498035535" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;debug 5 tofu steak&quot;</param>
@@ -699,10 +695,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="0" name="Add key" sid="6171091854646525" type="inventory">
-                                    <param id="0" name="Key">&quot;Veggie burger&quot;</param>
-                                    <param id="1" name="Value">inventory.Get(&quot;Veggie burger&quot;) + 5</param>
-                                </action>
                                 <action id="0" name="Call function" sid="5831153994775529" type="Function">
                                     <param id="0" name="Name">&quot;get items&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
@@ -1007,23 +999,23 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="1519725486883082" type="quest">
+                                <action id="1" name="Set key" sid="1519725486883082" type="quest">
                                     <param id="0" name="Key">&quot;based on&quot;</param>
                                     <param id="1" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="2283073877377327" type="quest">
+                                <action id="1" name="Set key" sid="2283073877377327" type="quest">
                                     <param id="0" name="Key">&quot;needed&quot;</param>
                                     <param id="1" name="Value">1000</param>
                                 </action>
-                                <action id="0" name="Add key" sid="736123044141635" type="quest">
+                                <action id="1" name="Set key" sid="736123044141635" type="quest">
                                     <param id="0" name="Key">&quot;reward type&quot;</param>
                                     <param id="1" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="4320562506548784" type="quest">
+                                <action id="1" name="Set key" sid="4320562506548784" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Add key" sid="5175311690821435" type="quest">
+                                <action id="1" name="Set key" sid="5175311690821435" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1036,23 +1028,23 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="7293421529000359" type="quest">
+                                <action id="1" name="Set key" sid="7293421529000359" type="quest">
                                     <param id="0" name="Key">&quot;based on&quot;</param>
                                     <param id="1" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="1709766495234241" type="quest">
+                                <action id="1" name="Set key" sid="1709766495234241" type="quest">
                                     <param id="0" name="Key">&quot;needed&quot;</param>
                                     <param id="1" name="Value">200</param>
                                 </action>
-                                <action id="0" name="Add key" sid="1829625371758647" type="quest">
+                                <action id="1" name="Set key" sid="1829625371758647" type="quest">
                                     <param id="0" name="Key">&quot;reward type&quot;</param>
                                     <param id="1" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="4460195921006927" type="quest">
+                                <action id="1" name="Set key" sid="4460195921006927" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Add key" sid="6190521305394875" type="quest">
+                                <action id="1" name="Set key" sid="6190521305394875" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1065,23 +1057,23 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="2582959673467716" type="quest">
+                                <action id="1" name="Set key" sid="2582959673467716" type="quest">
                                     <param id="0" name="Key">&quot;based on&quot;</param>
                                     <param id="1" name="Value">&quot;events&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="5499877976024832" type="quest">
+                                <action id="1" name="Set key" sid="5499877976024832" type="quest">
                                     <param id="0" name="Key">&quot;needed&quot;</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
-                                <action id="0" name="Add key" sid="2022116832618359" type="quest">
+                                <action id="1" name="Set key" sid="2022116832618359" type="quest">
                                     <param id="0" name="Key">&quot;reward type&quot;</param>
                                     <param id="1" name="Value">&quot;tofu&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="6861922683888577" type="quest">
+                                <action id="1" name="Set key" sid="6861922683888577" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Add key" sid="7558972401324848" type="quest">
+                                <action id="1" name="Set key" sid="7558972401324848" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1169,12 +1161,36 @@
                                             <param id="0" name="Key">&quot;type&quot;</param>
                                             <param id="1" name="Value">name</param>
                                         </action>
-                                        <action id="0" name="Add key" sid="7592537132370719" type="quest">
-                                            <param id="0" name="Key">&quot;active&quot;</param>
+                                        <action id="0" name="Add key" sid="9484113644027905" type="quest">
+                                            <param id="0" name="Key">&quot;based on&quot;</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="5059391480252419" type="quest">
+                                            <param id="0" name="Key">&quot;needed&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Add key" sid="7053930478309893" type="quest">
                                             <param id="0" name="Key">&quot;needed counter&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="668622904970469" type="quest">
+                                            <param id="0" name="Key">&quot;reward type&quot;</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="8911149281813919" type="quest">
+                                            <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="9226008692418347" type="quest">
+                                            <param id="0" name="Key">&quot;time completed&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="4172179863632478" type="quest">
+                                            <param id="0" name="Key">&quot;available&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="7592537132370719" type="quest">
+                                            <param id="0" name="Key">&quot;active&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="1" name="Set return value" sid="3872102446347054" type="Function">
@@ -1182,7 +1198,7 @@
                                         </action>
                                         <action id="14" name="Log" sid="3920182155067567" type="Browser">
                                             <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;The quest [&quot; &amp; name &amp; &quot;] was non-existing so we created it&quot;</param>
+                                            <param id="1" name="Message">&quot;Created quest [&quot; &amp; name &amp; &quot;]&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1190,6 +1206,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Set some random quests as &quot;active&quot; = 1</comment>
                 <event-block sid="6362194391087918">
                     <conditions>
                         <condition id="-23" name="While" sid="4930884065722942" type="System" />
@@ -1238,7 +1255,7 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;picked: &quot; &amp; quest.PickedCount</param>
                                 </action>
-                                <action id="0" name="Add key" sid="7491156718909943" type="quest">
+                                <action id="1" name="Set key" sid="7491156718909943" type="quest">
                                     <param id="0" name="Key">&quot;active&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1335,7 +1352,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="9091330981207444" type="quest">
+                                <action id="1" name="Set key" sid="9091330981207444" type="quest">
                                     <param id="0" name="Key">&quot;needed counter&quot;</param>
                                     <param id="1" name="Value">quest.Get(&quot;needed counter&quot;) + number</param>
                                 </action>
