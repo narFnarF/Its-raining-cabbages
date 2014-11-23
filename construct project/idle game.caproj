@@ -1084,6 +1084,9 @@
             <object-type global="1" name="levelOfStuff" sid="5253234207102304">
                 <plugin id="Dictionary" />
             </object-type>
+            <object-type global="1" name="quest" sid="7316888990734442">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />

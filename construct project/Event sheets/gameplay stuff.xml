@@ -2093,5 +2093,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="699021224147767">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="291069532538188" type="System">
+                    <param id="0" name="Object">stats</param>
+                    <param id="1" name="Expression">stats.Get(&quot;type&quot;)</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">&quot;lion level up&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

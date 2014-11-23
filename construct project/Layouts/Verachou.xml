@@ -1265,6 +1265,7 @@
             </properties>
         </instance>
         <instance type="levelOfStuff" uid="317" />
+        <instance type="quest" uid="328" />
     </nonworld-instances>
     <effects />
 </c2layout>
