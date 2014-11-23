@@ -981,9 +981,7 @@
                 <event-block any="1" sid="6857513590205514">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
-                        <condition id="-6" name="Every X seconds" sid="9909417375595063" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
-                        </condition>
+                        <condition id="-29" name="On load complete" sid="9909417375595063" type="System" />
                     </conditions>
                     <actions>
                         <action id="1" name="Set key" sid="490156298574645" type="quest">

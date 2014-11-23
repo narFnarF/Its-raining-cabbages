@@ -47,6 +47,7 @@
                 <variable constant="0" name="basedOn" sid="8440620670234973" static="0" type="text"></variable>
                 <variable constant="0" name="timeCompleted" sid="3864742153559358" static="0" type="number">0</variable>
                 <variable constant="0" name="requiredLevel" sid="6763165510463565" static="0" type="number">0</variable>
+                <variable constant="0" name="collectButtonIndex" sid="4357173043813129" static="0" type="number">-1</variable>
                 <event-block sid="2501920317254854">
                     <conditions>
                         <condition disabled="1" id="3" name="For each element" sid="6435063005104568" type="questsOldActive">
@@ -86,6 +87,10 @@
                             <param id="0" name="Variable">requiredLevel</param>
                             <param id="1" name="Value">needed</param>
                         </action>
+                        <action id="-10" name="Add to" sid="1209379279704068" type="System">
+                            <param id="0" name="Variable">collectButtonIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1486537116570944">
@@ -98,7 +103,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="2064393449414431" type="questsTxt">
-                                    <param id="0" name="Text">type &amp; &quot; : &quot; &amp; Function.Call(&quot;format numbers&quot;, current) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
+                                    <param id="0" name="Text">type &amp; &quot;:&quot; &amp; newline &amp; Function.Call(&quot;format numbers&quot;, current) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -112,7 +117,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Append text" sid="7618151175405635" type="questsTxt">
-                                    <param id="0" name="Text">type &amp; &quot; to level &quot; &amp; requiredLevel &amp; newline</param>
+                                    <param id="0" name="Text">type &amp; &quot; to&quot; &amp; newline &amp; &quot;level &quot; &amp; requiredLevel &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -123,11 +128,11 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="1095050971287049" type="System">
                                     <param id="0" name="Variable">rewardCombien</param>
-                                    <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REWARD_COMBIEN)</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8748497312279159" type="System">
                                     <param id="0" name="Variable">rewardType</param>
-                                    <param id="1" name="Value">questsOldActive.At(questsOldActive.CurX, questsOldActive.REWARD_TYPE)</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward type&quot;)</param>
                                 </action>
                                 <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
                                     <param id="0" name="Text">&quot;Reward: &quot; &amp; Function.Call(&quot;format numbers&quot;, rewardCombien)  &amp; &quot; &quot; &amp; rewardType &amp; newline</param>
@@ -153,7 +158,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="513331422236979" type="questCollectBtn">
                                     <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">questsOldActive.CurX</param>
+                                    <param id="2" name="Value">collectButtonIndex</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -178,7 +183,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="7171812246146357" type="questCollectBtn">
                                     <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">questsOldActive.CurX</param>
+                                    <param id="2" name="Value">collectButtonIndex</param>
                                 </condition>
                             </conditions>
                             <actions>
