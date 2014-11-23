@@ -1350,6 +1350,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">name</param>
                                 </condition>
+                                <condition id="0" name="Compare value" sid="4984498530336562" type="quest">
+                                    <param id="0" name="Key">&quot;active&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set key" sid="9091330981207444" type="quest">
