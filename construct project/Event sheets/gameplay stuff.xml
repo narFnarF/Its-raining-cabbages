@@ -1258,6 +1258,81 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="6952970159719785">
+                    <conditions>
+                        <condition id="0" name="On function" sid="890887251462341" type="Function">
+                            <param id="0" name="Name">&quot;count for quests&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="name" sid="5085204026361302" static="0" type="text"></variable>
+                        <variable constant="0" name="number" sid="6191564479956885" static="0" type="number">0</variable>
+                        <event-block sid="5729012916739044">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3899279880336129">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6711410855952938" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4680560163692133" type="System">
+                                            <param id="0" name="Variable">name</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2154586166071731">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1770773625766979" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6319770791811063" type="System">
+                                            <param id="0" name="Variable">number</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="540780428699056">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5342725316491871" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="359139310968607" type="System">
+                                            <param id="0" name="Variable">number</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>si l&apos;item correspond à une des quests actives, incrémente le compteur de cette quest</comment>
+                        <event-block sid="8359701898384163">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="6322673334457825" type="quest">
+                                    <param id="0" name="Key">&quot;type&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">name</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="9091330981207444" type="quest">
+                                    <param id="0" name="Key">&quot;needed counter&quot;</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed counter&quot;) + number</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="491892557047817" title="Quests (old)">
