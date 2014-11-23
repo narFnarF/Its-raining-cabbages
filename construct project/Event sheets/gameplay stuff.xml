@@ -1137,6 +1137,7 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>return the quest with that name</comment>
                                 <event-block sid="5837547847958386">
                                     <conditions>
                                         <condition id="0" name="Compare value" sid="3970380100115832" type="quest">
@@ -1151,6 +1152,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>otherwise, create one, and return that one</comment>
                                 <comment>I hope it&apos;s not bad to create something on layer 0...</comment>
                                 <event-block sid="732106477943137">
                                     <conditions>
@@ -1166,6 +1168,14 @@
                                         <action id="0" name="Add key" sid="8917959483756377" type="quest">
                                             <param id="0" name="Key">&quot;type&quot;</param>
                                             <param id="1" name="Value">name</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="7592537132370719" type="quest">
+                                            <param id="0" name="Key">&quot;active&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="7053930478309893" type="quest">
+                                            <param id="0" name="Key">&quot;needed counter&quot;</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="1" name="Set return value" sid="3872102446347054" type="Function">
                                             <param id="0" name="Value">quest.UID</param>
