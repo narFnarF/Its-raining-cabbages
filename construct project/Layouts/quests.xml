@@ -186,6 +186,7 @@
                     </properties>
                     <instance-variables>
                         <nb>0</nb>
+                        <questID>-1</questID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -211,6 +212,7 @@
                     </properties>
                     <instance-variables>
                         <nb>1</nb>
+                        <questID>-1</questID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -236,6 +238,7 @@
                     </properties>
                     <instance-variables>
                         <nb>2</nb>
+                        <questID>-1</questID>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -1074,6 +1074,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="nb" sid="624509774830988" type="number" />
+                    <instance-variable name="questID" sid="7602691269376311" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101373270952746" speed="5">
