@@ -42,11 +42,10 @@
             </actions>
             <sub-events>
                 <variable constant="0" name="type" sid="986228318847997" static="0" type="text"></variable>
-                <variable constant="0" name="current" sid="4257023409419588" static="0" type="number">0</variable>
+                <variable constant="0" name="neededCounter" sid="4257023409419588" static="0" type="number">0</variable>
                 <variable constant="0" name="needed" sid="807487963497305" static="0" type="number">0</variable>
                 <variable constant="0" name="basedOn" sid="8440620670234973" static="0" type="text"></variable>
                 <variable constant="0" name="timeCompleted" sid="3864742153559358" static="0" type="number">0</variable>
-                <variable constant="0" name="requiredLevel" sid="6763165510463565" static="0" type="number">0</variable>
                 <variable constant="0" name="collectButtonIndex" sid="4357173043813129" static="0" type="number">-1</variable>
                 <event-block sid="2501920317254854">
                     <conditions>
@@ -69,14 +68,6 @@
                             <param id="0" name="Variable">type</param>
                             <param id="1" name="Value">quest.Get(&quot;type&quot;)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="8193095849880722" type="System">
-                            <param id="0" name="Variable">current</param>
-                            <param id="1" name="Value">quest.Get(&quot;needed counter&quot;)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5752944545936393" type="System">
-                            <param id="0" name="Variable">needed</param>
-                            <param id="1" name="Value">quest.Get(&quot;needed&quot;)</param>
-                        </action>
                         <action id="-9" name="Set value" sid="1256748454639034" type="System">
                             <param id="0" name="Variable">basedOn</param>
                             <param id="1" name="Value">quest.Get(&quot;based on&quot;)</param>
@@ -85,9 +76,9 @@
                             <param id="0" name="Variable">timeCompleted</param>
                             <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="6089298859385344" type="System">
-                            <param id="0" name="Variable">requiredLevel</param>
-                            <param id="1" name="Value">needed</param>
+                        <action id="-9" name="Set value" sid="8193095849880722" type="System">
+                            <param id="0" name="Variable">neededCounter</param>
+                            <param id="1" name="Value">quest.Get(&quot;needed counter&quot;)</param>
                         </action>
                         <action id="-10" name="Add to" sid="1209379279704068" type="System">
                             <param id="0" name="Variable">collectButtonIndex</param>
@@ -104,8 +95,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="5752944545936393" type="System">
+                                    <param id="0" name="Variable">needed</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) * timeCompleted</param>
+                                </action>
                                 <action id="1" name="Append text" sid="2064393449414431" type="questsTxt">
-                                    <param id="0" name="Text">type &amp; &quot;:&quot; &amp; newline &amp; Function.Call(&quot;format numbers&quot;, current) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
+                                    <param id="0" name="Text">type &amp; &quot;:&quot; &amp; newline &amp; Function.Call(&quot;format numbers&quot;, neededCounter) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -118,23 +113,27 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="2150244802153719" type="System">
+                                    <param id="0" name="Variable">needed</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted</param>
+                                </action>
                                 <action id="1" name="Append text" sid="7618151175405635" type="questsTxt">
-                                    <param id="0" name="Text">type &amp; &quot; to&quot; &amp; newline &amp; &quot;level &quot; &amp; requiredLevel &amp; newline</param>
+                                    <param id="0" name="Text">type &amp; newline &amp; &quot;to level &quot; &amp; needed &amp; newline</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <variable constant="0" name="rewardCombien" sid="9265019375569856" static="0" type="number">0</variable>
                         <variable constant="0" name="rewardType" sid="1445440836014504" static="0" type="text"></variable>
+                        <variable constant="0" name="rewardCombien" sid="9265019375569856" static="0" type="number">0</variable>
                         <event-block sid="5971558982783565">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="1095050971287049" type="System">
-                                    <param id="0" name="Variable">rewardCombien</param>
-                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;)</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="8748497312279159" type="System">
                                     <param id="0" name="Variable">rewardType</param>
                                     <param id="1" name="Value">quest.Get(&quot;reward type&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1095050971287049" type="System">
+                                    <param id="0" name="Variable">rewardCombien</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * timeCompleted</param>
                                 </action>
                                 <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
                                     <param id="0" name="Text">&quot;Reward: &quot; &amp; Function.Call(&quot;format numbers&quot;, rewardCombien)  &amp; &quot; &quot; &amp; rewardType &amp; newline</param>
@@ -170,7 +169,7 @@
                                             <param id="2" name="Value">&quot;events&quot;</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="4302348937813878" type="System">
-                                            <param id="0" name="First value">current</param>
+                                            <param id="0" name="First value">neededCounter</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">needed</param>
                                         </condition>
@@ -192,7 +191,7 @@
                                         <condition id="-8" name="Compare two values" sid="1744499243733571" type="System">
                                             <param id="0" name="First value">Function.Call(&quot;get level of&quot;, type)</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">requiredLevel</param>
+                                            <param id="2" name="Second value">needed</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -225,16 +224,21 @@
             <sub-events>
                 <variable constant="0" name="rewardType" sid="4358924219280783" static="0" type="text"></variable>
                 <variable constant="0" name="rewardCombien" sid="2963349630439143" static="0" type="number">0</variable>
+                <variable constant="0" name="timeCompleted" sid="3825966976465125" static="0" type="number">0</variable>
                 <event-block sid="3407207439365776">
                     <conditions />
                     <actions>
+                        <action id="-9" name="Set value" sid="1981103939705308" type="System">
+                            <param id="0" name="Variable">timeCompleted</param>
+                            <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
+                        </action>
                         <action id="-9" name="Set value" sid="3381097661341825" type="System">
                             <param id="0" name="Variable">rewardType</param>
                             <param id="1" name="Value">quest.Get(&quot;reward type&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="1855593493610919" type="System">
                             <param id="0" name="Variable">rewardCombien</param>
-                            <param id="1" name="Value">quest.Get(&quot;reward combien&quot;)</param>
+                            <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * timeCompleted</param>
                         </action>
                         <action id="0" name="Call function" sid="881287469971068" type="Function">
                             <param id="0" name="Name">&quot;get items&quot;</param>
@@ -255,14 +259,9 @@
                     </actions>
                 </event-block>
                 <comment>increment the TimeCompleted value, then delete the active quest</comment>
-                <variable constant="0" name="timeCompleted" sid="3825966976465125" static="0" type="number">0</variable>
                 <event-block sid="2523564528657622">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="1981103939705308" type="System">
-                            <param id="0" name="Variable">timeCompleted</param>
-                            <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
-                        </action>
                         <action id="1" name="Set key" sid="6739587143187023" type="quest">
                             <param id="0" name="Key">&quot;time completed&quot;</param>
                             <param id="1" name="Value">timeCompleted + 1</param>
