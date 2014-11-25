@@ -97,7 +97,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="5752944545936393" type="System">
                                     <param id="0" name="Variable">needed</param>
-                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) * timeCompleted</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) * (timeCompleted+1)</param>
                                 </action>
                                 <action id="1" name="Append text" sid="2064393449414431" type="questsTxt">
                                     <param id="0" name="Text">type &amp; &quot;:&quot; &amp; newline &amp; Function.Call(&quot;format numbers&quot;, neededCounter) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
@@ -115,7 +115,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="2150244802153719" type="System">
                                     <param id="0" name="Variable">needed</param>
-                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted -1</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted</param>
                                 </action>
                                 <action id="1" name="Append text" sid="7618151175405635" type="questsTxt">
                                     <param id="0" name="Text">type &amp; newline &amp; &quot;to level &quot; &amp; needed &amp; newline</param>
@@ -133,7 +133,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="1095050971287049" type="System">
                                     <param id="0" name="Variable">rewardCombien</param>
-                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * timeCompleted</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * (timeCompleted+1)</param>
                                 </action>
                                 <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
                                     <param id="0" name="Text">&quot;Reward: &quot; &amp; Function.Call(&quot;format numbers&quot;, rewardCombien)  &amp; &quot; &quot; &amp; rewardType &amp; newline</param>

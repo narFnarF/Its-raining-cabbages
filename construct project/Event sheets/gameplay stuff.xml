@@ -977,8 +977,7 @@
         <event-group description="" sid="5019531696412462" title="Quests">
             <sub-events>
                 <variable constant="1" name="SIMULATANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
-                <comment>don,t forget to turn them active after</comment>
-                <comment>do i need to do this every 5 sec? Maybe just after loading?</comment>
+                <comment>Populate the big list of quests</comment>
                 <event-block any="1" sid="6857513590205514">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
@@ -1327,7 +1326,7 @@
                                         </action>
                                         <action id="0" name="Add key" sid="9226008692418347" type="quest">
                                             <param id="0" name="Key">&quot;time completed&quot;</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Add key" sid="4172179863632478" type="quest">
                                             <param id="0" name="Key">&quot;available&quot;</param>
