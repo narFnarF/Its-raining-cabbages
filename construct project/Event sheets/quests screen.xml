@@ -115,7 +115,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="2150244802153719" type="System">
                                     <param id="0" name="Variable">needed</param>
-                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted -1</param>
                                 </action>
                                 <action id="1" name="Append text" sid="7618151175405635" type="questsTxt">
                                     <param id="0" name="Text">type &amp; newline &amp; &quot;to level &quot; &amp; needed &amp; newline</param>

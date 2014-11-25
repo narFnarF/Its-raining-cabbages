@@ -976,6 +976,7 @@
         </event-block>
         <event-group description="" sid="5019531696412462" title="Quests">
             <sub-events>
+                <variable constant="1" name="SIMULATANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
                 <comment>don,t forget to turn them active after</comment>
                 <comment>do i need to do this every 5 sec? Maybe just after loading?</comment>
                 <event-block any="1" sid="6857513590205514">
@@ -1371,7 +1372,7 @@
                                 <condition id="-8" name="Compare two values" sid="2569256203604001" type="System">
                                     <param id="0" name="First value">quest.PickedCount</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">2</param>
+                                    <param id="2" name="Second value">SIMULATANEOUS_QUESTS_NB</param>
                                 </condition>
                             </conditions>
                             <actions>
