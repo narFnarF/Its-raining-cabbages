@@ -1225,38 +1225,6 @@
     </layers>
     <nonworld-instances>
         <instance type="stats" uid="269" />
-        <instance type="questsOld" uid="270">
-            <properties>
-                <width>0</width>
-                <height>6</height>
-                <depth>1</depth>
-            </properties>
-            <instance-variables>
-                <TYPE>0</TYPE>
-                <BASED_ON>1</BASED_ON>
-                <REQUIS>2</REQUIS>
-                <REWARD_TYPE>3</REWARD_TYPE>
-                <REWARD_COMBIEN>4</REWARD_COMBIEN>
-                <TIME_COMPLETED>5</TIME_COMPLETED>
-            </instance-variables>
-        </instance>
-        <instance type="questsOldActive" uid="275">
-            <properties>
-                <width>0</width>
-                <height>8</height>
-                <depth>1</depth>
-            </properties>
-            <instance-variables>
-                <QUEST_NB>0</QUEST_NB>
-                <TYPE>1</TYPE>
-                <BASED_ON>2</BASED_ON>
-                <REQUIS>3</REQUIS>
-                <REQUIS_COMPTEUR>4</REQUIS_COMPTEUR>
-                <REWARD_TYPE>5</REWARD_TYPE>
-                <REWARD_COMBIEN>6</REWARD_COMBIEN>
-                <TIME_COMPLETED>7</TIME_COMPLETED>
-            </instance-variables>
-        </instance>
         <instance type="siloHistoryForStats" uid="91">
             <properties>
                 <width>60</width>

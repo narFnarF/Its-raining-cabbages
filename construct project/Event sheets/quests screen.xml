@@ -49,9 +49,6 @@
                 <variable constant="0" name="collectButtonIndex" sid="4357173043813129" static="0" type="number">-1</variable>
                 <event-block sid="2501920317254854">
                     <conditions>
-                        <condition disabled="1" id="3" name="For each element" sid="6435063005104568" type="questsOldActive">
-                            <param id="0" name="Axes">2</param>
-                        </condition>
                         <condition id="-24" name="For Each (ordered)" sid="9934806301647427" type="System">
                             <param id="0" name="Object">quest</param>
                             <param id="1" name="Expression">quest.UID</param>
@@ -238,7 +235,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="1855593493610919" type="System">
                             <param id="0" name="Variable">rewardCombien</param>
-                            <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * timeCompleted</param>
+                            <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * (timeCompleted+1)</param>
                         </action>
                         <action id="0" name="Call function" sid="881287469971068" type="Function">
                             <param id="0" name="Name">&quot;get items&quot;</param>
@@ -266,11 +263,6 @@
                             <param id="0" name="Key">&quot;time completed&quot;</param>
                             <param id="1" name="Value">timeCompleted + 1</param>
                         </action>
-                        <action disabled="1" id="3" name="Set at XY" sid="4904213940442057" type="questsOld">
-                            <param id="0" name="X">questsOldActive.At(questCollectBtn.nb, questsOldActive.QUEST_NB)</param>
-                            <param id="1" name="Y">questsOld.TIME_COMPLETED</param>
-                            <param id="2" name="Value">timeCompleted + 1</param>
-                        </action>
                         <action id="1" name="Set key" sid="9252562787290235" type="quest">
                             <param id="0" name="Key">&quot;active&quot;</param>
                             <param id="1" name="Value">0</param>
@@ -278,10 +270,6 @@
                         <action id="1" name="Set key" sid="7236518333943349" type="quest">
                             <param id="0" name="Key">&quot;needed counter&quot;</param>
                             <param id="1" name="Value">0</param>
-                        </action>
-                        <action disabled="1" id="9" name="Delete" sid="9923195743433471" type="questsOldActive">
-                            <param id="0" name="Index">questCollectBtn.nb</param>
-                            <param id="1" name="Axis">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -295,28 +283,9 @@
                 <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="1" name="Set size" sid="1360383748293811" type="questsOldActive">
-                    <param id="0" name="Width">0</param>
-                    <param id="1" name="Height">questsOldActive.Height</param>
-                    <param id="2" name="Depth">questsOldActive.Depth</param>
-                </action>
-                <action disabled="1" id="1" name="Set key" sid="2965111338860834" type="quest">
+                <action id="1" name="Set key" sid="2965111338860834" type="quest">
                     <param id="0" name="Key">&quot;active&quot;</param>
                     <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3770053310295717">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="8134389338283201" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-                <condition id="-18" name="Is in preview" sid="4852406027434411" type="System" />
-            </conditions>
-            <actions>
-                <action disabled="1" id="14" name="Log" sid="4001920605057085" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">questsOld.AsJSON</param>
                 </action>
             </actions>
         </event-block>

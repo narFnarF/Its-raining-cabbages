@@ -1040,30 +1040,6 @@
             </object-type>
         </object-folder>
         <object-folder name="quests">
-            <object-type name="questsOld" sid="6221647988755415">
-                <plugin id="Arr" />
-                <instance-variables>
-                    <instance-variable name="TYPE" sid="5534887068566877" type="number" />
-                    <instance-variable name="BASED_ON" sid="8892604135738144" type="number" />
-                    <instance-variable name="REQUIS" sid="2971438272276045" type="number" />
-                    <instance-variable name="REWARD_TYPE" sid="3839766439093707" type="number" />
-                    <instance-variable name="REWARD_COMBIEN" sid="2741491337674447" type="number" />
-                    <instance-variable name="TIME_COMPLETED" sid="6448198071465804" type="number" />
-                </instance-variables>
-            </object-type>
-            <object-type global="1" name="questsOldActive" sid="6986233691407419">
-                <plugin id="Arr" />
-                <instance-variables>
-                    <instance-variable name="QUEST_NB" sid="9012428090334165" type="number" />
-                    <instance-variable name="TYPE" sid="134910205284624" type="number" />
-                    <instance-variable name="BASED_ON" sid="9886508637726421" type="number" />
-                    <instance-variable name="REQUIS" sid="7299213596761948" type="number" />
-                    <instance-variable name="REQUIS_COMPTEUR" sid="3139671826329158" type="number" />
-                    <instance-variable name="REWARD_TYPE" sid="2510424546079542" type="number" />
-                    <instance-variable name="REWARD_COMBIEN" sid="5772367464269911" type="number" />
-                    <instance-variable name="TIME_COMPLETED" sid="7439269930887428" type="number" />
-                </instance-variables>
-            </object-type>
             <object-type global="1" name="stats" sid="8704913547318958">
                 <plugin id="Dictionary" />
             </object-type>
