@@ -121,5 +121,18 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8100360253416029">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7902953856028603" type="Keyboard">
+                    <param id="0" name="Key">80 (P)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="3163552133335998" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5074768032877011" type="System">
+                    <param id="0" name="Layout">manual loading</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
