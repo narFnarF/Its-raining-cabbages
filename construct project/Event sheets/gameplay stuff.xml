@@ -1193,6 +1193,40 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="9490440616764986">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9440163674474692" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;bee lowest&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="9313258705448326" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;all bees above or equal&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="5549231549175871" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;level&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="6798333602191298" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="1" name="Set key" sid="2164317141781318" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;tofu steak&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="9157083220886151" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="581746038990646" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="775229316826496">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="3897564127501991" type="quest">
@@ -1222,21 +1256,56 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game</comment>
-                        <event-block any="1" sid="3491830434832082">
+                        <event-block sid="6344964130345521">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="4468448352658223" type="quest">
-                                    <param id="0" name="Key">&quot;available&quot;</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" name="Compare two values" sid="1318005228160451" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion lowest&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
-                                <condition id="3" inverted="1" name="Has key" sid="9294063781309652" type="quest">
-                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                <condition id="-14" name="Pick by unique ID" sid="6830526461433977" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;all lions above or equal&quot;)</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="1" name="Set key" sid="1063348982657792" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;level&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="4072395382624034" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="1" name="Set key" sid="6175443542715756" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;honey&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="5830693055079621" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="1" name="Set key" sid="9506781454127288" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game, or because they&apos;ll be activated later</comment>
+                        <event-block any="1" sid="3491830434832082">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare value" sid="4468448352658223" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="2047374044949005" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;quest not available: &quot; &amp; quest.PickedCount</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="4154465609722873" type="quest" />
-                                <action id="14" name="Log" sid="9095369396060818" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="9095369396060818" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;We&apos;ve detected that a quest is outdated (from a previous version of the game) so we deleted it.&quot;</param>
                                 </action>
@@ -1330,7 +1399,7 @@
                                         </action>
                                         <action id="0" name="Add key" sid="4172179863632478" type="quest">
                                             <param id="0" name="Key">&quot;available&quot;</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Add key" sid="7592537132370719" type="quest">
                                             <param id="0" name="Key">&quot;active&quot;</param>
@@ -1385,6 +1454,11 @@
                         <event-block sid="241246972396805">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1231061346168539" type="System" />
+                                <condition id="0" name="Compare value" sid="5385852208403617" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                                 <condition id="-16" name="Pick random instance" sid="8685397363659761" type="System">
                                     <param id="0" name="Object">quest</param>
                                 </condition>
@@ -1698,6 +1772,7 @@
         </event-group>
         <event-group description="" sid="7148030219305508" title="function Get Level Of, and its dictionary">
             <sub-events>
+                <comment>get level of(type of a quest). Return the level.</comment>
                 <event-block sid="6105023249146346">
                     <conditions>
                         <condition id="0" name="On function" sid="8088174606694421" type="Function">
@@ -1706,7 +1781,9 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>variable &quot;object&quot; to store the parameter</comment>
                         <variable constant="0" name="object" sid="2145611276388691" static="0" type="text"></variable>
+                        <comment>variable &quot;nb&quot; stores the returned value</comment>
                         <variable constant="0" name="nb" sid="5592120697360917" static="0" type="number">-1</variable>
                         <event-block sid="6741069435664433">
                             <conditions />
@@ -1812,59 +1889,53 @@
                                     <param id="2" name="Value">&quot;upgraded a bee&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="highestLevel" sid="2624533079751197" static="0" type="number">0</variable>
-                                <event-block sid="9596325029552226">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="1454963003510416" type="System">
-                                            <param id="0" name="Name">&quot;for each bees&quot;</param>
-                                            <param id="1" name="Start index">1</param>
-                                            <param id="2" name="End index">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="6183630558782614" type="System">
-                                            <param id="0" name="Variable">highestLevel</param>
-                                            <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;bee&quot; &amp; loopindex) )</param>
-                                        </action>
-                                        <action id="1" name="Set return value" sid="7603576844309118" type="Function">
-                                            <param id="0" name="Value">highestLevel</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="1" name="Set return value" sid="4348544351479213" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;bee highest&quot;)</param>
+                                </action>
+                            </actions>
                         </event-block>
-                        <event-block sid="9117511579861545">
+                        <event-block sid="637307713709333">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="5786252756778454" type="System">
+                                <condition id="-14" name="Compare variable" sid="4753806491444708" type="System">
                                     <param id="0" name="Variable">object</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="highestLevel" sid="5325541339066129" static="0" type="number">0</variable>
-                                <event-block sid="7092151855011318">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="9314038853399669" type="System">
-                                            <param id="0" name="Name">&quot;for each lion&quot;</param>
-                                            <param id="1" name="Start index">0</param>
-                                            <param id="2" name="End index">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="9186243550368853" type="System">
-                                            <param id="0" name="Variable">highestLevel</param>
-                                            <param id="1" name="Value">max(highestLevel, Function.Call(&quot;get level of&quot;, &quot;lion&quot; &amp; loopindex) )</param>
-                                        </action>
-                                        <action id="1" name="Set return value" sid="2019375538894794" type="Function">
-                                            <param id="0" name="Value">highestLevel</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="1" name="Set return value" sid="4004541685555734" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;lion highest&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="2286113400340659">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3537919219047884" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;all bees above or equal&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="7681387815428096" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;bee lowest&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9062233148067008">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="483731002945752" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;all lions above or equal&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="7655529878120366" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;lion lowest&quot;)</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1875,74 +1946,148 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9406243201150277">
+                        <event-block sid="8735821204754149">
                             <conditions>
-                                <condition id="-19" name="Pick all" sid="9031236324583072" type="System">
-                                    <param id="0" name="Object">factory</param>
+                                <condition id="-8" name="Compare two values" sid="6927405602976929" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;factory&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="6742326153993212" type="levelOfStuff">
-                                    <param id="0" name="Key">&quot;factory&quot;</param>
-                                    <param id="1" name="Value">factory.level</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9406243201150277">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="9031236324583072" type="System">
+                                            <param id="0" name="Object">factory</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="6742326153993212" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;factory&quot;</param>
+                                            <param id="1" name="Value">factory.level</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1918155221784874">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="8416695208209997" type="System">
+                                            <param id="0" name="Object">silo</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="2188889443211175" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;silo&quot;</param>
+                                            <param id="1" name="Value">silo.level</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5833652691380659">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="4723624388329408" type="System">
+                                            <param id="0" name="Object">menhir</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="5932998015495405" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;menhir&quot;</param>
+                                            <param id="1" name="Value">menhir.level</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <variable constant="0" name="lowest" sid="6534121012140935" static="0" type="number">1000000</variable>
+                                <variable constant="0" name="highest" sid="50288852917428" static="0" type="number">-1000000</variable>
+                                <event-block sid="8658175083266432">
+                                    <conditions>
+                                        <condition id="-24" name="For Each (ordered)" sid="2323743621268645" type="System">
+                                            <param id="0" name="Object">bee</param>
+                                            <param id="1" name="Expression">bee.nb</param>
+                                            <param id="2" name="Order">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="8247119183006444" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;bee&quot; &amp; bee.nb</param>
+                                            <param id="1" name="Value">bee.level</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="2787729422566461" type="System">
+                                            <param id="0" name="Variable">lowest</param>
+                                            <param id="1" name="Value">min(lowest, bee.level)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3337279441939853" type="System">
+                                            <param id="0" name="Variable">highest</param>
+                                            <param id="1" name="Value">max(highest, bee.level)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7369960357535381">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9234856613625978" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;bee lowest&quot;</param>
+                                            <param id="1" name="Value">lowest</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="9460485561729057" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;bee highest&quot;</param>
+                                            <param id="1" name="Value">highest</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="1918155221784874">
+                        <event-block sid="6231118945466762">
                             <conditions>
-                                <condition id="-19" name="Pick all" sid="8416695208209997" type="System">
-                                    <param id="0" name="Object">silo</param>
+                                <condition id="-8" name="Compare two values" sid="9929816285319073" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;lions&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="2188889443211175" type="levelOfStuff">
-                                    <param id="0" name="Key">&quot;silo&quot;</param>
-                                    <param id="1" name="Value">silo.level</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="lowest" sid="8752826091178719" static="0" type="number">1000000</variable>
+                                <variable constant="0" name="highest" sid="8097900789469163" static="0" type="number">-1000000</variable>
+                                <event-block sid="9522629178490693">
+                                    <conditions>
+                                        <condition id="-24" name="For Each (ordered)" sid="9041256989344952" type="System">
+                                            <param id="0" name="Object">lion</param>
+                                            <param id="1" name="Expression">lion.nb</param>
+                                            <param id="2" name="Order">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="3236785143223637" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;lion&quot; &amp; lion.nb</param>
+                                            <param id="1" name="Value">lion.level</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="700957793449251" type="System">
+                                            <param id="0" name="Variable">lowest</param>
+                                            <param id="1" name="Value">min(lowest, lion.level)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="4588423577965345" type="System">
+                                            <param id="0" name="Variable">highest</param>
+                                            <param id="1" name="Value">max(highest, lion.level)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1984007541635654">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add key" sid="8148006791385371" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;lion lowest&quot;</param>
+                                            <param id="1" name="Value">lowest</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="1488573464108145" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;lion highest&quot;</param>
+                                            <param id="1" name="Value">highest</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="5833652691380659">
-                            <conditions>
-                                <condition id="-19" name="Pick all" sid="4723624388329408" type="System">
-                                    <param id="0" name="Object">menhir</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="5932998015495405" type="levelOfStuff">
-                                    <param id="0" name="Key">&quot;menhir&quot;</param>
-                                    <param id="1" name="Value">menhir.level</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8658175083266432">
-                            <conditions>
-                                <condition id="-24" name="For Each (ordered)" sid="2323743621268645" type="System">
-                                    <param id="0" name="Object">bee</param>
-                                    <param id="1" name="Expression">bee.nb</param>
-                                    <param id="2" name="Order">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="8247119183006444" type="levelOfStuff">
-                                    <param id="0" name="Key">&quot;bee&quot; &amp; bee.nb</param>
-                                    <param id="1" name="Value">bee.level</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9522629178490693">
-                            <conditions>
-                                <condition id="-24" name="For Each (ordered)" sid="9041256989344952" type="System">
-                                    <param id="0" name="Object">lion</param>
-                                    <param id="1" name="Expression">lion.nb</param>
-                                    <param id="2" name="Order">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="3236785143223637" type="levelOfStuff">
-                                    <param id="0" name="Key">&quot;lion&quot; &amp; lion.nb</param>
-                                    <param id="1" name="Value">lion.level</param>
-                                </action>
-                            </actions>
+                        <event-block sid="7995663211840535">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2106,6 +2251,19 @@
         <variable constant="0" name="test" sid="2451419822543461" static="0" type="text"></variable>
         <event-group description="" sid="8627174315040763" title="Test">
             <sub-events>
+                <event-block sid="1939689871990024">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="8509647181552216" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="8337027598597992" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;test: &quot; &amp; Function.Call(&quot;get level of&quot;, &quot;lion min&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="7857195039675063">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
@@ -2119,9 +2277,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="5179711493222044" type="Function">
+                            <param id="0" name="Name">&quot;get level of&quot;</param>
+                            <param id="1" name="Parameter {n}">test</param>
+                        </action>
                         <action id="14" name="Log" sid="9045593110141554" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;format number &quot; &amp; test &amp; &quot;: &quot; &amp; Function.Call(&quot;format numbers&quot;, test)</param>
+                            <param id="1" name="Message">&quot;level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.ReturnValue</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2133,16 +2295,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="699021224147767">
-            <conditions>
-                <condition id="-33" name="Pick by comparison" sid="291069532538188" type="System">
-                    <param id="0" name="Object">stats</param>
-                    <param id="1" name="Expression">stats.Get(&quot;type&quot;)</param>
-                    <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">&quot;lion level up&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
     </events>
 </c2eventsheet>
