@@ -1345,9 +1345,13 @@
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-11" name="Add to" sid="6036840007664161" type="factory">
+                        <action id="-10" name="Set value" sid="6036840007664161" type="factory">
                             <param id="0" name="Instance variable">productivity</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">factory.level * 1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1264509228228388" type="factory">
+                            <param id="0" name="Instance variable">outputSaladsMax</param>
+                            <param id="1" name="Value">5*(2^factory.level)</param>
                         </action>
                         <action id="0" name="Call function" sid="371803911681976" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>

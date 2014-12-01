@@ -282,6 +282,9 @@
             </object-type>
             <object-type name="factoryUpgradeBtn" sid="2470023037519244">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="upgradeType" sid="4722071745107782" type="string" />
+                </instance-variables>
             </object-type>
             <object-type name="factoryProgressBarBg" sid="4294554374314644">
                 <plugin id="Sprite" />
