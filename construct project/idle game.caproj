@@ -180,6 +180,7 @@
                     <instance-variable name="level" sid="8246387739080951" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
                     <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
+                    <instance-variable name="outputSaladsMax" sid="186393763798137" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
                     <instance-variable name="timerMax" sid="6847551949910904" type="number" />
                 </instance-variables>

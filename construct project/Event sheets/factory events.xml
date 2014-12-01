@@ -800,7 +800,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
-                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, factory.outputSalads )</param>
+                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, factory.outputSalads ) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, factory.outputSaladsMax )</param>
                         </action>
                     </actions>
                 </event-block>

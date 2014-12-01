@@ -866,6 +866,7 @@
                         <level>1</level>
                         <productivity>1</productivity>
                         <outputSalads>0</outputSalads>
+                        <outputSaladsMax>0</outputSaladsMax>
                         <timer>0</timer>
                         <timerMax>10</timerMax>
                     </instance-variables>
