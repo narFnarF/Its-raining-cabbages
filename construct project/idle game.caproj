@@ -177,10 +177,11 @@
             <object-type name="factory" sid="5214980029075165">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="level" sid="8246387739080951" type="number" />
+                    <instance-variable name="levelOfProductivity" sid="8246387739080951" type="number" />
+                    <instance-variable name="levelOfCapacity" sid="8504193921132513" type="number" />
                     <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
+                    <instance-variable name="capacity" sid="186393763798137" type="number" />
                     <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
-                    <instance-variable name="outputSaladsMax" sid="186393763798137" type="number" />
                     <instance-variable name="timer" sid="5116439341233498" type="number" />
                     <instance-variable name="timerMax" sid="6847551949910904" type="number" />
                 </instance-variables>
@@ -1117,21 +1118,17 @@
         <layout-folder name="old or useless">
             <layout>gameplay (old).xml</layout>
             <layout>spawned objects.xml</layout>
+            <layout>Verachou.xml</layout>
         </layout-folder>
         <layout-folder name="global layers">
             <layout>notifications bar.xml</layout>
             <layout>purchase popup.xml</layout>
         </layout-folder>
-        <layout>Verachou.xml</layout>
         <layout>lions.xml</layout>
         <layout>factory.xml</layout>
         <layout>quests.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-folder name="verachou">
-            <event-sheet>verachou.xml</event-sheet>
-            <event-sheet>verachou main.xml</event-sheet>
-        </event-folder>
         <event-folder name="menus">
             <event-sheet>savefile error events.xml</event-sheet>
             <event-sheet>manual loading events.xml</event-sheet>
@@ -1139,6 +1136,10 @@
             <event-sheet>create new game events.xml</event-sheet>
         </event-folder>
         <event-folder name="old">
+            <event-folder name="verachou">
+                <event-sheet>verachou.xml</event-sheet>
+                <event-sheet>verachou main.xml</event-sheet>
+            </event-folder>
             <event-sheet>v1 events.xml</event-sheet>
         </event-folder>
         <event-folder name="general">
@@ -1148,6 +1149,7 @@
         <event-sheet>quests screen.xml</event-sheet>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
+        <event-sheet>global function names.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

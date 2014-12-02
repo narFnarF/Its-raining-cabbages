@@ -1863,7 +1863,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="7532117780558454" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;factory&quot;)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;factory productivity&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1964,8 +1964,12 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="6742326153993212" type="levelOfStuff">
-                                            <param id="0" name="Key">&quot;factory&quot;</param>
-                                            <param id="1" name="Value">factory.level</param>
+                                            <param id="0" name="Key">&quot;factory productivity&quot;</param>
+                                            <param id="1" name="Value">factory.levelOfProductivity</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="2916349846323764" type="levelOfStuff">
+                                            <param id="0" name="Key">&quot;factory capacity&quot;</param>
+                                            <param id="1" name="Value">factory.levelOfCapacity</param>
                                         </action>
                                     </actions>
                                 </event-block>

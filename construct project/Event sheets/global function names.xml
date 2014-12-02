@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>global function names</name>
+    <events>
+        <variable constant="1" name="UPGRADE_FACTORY_PRODUCTIVITY" sid="4452040522313916" static="0" type="text">upgrade factory productivity</variable>
+        <variable constant="1" name="upgrade_Factory_Capacity" sid="8162262254900727" static="0" type="text">upgrade factory capacity</variable>
+    </events>
+</c2eventsheet>
