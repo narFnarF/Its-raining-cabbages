@@ -608,153 +608,6 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3740395054702946" title="debug">
-            <sub-events>
-                <event-block sid="9230813409032216">
-                    <conditions>
-                        <condition id="-18" name="Is in preview" sid="8203784927323504" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="557685072215698">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3704217256528622" type="Keyboard">
-                                    <param id="0" name="Key">49 (1)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="5011214317580004" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">1000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="7628263753625174" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 1000 salads&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5574790077687577">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="2164939528319908" type="Keyboard">
-                                    <param id="0" name="Key">50 (2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="961588235365985" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">10000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6772831669742584" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 10 000 salads&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9627662895136622">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="5620059868273281" type="Keyboard">
-                                    <param id="0" name="Key">81 (Q)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-10" name="Add to" sid="8939851018959264" type="System">
-                                    <param id="0" name="Variable">eggs</param>
-                                    <param id="1" name="Value">1000</param>
-                                </action>
-                                <action id="0" name="Call function" sid="5847947475852701" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;tofu&quot;{###}5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6486740256561329" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="646716529375489">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="789024940462099" type="Keyboard">
-                                    <param id="0" name="Key">87 (W)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="1946579498035535" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu steak&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9608158545745486" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}5</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8706205130019801">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
-                                    <param id="0" name="Key">69 (E)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="5831153994775529" type="Function">
-                                    <param id="0" name="Name">&quot;get items&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="199859905082622">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
-                                    <param id="0" name="Key">82 (R)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="2673550343140702">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
-                                    <param id="0" name="Key">84 (T)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="4640776345347283" type="System">
-                                    <param id="0" name="Object to create">cabbage</param>
-                                    <param id="1" name="Layer">&quot;game&quot;</param>
-                                    <param id="2" name="X">Mouse.X</param>
-                                    <param id="3" name="Y">Mouse.Y</param>
-                                </action>
-                                <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="3755200330580629" type="cabbage">
-                                    <param id="0" name="Impulse">100</param>
-                                    <param id="1" name="Angle">-90</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3793089828323068">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="6501843756353979" type="Keyboard">
-                                    <param id="0" name="Key">83 (S)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-36" name="Save" sid="6983143950774245" type="System">
-                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6785683011550147" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: Saving in progress...&quot;{###}&quot;nobr&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="1518877078274311" title="time tracking">
             <sub-events>
                 <variable constant="0" name="deltaTime" sid="735276383662506" static="1" type="number">0</variable>
@@ -978,6 +831,8 @@
             <sub-events>
                 <variable constant="1" name="SIMULATANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
                 <comment>Populate the big list of quests</comment>
+                <comment>For event-based quests, the name of the quest should match the name of the event in the Stat dictionary.</comment>
+                <comment>For level-based quests, the name of the quest should be translated correctly by the &quot;get level of&quot; function.</comment>
                 <event-block any="1" sid="6857513590205514">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
@@ -1022,7 +877,7 @@
                         <event-block sid="9213066681281293">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
-                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;salad created&quot;)</param>
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads&quot;)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1584,192 +1439,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1941189896919642" title="item management functions">
-            <sub-events>
-                <event-block sid="8859242035702622">
-                    <conditions>
-                        <condition id="0" name="On function" sid="6283808490287199" type="Function">
-                            <param id="0" name="Name">&quot;has enough&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="item" sid="5408752426648534" static="0" type="text"></variable>
-                        <variable constant="0" name="quantity" sid="1524351940634243" static="0" type="number">0</variable>
-                        <event-block sid="1165843456088112">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="6341372517652042" type="System">
-                                    <param id="0" name="Variable">item</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="5299464048258234" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="8392742137749958" type="Function">
-                                    <param id="0" name="Value">&quot;false&quot;</param>
-                                </action>
-                                <action disabled="1" id="14" name="Log" sid="5833157123520146" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;inventory count: &quot; &amp; inventory.Get(item)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4839799779025455">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7180471014559387" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;salads&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="1008440217057666" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">quantity</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="6065400773479147" type="Function">
-                                    <param id="0" name="Value">&quot;true&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7845391516482538">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="5805155418335902" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="9656090572030751" type="System">
-                                    <param id="0" name="Variable">eggs</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">quantity</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="9949195897012741" type="Function">
-                                    <param id="0" name="Value">&quot;true&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6724104794596719">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="4210083353211909" type="inventory">
-                                    <param id="0" name="Key">item</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">quantity</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="2907005606220845" type="Function">
-                                    <param id="0" name="Value">&quot;true&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9807653931201834">
-                            <conditions>
-                                <condition id="3" inverted="1" name="Has key" sid="8327142965387726" type="inventory">
-                                    <param id="0" name="Key">item</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="5214320153357471" type="System">
-                                    <param id="0" name="First value">quantity</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="9183328972106912" type="Function">
-                                    <param id="0" name="Value">&quot;true&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="5552169774995285">
-                    <conditions>
-                        <condition id="0" name="On function" sid="4714403748334672" type="Function">
-                            <param id="0" name="Name">&quot;get items&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="item" sid="4411175914399848" static="0" type="text"></variable>
-                        <variable constant="0" name="quantity" sid="1949028598309919" static="0" type="number">0</variable>
-                        <event-block sid="3232642925124048">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="6843812082451168" type="System">
-                                    <param id="0" name="Variable">item</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="1256132166105392" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2908040355144644">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="4168226370309192" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;salads&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="7202284481715298" type="System">
-                                    <param id="0" name="Variable">salads</param>
-                                    <param id="1" name="Value">quantity</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2534870820465872">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="6846872788613824" type="System" />
-                                <condition id="-8" name="Compare two values" sid="7669358443968965" type="System">
-                                    <param id="0" name="First value">item</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;eggs&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="3493855044605405" type="System">
-                                    <param id="0" name="Variable">eggs</param>
-                                    <param id="1" name="Value">quantity</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7379876529632552">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1620452560088434" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="4214430299669004" type="inventory">
-                                    <param id="0" name="Key">item</param>
-                                    <param id="1" name="Value">inventory.Get(item) + quantity</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>The Pay Items function simply call the Get Items function with a negative sign in front</comment>
-                <event-block sid="5374781669234012">
-                    <conditions>
-                        <condition id="0" name="On function" sid="3553795092327042" type="Function">
-                            <param id="0" name="Name">&quot;pay items&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="2053424480974023" type="Function">
-                            <param id="0" name="Name">&quot;get items&quot;</param>
-                            <param id="1" name="Parameter {n}">Function.Param(0){###}-Function.Param(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="7148030219305508" title="function Get Level Of, and its dictionary">
             <sub-events>
                 <comment>get level of(type of a quest). Return the level.</comment>
@@ -2097,161 +1766,498 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4353502146524044">
-            <conditions>
-                <condition id="0" name="On function" sid="1159293781996007" type="Function">
-                    <param id="0" name="Name">&quot;format numbers&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="1322280799825649" title="useful functions">
             <sub-events>
-                <variable constant="0" name="nb" sid="1161139136157848" static="0" type="number">0</variable>
-                <variable constant="0" name="nbEnString" sid="1674047688099716" static="0" type="text"></variable>
-                <event-block sid="450935738229898">
+                <event-block sid="4353502146524044">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="217348802808419" type="System">
-                            <param id="0" name="First value">Function.ParamCount</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="3763720450688347" type="System">
-                            <param id="0" name="Variable">nb</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5997295844665993" type="System">
-                            <param id="0" name="Variable">nbEnString</param>
-                            <param id="1" name="Value">nb</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3618869554575641">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="2601472457747955" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="6248993243317522" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">&quot;Missing params in my function &apos;&apos;format numbers&apos;&apos;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>si on trouve un signe négatif (-)</comment>
-                <event-block sid="522152142260202">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="5360287300456719" type="System">
-                            <param id="0" name="First value">find(nbEnString, &quot;-&quot;)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">0</param>
+                        <condition id="0" name="On function" sid="1159293781996007" type="Function">
+                            <param id="0" name="Name">&quot;format numbers&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="pet" sid="1305786374340551" static="0" type="number">0</variable>
-                        <event-block sid="6919004113893203">
-                            <conditions />
+                        <variable constant="0" name="nb" sid="1161139136157848" static="0" type="number">0</variable>
+                        <variable constant="0" name="nbEnString" sid="1674047688099716" static="0" type="text"></variable>
+                        <event-block sid="450935738229898">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="217348802808419" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="1954887509609829" type="System">
-                                    <param id="0" name="Variable">pet</param>
-                                    <param id="1" name="Value">right(nbEnString, len(nbEnString)-1 )</param>
+                                <action id="-9" name="Set value" sid="3763720450688347" type="System">
+                                    <param id="0" name="Variable">nb</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
-                                <action id="1" name="Set return value" sid="1963212847544703" type="Function">
-                                    <param id="0" name="Value">&quot;-&quot; &amp; Function.Call(&quot;format numbers&quot;, pet)</param>
+                                <action id="-9" name="Set value" sid="5997295844665993" type="System">
+                                    <param id="0" name="Variable">nbEnString</param>
+                                    <param id="1" name="Value">nb</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3618869554575641">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2601472457747955" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="6248993243317522" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Missing params in my function &apos;&apos;format numbers&apos;&apos;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>si on trouve un signe négatif (-)</comment>
+                        <event-block sid="522152142260202">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5360287300456719" type="System">
+                                    <param id="0" name="First value">find(nbEnString, &quot;-&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="pet" sid="1305786374340551" static="0" type="number">0</variable>
+                                <event-block sid="6919004113893203">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="1954887509609829" type="System">
+                                            <param id="0" name="Variable">pet</param>
+                                            <param id="1" name="Value">right(nbEnString, len(nbEnString)-1 )</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="1963212847544703" type="Function">
+                                            <param id="0" name="Value">&quot;-&quot; &amp; Function.Call(&quot;format numbers&quot;, pet)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>si on trouve un point (.)</comment>
+                        <event-block sid="1038947810386545">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9018580425165664" type="System" />
+                                <condition id="-8" name="Compare two values" sid="2386979638834767" type="System">
+                                    <param id="0" name="First value">find(nbEnString, &quot;.&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="before" sid="3965956413488448" static="0" type="text"></variable>
+                                <variable constant="0" name="after" sid="8814661735344569" static="0" type="text"></variable>
+                                <event-block sid="3447422450514927">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="390630018661726" type="System">
+                                            <param id="0" name="Variable">before</param>
+                                            <param id="1" name="Value">left(nbEnString, find(nbEnString, &quot;.&quot;) )</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3663467145945809" type="System">
+                                            <param id="0" name="Variable">after</param>
+                                            <param id="1" name="Value">right(nbEnString, len(nbEnString) - find(nbEnString, &quot;.&quot;) )</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="3674361882445369" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; after</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9867874910223172">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9828550093184184" type="System" />
+                                <condition id="-8" name="Compare two values" sid="3296298677109939" type="System">
+                                    <param id="0" name="First value">len(nbEnString)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="before" sid="5272775268292553" static="0" type="text"></variable>
+                                <variable constant="0" name="after" sid="8583431075654013" static="0" type="text"></variable>
+                                <event-block sid="5892547108782557">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="573215124213797" type="System">
+                                            <param id="0" name="Variable">before</param>
+                                            <param id="1" name="Value">left(nbEnString, len(nbEnString)-3 )</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6671656864756715" type="System">
+                                            <param id="0" name="Variable">after</param>
+                                            <param id="1" name="Value">right(nbEnString, 3)</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="7103734479322573" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; &quot; &quot; &amp; after</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5085102940836054">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2844163495237057" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="9886051273407463" type="Function">
+                                    <param id="0" name="Value">nbEnString</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4358293626232408">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7038383874706338" type="System">
+                                    <param id="0" name="First value">len(str(nb))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="1924757299030978" type="Function">
+                                    <param id="0" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>si on trouve un point (.)</comment>
-                <event-block sid="1038947810386545">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="9018580425165664" type="System" />
-                        <condition id="-8" name="Compare two values" sid="2386979638834767" type="System">
-                            <param id="0" name="First value">find(nbEnString, &quot;.&quot;)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="1941189896919642" title="item management functions">
                     <sub-events>
-                        <variable constant="0" name="before" sid="3965956413488448" static="0" type="text"></variable>
-                        <variable constant="0" name="after" sid="8814661735344569" static="0" type="text"></variable>
-                        <event-block sid="3447422450514927">
-                            <conditions />
+                        <event-block sid="8859242035702622">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6283808490287199" type="Function">
+                                    <param id="0" name="Name">&quot;has enough&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="item" sid="5408752426648534" static="0" type="text"></variable>
+                                <variable constant="0" name="quantity" sid="1524351940634243" static="0" type="number">0</variable>
+                                <event-block sid="1165843456088112">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6341372517652042" type="System">
+                                            <param id="0" name="Variable">item</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5299464048258234" type="System">
+                                            <param id="0" name="Variable">quantity</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="8392742137749958" type="Function">
+                                            <param id="0" name="Value">&quot;false&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="5833157123520146" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;inventory count: &quot; &amp; inventory.Get(item)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4839799779025455">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7180471014559387" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="1008440217057666" type="System">
+                                            <param id="0" name="Variable">salads</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">quantity</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="6065400773479147" type="Function">
+                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7845391516482538">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5805155418335902" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="9656090572030751" type="System">
+                                            <param id="0" name="Variable">eggs</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">quantity</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="9949195897012741" type="Function">
+                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6724104794596719">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="4210083353211909" type="inventory">
+                                            <param id="0" name="Key">item</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">quantity</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="2907005606220845" type="Function">
+                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9807653931201834">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="8327142965387726" type="inventory">
+                                            <param id="0" name="Key">item</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="5214320153357471" type="System">
+                                            <param id="0" name="First value">quantity</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="9183328972106912" type="Function">
+                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5552169774995285">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4714403748334672" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="item" sid="4411175914399848" static="0" type="text"></variable>
+                                <variable constant="0" name="quantity" sid="1949028598309919" static="0" type="number">0</variable>
+                                <event-block sid="3232642925124048">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6843812082451168" type="System">
+                                            <param id="0" name="Variable">item</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1256132166105392" type="System">
+                                            <param id="0" name="Variable">quantity</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2908040355144644">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4168226370309192" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="7202284481715298" type="System">
+                                            <param id="0" name="Variable">salads</param>
+                                            <param id="1" name="Value">quantity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2534870820465872">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6846872788613824" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="7669358443968965" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="3493855044605405" type="System">
+                                            <param id="0" name="Variable">eggs</param>
+                                            <param id="1" name="Value">quantity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7379876529632552">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1620452560088434" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="4214430299669004" type="inventory">
+                                            <param id="0" name="Key">item</param>
+                                            <param id="1" name="Value">inventory.Get(item) + quantity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>The Pay Items function simply call the Get Items function with a negative sign in front</comment>
+                        <event-block sid="5374781669234012">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3553795092327042" type="Function">
+                                    <param id="0" name="Name">&quot;pay items&quot;</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="390630018661726" type="System">
-                                    <param id="0" name="Variable">before</param>
-                                    <param id="1" name="Value">left(nbEnString, find(nbEnString, &quot;.&quot;) )</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3663467145945809" type="System">
-                                    <param id="0" name="Variable">after</param>
-                                    <param id="1" name="Value">right(nbEnString, len(nbEnString) - find(nbEnString, &quot;.&quot;) )</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="3674361882445369" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; after</param>
+                                <action id="0" name="Call function" sid="2053424480974023" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}-Function.Param(1)</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="9867874910223172">
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3740395054702946" title="debug">
+            <sub-events>
+                <event-block sid="9230813409032216">
                     <conditions>
-                        <condition id="-22" name="Else" sid="9828550093184184" type="System" />
-                        <condition id="-8" name="Compare two values" sid="3296298677109939" type="System">
-                            <param id="0" name="First value">len(nbEnString)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">4</param>
-                        </condition>
+                        <condition id="-18" name="Is in preview" sid="8203784927323504" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="before" sid="5272775268292553" static="0" type="text"></variable>
-                        <variable constant="0" name="after" sid="8583431075654013" static="0" type="text"></variable>
-                        <event-block sid="5892547108782557">
-                            <conditions />
+                        <event-block sid="557685072215698">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3704217256528622" type="Keyboard">
+                                    <param id="0" name="Key">49 (1)</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="573215124213797" type="System">
-                                    <param id="0" name="Variable">before</param>
-                                    <param id="1" name="Value">left(nbEnString, len(nbEnString)-3 )</param>
+                                <action id="-10" name="Add to" sid="5011214317580004" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">1000</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="6671656864756715" type="System">
-                                    <param id="0" name="Variable">after</param>
-                                    <param id="1" name="Value">right(nbEnString, 3)</param>
+                                <action id="0" name="Call function" sid="7628263753625174" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 1000 salads&quot;</param>
                                 </action>
-                                <action id="1" name="Set return value" sid="7103734479322573" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;format numbers&quot;, before) &amp; &quot; &quot; &amp; after</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5574790077687577">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="2164939528319908" type="Keyboard">
+                                    <param id="0" name="Key">50 (2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="961588235365985" type="System">
+                                    <param id="0" name="Variable">salads</param>
+                                    <param id="1" name="Value">10000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6772831669742584" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 10 000 salads&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9627662895136622">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="5620059868273281" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-10" name="Add to" sid="8939851018959264" type="System">
+                                    <param id="0" name="Variable">eggs</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5847947475852701" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;tofu&quot;{###}5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6486740256561329" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="646716529375489">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="789024940462099" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1946579498035535" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 tofu steak&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9608158545745486" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8706205130019801">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5831153994775529" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;veggie burger&quot;{###}5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9000305280376246" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug 5 Veggie burger&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="199859905082622">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3999900342917725" type="Keyboard">
+                                    <param id="0" name="Key">82 (R)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="9342522555299518" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="2673550343140702">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
+                                    <param id="0" name="Key">84 (T)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4640776345347283" type="System">
+                                    <param id="0" name="Object to create">cabbage</param>
+                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                    <param id="2" name="X">Mouse.X</param>
+                                    <param id="3" name="Y">Mouse.Y</param>
+                                </action>
+                                <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="3755200330580629" type="cabbage">
+                                    <param id="0" name="Impulse">100</param>
+                                    <param id="1" name="Angle">-90</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3793089828323068">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6501843756353979" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-36" name="Save" sid="6983143950774245" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6785683011550147" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;debug: Saving in progress...&quot;{###}&quot;nobr&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="5085102940836054">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="2844163495237057" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="9886051273407463" type="Function">
-                            <param id="0" name="Value">nbEnString</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4358293626232408">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="7038383874706338" type="System">
-                            <param id="0" name="First value">len(str(nb))</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="1924757299030978" type="Function">
-                            <param id="0" name="Value">0</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <variable constant="0" name="test" sid="2451419822543461" static="0" type="text"></variable>
         <event-group description="" sid="8627174315040763" title="Test">
             <sub-events>

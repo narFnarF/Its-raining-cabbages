@@ -203,6 +203,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Clicking the Collect button</comment>
         <event-block sid="728465832505418">
             <conditions>
                 <condition id="3" name="On touched object" sid="7452122217507895" type="Touch">
