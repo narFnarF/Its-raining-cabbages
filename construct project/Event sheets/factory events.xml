@@ -804,9 +804,29 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="1938044047557305" type="factoryTxt">
-                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, factory.outputSalads ) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity )</param>
+                            <param id="0" name="Text">Function.Call(&quot;format numbers&quot;, factory.outputSalads ) &amp; &quot; / &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity )</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9788807935416165">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2737632590821686" type="System">
+                                    <param id="0" name="First value">factoryTxt.TextWidth</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">factory.Width - 5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="8278249070174076" type="factoryTxt">
+                                    <param id="0" name="Size (pt)">factoryTxt.FaceSize -1</param>
+                                </action>
+                                <action id="14" name="Log" sid="5464891955987318" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;size: &quot; &amp; factoryTxt.TextWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4157231196485508">
                     <conditions>

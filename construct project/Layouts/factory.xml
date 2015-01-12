@@ -1636,9 +1636,9 @@
                 </instance>
                 <instance type="factoryTxt" uid="288">
                     <properties>
-                        <text>12345</text>
+                        <text>123 456/123 456</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
+                        <font>Arial,-37,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
@@ -1652,11 +1652,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1259.706054688</x>
-                        <y>784.122680664</y>
+                        <x>1261</x>
+                        <y>801</y>
                         <z>0</z>
-                        <width>153</width>
-                        <height>69</height>
+                        <width>323</width>
+                        <height>55</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
