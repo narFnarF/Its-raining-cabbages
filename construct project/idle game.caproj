@@ -233,6 +233,9 @@
             </object-type>
             <object-type name="btnUpgradeBg" sid="2766913013001252">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="7657516846439937" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="NoSave" sid="3565957130775504">
                         <behavior id="NoSave" />
@@ -280,12 +283,11 @@
             </object-type>
             <object-type name="siloUpgradeBtn" sid="1426435039234259">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="factoryUpgradeBtn" sid="2470023037519244">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="upgradeType" sid="4722071745107782" type="string" />
-                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8258410927934596">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="factoryProgressBarBg" sid="4294554374314644">
                 <plugin id="Sprite" />

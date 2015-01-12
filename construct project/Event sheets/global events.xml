@@ -19,9 +19,6 @@
         </event-block>
         <event-block sid="5543309227872803">
             <conditions>
-                <condition disabled="1" id="0" name="On key pressed" sid="316671489470019" type="Keyboard">
-                    <param id="0" name="Key">80 (P)</param>
-                </condition>
                 <condition id="2" name="Key is down" sid="4222981231032219" type="Keyboard">
                     <param id="0" name="Key">80 (P)</param>
                 </condition>
@@ -31,7 +28,6 @@
                 <condition id="2" name="Key is down" sid="5844897751072514" type="Keyboard">
                     <param id="0" name="Key">84 (T)</param>
                 </condition>
-                <condition disabled="1" id="-18" name="Is in preview" sid="3787635331598441" type="System" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="2365613198982842" type="System">

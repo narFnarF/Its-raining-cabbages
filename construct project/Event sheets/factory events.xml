@@ -1264,56 +1264,140 @@
             <sub-events>
                 <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
                 <variable constant="0" name="factoryProductivityCost" sid="4062049571430355" static="0" type="number">0</variable>
-                <event-block sid="582330761436202">
+                <event-block sid="7921739680958084">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="3398903724231122" type="System">
+                        <action id="-9" name="Set value" sid="7030103509765743" type="System">
                             <param id="0" name="Variable">siloCost</param>
                             <param id="1" name="Value">round( 1.5^(2*(silo.level-1)) + 2*(silo.level-1) )</param>
                         </action>
-                        <action id="0" name="Set text" sid="4306928240779827" type="siloUpgradeBtn">
-                            <param id="0" name="Text">&quot;Upgrade silo&apos;s capacity. Current: &quot; &amp; silo.capacity &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, siloCost)</param>
+                        <action id="-9" name="Set value" sid="807571118901752" type="System">
+                            <param id="0" name="Variable">factoryProductivityCost</param>
+                            <param id="1" name="Value">round( 1.5^(2*(factory.levelOfProductivity-1)) + 2*(factory.levelOfProductivity-1) )</param>
                         </action>
                     </actions>
+                </event-block>
+                <comment>Update text inside buttons</comment>
+                <event-block sid="582330761436202">
+                    <conditions />
+                    <actions />
                     <sub-events>
-                        <event-block sid="3986034986727512">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9952692010586653" type="factoryUpgradeBtn">
-                                    <param id="0" name="Instance variable">upgradeType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;productivity&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="807571118901752" type="System">
-                                    <param id="0" name="Variable">factoryProductivityCost</param>
-                                    <param id="1" name="Value">round( 1.5^(2*(factory.levelOfProductivity-1)) + 2*(factory.levelOfProductivity-1) )</param>
-                                </action>
-                                <action id="0" name="Set text" sid="4351059280207551" type="factoryUpgradeBtn">
-                                    <param id="0" name="Text">&quot;Upgrade factory&apos;s productivity. Current: &quot; &amp; factory.productivity &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factoryProductivityCost)</param>
-                                </action>
-                            </actions>
+                        <comment>silo capacity</comment>
+                        <event-block sid="4809596813227626">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1600180660372173">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5545415006987572" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;silo capacity button&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="1053457927721408" type="txtLabel">
+                                            <param id="0" name="Text">&quot;Upgrade silo&apos;s capacity&quot; &amp; newline &amp; &quot;Current capacity: &quot; &amp; silo.capacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5044869961107658">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4803235677088275" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;silo capacity cost&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="891526895472873" type="txtLabel">
+                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, siloCost)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="3944792884757273">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="4610646727331378" type="factoryUpgradeBtn">
-                                    <param id="0" name="Instance variable">upgradeType</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;capacity&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="4935630851246601" type="factoryUpgradeBtn">
-                                    <param id="0" name="Text">&quot;Upgrade factory&apos;s capacity. Current: &quot; &amp; factory.capacity &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity)</param>
-                                </action>
-                            </actions>
+                        <comment>factory productivity</comment>
+                        <event-block sid="4519650471937857">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1424862319766292">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3904712507150443" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;factory productivity button&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="1276623222129858" type="txtLabel">
+                                            <param id="0" name="Text">&quot;Upgrade factory&apos;s productivity&quot; &amp; newline &amp; &quot;Current productivity: &quot; &amp; factory.productivity </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1087784088291797">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2540645964037851" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;factory productivity cost&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2201715912248957" type="txtLabel">
+                                            <param id="0" name="Text"> &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factoryProductivityCost)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>factory capacity</comment>
+                        <event-block sid="7723244182887165">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3861076823924569">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="285574958711697" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;factory capacity button&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6693446368630506" type="txtLabel">
+                                            <param id="0" name="Text">&quot;Upgrade factory&apos;s capacity&quot; &amp; newline &amp; &quot;Current capacity: &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity) </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5973732567303523">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9733003350445948" type="txtLabel">
+                                            <param id="0" name="Instance variable">name</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;factory capacity cost&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="3535882816328876" type="txtLabel">
+                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="7573296559444703">
                     <conditions>
                         <condition id="3" name="On touched object" sid="4641866961990168" type="Touch">
-                            <param id="0" name="Object">siloUpgradeBtn</param>
+                            <param id="0" name="Object">btnUpgradeBg</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7976248067179098" type="btnUpgradeBg">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;silo capacity&quot;</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="6391134490151377" type="purchasePopup" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9425196663599165" type="notificationBox">
@@ -1354,13 +1438,13 @@
                 </event-block>
                 <event-block sid="1214298759564089">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="3125850562041479" type="Touch">
-                            <param id="0" name="Object">factoryUpgradeBtn</param>
+                        <condition id="3" name="On touched object" sid="4965599062686496" type="Touch">
+                            <param id="0" name="Object">btnUpgradeBg</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8297474540030019" type="factoryUpgradeBtn">
-                            <param id="0" name="Instance variable">upgradeType</param>
+                        <condition id="-7" name="Compare instance variable" sid="9400244678581879" type="btnUpgradeBg">
+                            <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;productivity&quot;</param>
+                            <param id="2" name="Value">&quot;factory productivity&quot;</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="7111002657386647" type="purchasePopup" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6968637382393077" type="notificationBox">
@@ -1401,13 +1485,13 @@
                 </event-block>
                 <event-block sid="2419843009570472">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="5421695158035057" type="Touch">
-                            <param id="0" name="Object">factoryUpgradeBtn</param>
+                        <condition id="3" name="On touched object" sid="5936273759741721" type="Touch">
+                            <param id="0" name="Object">btnUpgradeBg</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7380071893762996" type="factoryUpgradeBtn">
-                            <param id="0" name="Instance variable">upgradeType</param>
+                        <condition id="-7" name="Compare instance variable" sid="9812275499976547" type="btnUpgradeBg">
+                            <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;capacity&quot;</param>
+                            <param id="2" name="Value">&quot;factory capacity&quot;</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="7616561077152961" type="purchasePopup" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4866644474113238" type="notificationBox">
@@ -1438,7 +1522,7 @@
                         </action>
                         <action id="0" name="Call function" sid="8253477337198963" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;This is a placeholder message. Factory capacity: &quot; &amp; factory.capacity &amp; &quot;. Placeholder!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You just doubled the size of your factory to &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity) &amp; &quot;, and somehow, it only cost you some salads. What an amazing deal!&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="963644728022738" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
