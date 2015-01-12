@@ -7,49 +7,16 @@
         <variable constant="0" name="eggs" sid="4263644418163258" static="0" type="number">0</variable>
         <event-group description="" sid="8286149581313041" title="camera and arrows">
             <sub-events>
-                <event-block sid="7452036870298714">
-                    <conditions>
-                        <condition id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1350413216091956" type="notificationBox">
-                            <param id="0" name="Instance variable">open</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="8385435176568034" title="arrows">
                     <sub-events>
-                        <event-block disabled="1" sid="8884140667647572">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="461470036719477" type="Touch">
-                                    <param id="0" name="Object">arrowCamera</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4756559406950533" type="screen">
-                                    <param id="0" name="Instance variable">number</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">arrowCamera.goto</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="5224733347865089" type="camera">
-                                    <param id="0" name="Instance variable">screen</param>
-                                    <param id="1" name="Value">screen.number</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="2249141778481291">
-                            <conditions>
-                                <condition id="3" name="On touched object" sid="5043492847517545" type="Touch">
-                                    <param id="0" name="Object">arrowLayout</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-25" name="Go to layout (by name)" sid="671710275774179" type="System">
-                                    <param id="0" name="Layout">arrowLayout.goto</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1630869640456696">
+                        <event-block sid="7452036870298714">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="7228765209026833" type="Touch">
                                     <param id="0" name="Object">arrows</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="55252332753933" type="purchasePopup" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1350413216091956" type="notificationBox">
+                                    <param id="0" name="Instance variable">open</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -108,6 +75,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <comment>Follow the arrow</comment>
                                 <event-block sid="628254899610612">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="4149024568008896" type="System">
@@ -152,61 +120,52 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="142836791848937">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5070740121516203" type="Function">
+                                    <param id="0" name="Name">&quot;unlock arrow&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="name" sid="1476325605555189" static="0" type="text"></variable>
+                                <event-block sid="9829599569055093">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6261543418230453" type="System">
+                                            <param id="0" name="Variable">name</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="9075531835212713" type="saver">
+                                            <param id="0" name="Key">name</param>
+                                            <param id="1" name="Value">&quot;unlocked&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="142836791848937">
-                    <conditions>
-                        <condition id="0" name="On function" sid="5070740121516203" type="Function">
-                            <param id="0" name="Name">&quot;unlock arrow&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                </event-group>
+                <event-group description="" sid="168130929400991" title="camera">
                     <sub-events>
-                        <variable constant="0" name="name" sid="1476325605555189" static="0" type="text"></variable>
-                        <event-block sid="9829599569055093">
-                            <conditions />
+                        <event-block sid="7265822603748214">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="7857482618290828" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1599688234136488" type="screen">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">camera.screen</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="6261543418230453" type="System">
-                                    <param id="0" name="Variable">name</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                                <action id="14" name="Log" sid="5426384325401805" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;ici c&apos;est &quot; &amp; name</param>
-                                </action>
-                                <action id="14" name="Log" sid="625272300244574" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;param count: &quot; &amp; Function.ParamCount</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6143853551910211">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Add key" sid="9075531835212713" type="saver">
-                                    <param id="0" name="Key">name</param>
-                                    <param id="1" name="Value">&quot;unlocked&quot;</param>
+                                <action id="-3" name="Set position" sid="6933512897303296" type="camera">
+                                    <param id="0" name="X">lerp(camera.X, screen.X, 0.1*dt*60)</param>
+                                    <param id="1" name="Y">lerp(camera.Y, screen.Y, 0.1*dt*60)</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="7265822603748214">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="7857482618290828" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="1599688234136488" type="screen">
-                            <param id="0" name="Instance variable">number</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">camera.screen</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="6933512897303296" type="camera">
-                            <param id="0" name="X">lerp(camera.X, screen.X, 0.1*dt*60)</param>
-                            <param id="1" name="Y">lerp(camera.Y, screen.Y, 0.1*dt*60)</param>
-                        </action>
-                    </actions>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="5809538651794419" title="Notifications">
