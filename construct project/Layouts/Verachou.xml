@@ -926,6 +926,8 @@
                     </properties>
                     <instance-variables>
                         <label>Bees</label>
+                        <name></name>
+                        <price>0</price>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

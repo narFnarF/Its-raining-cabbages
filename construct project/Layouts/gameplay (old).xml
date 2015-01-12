@@ -535,6 +535,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -564,6 +566,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -593,6 +597,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -622,6 +628,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -651,6 +659,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -680,6 +690,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -709,6 +721,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -738,6 +752,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -767,6 +783,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>verachou</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -796,6 +814,8 @@
                     </properties>
                     <instance-variables>
                         <label></label>
+                        <name></name>
+                        <price>0</price>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>

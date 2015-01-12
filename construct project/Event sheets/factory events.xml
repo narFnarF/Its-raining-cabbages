@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>factory events</name>
     <events>
+        <include>saver</include>
         <include>gameplay stuff</include>
         <include>global events</include>
         <event-block sid="9542002391878686">

@@ -161,6 +161,8 @@
                     </properties>
                     <instance-variables>
                         <label>Crafting area</label>
+                        <name></name>
+                        <price>0</price>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -190,6 +192,8 @@
                     </properties>
                     <instance-variables>
                         <label>Lions</label>
+                        <name></name>
+                        <price>0</price>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -219,6 +223,8 @@
                     </properties>
                     <instance-variables>
                         <label>Bees</label>
+                        <name></name>
+                        <price>0</price>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -1687,6 +1693,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="saver" uid="275" />
+    </nonworld-instances>
     <effects />
 </c2layout>

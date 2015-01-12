@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>r111</version>
+    <version>r112</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -1091,6 +1091,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="saver" sid="4467673521804933">
+            <plugin id="Dictionary" />
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1110,6 +1113,8 @@
             </members>
             <instance-variables>
                 <instance-variable name="label" sid="6512711138914009" type="string" />
+                <instance-variable name="name" sid="8613328284108331" type="string" />
+                <instance-variable name="price" sid="3173789073934467" type="number" />
             </instance-variables>
         </family>
     </families>
@@ -1155,6 +1160,7 @@
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>global function names.xml</event-sheet>
+        <event-sheet>saver.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
