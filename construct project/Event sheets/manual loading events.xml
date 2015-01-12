@@ -3,28 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>manual loading events</name>
     <events>
-        <event-block disabled="1" sid="9778464060931054">
+        <comment>save</comment>
+        <event-block sid="4226205492298222">
             <conditions>
-                <condition id="2" name="Mouse button is down" sid="4794401432471973" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
+                <condition id="3" name="On touched object" sid="5346972575558989" type="Touch">
+                    <param id="0" name="Object">txtLabel</param>
                 </condition>
-                <condition id="2" name="Mouse button is down" sid="8294367331804588" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-                <condition id="2" name="Mouse button is down" sid="3240175351051314" type="Mouse">
-                    <param id="0" name="Mouse button">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="7619808489055349" type="System">
-                    <param id="0" name="Layout">gameplay (old)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="4226205492298222">
-            <conditions>
-                <condition id="3" name="On touched object" sid="6841543499950354" type="Touch">
-                    <param id="0" name="Object">saveBtn</param>
+                <condition id="-7" name="Compare instance variable" sid="4522985347410904" type="txtLabel">
+                    <param id="0" name="Instance variable">name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;save&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -33,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="6397254503824751">
+        <event-block sid="6397254503824751">
             <conditions>
                 <condition id="-28" name="On save complete" sid="1001810118588949" type="System" />
             </conditions>
@@ -43,14 +31,16 @@
                 </action>
             </actions>
         </event-block>
+        <comment>load</comment>
         <event-block sid="5235953496558794">
             <conditions>
                 <condition id="3" name="On touched object" sid="5260508732335893" type="Touch">
                     <param id="0" name="Object">txtLabel</param>
                 </condition>
-                <condition id="0" name="Compare text" sid="6082231380865861" type="txtLabel">
-                    <param id="0" name="Text to compare">&quot;[Load button]&quot;</param>
-                    <param id="1" name="Case sensitivity">0</param>
+                <condition id="-7" name="Compare instance variable" sid="1695769132673246" type="txtLabel">
+                    <param id="0" name="Instance variable">name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;load&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -59,19 +49,49 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3431290495337875">
+            <conditions>
+                <condition id="-30" name="On load failed" sid="9963545442965467" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="4518553228253631" type="Browser">
+                    <param id="0" name="Message">&quot;Loading failed. Probably because there&apos;s an error in the JSON.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>cancel</comment>
         <event-block sid="66366943825607">
             <conditions>
                 <condition id="3" name="On touched object" sid="7574137722883641" type="Touch">
                     <param id="0" name="Object">txtLabel</param>
                 </condition>
-                <condition id="0" name="Compare text" sid="7117710668203133" type="txtLabel">
-                    <param id="0" name="Text to compare">&quot;Go to Gameplay&quot;</param>
-                    <param id="1" name="Case sensitivity">0</param>
+                <condition id="-7" name="Compare instance variable" sid="2680661214005006" type="txtLabel">
+                    <param id="0" name="Instance variable">name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;cancel&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="948542714214916" type="System">
                     <param id="0" name="Layout">factory</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>clear</comment>
+        <event-block sid="1338074245842268">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6724892870834197" type="Touch">
+                    <param id="0" name="Object">txtLabel</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7980056145896201" type="txtLabel">
+                    <param id="0" name="Instance variable">name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;clear&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4252204968093658" type="debugTextBox">
+                    <param id="0" name="Text">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

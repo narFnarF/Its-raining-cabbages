@@ -4,9 +4,10 @@
     <name>global events</name>
     <events>
         <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
-        <event-block disabled="1" sid="9906113789766278">
+        <event-block sid="9906113789766278">
             <conditions>
-                <condition id="10" name="On Nth touch start" sid="5046725027455657" type="Touch">
+                <condition id="15" name="On double-tap" sid="5046725027455657" type="Touch" />
+                <condition id="12" name="Has Nth touch" sid="7712241700716919" type="Touch">
                     <param id="0" name="Touch number">4-1</param>
                 </condition>
             </conditions>
@@ -18,10 +19,19 @@
         </event-block>
         <event-block sid="5543309227872803">
             <conditions>
-                <condition id="0" name="On key pressed" sid="316671489470019" type="Keyboard">
+                <condition disabled="1" id="0" name="On key pressed" sid="316671489470019" type="Keyboard">
                     <param id="0" name="Key">80 (P)</param>
                 </condition>
-                <condition id="-18" name="Is in preview" sid="3787635331598441" type="System" />
+                <condition id="2" name="Key is down" sid="4222981231032219" type="Keyboard">
+                    <param id="0" name="Key">80 (P)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="1342442979006446" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="5844897751072514" type="Keyboard">
+                    <param id="0" name="Key">84 (T)</param>
+                </condition>
+                <condition disabled="1" id="-18" name="Is in preview" sid="3787635331598441" type="System" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="2365613198982842" type="System">

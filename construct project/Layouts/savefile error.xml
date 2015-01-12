@@ -40,6 +40,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <name></name>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
                     </behavior-instances>

@@ -386,6 +386,9 @@
             </object-type>
             <object-type name="txtLabel" sid="2110053242017875">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable comment="Can be used to differenciate the labels" name="name" sid="2334635496844516" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="NoSave" sid="1321623081067884">
                         <behavior id="NoSave" />
