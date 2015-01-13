@@ -1344,7 +1344,7 @@
                     </properties>
                     <instance-variables>
                         <nb>1</nb>
-                        <level>3</level>
+                        <level>2</level>
                         <speed>0</speed>
                         <status>standby</status>
                         <cabbageID>-1</cabbageID>

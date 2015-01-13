@@ -644,7 +644,7 @@
                         <action id="-5" name="Set width" sid="3720700351397225" type="beeCollectZone">
                             <param id="0" name="Width">menhir.Width</param>
                         </action>
-                        <action id="14" name="Log" sid="3926676412564366" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="3926676412564366" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;menhir size adjusted&quot;</param>
                         </action>
@@ -1100,7 +1100,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8243264933951822" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb - (400*bee.level/bee.nb) )</param>
+                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb - (400*bee.level/bee.nb) -179)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6673935572017718" type="btnBee">
                                     <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, btnBee.cost) &amp; &quot; salads&quot;</param>

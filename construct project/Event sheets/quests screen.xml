@@ -14,16 +14,6 @@
             </conditions>
             <actions />
         </event-block>
-        <event-block disabled="1" sid="8137734307892567">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7932126007687486" type="System" />
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="9730088895721049" type="questCollectBtn">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
         <comment>Update the display, and set the visibility of the Collect button</comment>
         <event-block sid="7334555190214475">
             <conditions>
