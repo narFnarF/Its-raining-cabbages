@@ -2109,6 +2109,7 @@
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
+                        <levelUpCost>0</levelUpCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -2144,6 +2145,7 @@
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
+                        <levelUpCost>0</levelUpCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -2179,6 +2181,7 @@
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
+                        <levelUpCost>0</levelUpCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -2214,6 +2217,7 @@
                         <huntTimeCounter>0</huntTimeCounter>
                         <away>false</away>
                         <readyToCollect>false</readyToCollect>
+                        <levelUpCost>0</levelUpCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />

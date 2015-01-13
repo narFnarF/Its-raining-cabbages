@@ -862,6 +862,7 @@
                     <instance-variable name="huntTimeCounter" sid="4270270175809803" type="number" />
                     <instance-variable name="away" sid="9952528029607261" type="boolean" />
                     <instance-variable comment="when the lion is back and ready to collect" name="readyToCollect" sid="3188355233868491" type="boolean" />
+                    <instance-variable name="levelUpCost" sid="4190724656124025" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="8847791984893872">

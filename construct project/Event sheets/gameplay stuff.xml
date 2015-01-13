@@ -2375,10 +2375,6 @@
                                     <param id="0" name="Key">arrows.name</param>
                                     <param id="1" name="Value">&quot;unlocked&quot;</param>
                                 </action>
-                                <action id="14" name="Log" sid="2926889778017013" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">arrows.name</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
