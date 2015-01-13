@@ -579,7 +579,7 @@
                     <instance-variables>
                         <label>Lions</label>
                         <name>arrow lions</name>
-                        <price>200</price>
+                        <price>40</price>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -610,7 +610,7 @@
                     <instance-variables>
                         <label>Quests</label>
                         <name>arrow quests</name>
-                        <price>500</price>
+                        <price>60</price>
                         <goto>quests</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -842,10 +842,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1103</x>
-                        <y>360</y>
+                        <y>344.5</y>
                         <z>0</z>
                         <width>75</width>
-                        <height>48</height>
+                        <height>79</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -914,7 +914,7 @@
                         <levelOfProductivity>1</levelOfProductivity>
                         <levelOfCapacity>1</levelOfCapacity>
                         <productivity>1</productivity>
-                        <capacity>10</capacity>
+                        <capacity>15</capacity>
                         <outputSalads>0</outputSalads>
                         <timer>0</timer>
                         <timerMax>10</timerMax>
