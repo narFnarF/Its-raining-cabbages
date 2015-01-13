@@ -57,19 +57,19 @@
                 <event-block sid="6931695193521489">
                     <conditions>
                         <condition id="3" name="On touched object" sid="154182526583012" type="Touch">
-                            <param id="0" name="Object">lion</param>
+                            <param id="0" name="Object">lionBtn</param>
                         </condition>
+                        <condition id="2" name="Is playing" sid="2426301561026876" type="lion">
+                            <param id="0" name="Animation">&quot;vide&quot;</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="3989441302298493" type="lionBtn" />
                     </conditions>
                     <actions />
                     <sub-events>
                         <variable constant="0" name="cost" sid="8806907708893681" static="0" type="number">0</variable>
                         <variable constant="0" name="text" sid="572322267440999" static="0" type="text"></variable>
                         <event-block sid="9339472063304249">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="2426301561026876" type="lion">
-                                    <param id="0" name="Animation">&quot;vide&quot;</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="9089351431589941" type="System">
                                     <param id="0" name="Variable">cost</param>
@@ -114,20 +114,23 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="8835471685095859">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="2532744912319312" type="lion">
-                                    <param id="0" name="Animation">&quot;burger&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="5987832449907619" type="Function">
-                                    <param id="0" name="Name">&quot;text popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;You placed that veggie burger here. You must had had your reasons for that...&quot;{###}&quot;Cool, i guess...&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="2503442813067025">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7406861224067627" type="Touch">
+                            <param id="0" name="Object">lion</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="2532744912319312" type="lion">
+                            <param id="0" name="Animation">&quot;burger&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5987832449907619" type="Function">
+                            <param id="0" name="Name">&quot;text popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You placed that veggie burger here. You must had had your reasons for that...&quot;{###}&quot;Cool, i guess...&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="3815697928676717">
                     <conditions>
@@ -472,15 +475,15 @@
                             <param id="0" name="Object">lionLevelUpIcon</param>
                         </condition>
                         <condition id="-10" name="Compare opacity" sid="4327920293646821" type="lionLevelUpIcon">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Opacity">100</param>
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Opacity">0</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="98828735163449" type="lionLevelUpIcon" />
+                        <condition disabled="1" id="-9" name="Is visible" sid="98828735163449" type="lionLevelUpIcon" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="731191703593424" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion so that it brings back more stuff from its missions&quot;{###}1*lion.level{###}&quot;tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.nb</param>
+                            <param id="1" name="Parameter {n}">&quot;lion level up&quot;{###}&quot;Level up your lion so that it brings back more stuff from its missions&quot;{###}lion.levelUpCost{###}&quot;tofu steak&quot;{###}&quot;Level up for &quot;{###}lion.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -521,7 +524,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="8641250194057812" type="lion">
                             <param id="0" name="Instance variable">levelUpCost</param>
-                            <param id="1" name="Value">lion.level*lion.nb</param>
+                            <param id="1" name="Value">lion.level*(lion.nb+1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -717,7 +720,7 @@
                                 <event-block sid="3464443409787382">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8745652468282116" type="System">
-                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;tofu steak&quot;, 1*lion.level)</param>
+                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;tofu steak&quot;, lion.levelUpCost)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;true&quot;</param>
                                         </condition>
