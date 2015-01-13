@@ -454,8 +454,8 @@
                     </properties>
                     <instance-variables>
                         <label>upgrades</label>
-                        <name></name>
-                        <price>0</price>
+                        <name>arrow factory upgrades</name>
+                        <price>1</price>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
