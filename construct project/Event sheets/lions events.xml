@@ -252,6 +252,7 @@
         <event-group description="" sid="9689064507054484" title="mission">
             <sub-events>
                 <comment>send hunting</comment>
+                <variable constant="0" name="missionCabbageCost" sid="668731590491557" static="0" type="number">0</variable>
                 <event-block sid="1619034874208339">
                     <conditions>
                         <condition id="3" name="On touched object" sid="5335511984548128" type="Touch">
@@ -264,9 +265,13 @@
                         <condition id="-9" name="Is visible" sid="1018458499705768" type="lionBtn" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="5182737605054931" type="System">
+                            <param id="0" name="Variable">missionCabbageCost</param>
+                            <param id="1" name="Value">round( 20*lion.level^2.5 + -30*lion.level +50)</param>
+                        </action>
                         <action id="0" name="Call function" sid="1332184337820847" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}round( lion.level ^ 1.3 * 300 -250 ){###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.nb</param>
+                            <param id="1" name="Parameter {n}">&quot;send hunting&quot;{###}&quot;Send your lion on a mission to find stuff!&quot;{###}missionCabbageCost{###}&quot;salads&quot;{###}&quot;Send for &quot;{###}lion.nb</param>
                         </action>
                     </actions>
                 </event-block>

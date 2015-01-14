@@ -579,7 +579,7 @@
                     <instance-variables>
                         <label>Lions</label>
                         <name>arrow lions</name>
-                        <price>40</price>
+                        <price>60</price>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -610,7 +610,7 @@
                     <instance-variables>
                         <label>Quests</label>
                         <name>arrow quests</name>
-                        <price>60</price>
+                        <price>120</price>
                         <goto>quests</goto>
                     </instance-variables>
                     <behavior-instances>
