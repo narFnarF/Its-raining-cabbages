@@ -1157,7 +1157,7 @@
             <event-sheet>gameplay stuff.xml</event-sheet>
             <event-sheet>global events.xml</event-sheet>
         </event-folder>
-        <event-sheet>quests screen.xml</event-sheet>
+        <event-sheet>quests screen events.xml</event-sheet>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>global function names.xml</event-sheet>

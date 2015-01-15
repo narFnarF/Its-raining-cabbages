@@ -978,8 +978,8 @@
                     <properties>
                         <text>Crafting menu:</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,700,0</font>
-                        <color>0,204,0</color>
+                        <font>Arial,-32,700,0</font>
+                        <color>109,196,153</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

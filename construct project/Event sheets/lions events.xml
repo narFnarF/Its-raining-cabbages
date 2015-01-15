@@ -297,11 +297,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="9119231584270827" type="lion">
                             <param id="0" name="Instance variable">huntTime</param>
-                            <param id="1" name="Value">lion.level^(1/15) *250 -248</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8360047375827047" type="lion">
-                            <param id="0" name="Instance variable">huntTime</param>
-                            <param id="1" name="Value">(lion.huntTime + random(lion.huntTime*0.7, lion.huntTime*1.5) ) *60</param>
+                            <param id="1" name="Value">lion.level^1.2 *5 *60</param>
                         </action>
                         <action id="0" name="Call function" sid="6447290602517034" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
@@ -794,7 +790,7 @@
                         <condition id="3" name="On touched object" sid="1964020888824892" type="Touch">
                             <param id="0" name="Object">traderTxt</param>
                         </condition>
-                        <condition id="-10" name="Compare opacity" sid="41187694723071" type="traderTxt">
+                        <condition disabled="1" id="-10" name="Compare opacity" sid="41187694723071" type="traderTxt">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Opacity">100</param>
                         </condition>
@@ -858,7 +854,7 @@
                             <conditions />
                             <actions>
                                 <action id="-16" name="Set opacity" sid="4783170809078315" type="traderTxt">
-                                    <param id="0" name="Opacity">30</param>
+                                    <param id="0" name="Opacity">60</param>
                                 </action>
                                 <action id="-16" name="Set opacity" sid="4263265633506565" type="traderBg">
                                     <param id="0" name="Opacity">30</param>

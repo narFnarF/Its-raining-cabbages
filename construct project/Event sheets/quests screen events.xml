@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>quests screen</name>
+    <name>quests screen events</name>
     <events>
         <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
         <include>gameplay stuff</include>
@@ -232,6 +232,14 @@
                             <param id="0" name="Name">&quot;get items&quot;</param>
                             <param id="1" name="Parameter {n}">rewardType{###}rewardCombien</param>
                         </action>
+                        <action id="0" name="Call function" sid="2668688715150017" type="Function">
+                            <param id="0" name="Name">&quot;text popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Quest reward: &quot; &amp; newline &amp; newline &amp; rewardCombien &amp; &quot; &quot; &amp; rewardType{###}choose(&quot;Cool!&quot;, &quot;Awesome!&quot;, &quot;Yay!&quot;, &quot;Nice!&quot;, &quot;Excellent!&quot;)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9236354444325787" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Quest reward: &quot; &amp; rewardCombien &amp; &quot; &quot; &amp; rewardType</param>
+                        </action>
                         <action id="-3" name="Create object" sid="5272647775498804" type="System">
                             <param id="0" name="Object to create">plus1</param>
                             <param id="1" name="Layer">&quot;game&quot;</param>
@@ -246,7 +254,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>increment the TimeCompleted value, then delete the active quest</comment>
+                <comment>increment the TimeCompleted value, then remove the active quest</comment>
                 <event-block sid="2523564528657622">
                     <conditions />
                     <actions>

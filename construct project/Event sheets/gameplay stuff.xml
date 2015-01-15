@@ -223,7 +223,7 @@
                         <event-block sid="3351956113656007">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="2683204853402891" type="System">
-                                    <param id="0" name="Interval (seconds)">47</param>
+                                    <param id="0" name="Interval (seconds)">29</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1155,10 +1155,6 @@
                                 <action id="1" name="Set key" sid="5102365091339528" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="14" name="Log" sid="6416420315493076" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;debug: !!!!!!!!!!!!!!!!!!!!!!!!!!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

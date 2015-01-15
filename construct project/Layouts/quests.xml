@@ -2,7 +2,7 @@
 <c2layout>
     <name>quests</name>
     <sid>8444431784359404</sid>
-    <event-sheet>quests screen</event-sheet>
+    <event-sheet>quests screen events</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>

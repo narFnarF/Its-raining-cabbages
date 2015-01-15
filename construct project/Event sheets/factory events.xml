@@ -853,7 +853,7 @@
                                 <action id="3" name="Set font size" sid="8278249070174076" type="factoryTxt">
                                     <param id="0" name="Size (pt)">factoryTxt.FaceSize -1</param>
                                 </action>
-                                <action id="14" name="Log" sid="5464891955987318" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="5464891955987318" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;size: &quot; &amp; factoryTxt.TextWidth</param>
                                 </action>
