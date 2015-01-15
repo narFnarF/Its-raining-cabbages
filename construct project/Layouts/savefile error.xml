@@ -30,12 +30,12 @@
             <instances>
                 <instance type="txtLabel" uid="95">
                     <properties>
-                        <text>Your savefile is from an old version of the game. You need to create a new one. Restart the game (refresh the page) and select &quot;New Game&quot;. Sorry! -narF</text>
+                        <text>Your savefile is from an old version of the game and is not compatible with this new version. You&apos;ll need to create a new one. Restart the game (refresh the page) and select &quot;New Game&quot;. Sorry! -narF</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -49,11 +49,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>71</x>
-                        <y>329</y>
+                        <x>97</x>
+                        <y>181</y>
                         <z>0</z>
-                        <width>496</width>
-                        <height>361</height>
+                        <width>426</width>
+                        <height>580</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
