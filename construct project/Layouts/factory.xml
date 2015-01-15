@@ -423,8 +423,8 @@
                     </properties>
                     <instance-variables>
                         <label>+bees</label>
-                        <name></name>
-                        <price>0</price>
+                        <name>arrow bee</name>
+                        <price>15</price>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
