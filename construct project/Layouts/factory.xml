@@ -608,8 +608,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <label>Quests</label>
-                        <name>arrow quests</name>
+                        <label>Rewards</label>
+                        <name>arrow rewards</name>
                         <price>120</price>
                         <goto>quests</goto>
                     </instance-variables>

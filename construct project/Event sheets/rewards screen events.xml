@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>quests screen events</name>
+    <name>rewards screen events</name>
     <events>
         <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
         <include>gameplay stuff</include>
@@ -24,7 +24,7 @@
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="0" name="Set text" sid="1921765072029155" type="questsTxt">
-                    <param id="0" name="Text">&quot;Quests:&quot; &amp; newline &amp; newline</param>
+                    <param id="0" name="Text">&quot;Reward center:&quot; &amp; newline &amp; newline</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6145361355042384" type="questCollectBtn">
                     <param id="0" name="Visibility">0</param>

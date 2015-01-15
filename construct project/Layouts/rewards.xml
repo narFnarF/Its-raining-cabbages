@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>quests</name>
+    <name>rewards</name>
     <sid>8444431784359404</sid>
-    <event-sheet>quests screen events</event-sheet>
+    <event-sheet>rewards screen events</event-sheet>
     <size>
         <width>640</width>
         <height>960</height>
@@ -123,7 +123,7 @@
                 </instance>
                 <instance type="questsTxt" uid="312">
                     <properties>
-                        <text>Stats:</text>
+                        <text>Reward center:</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,400,0</font>
                         <color>0,0,0</color>
