@@ -611,7 +611,7 @@
                         <label>Rewards</label>
                         <name>arrow rewards</name>
                         <price>120</price>
-                        <goto>quests</goto>
+                        <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
