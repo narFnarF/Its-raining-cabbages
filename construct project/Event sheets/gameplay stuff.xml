@@ -1239,9 +1239,9 @@
                                     <param id="0" name="Key">&quot;arrow lions&quot;</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="1318005228160451" type="System">
-                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion lowest&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">1</param>
+                                    <param id="0" name="First value">levelOfStuff.Get(&quot;lion3&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="6830526461433977" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;all lions above or equal&quot;)</param>
@@ -1855,6 +1855,12 @@
                                 <variable constant="0" name="highest" sid="8097900789469163" static="0" type="number">-1000000</variable>
                                 <event-block sid="9522629178490693">
                                     <conditions>
+                                        <condition id="2" inverted="1" name="Is playing" sid="2821651228482303" type="lion">
+                                            <param id="0" name="Animation">&quot;burger&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="877245298072689" type="lion">
+                                            <param id="0" name="Animation">&quot;vide&quot;</param>
+                                        </condition>
                                         <condition id="-24" name="For Each (ordered)" sid="9041256989344952" type="System">
                                             <param id="0" name="Object">lion</param>
                                             <param id="1" name="Expression">lion.nb</param>
@@ -1876,14 +1882,20 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1984007541635654">
-                                    <conditions />
+                                <event-block sid="9828166623060221">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6982288520872273" type="System">
+                                            <param id="0" name="Variable">lowest</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">highest</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action id="0" name="Add key" sid="8148006791385371" type="levelOfStuff">
+                                        <action id="0" name="Add key" sid="3023184585369527" type="levelOfStuff">
                                             <param id="0" name="Key">&quot;lion lowest&quot;</param>
                                             <param id="1" name="Value">lowest</param>
                                         </action>
-                                        <action id="0" name="Add key" sid="1488573464108145" type="levelOfStuff">
+                                        <action id="0" name="Add key" sid="9181232844857526" type="levelOfStuff">
                                             <param id="0" name="Key">&quot;lion highest&quot;</param>
                                             <param id="1" name="Value">highest</param>
                                         </action>
