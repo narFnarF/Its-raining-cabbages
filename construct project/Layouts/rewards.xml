@@ -159,6 +159,7 @@
                         <label>Bees</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

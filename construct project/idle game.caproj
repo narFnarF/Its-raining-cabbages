@@ -1116,6 +1116,7 @@
                 <instance-variable name="label" sid="6512711138914009" type="string" />
                 <instance-variable name="name" sid="8613328284108331" type="string" />
                 <instance-variable name="price" sid="3173789073934467" type="number" />
+                <instance-variable name="priceCurrency" sid="5741496624709641" type="string" />
             </instance-variables>
         </family>
     </families>
@@ -1127,7 +1128,6 @@
             <layout>create new game.xml</layout>
         </layout-folder>
         <layout-folder name="old or useless">
-            <layout>gameplay (old).xml</layout>
             <layout>spawned objects.xml</layout>
             <layout>Verachou.xml</layout>
         </layout-folder>
@@ -1151,7 +1151,6 @@
                 <event-sheet>verachou.xml</event-sheet>
                 <event-sheet>verachou main.xml</event-sheet>
             </event-folder>
-            <event-sheet>v1 events.xml</event-sheet>
         </event-folder>
         <event-folder name="general">
             <event-sheet>gameplay stuff.xml</event-sheet>
@@ -1160,8 +1159,6 @@
         <event-sheet>rewards screen events.xml</event-sheet>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
-        <event-sheet>global function names.xml</event-sheet>
-        <event-sheet>saver.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

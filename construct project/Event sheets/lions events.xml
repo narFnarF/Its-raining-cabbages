@@ -385,31 +385,38 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>Loot table here</comment>
                         <event-block sid="6789418216464794">
-                            <conditions />
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2367755419012398" type="lion">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;honey&quot;</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
                                 <action id="5" name="Push" sid="7508175935456881" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">&quot;tofu&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
+                                <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;lion poop&quot;</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6750290611819817">
+                        <event-block sid="2201463471467093">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1554831690008845" type="lion">
+                                <condition id="-7" name="Compare instance variable" sid="6412076036054525" type="lion">
                                     <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="9339451897100293" type="lionRandomItems">
+                                <action id="5" name="Push" sid="9883075842932099" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">&quot;pills&quot;</param>
                                     <param id="2" name="Axis">0</param>
@@ -425,9 +432,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="1590421820726152" type="lionRandomItems">
+                                <action id="5" name="Push" sid="5216361861756194" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;lion poop&quot;</param>
+                                    <param id="1" name="Value">&quot;honey&quot;</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>

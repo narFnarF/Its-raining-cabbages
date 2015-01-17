@@ -425,6 +425,7 @@
                         <label>+bees</label>
                         <name>arrow bee</name>
                         <price>15</price>
+                        <priceCurrency>salads</priceCurrency>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -456,6 +457,7 @@
                         <label>upgrades</label>
                         <name>arrow factory upgrades</name>
                         <price>1</price>
+                        <priceCurrency>salads</priceCurrency>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -487,6 +489,7 @@
                         <label>+Factory</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -518,6 +521,7 @@
                         <label>Factory</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -549,6 +553,7 @@
                         <label>Vérachou</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>verachou</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -580,6 +585,7 @@
                         <label>Lions</label>
                         <name>arrow lions</name>
                         <price>60</price>
+                        <priceCurrency>salads</priceCurrency>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -610,7 +616,8 @@
                     <instance-variables>
                         <label>Rewards</label>
                         <name>arrow rewards</name>
-                        <price>120</price>
+                        <price>1</price>
+                        <priceCurrency>honey</priceCurrency>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>

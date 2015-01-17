@@ -163,6 +163,7 @@
                         <label>Crafting area</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -194,6 +195,7 @@
                         <label>Lions</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -225,6 +227,7 @@
                         <label>Bees</label>
                         <name></name>
                         <price>0</price>
+                        <priceCurrency></priceCurrency>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -1699,6 +1702,36 @@
     </layers>
     <nonworld-instances>
         <instance type="saver" uid="275" />
+        <instance type="Date" uid="0" />
+        <instance type="notifications" uid="33">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="sillyMessages" uid="50">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="menhirMsgArray" uid="103">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="inventory" uid="113" />
+        <instance type="lionRandomItems" uid="122">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
