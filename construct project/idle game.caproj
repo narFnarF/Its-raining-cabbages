@@ -33,6 +33,7 @@
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -1094,6 +1095,85 @@
         </object-type>
         <object-type global="1" name="saver" sid="4467673521804933">
             <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="bonhomme" sid="3855796501199458">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="state" sid="1814018852965662" type="string" />
+                <instance-variable name="timer" sid="9755832742124859" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="3864952777360856">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3212888108080541" speed="5">
+                    <frame duration="1" hotspotX="0.584" hotspotY="0.456989">
+                        <collision-poly>
+                            <point x="0" y="0.580645" />
+                            <point x="1" y="0.580645" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="blocker" sid="367605596310849">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5451261603135343">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9816792735805939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="battleTransition" sid="2647524471120711">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="3861334739825696">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7164778295072573" speed="10">
+                    <frame duration="1" hotspotX="0.543689" hotspotY="0.595506" />
+                    <frame duration="1" hotspotX="0.543689" hotspotY="0.595506" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pkmnHpBarBg" sid="6282714273423693">
+            <plugin id="Sprite" />
+            <container>
+                <type>pkmnHpBarBg</type>
+                <type>pkmnHpBar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5799785853409298" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pkmnHpBar" sid="7235007784863634">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="value" sid="4717978794554196" type="number" />
+                <instance-variable name="valueMax" sid="5969524446534017" type="number" />
+                <instance-variable name="name" sid="1783009049203672" type="string" />
+            </instance-variables>
+            <container>
+                <type>pkmnHpBarBg</type>
+                <type>pkmnHpBar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3872243152214634" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
