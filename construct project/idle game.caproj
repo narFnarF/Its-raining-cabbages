@@ -1138,6 +1138,7 @@
         <layout>lions.xml</layout>
         <layout>factory.xml</layout>
         <layout>rewards.xml</layout>
+        <layout>grinding.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="menus">
@@ -1159,6 +1160,7 @@
         <event-sheet>rewards screen events.xml</event-sheet>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
+        <event-sheet>grinding events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
