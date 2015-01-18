@@ -475,7 +475,11 @@
                                 </action>
                                 <action id="0" name="Call function" sid="3786849118353792" type="Function">
                                     <param id="0" name="Name">&quot;count&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;lion collected &quot; &amp; receivedItem</param>
+                                    <param id="1" name="Parameter {n}">&quot;lion collected &quot; &amp; receivedItem{###}nbReceivedItem</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3260066339791732" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Lion loot: &quot; &amp; nbReceivedItem &amp; &quot; &quot; &amp; receivedItem &amp; &quot;!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
