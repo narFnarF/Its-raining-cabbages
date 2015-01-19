@@ -1148,10 +1148,6 @@
             </object-type>
             <object-type name="grindingGuy" sid="3855796501199458">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="state" sid="1814018852965662" type="string" />
-                    <instance-variable name="timer" sid="9755832742124859" type="number" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="3864952777360856">
                         <behavior id="Bullet" />
