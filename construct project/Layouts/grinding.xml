@@ -469,8 +469,8 @@
                         <state>walking</state>
                         <timerWalking>0</timerWalking>
                         <battleTimer>0</battleTimer>
-                        <defaultWalkingDuration>2</defaultWalkingDuration>
-                        <defaultBattleDuration>4</defaultBattleDuration>
+                        <defaultWalkingDuration>10</defaultWalkingDuration>
+                        <defaultBattleDuration>1</defaultBattleDuration>
                         <level>1</level>
                     </instance-variables>
                     <behavior-instances>
