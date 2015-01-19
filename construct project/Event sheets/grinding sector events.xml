@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>grinding sector events</name>
+    <events>
+        <include>gameplay stuff</include>
+        <include>global events</include>
+        <event-block sid="5469904165765711">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1261227507834378" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>If not assigned, assign it to Start</comment>
+                <event-block disabled="1" sid="7481233548793382">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2490632256729033" type="you">
+                            <param id="0" name="Instance variable">nodeId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="201137911739068" type="you">
+                            <param id="0" name="Instance variable">nodeId</param>
+                            <param id="1" name="Value">node.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8878010173838871">
+                    <conditions>
+                        <condition id="-31" inverted="1" name="Object UID exists" sid="1653151235887257" type="System">
+                            <param id="0" name="UID">you.nodeId</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9551610647063209">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="3041551599157204" type="System">
+                                    <param id="0" name="Object">node</param>
+                                    <param id="1" name="Expression">node.start</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6488028729877958" type="you">
+                                    <param id="0" name="Instance variable">nodeId</param>
+                                    <param id="1" name="Value">node.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3524290963875182">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3193708754260691" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="3527067842872924" type="node">
+                    <param id="0" name="Unique ID">you.nodeId</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5419291378129779" type="you">
+                    <param id="0" name="Object">node</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8686267226794016">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6856261898087063" type="Touch">
+                    <param id="0" name="Object">node</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="608230408687632" type="node">
+                    <param id="0" name="Object">route</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="8309375151967838" type="route">
+                    <param id="0" name="Object">you</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1354253613737596" type="you">
+                    <param id="0" name="Instance variable">nodeId</param>
+                    <param id="1" name="Value">node.UID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1078,6 +1078,53 @@
             </object-type>
         </object-folder>
         <object-folder name="grinding simulator">
+            <object-folder name="map">
+                <object-type name="node" sid="7360139416173163">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="start" sid="3943443787489845" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="3450790891224544">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8682726089398045" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="route" sid="7384187287672046">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="3122838953827855">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719770415771162" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="you" sid="323269835040368">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="nodeId" sid="4793918377761524" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="5756644285126491">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9230095903346105" speed="5">
+                            <frame duration="1" hotspotX="0.537037" hotspotY="0.674074" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="grindingBush" sid="7690932005223696">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1315,6 +1362,7 @@
         <layout>factory.xml</layout>
         <layout>rewards.xml</layout>
         <layout>grinding.xml</layout>
+        <layout>grinding sector.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="menus">
@@ -1337,6 +1385,7 @@
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>grinding events.xml</event-sheet>
+        <event-sheet>grinding sector events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
