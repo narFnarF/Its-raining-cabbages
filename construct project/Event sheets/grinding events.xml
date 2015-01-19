@@ -7,43 +7,34 @@
         <include>global events</include>
         <event-block sid="2194874772713075">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="5749455098442542" type="bonhomme">
+                <condition id="0" name="On collision with another object" sid="5749455098442542" type="grindingGuy">
                     <param id="0" name="Object">blocker</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="1514981155042502" type="bonhomme">
+                <condition id="-7" name="Compare instance variable" sid="1514981155042502" type="pkmnStats">
                     <param id="0" name="Instance variable">state</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;walking&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1790485810665595" type="bonhomme">
-                    <param id="0" name="Angle">bonhomme.Bullet.AngleOfMotion -90</param>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1790485810665595" type="grindingGuy">
+                    <param id="0" name="Angle">grindingGuy.Bullet.AngleOfMotion -90</param>
                 </action>
             </actions>
             <sub-events>
+                <comment>start battle when timerWalk reaches 0</comment>
                 <event-block sid="5131255705021431">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3927112659588451" type="bonhomme">
-                            <param id="0" name="Instance variable">timer</param>
+                        <condition id="-7" name="Compare instance variable" sid="9177637264704633" type="pkmnStats">
+                            <param id="0" name="Instance variable">timerWalking</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="4522280168888813" type="bonhomme">
-                            <param id="0" name="Instance variable">state</param>
-                            <param id="1" name="Value">&quot;battle&quot;</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="7562713413484247" type="bonhomme">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="1012031472382566" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4792209665492391" type="camera">
-                            <param id="0" name="Instance variable">screen</param>
-                            <param id="1" name="Value">2</param>
+                        <action id="0" name="Call function" sid="1948857161534358" type="Function">
+                            <param id="0" name="Name">&quot;battle start&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -52,13 +43,13 @@
         <event-block sid="1985286140291426">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="6905847662633274" type="System">
-                    <param id="0" name="First value">abs( bonhomme.Bullet.AngleOfMotion )</param>
+                    <param id="0" name="First value">abs( grindingGuy.Bullet.AngleOfMotion )</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Second value">90</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="6608301581083482" type="bonhomme">
+                <action id="7" name="Set mirrored" sid="6608301581083482" type="grindingGuy">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -68,7 +59,7 @@
                 <condition id="-22" name="Else" sid="4858964661610168" type="System" />
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="9895201434193203" type="bonhomme">
+                <action id="7" name="Set mirrored" sid="9895201434193203" type="grindingGuy">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -80,8 +71,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="7092210486882168" type="bonhomme">
+                <action disabled="1" id="-12" name="Subtract from" sid="7092210486882168" type="grindingGuy">
                     <param id="0" name="Instance variable">timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="9882328234660225" type="pkmnStats">
+                    <param id="0" name="Instance variable">timerWalking</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -93,21 +88,232 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="4570939203694325" type="bonhomme">
+                <action id="-10" name="Set value" sid="3688188041949951" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Value">&quot;transition to walking&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="7050946546171289" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4570939203694325" type="grindingGuy">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="5539511218277338" type="camera">
+                    <param id="0" name="Instance variable">screen</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="9744420168441121" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Value">&quot;walking&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="9614125700155226" type="pkmnStats">
+                    <param id="0" name="Instance variable">timerWalking</param>
+                    <param id="1" name="Value">pkmnStats.defaultWalkingDuration</param>
                 </action>
             </actions>
         </event-block>
+        <comment>HP bar</comment>
         <event-block sid="7601235825878619">
             <conditions />
             <actions>
-                <action id="-4" name="Set position to another object" sid="9666161332579859" type="pkmnHpBar">
-                    <param id="0" name="Object">pkmnHpBarBg</param>
+                <action id="-10" name="Set value" sid="5272534160174837" type="pkHpBar">
+                    <param id="0" name="Instance variable">value</param>
+                    <param id="1" name="Value">max(pkHpBar.value, 0)</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9666161332579859" type="pkHpBar">
+                    <param id="0" name="Object">pkHpBarBg</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
-                <action id="-7" name="Set size" sid="9117534063255108" type="pkmnHpBar">
-                    <param id="0" name="Width">pkmnHpBar.value/pkmnHpBar.valueMax * pkmnHpBarBg.Width</param>
-                    <param id="1" name="Height">pkmnHpBarBg.Height</param>
+                <action id="-7" name="Set size" sid="9117534063255108" type="pkHpBar">
+                    <param id="0" name="Width">pkHpBar.value/pkHpBar.valueMax * pkHpBarBg.Width</param>
+                    <param id="1" name="Height">pkHpBarBg.Height</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1251167854197856">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6841019051672428" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;battle&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1624812791090238" type="pkmnStats">
+                    <param id="0" name="Instance variable">battleTimer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4147586868680765">
+            <conditions>
+                <condition id="0" name="On function" sid="6306313270248682" type="Function">
+                    <param id="0" name="Name">&quot;battle start&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="4522280168888813" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Value">&quot;transition to battle&quot;</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="1793371922981582" type="blackFlash" />
+                <action id="-16" name="Wait" sid="1012031472382566" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7018238532511251" type="camera">
+                    <param id="0" name="Instance variable">screen</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-8" name="Set angle" sid="213703964712242" type="pokemonEnemy">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="3" name="Start" sid="1159470473499223" type="pokemonYours">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="battleDuration" sid="8463361722676701" static="0" type="number">0</variable>
+                <event-block sid="8290011661846664">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3037045191830653" type="pkHpBar">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ennemi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6318336764907322" type="System">
+                            <param id="0" name="Variable">battleDuration</param>
+                            <param id="1" name="Value">pkmnStats.defaultBattleDuration</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5589585836684693" type="pkmnStats">
+                            <param id="0" name="Instance variable">battleTimer</param>
+                            <param id="1" name="Value">battleDuration</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2436080700695325" type="pkHpBar">
+                            <param id="0" name="Instance variable">valueMax</param>
+                            <param id="1" name="Value">battleDuration</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6198618430968134" type="pkHpBar">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">battleDuration</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>When battle is running</comment>
+        <event-block sid="2246724656841379">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5341186549897141" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;battle&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7837880523225987">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5525961259304256" type="pkHpBar">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ennemi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5712834494865839" type="pkmnStats">
+                            <param id="0" name="Instance variable">battleTimer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9819087112215421" type="pkHpBar">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">pkmnStats.battleTimer</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3700071326934414">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2401655720918012" type="pkmnStats">
+                                    <param id="0" name="Instance variable">battleTimer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3449757439930461" type="Function">
+                                    <param id="0" name="Name">&quot;battle over&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9070795463993572">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9005618646543891" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;transition to battle&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="7058727417281403" type="blackFlash" />
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7562713413484247" type="grindingGuy">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1364582108390088">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3340631218532292" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8562938845760974">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6062585367311679" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;transition to battle&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="5750878274425059" type="camera">
+                    <param id="0" name="Object">screen</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2630258463877634" type="screen">
+                    <param id="0" name="Instance variable">number</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="434370913535221" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Value">&quot;battle&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8974346567355477">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8090997678781689" type="pkmnStats">
+                    <param id="0" name="Instance variable">state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;transition to walking&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="5443298906618365" type="pokemonYours" />
+                <action id="5" name="Set frame" sid="1785847351456646" type="pokemonYours">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="6415444696383362" type="pokemonEnemy">
+                    <param id="0" name="Angle">lerp(pokemonEnemy.Angle, 90, 0.2)</param>
                 </action>
             </actions>
         </event-block>

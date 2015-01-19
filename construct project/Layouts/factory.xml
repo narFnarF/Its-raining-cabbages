@@ -466,8 +466,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1134</x>
-                        <y>934</y>
+                        <x>1177</x>
+                        <y>928</y>
                         <z>0</z>
                         <width>75</width>
                         <height>95</height>
@@ -663,6 +663,38 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrowLayout" uid="38">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <label>Grinding</label>
+                        <name>arrow grinding</name>
+                        <price>1</price>
+                        <priceCurrency>cucumber cut lengthwise</priceCurrency>
+                        <goto>grinding</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1042</x>
+                        <y>932</y>
+                        <z>0</z>
+                        <width>73</width>
+                        <height>99</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
