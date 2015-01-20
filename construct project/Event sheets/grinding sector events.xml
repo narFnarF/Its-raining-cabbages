@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>grinding sector events</name>
     <events>
-        <include>gameplay stuff</include>
         <include>global events</include>
+        <include>gameplay stuff</include>
         <event-block sid="5469904165765711">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="1261227507834378" type="System" />
@@ -12,21 +12,6 @@
             <actions />
             <sub-events>
                 <comment>If not assigned, assign it to Start</comment>
-                <event-block disabled="1" sid="7481233548793382">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2490632256729033" type="you">
-                            <param id="0" name="Instance variable">nodeId</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="201137911739068" type="you">
-                            <param id="0" name="Instance variable">nodeId</param>
-                            <param id="1" name="Value">node.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="8878010173838871">
                     <conditions>
                         <condition id="-31" inverted="1" name="Object UID exists" sid="1653151235887257" type="System">
@@ -79,12 +64,73 @@
                     <param id="0" name="Object">you</param>
                 </condition>
             </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1067517305359678">
+                    <conditions>
+                        <condition disabled="1" id="2" name="Is playing" sid="4753729799264001" type="node">
+                            <param id="0" name="Animation">&quot;completed&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2706023674945842" type="node">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">pkmnStats.maxSector + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1354253613737596" type="you">
+                            <param id="0" name="Instance variable">nodeId</param>
+                            <param id="1" name="Value">node.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5958857619653935">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="263913207342999" type="System" />
+            </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="1354253613737596" type="you">
-                    <param id="0" name="Instance variable">nodeId</param>
-                    <param id="1" name="Value">node.UID</param>
+                <action id="0" name="Set text" sid="6738776650788486" type="nodeTxt">
+                    <param id="0" name="Text">node.nb</param>
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="7657935479989554" title="visual nodes">
+            <sub-events>
+                <event-block sid="1919455537400777">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6448871394644371" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="270360960476103" type="nodeTxt">
+                            <param id="0" name="Object">node</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="8128591733304696" type="nodeTxt">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">you</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4541439072503174">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8296437905787243" type="node">
+                                    <param id="0" name="Instance variable">nb</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">pkmnStats.maxSector</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5949527888029396" type="node">
+                                    <param id="0" name="Animation">&quot;completed&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

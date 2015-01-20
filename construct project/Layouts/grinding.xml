@@ -469,9 +469,10 @@
                         <state>walking</state>
                         <timerWalking>0</timerWalking>
                         <battleTimer>0</battleTimer>
-                        <defaultWalkingDuration>10</defaultWalkingDuration>
+                        <defaultWalkingDuration>2</defaultWalkingDuration>
                         <defaultBattleDuration>1</defaultBattleDuration>
                         <level>1</level>
+                        <maxSector>4</maxSector>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -782,14 +783,46 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>322</x>
-                        <y>897</y>
+                        <y>910.806152344</y>
+                        <z>0</z>
+                        <width>82</width>
+                        <height>99</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502645493</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="arrowLayout" uid="69">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <label>map</label>
+                        <name></name>
+                        <price>0</price>
+                        <priceCurrency></priceCurrency>
+                        <goto>grinding sector</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>132</x>
+                        <y>908</y>
                         <z>0</z>
                         <width>109.75920105</width>
                         <height>98.725212097</height>
                         <depth>0</depth>
                         <hotspotX>0.502645493</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>1.570796371</angle>
+                        <angle>3.141592741</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

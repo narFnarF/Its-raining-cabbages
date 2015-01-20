@@ -1083,15 +1083,30 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="start" sid="3943443787489845" type="boolean" />
+                        <instance-variable name="nb" sid="5083579730491735" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="NoSave" sid="3450790891224544">
                             <behavior id="NoSave" />
                         </behavior-type>
                     </behaviors>
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                    </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8682726089398045" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="completed" pingpong="0" repeatcount="1" repeatto="0" sid="1315943638618706" speed="5">
+                            <frame duration="1" hotspotX="0.44" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.04" y="0.222222" />
+                                    <point x="0.84" y="0.222222" />
+                                    <point x="0.84" y="0.962963" />
+                                    <point x="0.04" y="0.962963" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1124,6 +1139,13 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="nodeTxt" sid="7597308021376178">
+                    <plugin id="Text" />
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                    </container>
+                </object-type>
             </object-folder>
             <object-type name="grindingBush" sid="7690932005223696">
                 <plugin id="Sprite" />
@@ -1133,7 +1155,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="pkmnStats" sid="3803377852119337">
+            <object-type global="1" name="pkmnStats" sid="3803377852119337">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="state" sid="5514812683437481" type="string" />
@@ -1142,6 +1164,7 @@
                     <instance-variable name="defaultWalkingDuration" sid="758877090025524" type="number" />
                     <instance-variable name="defaultBattleDuration" sid="2931470155612056" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
+                    <instance-variable comment="nb of movement available on the sector map" name="maxSector" sid="3259311858034318" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="8825943407494302">
@@ -1290,6 +1313,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="pkLevelYours" sid="9067352385932635">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6679590119212251">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
@@ -1309,14 +1340,6 @@
         </object-type>
         <object-type global="1" name="saver" sid="4467673521804933">
             <plugin id="Dictionary" />
-        </object-type>
-        <object-type name="pkLevelYours" sid="9067352385932635">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="NoSave" sid="6679590119212251">
-                    <behavior id="NoSave" />
-                </behavior-type>
-            </behaviors>
         </object-type>
     </object-folder>
     <families>
