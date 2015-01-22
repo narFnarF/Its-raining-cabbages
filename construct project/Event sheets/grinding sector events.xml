@@ -28,7 +28,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="6488028729877958" type="you">
+                                <action disabled="1" id="-10" name="Set value" sid="6488028729877958" type="you">
                                     <param id="0" name="Instance variable">nodeId</param>
                                     <param id="1" name="Value">node.UID</param>
                                 </action>
@@ -41,7 +41,13 @@
         <event-block sid="3524290963875182">
             <conditions>
                 <condition id="-1" name="Every tick" sid="3193708754260691" type="System" />
-                <condition id="-14" name="Pick by unique ID" sid="3527067842872924" type="node">
+                <condition id="-33" name="Pick by comparison" sid="2974315894343703" type="System">
+                    <param id="0" name="Object">node</param>
+                    <param id="1" name="Expression">node.nb</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">pkmnStats.sectorCurrent</param>
+                </condition>
+                <condition disabled="1" id="-14" name="Pick by unique ID" sid="3527067842872924" type="node">
                     <param id="0" name="Unique ID">you.nodeId</param>
                 </condition>
             </conditions>
@@ -74,13 +80,17 @@
                         <condition id="-7" name="Compare instance variable" sid="2706023674945842" type="node">
                             <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">pkmnStats.maxSector + 1</param>
+                            <param id="2" name="Value">pkmnStats.sectorMax + 1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="1354253613737596" type="you">
+                        <action disabled="1" id="-10" name="Set value" sid="1354253613737596" type="you">
                             <param id="0" name="Instance variable">nodeId</param>
                             <param id="1" name="Value">node.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2497429619998047" type="pkmnStats">
+                            <param id="0" name="Instance variable">sectorCurrent</param>
+                            <param id="1" name="Value">node.nb</param>
                         </action>
                     </actions>
                 </event-block>
@@ -118,7 +128,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="8296437905787243" type="node">
                                     <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">pkmnStats.maxSector</param>
+                                    <param id="2" name="Value">pkmnStats.sectorMax</param>
                                 </condition>
                             </conditions>
                             <actions>

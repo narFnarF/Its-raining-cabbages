@@ -8,7 +8,7 @@
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>19000</saved-with-version>
+    <saved-with-version>19500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -1164,13 +1164,10 @@
                     <instance-variable name="defaultWalkingDuration" sid="758877090025524" type="number" />
                     <instance-variable name="defaultBattleDuration" sid="2931470155612056" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
-                    <instance-variable comment="nb of movement available on the sector map" name="maxSector" sid="3259311858034318" type="number" />
+                    <instance-variable comment="nb of movement available on the sector map" name="sectorMax" sid="3259311858034318" type="number" />
+                    <instance-variable name="sectorCurrent" sid="5568407274159363" type="number" />
+                    <instance-variable name="kills" sid="308432454140841" type="number" />
                 </instance-variables>
-                <behaviors>
-                    <behavior-type name="Persist" sid="8825943407494302">
-                        <behavior id="Persist" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.534591" />

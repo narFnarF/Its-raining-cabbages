@@ -1433,7 +1433,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="3535882816328876" type="txtLabel">
-                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity)</param>
+                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, round( factory.capacity*0.9 ))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1553,7 +1553,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="6426068280033631" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade factory capacity&quot;{###}&quot;Upgrade the factory&apos;s capacity to store more salads.&quot;{###}factory.capacity{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade factory capacity&quot;{###}&quot;Upgrade the factory&apos;s capacity to store more salads.&quot;{###}round( factory.capacity*0.9 ){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>

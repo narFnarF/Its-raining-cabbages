@@ -25,6 +25,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances />
@@ -42,6 +43,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -149,6 +151,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -469,14 +472,13 @@
                         <state>walking</state>
                         <timerWalking>0</timerWalking>
                         <battleTimer>0</battleTimer>
-                        <defaultWalkingDuration>2</defaultWalkingDuration>
+                        <defaultWalkingDuration>1</defaultWalkingDuration>
                         <defaultBattleDuration>1</defaultBattleDuration>
                         <level>1</level>
-                        <maxSector>4</maxSector>
+                        <sectorMax>4</sectorMax>
+                        <sectorCurrent>0</sectorCurrent>
+                        <kills>0</kills>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -710,6 +712,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -759,6 +762,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
@@ -841,6 +845,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances />
@@ -858,6 +863,7 @@
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances />
