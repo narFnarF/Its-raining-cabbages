@@ -2441,6 +2441,22 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>cause artificial lag</comment>
+                        <event-block sid="6028651977409516">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="9271448759265128" type="Keyboard">
+                                    <param id="0" name="Key">76 (L)</param>
+                                </condition>
+                                <condition id="-12" name="Repeat" sid="7512795243336389" type="System">
+                                    <param id="0" name="Count">50000</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="3319088382374947" type="timeKeeper">
+                                    <param id="0" name="X">sin(cos(tan(cos(sin(cos(tan(random(0,100))))))))-10000</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

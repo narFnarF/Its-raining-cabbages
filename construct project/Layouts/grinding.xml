@@ -472,8 +472,8 @@
                         <state>walking</state>
                         <timerWalking>0</timerWalking>
                         <battleTimer>0</battleTimer>
-                        <defaultWalkingDuration>1</defaultWalkingDuration>
-                        <defaultBattleDuration>1</defaultBattleDuration>
+                        <defaultWalkingDuration>4</defaultWalkingDuration>
+                        <defaultBattleDuration>3</defaultBattleDuration>
                         <level>1</level>
                         <sectorMax>4</sectorMax>
                         <sectorCurrent>0</sectorCurrent>
