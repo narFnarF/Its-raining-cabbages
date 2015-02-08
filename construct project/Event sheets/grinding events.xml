@@ -240,13 +240,33 @@
                                     <param id="0" name="Instance variable">screen</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="213703964712242" type="pokemonEnemy">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                                <action id="3" name="Start" sid="1159470473499223" type="pokemonYours">
-                                    <param id="0" name="From">1</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="3586570686702613">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="8517460025955088" type="pokemon">
+                                            <param id="0" name="Instance variable">yours</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Start" sid="4277177883362241" type="pokemon">
+                                            <param id="0" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="197073529053121">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8683585244067638" type="pokemon">
+                                            <param id="0" name="Instance variable">yours</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="8427493801922752" type="pokemon">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="4409329217542162">
                             <conditions>
@@ -362,19 +382,37 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Stop" sid="5443298906618365" type="pokemonYours" />
-                        <action id="5" name="Set frame" sid="1785847351456646" type="pokemonYours">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="6415444696383362" type="pokemonEnemy">
-                            <param id="0" name="Angle">lerp(pokemonEnemy.Angle, 90, 0.2)</param>
-                        </action>
                         <action id="-10" name="Set value" sid="928649217359917" type="pkHpBar">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="6546418375843056">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2447976345549565" type="pokemon">
+                                    <param id="0" name="Instance variable">yours</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="6850922002689053" type="pokemon" />
+                                <action id="5" name="Set frame" sid="8090908858720645" type="pokemon">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3911310713367465">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5186164655712068" type="pokemon">
+                                    <param id="0" name="Instance variable">yours</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="3495230551996674" type="pokemon">
+                                    <param id="0" name="Angle">lerp(pokemon.Angle, 90, 0.2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="1855560992995136">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="2310466752775224" type="System" />

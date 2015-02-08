@@ -53,7 +53,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Orientations">Portrait</prop>
+        <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">CocoonJS native</prop>
         <prop name="Preview browser">(default)</prop>
@@ -1285,19 +1285,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="pokemonEnemy" sid="3313949429272525">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="5949604072587669">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8929582221802209" speed="10">
-                        <frame duration="1" hotspotX="0.442478" hotspotY="0.842105" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="blocker" sid="367605596310849">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -1332,20 +1319,6 @@
                 </behaviors>
                 <texture />
             </object-type>
-            <object-type name="pokemonYours" sid="3861334739825696">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="612163348330841">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7164778295072573" speed="10">
-                        <frame duration="1" hotspotX="0.333333" hotspotY="0.964602" />
-                        <frame duration="1" hotspotX="0.0846154" hotspotY="0.977778" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="pkLevelYours" sid="9067352385932635">
                 <plugin id="Text" />
                 <behaviors>
@@ -1356,6 +1329,43 @@
             </object-type>
             <object-type global="1" name="sectorInfo" sid="2099321260430553">
                 <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="pokemon" sid="9934082067433431">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="yours" sid="9464601197445116" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="2869736899432163">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="verachou" pingpong="0" repeatcount="1" repeatto="0" sid="8751723836974156" speed="10">
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.964602" />
+                        <frame duration="1" hotspotX="0.0846154" hotspotY="0.977778" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="pikachat" pingpong="0" repeatcount="1" repeatto="0" sid="7436587979530942" speed="5">
+                        <frame duration="1" hotspotX="0.59292" hotspotY="0.868421">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Grand" pingpong="0" repeatcount="1" repeatto="0" sid="806979740104139" speed="5">
+                        <frame duration="1" hotspotX="0.474576" hotspotY="0.937931">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">

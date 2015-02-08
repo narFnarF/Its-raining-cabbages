@@ -167,6 +167,14 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="3733323998437917">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2807126913935842" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
     </events>
