@@ -476,7 +476,7 @@
                         <defaultBattleDuration>3</defaultBattleDuration>
                         <level>1</level>
                         <sectorMax>4</sectorMax>
-                        <sectorCurrent>0</sectorCurrent>
+                        <sectorCurrent>3</sectorCurrent>
                         <kills>0</kills>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
