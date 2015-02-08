@@ -10,45 +10,13 @@
                 <condition id="-2" name="On start of layout" sid="1261227507834378" type="System" />
             </conditions>
             <actions />
-            <sub-events>
-                <comment>If not assigned, assign it to Start</comment>
-                <event-block sid="8878010173838871">
-                    <conditions>
-                        <condition id="-31" inverted="1" name="Object UID exists" sid="1653151235887257" type="System">
-                            <param id="0" name="UID">you.nodeId</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9551610647063209">
-                            <conditions>
-                                <condition id="-34" name="Pick by evaluate" sid="3041551599157204" type="System">
-                                    <param id="0" name="Object">node</param>
-                                    <param id="1" name="Expression">node.start</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-10" name="Set value" sid="6488028729877958" type="you">
-                                    <param id="0" name="Instance variable">nodeId</param>
-                                    <param id="1" name="Value">node.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="3524290963875182">
             <conditions>
-                <condition id="-1" name="Every tick" sid="3193708754260691" type="System" />
-                <condition id="-33" name="Pick by comparison" sid="2974315894343703" type="System">
-                    <param id="0" name="Object">node</param>
-                    <param id="1" name="Expression">node.nb</param>
-                    <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">pkmnStats.sectorCurrent</param>
-                </condition>
-                <condition disabled="1" id="-14" name="Pick by unique ID" sid="3527067842872924" type="node">
-                    <param id="0" name="Unique ID">you.nodeId</param>
+                <condition id="-7" name="Compare instance variable" sid="6668814507831469" type="nodeData">
+                    <param id="0" name="Instance variable">nb</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">pkmnStats.sectorCurrent</param>
                 </condition>
             </conditions>
             <actions>
@@ -63,72 +31,43 @@
                 <condition id="3" name="On touched object" sid="6856261898087063" type="Touch">
                     <param id="0" name="Object">node</param>
                 </condition>
-                <condition id="1" name="Is overlapping another object" sid="608230408687632" type="node">
-                    <param id="0" name="Object">route</param>
-                </condition>
-                <condition id="1" name="Is overlapping another object" sid="8309375151967838" type="route">
-                    <param id="0" name="Object">you</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="1067517305359678">
-                    <conditions>
-                        <condition disabled="1" id="2" name="Is playing" sid="4753729799264001" type="node">
-                            <param id="0" name="Animation">&quot;completed&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="2706023674945842" type="node">
-                            <param id="0" name="Instance variable">nb</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">pkmnStats.sectorMax + 1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="1354253613737596" type="you">
-                            <param id="0" name="Instance variable">nodeId</param>
-                            <param id="1" name="Value">node.UID</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2497429619998047" type="pkmnStats">
-                            <param id="0" name="Instance variable">sectorCurrent</param>
-                            <param id="1" name="Value">node.nb</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="5958857619653935">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="263913207342999" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="6738776650788486" type="nodeTxt">
-                    <param id="0" name="Text">node.nb</param>
+                <action id="-10" name="Set value" sid="2879764517983011" type="pkmnStats">
+                    <param id="0" name="Instance variable">sectorCurrent</param>
+                    <param id="1" name="Value">nodeData.nb</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="7657935479989554" title="visual nodes">
+        <event-group description="" sid="7657935479989554" title="visual stuff (nodes)">
             <sub-events>
                 <event-block sid="1919455537400777">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6448871394644371" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-4" name="Set position to another object" sid="4744221189037587" type="node">
+                            <param id="0" name="Object">nodeData</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
                         <action id="-4" name="Set position to another object" sid="270360960476103" type="nodeTxt">
                             <param id="0" name="Object">node</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-29" name="Move to object" sid="8128591733304696" type="nodeTxt">
-                            <param id="0" name="Where">1</param>
-                            <param id="1" name="Object">you</param>
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">node</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="287463192012456" type="you" />
+                        <action id="0" name="Set text" sid="4624450325226503" type="nodeTxt">
+                            <param id="0" name="Text">nodeData.nb</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4541439072503174">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8296437905787243" type="node">
-                                    <param id="0" name="Instance variable">nb</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">pkmnStats.sectorMax</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2527017243364925" type="node">
+                                    <param id="0" name="Instance variable">completed</param>
                                 </condition>
                             </conditions>
                             <actions>

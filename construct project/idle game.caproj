@@ -54,7 +54,7 @@
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Portrait</prop>
-        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">CocoonJS native</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
@@ -1082,17 +1082,17 @@
                 <object-type name="node" sid="7360139416173163">
                     <plugin id="Sprite" />
                     <instance-variables>
-                        <instance-variable name="start" sid="3943443787489845" type="boolean" />
-                        <instance-variable name="nb" sid="5083579730491735" type="number" />
+                        <instance-variable name="completed" sid="9754087233109501" type="boolean" />
                     </instance-variables>
                     <behaviors>
-                        <behavior-type name="NoSave" sid="3450790891224544">
-                            <behavior id="NoSave" />
+                        <behavior-type name="Persist" sid="7995510087235718">
+                            <behavior id="Persist" />
                         </behavior-type>
                     </behaviors>
                     <container>
                         <type>node</type>
                         <type>nodeTxt</type>
+                        <type>nodeData</type>
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8682726089398045" speed="5">
@@ -1128,11 +1128,6 @@
                     <instance-variables>
                         <instance-variable name="nodeId" sid="4793918377761524" type="number" />
                     </instance-variables>
-                    <behaviors>
-                        <behavior-type name="NoSave" sid="5756644285126491">
-                            <behavior id="NoSave" />
-                        </behavior-type>
-                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9230095903346105" speed="5">
                             <frame duration="1" hotspotX="0.537037" hotspotY="0.674074" />
@@ -1144,11 +1139,50 @@
                     <container>
                         <type>node</type>
                         <type>nodeTxt</type>
+                        <type>nodeData</type>
                     </container>
+                </object-type>
+                <object-type name="nodeData" sid="8017469267039675">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="nb" sid="3709550927162332" type="number" />
+                        <instance-variable name="start" sid="4604724392480643" type="boolean" />
+                        <instance-variable name="end" sid="9602003886879857" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="4459086275013467">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                        <type>nodeData</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7530899417121039" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="completed" pingpong="0" repeatcount="1" repeatto="0" sid="4703389389982252" speed="5">
+                            <frame duration="1" hotspotX="0.44" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.04" y="0.222222" />
+                                    <point x="0.84" y="0.222222" />
+                                    <point x="0.84" y="0.962963" />
+                                    <point x="0.04" y="0.962963" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-type name="grindingBush" sid="7690932005223696">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9741649089996923">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4302931634723911" speed="5">
                         <frame duration="1" hotspotX="0.614907" hotspotY="0.361538" />
@@ -1317,6 +1351,9 @@
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type global="1" name="sectorInfo" sid="2099321260430553">
+                <plugin id="Dictionary" />
             </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">

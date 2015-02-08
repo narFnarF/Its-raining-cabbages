@@ -63,6 +63,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="1185016671241999" title="fill all the data" />
         <event-group description="" sid="5344607217737034" title="walking">
             <sub-events>
                 <event-block sid="2194874772713075">
@@ -139,7 +140,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8596006644764351" title="UI grinding">
+        <event-group description="" sid="8596006644764351" title="UI (grinding)">
             <sub-events>
                 <comment>HP bar</comment>
                 <event-block sid="7601235825878619">
@@ -161,7 +162,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8540978209649851" title="time has passed">
+        <event-group description="" sid="8540978209649851" title="time has passed (grinding)">
             <sub-events>
                 <event-block sid="2943832592794264">
                     <conditions>
@@ -188,8 +189,9 @@
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;, &quot;transition to walking&quot;, &quot;transition to battle&quot;)</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="1429825457483608" type="System">
-                                    <param id="0" name="Seconds">0.0000000001</param>
+                                <action id="14" name="Log" sid="2114709475496928" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Selected state: &quot; &amp; pkmnStats.state</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="7091479156683841" type="System" />
                             </actions>
