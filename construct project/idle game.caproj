@@ -1365,6 +1365,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="rando" pingpong="0" repeatcount="1" repeatto="0" sid="9074864419134216" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.938144" />
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>

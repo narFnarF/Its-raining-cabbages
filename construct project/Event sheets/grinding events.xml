@@ -13,6 +13,10 @@
                 <action id="-16" name="Set opacity" sid="9464839056543687" type="blackFlash">
                     <param id="0" name="Opacity">0</param>
                 </action>
+                <action id="0" name="Call function" sid="8998261585930994" type="Function">
+                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="8680086694843432">
@@ -189,7 +193,7 @@
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;, &quot;transition to walking&quot;, &quot;transition to battle&quot;)</param>
                                 </action>
-                                <action id="14" name="Log" sid="2114709475496928" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="2114709475496928" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Selected state: &quot; &amp; pkmnStats.state</param>
                                 </action>
@@ -229,10 +233,14 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;transition to battle&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="7175598318022916" type="Function">
+                                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-16" name="Wait" sid="650776969148032" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="1369789268447483" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="1369789268447483" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;transition to battle after waiting 1 sec&quot;</param>
                                 </action>
@@ -454,5 +462,22 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="4565471605711386" title="debug (grinding)" />
+        <event-block sid="5426547973007334">
+            <conditions>
+                <condition id="0" name="On function" sid="267823555026709" type="Function">
+                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8284695300321048" type="pokemon">
+                    <param id="0" name="Instance variable">yours</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4330356470565039" type="pokemon">
+                    <param id="0" name="Animation">choose(&quot;Grand&quot;, &quot;pikachat&quot;, &quot;rando&quot;, &quot;verachou&quot;)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Stop" sid="3438510663074907" type="pokemon" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
