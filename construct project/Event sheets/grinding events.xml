@@ -14,19 +14,23 @@
                     <param id="0" name="Opacity">0</param>
                 </action>
                 <action id="0" name="Call function" sid="8998261585930994" type="Function">
-                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
+                    <param id="0" name="Name">&quot;grinding. select enemy type&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="6774781569051233" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="8680086694843432">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1352988457667533" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="1352988457667533" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;walking&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="894200508979487" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="894200508979487" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;transition to battle&quot;</param>
@@ -75,7 +79,7 @@
                         <condition id="0" name="On collision with another object" sid="5749455098442542" type="grindingGuy">
                             <param id="0" name="Object">blocker</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="1514981155042502" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="1514981155042502" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;walking&quot;</param>
@@ -90,14 +94,14 @@
                         <comment>start battle when timerWalk reaches 0</comment>
                         <event-block sid="5131255705021431">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9177637264704633" type="pkmnStats">
+                                <condition id="-7" name="Compare instance variable" sid="9177637264704633" type="pkStats">
                                     <param id="0" name="Instance variable">timerWalking</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="4522280168888813" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="4522280168888813" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;transition to battle&quot;</param>
                                 </action>
@@ -136,7 +140,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="9882328234660225" type="pkmnStats">
+                        <action id="-12" name="Subtract from" sid="9882328234660225" type="pkStats">
                             <param id="0" name="Instance variable">timerWalking</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -189,13 +193,13 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;time has passed: &quot; &amp; Function.Param(0)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="8691671301370944" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="8691671301370944" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;, &quot;transition to walking&quot;, &quot;transition to battle&quot;)</param>
                                 </action>
                                 <action disabled="1" id="14" name="Log" sid="2114709475496928" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Selected state: &quot; &amp; pkmnStats.state</param>
+                                    <param id="1" name="Message">&quot;Selected state: &quot; &amp; pkStats.state</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="7091479156683841" type="System" />
                             </actions>
@@ -209,7 +213,7 @@
                 <comment>transition to battle</comment>
                 <event-block sid="9070795463993572">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9005618646543891" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="9005618646543891" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;transition to battle&quot;</param>
@@ -234,7 +238,11 @@
                                     <param id="1" name="Message">&quot;transition to battle&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="7175598318022916" type="Function">
-                                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
+                                    <param id="0" name="Name">&quot;grinding. select enemy type&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="45912346106986" type="Function">
+                                    <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-16" name="Wait" sid="650776969148032" type="System">
@@ -288,7 +296,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="434370913535221" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="434370913535221" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;battle&quot;</param>
                                 </action>
@@ -296,10 +304,27 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="5426547973007334">
+                    <conditions>
+                        <condition id="0" name="On function" sid="267823555026709" type="Function">
+                            <param id="0" name="Name">&quot;grinding. select enemy type&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8284695300321048" type="pokemon">
+                            <param id="0" name="Instance variable">yours</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4330356470565039" type="pokemon">
+                            <param id="0" name="Animation">choose(&quot;Grand&quot;, &quot;Pikachat&quot;, &quot;Rando&quot;, &quot;Verachou&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="2" name="Stop" sid="3438510663074907" type="pokemon" />
+                    </actions>
+                </event-block>
                 <comment>battle is running</comment>
                 <event-block sid="2246724656841379">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5341186549897141" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="5341186549897141" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;battle&quot;</param>
@@ -311,7 +336,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="1624812791090238" type="pkmnStats">
+                        <action id="-12" name="Subtract from" sid="1624812791090238" type="pkStats">
                             <param id="0" name="Instance variable">battleTimer</param>
                             <param id="1" name="Value">dt</param>
                         </action>
@@ -320,7 +345,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="9819087112215421" type="pkHpBar">
                             <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">pkmnStats.battleTimer</param>
+                            <param id="1" name="Value">pkStats.battleTimer</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -337,9 +362,9 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="2329160849393022" type="System">
                                     <param id="0" name="Variable">battleDuration</param>
-                                    <param id="1" name="Value">pkmnStats.defaultBattleDuration</param>
+                                    <param id="1" name="Value">pkStats.defaultBattleDuration</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="7554656810056318" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
                                     <param id="1" name="Value">battleDuration</param>
                                 </action>
@@ -356,18 +381,18 @@
                         <comment>battle is over (trigger once)</comment>
                         <event-block sid="3700071326934414">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2401655720918012" type="pkmnStats">
+                                <condition id="-7" name="Compare instance variable" sid="2401655720918012" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="3688188041949951" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="3688188041949951" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;transition to walking&quot;</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="1205358755791527" type="pkmnStats">
+                                <action id="-11" name="Add to" sid="1205358755791527" type="pkStats">
                                     <param id="0" name="Instance variable">kills</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -378,7 +403,7 @@
                 <comment>transition to walking</comment>
                 <event-block sid="8974346567355477">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8090997678781689" type="pkmnStats">
+                        <condition id="-7" name="Compare instance variable" sid="8090997678781689" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;transition to walking&quot;</param>
@@ -447,13 +472,13 @@
                                     <param id="0" name="Instance variable">screen</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="9744420168441121" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="9744420168441121" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;walking&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="9614125700155226" type="pkmnStats">
+                                <action id="-10" name="Set value" sid="9614125700155226" type="pkStats">
                                     <param id="0" name="Instance variable">timerWalking</param>
-                                    <param id="1" name="Value">pkmnStats.defaultWalkingDuration</param>
+                                    <param id="1" name="Value">pkStats.defaultWalkingDuration</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -462,21 +487,19 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="4565471605711386" title="debug (grinding)" />
-        <event-block sid="5426547973007334">
+        <event-block sid="4809279419348728">
             <conditions>
-                <condition id="0" name="On function" sid="267823555026709" type="Function">
-                    <param id="0" name="Name">&quot;select enemy type&quot;</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8284695300321048" type="pokemon">
-                    <param id="0" name="Instance variable">yours</param>
+                <condition id="0" name="On function" sid="3753054874434687" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="4330356470565039" type="pokemon">
-                    <param id="0" name="Animation">choose(&quot;Grand&quot;, &quot;pikachat&quot;, &quot;rando&quot;, &quot;verachou&quot;)</param>
-                    <param id="1" name="From">1</param>
+                <action id="0" name="Set text" sid="5026249606696465" type="pkLevel">
+                    <param id="0" name="Text">&quot;Lvl: &quot; &amp; pkStats.level</param>
                 </action>
-                <action id="2" name="Stop" sid="3438510663074907" type="pokemon" />
+                <action id="0" name="Set text" sid="392107663605535" type="pkName">
+                    <param id="0" name="Text">pokemon.AnimationName</param>
+                </action>
             </actions>
         </event-block>
     </events>
