@@ -1222,7 +1222,10 @@
                     <type>pkHpBar</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5799785853409298" speed="5">
+                    <animation framecount="1" loop="0" name="rouge" pingpong="0" repeatcount="1" repeatto="0" sid="5799785853409298" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bleu" pingpong="0" repeatcount="1" repeatto="0" sid="9582440942998391" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1244,7 +1247,10 @@
                     <type>pkHpBar</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3872243152214634" speed="5">
+                    <animation framecount="1" loop="0" name="vert" pingpong="0" repeatcount="1" repeatto="0" sid="3872243152214634" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="orange" pingpong="0" repeatcount="1" repeatto="0" sid="1838620917169107" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1385,6 +1391,14 @@
                     <type>pokemon</type>
                     <type>pkName</type>
                 </container>
+            </object-type>
+            <object-type name="pkName2" sid="1874100705810594">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7440954466908052">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
