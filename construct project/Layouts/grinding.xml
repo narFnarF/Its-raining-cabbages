@@ -447,12 +447,8 @@
                         <state>walking</state>
                         <timerWalking>1</timerWalking>
                         <battleTimer>0</battleTimer>
-                        <defaultWalkingDuration>4</defaultWalkingDuration>
-                        <defaultBattleDuration>2</defaultBattleDuration>
                         <level>1</level>
-                        <sectorMax>4</sectorMax>
                         <sectorCurrent>3</sectorCurrent>
-                        <kills>0</kills>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -808,7 +804,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>you</name>
+                        <name>sector progress</name>
                         <value>50</value>
                         <valueMax>100</valueMax>
                     </instance-variables>
@@ -830,6 +826,36 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="pkSectorTimeTxt" uid="78">
+                    <properties>
+                        <text>23h 47m 02s</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Trebuchet MS,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1962</x>
+                        <y>787</y>
+                        <z>0</z>
+                        <width>219</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -838,8 +864,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>

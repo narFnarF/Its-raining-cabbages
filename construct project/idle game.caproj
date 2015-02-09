@@ -1197,12 +1197,8 @@
                     <instance-variable name="state" sid="5514812683437481" type="string" />
                     <instance-variable name="timerWalking" sid="4663920467777482" type="number" />
                     <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
-                    <instance-variable name="defaultWalkingDuration" sid="758877090025524" type="number" />
-                    <instance-variable name="defaultBattleDuration" sid="2931470155612056" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
-                    <instance-variable comment="nb of movement available on the sector map" name="sectorMax" sid="3259311858034318" type="number" />
                     <instance-variable name="sectorCurrent" sid="5568407274159363" type="number" />
-                    <instance-variable name="kills" sid="308432454140841" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
@@ -1396,6 +1392,14 @@
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="7440954466908052">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="pkSectorTimeTxt" sid="3851843521013606">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5781419445588147">
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
