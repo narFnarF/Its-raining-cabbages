@@ -229,7 +229,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4505739026631691" type="pkBarSectorTimeTxt">
-                                    <param id="0" name="Text">&quot;ETA: &quot; &amp; timeLeft &amp; &quot; sec&quot;</param>
+                                    <param id="0" name="Text">&quot;ETA: &quot; &amp; round(timeLeft) &amp; &quot; sec&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -296,14 +296,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="5121912400503029">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="3893208974900824" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -461,7 +453,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="2329160849393022" type="System">
                                     <param id="0" name="Variable">battleDuration</param>
-                                    <param id="1" name="Value">20</param>
+                                    <param id="1" name="Value">lerp(20, 1, clamp(pkStats.nodeTimeSpent/pkStats.nodeTimeToSpend, 0, 1))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>

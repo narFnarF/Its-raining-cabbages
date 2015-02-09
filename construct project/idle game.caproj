@@ -1199,7 +1199,7 @@
                     <instance-variable name="timerWalking" sid="4663920467777482" type="number" />
                     <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
-                    <instance-variable name="sectorCurrent" sid="5568407274159363" type="number" />
+                    <instance-variable name="currentNode" sid="5568407274159363" type="number" />
                     <instance-variable name="nodeTimeToSpend" sid="5018348872088445" type="number" />
                     <instance-variable name="nodeTimeSpent" sid="5847347889282774" type="number" />
                 </instance-variables>

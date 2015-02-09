@@ -448,7 +448,7 @@
                         <timerWalking>1</timerWalking>
                         <battleTimer>0</battleTimer>
                         <level>1</level>
-                        <sectorCurrent>0</sectorCurrent>
+                        <currentNode>0</currentNode>
                         <nodeTimeToSpend>60</nodeTimeToSpend>
                         <nodeTimeSpent>0</nodeTimeSpent>
                     </instance-variables>

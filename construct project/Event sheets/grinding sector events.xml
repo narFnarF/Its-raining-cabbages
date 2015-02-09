@@ -28,34 +28,31 @@
                     <param id="0" name="Instance variable">timeToSpendHere</param>
                     <param id="1" name="Value">(17+nodeData.nb)*3600</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="2091616091325604" type="Function">
-                    <param id="0" name="Name">&quot;update nodes&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+            </actions>
+        </event-block>
+        <comment>Transfert data from the grinding layout</comment>
+        <comment>The &quot;pick all pkStats&quot; is there only to block this event when I open in debug</comment>
+        <event-block sid="9859195535937704">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6771047087392973" type="System" />
+                <condition id="-19" name="Pick all" sid="8760639973566741" type="System">
+                    <param id="0" name="Object">pkStats</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2915864454683814" type="nodeData">
+                    <param id="0" name="Instance variable">nb</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">pkStats.currentNode</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2428011438989363" type="node">
+                    <param id="0" name="Instance variable">timeSpentHere</param>
+                    <param id="1" name="Value">pkStats.nodeTimeSpent</param>
                 </action>
             </actions>
         </event-block>
         <event-group description="" sid="6210497927244467" title="movement (sector)">
             <sub-events>
-                <comment>Move the You to its correct position</comment>
-                <comment>The &quot;pick all pkStats&quot; is there only to block this event when I open in debug</comment>
-                <event-block sid="3524290963875182">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6668814507831469" type="nodeData">
-                            <param id="0" name="Instance variable">nb</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">pkStats.sectorCurrent</param>
-                        </condition>
-                        <condition id="-19" name="Pick all" sid="2482185887830206" type="System">
-                            <param id="0" name="Object">pkStats</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="5419291378129779" type="you">
-                            <param id="0" name="Object">node</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="8686267226794016">
                     <conditions>
                         <condition id="3" name="On touched object" sid="6856261898087063" type="Touch">
@@ -72,8 +69,12 @@
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="2879764517983011" type="pkStats">
-                                    <param id="0" name="Instance variable">sectorCurrent</param>
+                                    <param id="0" name="Instance variable">currentNode</param>
                                     <param id="1" name="Value">nodeData.nb</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6264533565795532" type="Function">
+                                    <param id="0" name="Name">&quot;grinding. set values after moving&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -88,13 +89,59 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="6469865487623074" type="pkStats">
-                                    <param id="0" name="Instance variable">sectorCurrent</param>
+                                <action id="-10" name="Set value" sid="5591439113997966" type="pkStats">
+                                    <param id="0" name="Instance variable">currentNode</param>
                                     <param id="1" name="Value">nodeData.nb</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9850447755698255" type="Function">
+                                    <param id="0" name="Name">&quot;grinding. set values after moving&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Every tick, move the You to the current node as set in pkStats</comment>
+                <comment>The &quot;pick all pkStats&quot; is there only to block this event when I open in debug</comment>
+                <event-block sid="3524290963875182">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6668814507831469" type="nodeData">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">pkStats.currentNode</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="2482185887830206" type="System">
+                            <param id="0" name="Object">pkStats</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="5419291378129779" type="you">
+                            <param id="0" name="Object">node</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2979598651434376">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6873095326914785" type="Function">
+                            <param id="0" name="Name">&quot;grinding. set values after moving&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5492871360839329" type="nodeData">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">pkStats.currentNode</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5304357741439921" type="pkStats">
+                            <param id="0" name="Instance variable">nodeTimeToSpend</param>
+                            <param id="1" name="Value">nodeData.timeToSpendHere</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8410286104840677" type="pkStats">
+                            <param id="0" name="Instance variable">nodeTimeSpent</param>
+                            <param id="1" name="Value">node.timeSpentHere</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -232,11 +279,23 @@
                                             <param id="0" name="Name">&quot;update nodes&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="0" name="Call function" sid="4336806812047345" type="Function">
+                                            <param id="0" name="Name">&quot;grinding. set values after moving&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="463529625094463">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4800642048085209" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
