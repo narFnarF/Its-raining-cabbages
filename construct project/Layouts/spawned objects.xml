@@ -219,7 +219,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <completed>false</completed>
+                        <timeSpentHere>0</timeSpentHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />

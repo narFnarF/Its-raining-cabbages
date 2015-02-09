@@ -33,8 +33,8 @@
             <sub-events>
                 <event-block sid="3744349835810304">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2041462601317838" type="node">
-                            <param id="0" name="Instance variable">completed</param>
+                        <condition id="2" name="Is playing" sid="4833292691343572" type="node">
+                            <param id="0" name="Animation">&quot;completed&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -106,12 +106,21 @@
                         <action id="-16" name="Set opacity" sid="4918124763480985" type="route">
                             <param id="0" name="Opacity">50</param>
                         </action>
+                        <action id="14" name="Log" sid="1559665487525734" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;function: update nodes&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4541439072503174">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="2527017243364925" type="node">
-                                    <param id="0" name="Instance variable">completed</param>
+                                <condition id="-11" name="For Each" sid="2177514737874285" type="System">
+                                    <param id="0" name="Object">node</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2729086804449286" type="System">
+                                    <param id="0" name="First value">node.timeSpentHere</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">nodeData.timeToSpendHere</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -155,27 +164,83 @@
                                     <param id="2" name="Object clicked">node</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-14" name="Toggle boolean" sid="5865403214074993" type="node">
-                                    <param id="0" name="Instance variable">completed</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6231653794581137" type="Function">
-                                    <param id="0" name="Name">&quot;update nodes&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8521923109578525">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="2805344845868549" type="node">
+                                            <param id="0" name="Animation">&quot;completed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4942814342158102" type="node">
+                                            <param id="0" name="Instance variable">timeSpentHere</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7801275510064348">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4148589811767669" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5665464323800325" type="node">
+                                            <param id="0" name="Instance variable">timeSpentHere</param>
+                                            <param id="1" name="Value">nodeData.timeToSpendHere</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5670009801427431">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6231653794581137" type="Function">
+                                            <param id="0" name="Name">&quot;update nodes&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3733323998437917">
-                    <conditions>
-                        <condition id="0" name="On function" sid="2807126913935842" type="Function">
-                            <param id="0" name="Name">&quot;time has passed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7175952774688262">
+            <conditions>
+                <condition id="0" name="On function" sid="5624164255546738" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="3733323998437917">
+            <conditions>
+                <condition id="0" name="On function" sid="2807126913935842" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2016368749972956">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2013175871163743" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="869633014448605" type="Function">
+                            <param id="0" name="Name">&quot;update nodes&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="14" name="Log" sid="2178472360585488" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

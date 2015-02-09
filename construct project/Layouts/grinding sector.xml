@@ -349,6 +349,7 @@
                         <nb>0</nb>
                         <start>true</start>
                         <end>false</end>
+                        <timeToSpendHere>60</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -379,6 +380,7 @@
                         <nb>1</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>120</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -409,6 +411,7 @@
                         <nb>2</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -439,6 +442,7 @@
                         <nb>3</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -469,6 +473,7 @@
                         <nb>4</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -499,6 +504,7 @@
                         <nb>5</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -529,6 +535,7 @@
                         <nb>6</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -559,6 +566,7 @@
                         <nb>7</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -589,6 +597,7 @@
                         <nb>8</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -619,6 +628,7 @@
                         <nb>9</nb>
                         <start>false</start>
                         <end>false</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -649,6 +659,7 @@
                         <nb>10</nb>
                         <start>false</start>
                         <end>true</end>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -689,6 +700,34 @@
                         <depth>0</depth>
                         <hotspotX>0.537037015</hotspotX>
                         <hotspotY>0.674074054</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="timeKeeper" uid="79">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <lastTimeStamp>0</lastTimeStamp>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-165</x>
+                        <y>335</y>
+                        <z>0</z>
+                        <width>147</width>
+                        <height>153</height>
+                        <depth>0</depth>
+                        <hotspotX>0.571428597</hotspotX>
+                        <hotspotY>0.607843161</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
