@@ -1200,6 +1200,8 @@
                     <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
                     <instance-variable name="sectorCurrent" sid="5568407274159363" type="number" />
+                    <instance-variable name="nodeTimeToSpend" sid="5018348872088445" type="number" />
+                    <instance-variable name="nodeTimeSpent" sid="5847347889282774" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
@@ -1207,7 +1209,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="pkHpBarBg" sid="6282714273423693">
+            <object-type name="pkBarBg" sid="6282714273423693">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="9189479058264416">
@@ -1215,8 +1217,8 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>pkHpBarBg</type>
-                    <type>pkHpBar</type>
+                    <type>pkBarBg</type>
+                    <type>pkBar</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="rouge" pingpong="0" repeatcount="1" repeatto="0" sid="5799785853409298" speed="5">
@@ -1227,7 +1229,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="pkHpBar" sid="7235007784863634">
+            <object-type name="pkBar" sid="7235007784863634">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="name" sid="1783009049203672" type="string" />
@@ -1240,8 +1242,8 @@
                     </behavior-type>
                 </behaviors>
                 <container>
-                    <type>pkHpBarBg</type>
-                    <type>pkHpBar</type>
+                    <type>pkBarBg</type>
+                    <type>pkBar</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="vert" pingpong="0" repeatcount="1" repeatto="0" sid="3872243152214634" speed="5">
@@ -1397,7 +1399,7 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="pkSectorTimeTxt" sid="3851843521013606">
+            <object-type name="pkBarSectorTimeTxt" sid="3851843521013606">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="5781419445588147">

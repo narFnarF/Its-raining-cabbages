@@ -5,65 +5,100 @@
     <events>
         <include>global events</include>
         <include>gameplay stuff</include>
-        <event-block sid="3524290963875182">
+        <event-block sid="7175952774688262">
             <conditions>
-                <condition id="-19" name="Pick all" sid="2482185887830206" type="System">
-                    <param id="0" name="Object">pkStats</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="6668814507831469" type="nodeData">
-                    <param id="0" name="Instance variable">nb</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">pkStats.sectorCurrent</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="5419291378129779" type="you">
-                    <param id="0" name="Object">node</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8686267226794016">
-            <conditions>
-                <condition id="3" name="On touched object" sid="6856261898087063" type="Touch">
-                    <param id="0" name="Object">node</param>
+                <condition id="0" name="On function" sid="5624164255546738" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <comment>Automatically set all nodes with the default timeToSpendHere</comment>
+        <event-block sid="7493597100151271">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9879387943633082" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="4269170126877365" type="nodeData">
+                    <param id="0" name="Instance variable">timeToSpendHere</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1274641479723754" type="nodeData">
+                    <param id="0" name="Instance variable">timeToSpendHere</param>
+                    <param id="1" name="Value">(17+nodeData.nb)*3600</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="2091616091325604" type="Function">
+                    <param id="0" name="Name">&quot;update nodes&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6210497927244467" title="movement (sector)">
             <sub-events>
-                <event-block sid="3744349835810304">
+                <comment>Move the You to its correct position</comment>
+                <comment>The &quot;pick all pkStats&quot; is there only to block this event when I open in debug</comment>
+                <event-block sid="3524290963875182">
                     <conditions>
-                        <condition id="2" name="Is playing" sid="4833292691343572" type="node">
-                            <param id="0" name="Animation">&quot;completed&quot;</param>
+                        <condition id="-7" name="Compare instance variable" sid="6668814507831469" type="nodeData">
+                            <param id="0" name="Instance variable">nb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">pkStats.sectorCurrent</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="2482185887830206" type="System">
+                            <param id="0" name="Object">pkStats</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="2879764517983011" type="pkStats">
-                            <param id="0" name="Instance variable">sectorCurrent</param>
-                            <param id="1" name="Value">nodeData.nb</param>
+                        <action id="-4" name="Set position to another object" sid="5419291378129779" type="you">
+                            <param id="0" name="Object">node</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6664833800833677">
+                <event-block sid="8686267226794016">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9593651398885895" type="node">
-                            <param id="0" name="Object">route</param>
-                        </condition>
-                        <condition id="-10" name="Compare opacity" sid="7655985019461149" type="route">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Opacity">100</param>
+                        <condition id="3" name="On touched object" sid="6856261898087063" type="Touch">
+                            <param id="0" name="Object">node</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="6469865487623074" type="pkStats">
-                            <param id="0" name="Instance variable">sectorCurrent</param>
-                            <param id="1" name="Value">nodeData.nb</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3744349835810304">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="4833292691343572" type="node">
+                                    <param id="0" name="Animation">&quot;completed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2879764517983011" type="pkStats">
+                                    <param id="0" name="Instance variable">sectorCurrent</param>
+                                    <param id="1" name="Value">nodeData.nb</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6664833800833677">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="9593651398885895" type="node">
+                                    <param id="0" name="Object">route</param>
+                                </condition>
+                                <condition id="-10" name="Compare opacity" sid="7655985019461149" type="route">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6469865487623074" type="pkStats">
+                                    <param id="0" name="Instance variable">sectorCurrent</param>
+                                    <param id="1" name="Value">nodeData.nb</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-group description="" sid="7657935479989554" title="visual stuff (nodes)">
+        </event-group>
+        <event-group description="" sid="7657935479989554" title="visual stuff (sector)">
             <sub-events>
                 <event-block sid="1919455537400777">
                     <conditions>
@@ -205,42 +240,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="7175952774688262">
-            <conditions>
-                <condition id="0" name="On function" sid="5624164255546738" type="Function">
-                    <param id="0" name="Name">&quot;first launch&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="3733323998437917">
-            <conditions>
-                <condition id="0" name="On function" sid="2807126913935842" type="Function">
-                    <param id="0" name="Name">&quot;time has passed&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2016368749972956">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2013175871163743" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="869633014448605" type="Function">
-                            <param id="0" name="Name">&quot;update nodes&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="14" name="Log" sid="2178472360585488" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">Function.Param(0)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>

@@ -380,7 +380,7 @@
                         <nb>1</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>120</timeToSpendHere>
+                        <timeToSpendHere>60</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -411,7 +411,7 @@
                         <nb>2</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>-1</timeToSpendHere>
+                        <timeToSpendHere>120</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -730,6 +730,31 @@
                         <hotspotY>0.607843161</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="route" uid="80">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>569</x>
+                        <y>324</y>
+                        <z>0</z>
+                        <width>208</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
             </instances>

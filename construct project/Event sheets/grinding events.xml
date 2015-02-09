@@ -21,6 +21,10 @@
                     <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="0" name="Call function" sid="439648095813667" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="8680086694843432">
@@ -154,17 +158,17 @@
                 <event-block sid="7601235825878619">
                     <conditions />
                     <actions>
-                        <action id="-10" name="Set value" sid="5272534160174837" type="pkHpBar">
+                        <action id="-10" name="Set value" sid="5272534160174837" type="pkBar">
                             <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">max(pkHpBar.value, 0)</param>
+                            <param id="1" name="Value">clamp(pkBar.value, 0, pkBar.valueMax)</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="9666161332579859" type="pkHpBar">
-                            <param id="0" name="Object">pkHpBarBg</param>
+                        <action id="-4" name="Set position to another object" sid="9666161332579859" type="pkBar">
+                            <param id="0" name="Object">pkBarBg</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action id="-7" name="Set size" sid="9117534063255108" type="pkHpBar">
-                            <param id="0" name="Width">pkHpBar.value/pkHpBar.valueMax * pkHpBarBg.Width</param>
-                            <param id="1" name="Height">pkHpBarBg.Height</param>
+                        <action id="-7" name="Set size" sid="9117534063255108" type="pkBar">
+                            <param id="0" name="Width">pkBar.value/pkBar.valueMax * pkBarBg.Width</param>
+                            <param id="1" name="Height">pkBarBg.Height</param>
                         </action>
                     </actions>
                 </event-block>
@@ -183,6 +187,64 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9913405089700515">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3358041876030159" type="Function">
+                            <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7815287729944618" type="pkBar">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;sector progress&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6579826572370681" type="pkBar">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">pkStats.nodeTimeSpent</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6130984911365962" type="pkBar">
+                            <param id="0" name="Instance variable">valueMax</param>
+                            <param id="1" name="Value">pkStats.nodeTimeToSpend</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="timeLeft" sid="1852091755798575" static="0" type="number">0</variable>
+                        <event-block sid="2106436471794681">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="4654169943700729" type="System">
+                                    <param id="0" name="Variable">timeLeft</param>
+                                    <param id="1" name="Value">pkStats.nodeTimeToSpend-pkStats.nodeTimeSpent</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9162892563811972">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9373160462216518" type="System">
+                                    <param id="0" name="First value">timeLeft</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="4505739026631691" type="pkBarSectorTimeTxt">
+                                    <param id="0" name="Text">&quot;ETA: &quot; &amp; timeLeft &amp; &quot; sec&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6924609764527775">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2584935362182572" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1749396153336039" type="pkBarSectorTimeTxt">
+                                    <param id="0" name="Text">&quot;Completed!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="8540978209649851" title="time has passed (grinding)">
@@ -195,12 +257,26 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="deltatime" sid="5164264819706096" static="0" type="number">0</variable>
+                        <event-block sid="4996942532174441">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="3011862324513504" type="System">
+                                    <param id="0" name="Variable">deltatime</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="6470691297771034" type="pkStats">
+                                    <param id="0" name="Instance variable">nodeTimeSpent</param>
+                                    <param id="1" name="Value">deltatime</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="3654034178288051">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="6468147041648994" type="Function">
-                                    <param id="0" name="Index">0</param>
+                                <condition id="-8" name="Compare two values" sid="6468147041648994" type="System">
+                                    <param id="0" name="First value">deltatime</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Second value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -220,6 +296,14 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="5121912400503029">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3893208974900824" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -344,7 +428,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;battle&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5525961259304256" type="pkHpBar">
+                        <condition id="-7" name="Compare instance variable" sid="5525961259304256" type="pkBar">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;ennemi&quot;</param>
@@ -358,7 +442,7 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="862854085556791" type="grindingGuy">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="9819087112215421" type="pkHpBar">
+                        <action id="-10" name="Set value" sid="9819087112215421" type="pkBar">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">pkStats.battleTimer</param>
                         </action>
@@ -383,11 +467,11 @@
                                     <param id="0" name="Instance variable">battleTimer</param>
                                     <param id="1" name="Value">battleDuration</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="4988020396270822" type="pkHpBar">
+                                <action id="-10" name="Set value" sid="4988020396270822" type="pkBar">
                                     <param id="0" name="Instance variable">valueMax</param>
                                     <param id="1" name="Value">battleDuration</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="3207098583845686" type="pkHpBar">
+                                <action id="-10" name="Set value" sid="3207098583845686" type="pkBar">
                                     <param id="0" name="Instance variable">value</param>
                                     <param id="1" name="Value">battleDuration</param>
                                 </action>
@@ -407,6 +491,10 @@
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;transition to walking&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="8072302873541318" type="Function">
+                                    <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="7767471929881161" type="Function">
                                     <param id="0" name="Name">&quot;count&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;pkmn kill&quot;</param>
@@ -423,14 +511,14 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;transition to walking&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="1410426930775511" type="pkHpBar">
+                        <condition id="-7" name="Compare instance variable" sid="1410426930775511" type="pkBar">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;ennemi&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="928649217359917" type="pkHpBar">
+                        <action id="-10" name="Set value" sid="928649217359917" type="pkBar">
                             <param id="0" name="Instance variable">value</param>
                             <param id="1" name="Value">0</param>
                         </action>
