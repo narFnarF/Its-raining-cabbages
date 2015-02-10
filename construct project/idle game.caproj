@@ -1202,6 +1202,8 @@
                     <instance-variable name="currentNode" sid="5568407274159363" type="number" />
                     <instance-variable name="nodeTimeToSpend" sid="5018348872088445" type="number" />
                     <instance-variable name="nodeTimeSpent" sid="5847347889282774" type="number" />
+                    <instance-variable name="levelUpTimeRequired" sid="5679409330007737" type="number" />
+                    <instance-variable name="levelUpTimer" sid="7192516300412876" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
@@ -1426,6 +1428,25 @@
         </object-type>
         <object-type global="1" name="saver" sid="4467673521804933">
             <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="coins" sid="5586148913928903">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="pkLevelUpIcon" sid="4722709261757437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
+                    <frame duration="1" hotspotX="0.431373" hotspotY="0.63354">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

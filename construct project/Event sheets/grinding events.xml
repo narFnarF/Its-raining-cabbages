@@ -295,6 +295,10 @@
                                     <param id="0" name="Instance variable">nodeTimeSpent</param>
                                     <param id="1" name="Value">deltatime</param>
                                 </action>
+                                <action id="-11" name="Add to" sid="9546799590926938" type="pkStats">
+                                    <param id="0" name="Instance variable">levelUpTimer</param>
+                                    <param id="1" name="Value">deltatime</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="3654034178288051">
@@ -607,6 +611,69 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4565471605711386" title="debug (grinding)" />
+        <event-group description="" sid="4565471605711386" title="debug (grinding)">
+            <sub-events>
+                <event-block sid="9981365439054539">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1872391825412027" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8345741226891806">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9440104590387745" type="Touch">
+                    <param id="0" name="Object">pkLevelUpIcon</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="6929830039466262" type="pkLevelUpIcon" />
+                <condition id="-8" name="Is boolean instance variable set" sid="4536629962425015" type="pokemon">
+                    <param id="0" name="Instance variable">yours</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1739110245199964" type="pkLevelUpIcon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="5953085045210627" type="pkStats">
+                    <param id="0" name="Instance variable">levelUpTimeRequired</param>
+                    <param id="1" name="Value">(random(0,2)+8) / (1+1.5^(20-pkStats.level*2) ) *3600</param>
+                </action>
+                <action id="-10" name="Set value" sid="7787454307911545" type="pkStats">
+                    <param id="0" name="Instance variable">levelUpTimer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="955908322117129" type="pkStats">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="8025094611695126" type="System">
+                    <param id="0" name="Object to create">verachouLevelUp</param>
+                    <param id="1" name="Layer">&quot;gameplay&quot;</param>
+                    <param id="2" name="X">pokemon.X</param>
+                    <param id="3" name="Y">pokemon.Y</param>
+                </action>
+                <action id="0" name="Call function" sid="5774821390535725" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1473993597857614">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="956258587248357" type="System">
+                    <param id="0" name="First value">pkStats.levelUpTimer</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">pkStats.levelUpTimeRequired</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7715906968434142" type="pkLevelUpIcon">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
