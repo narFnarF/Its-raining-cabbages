@@ -349,7 +349,7 @@
                         <nb>0</nb>
                         <start>true</start>
                         <end>false</end>
-                        <timeToSpendHere>0.0166</timeToSpendHere>
+                        <timeToSpendHere>-1</timeToSpendHere>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

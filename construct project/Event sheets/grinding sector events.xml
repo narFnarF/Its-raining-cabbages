@@ -49,6 +49,10 @@
                     <param id="0" name="Instance variable">timeSpentHere</param>
                     <param id="1" name="Value">pkStats.nodeTimeSpent</param>
                 </action>
+                <action id="-10" name="Set value" sid="9973906829200175" type="nodeData">
+                    <param id="0" name="Instance variable">timeToSpendHere</param>
+                    <param id="1" name="Value">pkStats.nodeTimeToSpend/3600</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="6210497927244467" title="movement (sector)">

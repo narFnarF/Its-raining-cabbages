@@ -619,7 +619,11 @@
                             <param id="0" name="Key">32 (Space)</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1079359166544515" type="pkLevelUpIcon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -655,12 +659,25 @@
                     <param id="2" name="X">pokemon.X</param>
                     <param id="3" name="Y">pokemon.Y</param>
                 </action>
+                <action id="-10" name="Set value" sid="3051405696693179" type="pkStats">
+                    <param id="0" name="Instance variable">nodeTimeSpent</param>
+                    <param id="1" name="Value">pkStats.nodeTimeSpent*0.8</param>
+                </action>
+                <action id="-10" name="Set value" sid="2493447668155969" type="pkStats">
+                    <param id="0" name="Instance variable">nodeTimeToSpend</param>
+                    <param id="1" name="Value">pkStats.nodeTimeToSpend*0.8</param>
+                </action>
                 <action id="0" name="Call function" sid="5774821390535725" type="Function">
                     <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action disabled="1" id="0" name="Call function" sid="6848254515174979" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
         </event-block>
+        <comment>faire cette code seulement après avoir tué un monstre</comment>
         <event-block sid="1473993597857614">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="956258587248357" type="System">
