@@ -299,5 +299,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4479790785833479">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="6905195873671985" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3450984277852886" type="Function">
+                    <param id="0" name="Name">&quot;grinding. set values after moving&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
