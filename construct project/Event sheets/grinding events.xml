@@ -232,6 +232,32 @@
                                     <param id="0" name="Text">&quot;ETA: &quot; &amp; round(timeLeft) &amp; &quot; sec&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="636863485535924">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2435456708012525" type="System">
+                                            <param id="0" name="First value">timeLeft</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">3600</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="366699141549881" type="pkBarSectorTimeTxt">
+                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/3600) &amp; &quot; hours&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3735193630075182">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7298076871482915" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="51708140115236" type="pkBarSectorTimeTxt">
+                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/60) &amp; &quot; minutes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6924609764527775">
                             <conditions>

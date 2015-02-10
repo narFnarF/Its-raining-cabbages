@@ -26,7 +26,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="1274641479723754" type="nodeData">
                     <param id="0" name="Instance variable">timeToSpendHere</param>
-                    <param id="1" name="Value">(17+nodeData.nb)*3600</param>
+                    <param id="1" name="Value">(17+nodeData.nb)</param>
                 </action>
             </actions>
         </event-block>
@@ -135,7 +135,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="5304357741439921" type="pkStats">
                             <param id="0" name="Instance variable">nodeTimeToSpend</param>
-                            <param id="1" name="Value">nodeData.timeToSpendHere</param>
+                            <param id="1" name="Value">nodeData.timeToSpendHere*3600</param>
                         </action>
                         <action id="-10" name="Set value" sid="8410286104840677" type="pkStats">
                             <param id="0" name="Instance variable">nodeTimeSpent</param>
@@ -202,7 +202,7 @@
                                 <condition id="-8" name="Compare two values" sid="2729086804449286" type="System">
                                     <param id="0" name="First value">node.timeSpentHere</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">nodeData.timeToSpendHere</param>
+                                    <param id="2" name="Second value">nodeData.timeToSpendHere*3600</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -268,7 +268,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="5665464323800325" type="node">
                                             <param id="0" name="Instance variable">timeSpentHere</param>
-                                            <param id="1" name="Value">nodeData.timeToSpendHere</param>
+                                            <param id="1" name="Value">nodeData.timeToSpendHere*3600</param>
                                         </action>
                                     </actions>
                                 </event-block>
