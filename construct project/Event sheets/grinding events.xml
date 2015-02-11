@@ -29,6 +29,10 @@
                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action disabled="1" id="14" name="Log" sid="7454583573560592" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;!!!!!!!!!!!!!!! ici&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="8680086694843432">
@@ -74,6 +78,30 @@
                         <action id="-4" name="Set position to another object" sid="3038056388897467" type="camera">
                             <param id="0" name="Object">screen</param>
                             <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>pour donner l&apos;illusion que le temps s&apos;est écoulé, on ajuste le timer à une position aléatoire</comment>
+                <comment>le &quot;wait 0.000001&quot; est nécessaire pour que ça se fasse *après* que le combat soit initialisé.</comment>
+                <event-block sid="2619501622992119">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6312566158166694" type="pkStats">
+                            <param id="0" name="Instance variable">state</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;battle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="7414669505965229" type="System">
+                            <param id="0" name="Seconds">0.0000000000001</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6504618222698972" type="pkStats">
+                            <param id="0" name="Instance variable">battleTimer</param>
+                            <param id="1" name="Value">random(0, pkStats.battleTimer)</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="5427270745784395" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;!!!!!!!!!!!!!!! là&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -320,7 +348,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="8691671301370944" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;, &quot;transition to walking&quot;, &quot;transition to battle&quot;)</param>
+                                    <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;)</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="7091479156683841" type="System" />
                             </actions>
@@ -471,7 +499,7 @@
                     </actions>
                     <sub-events>
                         <variable constant="0" name="battleDuration" sid="3526595074317936" static="0" type="number">0</variable>
-                        <comment>start the battle (trigger once)</comment>
+                        <comment>start (initialize) the battle (trigger once)</comment>
                         <event-block sid="3784146116079623">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="6073426933070125" type="System" />
@@ -483,7 +511,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="2329160849393022" type="System">
                                     <param id="0" name="Variable">battleDuration</param>
-                                    <param id="1" name="Value">lerp(25, 0.5, clamp(pkStats.nodeTimeSpent/pkStats.nodeTimeToSpend, 0, 1))</param>
+                                    <param id="1" name="Value">lerp(25, 0.4, clamp(pkStats.nodeTimeSpent/pkStats.nodeTimeToSpend, 0, 1))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
@@ -642,7 +670,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="14" name="Log" sid="2517896124525695" type="Browser">
+                <action id="-16" name="Wait" sid="3064302175091518" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action disabled="1" id="14" name="Log" sid="2517896124525695" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Checking for level up&quot;</param>
                 </action>
@@ -660,7 +691,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="6161492955484362" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="6161492955484362" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Checking for level up: Confirmed!&quot;</param>
                         </action>
@@ -694,9 +725,13 @@
                             <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="7366721994269803" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Your %monster_name% has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="7842176362357245" type="Function">
                             <param id="0" name="Name">&quot;text popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Your %monster_name% has level up to &quot; &amp; pkStats.level &amp; &quot;!&#x0D;&#x0A;test&#x0D;&#x0A;test&quot;{###}&quot;Yay!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Your %monster_name% has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
