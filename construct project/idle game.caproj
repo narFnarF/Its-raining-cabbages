@@ -157,19 +157,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="fallingCabbagesDetector" sid="6570114965952764">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="3450144000430623">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6926801322755496" speed="5">
-                        <frame duration="1" hotspotX="-1.7" hotspotY="5.0303" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="textboxes">
             <object-type name="plus1" sid="9026095487772363">
@@ -862,6 +849,19 @@
                     </behavior-type>
                 </behaviors>
                 <texture />
+            </object-type>
+            <object-type name="fallingCabbagesDetector" sid="6570114965952764">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3450144000430623">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6926801322755496" speed="5">
+                        <frame duration="1" hotspotX="-1.7" hotspotY="5.0303" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="lions">
