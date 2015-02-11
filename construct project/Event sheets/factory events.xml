@@ -469,6 +469,36 @@
                         <action id="-9" name="Destroy" sid="9871609296974253" type="cabbage" />
                     </actions>
                 </event-block>
+                <event-block sid="1900664066824771">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1358619705820056" type="cabbage">
+                            <param id="0" name="Object">fallingCabbagesDetector</param>
+                        </condition>
+                        <condition id="-12" name="Repeat" sid="518446511912008" type="System">
+                            <param id="0" name="Count">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6938625042574074" type="System">
+                            <param id="0" name="Object to create">cabbage</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(cabbagesSpawnArea.BBoxLeft, cabbagesSpawnArea.BBoxRight)</param>
+                            <param id="3" name="Y">cabbagesSpawnArea.BBoxTop</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="3259047631427848" type="cabbage">
+                            <param id="0" name="Torque">random(-100,100)</param>
+                        </action>
+                        <action behavior="Physics" id="0" name="Apply force" sid="5308193559908699" type="cabbage">
+                            <param id="0" name="Force X">random(-1,1)</param>
+                            <param id="1" name="Force Y">random(0,500)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2905844747242213" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You dropped a cabbage in the hole! Here comes the frenzy of the game&apos;s creator!!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3792616009665136" title="Display stats">

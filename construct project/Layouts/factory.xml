@@ -1619,6 +1619,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="fallingCabbagesDetector" uid="87">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>761.800048828</x>
+                        <y>1182.12109375</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>76</height>
+                        <depth>0</depth>
+                        <hotspotX>-1.700000048</hotspotX>
+                        <hotspotY>5.030303001</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
