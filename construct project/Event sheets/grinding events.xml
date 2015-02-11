@@ -23,15 +23,11 @@
                 </action>
                 <action id="0" name="Call function" sid="439648095813667" type="Function">
                     <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                    <param id="1" name="Parameter {n}">&quot;just bar&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="2139183865054088" type="Function">
                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action disabled="1" id="14" name="Log" sid="7454583573560592" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;!!!!!!!!!!!!!!! ici&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -102,6 +98,18 @@
                         <action disabled="1" id="14" name="Log" sid="5427270745784395" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;!!!!!!!!!!!!!!! là&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3876428726128799">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="5838984929356269" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7588951776743352" type="Function">
+                            <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;just ETA&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -224,82 +232,139 @@
                         <condition id="0" name="On function" sid="3358041876030159" type="Function">
                             <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7815287729944618" type="pkBar">
-                            <param id="0" name="Instance variable">name</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;sector progress&quot;</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="6579826572370681" type="pkBar">
-                            <param id="0" name="Instance variable">value</param>
-                            <param id="1" name="Value">pkStats.nodeTimeSpent</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6130984911365962" type="pkBar">
-                            <param id="0" name="Instance variable">valueMax</param>
-                            <param id="1" name="Value">pkStats.nodeTimeToSpend</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <variable constant="0" name="timeLeft" sid="1852091755798575" static="0" type="number">0</variable>
-                        <event-block sid="2106436471794681">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="4654169943700729" type="System">
-                                    <param id="0" name="Variable">timeLeft</param>
-                                    <param id="1" name="Value">pkStats.nodeTimeToSpend-pkStats.nodeTimeSpent</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9162892563811972">
+                        <variable constant="0" name="whatToChange" sid="5065684459382963" static="0" type="text"></variable>
+                        <event-block sid="7010705317286951">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="9373160462216518" type="System">
-                                    <param id="0" name="First value">timeLeft</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
+                                <condition id="-8" name="Compare two values" sid="7313853762456242" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="4505739026631691" type="pkBarSectorTimeTxt">
-                                    <param id="0" name="Text">&quot;ETA: &quot; &amp; round(timeLeft) &amp; &quot; sec&quot;</param>
+                                <action id="-9" name="Set value" sid="6904141183305042" type="System">
+                                    <param id="0" name="Variable">whatToChange</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="636863485535924">
+                                <event-block any="1" sid="9265801566095041">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="2435456708012525" type="System">
-                                            <param id="0" name="First value">timeLeft</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">3600</param>
+                                        <condition id="-14" name="Compare variable" sid="5207554186051186" type="System">
+                                            <param id="0" name="Variable">whatToChange</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;just bar&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="1299590145682908" type="System">
+                                            <param id="0" name="Variable">whatToChange</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;both&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="366699141549881" type="pkBarSectorTimeTxt">
-                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/3600) &amp; &quot; hours&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4550580324549401">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="7815287729944618" type="pkBar">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;sector progress&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="6579826572370681" type="pkBar">
+                                                    <param id="0" name="Instance variable">value</param>
+                                                    <param id="1" name="Value">pkStats.nodeTimeSpent</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="6130984911365962" type="pkBar">
+                                                    <param id="0" name="Instance variable">valueMax</param>
+                                                    <param id="1" name="Value">pkStats.nodeTimeToSpend</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="3735193630075182">
+                                <event-block any="1" sid="3002658881096873">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="7298076871482915" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="6283919937503581" type="System">
+                                            <param id="0" name="Variable">whatToChange</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;just ETA&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="1519426116880661" type="System">
+                                            <param id="0" name="Variable">whatToChange</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;both&quot;</param>
+                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="51708140115236" type="pkBarSectorTimeTxt">
-                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/60) &amp; &quot; minutes&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="timeLeft" sid="1852091755798575" static="0" type="number">0</variable>
+                                        <event-block sid="2106436471794681">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="4654169943700729" type="System">
+                                                    <param id="0" name="Variable">timeLeft</param>
+                                                    <param id="1" name="Value">pkStats.nodeTimeToSpend-pkStats.nodeTimeSpent</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9162892563811972">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="9373160462216518" type="System">
+                                                    <param id="0" name="First value">timeLeft</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="4505739026631691" type="pkBarSectorTimeTxt">
+                                                    <param id="0" name="Text">&quot;ETA: &quot; &amp; round(timeLeft) &amp; &quot; sec&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="636863485535924">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="2435456708012525" type="System">
+                                                            <param id="0" name="First value">timeLeft</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">3600</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="366699141549881" type="pkBarSectorTimeTxt">
+                                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/3600) &amp; &quot; hours&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="3735193630075182">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="7298076871482915" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="51708140115236" type="pkBarSectorTimeTxt">
+                                                            <param id="0" name="Text">&quot;ETA: about &quot; &amp; ceil(timeLeft/60) &amp; &quot; minutes&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="6924609764527775">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="2584935362182572" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="1749396153336039" type="pkBarSectorTimeTxt">
+                                                    <param id="0" name="Text">&quot;Completed!&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="6924609764527775">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="2584935362182572" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="1749396153336039" type="pkBarSectorTimeTxt">
-                                    <param id="0" name="Text">&quot;Completed!&quot;</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -535,6 +600,9 @@
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173693693729994" type="pokemon">
+                                    <param id="0" name="Instance variable">yours</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="3688188041949951" type="pkStats">
@@ -552,6 +620,10 @@
                                 <action id="0" name="Call function" sid="7767471929881161" type="Function">
                                     <param id="0" name="Name">&quot;count&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;monster beaten&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9160280279333226" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;You won against &quot; &amp; pokemon.AnimationName &amp; &quot; : &quot; &amp; round( random(1, 1.2)*4*(pkStats.currentNode+1)+random(1,3) ) &amp; &quot; XP&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -727,11 +799,11 @@
                         </action>
                         <action id="0" name="Call function" sid="7366721994269803" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Your %monster_name% has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="7842176362357245" type="Function">
                             <param id="0" name="Name">&quot;text popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Your %monster_name% has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
                         </action>
                     </actions>
                 </event-block>

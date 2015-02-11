@@ -862,7 +862,7 @@
                 </instance>
                 <instance type="pkBarSectorTimeTxt" uid="83">
                     <properties>
-                        <text>ETA 23h 47m 02s</text>
+                        <text>ETA: (Calculating...)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Trebuchet MS,-27,400,0</font>
                         <color>0,0,0</color>
@@ -977,7 +977,7 @@
                 </instance>
                 <instance type="pkBarSectorTimeTxt" uid="78">
                     <properties>
-                        <text>ETA 23h 47m 02s</text>
+                        <text>ETA: (Calculating...)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Trebuchet MS,-27,400,0</font>
                         <color>0,0,0</color>
