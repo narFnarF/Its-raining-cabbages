@@ -436,39 +436,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pkStats" uid="21">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <state>walking</state>
-                        <timerWalking>1</timerWalking>
-                        <battleTimer>0</battleTimer>
-                        <level>1</level>
-                        <currentNode>0</currentNode>
-                        <nodeTimeToSpend>60</nodeTimeToSpend>
-                        <nodeTimeSpent>0</nodeTimeSpent>
-                        <levelUpTimeRequired>25</levelUpTimeRequired>
-                        <levelUpTimer>0</levelUpTimer>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-153</x>
-                        <y>708</y>
-                        <z>0</z>
-                        <width>250</width>
-                        <height>159</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.534591198</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="grindingBush" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>

@@ -278,6 +278,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="pkStats" uid="21">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <state>walking</state>
+                        <timerWalking>1</timerWalking>
+                        <battleTimer>0</battleTimer>
+                        <level>1</level>
+                        <currentNode>0</currentNode>
+                        <nodeTimeToSpend>60</nodeTimeToSpend>
+                        <nodeTimeSpent>0</nodeTimeSpent>
+                        <levelUpTimeRequired>25</levelUpTimeRequired>
+                        <levelUpTimer>0</levelUpTimer>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>453</x>
+                        <y>216</y>
+                        <z>0</z>
+                        <width>115.180374146</width>
+                        <height>74.075111389</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501858711</hotspotX>
+                        <hotspotY>0.50289017</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

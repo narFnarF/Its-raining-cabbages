@@ -113,6 +113,118 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Ce bloc sert à créer le pkStat s&apos;il est manquant ou effacer les duplicatas si y&apos;en a.</comment>
+                <event-block sid="8587748613533254">
+                    <conditions />
+                    <actions>
+                        <action id="14" name="Log" sid="6581951958320141" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Checking for pkStats&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Missing pkStats. Creating one.</comment>
+                        <event-block sid="2741042662262795">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="223090996855967" type="System">
+                                    <param id="0" name="First value">pkStats.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="1198444380188125" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;pkStats is missing. Creating one.&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9773660700279707" type="System">
+                                    <param id="0" name="Object to create">pkStats</param>
+                                    <param id="1" name="Layer">&quot;gameplay&quot;</param>
+                                    <param id="2" name="X">-153</param>
+                                    <param id="3" name="Y"> 708</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4194895596144816" type="pkStats">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;walking&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5167813490272085" type="pkStats">
+                                    <param id="0" name="Instance variable">timerWalking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7593179424016981" type="pkStats">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9514156648890073" type="pkStats">
+                                    <param id="0" name="Instance variable">currentNode</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6135484912702014" type="pkStats">
+                                    <param id="0" name="Instance variable">nodeTimeToSpend</param>
+                                    <param id="1" name="Value">60</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4760332791578329" type="pkStats">
+                                    <param id="0" name="Instance variable">levelUpTimeRequired</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7662436725147987">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3344007657184766" type="System">
+                                    <param id="0" name="First value">pkStats.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="3207925375021681" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Everything is fine with the pkStats&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Multiple pkStats. Deleting the low level ones.</comment>
+                        <event-block sid="9821435713894546">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="696694862237016" type="System">
+                                    <param id="0" name="Object">pkStats</param>
+                                </condition>
+                                <condition id="-12" name="Repeat" sid="3325928241136909" type="System">
+                                    <param id="0" name="Count">15</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="1979444018305872" type="System">
+                                    <param id="0" name="First value">pkStats.PickedCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="2502649914881056" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Detected multiple instances of pkStats. Deleting one.&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9610574334890004">
+                                    <conditions>
+                                        <condition id="-20" name="Pick highest/lowest" sid="5074336306563724" type="pkStats">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Instance variable">level</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="8260597429043293" type="pkStats" />
+                                        <action id="14" name="Log" sid="4314639166089908" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Deleting &quot; &amp; pkStats.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="1185016671241999" title="fill all the data" />
