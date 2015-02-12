@@ -202,7 +202,11 @@
                             <actions>
                                 <action id="14" name="Log" sid="2502649914881056" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Detected multiple instances of pkStats. Deleting one.&quot;</param>
+                                    <param id="1" name="Message">&quot;Detected &quot; &amp; pkStats.PickedCount &amp; &quot; instances of pkStats. Deleting one.&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9376697229871026" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Detected &quot; &amp; pkStats.PickedCount &amp; &quot; instances of pkStats. Deleting one.&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
