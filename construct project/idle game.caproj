@@ -1256,6 +1256,9 @@
                     <animation framecount="1" loop="0" name="bleu" pingpong="0" repeatcount="1" repeatto="0" sid="9582440942998391" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="1" loop="0" name="gris" pingpong="0" repeatcount="1" repeatto="0" sid="9803267789089201" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="pkBar" sid="7235007784863634">
@@ -1279,6 +1282,9 @@
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="orange" pingpong="0" repeatcount="1" repeatto="0" sid="1838620917169107" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bleu" pingpong="0" repeatcount="1" repeatto="0" sid="5551910572788438" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1436,6 +1442,29 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="pkXP" sid="6458351112243542">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7549513766035312">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="pkLevelUpIcon" sid="4722709261757437">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
+                        <frame duration="1" hotspotX="0.431373" hotspotY="0.63354">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
@@ -1459,21 +1488,6 @@
         <object-type name="coins" sid="5586148913928903">
             <plugin id="Particles" />
             <texture />
-        </object-type>
-        <object-type name="pkLevelUpIcon" sid="4722709261757437">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
-                    <frame duration="1" hotspotX="0.431373" hotspotY="0.63354">
-                        <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>

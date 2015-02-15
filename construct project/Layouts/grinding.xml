@@ -354,7 +354,7 @@
                 <instance type="pkBar" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Vert</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -761,7 +761,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>190</x>
-                        <y>121</y>
+                        <y>90</y>
                         <z>0</z>
                         <width>273</width>
                         <height>42</height>
@@ -786,7 +786,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>59</x>
-                        <y>801</y>
+                        <y>156</y>
                         <z>0</z>
                         <width>511</width>
                         <height>27</height>
@@ -816,7 +816,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>802</y>
+                        <y>157</y>
                         <z>0</z>
                         <width>236</width>
                         <height>21</height>
@@ -846,7 +846,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>105</x>
-                        <y>783</y>
+                        <y>138</y>
                         <z>0</z>
                         <width>423</width>
                         <height>42</height>
@@ -876,7 +876,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1917</x>
-                        <y>125</y>
+                        <y>94</y>
                         <z>0</z>
                         <width>273</width>
                         <height>42</height>
@@ -901,7 +901,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1798</x>
-                        <y>794</y>
+                        <y>149</y>
                         <z>0</z>
                         <width>511</width>
                         <height>27</height>
@@ -931,7 +931,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1803</x>
-                        <y>795</y>
+                        <y>150</y>
                         <z>0</z>
                         <width>236</width>
                         <height>21</height>
@@ -961,7 +961,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1844</x>
-                        <y>776</y>
+                        <y>131</y>
                         <z>0</z>
                         <width>423</width>
                         <height>42</height>
@@ -982,14 +982,99 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1879</x>
-                        <y>251</y>
+                        <x>2248</x>
+                        <y>814</y>
                         <z>0</z>
-                        <width>102</width>
-                        <height>106</height>
+                        <width>73</width>
+                        <height>71</height>
                         <depth>0</depth>
                         <hotspotX>0.431372553</hotspotX>
                         <hotspotY>0.633540392</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pkXP" uid="89">
+                    <properties>
+                        <text>Level up:</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Trebuchet MS,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1769</x>
+                        <y>760</y>
+                        <z>0</z>
+                        <width>431</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pkBarBg" uid="90">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>gris</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1767</x>
+                        <y>808</y>
+                        <z>0</z>
+                        <width>437</width>
+                        <height>14</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pkBar" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bleu</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <name>xp</name>
+                        <value>50</value>
+                        <valueMax>100</valueMax>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1772</x>
+                        <y>809</y>
+                        <z>0</z>
+                        <width>162</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

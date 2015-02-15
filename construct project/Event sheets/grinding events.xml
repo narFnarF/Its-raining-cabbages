@@ -11,7 +11,7 @@
                 <condition id="-2" name="On start of layout" sid="4976797631608388" type="System" />
             </conditions>
             <actions>
-                <action id="14" name="Log" sid="6581951958320141" type="Browser">
+                <action disabled="1" id="14" name="Log" sid="6581951958320141" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Checking for pkStats&quot;</param>
                 </action>
@@ -76,7 +76,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="3207925375021681" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="3207925375021681" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Everything is fine with the pkStats&quot;</param>
                         </action>
@@ -100,7 +100,7 @@
                     </conditions>
                     <actions>
                         <action id="14" name="Log" sid="2502649914881056" type="Browser">
-                            <param id="0" name="Type">0</param>
+                            <param id="0" name="Type">1</param>
                             <param id="1" name="Message">&quot;Detected &quot; &amp; pkStats.PickedCount &amp; &quot; instances of pkStats. Deleting one.&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="9376697229871026" type="Function">
@@ -150,6 +150,10 @@
                 </action>
                 <action id="0" name="Call function" sid="2139183865054088" type="Function">
                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="890640412262557" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update XP bar&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
@@ -350,6 +354,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4254351632609907">
+                    <conditions>
+                        <condition id="0" name="On function" sid="619856400420159" type="Function">
+                            <param id="0" name="Name">&quot;grinding. update XP bar&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="198984470675758" type="pkBar">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;xp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="193692400690368" type="pkBar">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">pkStats.xp</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6540037843102377" type="pkBar">
+                            <param id="0" name="Instance variable">valueMax</param>
+                            <param id="1" name="Value">pkStats.xpRequired</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="9542651531776156" type="pkXP">
+                            <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="9913405089700515">
                     <conditions>
                         <condition id="0" name="On function" sid="3358041876030159" type="Function">
@@ -504,20 +533,13 @@
                     <actions />
                     <sub-events>
                         <variable constant="0" name="deltatime" sid="5164264819706096" static="0" type="number">0</variable>
+                        <variable constant="0" name="kills" sid="9793553541114663" static="0" type="number">0</variable>
                         <event-block sid="4996942532174441">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="3011862324513504" type="System">
                                     <param id="0" name="Variable">deltatime</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action disabled="1" id="-11" name="Add to" sid="6470691297771034" type="pkStats">
-                                    <param id="0" name="Instance variable">killsDone</param>
-                                    <param id="1" name="Value">deltatime</param>
-                                </action>
-                                <action disabled="1" id="-11" name="Add to" sid="9546799590926938" type="pkStats">
-                                    <param id="0" name="Instance variable">xp</param>
-                                    <param id="1" name="Value">deltatime</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -534,9 +556,29 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;time has passed: &quot; &amp; Function.Param(0)</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="1833802694042279" type="System">
+                                    <param id="0" name="Variable">kills</param>
+                                    <param id="1" name="Value">deltatime/(pkStats.battleTimerInit+7.5)</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="6470691297771034" type="pkStats">
+                                    <param id="0" name="Instance variable">killsDone</param>
+                                    <param id="1" name="Value">kills</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="9546799590926938" type="pkStats">
+                                    <param id="0" name="Instance variable">xp</param>
+                                    <param id="1" name="Value">kills*0.25</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="8691671301370944" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">choose(&quot;walking&quot;, &quot;battle&quot;)</param>
+                                </action>
+                                <action id="14" name="Log" sid="1583335453643153" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;kills +&quot; &amp; kills &amp; &quot; = &quot; &amp; pkStats.killsDone</param>
+                                </action>
+                                <action id="14" name="Log" sid="9786461581587441" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;xp +&quot; &amp; kills*0.25 &amp; &quot; = &quot; &amp; pkStats.xp</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="7091479156683841" type="System" />
                             </actions>
@@ -750,6 +792,10 @@
                                     <param id="0" name="Instance variable">killsDone</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="1352702358307273" type="Function">
+                                    <param id="0" name="Name">&quot;grinding. update XP bar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="2836586223860108" type="Function">
                                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -865,19 +911,23 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-15" name="Set visible" sid="1079359166544515" type="pkLevelUpIcon">
+                        <action id="-15" name="Set visible" sid="1079359166544515" type="pkLevelUpIcon">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="2501406870748443" type="pkStats">
                             <param id="0" name="Instance variable">xp</param>
                             <param id="1" name="Value">pkStats.xpRequired</param>
                         </action>
+                        <action id="0" name="Call function" sid="4159232353415952" type="Function">
+                            <param id="0" name="Name">&quot;grinding. update XP bar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2397086887001473">
                     <conditions />
                     <actions>
-                        <action id="0" name="Set text" sid="89701391669235" type="pkSectorName">
+                        <action disabled="1" id="0" name="Set text" sid="89701391669235" type="pkSectorName">
                             <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp &amp; &quot;/&quot; &amp; pkStats.xpRequired</param>
                         </action>
                     </actions>
@@ -893,7 +943,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="3064302175091518" type="System">
+                <action disabled="1" id="-16" name="Wait" sid="3064302175091518" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action disabled="1" id="14" name="Log" sid="2517896124525695" type="Browser">
@@ -909,56 +959,67 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">pkStats.xpRequired</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4536629962425015" type="pokemon">
-                            <param id="0" name="Instance variable">yours</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action disabled="1" id="14" name="Log" sid="6161492955484362" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Checking for level up: Confirmed!&quot;</param>
                         </action>
-                        <action disabled="1" id="-10" name="Set value" sid="5953085045210627" type="pkStats">
-                            <param id="0" name="Instance variable">xpRequired</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7787454307911545" type="pkStats">
-                            <param id="0" name="Instance variable">xp</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="955908322117129" type="pkStats">
-                            <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="8025094611695126" type="System">
-                            <param id="0" name="Object to create">verachouLevelUp</param>
-                            <param id="1" name="Layer">&quot;gameplay&quot;</param>
-                            <param id="2" name="X">pokemon.X</param>
-                            <param id="3" name="Y">pokemon.Y</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="3051405696693179" type="pkStats">
-                            <param id="0" name="Instance variable">killsDone</param>
-                            <param id="1" name="Value">pkStats.killsDone*0.7</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="2493447668155969" type="pkStats">
-                            <param id="0" name="Instance variable">killsToDo</param>
-                            <param id="1" name="Value">pkStats.killsToDo*0.7</param>
-                        </action>
-                        <action id="0" name="Call function" sid="5774821390535725" type="Function">
-                            <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="7366721994269803" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7842176362357245" type="Function">
-                            <param id="0" name="Name">&quot;text popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
+                        <action id="-15" name="Set visible" sid="9382146561756925" type="pkLevelUpIcon">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="9697946978890279">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6995277448294529" type="Touch">
+                    <param id="0" name="Object">pkLevelUpIcon</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="7065543297730394" type="pkLevelUpIcon" />
+                <condition id="-8" name="Is boolean instance variable set" sid="4536629962425015" type="pokemon">
+                    <param id="0" name="Instance variable">yours</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8486341441014965" type="pkLevelUpIcon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7787454307911545" type="pkStats">
+                    <param id="0" name="Instance variable">xp</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="955908322117129" type="pkStats">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="8025094611695126" type="System">
+                    <param id="0" name="Object to create">verachouLevelUp</param>
+                    <param id="1" name="Layer">&quot;gameplay&quot;</param>
+                    <param id="2" name="X">pokemon.X</param>
+                    <param id="3" name="Y">pokemon.Y</param>
+                </action>
+                <action id="0" name="Call function" sid="7269897884360338" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update XP bar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="5774821390535725" type="Function">
+                    <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="7366721994269803" type="Function">
+                    <param id="0" name="Name">&quot;notification&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="448832607440401" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="7842176362357245" type="Function">
+                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
