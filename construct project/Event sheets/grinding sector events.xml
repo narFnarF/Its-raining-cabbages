@@ -148,7 +148,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="5318773640120441" type="pkStats">
                             <param id="0" name="Instance variable">levelEnemy</param>
-                            <param id="1" name="Value">nodeData.nb</param>
+                            <param id="1" name="Value">nodeData.nb+1</param>
                         </action>
                         <action id="-36" name="Save" sid="4773269718644226" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>

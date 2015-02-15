@@ -1362,6 +1362,9 @@
             </object-type>
             <object-type name="pkLevel" sid="9067352385932635">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="your" sid="762568211867715" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="NoSave" sid="6679590119212251">
                         <behavior id="NoSave" />
@@ -1443,14 +1446,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="pkXP" sid="6458351112243542">
-                <plugin id="Text" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="7549513766035312">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
             <object-type name="pkLevelUpIcon" sid="4722709261757437">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -1460,12 +1455,16 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
-                        <frame duration="1" hotspotX="0.431373" hotspotY="0.63354">
+                        <frame duration="1" hotspotX="0.513228" hotspotY="0.481865">
                             <collision-poly>
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
+                                <point x="0.126984" y="0.124352" />
+                                <point x="0.497355" y="0.00518135" />
+                                <point x="0.883598" y="0.11399" />
+                                <point x="0.994709" y="0.497409" />
+                                <point x="0.899471" y="0.901554" />
+                                <point x="0.497355" y="0.994819" />
+                                <point x="0.153439" y="0.849741" />
+                                <point x="0.00529101" y="0.497409" />
                             </collision-poly>
                         </frame>
                     </animation>

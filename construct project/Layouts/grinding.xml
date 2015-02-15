@@ -360,7 +360,7 @@
                     </properties>
                     <instance-variables>
                         <name>you</name>
-                        <value>50</value>
+                        <value>100</value>
                         <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
@@ -373,7 +373,7 @@
                         <x>1765</x>
                         <y>681</y>
                         <z>0</z>
-                        <width>223</width>
+                        <width>242</width>
                         <height>21</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -429,7 +429,7 @@
                         <x>2086</x>
                         <y>680</y>
                         <z>0</z>
-                        <width>195</width>
+                        <width>250</width>
                         <height>21</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -604,22 +604,25 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Trebuchet MS,-27,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <your>true</your>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1767</x>
-                        <y>622</y>
+                        <x>1716</x>
+                        <y>786</y>
                         <z>0</z>
-                        <width>147</width>
+                        <width>100</width>
                         <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -937,7 +940,7 @@
                         <x>1803</x>
                         <y>150</y>
                         <z>0</z>
-                        <width>236</width>
+                        <width>14</width>
                         <height>21</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -989,44 +992,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2248</x>
-                        <y>814</y>
+                        <x>2217</x>
+                        <y>806</y>
                         <z>0</z>
-                        <width>73</width>
-                        <height>71</height>
+                        <width>74.159332275</width>
+                        <height>75.728843689</height>
                         <depth>0</depth>
-                        <hotspotX>0.431372553</hotspotX>
-                        <hotspotY>0.633540392</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="pkXP" uid="89">
-                    <properties>
-                        <text>Level up:</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Trebuchet MS,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Bottom</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1673</x>
-                        <y>779</y>
-                        <z>0</z>
-                        <width>173</width>
-                        <height>42</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.513227522</hotspotX>
+                        <hotspotY>0.481865287</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1044,10 +1017,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1850</x>
+                        <x>1822</x>
                         <y>808</y>
                         <z>0</z>
-                        <width>354</width>
+                        <width>353</width>
                         <height>14</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1075,14 +1048,47 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1855</x>
+                        <x>1827</x>
                         <y>809</y>
                         <z>0</z>
-                        <width>79</width>
+                        <width>78</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pkLevel" uid="88">
+                    <properties>
+                        <text>Lvl: 2</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Trebuchet MS,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <your>false</your>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2260</x>
+                        <y>623</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

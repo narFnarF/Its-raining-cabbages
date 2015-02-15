@@ -10,12 +10,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="4976797631608388" type="System" />
             </conditions>
-            <actions>
-                <action disabled="1" id="14" name="Log" sid="6581951958320141" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Checking for pkStats&quot;</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <comment>Missing pkStats. Creating one.</comment>
                 <event-block sid="2741042662262795">
@@ -47,11 +42,11 @@
                         </action>
                         <action id="-10" name="Set value" sid="7593179424016981" type="pkStats">
                             <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="-10" name="Set value" sid="8128937968920629" type="pkStats">
                             <param id="0" name="Instance variable">levelEnemy</param>
-                            <param id="1" name="Value">0</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="9514156648890073" type="pkStats">
                             <param id="0" name="Instance variable">currentNode</param>
@@ -206,7 +201,7 @@
                 </event-block>
                 <comment>pour donner l&apos;illusion que le temps s&apos;est écoulé, on ajuste le timer à une position aléatoire</comment>
                 <comment>le &quot;wait 0.000001&quot; est nécessaire pour que ça se fasse *après* que le combat soit initialisé.</comment>
-                <event-block disabled="1" sid="2619501622992119">
+                <event-block sid="2619501622992119">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6312566158166694" type="pkStats">
                             <param id="0" name="Instance variable">state</param>
@@ -220,11 +215,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="6504618222698972" type="pkStats">
                             <param id="0" name="Instance variable">battleTimer</param>
-                            <param id="1" name="Value">random(0, pkStats.battleTimer)</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="5427270745784395" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;!!!!!!!!!!!!!!! là&quot;</param>
+                            <param id="1" name="Value">random(0, Function.Call(&quot;grinding. battle duration&quot;))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -345,33 +336,16 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <variable constant="0" name="Variable1" sid="8566062605535233" static="0" type="number">0</variable>
-                                <event-block sid="8873983141452058">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="2111435346805076" type="System">
-                                            <param id="0" name="Variable">range</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="14" name="Log" sid="9064583529329995" type="Browser">
-                                            <param id="0" name="Type">1</param>
-                                            <param id="1" name="Message">pkBar.name &amp; &quot; has a range of zero.&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
+                                <variable constant="0" name="target" sid="8566062605535233" static="0" type="number">0</variable>
                                 <event-block sid="4785161922233321">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="2317009334550621" type="System" />
-                                    </conditions>
+                                    <conditions />
                                     <actions>
-                                        <action disabled="1" id="-7" name="Set size" sid="9117534063255108" type="pkBar">
-                                            <param id="0" name="Width">pkBar.value/pkBar.valueMax * pkBarBg.Width</param>
-                                            <param id="1" name="Height">pkBarBg.Height</param>
+                                        <action id="-9" name="Set value" sid="7322062663115232" type="System">
+                                            <param id="0" name="Variable">target</param>
+                                            <param id="1" name="Value">unlerp(pkBar.valueMin, pkBar.valueMax, pkBar.value) * pkBarBg.Width</param>
                                         </action>
                                         <action id="-7" name="Set size" sid="197767292336366" type="pkBar">
-                                            <param id="0" name="Width">unlerp(pkBar.valueMin, pkBar.valueMax, pkBar.value) * pkBarBg.Width</param>
+                                            <param id="0" name="Width">lerp(pkBar.Width, target, 1 - 0.001 ^ dt)</param>
                                             <param id="1" name="Height">pkBarBg.Height</param>
                                         </action>
                                     </actions>
@@ -387,13 +361,37 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="5026249606696465" type="pkLevel">
-                            <param id="0" name="Text">&quot;Lvl: &quot; &amp; pkStats.level</param>
-                        </action>
                         <action id="0" name="Set text" sid="392107663605535" type="pkName">
                             <param id="0" name="Text">pokemon.AnimationName</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="3183278694738991">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5344286920746361" type="pkLevel">
+                                    <param id="0" name="Instance variable">your</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5026249606696465" type="pkLevel">
+                                    <param id="0" name="Text">&quot;Lvl: &quot; &amp; pkStats.level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2286768946821253">
+                            <conditions>
+                                <condition disabled="1" id="-22" name="Else" sid="5671963821466964" type="System" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9392168704734918" type="pkLevel">
+                                    <param id="0" name="Instance variable">your</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1997856882039924" type="pkLevel">
+                                    <param id="0" name="Text">&quot;Lvl: &quot; &amp; pkStats.levelEnemy</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4254351632609907">
                     <conditions>
@@ -414,9 +412,6 @@
                         <action id="-10" name="Set value" sid="6540037843102377" type="pkBar">
                             <param id="0" name="Instance variable">valueMax</param>
                             <param id="1" name="Value">pkStats.xpRequired</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="9542651531776156" type="pkXP">
-                            <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp</param>
                         </action>
                     </actions>
                 </event-block>
@@ -598,13 +593,13 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;time has passed: &quot; &amp; deltatime</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="2120685000665372" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="2120685000665372" type="System">
                                     <param id="0" name="Variable">1RoundDuration</param>
                                     <param id="1" name="Value">pkStats.battleTimerInit+7.5</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="1833802694042279" type="System">
                                     <param id="0" name="Variable">kills</param>
-                                    <param id="1" name="Value">deltatime/1RoundDuration</param>
+                                    <param id="1" name="Value">deltatime/Function.Call(&quot;grinding. battle duration&quot;, &quot;both&quot;)</param>
                                 </action>
                                 <action id="-11" name="Add to" sid="6470691297771034" type="pkStats">
                                     <param id="0" name="Instance variable">killsDone</param>
@@ -612,7 +607,7 @@
                                 </action>
                                 <action id="-11" name="Add to" sid="9546799590926938" type="pkStats">
                                     <param id="0" name="Instance variable">xp</param>
-                                    <param id="1" name="Value">pkStats.battleTimerInit*0.25*kills</param>
+                                    <param id="1" name="Value">0.25*kills*Function.Call(&quot;grinding. battle duration&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="8691671301370944" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
@@ -624,7 +619,7 @@
                                 </action>
                                 <action id="14" name="Log" sid="9786461581587441" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;xp +&quot; &amp; pkStats.battleTimerInit*0.25*kills &amp; &quot; = &quot; &amp; pkStats.xp</param>
+                                    <param id="1" name="Message">&quot;xp +&quot; &amp; 0.25*kills*Function.Call(&quot;grinding. battle duration&quot;) &amp; &quot; = &quot; &amp; pkStats.xp</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="7091479156683841" type="System" />
                             </actions>
@@ -800,7 +795,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="4988020396270822" type="pkBar">
                                     <param id="0" name="Instance variable">valueMin</param>
-                                    <param id="1" name="Value">-pkStats.battleTimerInit</param>
+                                    <param id="1" name="Value">-Function.Call(&quot;grinding. battle duration&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="1458596548293353" type="pkBar">
                                     <param id="0" name="Instance variable">valueMax</param>
@@ -819,7 +814,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="2401655720918012" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">pkStats.battleTimerInit</param>
+                                    <param id="2" name="Value">Function.Call(&quot;grinding. battle duration&quot;)</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5173693693729994" type="pokemon">
                                     <param id="0" name="Instance variable">yours</param>
@@ -828,7 +823,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="704446368282492" type="System">
                                     <param id="0" name="Variable">xpReward</param>
-                                    <param id="1" name="Value">pkStats.battleTimerInit*0.25</param>
+                                    <param id="1" name="Value">0.25*Function.Call(&quot;grinding. battle duration&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="3688188041949951" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
@@ -951,13 +946,69 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="5944392757759857">
-                    <conditions />
+                    <conditions>
+                        <condition id="0" name="On function" sid="4152901602890109" type="Function">
+                            <param id="0" name="Name">&quot;grinding. battle duration&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="4109113452394459" type="pkStats">
+                        <action disabled="1" id="-10" name="Set value" sid="4109113452394459" type="pkStats">
                             <param id="0" name="Instance variable">battleTimerInit</param>
                             <param id="1" name="Value">25*1.5^(-1.9*(pkStats.level - pkStats.levelEnemy -1))</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <variable constant="0" name="what" sid="513245046972671" static="0" type="text"></variable>
+                        <variable constant="0" name="walkingTime" sid="8952399865439497" static="0" type="number">7.5</variable>
+                        <event-block sid="8632531229437126">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2950276876217002" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="823275552613278" type="System">
+                                    <param id="0" name="Variable">what</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="4381890158811281">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4847538618827846" type="System">
+                                    <param id="0" name="Variable">what</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;battle&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7550255255323448" type="System">
+                                    <param id="0" name="Variable">what</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="5934655609015925" type="Function">
+                                    <param id="0" name="Value">25*1.5^(-1.9*(pkStats.level - pkStats.levelEnemy -1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1619526272205493">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1204346558824607" type="System">
+                                    <param id="0" name="Variable">what</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;both&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="1983305141882063" type="Function">
+                                    <param id="0" name="Value">walkingTime + Function.Call(&quot;grinding. battle duration&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -988,6 +1039,10 @@
                     <actions>
                         <action disabled="1" id="0" name="Set text" sid="89701391669235" type="pkSectorName">
                             <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp &amp; &quot;/&quot; &amp; pkStats.xpRequired</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="4420191260999703" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">Function.Call(&quot;grinding. battle duration&quot;, &quot;both&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1076,16 +1131,20 @@
                     <param id="0" name="Name">&quot;notification&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;</param>
                 </action>
-                <action disabled="1" id="-16" name="Wait" sid="448832607440401" type="System">
-                    <param id="0" name="Seconds">0.5</param>
+                <action id="-16" name="Wait" sid="448832607440401" type="System">
+                    <param id="0" name="Seconds">0.000000001</param>
+                </action>
+                <action id="-10" name="Set value" sid="4646512523429026" type="pkBar">
+                    <param id="0" name="Instance variable">valueMin</param>
+                    <param id="1" name="Value">-Function.Call(&quot;grinding. battle duration&quot;)</param>
+                </action>
+                <action id="-10" name="Set value" sid="6382822112850727" type="pkBar">
+                    <param id="0" name="Instance variable">valueMax</param>
+                    <param id="1" name="Value">0</param>
                 </action>
                 <action disabled="1" id="0" name="Call function" sid="7842176362357245" type="Function">
                     <param id="0" name="Name">&quot;text popup&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="1683635216291052" type="pkBar">
-                    <param id="0" name="Instance variable">valueMax</param>
-                    <param id="1" name="Value">pkStats.battleTimerInit</param>
                 </action>
             </actions>
         </event-block>
