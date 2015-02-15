@@ -1266,6 +1266,7 @@
                 <instance-variables>
                     <instance-variable name="name" sid="1783009049203672" type="string" />
                     <instance-variable name="value" sid="4717978794554196" type="number" />
+                    <instance-variable name="valueMin" sid="4177131603774301" type="number" />
                     <instance-variable name="valueMax" sid="5969524446534017" type="number" />
                 </instance-variables>
                 <behaviors>
@@ -1452,6 +1453,11 @@
             </object-type>
             <object-type name="pkLevelUpIcon" sid="4722709261757437">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5742604040150727">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
                         <frame duration="1" hotspotX="0.431373" hotspotY="0.63354">

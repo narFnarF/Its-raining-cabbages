@@ -361,6 +361,7 @@
                     <instance-variables>
                         <name>you</name>
                         <value>50</value>
+                        <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
                     <behavior-instances>
@@ -414,8 +415,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>ennemi</name>
+                        <name>enemy</name>
                         <value>75</value>
+                        <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
                     <behavior-instances>
@@ -807,6 +809,7 @@
                     <instance-variables>
                         <name>sector progress</name>
                         <value>50</value>
+                        <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
                     <behavior-instances>
@@ -922,6 +925,7 @@
                     <instance-variables>
                         <name>sector progress</name>
                         <value>50</value>
+                        <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
                     <behavior-instances>
@@ -979,6 +983,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1000,7 +1007,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Trebuchet MS,-27,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1012,10 +1019,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1769</x>
-                        <y>760</y>
+                        <x>1673</x>
+                        <y>779</y>
                         <z>0</z>
-                        <width>431</width>
+                        <width>173</width>
                         <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1037,10 +1044,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1767</x>
+                        <x>1850</x>
                         <y>808</y>
                         <z>0</z>
-                        <width>437</width>
+                        <width>354</width>
                         <height>14</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1059,6 +1066,7 @@
                     <instance-variables>
                         <name>xp</name>
                         <value>50</value>
+                        <valueMin>0</valueMin>
                         <valueMax>100</valueMax>
                     </instance-variables>
                     <behavior-instances>
@@ -1067,10 +1075,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1772</x>
+                        <x>1855</x>
                         <y>809</y>
                         <z>0</z>
-                        <width>162</width>
+                        <width>79</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
