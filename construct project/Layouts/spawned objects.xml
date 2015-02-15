@@ -289,13 +289,14 @@
                         <state>walking</state>
                         <timerWalking>1</timerWalking>
                         <battleTimer>0</battleTimer>
+                        <battleTimerInit>0</battleTimerInit>
                         <level>1</level>
-                        <currentNode>0</currentNode>
-                        <killsToDo>60</killsToDo>
-                        <killsDone>0</killsDone>
-                        <xpRequired>10</xpRequired>
-                        <xp>0</xp>
                         <levelEnemy>0</levelEnemy>
+                        <currentNode>0</currentNode>
+                        <killsDone>0</killsDone>
+                        <killsToDo>60</killsToDo>
+                        <xp>0</xp>
+                        <xpRequired>10</xpRequired>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

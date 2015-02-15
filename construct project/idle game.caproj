@@ -1216,13 +1216,14 @@
                     <instance-variable name="state" sid="5514812683437481" type="string" />
                     <instance-variable name="timerWalking" sid="4663920467777482" type="number" />
                     <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
+                    <instance-variable name="battleTimerInit" sid="2788110404818428" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
-                    <instance-variable name="currentNode" sid="5568407274159363" type="number" />
-                    <instance-variable name="killsToDo" sid="5018348872088445" type="number" />
-                    <instance-variable name="killsDone" sid="5847347889282774" type="number" />
-                    <instance-variable name="xpRequired" sid="5679409330007737" type="number" />
-                    <instance-variable name="xp" sid="7192516300412876" type="number" />
                     <instance-variable name="levelEnemy" sid="1704673553733937" type="number" />
+                    <instance-variable name="currentNode" sid="5568407274159363" type="number" />
+                    <instance-variable name="killsDone" sid="5847347889282774" type="number" />
+                    <instance-variable name="killsToDo" sid="5018348872088445" type="number" />
+                    <instance-variable name="xp" sid="7192516300412876" type="number" />
+                    <instance-variable name="xpRequired" sid="5679409330007737" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
