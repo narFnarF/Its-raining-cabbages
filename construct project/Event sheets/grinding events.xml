@@ -160,11 +160,11 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="6135484912702014" type="pkStats">
-                                    <param id="0" name="Instance variable">nodeTimeToSpend</param>
+                                    <param id="0" name="Instance variable">killsToDo</param>
                                     <param id="1" name="Value">60</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="4760332791578329" type="pkStats">
-                                    <param id="0" name="Instance variable">levelUpTimeRequired</param>
+                                    <param id="0" name="Instance variable">xpRequired</param>
                                     <param id="1" name="Value">25</param>
                                 </action>
                             </actions>
@@ -393,11 +393,11 @@
                                             <actions>
                                                 <action id="-10" name="Set value" sid="6579826572370681" type="pkBar">
                                                     <param id="0" name="Instance variable">value</param>
-                                                    <param id="1" name="Value">pkStats.nodeTimeSpent</param>
+                                                    <param id="1" name="Value">pkStats.killsDone</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="6130984911365962" type="pkBar">
                                                     <param id="0" name="Instance variable">valueMax</param>
-                                                    <param id="1" name="Value">pkStats.nodeTimeToSpend</param>
+                                                    <param id="1" name="Value">pkStats.killsToDo</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -424,7 +424,7 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="4654169943700729" type="System">
                                                     <param id="0" name="Variable">timeLeft</param>
-                                                    <param id="1" name="Value">pkStats.nodeTimeToSpend-pkStats.nodeTimeSpent</param>
+                                                    <param id="1" name="Value">pkStats.killsToDo-pkStats.killsDone</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -505,11 +505,11 @@
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
                                 <action id="-11" name="Add to" sid="6470691297771034" type="pkStats">
-                                    <param id="0" name="Instance variable">nodeTimeSpent</param>
+                                    <param id="0" name="Instance variable">killsDone</param>
                                     <param id="1" name="Value">deltatime</param>
                                 </action>
                                 <action id="-11" name="Add to" sid="9546799590926938" type="pkStats">
-                                    <param id="0" name="Instance variable">levelUpTimer</param>
+                                    <param id="0" name="Instance variable">xp</param>
                                     <param id="1" name="Value">deltatime</param>
                                 </action>
                             </actions>
@@ -692,7 +692,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="2329160849393022" type="System">
                                     <param id="0" name="Variable">battleDuration</param>
-                                    <param id="1" name="Value">lerp(25, 0.4, clamp(pkStats.nodeTimeSpent/pkStats.nodeTimeToSpend, 0, 1))</param>
+                                    <param id="1" name="Value">lerp(25, 0.4, clamp(pkStats.killsDone/pkStats.killsToDo, 0, 1))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
@@ -844,8 +844,8 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="2501406870748443" type="pkStats">
-                            <param id="0" name="Instance variable">levelUpTimer</param>
-                            <param id="1" name="Value">pkStats.levelUpTimeRequired</param>
+                            <param id="0" name="Instance variable">xp</param>
+                            <param id="1" name="Value">pkStats.xpRequired</param>
                         </action>
                     </actions>
                 </event-block>
@@ -870,9 +870,9 @@
                 <event-block sid="8137104335658609">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="956258587248357" type="System">
-                            <param id="0" name="First value">pkStats.levelUpTimer</param>
+                            <param id="0" name="First value">pkStats.xp</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">pkStats.levelUpTimeRequired</param>
+                            <param id="2" name="Second value">pkStats.xpRequired</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="4536629962425015" type="pokemon">
                             <param id="0" name="Instance variable">yours</param>
@@ -884,11 +884,11 @@
                             <param id="1" name="Message">&quot;Checking for level up: Confirmed!&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="5953085045210627" type="pkStats">
-                            <param id="0" name="Instance variable">levelUpTimeRequired</param>
+                            <param id="0" name="Instance variable">xpRequired</param>
                             <param id="1" name="Value">(random(0,2)+8) / (1+1.5^(20-pkStats.level*2) ) *3600</param>
                         </action>
                         <action id="-10" name="Set value" sid="7787454307911545" type="pkStats">
-                            <param id="0" name="Instance variable">levelUpTimer</param>
+                            <param id="0" name="Instance variable">xp</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-11" name="Add to" sid="955908322117129" type="pkStats">
@@ -902,12 +902,12 @@
                             <param id="3" name="Y">pokemon.Y</param>
                         </action>
                         <action id="-10" name="Set value" sid="3051405696693179" type="pkStats">
-                            <param id="0" name="Instance variable">nodeTimeSpent</param>
-                            <param id="1" name="Value">pkStats.nodeTimeSpent*0.7</param>
+                            <param id="0" name="Instance variable">killsDone</param>
+                            <param id="1" name="Value">pkStats.killsDone*0.7</param>
                         </action>
                         <action id="-10" name="Set value" sid="2493447668155969" type="pkStats">
-                            <param id="0" name="Instance variable">nodeTimeToSpend</param>
-                            <param id="1" name="Value">pkStats.nodeTimeToSpend*0.7</param>
+                            <param id="0" name="Instance variable">killsToDo</param>
+                            <param id="1" name="Value">pkStats.killsToDo*0.7</param>
                         </action>
                         <action id="0" name="Call function" sid="5774821390535725" type="Function">
                             <param id="0" name="Name">&quot;grinding. update battle text&quot;</param>

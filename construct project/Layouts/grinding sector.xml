@@ -291,6 +291,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -349,7 +352,7 @@
                         <nb>0</nb>
                         <start>true</start>
                         <end>false</end>
-                        <timeToSpendHere>-1</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -380,7 +383,7 @@
                         <nb>1</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>0.033333</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -411,7 +414,7 @@
                         <nb>2</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>0.08333</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -442,7 +445,7 @@
                         <nb>3</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>0.33333</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -473,7 +476,7 @@
                         <nb>4</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>1</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -504,7 +507,7 @@
                         <nb>5</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>2</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -535,7 +538,7 @@
                         <nb>6</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>5</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -566,7 +569,7 @@
                         <nb>7</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>10</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -597,7 +600,7 @@
                         <nb>8</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>20</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -628,7 +631,7 @@
                         <nb>9</nb>
                         <start>false</start>
                         <end>false</end>
-                        <timeToSpendHere>-1</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -659,7 +662,7 @@
                         <nb>10</nb>
                         <start>false</start>
                         <end>true</end>
-                        <timeToSpendHere>-1</timeToSpendHere>
+                        <killsToDo>-1</killsToDo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

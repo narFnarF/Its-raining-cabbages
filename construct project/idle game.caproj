@@ -1095,7 +1095,7 @@
                 <object-type name="node" sid="7360139416173163">
                     <plugin id="Sprite" />
                     <instance-variables>
-                        <instance-variable name="timeSpentHere" sid="1177172083179364" type="number" />
+                        <instance-variable name="killsDone" sid="1177172083179364" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Persist" sid="7995510087235718">
@@ -1151,6 +1151,11 @@
                 </object-type>
                 <object-type name="nodeTxt" sid="7597308021376178">
                     <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="2659643885740869">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
                     <container>
                         <type>node</type>
                         <type>nodeTxt</type>
@@ -1163,7 +1168,7 @@
                         <instance-variable name="nb" sid="3709550927162332" type="number" />
                         <instance-variable name="start" sid="4604724392480643" type="boolean" />
                         <instance-variable name="end" sid="9602003886879857" type="boolean" />
-                        <instance-variable name="timeToSpendHere" sid="8913232414783156" type="number" />
+                        <instance-variable name="killsToDo" sid="8913232414783156" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="NoSave" sid="4459086275013467">
@@ -1213,10 +1218,10 @@
                     <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
                     <instance-variable name="level" sid="6817374396250628" type="number" />
                     <instance-variable name="currentNode" sid="5568407274159363" type="number" />
-                    <instance-variable name="nodeTimeToSpend" sid="5018348872088445" type="number" />
-                    <instance-variable name="nodeTimeSpent" sid="5847347889282774" type="number" />
-                    <instance-variable name="levelUpTimeRequired" sid="5679409330007737" type="number" />
-                    <instance-variable name="levelUpTimer" sid="7192516300412876" type="number" />
+                    <instance-variable name="killsToDo" sid="5018348872088445" type="number" />
+                    <instance-variable name="killsDone" sid="5847347889282774" type="number" />
+                    <instance-variable name="xpRequired" sid="5679409330007737" type="number" />
+                    <instance-variable name="xp" sid="7192516300412876" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">

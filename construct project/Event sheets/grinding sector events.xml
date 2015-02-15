@@ -5,6 +5,7 @@
     <events>
         <include>global events</include>
         <include>gameplay stuff</include>
+        <comment>first launch is here only to not display error messages</comment>
         <event-block sid="7175952774688262">
             <conditions>
                 <condition id="0" name="On function" sid="5624164255546738" type="Function">
@@ -13,20 +14,20 @@
             </conditions>
             <actions />
         </event-block>
-        <comment>Automatically set all nodes with the default timeToSpendHere</comment>
+        <comment>Automatically set all nodes with the default killsToDo</comment>
         <event-block sid="7493597100151271">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="9879387943633082" type="System" />
                 <condition id="-7" name="Compare instance variable" sid="4269170126877365" type="nodeData">
-                    <param id="0" name="Instance variable">timeToSpendHere</param>
+                    <param id="0" name="Instance variable">killsToDo</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">-1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="1274641479723754" type="nodeData">
-                    <param id="0" name="Instance variable">timeToSpendHere</param>
-                    <param id="1" name="Value">(17+nodeData.nb)</param>
+                    <param id="0" name="Instance variable">killsToDo</param>
+                    <param id="1" name="Value">10</param>
                 </action>
             </actions>
         </event-block>
@@ -46,12 +47,12 @@
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="2428011438989363" type="node">
-                    <param id="0" name="Instance variable">timeSpentHere</param>
-                    <param id="1" name="Value">pkStats.nodeTimeSpent</param>
+                    <param id="0" name="Instance variable">killsDone</param>
+                    <param id="1" name="Value">pkStats.killsDone</param>
                 </action>
                 <action id="-10" name="Set value" sid="9973906829200175" type="nodeData">
-                    <param id="0" name="Instance variable">timeToSpendHere</param>
-                    <param id="1" name="Value">pkStats.nodeTimeToSpend/3600</param>
+                    <param id="0" name="Instance variable">killsToDo</param>
+                    <param id="1" name="Value">pkStats.killsToDo</param>
                 </action>
             </actions>
         </event-block>
@@ -138,12 +139,15 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="5304357741439921" type="pkStats">
-                            <param id="0" name="Instance variable">nodeTimeToSpend</param>
-                            <param id="1" name="Value">nodeData.timeToSpendHere*3600</param>
+                            <param id="0" name="Instance variable">killsToDo</param>
+                            <param id="1" name="Value">nodeData.killsToDo</param>
                         </action>
                         <action id="-10" name="Set value" sid="8410286104840677" type="pkStats">
-                            <param id="0" name="Instance variable">nodeTimeSpent</param>
-                            <param id="1" name="Value">node.timeSpentHere</param>
+                            <param id="0" name="Instance variable">killsDone</param>
+                            <param id="1" name="Value">node.killsDone</param>
+                        </action>
+                        <action id="-36" name="Save" sid="4773269718644226" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -204,9 +208,9 @@
                                     <param id="0" name="Object">node</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="2729086804449286" type="System">
-                                    <param id="0" name="First value">node.timeSpentHere</param>
+                                    <param id="0" name="First value">node.killsDone</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">nodeData.timeToSpendHere*3600</param>
+                                    <param id="2" name="Second value">nodeData.killsToDo*3600</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -260,7 +264,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="4942814342158102" type="node">
-                                            <param id="0" name="Instance variable">timeSpentHere</param>
+                                            <param id="0" name="Instance variable">killsDone</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -271,8 +275,8 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="5665464323800325" type="node">
-                                            <param id="0" name="Instance variable">timeSpentHere</param>
-                                            <param id="1" name="Value">nodeData.timeToSpendHere*3600</param>
+                                            <param id="0" name="Instance variable">killsDone</param>
+                                            <param id="1" name="Value">nodeData.killsToDo*3600</param>
                                         </action>
                                     </actions>
                                 </event-block>

@@ -219,7 +219,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <timeSpentHere>0</timeSpentHere>
+                        <killsDone>0</killsDone>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -291,10 +291,10 @@
                         <battleTimer>0</battleTimer>
                         <level>1</level>
                         <currentNode>0</currentNode>
-                        <nodeTimeToSpend>60</nodeTimeToSpend>
-                        <nodeTimeSpent>0</nodeTimeSpent>
-                        <levelUpTimeRequired>25</levelUpTimeRequired>
-                        <levelUpTimer>0</levelUpTimer>
+                        <killsToDo>60</killsToDo>
+                        <killsDone>0</killsDone>
+                        <xpRequired>10</xpRequired>
+                        <xp>0</xp>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
