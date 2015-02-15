@@ -295,6 +295,7 @@
                         <killsDone>0</killsDone>
                         <xpRequired>10</xpRequired>
                         <xp>0</xp>
+                        <levelEnemy>0</levelEnemy>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

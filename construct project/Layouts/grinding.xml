@@ -742,7 +742,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pkName2" uid="77">
+                <instance type="pkSectorName" uid="77">
                     <properties>
                         <text>Sector name</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -857,7 +857,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pkName2" uid="84">
+                <instance type="pkSectorName" uid="84">
                     <properties>
                         <text>Sector name</text>
                         <initial-visibility>Visible</initial-visibility>

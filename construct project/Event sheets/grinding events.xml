@@ -149,11 +149,15 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="5167813490272085" type="pkStats">
                                     <param id="0" name="Instance variable">timerWalking</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7593179424016981" type="pkStats">
                                     <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8128937968920629" type="pkStats">
+                                    <param id="0" name="Instance variable">levelEnemy</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="9514156648890073" type="pkStats">
                                     <param id="0" name="Instance variable">currentNode</param>
@@ -161,11 +165,11 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="6135484912702014" type="pkStats">
                                     <param id="0" name="Instance variable">killsToDo</param>
-                                    <param id="1" name="Value">60</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="4760332791578329" type="pkStats">
                                     <param id="0" name="Instance variable">xpRequired</param>
-                                    <param id="1" name="Value">25</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -184,7 +188,8 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Multiple pkStats. Deleting the low level ones.</comment>
+                        <comment>Multiple pkStats detected. Deleting the low level ones.</comment>
+                        <comment>This is to fix an old bug, and should be removed. Kept as a safeguard.</comment>
                         <event-block sid="9821435713894546">
                             <conditions>
                                 <condition id="-19" name="Pick all" sid="696694862237016" type="System">
@@ -504,11 +509,11 @@
                                     <param id="0" name="Variable">deltatime</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="6470691297771034" type="pkStats">
+                                <action disabled="1" id="-11" name="Add to" sid="6470691297771034" type="pkStats">
                                     <param id="0" name="Instance variable">killsDone</param>
                                     <param id="1" name="Value">deltatime</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="9546799590926938" type="pkStats">
+                                <action disabled="1" id="-11" name="Add to" sid="9546799590926938" type="pkStats">
                                     <param id="0" name="Instance variable">xp</param>
                                     <param id="1" name="Value">deltatime</param>
                                 </action>
@@ -541,6 +546,7 @@
         <event-group description="" sid="7796730826831464" title="battle">
             <sub-events>
                 <comment>transition to battle</comment>
+                <comment>all this is just for animation stuff</comment>
                 <event-block sid="9070795463993572">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9005618646543891" type="pkStats">
@@ -680,6 +686,7 @@
                     </actions>
                     <sub-events>
                         <variable constant="0" name="battleDuration" sid="3526595074317936" static="1" type="number">0</variable>
+                        <variable constant="0" name="xpReward" sid="6780121912676001" static="1" type="number">0</variable>
                         <comment>start (initialize) the battle (trigger once)</comment>
                         <event-block sid="3784146116079623">
                             <conditions>
@@ -692,7 +699,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="2329160849393022" type="System">
                                     <param id="0" name="Variable">battleDuration</param>
-                                    <param id="1" name="Value">lerp(25, 0.4, clamp(pkStats.killsDone/pkStats.killsToDo, 0, 1))</param>
+                                    <param id="1" name="Value">25*1.5^(-1.9*(99999-1))</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
@@ -721,9 +728,17 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="704446368282492" type="System">
+                                    <param id="0" name="Variable">xpReward</param>
+                                    <param id="1" name="Value">battleDuration*0.25</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="3688188041949951" type="pkStats">
                                     <param id="0" name="Instance variable">state</param>
                                     <param id="1" name="Value">&quot;transition to walking&quot;</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="2403101660127338" type="pkStats">
+                                    <param id="0" name="Instance variable">xp</param>
+                                    <param id="1" name="Value">xpReward</param>
                                 </action>
                                 <action id="0" name="Call function" sid="2836586223860108" type="Function">
                                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
@@ -733,13 +748,13 @@
                                     <param id="0" name="Name">&quot;grinding. update ETA bar&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;both&quot;</param>
                                 </action>
-                                <action id="0" name="Call function" sid="7767471929881161" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="7767471929881161" type="Function">
                                     <param id="0" name="Name">&quot;count&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;monster beaten&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9160280279333226" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;You won against &quot; &amp; pokemon.AnimationName &amp; &quot; : &quot; &amp; round(battleDuration*10) &amp; &quot; XP&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;You won against &quot; &amp; pokemon.AnimationName &amp; &quot; and receive &quot; &amp; xpReward &amp; &quot; XP.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -849,8 +864,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2397086887001473">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3512898148027457" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="89701391669235" type="pkSectorName">
+                            <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp &amp; &quot;/&quot; &amp; pkStats.xpRequired</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <comment>This function levels up the pkmn if xp is greater than required.</comment>
+        <comment>I don&apos;t know why it has a 0.5 sec delay</comment>
         <event-block sid="2807159354460408">
             <conditions>
                 <condition id="0" name="On function" sid="3123831184608844" type="Function">
@@ -883,9 +912,9 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Checking for level up: Confirmed!&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5953085045210627" type="pkStats">
+                        <action disabled="1" id="-10" name="Set value" sid="5953085045210627" type="pkStats">
                             <param id="0" name="Instance variable">xpRequired</param>
-                            <param id="1" name="Value">(random(0,2)+8) / (1+1.5^(20-pkStats.level*2) ) *3600</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                         <action id="-10" name="Set value" sid="7787454307911545" type="pkStats">
                             <param id="0" name="Instance variable">xp</param>
@@ -901,11 +930,11 @@
                             <param id="2" name="X">pokemon.X</param>
                             <param id="3" name="Y">pokemon.Y</param>
                         </action>
-                        <action id="-10" name="Set value" sid="3051405696693179" type="pkStats">
+                        <action disabled="1" id="-10" name="Set value" sid="3051405696693179" type="pkStats">
                             <param id="0" name="Instance variable">killsDone</param>
                             <param id="1" name="Value">pkStats.killsDone*0.7</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2493447668155969" type="pkStats">
+                        <action disabled="1" id="-10" name="Set value" sid="2493447668155969" type="pkStats">
                             <param id="0" name="Instance variable">killsToDo</param>
                             <param id="1" name="Value">pkStats.killsToDo*0.7</param>
                         </action>
