@@ -195,7 +195,7 @@
                         </action>
                         <action id="0" name="Call function" sid="7340819461006375" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Holy fucking shit!! You tamed a wild lion!!!!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Holy fucking shit!! You tamed a wild lion with you veggie burger!!!!&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="60128385715098" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
@@ -464,7 +464,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="5832484224949546" type="lionRandomItems">
+                                <action disabled="1" id="5" name="Push" sid="5832484224949546" type="lionRandomItems">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">&quot;veggie burger&quot;</param>
                                     <param id="2" name="Axis">0</param>
