@@ -27,7 +27,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="1274641479723754" type="nodeData">
                     <param id="0" name="Instance variable">killsToDo</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">(nodeData.nb+1)^3.5+1</param>
                 </action>
             </actions>
         </event-block>
@@ -50,7 +50,7 @@
                     <param id="0" name="Instance variable">killsDone</param>
                     <param id="1" name="Value">pkStats.killsDone</param>
                 </action>
-                <action id="-10" name="Set value" sid="9973906829200175" type="nodeData">
+                <action disabled="1" id="-10" name="Set value" sid="9973906829200175" type="nodeData">
                     <param id="0" name="Instance variable">killsToDo</param>
                     <param id="1" name="Value">pkStats.killsToDo</param>
                 </action>

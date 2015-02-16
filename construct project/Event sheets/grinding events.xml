@@ -58,7 +58,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="4760332791578329" type="pkStats">
                             <param id="0" name="Instance variable">xpRequired</param>
-                            <param id="1" name="Value">10</param>
+                            <param id="1" name="Value">5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -413,6 +413,10 @@
                             <param id="0" name="Instance variable">valueMax</param>
                             <param id="1" name="Value">pkStats.xpRequired</param>
                         </action>
+                        <action id="-10" name="Set value" sid="7477519014599213" type="pkStats">
+                            <param id="0" name="Instance variable">xpRequired</param>
+                            <param id="1" name="Value">(pkStats.level-2)^3.5+1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9913405089700515">
@@ -496,7 +500,11 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="4654169943700729" type="System">
                                                     <param id="0" name="Variable">timeLeft</param>
-                                                    <param id="1" name="Value">pkStats.killsToDo-pkStats.killsDone</param>
+                                                    <param id="1" name="Value">(pkStats.killsToDo-pkStats.killsDone) * Function.Call(&quot;grinding. battle duration&quot;, &quot;both&quot;)</param>
+                                                </action>
+                                                <action disabled="1" id="-9" name="Set value" sid="2025739379903702" type="System">
+                                                    <param id="0" name="Variable">timeLeft</param>
+                                                    <param id="1" name="Value">timeLeft*Function.Call(&quot;grinding. battle duration&quot;, &quot;both&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -569,7 +577,6 @@
                     <actions />
                     <sub-events>
                         <variable constant="0" name="deltatime" sid="5164264819706096" static="0" type="number">0</variable>
-                        <variable constant="0" name="1RoundDuration" sid="8671673031644517" static="0" type="number">0</variable>
                         <variable constant="0" name="kills" sid="9793553541114663" static="0" type="number">0</variable>
                         <event-block sid="4996942532174441">
                             <conditions />
@@ -592,10 +599,6 @@
                                 <action id="14" name="Log" sid="4987090062378407" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;time has passed: &quot; &amp; deltatime</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="2120685000665372" type="System">
-                                    <param id="0" name="Variable">1RoundDuration</param>
-                                    <param id="1" name="Value">pkStats.battleTimerInit+7.5</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="1833802694042279" type="System">
                                     <param id="0" name="Variable">kills</param>
@@ -781,14 +784,6 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;battle&quot;</param>
                                 </action>
-                                <action disabled="1" id="-9" name="Set value" sid="9297272796053213" type="System">
-                                    <param id="0" name="Variable">deltaLevels</param>
-                                    <param id="1" name="Value">pkStats.level - pkStats.levelEnemy</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="5437829610161945" type="pkStats">
-                                    <param id="0" name="Instance variable">battleTimerInit</param>
-                                    <param id="1" name="Value">25*1.5^(-1.9*(deltaLevels-1))</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="7554656810056318" type="pkStats">
                                     <param id="0" name="Instance variable">battleTimer</param>
                                     <param id="1" name="Value">0</param>
@@ -800,10 +795,6 @@
                                 <action id="-10" name="Set value" sid="1458596548293353" type="pkBar">
                                     <param id="0" name="Instance variable">valueMax</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="3207098583845686" type="pkBar">
-                                    <param id="0" name="Instance variable">value</param>
-                                    <param id="1" name="Value">pkStats.battleTimerInit</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -951,12 +942,7 @@
                             <param id="0" name="Name">&quot;grinding. battle duration&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="4109113452394459" type="pkStats">
-                            <param id="0" name="Instance variable">battleTimerInit</param>
-                            <param id="1" name="Value">25*1.5^(-1.9*(pkStats.level - pkStats.levelEnemy -1))</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <variable constant="0" name="what" sid="513245046972671" static="0" type="text"></variable>
                         <variable constant="0" name="walkingTime" sid="8952399865439497" static="0" type="number">7.5</variable>
@@ -1034,39 +1020,18 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2397086887001473">
-                    <conditions />
-                    <actions>
-                        <action disabled="1" id="0" name="Set text" sid="89701391669235" type="pkSectorName">
-                            <param id="0" name="Text">&quot;XP: &quot; &amp; pkStats.xp &amp; &quot;/&quot; &amp; pkStats.xpRequired</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="4420191260999703" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">Function.Call(&quot;grinding. battle duration&quot;, &quot;both&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <comment>This function levels up the pkmn if xp is greater than required.</comment>
-        <comment>I don&apos;t know why it has a 0.5 sec delay</comment>
         <event-block sid="2807159354460408">
             <conditions>
                 <condition id="0" name="On function" sid="3123831184608844" type="Function">
                     <param id="0" name="Name">&quot;grinding. level up maybe&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action disabled="1" id="-16" name="Wait" sid="3064302175091518" type="System">
-                    <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action disabled="1" id="14" name="Log" sid="2517896124525695" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;Checking for level up&quot;</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block sid="8137104335658609">
+                <event-block sid="3205978479870248">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="956258587248357" type="System">
                             <param id="0" name="First value">pkStats.xp</param>
@@ -1075,10 +1040,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="6161492955484362" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Checking for level up: Confirmed!&quot;</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="9382146561756925" type="pkLevelUpIcon">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1141,10 +1102,6 @@
                 <action id="-10" name="Set value" sid="6382822112850727" type="pkBar">
                     <param id="0" name="Instance variable">valueMax</param>
                     <param id="1" name="Value">0</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="7842176362357245" type="Function">
-                    <param id="0" name="Name">&quot;text popup&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Your &quot; &amp; pokemon.AnimationName &amp; &quot; has level up to &quot; &amp; pkStats.level &amp; &quot;!&quot;{###}&quot;Yay!&quot;</param>
                 </action>
             </actions>
         </event-block>
