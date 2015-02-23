@@ -789,6 +789,39 @@
         </event-group>
         <event-group description="" sid="775314833482713" title="factory">
             <sub-events>
+                <comment>Adjust the productivity and capacity based on level</comment>
+                <event-block sid="1340220932325506">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3107168278296275" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="240920545447117" type="Function">
+                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3114857731262512">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7256841599166116" type="Function">
+                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4312489814816431" type="factory">
+                            <param id="0" name="Instance variable">capacity</param>
+                            <param id="1" name="Value">15*2^(factory.levelOfCapacity-1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5836561524308617" type="factory">
+                            <param id="0" name="Instance variable">productivity</param>
+                            <param id="1" name="Value">factory.levelOfProductivity * 1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9497888519817956" type="silo">
+                            <param id="0" name="Instance variable">capacity</param>
+                            <param id="1" name="Value">silo.level</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Update the timer and the display of the timer (the progress bar)</comment>
                 <event-block sid="5141845029994906">
                     <conditions>
@@ -1526,13 +1559,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="7848488784466215" type="silo">
-                            <param id="0" name="Instance variable">capacity</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-11" name="Add to" sid="4448255018034269" type="silo">
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="-11" name="Add to" sid="7848488784466215" type="silo">
+                            <param id="0" name="Instance variable">capacity</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7656704732275016" type="Function">
+                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="537098952521533" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -1577,9 +1614,13 @@
                             <param id="0" name="Instance variable">levelOfProductivity</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6036840007664161" type="factory">
+                        <action disabled="1" id="-10" name="Set value" sid="6036840007664161" type="factory">
                             <param id="0" name="Instance variable">productivity</param>
                             <param id="1" name="Value">factory.levelOfProductivity * 1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2739162604184426" type="Function">
+                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="371803911681976" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
@@ -1624,9 +1665,13 @@
                             <param id="0" name="Instance variable">levelOfCapacity</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2911218333979894" type="factory">
+                        <action disabled="1" id="-10" name="Set value" sid="2911218333979894" type="factory">
                             <param id="0" name="Instance variable">capacity</param>
                             <param id="1" name="Value">15*2^(factory.levelOfCapacity-1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8542249201474123" type="Function">
+                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="8253477337198963" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
