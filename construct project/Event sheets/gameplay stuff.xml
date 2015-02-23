@@ -2385,6 +2385,9 @@
                                 <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
                                     <param id="0" name="Key">84 (T)</param>
                                 </condition>
+                                <condition disabled="1" id="-12" name="Repeat" sid="9012364909495616" type="System">
+                                    <param id="0" name="Count">50</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="4640776345347283" type="System">

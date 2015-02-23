@@ -1231,9 +1231,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <level>2</level>
                         <capacity>2</capacity>
                         <cabbages>0</cabbages>
-                        <level>2</level>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />

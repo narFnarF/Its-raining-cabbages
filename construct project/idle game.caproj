@@ -261,9 +261,9 @@
             <object-type name="silo" sid="3644795865062729">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="level" sid="4295317832790693" type="number" />
                     <instance-variable name="capacity" sid="9475304309134901" type="number" />
                     <instance-variable name="cabbages" sid="3321211388495565" type="number" />
-                    <instance-variable name="level" sid="4295317832790693" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="9319293075286822">

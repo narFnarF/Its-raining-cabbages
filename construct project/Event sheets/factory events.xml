@@ -380,6 +380,31 @@
                                     <param id="0" name="Scale">bee.level /75 +0.1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="3702330052039188">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6506343976443672" type="bee">
+                                            <param id="0" name="Instance variable">status</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;not born&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="2393912049458774" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="9" name="Set scale" sid="2296488351607525" type="bee">
+                                            <param id="0" name="Scale">bee.level /75 +0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7346631809893857" type="bee">
+                                            <param id="0" name="Instance variable">status</param>
+                                            <param id="1" name="Value">&quot;standby&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1328,7 +1353,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="7513188474437195" type="Function">
                                             <param id="0" name="Name">&quot;notification&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;You now have 2 bees.&quot; &amp; &quot;«Two bees or not two bees, that is the question!»&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;You now have 2 bees.&quot; &amp; &quot;«Two bees or not two bees? That is the question!»&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
