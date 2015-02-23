@@ -267,7 +267,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="5182737605054931" type="System">
                             <param id="0" name="Variable">missionCabbageCost</param>
-                            <param id="1" name="Value">round( 20*lion.level^2.5 + -30*lion.level +50)</param>
+                            <param id="1" name="Value">round(  40*lion.level^1.5     )</param>
                         </action>
                         <action id="0" name="Call function" sid="1332184337820847" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
@@ -297,7 +297,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="9119231584270827" type="lion">
                             <param id="0" name="Instance variable">huntTime</param>
-                            <param id="1" name="Value">60*(  lion.level^1.2 *6 + 3*lion.level + 2)</param>
+                            <param id="1" name="Value">60*(  314/(1+1.7^(5-lion.level)) -14    )</param>
                         </action>
                         <action id="0" name="Call function" sid="6447290602517034" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
@@ -444,7 +444,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="5456232474448235" type="lion">
                                     <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -482,7 +482,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="9784670253936031" type="System">
                                     <param id="0" name="Variable">nbReceivedItem</param>
-                                    <param id="1" name="Value">ceil( random(0, lion.level) )</param>
+                                    <param id="1" name="Value">ceil( random(lion.level*0.8, lion.level*1.2) )</param>
                                 </action>
                                 <action disabled="1" id="0" name="Add key" sid="6753467516477928" type="inventory">
                                     <param id="0" name="Key">receivedItem</param>
