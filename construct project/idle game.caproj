@@ -220,6 +220,9 @@
             </object-type>
             <object-type name="factoryNotification" sid="3803439497545899">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="4135370625602129" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="4079718349287599">
                         <behavior id="Persist" />
