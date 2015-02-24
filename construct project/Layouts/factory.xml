@@ -619,8 +619,8 @@
                     <instance-variables>
                         <label>Rewards</label>
                         <name>arrow rewards</name>
-                        <price>1</price>
-                        <priceCurrency>honey</priceCurrency>
+                        <price>60</price>
+                        <priceCurrency>salads</priceCurrency>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>

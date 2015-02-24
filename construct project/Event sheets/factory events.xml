@@ -550,7 +550,7 @@
                         <action disabled="1" id="1" name="Append text" sid="8726920358585833" type="globalStats">
                             <param id="0" name="Text">&quot;Eggs: &quot; &amp; Function.Call(&quot;format numbers&quot;, eggs) &amp; newline</param>
                         </action>
-                        <action id="1" name="Append text" sid="5318087948879611" type="globalStats">
+                        <action disabled="1" id="1" name="Append text" sid="5318087948879611" type="globalStats">
                             <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
                         </action>
                         <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
@@ -558,6 +558,9 @@
                         </action>
                         <action id="1" name="Append text" sid="7549619855654483" type="globalStats">
                             <param id="0" name="Text">&quot;Pills: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;pills&quot;) ) &amp; newline</param>
+                        </action>
+                        <action id="1" name="Append text" sid="5461587760108215" type="globalStats">
+                            <param id="0" name="Text">&quot;Tofu steaks: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu steak&quot;) ) &amp; newline</param>
                         </action>
                     </actions>
                     <sub-events>

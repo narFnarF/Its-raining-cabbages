@@ -18,11 +18,11 @@
                 </action>
                 <action id="0" name="Call function" sid="9382574787359585" type="Function">
                     <param id="0" name="Name">&quot;get items&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}10</param>
+                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}8</param>
                 </action>
                 <action id="0" name="Call function" sid="8540188378771109" type="Function">
                     <param id="0" name="Name">&quot;text popup&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Huh? What&apos;s that on the groud? Some tofu steaks?!&#x0D;&#x0A;&#x0D;&#x0A;Found 10 tofu steaks.&quot;{###}&quot;Cool I guess...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Huh? What&apos;s that on the groud? Some tofu steaks?!&#x0D;&#x0A;&#x0D;&#x0A;Found 8 tofu steaks.&quot;{###}&quot;Cool I guess...&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -536,7 +536,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="8641250194057812" type="lion">
                             <param id="0" name="Instance variable">levelUpCost</param>
-                            <param id="1" name="Value">lion.level*(lion.nb+1)</param>
+                            <param id="1" name="Value">lion.level*(lion.nb+1)+2</param>
                         </action>
                     </actions>
                 </event-block>
