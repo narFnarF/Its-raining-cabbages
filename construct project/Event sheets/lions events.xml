@@ -12,37 +12,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="0" name="Add key" sid="6501734551172856" type="inventory">
-                    <param id="0" name="Key">&quot;veggie burger&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action disabled="1" id="0" name="Add key" sid="4925790438116597" type="inventory">
-                    <param id="0" name="Key">&quot;tofu steak&quot;</param>
-                    <param id="1" name="Value">5</param>
-                </action>
-                <action disabled="1" id="0" name="Add key" sid="7353444658677507" type="inventory">
-                    <param id="0" name="Key">&quot;honey&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action disabled="1" id="0" name="Add key" sid="5549406904430896" type="inventory">
-                    <param id="0" name="Key">&quot;pills&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action disabled="1" id="0" name="Add key" sid="3942998776307547" type="inventory">
-                    <param id="0" name="Key">&quot;lion poop&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
                 <action id="4" name="Set animation" sid="1734872637507974" type="lion">
                     <param id="0" name="Animation">&quot;vide&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="1726292118202163" type="Function">
-                    <param id="0" name="Name">&quot;get items&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;pills&quot;{###}2</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="6993816751404822" type="Function">
-                    <param id="0" name="Name">&quot;get items&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;pills&quot;{###}2</param>
                 </action>
             </actions>
         </event-block>

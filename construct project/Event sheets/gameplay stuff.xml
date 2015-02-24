@@ -976,6 +976,50 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>quest qui donne des pills</comment>
+                        <event-block sid="6505171279708337">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="735615908519534" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2274190917187272" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;pills&quot;, 5)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;false&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1700253214930569" type="quest">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads pills&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="2389818241038189" type="quest">
+                                    <param id="0" name="Key">&quot;based on&quot;</param>
+                                    <param id="1" name="Value">&quot;events&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="3387558829183906" type="quest">
+                                    <param id="0" name="Key">&quot;needed&quot;</param>
+                                    <param id="1" name="Value">300</param>
+                                </action>
+                                <action id="1" name="Set key" sid="357118268586718" type="quest">
+                                    <param id="0" name="Key">&quot;reward type&quot;</param>
+                                    <param id="1" name="Value">&quot;pills&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="1010789335369337" type="quest">
+                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="8346393035441961" type="quest">
+                                    <param id="0" name="Key">&quot;available&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="9411102070334072" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ici: &quot; &amp; quest.Get(&quot;time completed&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="9213066681281293">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
@@ -1227,21 +1271,14 @@
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="5699377153700761" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;debug: leveled up a lion&quot;</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6344964130345521">
                             <conditions>
-                                <condition id="3" name="Has key" sid="9499736481153359" type="saver">
-                                    <param id="0" name="Key">&quot;arrow lions&quot;</param>
-                                </condition>
                                 <condition id="-8" name="Compare two values" sid="1318005228160451" type="System">
-                                    <param id="0" name="First value">levelOfStuff.Get(&quot;lion3&quot;)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion3&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="6830526461433977" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;all lions above or equal&quot;)</param>
@@ -1268,13 +1305,9 @@
                                     <param id="0" name="Key">&quot;available&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="4842975912305293" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;debug: all lion above level&quot;</param>
-                                </action>
                             </actions>
                         </event-block>
-                        <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game, or because they&apos;ll be activated later</comment>
+                        <comment>at the end, delete the quests that were not updated, because they are from a previous version of the game, or because they&apos;re inactive</comment>
                         <event-block any="1" sid="3491830434832082">
                             <conditions>
                                 <condition id="0" inverted="1" name="Compare value" sid="4468448352658223" type="quest">
@@ -1697,20 +1730,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="637307713709333">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="4753806491444708" type="System">
-                                    <param id="0" name="Variable">object</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="4004541685555734" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;lion highest&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block any="1" sid="2286113400340659">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="3537919219047884" type="System">
@@ -1722,6 +1741,20 @@
                             <actions>
                                 <action id="1" name="Set return value" sid="7681387815428096" type="Function">
                                     <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;bee lowest&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="637307713709333">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4753806491444708" type="System">
+                                    <param id="0" name="Variable">object</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;leveled up a lion&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="4004541685555734" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;get level of&quot;, &quot;lion highest&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2475,7 +2508,7 @@
                     <actions>
                         <action disabled="1" id="14" name="Log" sid="8337027598597992" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;test: &quot; &amp; Function.Call(&quot;get level of&quot;, &quot;lion min&quot;)</param>
+                            <param id="1" name="Message">&quot;test: &quot; &amp; Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
                         </action>
                     </actions>
                 </event-block>

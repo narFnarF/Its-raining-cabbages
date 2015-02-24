@@ -83,6 +83,9 @@
             <object-type name="AJAX" sid="3132682189607884">
                 <plugin id="AJAX" />
             </object-type>
+            <object-type name="Array" sid="9189166598250775">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-folder name="bee stuff">
             <object-type name="bee" sid="4716704536026207">
