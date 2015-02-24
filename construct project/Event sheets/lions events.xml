@@ -16,6 +16,14 @@
                     <param id="0" name="Animation">&quot;vide&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="0" name="Call function" sid="9382574787359585" type="Function">
+                    <param id="0" name="Name">&quot;get items&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;tofu steak&quot;{###}10</param>
+                </action>
+                <action id="0" name="Call function" sid="8540188378771109" type="Function">
+                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Huh? What&apos;s that on the groud? Some tofu steaks?!&#x0D;&#x0A;&#x0D;&#x0A;Found 10 tofu steaks.&quot;{###}&quot;Cool I guess...&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4949215167867835">

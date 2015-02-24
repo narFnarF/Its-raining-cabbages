@@ -935,6 +935,7 @@
                 <comment>Populate the big list of quests</comment>
                 <comment>For event-based quests, the name of the quest needs to match the name of the event in the Stat dictionary.</comment>
                 <comment>For level-based quests, the name of the quest should be translated correctly by the &quot;get level of&quot; function.</comment>
+                <comment>Note: It&apos;s important to put the conditions ABOVE the function &quot;get or create&quot;, otherwise, it creates empty quests.</comment>
                 <event-block any="1" sid="6857513590205514">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="6904073112063201" type="System" />
@@ -977,77 +978,86 @@
                             </actions>
                         </event-block>
                         <comment>quest qui donne des pills</comment>
-                        <event-block sid="6505171279708337">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="735615908519534" type="System">
-                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">3</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="2274190917187272" type="System">
-                                    <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;pills&quot;, 5)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;false&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="1700253214930569" type="quest">
-                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads pills&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set key" sid="2389818241038189" type="quest">
-                                    <param id="0" name="Key">&quot;based on&quot;</param>
-                                    <param id="1" name="Value">&quot;events&quot;</param>
-                                </action>
-                                <action id="1" name="Set key" sid="3387558829183906" type="quest">
-                                    <param id="0" name="Key">&quot;needed&quot;</param>
-                                    <param id="1" name="Value">300</param>
-                                </action>
-                                <action id="1" name="Set key" sid="357118268586718" type="quest">
-                                    <param id="0" name="Key">&quot;reward type&quot;</param>
-                                    <param id="1" name="Value">&quot;pills&quot;</param>
-                                </action>
-                                <action id="1" name="Set key" sid="1010789335369337" type="quest">
-                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="1" name="Set key" sid="8346393035441961" type="quest">
-                                    <param id="0" name="Key">&quot;available&quot;</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action disabled="1" id="14" name="Log" sid="9411102070334072" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;ici: &quot; &amp; quest.Get(&quot;time completed&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9213066681281293">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
-                                    <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set key" sid="7293421529000359" type="quest">
-                                    <param id="0" name="Key">&quot;based on&quot;</param>
-                                    <param id="1" name="Value">&quot;events&quot;</param>
-                                </action>
-                                <action id="1" name="Set key" sid="1709766495234241" type="quest">
-                                    <param id="0" name="Key">&quot;needed&quot;</param>
-                                    <param id="1" name="Value">200</param>
-                                </action>
-                                <action id="1" name="Set key" sid="1829625371758647" type="quest">
-                                    <param id="0" name="Key">&quot;reward type&quot;</param>
-                                    <param id="1" name="Value">&quot;tofu&quot;</param>
-                                </action>
-                                <action id="1" name="Set key" sid="4460195921006927" type="quest">
-                                    <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="1" name="Set key" sid="6190521305394875" type="quest">
-                                    <param id="0" name="Key">&quot;available&quot;</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                        <event-block sid="2036127766579293">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <comment>Gives pills only if the menhir is below level 4 and the player isn&apos;t trying to stockpile a bunch of pills</comment>
+                                <event-block sid="6505171279708337">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="735615908519534" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">4</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="2274190917187272" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;pills&quot;, 5)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;false&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="1700253214930569" type="quest">
+                                            <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="2389818241038189" type="quest">
+                                            <param id="0" name="Key">&quot;based on&quot;</param>
+                                            <param id="1" name="Value">&quot;events&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="3387558829183906" type="quest">
+                                            <param id="0" name="Key">&quot;needed&quot;</param>
+                                            <param id="1" name="Value">300</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="357118268586718" type="quest">
+                                            <param id="0" name="Key">&quot;reward type&quot;</param>
+                                            <param id="1" name="Value">&quot;pills&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="1010789335369337" type="quest">
+                                            <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="8346393035441961" type="quest">
+                                            <param id="0" name="Key">&quot;available&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="9411102070334072" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;ici: &quot; &amp; quest.Get(&quot;time completed&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Le Else fait en sorte the la quest s&apos;overwrite quand elle n&apos;est plus disponible pour donner des pills, et se met à donner des tofus à la place.</comment>
+                                <event-block sid="9213066681281293">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4203308747865835" type="System" />
+                                        <condition id="-14" name="Pick by unique ID" sid="5383784588130987" type="quest">
+                                            <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;collected salads&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="7293421529000359" type="quest">
+                                            <param id="0" name="Key">&quot;based on&quot;</param>
+                                            <param id="1" name="Value">&quot;events&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="1709766495234241" type="quest">
+                                            <param id="0" name="Key">&quot;needed&quot;</param>
+                                            <param id="1" name="Value">200</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="1829625371758647" type="quest">
+                                            <param id="0" name="Key">&quot;reward type&quot;</param>
+                                            <param id="1" name="Value">&quot;tofu&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="4460195921006927" type="quest">
+                                            <param id="0" name="Key">&quot;reward combien&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="6190521305394875" type="quest">
+                                            <param id="0" name="Key">&quot;available&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2471713764657516">
                             <conditions>
