@@ -1110,8 +1110,13 @@
                         </event-block>
                         <event-block sid="2471713764657516">
                             <conditions>
-                                <condition id="3" name="Has key" sid="7217139633974638" type="saver">
+                                <condition disabled="1" id="3" name="Has key" sid="7217139633974638" type="saver">
                                     <param id="0" name="Key">&quot;arrow lions&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="1364174621650449" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion highest&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="7908255381749557" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;sent lion on mission&quot;)</param>
@@ -1302,8 +1307,13 @@
                         </event-block>
                         <event-block sid="775229316826496">
                             <conditions>
-                                <condition id="3" name="Has key" sid="8195863701073977" type="saver">
+                                <condition disabled="1" id="3" name="Has key" sid="8195863701073977" type="saver">
                                     <param id="0" name="Key">&quot;arrow lions&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="133358421066269" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;lion highest&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="3897564127501991" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;leveled up a lion&quot;)</param>
