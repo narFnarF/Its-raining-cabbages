@@ -587,7 +587,7 @@
                     <instance-variables>
                         <label>Lions</label>
                         <name>arrow lions</name>
-                        <price>6</price>
+                        <price>4</price>
                         <priceCurrency>tofu steak</priceCurrency>
                         <goto>lions</goto>
                     </instance-variables>

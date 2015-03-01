@@ -1027,7 +1027,7 @@
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu</payWhat>
-                        <payHowMuch>5</payHowMuch>
+                        <payHowMuch>6</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
