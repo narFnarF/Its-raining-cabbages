@@ -167,6 +167,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>5</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -199,6 +201,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>6</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -231,6 +235,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

@@ -161,12 +161,15 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Adjust visibility for arrows that can be hidden</comment>
+                        <comment>pick the arrow and its arrowLabel</comment>
                         <event-block sid="8647048042213384">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1694455881982562" type="arrows">
-                                    <param id="0" name="Instance variable">name</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;arrow lions&quot;</param>
+                                <condition id="-11" name="For Each" sid="7527517499860707" type="System">
+                                    <param id="0" name="Object">arrows</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6301493085171748" type="arrows">
+                                    <param id="0" name="Instance variable">alwaysVisible</param>
                                 </condition>
                                 <condition id="0" name="Compare text" sid="216099839933281" type="arrowLabel">
                                     <param id="0" name="Text to compare">arrows.label</param>
@@ -180,21 +183,17 @@
                                 <action id="-15" name="Set visible" sid="8293515265047353" type="arrowLabel">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="14" name="Log" sid="3150008019515368" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;!!!!!!!!!!!!!!!! ici&quot;</param>
-                                </action>
                             </actions>
                             <sub-events>
                                 <event-block any="1" sid="3921287213468273">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2065741390172881" type="System">
-                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;tofu steak&quot;, 3)</param>
+                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, arrows.priceCurrency, arrows.visibilityMinimum)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;true&quot;</param>
                                         </condition>
                                         <condition id="0" name="Compare value" sid="7995084428016682" type="saver">
-                                            <param id="0" name="Key">&quot;arrow lions&quot;</param>
+                                            <param id="0" name="Key">arrows.name</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;unlocked&quot;</param>
                                         </condition>
@@ -207,10 +206,6 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="7009033770534577">
-                                    <conditions />
-                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>

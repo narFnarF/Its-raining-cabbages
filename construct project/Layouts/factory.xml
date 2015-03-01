@@ -429,6 +429,8 @@
                         <name>arrow bee</name>
                         <price>15</price>
                         <priceCurrency>salads</priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -461,6 +463,8 @@
                         <name>arrow factory upgrades</name>
                         <price>1</price>
                         <priceCurrency>salads</priceCurrency>
+                        <alwaysVisible>false</alwaysVisible>
+                        <visibilityMinimum>1</visibilityMinimum>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -493,6 +497,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -525,6 +531,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -557,6 +565,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>verachou</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -589,6 +599,8 @@
                         <name>arrow lions</name>
                         <price>4</price>
                         <priceCurrency>tofu steak</priceCurrency>
+                        <alwaysVisible>false</alwaysVisible>
+                        <visibilityMinimum>3</visibilityMinimum>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -621,6 +633,8 @@
                         <name>arrow rewards</name>
                         <price>60</price>
                         <priceCurrency>salads</priceCurrency>
+                        <alwaysVisible>false</alwaysVisible>
+                        <visibilityMinimum>20</visibilityMinimum>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -681,6 +695,8 @@
                         <name>arrow grinding</name>
                         <price>1</price>
                         <priceCurrency>cucumber cut lengthwise</priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>grinding</goto>
                     </instance-variables>
                     <behavior-instances>

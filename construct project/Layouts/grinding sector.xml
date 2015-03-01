@@ -321,6 +321,8 @@
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
                         <goto>grinding</goto>
                     </instance-variables>
                     <behavior-instances>

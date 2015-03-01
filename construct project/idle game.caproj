@@ -1522,6 +1522,8 @@
                 <instance-variable name="name" sid="8613328284108331" type="string" />
                 <instance-variable name="price" sid="3173789073934467" type="number" />
                 <instance-variable name="priceCurrency" sid="5741496624709641" type="string" />
+                <instance-variable name="alwaysVisible" sid="6064496295085109" type="boolean" />
+                <instance-variable name="visibilityMinimum" sid="7552434025415277" type="number" />
             </instance-variables>
         </family>
         <family name="nodes" plugin-id="Sprite" sid="4146238142840315">
