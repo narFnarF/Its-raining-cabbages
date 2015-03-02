@@ -249,7 +249,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="3699607571925918" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="3699607571925918" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Loading JSON with silly messages&quot;</param>
                                 </action>
@@ -494,6 +494,47 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="" sid="7098275000725635" title="update notes">
+                    <sub-events>
+                        <event-block sid="2862928478550774">
+                            <conditions>
+                                <condition id="-29" name="On load complete" sid="4091211900937983" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Request project file" sid="9968736705970629" type="AJAX">
+                                    <param id="0" name="Tag">&quot;release_notes.txt&quot;</param>
+                                    <param id="1" name="File">release_notes.txt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9644979044549128">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="6888546571940089" type="AJAX">
+                                    <param id="0" name="Tag">&quot;release_notes.txt&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9979741614774037" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1164674688730957">
+                            <conditions>
+                                <condition id="1" name="On error" sid="6367679279762195" type="AJAX">
+                                    <param id="0" name="Tag">&quot;release_notes.txt&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="6995184813794562" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Could not load the release notes.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="4587465909699658" title="purchase popup">

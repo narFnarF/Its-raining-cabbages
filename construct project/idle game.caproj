@@ -1600,5 +1600,6 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file name="silly_messages.json" />
+        <file name="release_notes.txt" />
     </files-folder>
 </c2project>
