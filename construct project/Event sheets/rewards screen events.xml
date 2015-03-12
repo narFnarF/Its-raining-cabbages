@@ -15,7 +15,7 @@
             <actions>
                 <action id="0" name="Call function" sid="7683694140994252" type="Function">
                     <param id="0" name="Name">&quot;text popup&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;You meet some black dude with sunglasses who offers you 2 pills.&#x0D;&#x0A;&apos;&apos;Starting now, you&apos;ll see life in large&apos;&apos;&quot;{###}&quot;Cool I guess...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;You meet a black dude with black sunglasses who offers you 2 pills.&#x0D;&#x0A;&#x0D;&#x0A;«Starting now, you&apos;ll see the world bigger».&quot;{###}&quot;Cool I guess...&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="6408567102935197" type="Function">
                     <param id="0" name="Name">&quot;get items&quot;</param>
