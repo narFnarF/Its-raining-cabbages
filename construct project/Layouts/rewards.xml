@@ -188,7 +188,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <label>Bees</label>
+                        <label>Factory</label>
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
