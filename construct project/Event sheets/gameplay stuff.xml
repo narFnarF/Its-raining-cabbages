@@ -729,9 +729,6 @@
                             <param id="0" name="Name">&quot;purchase popup visibility&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;invisible&quot;</param>
                         </action>
-                        <action id="-36" name="Save" sid="7101203495731496" type="System">
-                            <param id="0" name="Slot">&quot;mysave&quot;</param>
-                        </action>
                         <action id="0" name="Call function" sid="8320284252014023" type="Function">
                             <param id="0" name="Name">&quot;pay items&quot;</param>
                             <param id="1" name="Parameter {n}">purchasePopupBuyBtn.currency{###}purchasePopupBuyBtn.price</param>
@@ -750,6 +747,18 @@
                                 <action id="0" name="Call function" sid="1487484469212607" type="Function">
                                     <param id="0" name="Name">purchasePopupBuyBtn.functionCall</param>
                                     <param id="1" name="Parameter {n}">purchasePopupBuyBtn.functionCallParams_nb{###}purchasePopupBuyBtn.functionCallParams_txt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4792467195141961">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="721500787248326" type="Function">
+                                    <param id="0" name="Name">&quot;update level of stuff&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-36" name="Save" sid="7101203495731496" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2018,11 +2027,32 @@
                     </sub-events>
                 </event-block>
                 <comment>Update the LevelOfStuff dictionary</comment>
-                <event-block sid="6830528871241407">
+                <event-block any="1" sid="6830528871241407">
                     <conditions>
                         <condition id="-3" name="On end of layout" sid="5938351330377128" type="System" />
+                        <condition id="-6" name="Every X seconds" sid="4196465138572443" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="1493601155426973" type="Function">
+                            <param id="0" name="Name">&quot;update level of stuff&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7775587689662043">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6587120405014834" type="Function">
+                            <param id="0" name="Name">&quot;update level of stuff&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="6911834461974286" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;update level of stuff&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="8735821204754149">
                             <conditions>
@@ -2178,10 +2208,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="7995663211840535">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2628,6 +2654,151 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Returns the owned number a specific item</comment>
+                        <event-block sid="1417199140884913">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2134292142309884" type="Function">
+                                    <param id="0" name="Name">&quot;quantity of&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="item" sid="3267039630057035" static="0" type="text"></variable>
+                                <event-block sid="1465869231038811">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="759328862176418" type="System">
+                                            <param id="0" name="Variable">item</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7485758102581201">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5405258889372883" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="5439436587451787" type="Function">
+                                            <param id="0" name="Value">salads</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6832900848061877">
+                                    <conditions>
+                                        <condition disabled="1" id="-8" name="Compare two values" sid="4142251543255504" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;salads&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="6630998131268881" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;eggs&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="9813801918383136" type="Function">
+                                            <param id="0" name="Value">eggs</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>inventory items</comment>
+                                <event-block sid="5485055717229968">
+                                    <conditions>
+                                        <condition id="3" name="Has key" sid="183863280136866" type="inventory">
+                                            <param id="0" name="Key">item</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="2554781156127062" type="Function">
+                                            <param id="0" name="Value">inventory.Get(item)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1307004857539364">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4036252394707738" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;bee&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="beeCounter" sid="477492351740939" static="0" type="number">0</variable>
+                                        <event-block sid="502597548791158">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="17996157858362" type="System">
+                                                    <param id="0" name="Count">4</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="979204718940298" type="levelOfStuff">
+                                                    <param id="0" name="Key">&quot;bee&quot; &amp; loopindex+1</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="9245367867851382" type="System">
+                                                    <param id="0" name="Variable">beeCounter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3538759418193985">
+                                            <conditions />
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="6169368564737783" type="Function">
+                                                    <param id="0" name="Value">beeCounter</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="5653535655313731">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2921441991023949" type="System">
+                                            <param id="0" name="First value">item</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;lion&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="lionCounter" sid="2257895797321757" static="0" type="number">0</variable>
+                                        <event-block sid="6162755764122598">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="9227676218735734" type="System">
+                                                    <param id="0" name="Count">4</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="5425430691581912" type="levelOfStuff">
+                                                    <param id="0" name="Key">&quot;lion&quot; &amp; loopindex</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="7443927444736571" type="System">
+                                                    <param id="0" name="Variable">lionCounter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6188767537835505">
+                                            <conditions />
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="4753490314503526" type="Function">
+                                                    <param id="0" name="Value">lionCounter</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -2870,24 +3041,48 @@
                             <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Call function" sid="5179711493222044" type="Function">
-                            <param id="0" name="Name">&quot;get level of&quot;</param>
-                            <param id="1" name="Parameter {n}">test</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="9045593110141554" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.ReturnValue</param>
-                        </action>
-                        <action id="0" name="Call function" sid="320648845375975" type="Function">
-                            <param id="0" name="Name">&quot;has enough&quot;</param>
-                            <param id="1" name="Parameter {n}">test{###}2</param>
-                        </action>
-                        <action id="14" name="Log" sid="7225428065502586" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;has enough of &quot; &amp; test &amp; &quot; : &quot; &amp; Function.ReturnValue</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6611787875925639">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="5179711493222044" type="Function">
+                                    <param id="0" name="Name">&quot;get level of&quot;</param>
+                                    <param id="1" name="Parameter {n}">test</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="9045593110141554" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;level of &quot; &amp; test &amp; &quot;: &quot; &amp; Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8846637382931965">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="320648845375975" type="Function">
+                                    <param id="0" name="Name">&quot;has enough&quot;</param>
+                                    <param id="1" name="Parameter {n}">test{###}2</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="7225428065502586" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;has enough of &quot; &amp; test &amp; &quot; : &quot; &amp; Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1314677956388723">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="456302556162566" type="Function">
+                                    <param id="0" name="Name">&quot;quantity of&quot;</param>
+                                    <param id="1" name="Parameter {n}">test</param>
+                                </action>
+                                <action id="14" name="Log" sid="1645016962501771" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;quantity of &quot; &amp; test &amp; &quot; : &quot; &amp; Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7579173022116207">
                     <conditions>
