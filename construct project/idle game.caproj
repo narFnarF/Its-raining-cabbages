@@ -226,11 +226,6 @@
                 <instance-variables>
                     <instance-variable name="name" sid="4135370625602129" type="string" />
                 </instance-variables>
-                <behaviors>
-                    <behavior-type name="Persist" sid="4079718349287599">
-                        <behavior id="Persist" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
@@ -817,8 +812,6 @@
             <object-type name="cabbage" sid="9209630044662387">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="beeTargeted" sid="8808203377360301" type="boolean" />
-                    <instance-variable name="dropped" sid="5336754280462448" type="boolean" />
                     <instance-variable name="status" sid="9406756358246947" type="string" />
                     <instance-variable name="carriedDuration" sid="6896696954568411" type="number" />
                 </instance-variables>
