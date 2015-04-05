@@ -272,6 +272,9 @@
                         <condition id="-14" name="Pick by unique ID" sid="4215972690529837" type="cabbage">
                             <param id="0" name="Unique ID">bee.cabbageID</param>
                         </condition>
+                        <condition disabled="1" id="1" name="Is overlapping another object" sid="6508000326059882" type="cabbage">
+                            <param id="0" name="Object">bee</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="6132063981628151" type="bee">
@@ -339,6 +342,30 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="6444711576750369" type="bee">
                             <param id="0" name="Angle">angle(bee.x, bee.y, beeDropZone.X + random(0, beeDropZone.Width), beeDropZone.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>bug fix-ish: when bees are fighting for cabbages, reset the cabbage</comment>
+                <event-block sid="3913852534743271">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6597061428224665" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dropped&quot;</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="4597592541556338" type="cabbage">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">water.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3662844597198219" type="cabbage">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;falling&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="2412863380849803" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;cabbage bug avoided?&quot;</param>
                         </action>
                     </actions>
                 </event-block>
