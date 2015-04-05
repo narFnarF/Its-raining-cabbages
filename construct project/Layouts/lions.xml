@@ -967,7 +967,7 @@
                         <receiveWhat>veggie burger</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu steak</payWhat>
-                        <payHowMuch>10</payHowMuch>
+                        <payHowMuch>9</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1033,7 +1033,7 @@
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu</payWhat>
-                        <payHowMuch>6</payHowMuch>
+                        <payHowMuch>5</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1103,7 +1103,7 @@
                     </properties>
                     <instance-variables>
                         <receiveWhat>tofu steak</receiveWhat>
-                        <receiveHowMany>10</receiveHowMany>
+                        <receiveHowMany>9</receiveHowMany>
                         <payWhat>veggie burger</payWhat>
                         <payHowMuch>1</payHowMuch>
                     </instance-variables>
