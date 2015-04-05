@@ -1030,7 +1030,6 @@
         </event-block>
         <event-group description="" sid="5019531696412462" title="Quests">
             <sub-events>
-                <variable constant="1" name="SIMULTANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
                 <comment>Populate the big list of quests</comment>
                 <comment>For event-based quests, the name of the quest needs to match the name of the event in the Stat dictionary.</comment>
                 <comment>For level-based quests, the name of the quest should be translated correctly by the &quot;get level of&quot; function.</comment>
@@ -1575,7 +1574,8 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Set some quests as &quot;active&quot; = 1</comment>
+                <comment>Select the list of active quest. (Set some quests as &quot;active&quot; = 1)</comment>
+                <variable constant="1" name="SIMULTANEOUS_QUESTS_NB" sid="2933464365143761" static="0" type="number">3</variable>
                 <event-block sid="6362194391087918">
                     <conditions>
                         <condition id="-23" name="While" sid="4930884065722942" type="System" />
@@ -1615,7 +1615,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="531088535795809">
+                                <event-block disabled="1" sid="531088535795809">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="6527939882200909" type="System">
                                             <param id="0" name="First value">Function.Call(&quot;pick least completed quest&quot;)</param>
@@ -1630,11 +1630,12 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>set active</comment>
                                 <event-block sid="1641185173334432">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="5810936934632942" type="System" />
                                         <condition id="-14" name="Pick by unique ID" sid="7790130957399894" type="quest">
-                                            <param id="0" name="Unique ID">Function.Call(&quot;pick least completed quest&quot;)</param>
+                                            <param id="0" name="Unique ID">Function.Call(&quot;pick random quest&quot;)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1673,6 +1674,41 @@
                                 <action id="14" name="Log" sid="9042183705280158" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;There isn&apos;t enough quests to fill the list&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4935592827701667">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8046096312010163" type="Function">
+                            <param id="0" name="Name">&quot;pick random quest&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5031033786922448">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="9619134522426496" type="quest">
+                                    <param id="0" name="Key">&quot;active&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="5992096493368764" type="System">
+                                    <param id="0" name="Object">quest</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="1721288966405987" type="Function">
+                                    <param id="0" name="Value">quest.UID</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="8390809306610315" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">quest.PickedCount</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="9078404502884481" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">quest.Get(&quot;active&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2048,7 +2084,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="6911834461974286" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="6911834461974286" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;update level of stuff&quot;</param>
                         </action>
