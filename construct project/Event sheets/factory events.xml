@@ -364,7 +364,7 @@
                             <param id="1" name="Value">&quot;falling&quot;</param>
                         </action>
                         <action id="14" name="Log" sid="2412863380849803" type="Browser">
-                            <param id="0" name="Type">1</param>
+                            <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;cabbage bug avoided?&quot;</param>
                         </action>
                     </actions>
