@@ -2780,6 +2780,9 @@
                                 <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
                                     <param id="0" name="Key">69 (E)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="1052198456783295" type="Keyboard">
+                                    <param id="0" name="Key">80 (P)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="5831153994775529" type="Function">
@@ -2823,6 +2826,9 @@
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="2423271000297095" type="Keyboard">
                                     <param id="0" name="Key">84 (T)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="5151371775581306" type="Keyboard">
+                                    <param id="0" name="Key">80 (P)</param>
                                 </condition>
                                 <condition disabled="1" id="-12" name="Repeat" sid="9012364909495616" type="System">
                                     <param id="0" name="Count">50</param>
