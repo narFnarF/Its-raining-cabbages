@@ -1,4 +1,1 @@
-Release notes for v118 (March 1st) (click "here" to expand)
-Hi!
-I changed on a lot of stuff in the balancing. It's very possible that I broke stuff, especially when you're loading a savefile from previous version. Please report any weird issues on the Facebook group.
-
+Welcome back!
