@@ -1265,7 +1265,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="9354096091450153" type="btnBee">
                                     <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">floor( 5.555555555*10^(bee.nb-2) )</param>
+                                    <param id="1" name="Value">floor( 4.444444444*10^(bee.nb-2) )</param>
                                 </action>
                                 <action id="0" name="Set text" sid="4373928098048421" type="btnBee">
                                     <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.nb &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, btnBee.cost) &amp; &quot; honey&quot;</param>

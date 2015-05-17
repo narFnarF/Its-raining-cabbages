@@ -794,12 +794,36 @@
                             <param id="0" name="Instance variable">open</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="46242753314526" type="Function">
-                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;trader give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany{###}traderTxt.receiveWhat</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="multiplier" sid="9733372540096703" static="0" type="number">0</variable>
+                        <event-block sid="1848708338065851">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="9734433166563148" type="System">
+                                    <param id="0" name="Variable">multiplier</param>
+                                    <param id="1" name="Value">floor( Function.Call(&quot;quantity of&quot;, traderTxt.payWhat) / traderTxt.payHowMuch )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4573461300619376" type="System">
+                                    <param id="0" name="Variable">multiplier</param>
+                                    <param id="1" name="Value">max(multiplier, 1)</param>
+                                </action>
+                                <action id="14" name="Log" sid="7799372772103792" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;multiplier: &quot; &amp; multiplier</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6531855689319834">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="46242753314526" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;trader give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany*multiplier &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch * multiplier{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany * multiplier{###}traderTxt.receiveWhat</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7394578765702792">
                     <conditions>
