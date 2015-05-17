@@ -158,7 +158,7 @@
                 <instance type="arrowCamera" uid="192">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>button</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -177,14 +177,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1007</x>
-                        <y>905</y>
+                        <x>1009</x>
+                        <y>915</y>
                         <z>0</z>
-                        <width>84</width>
-                        <height>92</height>
+                        <width>55</width>
+                        <height>178</height>
                         <depth>0</depth>
-                        <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.519230783</hotspotX>
+                        <hotspotY>0.477777779</hotspotY>
                         <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
@@ -192,12 +192,12 @@
                 <instance type="arrowCamera" uid="193">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>X</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <label>Lions</label>
+                        <label></label>
                         <name></name>
                         <price>0</price>
                         <priceCurrency></priceCurrency>
@@ -211,14 +211,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1007</x>
-                        <y>1917</y>
+                        <x>1274</x>
+                        <y>1133</y>
                         <z>0</z>
-                        <width>84</width>
-                        <height>92</height>
+                        <width>76</width>
+                        <height>60</height>
                         <depth>0</depth>
-                        <hotspotX>0.502645493</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.519230783</hotspotX>
+                        <hotspotY>0.477777779</hotspotY>
                         <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
