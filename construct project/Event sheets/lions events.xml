@@ -789,6 +789,7 @@
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Opacity">100</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="3248042329045512" type="traderTxt" />
                         <condition id="-9" inverted="1" name="Is visible" sid="442866060222209" type="purchasePopup" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7872142118168744" type="notificationBox">
                             <param id="0" name="Instance variable">open</param>
@@ -899,6 +900,43 @@
                                             <param id="0" name="Opacity">100</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <comment>Hide the honey converter until you have 4 bees</comment>
+                                <event-block sid="3134670747333092">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1481595288776103" type="traderTxt">
+                                            <param id="0" name="Instance variable">payWhat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;honey&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="3784604029385735" type="traderTxt">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9833851556312148" type="traderBg">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8869058462451736">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="9123840049970811" type="System">
+                                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;bee4&quot;)</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="8598338573775372" type="traderTxt">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="3775688230416875" type="traderBg">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

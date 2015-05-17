@@ -1127,7 +1127,7 @@
                 </instance>
                 <instance type="traderTxt" uid="222">
                     <properties>
-                        <text>cucumber cut lenghtwise</text>
+                        <text>tofu (from honey)</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
                         <color>0,0,0</color>
@@ -1138,10 +1138,10 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <receiveWhat>cucumber cut lengthwise</receiveWhat>
-                        <receiveHowMany>0</receiveHowMany>
-                        <payWhat>placeholder</payWhat>
-                        <payHowMuch>99999999</payHowMuch>
+                        <receiveWhat>tofu</receiveWhat>
+                        <receiveHowMany>6</receiveHowMany>
+                        <payWhat>honey</payWhat>
+                        <payHowMuch>5</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
