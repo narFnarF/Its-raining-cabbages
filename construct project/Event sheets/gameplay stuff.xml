@@ -2697,9 +2697,37 @@
         </event-group>
         <event-group description="" sid="3740395054702946" title="debug">
             <sub-events>
-                <event-block sid="9230813409032216">
+                <variable comment="1=true" constant="0" name="cheat" sid="7373339718646982" static="1" type="number">0</variable>
+                <event-block sid="3804187399412435">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1084785452974924" type="Keyboard">
+                            <param id="0" name="Key">67 (C)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="7529699494632231" type="Keyboard">
+                            <param id="0" name="Key">72 (H)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="4338652701423452" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="3600689080691332" type="Keyboard">
+                            <param id="0" name="Key">84 (T)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3769795914923368" type="System">
+                            <param id="0" name="Variable">cheat</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="9230813409032216">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="8203784927323504" type="System" />
+                        <condition id="-14" name="Compare variable" sid="5873110259153866" type="System">
+                            <param id="0" name="Variable">cheat</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
