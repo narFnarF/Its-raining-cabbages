@@ -2706,9 +2706,6 @@
                         <condition id="2" name="Key is down" sid="7529699494632231" type="Keyboard">
                             <param id="0" name="Key">72 (H)</param>
                         </condition>
-                        <condition id="2" name="Key is down" sid="4338652701423452" type="Keyboard">
-                            <param id="0" name="Key">69 (E)</param>
-                        </condition>
                         <condition id="2" name="Key is down" sid="3600689080691332" type="Keyboard">
                             <param id="0" name="Key">84 (T)</param>
                         </condition>
