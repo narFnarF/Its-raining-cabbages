@@ -2698,29 +2698,48 @@
         <event-group description="" sid="3740395054702946" title="debug">
             <sub-events>
                 <variable comment="1=true" constant="0" name="cheat" sid="7373339718646982" static="1" type="number">0</variable>
-                <event-block sid="3804187399412435">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="1084785452974924" type="Keyboard">
-                            <param id="0" name="Key">67 (C)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="7529699494632231" type="Keyboard">
-                            <param id="0" name="Key">72 (H)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="3600689080691332" type="Keyboard">
-                            <param id="0" name="Key">84 (T)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="3769795914923368" type="System">
-                            <param id="0" name="Variable">cheat</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="2463618726557668" title="cheat in public version">
+                    <sub-events>
+                        <event-block sid="3804187399412435">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1084785452974924" type="Keyboard">
+                                    <param id="0" name="Key">67 (C)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="7529699494632231" type="Keyboard">
+                                    <param id="0" name="Key">72 (H)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="3600689080691332" type="Keyboard">
+                                    <param id="0" name="Key">84 (T)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3769795914923368" type="System">
+                                    <param id="0" name="Variable">cheat</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8819740496592765" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;cheat activated&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5745514770382014">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="2315559487004634" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9782913122483636" type="System">
+                                    <param id="0" name="Variable">cheat</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block any="1" sid="9230813409032216">
                     <conditions>
                         <condition id="-18" name="Is in preview" sid="8203784927323504" type="System" />
-                        <condition id="-14" name="Compare variable" sid="5873110259153866" type="System">
+                        <condition disabled="1" id="-14" name="Compare variable" sid="5873110259153866" type="System">
                             <param id="0" name="Variable">cheat</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -2825,6 +2844,9 @@
                                 <condition id="0" name="On key pressed" sid="3491712395398315" type="Keyboard">
                                     <param id="0" name="Key">72 (H)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="1632224238506772" type="Keyboard">
+                                    <param id="0" name="Key">67 (C)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="6118507433782404" type="Function">
@@ -2854,6 +2876,9 @@
                                 </condition>
                                 <condition id="2" inverted="1" name="Key is down" sid="5151371775581306" type="Keyboard">
                                     <param id="0" name="Key">80 (P)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="3880978841046738" type="Keyboard">
+                                    <param id="0" name="Key">67 (C)</param>
                                 </condition>
                                 <condition disabled="1" id="-12" name="Repeat" sid="9012364909495616" type="System">
                                     <param id="0" name="Count">50</param>

@@ -1003,7 +1003,7 @@
                 <event-block sid="9981365439054539">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1872391825412027" type="Keyboard">
-                            <param id="0" name="Key">32 (Space)</param>
+                            <param id="0" name="Key">32 (Espace)</param>
                         </condition>
                     </conditions>
                     <actions>
