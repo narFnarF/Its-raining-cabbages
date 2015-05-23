@@ -1777,7 +1777,7 @@
                         </action>
                         <action id="0" name="Call function" sid="8253477337198963" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;You just doubled the size of your factory to &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity) &amp; &quot;, and somehow, it only cost you some salads. What an amazing deal!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You just doubled the size of your factory to &quot; &amp; Function.Call(&quot;format numbers&quot;, factory.capacity) &amp; &quot;, and somehow, you paid for that in salads. What an amazing deal!&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="963644728022738" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
