@@ -1170,11 +1170,11 @@
                                             <param id="0" name="Name">&quot;count&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;salad created&quot;{###}round( saladsPerMinute/60 * deltaTime )</param>
                                         </action>
-                                        <action id="-11" name="Add to" sid="3470979033387305" type="silo">
+                                        <action disabled="1" id="-11" name="Add to" sid="3470979033387305" type="silo">
                                             <param id="0" name="Instance variable">cabbages</param>
                                             <param id="1" name="Value">round(cabbagesPerMinutes/60 * deltaTime)</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="1830524545437355" type="silo">
+                                        <action disabled="1" id="-10" name="Set value" sid="1830524545437355" type="silo">
                                             <param id="0" name="Instance variable">cabbages</param>
                                             <param id="1" name="Value">clamp(silo.cabbages, 0, silo.capacity)</param>
                                         </action>
@@ -1190,7 +1190,7 @@
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;created salads: &quot; &amp; round( saladsPerMinute/60 * deltaTime )</param>
                                         </action>
-                                        <action id="14" name="Log" sid="1620877186391191" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="1620877186391191" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;created cabbages: &quot; &amp; round(cabbagesPerMinutes/60 * deltaTime)</param>
                                         </action>
