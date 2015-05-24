@@ -1551,6 +1551,7 @@
         <layout>rewards.xml</layout>
         <layout>grinding.xml</layout>
         <layout>grinding sector.xml</layout>
+        <layout>pachinko.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="menus">
@@ -1574,6 +1575,7 @@
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>grinding events.xml</event-sheet>
         <event-sheet>grinding sector events.xml</event-sheet>
+        <event-sheet>pachinko.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
