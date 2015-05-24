@@ -970,6 +970,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2634015214963133">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="9014376216442963" type="Keyboard">
+                            <param id="0" name="Key">32 (Espace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9481180100369883" type="saver">
+                            <param id="0" name="Key">&quot;pachinko lions&quot;</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="3118326441919095" type="System">
+                            <param id="0" name="Layout">pachinko</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

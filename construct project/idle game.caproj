@@ -32,6 +32,7 @@
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -1499,6 +1500,58 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="sensor" sid="5301166418854619">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="name" sid="4684731389783821" type="string" />
+            </instance-variables>
+            <container>
+                <type>sensorTxt</type>
+                <type>sensor</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4047603040769671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sensorTxt" sid="7103543970488127">
+            <plugin id="Text" />
+            <container>
+                <type>sensorTxt</type>
+                <type>sensor</type>
+            </container>
+        </object-type>
+        <object-type name="lionDisc" sid="7663539838536756">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="1941449537735709">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Persist" sid="4706895864038387">
+                    <behavior id="Persist" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="4858822590441516">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7954787054964202" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
+                        <collision-poly>
+                            <point x="0.142857" y="0.153846" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.153846" />
+                            <point x="1" y="0.461538" />
+                            <point x="0.857143" y="0.846154" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0714286" y="0.923077" />
+                            <point x="0" y="0.461538" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1575,7 +1628,7 @@
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>grinding events.xml</event-sheet>
         <event-sheet>grinding sector events.xml</event-sheet>
-        <event-sheet>pachinko.xml</event-sheet>
+        <event-sheet>pachinko events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">

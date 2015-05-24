@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>pachinko events</name>
+    <events>
+        <include>gameplay stuff</include>
+        <include>global events</include>
+        <event-block sid="5889884837508249">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5802138888544455" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3510623126944496" type="sensorTxt">
+                    <param id="0" name="Text">sensor.name</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="8722717593667838" title="spawn lions">
+            <sub-events>
+                <variable constant="0" name="lions" sid="8816436333469003" static="1" type="number">0</variable>
+                <event-block sid="9496808470879524">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8357191286024198" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1061391991497315" type="System">
+                            <param id="0" name="Variable">lions</param>
+                            <param id="1" name="Value">saver.Get(&quot;pachinko lions&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3534036462911107">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2705258565521153" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7600447557188444" type="System">
+                            <param id="0" name="Variable">lions</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="5561184620354831" type="System">
+                            <param id="0" name="Variable">lions</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4070865143983652" type="System">
+                            <param id="0" name="Object to create">lionDisc</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(0+40, LayoutWidth-40)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>debug</comment>
+                <event-block sid="7664736852740518">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1371005888301383" type="Keyboard">
+                            <param id="0" name="Key">32 (Espace)</param>
+                        </condition>
+                        <condition id="-12" name="Repeat" sid="4847544527419485" type="System">
+                            <param id="0" name="Count">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1833767628643821" type="System">
+                            <param id="0" name="Object to create">lionDisc</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(0+40, LayoutWidth-40)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="8798088434047304">
+            <conditions />
+            <actions>
+                <action id="-16" name="Wait" sid="4319374922168956" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8930329911642309">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="1420061283123244" type="lionDisc">
+                            <param id="0" name="Object">sensor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="14" name="Log" sid="8957859518112477" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;NON : &quot; &amp; lionDisc.PickedCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8021239415866684">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9731070813011526" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1140776428633933" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="2619945745362994" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;OUI&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="7343266111293684" type="solidBloc" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Quand tous les objets ont atteint le bas</comment>
+        <event-block sid="8810955863378193">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9254894814054673" type="System">
+                    <param id="0" name="First value">lionDisc.Count</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="7251775026835519" type="lionDisc">
+                    <param id="0" name="Object">sensor</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="5831620332735856" type="System">
+                    <param id="0" name="First value">lionDisc.PickedCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">lionDisc.Count</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Destroy" sid="8771707341367855" type="solidBloc" />
+                <action id="-16" name="Wait" sid="9331419967389934" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9054279616884264">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="50541399760011" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="2821812499272608" type="lionDisc">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">0</param>
+                            <param id="2" name="Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Spawn another object" sid="5349120696496189" type="lionDisc">
+                            <param id="0" name="Object">plus1</param>
+                            <param id="1" name="Layer">lionDisc.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6863532282798484" type="System">
+                            <param id="0" name="Object to create">plus1</param>
+                            <param id="1" name="Layer">lionDisc.LayerNumber</param>
+                            <param id="2" name="X">lionDisc.X</param>
+                            <param id="3" name="Y">lionDisc.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1138397682489951" type="lionDisc" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
