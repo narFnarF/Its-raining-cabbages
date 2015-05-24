@@ -2583,10 +2583,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-19.982341766</x>
-                        <y>531.407836914</y>
+                        <x>-19.757457733</x>
+                        <y>475.908203125</y>
                         <z>0</z>
-                        <width>867</width>
+                        <width>978</width>
                         <height>63</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -2622,10 +2622,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>670.999694824</x>
-                        <y>532.121459961</y>
+                        <x>671.224243164</x>
+                        <y>476.621826172</y>
                         <z>0</z>
-                        <width>867</width>
+                        <width>978</width>
                         <height>76</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -2868,6 +2868,45 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="solidBloc" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Bounding box</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>326</x>
+                        <y>-31</y>
+                        <z>0</z>
+                        <width>61</width>
+                        <height>638</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.566744328</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2908,6 +2947,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="pachinko" uid="108">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

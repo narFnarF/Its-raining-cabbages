@@ -328,8 +328,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>116</x>
-                        <y>422</y>
+                        <x>101</x>
+                        <y>389</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -347,6 +347,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <level>0</level>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
                             <properties>
@@ -368,14 +371,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>246</x>
-                        <y>403</y>
+                        <x>241.634338379</x>
+                        <y>398.197753906</y>
                         <z>0</z>
-                        <width>25.377155304</width>
-                        <height>23.564500809</height>
+                        <width>31.268699646</width>
+                        <height>31.268699646</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.538461983</hotspotY>
+                        <hotspotY>0.550000012</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pachinkoLevel" uid="127">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Bottom</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>475</x>
+                        <y>424</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
