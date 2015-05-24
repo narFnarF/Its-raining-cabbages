@@ -976,15 +976,31 @@
                             <param id="0" name="Key">32 (Espace)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="9481180100369883" type="saver">
-                            <param id="0" name="Key">&quot;pachinko lions&quot;</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="3118326441919095" type="System">
-                            <param id="0" name="Layout">pachinko</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4663223619035875">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="6174017634547773" type="System">
+                                    <param id="0" name="Object">lion</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="7703207694316344" type="pachinko">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">lion.level</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3476250475911355">
+                            <conditions />
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3118326441919095" type="System">
+                                    <param id="0" name="Layout">pachinko</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
