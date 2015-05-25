@@ -5,16 +5,6 @@
     <events>
         <include>gameplay stuff</include>
         <include>global events</include>
-        <event-block sid="5889884837508249">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="5802138888544455" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="3510623126944496" type="sensorTxt">
-                    <param id="0" name="Text">sensor.name</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="8722717593667838" title="spawn lions">
             <sub-events>
                 <event-block sid="3534036462911107">
@@ -127,7 +117,11 @@
                                     <param id="0" name="Text">&quot;+&quot; &amp; lionDisc.level &amp; &quot; &quot; &amp; sensor.name</param>
                                 </action>
                                 <action id="4" name="Set font color" sid="3414586154805444" type="plus1">
-                                    <param id="0" name="Color">rgb(0, 0, 0)</param>
+                                    <param id="0" name="Color">rgb(0, 200, 0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8837149536859505" type="Function">
+                                    <param id="0" name="Name">&quot;count&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;lion collected &quot; &amp; sensor.name{###}lionDisc.level</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1138397682489951" type="lionDisc" />
                             </actions>
@@ -175,72 +169,95 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>just to avoid the useless warning.</comment>
-        <event-block sid="313403104312819">
-            <conditions>
-                <condition id="0" name="On function" sid="8817610498635337" type="Function">
-                    <param id="0" name="Name">&quot;time has passed&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <comment>to avoid balls to stay stuck</comment>
-        <event-block sid="9068368349431201">
-            <conditions>
-                <condition id="3" name="On touched object" sid="2030555951872129" type="Touch">
-                    <param id="0" name="Object">lionDisc</param>
-                </condition>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="7818390116603863" type="lionDisc">
-                    <param id="0" name="Object">sensor</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="3" name="Apply impulse" sid="6891712828359678" type="lionDisc">
-                    <param id="0" name="Impulse X">0</param>
-                    <param id="1" name="Implulse Y">-10</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>keep the lion level txt above their head</comment>
-        <event-block sid="9141575502796998">
-            <conditions />
-            <actions>
-                <action id="-4" name="Set position to another object" sid="7514495630798515" type="pachinkoLevel">
-                    <param id="0" name="Object">lionDisc</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>debug</comment>
-        <event-block sid="7664736852740518">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="1371005888301383" type="Keyboard">
-                    <param id="0" name="Key">32 (Espace)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Push" sid="8293127902564048" type="pachinko">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">15</param>
-                    <param id="2" name="Axis">0</param>
-                </action>
-                <action id="5" name="Push" sid="4937645130738408" type="pachinko">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">12</param>
-                    <param id="2" name="Axis">0</param>
-                </action>
-                <action id="5" name="Push" sid="4986996758381658" type="pachinko">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">7</param>
-                    <param id="2" name="Axis">0</param>
-                </action>
-                <action id="5" name="Push" sid="5875711432831597" type="pachinko">
-                    <param id="0" name="Where">0</param>
-                    <param id="1" name="Value">3</param>
-                    <param id="2" name="Axis">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="8485605955850456" title="gameplay (pachinko)">
+            <sub-events>
+                <comment>to avoid balls to stay stuck</comment>
+                <event-block sid="9068368349431201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2030555951872129" type="Touch">
+                            <param id="0" name="Object">lionDisc</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="7818390116603863" type="lionDisc">
+                            <param id="0" name="Object">sensor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="3" name="Apply impulse" sid="6891712828359678" type="lionDisc">
+                            <param id="0" name="Impulse X">0</param>
+                            <param id="1" name="Implulse Y">-10</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1711817597356589" title="UI (pachinko)">
+            <sub-events>
+                <comment>display the name of the sensors</comment>
+                <event-block sid="5889884837508249">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5802138888544455" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3510623126944496" type="sensorTxt">
+                            <param id="0" name="Text">sensor.name</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>keep the lion level txt above their head</comment>
+                <event-block sid="9141575502796998">
+                    <conditions />
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="7514495630798515" type="pachinkoLevel">
+                            <param id="0" name="Object">lionDisc</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="622358992184244" title="debug (pachinko)">
+            <sub-events>
+                <comment>just to avoid the useless warning.</comment>
+                <event-block sid="313403104312819">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8817610498635337" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="7664736852740518">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1371005888301383" type="Keyboard">
+                            <param id="0" name="Key">32 (Espace)</param>
+                        </condition>
+                        <condition id="-18" name="Is in preview" sid="4146639922023836" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="8293127902564048" type="pachinko">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">15</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="4937645130738408" type="pachinko">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">12</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="4986996758381658" type="pachinko">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">7</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="5875711432831597" type="pachinko">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

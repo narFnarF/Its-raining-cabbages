@@ -914,6 +914,11 @@
                     <instance-variables>
                         <instance-variable name="name" sid="4684731389783821" type="string" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="9072527553724251">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
                     <container>
                         <type>sensorTxt</type>
                         <type>sensor</type>

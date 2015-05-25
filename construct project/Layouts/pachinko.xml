@@ -55,8 +55,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>pill</name>
+                        <name>pills</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -82,6 +85,9 @@
                     <instance-variables>
                         <name>lion poop</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -107,6 +113,9 @@
                     <instance-variables>
                         <name>tofu</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -132,6 +141,9 @@
                     <instance-variables>
                         <name>honey</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -157,6 +169,9 @@
                     <instance-variables>
                         <name>tofu</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -182,6 +197,9 @@
                     <instance-variables>
                         <name>tofu steak</name>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2591,7 +2609,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.566744328</angle>
+                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2630,7 +2648,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.566744328</angle>
+                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2669,7 +2687,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.566744328</angle>
+                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2903,7 +2921,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.566744328</angle>
+                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
