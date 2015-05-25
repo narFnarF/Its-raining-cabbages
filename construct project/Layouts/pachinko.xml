@@ -55,7 +55,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>B</name>
+                        <name>pill</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -80,7 +80,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>C</name>
+                        <name>lion poop</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -105,7 +105,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>D</name>
+                        <name>tofu</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -130,7 +130,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>E</name>
+                        <name>honey</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -155,7 +155,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>F</name>
+                        <name>tofu</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -180,7 +180,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>A</name>
+                        <name>tofu steak</name>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

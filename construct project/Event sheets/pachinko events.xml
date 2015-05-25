@@ -85,7 +85,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="9331419967389934" type="System">
-                            <param id="0" name="Seconds">1.4</param>
+                            <param id="0" name="Seconds">1.5</param>
                         </action>
                         <action id="-9" name="Set value" sid="9818373840736035" type="System">
                             <param id="0" name="Variable">finished</param>
@@ -93,10 +93,11 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>cash in each balls 1 by 1</comment>
                         <event-block sid="9054279616884264">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="50541399760011" type="System">
-                                    <param id="0" name="Interval (seconds)">0.6</param>
+                                    <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
                                 <condition id="-15" name="Pick nearest/furthest" sid="2821812499272608" type="lionDisc">
                                     <param id="0" name="Which">0</param>
@@ -113,6 +114,14 @@
                                     <param id="1" name="Layer">lionDisc.LayerNumber</param>
                                     <param id="2" name="X">300</param>
                                     <param id="3" name="Y">850</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9913177978499508" type="Function">
+                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                    <param id="1" name="Parameter {n}">sensor.name{###}lionDisc.level</param>
+                                </action>
+                                <action id="0" name="Call function" sid="993556199835126" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Lion loot: &quot; &amp; lionDisc.level &amp; &quot; &quot; &amp; sensor.name</param>
                                 </action>
                                 <action id="0" name="Set text" sid="6388012579716644" type="plus1">
                                     <param id="0" name="Text">&quot;+&quot; &amp; lionDisc.level &amp; &quot; &quot; &amp; sensor.name</param>
