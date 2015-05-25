@@ -227,35 +227,43 @@
                     </conditions>
                     <actions />
                 </event-block>
-                <event-block sid="7664736852740518">
+                <event-block sid="7858821455157319">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="1371005888301383" type="Keyboard">
-                            <param id="0" name="Key">32 (Espace)</param>
-                        </condition>
                         <condition id="-18" name="Is in preview" sid="4146639922023836" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="5" name="Push" sid="8293127902564048" type="pachinko">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">15</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="5" name="Push" sid="4937645130738408" type="pachinko">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">12</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="5" name="Push" sid="4986996758381658" type="pachinko">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">7</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="5" name="Push" sid="5875711432831597" type="pachinko">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">3</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>test pachinko immediately</comment>
+                        <event-block sid="7664736852740518">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="1371005888301383" type="Keyboard">
+                                    <param id="0" name="Key">32 (Espace)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="8293127902564048" type="pachinko">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">15</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="4937645130738408" type="pachinko">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">12</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="4986996758381658" type="pachinko">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">7</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="5875711432831597" type="pachinko">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">3</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
