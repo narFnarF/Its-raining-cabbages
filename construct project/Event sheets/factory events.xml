@@ -1372,8 +1372,27 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="321976664750511" type="bee">
+                        <action disabled="1" id="-1" name="Set X" sid="321976664750511" type="bee">
                             <param id="0" name="X">bee.X + 55</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7461060613973109" type="camera">
+                            <param id="0" name="Instance variable">screen</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8500980198966451" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2215127143824339" type="bee">
+                            <param id="0" name="X">948</param>
+                            <param id="1" name="Y">482</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9526960863602309" type="bee">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3583279995788074" type="bee">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;standby&quot;</param>
                         </action>
                         <action id="-3" name="Create object" sid="560458115439028" type="System">
                             <param id="0" name="Object to create">verachouLevelUp</param>
@@ -1381,20 +1400,9 @@
                             <param id="2" name="X">bee.X</param>
                             <param id="3" name="Y">bee.Y</param>
                         </action>
-                        <action id="-10" name="Set value" sid="9526960863602309" type="bee">
-                            <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="0" name="Call function" sid="6391616559678393" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;bought bee&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="8500980198966451" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3583279995788074" type="bee">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Value">&quot;standby&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
