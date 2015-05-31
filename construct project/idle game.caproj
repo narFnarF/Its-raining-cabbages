@@ -2,13 +2,13 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>v122</version>
+    <version>v123</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>20000</saved-with-version>
+    <saved-with-version>20600</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
