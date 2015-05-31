@@ -913,6 +913,7 @@
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="name" sid="4684731389783821" type="string" />
+                        <instance-variable comment="for stat simulator only" name="counter" sid="1163251948597008" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="NoSave" sid="9072527553724251">

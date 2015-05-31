@@ -358,7 +358,7 @@
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>10</density>
                                 <friction>0.1</friction>
-                                <elasticity>0.3</elasticity>
+                                <elasticity>0.5</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>

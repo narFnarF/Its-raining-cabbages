@@ -25,11 +25,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="4070865143983652" type="System">
+                                <action id="-3" name="Create object" sid="6452497731606904" type="System">
                                     <param id="0" name="Object to create">lionDisc</param>
                                     <param id="1" name="Layer">&quot;game&quot;</param>
-                                    <param id="2" name="X">random(0+40, LayoutWidth-40)</param>
-                                    <param id="3" name="Y">0</param>
+                                    <param id="2" name="X">random(0+50, LayoutWidth-50)</param>
+                                    <param id="3" name="Y">25</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="560719217909977" type="lionDisc">
                                     <param id="0" name="Instance variable">level</param>
@@ -37,6 +37,9 @@
                                 </action>
                                 <action id="0" name="Set text" sid="6334459382823404" type="pachinkoLevel">
                                     <param id="0" name="Text">lionDisc.level</param>
+                                </action>
+                                <action id="-36" name="Save" sid="7374957968782662" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -135,7 +138,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="14" name="Log" sid="8987377104394203" type="Browser">
+                                        <action disabled="1" id="14" name="Log" sid="8987377104394203" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">&quot;YO MAMMA&quot;</param>
                                         </action>
@@ -157,6 +160,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4046559799407381" type="lightSwitch">
+                            <param id="0" name="Instance variable">turnedOn</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="7228166594722009" type="System">
@@ -165,27 +171,8 @@
                         <action id="-2" name="Go to layout" sid="2410184624507806" type="System">
                             <param id="0" name="Layout">lions</param>
                         </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="8485605955850456" title="gameplay (pachinko)">
-            <sub-events>
-                <comment>to avoid balls to stay stuck</comment>
-                <event-block sid="9068368349431201">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="2030555951872129" type="Touch">
-                            <param id="0" name="Object">lionDisc</param>
-                        </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="7818390116603863" type="lionDisc">
-                            <param id="0" name="Object">sensor</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="3" name="Apply impulse" sid="6891712828359678" type="lionDisc">
-                            <param id="0" name="Impulse X">0</param>
-                            <param id="1" name="Implulse Y">-10</param>
-                            <param id="2" name="Image point">0</param>
+                        <action id="-36" name="Save" sid="6622451670513372" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -201,6 +188,21 @@
                     <actions>
                         <action id="0" name="Set text" sid="3510623126944496" type="sensorTxt">
                             <param id="0" name="Text">sensor.name</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7996632006180989">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5661897747513058" type="lightSwitch">
+                            <param id="0" name="Instance variable">turnedOn</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="7064754048635202" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3911576072244999" type="sensorTxt">
+                            <param id="0" name="Text">sensor.name &amp; &quot; &quot; &amp; sensor.counter</param>
                         </action>
                     </actions>
                 </event-block>
@@ -265,6 +267,111 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="4531093225596998" title="pachinko switch">
+                    <sub-events>
+                        <comment>la switch qui active le mode simulation</comment>
+                        <event-block sid="3242338340910672">
+                            <conditions>
+                                <condition id="-18" name="Is in preview" sid="3071861463874247" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2790234280139373">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="6192288705716435" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="9618592099098591" type="lightSwitch">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="7442329428874354" type="lightSwitch">
+                                            <param id="0" name="Instance variable">turnedOn</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8197049291647092">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="8113511069547978" type="lightSwitch">
+                                            <param id="0" name="Instance variable">turnedOn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2163008714903629">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="9113444571315108" type="System">
+                                                    <param id="0" name="Interval (seconds)">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="161418194553253" type="System">
+                                                    <param id="0" name="Object to create">lionDisc</param>
+                                                    <param id="1" name="Layer">&quot;game&quot;</param>
+                                                    <param id="2" name="X">random(0+50, LayoutWidth-50)</param>
+                                                    <param id="3" name="Y">25</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5088132070190747">
+                                            <conditions>
+                                                <condition id="0" name="On collision with another object" sid="9068464512509208" type="sensor">
+                                                    <param id="0" name="Object">lionDisc</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="1117885153820019" type="lionDisc" />
+                                                <action id="-11" name="Add to" sid="5403634907011608" type="sensor">
+                                                    <param id="0" name="Instance variable">counter</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>touch to turn ON or OFF</comment>
+                                <event-block sid="8000306464327561">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="954369372372013" type="Touch">
+                                            <param id="0" name="Object">lightSwitch</param>
+                                        </condition>
+                                        <condition id="-9" name="Is visible" sid="2219855729836389" type="lightSwitch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-14" name="Toggle boolean" sid="4459300316108781" type="lightSwitch">
+                                            <param id="0" name="Instance variable">turnedOn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>set visual state</comment>
+                                <event-block sid="419921100048637">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="814209906125858" type="lightSwitch">
+                                            <param id="0" name="Instance variable">turnedOn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4601507866882023" type="lightSwitch">
+                                            <param id="0" name="Animation">&quot;on&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9322789556494096">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6512339505373876" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6591206482875528" type="lightSwitch">
+                                            <param id="0" name="Animation">&quot;off&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
