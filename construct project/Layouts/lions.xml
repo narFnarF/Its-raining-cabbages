@@ -1139,9 +1139,9 @@
                     </properties>
                     <instance-variables>
                         <receiveWhat>tofu</receiveWhat>
-                        <receiveHowMany>122</receiveHowMany>
+                        <receiveHowMany>499</receiveHowMany>
                         <payWhat>honey</payWhat>
-                        <payHowMuch>100</payHowMuch>
+                        <payHowMuch>400</payHowMuch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
