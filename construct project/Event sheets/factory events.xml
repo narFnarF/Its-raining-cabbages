@@ -1647,12 +1647,37 @@
                             <param id="0" name="Instance variable">open</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1739147492558582" type="Function">
-                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}siloCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4467603649017299">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5525775221606835" type="System">
+                                    <param id="0" name="Variable">siloCost</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1096526949493111" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bug silo cost: &quot; &amp; siloCost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3542303753211498" type="System">
+                                    <param id="0" name="Variable">siloCost</param>
+                                    <param id="1" name="Value">9999999999</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5506853796549054">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="1739147492558582" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}siloCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7422280202296284">
                     <conditions>
@@ -1698,12 +1723,37 @@
                             <param id="0" name="Instance variable">open</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4725828261511926" type="Function">
-                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}factoryProductivityCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4909488031215259">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3213521719206379" type="System">
+                                    <param id="0" name="Variable">factoryProductivityCost</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2154955589557956" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bug productivity cost: &quot; &amp; factoryProductivityCost</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7161978111710275" type="System">
+                                    <param id="0" name="Variable">factoryProductivityCost</param>
+                                    <param id="1" name="Value">9999999999</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6481844996910525">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="4725828261511926" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}factoryProductivityCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8513369860249602">
                     <conditions>
