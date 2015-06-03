@@ -55,7 +55,7 @@
                     <actions>
                         <action id="14" name="Log" sid="718302728744224" type="Browser">
                             <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">&quot;cleaning up savefile&quot;</param>
+                            <param id="1" name="Message">&quot;cleaning up collmemory savefile&quot;</param>
                         </action>
                         <action id="14" name="Log" sid="1797547557560472" type="Browser">
                             <param id="0" name="Type">1</param>
@@ -133,8 +133,8 @@
                     </conditions>
                     <actions>
                         <action id="14" name="Log" sid="5227976444382615" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">&quot;Nothing done: already clean.&quot;</param>
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Repair Collmemory savefile: Nothing done: already clean.&quot;</param>
                         </action>
                     </actions>
                 </event-block>
