@@ -8,12 +8,9 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3303152092615089" type="System" />
             </conditions>
-            <actions>
-                <action disabled="1" id="-36" name="Save" sid="5165186535157693" type="System">
-                    <param id="0" name="Slot">&quot;new game&quot;</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
+                <comment>affichage du numéro de version</comment>
                 <event-block sid="5397898963084047">
                     <conditions>
                         <condition id="0" name="Compare text" sid="5838588891255019" type="txtLabel">
@@ -37,6 +34,7 @@
             </conditions>
             <actions />
             <sub-events>
+                <comment>touched on New Game</comment>
                 <event-block sid="9560081896507147">
                     <conditions>
                         <condition id="0" name="Compare text" sid="9206397683920992" type="txtLabel">
@@ -54,6 +52,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>touched on Load Game</comment>
                 <event-block sid="9750028966800894">
                     <conditions>
                         <condition id="0" name="Compare text" sid="9961610043932339" type="txtLabel">
@@ -83,33 +82,34 @@
                 </action>
             </actions>
         </event-block>
-        <comment>arranger ça de manière plus officielle</comment>
-        <event-block any="1" disabled="1" sid="4258302951631631">
+        <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
+        <event-block sid="1156750657171015">
             <conditions>
-                <condition id="10" name="On Nth touch start" sid="3697646351717958" type="Touch">
-                    <param id="0" name="Touch number">3 -1</param>
-                </condition>
-                <condition id="0" name="On click" sid="4860973688333908" type="Mouse">
-                    <param id="0" name="Mouse button">1</param>
-                    <param id="1" name="Click type">0</param>
+                <condition id="15" name="On double-tap" sid="2303642711540497" type="Touch" />
+                <condition id="12" name="Has Nth touch" sid="7414808417261943" type="Touch">
+                    <param id="0" name="Touch number">4 -1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Go to URL" sid="9589407556962802" type="Browser">
-                    <param id="0" name="URL">&quot;http://cabbages.narf.ca&quot;</param>
-                    <param id="1" name="Target">2</param>
+                <action id="-2" name="Go to layout" sid="4510753212533671" type="System">
+                    <param id="0" name="Layout">manual loading</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8100360253416029">
+        <event-block sid="387747741179137">
             <conditions>
-                <condition id="0" name="On key pressed" sid="7902953856028603" type="Keyboard">
+                <condition id="2" name="Key is down" sid="3019601000334341" type="Keyboard">
                     <param id="0" name="Key">80 (P)</param>
                 </condition>
-                <condition id="-18" name="Is in preview" sid="3163552133335998" type="System" />
+                <condition id="2" name="Key is down" sid="7856481526752676" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="1883724182222084" type="Keyboard">
+                    <param id="0" name="Key">84 (T)</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="5074768032877011" type="System">
+                <action id="-2" name="Go to layout" sid="2692720601854778" type="System">
                     <param id="0" name="Layout">manual loading</param>
                 </action>
             </actions>
