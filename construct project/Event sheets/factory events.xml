@@ -804,6 +804,18 @@
         </event-group>
         <event-group description="" sid="6516691976608457" title="silo">
             <sub-events>
+                <event-block sid="739771406770182">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2611809004775905" type="Function">
+                            <param id="0" name="Name">&quot;silo .get cost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="3565956270309626" type="Function">
+                            <param id="0" name="Value">round( 1.5^(2*(silo.level-1)) + 2*(silo.level-1) )</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="484507871328815">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8009287891295909" type="cabbage">
@@ -885,15 +897,39 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="240920545447117" type="Function">
-                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="0" name="Name">&quot;factory .update factory&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3652464570536125">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9024526784499909" type="Function">
+                            <param id="0" name="Name">&quot;factory .get productivity cost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="7110103784993103" type="Function">
+                            <param id="0" name="Value">round( 1.5^(2*(factory.levelOfProductivity-1)) + 2*(factory.levelOfProductivity-1) )</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2378482845728606">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6254765725194138" type="Function">
+                            <param id="0" name="Name">&quot;factory .get capacity cost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="4479011816800073" type="Function">
+                            <param id="0" name="Value">round( factory.capacity*0.9 )</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="3114857731262512">
                     <conditions>
                         <condition id="0" name="On function" sid="7256841599166116" type="Function">
-                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="0" name="Name">&quot;factory .update factory&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1505,21 +1541,6 @@
         </event-group>
         <event-group description="" sid="9599963043552251" title="upgrade factory">
             <sub-events>
-                <variable constant="0" name="siloCost" sid="3927966667880503" static="0" type="number">0</variable>
-                <variable constant="0" name="factoryProductivityCost" sid="4062049571430355" static="0" type="number">0</variable>
-                <event-block sid="7921739680958084">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="7030103509765743" type="System">
-                            <param id="0" name="Variable">siloCost</param>
-                            <param id="1" name="Value">round( 1.5^(2*(silo.level-1)) + 2*(silo.level-1) )</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="807571118901752" type="System">
-                            <param id="0" name="Variable">factoryProductivityCost</param>
-                            <param id="1" name="Value">round( 1.5^(2*(factory.levelOfProductivity-1)) + 2*(factory.levelOfProductivity-1) )</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Update text inside buttons</comment>
                 <event-block sid="582330761436202">
                     <conditions />
@@ -1554,7 +1575,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="891526895472873" type="txtLabel">
-                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, siloCost)</param>
+                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;silo .get cost&quot;))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1589,7 +1610,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="2201715912248957" type="txtLabel">
-                                            <param id="0" name="Text"> &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, factoryProductivityCost)</param>
+                                            <param id="0" name="Text"> &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;factory .get productivity cost&quot;) )</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1624,7 +1645,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="3535882816328876" type="txtLabel">
-                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, round( factory.capacity*0.9 ))</param>
+                                            <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;factory .get capacity cost&quot;) )</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1649,31 +1670,12 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="4467603649017299">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="5525775221606835" type="System">
-                                    <param id="0" name="Variable">siloCost</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="1096526949493111" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;bug silo cost: &quot; &amp; siloCost</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3542303753211498" type="System">
-                                    <param id="0" name="Variable">siloCost</param>
-                                    <param id="1" name="Value">9999999999</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="5506853796549054">
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="1739147492558582" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}siloCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}Function.Call(&quot;silo .get cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1690,12 +1692,8 @@
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action disabled="1" id="-11" name="Add to" sid="7848488784466215" type="silo">
-                            <param id="0" name="Instance variable">capacity</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="0" name="Call function" sid="7656704732275016" type="Function">
-                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="0" name="Name">&quot;factory .update factory&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="537098952521533" type="Function">
@@ -1725,31 +1723,12 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="4909488031215259">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="3213521719206379" type="System">
-                                    <param id="0" name="Variable">factoryProductivityCost</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="2154955589557956" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;bug productivity cost: &quot; &amp; factoryProductivityCost</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="7161978111710275" type="System">
-                                    <param id="0" name="Variable">factoryProductivityCost</param>
-                                    <param id="1" name="Value">9999999999</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="6481844996910525">
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="4725828261511926" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}factoryProductivityCost{###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}Function.Call(&quot;factory .get productivity cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1771,7 +1750,7 @@
                             <param id="1" name="Value">factory.levelOfProductivity * 1</param>
                         </action>
                         <action id="0" name="Call function" sid="2739162604184426" type="Function">
-                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="0" name="Name">&quot;factory .update factory&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="371803911681976" type="Function">
@@ -1802,7 +1781,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="6426068280033631" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;upgrade factory capacity&quot;{###}&quot;Upgrade the factory&apos;s capacity to store more salads.&quot;{###}round( factory.capacity*0.9 ){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade factory capacity&quot;{###}&quot;Upgrade the factory&apos;s capacity to store more salads.&quot;{###}Function.Call(&quot;factory .get capacity cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1822,7 +1801,7 @@
                             <param id="1" name="Value">15*2^(factory.levelOfCapacity-1)</param>
                         </action>
                         <action id="0" name="Call function" sid="8542249201474123" type="Function">
-                            <param id="0" name="Name">&quot;factory. update factory&quot;</param>
+                            <param id="0" name="Name">&quot;factory .update factory&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="8253477337198963" type="Function">
