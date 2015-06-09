@@ -39,9 +39,20 @@
             <sub-events>
                 <comment>bug to fix: it cleans new savefiles. Is that a problem?</comment>
                 <variable comment="0=not done; 1=in progress; 2=over." constant="0" name="cleanedCollmemory" sid="3134179389740672" static="1" type="number">0</variable>
+                <variable constant="1" name="FINALVALUE" sid="5738736379678284" static="0" type="number">20150608</variable>
                 <event-block sid="6685112999924819">
                     <conditions>
+                        <condition id="-14" name="Compare variable" sid="7071421896841168" type="System">
+                            <param id="0" name="Variable">cleanedCollmemory</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">FINALVALUE</param>
+                        </condition>
                         <condition id="-14" name="Compare variable" sid="3411123597847914" type="System">
+                            <param id="0" name="Variable">cleanedCollmemory</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition disabled="1" id="-14" name="Compare variable" sid="8450627602659663" type="System">
                             <param id="0" name="Variable">cleanedCollmemory</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
@@ -116,7 +127,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="8716904612756412" type="System">
                                     <param id="0" name="Variable">cleanedCollmemory</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">FINALVALUE</param>
                                 </action>
                                 <action id="14" name="Log" sid="703154054237235" type="Browser">
                                     <param id="0" name="Type">1</param>
@@ -137,7 +148,7 @@
                                 <condition id="-14" name="Compare variable" sid="8112801198680815" type="System">
                                     <param id="0" name="Variable">cleanedCollmemory</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">FINALVALUE</param>
                                 </condition>
                             </conditions>
                             <actions>
