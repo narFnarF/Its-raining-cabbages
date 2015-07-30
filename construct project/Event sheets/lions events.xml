@@ -239,7 +239,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="5182737605054931" type="System">
                             <param id="0" name="Variable">missionCabbageCost</param>
-                            <param id="1" name="Value">round(  40*lion.level^1.5     )</param>
+                            <param id="1" name="Value">round(  2000/(1+1.2^(-lion.level+20) )  )</param>
                         </action>
                         <action id="0" name="Call function" sid="1332184337820847" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
