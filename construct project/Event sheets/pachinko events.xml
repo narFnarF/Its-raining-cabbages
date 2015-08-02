@@ -10,8 +10,8 @@
                 <event-block sid="3534036462911107">
                     <conditions>
                         <condition id="6" inverted="1" name="Is empty" sid="464708587852561" type="pachinko" />
-                        <condition id="-6" name="Every X seconds" sid="2705258565521153" type="System">
-                            <param id="0" name="Interval (seconds)">0.3</param>
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="2705258565521153" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -29,7 +29,7 @@
                                     <param id="0" name="Object to create">lionDisc</param>
                                     <param id="1" name="Layer">&quot;game&quot;</param>
                                     <param id="2" name="X">random(0+50, LayoutWidth-50)</param>
-                                    <param id="3" name="Y">25</param>
+                                    <param id="3" name="Y">100 - pachinko.Width*31</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="560719217909977" type="lionDisc">
                                     <param id="0" name="Instance variable">level</param>
@@ -37,9 +37,6 @@
                                 </action>
                                 <action id="0" name="Set text" sid="6334459382823404" type="pachinkoLevel">
                                     <param id="0" name="Text">lionDisc.level</param>
-                                </action>
-                                <action id="-36" name="Save" sid="7374957968782662" type="System">
-                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -53,6 +50,17 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="9662581254893637">
+                    <conditions>
+                        <condition id="6" name="Is empty" sid="3232008778845769" type="pachinko" />
+                        <condition id="-4" name="Trigger once while true" sid="9249685647977042" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="7374957968782662" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
