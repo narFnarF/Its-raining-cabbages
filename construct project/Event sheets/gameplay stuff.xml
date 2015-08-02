@@ -1046,6 +1046,7 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>collected cabbage</comment>
                         <event-block sid="8585534021451595">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5607218444451159" type="quest">
@@ -1075,6 +1076,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Collected salads</comment>
                         <comment>quest qui donne des pills</comment>
                         <event-block sid="2036127766579293">
                             <conditions />
@@ -1167,6 +1169,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>sent lions on mission</comment>
                         <event-block sid="2471713764657516">
                             <conditions>
                                 <condition disabled="1" id="3" name="Has key" sid="7217139633974638" type="saver">
@@ -1188,7 +1191,7 @@
                                 </action>
                                 <action id="1" name="Set key" sid="5499877976024832" type="quest">
                                     <param id="0" name="Key">&quot;needed&quot;</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="1" name="Set key" sid="2022116832618359" type="quest">
                                     <param id="0" name="Key">&quot;reward type&quot;</param>
@@ -1196,7 +1199,7 @@
                                 </action>
                                 <action id="1" name="Set key" sid="6861922683888577" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="1" name="Set key" sid="7558972401324848" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
@@ -1204,6 +1207,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>menhir enlarged</comment>
                         <event-block sid="271405396349379">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5186823073022031" type="quest">
@@ -1233,6 +1237,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>upgraded silo</comment>
                         <event-block sid="825762396107598">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="4871117294248551" type="quest">
@@ -1254,7 +1259,7 @@
                                 </action>
                                 <action id="1" name="Set key" sid="4672414711831232" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="1" name="Set key" sid="3061060732496451" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
@@ -1262,6 +1267,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>upgraded factory</comment>
                         <event-block sid="4826793987574303">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="4796471263681378" type="quest">
@@ -1283,7 +1289,7 @@
                                 </action>
                                 <action id="1" name="Set key" sid="4860861645191531" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="1" name="Set key" sid="3427758063334814" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
@@ -1291,6 +1297,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>upgraded a bee</comment>
                         <event-block sid="8140635396500898">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2290065677737033" type="System">
@@ -1317,7 +1324,7 @@
                                 </action>
                                 <action id="1" name="Set key" sid="347188238125118" type="quest">
                                     <param id="0" name="Key">&quot;reward combien&quot;</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="1" name="Set key" sid="5102365091339528" type="quest">
                                     <param id="0" name="Key">&quot;available&quot;</param>
@@ -1325,6 +1332,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>all bees above or equal</comment>
                         <event-block sid="9490440616764986">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9440163674474692" type="System">
@@ -1364,6 +1372,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>leveled up a lion</comment>
                         <event-block sid="775229316826496">
                             <conditions>
                                 <condition disabled="1" id="3" name="Has key" sid="8195863701073977" type="saver">
@@ -1401,6 +1410,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>all lions above or equal</comment>
                         <event-block sid="6344964130345521">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1318005228160451" type="System">
