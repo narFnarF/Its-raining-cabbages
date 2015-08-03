@@ -659,6 +659,11 @@
                 <instance-variables>
                     <instance-variable name="turnedOn" sid="3718597580846417" type="boolean" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8717184000824626">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="8727848375741922" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -947,6 +952,25 @@
                         <type>pachinkoLevel</type>
                         <type>lionDisc</type>
                     </container>
+                </object-type>
+                <object-type name="pachinkoDoubler" sid="4081849072907919">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="on" sid="5549064851823669" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Sine" sid="7954267234327315">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="6787892155161553">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2385792216653706" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-type name="lion" sid="5246547682708114">
@@ -1577,19 +1601,6 @@
         <object-type name="coins" sid="5586148913928903">
             <plugin id="Particles" />
             <texture />
-        </object-type>
-        <object-type name="pachinkoDoubler" sid="4081849072907919">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="7954267234327315">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2385792216653706" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -226,6 +226,150 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="568582691582884" title="doubler">
+            <sub-events>
+                <variable comment="1=true" constant="0" name="owned" sid="803739322960592" static="1" type="number">0</variable>
+                <variable constant="0" name="level" sid="5315505201151524" static="1" type="number">0</variable>
+                <event-block sid="5799932830848606">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8322033653922054" type="pachinkoDoubler">
+                            <param id="0" name="Object">lionDisc</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="3776806837601107" type="pachinkoDoubler" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5203955854932059" type="lionDisc">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">lionDisc.level*2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5699335049877172" type="pachinkoLevel">
+                            <param id="0" name="Text">lionDisc.level</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6441160467518217" type="pachinkoLevel">
+                            <param id="0" name="Color">rgb(999, 0, 0)</param>
+                        </action>
+                        <action disabled="1" id="0" name="Spawn another object" sid="7992121601525706" type="lionDisc">
+                            <param id="0" name="Object">coins</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1643583322722325" type="pachinkoDoubler" />
+                        <action id="-3" name="Create object" sid="3335956782050003" type="System">
+                            <param id="0" name="Object to create">verachouLevelUp</param>
+                            <param id="1" name="Layer">&quot;obstacles&quot;</param>
+                            <param id="2" name="X">lionDisc.X</param>
+                            <param id="3" name="Y">lionDisc.Y+20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2629701953928235">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="3572413759038007" type="Touch">
+                            <param id="0" name="Object">heart</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="9907401146598726" type="heart" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>if I don&apos;t have it</comment>
+                        <event-block sid="6240830961086165">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6995482297668381" type="System">
+                                    <param id="0" name="Variable">owned</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9275340342821248" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;pachinko doubler purchased&quot;{###}&quot;Buy something cool and helpful?&quot;{###}100{###}&quot;salads&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2618706590455317">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3629345146567268" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6085748427741833">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1773604141778925" type="Function">
+                            <param id="0" name="Name">&quot;pachinko doubler purchased&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6962125908514925" type="System">
+                            <param id="0" name="Variable">owned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2296035869314027" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You bought the amazing doubler! But what does it do?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="5241718465079184" title="UI (pachinko doubler)">
+                    <sub-events>
+                        <event-block sid="2263998952942329">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4292706278862031" type="pachinkoDoubler">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8846793145319182">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1660458781481667" type="System">
+                                            <param id="0" name="Variable">owned</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1544314428136039" type="pachinkoDoubler">
+                                            <param id="0" name="Instance variable">on</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="3238699593626955" type="pachinkoDoubler">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2338975234840414">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="2915385139654654" type="heart">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>When the 3rd lion is bough, you have this new button to purchase the doubler.</comment>
+                                <event-block sid="421438524438255">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2094505133324872" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;lion&quot;, 3)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;true&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8346303451846044" type="heart">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="622358992184244" title="debug (pachinko)">
             <sub-events>
                 <comment>just to avoid the useless warning.</comment>
@@ -382,36 +526,5 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="5799932830848606">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="8322033653922054" type="pachinkoDoubler">
-                    <param id="0" name="Object">lionDisc</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="5203955854932059" type="lionDisc">
-                    <param id="0" name="Instance variable">level</param>
-                    <param id="1" name="Value">lionDisc.level*2</param>
-                </action>
-                <action id="0" name="Set text" sid="5699335049877172" type="pachinkoLevel">
-                    <param id="0" name="Text">lionDisc.level</param>
-                </action>
-                <action id="4" name="Set font color" sid="6441160467518217" type="pachinkoLevel">
-                    <param id="0" name="Color">rgb(999, 0, 0)</param>
-                </action>
-                <action disabled="1" id="0" name="Spawn another object" sid="7992121601525706" type="lionDisc">
-                    <param id="0" name="Object">coins</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="1643583322722325" type="pachinkoDoubler" />
-                <action id="-3" name="Create object" sid="3335956782050003" type="System">
-                    <param id="0" name="Object to create">verachouLevelUp</param>
-                    <param id="1" name="Layer">&quot;obstacles&quot;</param>
-                    <param id="2" name="X">lionDisc.X</param>
-                    <param id="3" name="Y">lionDisc.Y+20</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

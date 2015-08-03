@@ -231,6 +231,9 @@
                     <instance-variables>
                         <turnedOn>false</turnedOn>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -283,6 +286,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <on>true</on>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -297,18 +303,45 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="NoSave" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>324</x>
-                        <y>629</y>
+                        <x>325</x>
+                        <y>632</y>
                         <z>0</z>
-                        <width>110</width>
-                        <height>37</height>
+                        <width>95</width>
+                        <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heart" uid="102">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nb>4</nb>
+                        <type>IQ</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>557</x>
+                        <y>135</y>
+                        <z>0</z>
+                        <width>83</width>
+                        <height>83</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508771956</hotspotX>
+                        <hotspotY>0.431578934</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
