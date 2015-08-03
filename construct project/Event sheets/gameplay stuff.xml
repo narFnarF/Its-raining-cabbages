@@ -2654,48 +2654,85 @@
                                 <event-block sid="1165843456088112">
                                     <conditions />
                                     <actions>
+                                        <action id="1" name="Set return value" sid="8392742137749958" type="Function">
+                                            <param id="0" name="Value">&quot;false&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5096689613794146">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="627145425489649" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
                                         <action id="-9" name="Set value" sid="6341372517652042" type="System">
                                             <param id="0" name="Variable">item</param>
                                             <param id="1" name="Value">Function.Param(0)</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="5299464048258234" type="System">
-                                            <param id="0" name="Variable">quantity</param>
-                                            <param id="1" name="Value">Function.Param(1)</param>
-                                        </action>
-                                        <action id="1" name="Set return value" sid="8392742137749958" type="Function">
-                                            <param id="0" name="Value">&quot;false&quot;</param>
-                                        </action>
-                                        <action disabled="1" id="14" name="Log" sid="5833157123520146" type="Browser">
-                                            <param id="0" name="Type">0</param>
-                                            <param id="1" name="Message">&quot;inventory count: &quot; &amp; inventory.Get(item)</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="1443113079265493">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="5917814130023296" type="System">
+                                                    <param id="0" name="First value">Function.ParamCount</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="5299464048258234" type="System">
+                                                    <param id="0" name="Variable">quantity</param>
+                                                    <param id="1" name="Value">Function.Param(1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3826710547657393">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="4184221097513894" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="5362246867594259" type="System">
+                                                    <param id="0" name="Variable">quantity</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="5842499049193264" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Function &apos;&apos;has enough&apos;&apos; is missing it&apos;s 2nd parameter. Assuming it&apos;s a 0.&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="2616263977105695">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8534330332516396" type="System">
+                                                    <param id="0" name="First value">quantity</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">Function.Call(&quot;quantity of&quot;, item)</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="5378187942002462" type="System">
+                                                    <param id="0" name="First value">quantity</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="2501019215251048" type="Function">
+                                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="2616263977105695">
+                                <event-block sid="1652179861599034">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5378187942002462" type="System">
-                                            <param id="0" name="First value">quantity</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
+                                        <condition id="-22" name="Else" sid="751322978888027" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="1" name="Set return value" sid="2501019215251048" type="Function">
-                                            <param id="0" name="Value">&quot;true&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="9593386335012219">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="8534330332516396" type="System">
-                                            <param id="0" name="First value">quantity</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">Function.Call(&quot;quantity of&quot;, item)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="7296046197731012" type="Function">
-                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        <action id="14" name="Log" sid="8506230631335176" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Function &apos;&apos;has enough&apos;&apos; is missing both parameters.&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2971,7 +3008,7 @@
         </event-group>
         <event-group description="" sid="8627174315040763" title="Test">
             <sub-events>
-                <variable constant="0" name="test" sid="2451419822543461" static="0" type="text"></variable>
+                <variable constant="0" name="test" sid="2451419822543461" static="1" type="text"></variable>
                 <event-block sid="7857195039675063">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
@@ -2990,8 +3027,8 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="456302556162566" type="Function">
-                                    <param id="0" name="Name">&quot;quantity of&quot;</param>
-                                    <param id="1" name="Parameter {n}">test</param>
+                                    <param id="0" name="Name">&quot;has enough&quot;</param>
+                                    <param id="1" name="Parameter {n}">5{###}test</param>
                                 </action>
                                 <action id="14" name="Log" sid="1645016962501771" type="Browser">
                                     <param id="0" name="Type">0</param>
@@ -3000,12 +3037,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="7579173022116207">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="6575268597232095" type="System" />
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
