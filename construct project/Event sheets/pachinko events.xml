@@ -349,13 +349,18 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <comment>When the 3rd lion is bough, you have this new button to purchase the doubler.</comment>
+                                <comment>When the 3rd lion is bought, you have this new button to purchase the doubler (if you don&apos;t have it already)</comment>
                                 <event-block sid="421438524438255">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2094505133324872" type="System">
                                             <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;lion&quot;, 3)</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">&quot;true&quot;</param>
+                                        </condition>
+                                        <condition id="-14" inverted="1" name="Compare variable" sid="2970862662845574" type="System">
+                                            <param id="0" name="Variable">owned</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
