@@ -283,7 +283,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="9275340342821248" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;pachinko doubler purchased&quot;{###}&quot;Buy something cool and helpful?&quot;{###}100{###}&quot;salads&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;pachinko doubler purchased&quot;{###}&quot;Buy something cool and helpful?&quot;{###}12{###}&quot;veggie burger&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
