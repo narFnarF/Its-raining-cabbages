@@ -39,7 +39,7 @@
             <sub-events>
                 <comment>bug to fix: it cleans new savefiles. Is that a problem?</comment>
                 <variable comment="0=not done; 1=in progress; 2=over." constant="0" name="cleanedCollmemory" sid="3134179389740672" static="1" type="text"></variable>
-                <variable constant="1" name="FINALVALUE" sid="5738736379678284" static="0" type="text">2015-06-08</variable>
+                <variable constant="1" name="FINALVALUE" sid="5738736379678284" static="0" type="text">2015-09-14</variable>
                 <event-block sid="6685112999924819">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="7071421896841168" type="System">
