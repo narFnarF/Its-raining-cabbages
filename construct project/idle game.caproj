@@ -2,13 +2,13 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>v125</version>
+    <version>v126</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>20600</saved-with-version>
+    <saved-with-version>21202</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -87,6 +88,9 @@
             </object-type>
             <object-type name="Array" sid="9189166598250775">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="LocalStorage" sid="5917754173735484">
+                <plugin id="LocalStorage" />
             </object-type>
         </object-folder>
         <object-folder name="bee stuff">
@@ -1691,6 +1695,7 @@
         <global-instance type="Mouse" uid="30" />
         <global-instance type="Keyboard" uid="40" />
         <global-instance type="AJAX" uid="42" />
+        <global-instance type="LocalStorage" uid="104" />
     </global-instances>
     <sounds-folder />
     <music-folder />
