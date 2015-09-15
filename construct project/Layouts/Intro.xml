@@ -35,11 +35,11 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-64,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <line-height>20</line-height>
                     </properties>
                     <instance-variables>
                         <name></name>
@@ -50,11 +50,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>12</x>
-                        <y>237</y>
+                        <x>45</x>
+                        <y>308</y>
                         <z>0</z>
-                        <width>675</width>
-                        <height>94</height>
+                        <width>549</width>
+                        <height>296</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -64,12 +64,12 @@
                 </instance>
                 <instance type="txtLabel" uid="23">
                     <properties>
-                        <text>New game/Erase save file</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <text>New game</text>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -83,44 +83,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>132.5</x>
-                        <y>553</y>
+                        <x>135</x>
+                        <y>636</y>
                         <z>0</z>
                         <width>375</width>
-                        <height>94</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtLabel" uid="24">
-                    <properties>
-                        <text>Load savefile</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <name></name>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>132.5</x>
-                        <y>767</y>
-                        <z>0</z>
-                        <width>375</width>
-                        <height>94</height>
+                        <height>87</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -144,8 +111,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-393</x>
-                        <y>1001</y>
+                        <x>-389</x>
+                        <y>1026</y>
                         <z>0</z>
                         <width>527</width>
                         <height>106</height>
