@@ -87,33 +87,52 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>touched on New Game</comment>
-        <event-block sid="982771922025691">
+        <event-block sid="6980464060082593">
             <conditions>
                 <condition id="3" name="On touched object" sid="9766550269779521" type="Touch">
                     <param id="0" name="Object">txtLabel</param>
                 </condition>
-                <condition id="0" name="Compare text" sid="9206397683920992" type="txtLabel">
-                    <param id="0" name="Text to compare">&quot;New game&quot;</param>
-                    <param id="1" name="Case sensitivity">0</param>
-                </condition>
                 <condition id="-9" name="Is visible" sid="8259926308957709" type="txtLabel" />
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="3378446891769618" type="System">
-                    <param id="0" name="Variable">versionNumberSaved</param>
-                    <param id="1" name="Value">projectversion</param>
-                </action>
-                <action id="0" name="Set item" sid="206019130568336" type="LocalStorage">
-                    <param id="0" name="Key">&quot;has savefile&quot;</param>
-                    <param id="1" name="Value">&quot;true&quot;</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="8564417058141517" type="System">
-                    <param id="0" name="Layout">factory</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <comment>touched on New Game</comment>
+                <event-block sid="982771922025691">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="9206397683920992" type="txtLabel">
+                            <param id="0" name="Text to compare">&quot;New game&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3378446891769618" type="System">
+                            <param id="0" name="Variable">versionNumberSaved</param>
+                            <param id="1" name="Value">projectversion</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set item" sid="206019130568336" type="LocalStorage">
+                            <param id="0" name="Key">&quot;has savefile&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="8564417058141517" type="System">
+                            <param id="0" name="Layout">factory</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1968976344336962">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="4327046384022472" type="txtLabel">
+                            <param id="0" name="Text to compare">&quot;Load&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="8306142131085953" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <comment>I don&apos;t think this can occur anymore...</comment>
         <event-block sid="5697039993662718">
             <conditions>
                 <condition id="-30" name="On load failed" sid="295083211596474" type="System" />
@@ -124,41 +143,45 @@
                     <param id="1" name="Message">&quot;load failed&quot;</param>
                 </action>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
-                    <param id="0" name="Message">&quot;Oh oh! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="0" name="Message">&quot;Oh nooo! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
-        <event-block sid="1156750657171015">
-            <conditions>
-                <condition id="15" name="On double-tap" sid="2303642711540497" type="Touch" />
-                <condition id="12" name="Has Nth touch" sid="7414808417261943" type="Touch">
-                    <param id="0" name="Touch number">4 -1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="4510753212533671" type="System">
-                    <param id="0" name="Layout">manual loading</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="387747741179137">
-            <conditions>
-                <condition id="2" name="Key is down" sid="3019601000334341" type="Keyboard">
-                    <param id="0" name="Key">80 (P)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="7856481526752676" type="Keyboard">
-                    <param id="0" name="Key">69 (E)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="1883724182222084" type="Keyboard">
-                    <param id="0" name="Key">84 (T)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="2692720601854778" type="System">
-                    <param id="0" name="Layout">manual loading</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="7906277338568532" title="debug (intro)">
+            <sub-events>
+                <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
+                <event-block sid="1156750657171015">
+                    <conditions>
+                        <condition id="15" name="On double-tap" sid="2303642711540497" type="Touch" />
+                        <condition id="12" name="Has Nth touch" sid="7414808417261943" type="Touch">
+                            <param id="0" name="Touch number">4 -1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4510753212533671" type="System">
+                            <param id="0" name="Layout">manual loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387747741179137">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3019601000334341" type="Keyboard">
+                            <param id="0" name="Key">80 (P)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="7856481526752676" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1883724182222084" type="Keyboard">
+                            <param id="0" name="Key">84 (T)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2692720601854778" type="System">
+                            <param id="0" name="Layout">manual loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

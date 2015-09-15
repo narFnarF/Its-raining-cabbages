@@ -214,6 +214,10 @@
                             <param id="0" name="Name">&quot;notification&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Game saved&quot;</param>
                         </action>
+                        <action id="0" name="Set item" sid="6986940683530841" type="LocalStorage">
+                            <param id="0" name="Key">&quot;has savefile&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4217253360894964">
