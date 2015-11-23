@@ -28,7 +28,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="3393696223517073" type="System">
-                            <param id="0" name="Seconds">2</param>
+                            <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="5" name="Check item exists" sid="2652960621525461" type="LocalStorage">
                             <param id="0" name="Key">&quot;has savefile&quot;</param>
