@@ -5,6 +5,7 @@
     <events>
         <include>global events</include>
         <include>gameplay stuff</include>
+        <include>snow events</include>
         <event-block sid="7271561405416356">
             <conditions>
                 <condition id="0" name="On function" sid="1900235840500086" type="Function">
@@ -1055,5 +1056,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <include>snow events</include>
     </events>
 </c2eventsheet>

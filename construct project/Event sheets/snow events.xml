@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>snow events</name>
+    <events>
+        <comment>If there&apos;s a camera, move the snow emiter to the camera X position. Otherwise, leave the emitor where it is.</comment>
+        <event-block sid="4784894124520378">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="8913961350457138" type="System">
+                    <param id="0" name="First value">camera.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1327950651114284" type="snow">
+                    <param id="0" name="X">camera.X</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="148537598757236">
+            <conditions />
+            <actions />
+            <sub-events>
+                <event-block sid="8861092455731471">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6594467622164714" type="System">
+                            <param id="0" name="First value">date.Month</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">12</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="6057197963660718" type="System">
+                            <param id="0" name="First value">date.Date</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="1796408737934425" type="snow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="439975471225388" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;on est en fin décembre&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8342701558590859">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7802787309492043" type="System" />
+                        <condition id="-8" name="Compare two values" sid="2134833836868853" type="System">
+                            <param id="0" name="First value">date.Month</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="1038593863831372" type="System">
+                            <param id="0" name="First value">date.Date</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="720072023345884" type="snow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="4380966089148903" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;on est en début janvier&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6477529252727074">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8827109949124287" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="4167550302653403" type="snow">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="9675344947093912" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;il neige pas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -6,6 +6,7 @@
         <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
         <include>gameplay stuff</include>
         <include>global events</include>
+        <include>snow events</include>
         <event-block sid="6749129359702008">
             <conditions>
                 <condition id="0" name="On function" sid="5343719830450125" type="Function">

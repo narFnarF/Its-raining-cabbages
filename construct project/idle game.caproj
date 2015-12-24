@@ -2,7 +2,7 @@
 <c2project>
     <name>idle game</name>
     <description>A silly idle game</description>
-    <version>v126b</version>
+    <version>v127</version>
     <author>narF</author>
     <author-email>narF@narF.ca</author-email>
     <author-website>http://www.narF.ca</author-website>
@@ -1606,6 +1606,15 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="snow" sid="6797678188612642">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Persist" sid="870605882006574">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
@@ -1651,6 +1660,7 @@
         </layout-folder>
         <layout-folder name="global layers">
             <layout>notifications bar.xml</layout>
+            <layout>snow.xml</layout>
             <layout>purchase popup.xml</layout>
         </layout-folder>
         <layout>lions.xml</layout>
@@ -1683,6 +1693,7 @@
         <event-sheet>grinding events.xml</event-sheet>
         <event-sheet>grinding sector events.xml</event-sheet>
         <event-sheet>pachinko events.xml</event-sheet>
+        <event-sheet>snow events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
