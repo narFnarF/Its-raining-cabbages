@@ -686,16 +686,39 @@
                             <param id="0" name="Instance variable">open</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1962647449018996" type="Function">
-                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}Function.Call(&quot;factory . get menhir price&quot;){###}&quot;pills&quot;{###}&quot;Enlarge with &quot;</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="6671955709198882" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;touche mon menhir&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8374476850168403">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4205990499093924" type="System">
+                                    <param id="0" name="First value">menhir.level</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1962647449018996" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;menhir upgrade&quot;{###}&quot;Insecure about the size of your menhir? You&apos;re in luck! We are selling menhir enlargement just for you! Discretion guaranteed! ;)&quot;{###}Function.Call(&quot;factory . get menhir price&quot;){###}&quot;pills&quot;{###}&quot;Enlarge with &quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="6671955709198882" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;touche mon menhir&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2656054232881451">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8390382159830868" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7481451387706198" type="Function">
+                                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Your menhir has reach the maximum size. What a nice and huge menhir!&#x0D;&#x0A;&#x0D;&#x0A;You feel pretty confident.&quot;{###}&quot;Huge!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8690392474542531">
                     <conditions>
@@ -779,6 +802,11 @@
                                     <param id="0" name="First value">Function.Call(&quot;has enough&quot;, &quot;pills&quot;, Function.Call(&quot;factory . get menhir price&quot;) )</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6298440835404747" type="System">
+                                    <param id="0" name="First value">menhir.level</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">30</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1812,6 +1840,23 @@
                         <action id="0" name="Call function" sid="963644728022738" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;upgraded factory capacity&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="887098112256477" title="debug (factory)">
+            <sub-events>
+                <event-block sid="8126762338766192">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7529615479165372" type="Keyboard">
+                            <param id="0" name="Key">32 (Espace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6186883513299818" type="menhir">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">30</param>
                         </action>
                     </actions>
                 </event-block>
