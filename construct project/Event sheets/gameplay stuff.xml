@@ -3019,10 +3019,10 @@
                 <variable constant="0" name="test" sid="2451419822543461" static="1" type="text"></variable>
                 <event-block sid="7857195039675063">
                     <conditions>
+                        <condition id="-18" name="Is in preview" sid="9352069562153163" type="System" />
                         <condition id="-6" name="Every X seconds" sid="4934258088047048" type="System">
                             <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
-                        <condition id="-18" name="Is in preview" sid="9352069562153163" type="System" />
                         <condition id="-14" inverted="1" name="Compare variable" sid="1921318754708944" type="System">
                             <param id="0" name="Variable">test</param>
                             <param id="1" name="Comparison">0</param>
