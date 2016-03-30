@@ -143,7 +143,7 @@
                     <param id="1" name="Message">&quot;load failed&quot;</param>
                 </action>
                 <action id="0" name="Alert" sid="6548049828311696" type="Browser">
-                    <param id="0" name="Message">&quot;Oh nooo! There&apos;s problem with your savefile. Did you really had one? Are you using the same browser you played with before? You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
+                    <param id="0" name="Message">&quot;Oh nooo! There&apos;s a problem with your savefile. Did you really have one? Are you using the same browser you played with before? You&apos;ll have to create a New Game. Sorry! :(&quot; &amp; newline &amp; &quot;-narF&quot;</param>
                 </action>
             </actions>
         </event-block>
