@@ -869,87 +869,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Debug shortcut</comment>
-                <event-block sid="5490210380852038">
-                    <conditions>
-                        <condition id="-18" name="Is in preview" sid="4926763517407425" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <comment>15 minutes</comment>
-                        <event-block sid="9565896708669784">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="6581870890977221" type="Keyboard">
-                                    <param id="0" name="Key">66 (B)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="2028321994046621" type="timeKeeper">
-                                    <param id="0" name="Instance variable">lastTimeStamp</param>
-                                    <param id="1" name="Value">1000 * 60 * 15</param>
-                                </action>
-                                <action id="0" name="Call function" sid="4678751035994771" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: 15 minutes passed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>1 heure</comment>
-                        <event-block sid="257220804825817">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="9096590280505245" type="Keyboard">
-                                    <param id="0" name="Key">78 (N)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="3465359131945957" type="timeKeeper">
-                                    <param id="0" name="Instance variable">lastTimeStamp</param>
-                                    <param id="1" name="Value">1000 * 60 * 60 * 1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6289935894736515" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: 1 hour passed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>6 heures</comment>
-                        <event-block sid="8860725404091758">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="6290289740175713" type="Keyboard">
-                                    <param id="0" name="Key">77 (M)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="4478290885112427" type="timeKeeper">
-                                    <param id="0" name="Instance variable">lastTimeStamp</param>
-                                    <param id="1" name="Value">1000 * 60 * 60 * 6</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3474954669847364" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: 6 hours passed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>1 journée</comment>
-                        <event-block sid="1957407101174712">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="4127048602775534" type="Keyboard">
-                                    <param id="0" name="Key">188 (,)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="252099197713404" type="timeKeeper">
-                                    <param id="0" name="Instance variable">lastTimeStamp</param>
-                                    <param id="1" name="Value">1000 * 60 * 60 * 24 * 1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="904388461994862" type="Function">
-                                    <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;debug: 24 hours passed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="3791512196189419" title="stats tracker">
@@ -2755,6 +2674,7 @@
                 <variable comment="1=true" constant="0" name="cheat" sid="7373339718646982" static="1" type="number">0</variable>
                 <event-group description="" sid="2463618726557668" title="cheat in public version">
                     <sub-events>
+                        <comment>activate and deactivate cheat mode in the public version</comment>
                         <event-block sid="3804187399412435">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="1084785452974924" type="Keyboard">
@@ -2839,6 +2759,82 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-group description="" sid="5240921310774981" title="time skips">
+                            <sub-events>
+                                <comment>15 minutes</comment>
+                                <event-block sid="9565896708669784">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="6581870890977221" type="Keyboard">
+                                            <param id="0" name="Key">66 (B)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="2028321994046621" type="timeKeeper">
+                                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                                            <param id="1" name="Value">1000 * 60 * 15</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="4678751035994771" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: 15 minutes passed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>1 heure</comment>
+                                <event-block sid="257220804825817">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="9096590280505245" type="Keyboard">
+                                            <param id="0" name="Key">78 (N)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="3465359131945957" type="timeKeeper">
+                                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                                            <param id="1" name="Value">1000 * 60 * 60 * 1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6289935894736515" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: 1 hour passed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>6 heures</comment>
+                                <event-block sid="8860725404091758">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="6290289740175713" type="Keyboard">
+                                            <param id="0" name="Key">77 (M)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="4478290885112427" type="timeKeeper">
+                                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                                            <param id="1" name="Value">1000 * 60 * 60 * 6</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3474954669847364" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: 6 hours passed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>1 journée</comment>
+                                <event-block sid="1957407101174712">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="4127048602775534" type="Keyboard">
+                                            <param id="0" name="Key">188 (,)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="252099197713404" type="timeKeeper">
+                                            <param id="0" name="Instance variable">lastTimeStamp</param>
+                                            <param id="1" name="Value">1000 * 60 * 60 * 24 * 1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="904388461994862" type="Function">
+                                            <param id="0" name="Name">&quot;notification&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;debug: 24 hours passed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="557685072215698">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="3704217256528622" type="Keyboard">

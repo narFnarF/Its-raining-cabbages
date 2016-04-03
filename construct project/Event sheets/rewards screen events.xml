@@ -24,13 +24,63 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9410450147324793">
-            <conditions>
-                <condition id="0" name="On function" sid="6065604003673307" type="Function">
-                    <param id="0" name="Name">&quot;time has passed&quot;</param>
-                </condition>
-            </conditions>
+        <event-block sid="3418242097747272">
+            <conditions />
             <actions />
+            <sub-events>
+                <comment>this kicks the player to the factory layout, to avoid seing incorrect stats</comment>
+                <variable comment="1=true" constant="0" name="justEntered" sid="6949926013632402" static="1" type="number">0</variable>
+                <event-block sid="2834006017917653">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="189518405426665" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7211215412657885" type="System">
+                            <param id="0" name="Variable">justEntered</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7501376879201671" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8559060420525369" type="System">
+                            <param id="0" name="Variable">justEntered</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9410450147324793">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6065604003673307" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4715292832057554">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="3239528589888872" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="9162408970250905" type="System">
+                                    <param id="0" name="Variable">justEntered</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="2723168429480639" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="7104180084379488" type="System">
+                                    <param id="0" name="Layout">factory</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>Update the display, and set the visibility of the Collect button</comment>
         <event-block sid="7334555190214475">
@@ -38,9 +88,6 @@
                 <condition id="-1" name="Every tick" sid="4419579759884234" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="-16" name="Wait" sid="2804383874282349" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
                 <action id="0" name="Set text" sid="1921765072029155" type="questsTxt">
                     <param id="0" name="Text">&quot;Reward center:&quot; &amp; newline &amp; newline</param>
                 </action>
