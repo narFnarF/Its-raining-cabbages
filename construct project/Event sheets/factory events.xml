@@ -562,75 +562,100 @@
         </event-group>
         <event-group description="" sid="3792616009665136" title="Display stats">
             <sub-events>
+                <comment>every tick, update stats</comment>
                 <event-block sid="45482806854828">
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="2965023646410518" type="globalStats">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="1" name="Append text" sid="2395759177508369" type="globalStats">
-                            <param id="0" name="Text">&quot;Salads: &quot; &amp; Function.Call(&quot;format numbers&quot;, salads)  &amp; newline</param>
-                        </action>
-                        <action disabled="1" id="1" name="Append text" sid="8726920358585833" type="globalStats">
-                            <param id="0" name="Text">&quot;Eggs: &quot; &amp; Function.Call(&quot;format numbers&quot;, eggs) &amp; newline</param>
-                        </action>
-                        <action disabled="1" id="1" name="Append text" sid="5318087948879611" type="globalStats">
-                            <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
-                        </action>
-                        <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
-                            <param id="0" name="Text">&quot;Honey: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;honey&quot;) ) &amp; newline</param>
-                        </action>
-                        <action id="1" name="Append text" sid="7549619855654483" type="globalStats">
-                            <param id="0" name="Text">&quot;Pills: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;pills&quot;) ) &amp; newline</param>
-                        </action>
-                        <action id="1" name="Append text" sid="5461587760108215" type="globalStats">
-                            <param id="0" name="Text">&quot;Tofu steaks: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu steak&quot;) ) &amp; newline</param>
-                        </action>
                     </actions>
                     <sub-events>
-                        <event-group description="" inactive="1" sid="5993132769924056" title="display salads per minute">
+                        <event-block sid="7558496224605016">
+                            <conditions>
+                                <condition disabled="1" id="-8" name="Compare two values" sid="1677680471183322" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;quantity of&quot;, &quot;salads&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="2395759177508369" type="globalStats">
+                                    <param id="0" name="Text">&quot;Salads: &quot; &amp; Function.Call(&quot;format numbers&quot;, salads)  &amp; newline</param>
+                                </action>
+                                <action disabled="1" id="1" name="Append text" sid="8726920358585833" type="globalStats">
+                                    <param id="0" name="Text">&quot;Eggs: &quot; &amp; Function.Call(&quot;format numbers&quot;, eggs) &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9910956995896522">
+                            <conditions>
+                                <condition disabled="1" id="-8" name="Compare two values" sid="1584090319265117" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;quantity of&quot;, &quot;honey&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="5729192416114974" type="globalStats">
+                                    <param id="0" name="Text">&quot;Honey: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;honey&quot;) ) &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1155156922210889">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="511573174077925" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;quantity of&quot;, &quot;pills&quot;)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="7549619855654483" type="globalStats">
+                                    <param id="0" name="Text">&quot;Pills: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;pills&quot;) ) &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3989481678288357">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare value" sid="3675325177538259" type="saver">
+                                    <param id="0" name="Key">&quot;arrow lions&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;unlocked&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <variable constant="0" name="cabbagesPerMinutes" sid="8777129976979579" static="0" type="number">0</variable>
-                                <variable constant="0" name="saladsPerMinute" sid="6262903764462939" static="0" type="number">0</variable>
-                                <event-block sid="1102505970006273">
+                                <event-block sid="3775618864695544">
                                     <conditions>
-                                        <condition id="3" name="For each element" sid="3265728639096212" type="siloHistory">
-                                            <param id="0" name="Axes">2</param>
+                                        <condition id="-8" name="Compare two values" sid="2433452870888212" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;quantity of&quot;, &quot;tofu&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Add to" sid="7719367649533081" type="System">
-                                            <param id="0" name="Variable">cabbagesPerMinutes</param>
-                                            <param id="1" name="Value">siloHistory.CurValue</param>
+                                        <action id="1" name="Append text" sid="5318087948879611" type="globalStats">
+                                            <param id="0" name="Text">&quot;Tofu: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu&quot;) ) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="8563303323180949">
+                                <event-block sid="5059724787355481">
                                     <conditions>
-                                        <condition id="3" name="For each element" sid="2027527852639295" type="factoryHistory">
-                                            <param id="0" name="Axes">2</param>
+                                        <condition id="-8" name="Compare two values" sid="8807847258902993" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;quantity of&quot;, &quot;tofu steak&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Add to" sid="7074177293114279" type="System">
-                                            <param id="0" name="Variable">saladsPerMinute</param>
-                                            <param id="1" name="Value">factoryHistory.CurValue</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="8689506550021848">
-                                    <conditions />
-                                    <actions>
-                                        <action id="1" name="Append text" sid="4187583685750526" type="globalStats">
-                                            <param id="0" name="Text">&quot;Cabbages per minute: &quot; &amp; cabbagesPerMinutes &amp; newline</param>
-                                        </action>
-                                        <action id="1" name="Append text" sid="7056376189170629" type="globalStats">
-                                            <param id="0" name="Text">&quot;Salads per minute: &quot; &amp; saladsPerMinute &amp; newline</param>
+                                        <action id="1" name="Append text" sid="5461587760108215" type="globalStats">
+                                            <param id="0" name="Text">&quot;Tofu steaks: &quot; &amp; Function.Call(&quot;format numbers&quot;, inventory.Get(&quot;tofu steak&quot;) ) &amp; newline</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-group>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -720,6 +745,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <variable constant="0" name="menhirBefore" sid="1759727932124941" static="0" type="number">0</variable>
+                <variable constant="0" name="menhirAfter" sid="9676511818966655" static="0" type="number">0</variable>
+                <variable constant="0" name="randomMessage" sid="8118713297239806" static="0" type="text"></variable>
                 <event-block sid="8690392474542531">
                     <conditions>
                         <condition id="0" name="On function" sid="3068169501976035" type="Function">
@@ -727,6 +755,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="8557216530473875" type="System">
+                            <param id="0" name="Variable">menhirBefore</param>
+                            <param id="1" name="Value">menhir.Width</param>
+                        </action>
                         <action id="-11" name="Add to" sid="1975722203121804" type="menhir">
                             <param id="0" name="Instance variable">level</param>
                             <param id="1" name="Value">1</param>
@@ -735,9 +767,17 @@
                             <param id="0" name="Name">&quot;menhir adjust size&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-9" name="Set value" sid="4086171839421767" type="System">
+                            <param id="0" name="Variable">menhirAfter</param>
+                            <param id="1" name="Value">menhir.Width</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5133223591671456" type="System">
+                            <param id="0" name="Variable">randomMessage</param>
+                            <param id="1" name="Value">menhirMsgArray.At(random(0, menhirMsgArray.Width))</param>
+                        </action>
                         <action id="0" name="Call function" sid="4387119365399737" type="Function">
                             <param id="0" name="Name">&quot;notification&quot;</param>
-                            <param id="1" name="Parameter {n}">menhirMsgArray.At(random(0, menhirMsgArray.Width))</param>
+                            <param id="1" name="Parameter {n}">&quot;Menhir level &quot; &amp; menhir.level &amp; &quot;. Size: &quot; &amp; menhirBefore &amp; &quot; → &quot; &amp; menhirAfter &amp; newline &amp; randomMessage</param>
                         </action>
                         <action id="0" name="Call function" sid="1581205435723202" type="Function">
                             <param id="0" name="Name">&quot;count&quot;</param>
