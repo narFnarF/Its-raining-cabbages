@@ -2766,6 +2766,7 @@
                                 <condition id="2" name="Key is down" sid="3600689080691332" type="Keyboard">
                                     <param id="0" name="Key">84 (T)</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="705458058558805" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
