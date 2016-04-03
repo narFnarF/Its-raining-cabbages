@@ -24,11 +24,11 @@
                 </action>
             </actions>
         </event-block>
+        <comment>this kicks the player to the factory layout, to avoid seing incorrect stats</comment>
         <event-block sid="3418242097747272">
             <conditions />
             <actions />
             <sub-events>
-                <comment>this kicks the player to the factory layout, to avoid seing incorrect stats</comment>
                 <variable comment="1=true" constant="0" name="justEntered" sid="6949926013632402" static="1" type="number">0</variable>
                 <event-block sid="2834006017917653">
                     <conditions>
