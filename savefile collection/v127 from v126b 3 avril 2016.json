@@ -1,0 +1,3285 @@
+{
+	"c2save": true,
+	"version": 1,
+	"rt": {
+		"time": 12693.929427029016,
+		"walltime": 12693.929427029016,
+		"timescale": 1,
+		"tickcount": 746612,
+		"execcount": 32088992,
+		"next_uid": 41874,
+		"running_layout": 8714149234599271,
+		"start_time_offset": 132817592
+	},
+	"types": {
+		"5129043714455325": {
+			"instances": [{
+				"uid": 396
+			}]
+		},
+		"1040817558484765": {
+			"instances": [{
+				"uid": 397
+			}]
+		},
+		"2427246001340585": {
+			"instances": [{
+				"uid": 398
+			}]
+		},
+		"8536047002691559": {
+			"instances": [{
+				"uid": 0,
+				"data": {
+					"tims": {
+						
+					}
+				}
+			}]
+		},
+		"9887476147998468": {
+			"instances": [{
+				"uid": 399
+			}]
+		},
+		"8221280292440799": {
+			"instances": [{
+				"uid": 400,
+				"data": {
+					"triggerKey": 0
+				}
+			}]
+		},
+		"3132682189607884": {
+			"instances": [{
+				"uid": 401,
+				"data": {
+					"lastData": "Welcome back!"
+				}
+			}]
+		},
+		"9189166598250776": {
+			"instances": []
+		},
+		"5917754173735484": {
+			"instances": [{
+				"uid": 402,
+				"data": {
+					
+				}
+			}]
+		},
+		"4716704536026207": {
+			"instances": [],
+			"ex": {
+				"lastBehIndex": 1
+			}
+		},
+		"8514725442516342": {
+			"instances": []
+		},
+		"5490029273198872": {
+			"instances": []
+		},
+		"6009999432359583": {
+			"instances": []
+		},
+		"5214980029075165": {
+			"instances": []
+		},
+		"3803439497545899": {
+			"instances": []
+		},
+		"3644795865062729": {
+			"instances": []
+		},
+		"7596336318687071": {
+			"instances": [{
+				"uid": 296,
+				"data": {
+					"size": [60,
+					1,
+					1],
+					"data": [[[0]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[2]],
+					[[1]],
+					[[-12]],
+					[[0]],
+					[[1]],
+					[[0]],
+					[[2]],
+					[[2]],
+					[[2]],
+					[[1]],
+					[[1]],
+					[[2]],
+					[[-14]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[2]],
+					[[1]],
+					[[3]],
+					[[2]],
+					[[0]],
+					[[4]],
+					[[-14]],
+					[[0]],
+					[[2]],
+					[[1]],
+					[[2]],
+					[[3]],
+					[[1]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[-9]],
+					[[1]],
+					[[1]],
+					[[0]],
+					[[1]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[-13]],
+					[[0]],
+					[[3]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[1]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[-16]],
+					[[2]]]
+				}
+			}]
+		},
+		"1757212072694836": {
+			"instances": [{
+				"uid": 297,
+				"data": {
+					"size": [6,
+					1,
+					1],
+					"data": [[[13]],
+					[[16]],
+					[[15]],
+					[[12]],
+					[[15]],
+					[[16]]]
+				}
+			}]
+		},
+		"7153178140964365": {
+			"instances": [{
+				"uid": 91,
+				"data": {
+					"size": [60,
+					1,
+					1],
+					"data": [[[0]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[2]],
+					[[1]],
+					[[1]],
+					[[0]],
+					[[1]],
+					[[0]],
+					[[2]],
+					[[2]],
+					[[2]],
+					[[1]],
+					[[1]],
+					[[2]],
+					[[2]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[2]],
+					[[1]],
+					[[3]],
+					[[2]],
+					[[0]],
+					[[4]],
+					[[1]],
+					[[0]],
+					[[2]],
+					[[1]],
+					[[2]],
+					[[3]],
+					[[1]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[1]],
+					[[0]],
+					[[1]],
+					[[2]],
+					[[0]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[2]],
+					[[0]],
+					[[3]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[1]],
+					[[1]],
+					[[1]],
+					[[1]],
+					[[3]],
+					[[0]],
+					[[2]]]
+				}
+			}]
+		},
+		"5194667752447656": {
+			"instances": [{
+				"uid": 33,
+				"data": {
+					"size": [15,
+					1,
+					1],
+					"data": [[["Collected 40 salads.\n"]],
+					[["Welcome back!\n"]],
+					[["Loading successful\n"]],
+					[["Collected 47 salads.\n"]],
+					[["Lion loot: 136 honey\n"]],
+					[["Now hiring engineer to improve productivity of coleslaw salad factory.\n"]],
+					[["Lion loot: 44 tofu\n"]],
+					[["Lion loot: 21 tofu\n"]],
+					[["Lion loot: 25 lion poop\n"]],
+					[["Your lion is back.\n"]],
+					[["Collected 30 165 salads.\n"]],
+					[["Welcome back!\n"]],
+					[["Loading successful\n"]],
+					[["Ce menhir... C'est un pic, un cap! Que dis-je? C'est une péninsule!\n"]],
+					[["It is rumored that the menhir is actually an alien technology.\n"]]]
+				}
+			}]
+		},
+		"110751735252375": {
+			"instances": [{
+				"uid": 50,
+				"data": {
+					"size": [35,
+					1,
+					1],
+					"data": [[["If you manage to drop a cabbages in the tiny gap on the left, the game's creator will be furious and will drop a hundred cabbages at once! Which isn't such a bad thing when you think about it."]],
+					[["The menhir… What does it mean?"]],
+					[["Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature. Because they drown in the water..."]],
+					[["There isn't any easy mode in this game!"]],
+					[["The name of the Boing 747 means that it can carry up to 747 cabbages. But why carry this much cabbages??"]],
+					[["How many times a day do you touch your menhir?"]],
+					[["The game continues to run even when it's closed. How is that possible? It's magic!"]],
+					[["No lions was harmed during the making of this game."]],
+					[["Philosophy: Are the cabbages really falling from the sky... or is it the menhir that attracts them?"]],
+					[["I want these mother-f...ing cabbages out of this mother-f...ing plane!"]],
+					[["Ce menhir... C'est un pic, un cap! Que dis-je? C'est une péninsule!"]],
+					[["We can only hope that the fishes in the water love to eat cabbages."]],
+					[["Freud would be proud of your menhir."]],
+					[["Have your bought your anti-cabbages protecting helmet?"]],
+					[["Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again."]],
+					[["Is the water just water, or a manifestation of universal entropy?"]],
+					[["Most of the cabbages in this game are actually imported from your Skyrim save file."]],
+					[["Never underestimate the combined power of cabbages and gravity."]],
+					[["Now hiring engineer to improve productivity of coleslaw salad factory."]],
+					[["Rent-a-bee: 514-555-8385"]],
+					[["Scientist community actively trying to find a way to turn cabbages into clean energy. \"We have so much of them anyway!\""]],
+					[["Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!"]],
+					[["The cabbages are restless. Consider sacrificing salad dressing to appease them."]],
+					[["US government implement additional airport security following cabbage terrorist attack."]],
+					[["World hunger have been solved as cabbages enter population eating habits."]],
+					[["The NSA cannot confirm nor deny whether it is spying on your bees."]],
+					[["Is this art or fart?"]],
+					[["How is it possible to make a rock larger?"]],
+					[["It is rumored that the menhir is actually an alien technology."]],
+					[["What's the meaning of this game??"]],
+					[["Nobody seems to know where these cabbages come from."]],
+					[["Your bees are working hard."]],
+					[["Where does the menhir comes from?"]],
+					[["A mighty lion is lurking around."]],
+					[["A lion is poking its head around."]]]
+				}
+			}]
+		},
+		"6875210335898705": {
+			"instances": []
+		},
+		"1463393681975661": {
+			"instances": [{
+				"uid": 94,
+				"w": {
+					"x": 87,
+					"y": 207,
+					"w": 481.7051086425781,
+					"h": 422.3434753417969,
+					"l": 7392104493616984,
+					"zi": 0,
+					"hX": 0,
+					"hY": 0
+				},
+				"data": {
+					"text": "",
+					"placeholder": "Copy JSON save here to load it, or tap \"Save\" bellow to get the JSON save.",
+					"tooltip": "",
+					"disabled": false,
+					"readonly": false,
+					"spellcheck": false
+				}
+			}]
+		},
+		"345317527254927": {
+			"instances": []
+		},
+		"1869117220261939": {
+			"instances": []
+		},
+		"6506717338388186": {
+			"instances": []
+		},
+		"4891179448567307": {
+			"instances": []
+		},
+		"1244228769241016": {
+			"instances": []
+		},
+		"5340654386194916": {
+			"instances": []
+		},
+		"761117717822557": {
+			"instances": []
+		},
+		"1822700665624996": {
+			"instances": []
+		},
+		"2395862388375656": {
+			"instances": []
+		},
+		"8075840418252747": {
+			"instances": []
+		},
+		"4539624746310134": {
+			"instances": []
+		},
+		"269146194465256": {
+			"instances": []
+		},
+		"191091152619404": {
+			"instances": []
+		},
+		"4765928005168268": {
+			"instances": []
+		},
+		"9467639165513064": {
+			"instances": []
+		},
+		"5715703512699373": {
+			"instances": []
+		},
+		"1702331039481137": {
+			"instances": []
+		},
+		"2986728960170597": {
+			"instances": [{
+				"uid": 103,
+				"data": {
+					"size": [6,
+					1,
+					1],
+					"data": [[["«All-natural herbal menhir enlargement»"]],
+					[["«Menhir enlargement are 100% gluten-free»"]],
+					[["«Doctors hate her! This single mom has found a way to naturally enlarge your menhir without drugs!»"]],
+					[["«Use this one simple trick to make your menhir twice as big in only 4 weeks!»"]],
+					[["Don't you think your menhir is big enough now?"]],
+					[["Now that's a pretty big menhir!"]]]
+				}
+			}]
+		},
+		"9209630044662388": {
+			"instances": [],
+			"ex": {
+				"lastBehIndex": 0
+			}
+		},
+		"7663539838536756": {
+			"instances": []
+		},
+		"7103543970488127": {
+			"instances": []
+		},
+		"9341328297692634": {
+			"instances": [{
+				"uid": 108,
+				"data": {
+					"size": [0,
+					1,
+					1],
+					"data": []
+				}
+			}]
+		},
+		"206022705876045": {
+			"instances": []
+		},
+		"5246547682708114": {
+			"instances": []
+		},
+		"977963652630131": {
+			"instances": [{
+				"uid": 113,
+				"data": {
+					"tofu": 0,
+					"tofu steak": 14,
+					"veggie burger": 0,
+					"lion poop": 9,
+					"honey": 166,
+					"pills": 509,
+					"": 0
+				}
+			}]
+		},
+		"2847898352338322": {
+			"instances": []
+		},
+		"8704913547318958": {
+			"instances": [{
+				"uid": 269,
+				"data": {
+					"collected cabbage": 11490629,
+					"salad created": 12195872,
+					"collected from factory": 618,
+					"collected salads": 11392886,
+					"upgraded factory productivity": 18,
+					"upgraded silo": 17,
+					"upgraded factory capacity": 15,
+					"upgraded a bee": 53,
+					"menhir enlarged": 24,
+					"bought bee": 3,
+					"crafted tofu steak": 3853,
+					"crafted veggie burger": 127,
+					"bait for lion": 4,
+					"caught a lion": 4,
+					"lion level up": 156,
+					"sent lion on mission": 858,
+					"lion collected tofu": 7606,
+					"lion collected tofu steak": 3347,
+					"lion collected honey": 4996,
+					"lion collected lion poop": 4109,
+					"crafted salads": 1435000,
+					"lion collected pills": 2862,
+					"crafted tofu": 5988
+				}
+			}]
+		},
+		"5168085700003491": {
+			"instances": []
+		},
+		"7090045992240154": {
+			"instances": []
+		},
+		"5253234207102304": {
+			"instances": [{
+				"uid": 317,
+				"data": {
+					"factory productivity": 19,
+					"factory capacity": 16,
+					"silo": 19,
+					"menhir": 25,
+					"bee1": 20,
+					"bee2": 14,
+					"bee3": 12,
+					"bee4": 12,
+					"bee lowest": 12,
+					"bee highest": 20,
+					"lion0": 68,
+					"lion lowest": 22,
+					"lion highest": 68,
+					"lion1": 44,
+					"lion2": 26,
+					"lion3": 22
+				}
+			}]
+		},
+		"7316888990734442": {
+			"instances": [{
+				"uid": 411,
+				"ex": {
+					"c2_feo_val": 411
+				},
+				"data": {
+					"type": "collected cabbage",
+					"based on": "events",
+					"needed": 1000,
+					"needed counter": 0,
+					"reward type": "tofu",
+					"reward combien": 1,
+					"time completed": 27,
+					"available": 1,
+					"active": 0
+				}
+			},
+			{
+				"uid": 412,
+				"ex": {
+					"c2_feo_val": 412
+				},
+				"data": {
+					"type": "collected salads",
+					"based on": "events",
+					"needed": 200,
+					"needed counter": 0,
+					"reward type": "tofu",
+					"reward combien": 1,
+					"time completed": 28,
+					"available": 1,
+					"active": 0
+				}
+			},
+			{
+				"uid": 413,
+				"ex": {
+					"c2_feo_val": 413
+				},
+				"data": {
+					"type": "menhir enlarged",
+					"based on": "level",
+					"needed": 2,
+					"needed counter": 0,
+					"reward type": "tofu steak",
+					"reward combien": 1,
+					"time completed": 23,
+					"available": 1,
+					"active": 0
+				}
+			},
+			{
+				"uid": 414,
+				"ex": {
+					"c2_feo_val": 414
+				},
+				"data": {
+					"type": "upgraded silo",
+					"based on": "level",
+					"needed": 3,
+					"needed counter": 0,
+					"reward type": "honey",
+					"reward combien": 2,
+					"time completed": 17,
+					"available": 1,
+					"active": 1
+				}
+			},
+			{
+				"uid": 415,
+				"ex": {
+					"c2_feo_val": 415
+				},
+				"data": {
+					"type": "upgraded factory",
+					"based on": "level",
+					"needed": 2,
+					"needed counter": 0,
+					"reward type": "tofu",
+					"reward combien": 2,
+					"time completed": 18,
+					"available": 1,
+					"active": 1
+				}
+			},
+			{
+				"uid": 5416,
+				"ex": {
+					"c2_feo_val": 5416
+				},
+				"data": {
+					"type": "sent lion on mission",
+					"based on": "events",
+					"needed": 1,
+					"needed counter": 4,
+					"reward type": "tofu",
+					"reward combien": 2,
+					"time completed": 29,
+					"available": 1,
+					"active": 1
+				}
+			},
+			{
+				"uid": 5417,
+				"ex": {
+					"c2_feo_val": 5417
+				},
+				"data": {
+					"type": "leveled up a lion",
+					"based on": "level",
+					"needed": 2,
+					"needed counter": 0,
+					"reward type": "salads",
+					"reward combien": 1000,
+					"time completed": 21,
+					"available": 1,
+					"active": 0
+				}
+			},
+			{
+				"uid": 18565,
+				"ex": {
+					"c2_feo_val": 18565
+				},
+				"data": {
+					"type": "all bees above or equal",
+					"based on": "level",
+					"needed": 2,
+					"needed counter": 0,
+					"reward type": "tofu steak",
+					"reward combien": 1,
+					"time completed": 11,
+					"available": 1,
+					"active": 0
+				}
+			},
+			{
+				"uid": 28968,
+				"ex": {
+					"c2_feo_val": 28968
+				},
+				"data": {
+					"type": "all lions above or equal",
+					"based on": "level",
+					"needed": 2,
+					"needed counter": 0,
+					"reward type": "honey",
+					"reward combien": 2,
+					"time completed": 6,
+					"available": 1,
+					"active": 0
+				}
+			}]
+		},
+		"7360139416173163": {
+			"instances": []
+		},
+		"3803377852119337": {
+			"instances": []
+		},
+		"6349916444108112": {
+			"instances": [],
+			"ex": {
+				"lastBehIndex": 0
+			}
+		},
+		"2099321260430553": {
+			"instances": [{
+				"uid": 71,
+				"data": {
+					
+				}
+			}]
+		},
+		"7589780074901761": {
+			"instances": []
+		},
+		"4467673521804933": {
+			"instances": [{
+				"uid": 275,
+				"data": {
+					"arrow factory upgrades": "unlocked",
+					"arrow bee": "unlocked",
+					"arrow rewards": "unlocked",
+					"arrow lions": "unlocked"
+				}
+			}]
+		},
+		"5586148913928903": {
+			"instances": []
+		},
+		"6797678188612642": {
+			"instances": []
+		}
+	},
+	"layouts": {
+		"7935319208340716": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"6806647216965134": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"133572707510016": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"4506622162456804": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					153,
+					153],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"8714149234599271": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"7392104493616984": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"7840209726117845": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 1708,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"3073573355778764": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"1520303894250391": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"1707574892777851": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"9425294965741368": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"4898877864787528": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [153,
+					153,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"2044091212243138": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"8408328722060075": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"718324164358426": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4689413777486389": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4479049786812526": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"3579659562841001": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"8034907529835098": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"6439981873514368": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					204,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"5769901810952235": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"5567146703275886": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"185487701927318": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					204,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"9269201384394396": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [102,
+					0,
+					204],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"2538180260252036": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 1708,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"5153871463022487": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"7447136426492974": {
+			"sx": 1006.1094185911958,
+			"sy": 504.4552690483644,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				"5246547682708114": [{
+					"uid": 195,
+					"ex": {
+						"c2_feo_val": 0
+					},
+					"ivs": {
+						"7024890554918371": 0,
+						"7130495753662925": 68,
+						"9638501070773712": 3600,
+						"6475709690379468": 4740.553000000021,
+						"6955178951385895": 3600,
+						"4270270175809803": 5.525000000000006,
+						"9952528029607260": 1,
+						"3188355233868491": 0,
+						"4190724656124025": 70
+					},
+					"w": {
+						"x": 853,
+						"y": 271,
+						"w": 269,
+						"h": 363,
+						"l": 4078537173173523,
+						"zi": 34,
+						"hX": 0.5018587112426758,
+						"hY": 0.5013774037361145
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9173746592414604,
+						"f": 0,
+						"cas": 5,
+						"fs": 4064.385834692258,
+						"ar": 0,
+						"at": 4069.736258692245,
+						"ap": false
+					}
+				},
+				{
+					"uid": 196,
+					"ex": {
+						"c2_feo_val": 1
+					},
+					"ivs": {
+						"7024890554918371": 1,
+						"7130495753662925": 44,
+						"9638501070773712": 25200,
+						"6475709690379468": 88624.38299999986,
+						"6955178951385895": 3600,
+						"4270270175809803": 4.694999999999997,
+						"9952528029607260": 1,
+						"3188355233868491": 0,
+						"4190724656124025": 90
+					},
+					"w": {
+						"x": 1150,
+						"y": 271,
+						"w": 269,
+						"h": 363,
+						"l": 4078537173173523,
+						"zi": 35,
+						"hX": 0.5018587112426758,
+						"hY": 0.5013774037361145
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9173746592414604,
+						"f": 0,
+						"cas": 5,
+						"fs": 4065.2192364422453,
+						"ar": 0,
+						"at": 4069.736258692245,
+						"ap": false
+					}
+				},
+				{
+					"uid": 197,
+					"ex": {
+						"c2_feo_val": 2
+					},
+					"ivs": {
+						"7024890554918371": 2,
+						"7130495753662925": 26,
+						"9638501070773712": 61200,
+						"6475709690379468": 64705.60000000142,
+						"6955178951385895": 3600,
+						"4270270175809803": 4.061999999999991,
+						"9952528029607260": 1,
+						"3188355233868491": 0,
+						"4190724656124025": 80
+					},
+					"w": {
+						"x": 853,
+						"y": 653,
+						"w": 269,
+						"h": 363,
+						"l": 4078537173173523,
+						"zi": 36,
+						"hX": 0.5018587112426758,
+						"hY": 0.5013774037361145
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9173746592414604,
+						"f": 0,
+						"cas": 5,
+						"fs": 4065.852617525584,
+						"ar": 0,
+						"at": 4069.736258692245,
+						"ap": false
+					}
+				},
+				{
+					"uid": 198,
+					"ex": {
+						"c2_feo_val": 3
+					},
+					"ivs": {
+						"7024890554918371": 3,
+						"7130495753662925": 22,
+						"9638501070773712": 111600,
+						"6475709690379468": 168745.766,
+						"6955178951385895": 3600,
+						"4270270175809803": 3.394999999999993,
+						"9952528029607260": 1,
+						"3188355233868491": 0,
+						"4190724656124025": 90
+					},
+					"w": {
+						"x": 1146,
+						"y": 656,
+						"w": 269,
+						"h": 363,
+						"l": 4078537173173523,
+						"zi": 37,
+						"hX": 0.5018587112426758,
+						"hY": 0.5013774037361145
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9173746592414604,
+						"f": 0,
+						"cas": 5,
+						"fs": 4066.519299442255,
+						"ar": 0,
+						"at": 4069.736258692245,
+						"ap": false
+					}
+				}],
+				"7589780074901761": [{
+					"uid": 241,
+					"ivs": {
+						"5998943843714928": 1459726302718
+					},
+					"w": {
+						"x": 1475,
+						"y": 437,
+						"w": 147,
+						"h": 153,
+						"l": 4078537173173523,
+						"zi": 38,
+						"hX": 0.5714285969734192,
+						"hY": 0.6078431606292725
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9175592382971256,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}]
+			},
+			"fx": [],
+			"layers": {
+				"8585092296721857": {
+					"s": 1,
+					"a": 0,
+					"vl": 686.1094185911958,
+					"vt": 24.455269048364414,
+					"vr": 1326.1094185911957,
+					"vb": 984.4552690483645,
+					"v": true,
+					"bc": [153,
+					102,
+					153],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"2282415571571106": {
+					"s": 1,
+					"a": 0,
+					"vl": 686.1094185911958,
+					"vt": 24.455269048364414,
+					"vr": 1326.1094185911957,
+					"vb": 984.4552690483645,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"2229864257032313": {
+					"s": 1,
+					"a": 0,
+					"vl": 686.1094185911958,
+					"vt": 24.455269048364414,
+					"vr": 1326.1094185911957,
+					"vb": 984.4552690483645,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4078537173173523": {
+					"s": 1,
+					"a": 0,
+					"vl": 686.1094185911958,
+					"vt": 24.455269048364414,
+					"vr": 1326.1094185911957,
+					"vb": 984.4552690483645,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"8392590954277976": {
+					"s": 1,
+					"a": 0,
+					"vl": 686.1094185911958,
+					"vt": 24.455269048364414,
+					"vr": 1326.1094185911957,
+					"vb": 984.4552690483645,
+					"v": true,
+					"bc": [102,
+					0,
+					204],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4345301578877748": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"961501091748396": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"9664383942492218": {
+			"sx": 1119,
+			"sy": 493.0000000000002,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				"6009999432359583": [{
+					"uid": 257,
+					"w": {
+						"x": 857,
+						"y": 2419,
+						"w": 527,
+						"h": 106,
+						"l": 7734771682489515,
+						"zi": 3,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9455856121389184,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 260,
+					"w": {
+						"x": 857,
+						"y": 2541,
+						"w": 527,
+						"h": 106,
+						"l": 7734771682489515,
+						"zi": 7,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9455856121389184,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 261,
+					"w": {
+						"x": 857,
+						"y": 2663,
+						"w": 527,
+						"h": 106,
+						"l": 7734771682489515,
+						"zi": 10,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9455856121389184,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 262,
+					"w": {
+						"x": 860,
+						"y": 2785,
+						"w": 527,
+						"h": 106,
+						"l": 7734771682489515,
+						"zi": 12,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9455856121389184,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}],
+				"5490029273198872": [{
+					"uid": 271,
+					"ivs": {
+						"7230698741477582": 1,
+						"3318234215369156": 470151
+					},
+					"w": {
+						"x": 861,
+						"y": 2434,
+						"w": 515,
+						"h": 83,
+						"l": 8306006655282671,
+						"zi": 0,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"t": "Bee #1 speed: Current: Max!",
+						"f": "24pt Arial",
+						"c": "rgb(0,0,0)",
+						"ha": 0,
+						"va": 0,
+						"wr": true,
+						"lho": 0,
+						"fn": "Arial",
+						"fs": "",
+						"ps": 24,
+						"pxh": 36,
+						"tw": 0,
+						"th": 0,
+						"lrt": 740986
+					}
+				},
+				{
+					"uid": 272,
+					"ivs": {
+						"7230698741477582": 2,
+						"3318234215369156": 86737
+					},
+					"w": {
+						"x": 861,
+						"y": 2555,
+						"w": 515,
+						"h": 83,
+						"l": 8306006655282671,
+						"zi": 1,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"t": "Bee #2 speed: 14\nUpgrade cost: 86 737 salads",
+						"f": "24pt Arial",
+						"c": "rgb(0,0,0)",
+						"ha": 0,
+						"va": 0,
+						"wr": true,
+						"lho": 0,
+						"fn": "Arial",
+						"fs": "",
+						"ps": 24,
+						"pxh": 36,
+						"tw": 0,
+						"th": 0,
+						"lrt": 740985
+					}
+				},
+				{
+					"uid": 273,
+					"ivs": {
+						"7230698741477582": 3,
+						"3318234215369156": 87620
+					},
+					"w": {
+						"x": 861,
+						"y": 2675,
+						"w": 515,
+						"h": 83,
+						"l": 8306006655282671,
+						"zi": 2,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"t": "Bee #3 speed: 12\nUpgrade cost: 87 620 salads",
+						"f": "24pt Arial",
+						"c": "rgb(0,0,0)",
+						"ha": 0,
+						"va": 0,
+						"wr": true,
+						"lho": 0,
+						"fn": "Arial",
+						"fs": "",
+						"ps": 24,
+						"pxh": 36,
+						"tw": 0,
+						"th": 0,
+						"lrt": 740984
+					}
+				},
+				{
+					"uid": 274,
+					"ivs": {
+						"7230698741477582": 4,
+						"3318234215369156": 156556
+					},
+					"w": {
+						"x": 861,
+						"y": 2796,
+						"w": 515,
+						"h": 83,
+						"l": 8306006655282671,
+						"zi": 3,
+						"hX": 0,
+						"hY": 0
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"t": "Bee #4 speed: 12\nUpgrade cost: 156 556 salads",
+						"f": "24pt Arial",
+						"c": "rgb(0,0,0)",
+						"ha": 0,
+						"va": 0,
+						"wr": true,
+						"lho": 0,
+						"fn": "Arial",
+						"fs": "",
+						"ps": 24,
+						"pxh": 36,
+						"tw": 0,
+						"th": 0,
+						"lrt": 740984
+					}
+				}],
+				"5214980029075165": [{
+					"uid": 279,
+					"ivs": {
+						"8246387739080951": 19,
+						"8504193921132513": 16,
+						"4191659673427779": 19,
+						"186393763798137": 491520,
+						"2892429438510819": 0,
+						"5116439341233498": 7,
+						"6847551949910904": 10
+					},
+					"w": {
+						"x": 1340,
+						"y": 783,
+						"w": 163.8334045410156,
+						"h": 151.8798980712891,
+						"l": 9169726377349044,
+						"zi": 4,
+						"hX": 0.5064377784729004,
+						"hY": 0.5138888955116272
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 8839356722953241,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}],
+				"1702331039481137": [{
+					"uid": 280,
+					"ex": {
+						
+					},
+					"ivs": {
+						"2406122236208806": 1,
+						"1302145897562813": 25
+					},
+					"w": {
+						"x": 1101.9999999999977,
+						"y": 499.9999999999975,
+						"w": 445,
+						"h": 283.2000122070313,
+						"l": 9169726377349044,
+						"zi": 7,
+						"hY": 0.4166666567325592
+					},
+					"behs": {
+						"4019090817851407": {
+							"e": true,
+							"im": true,
+							"pr": true,
+							"d": 1,
+							"fr": 0.5,
+							"re": 0.1,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": 0,
+							"vy": 0,
+							"om": 0
+						}
+					},
+					"data": {
+						"a": 3215945281272706,
+						"f": 1,
+						"cas": 2,
+						"fs": 3950.5,
+						"ar": 0,
+						"at": 3950.663236365386
+					}
+				}],
+				"7589780074901761": [{
+					"uid": 294,
+					"ivs": {
+						"5998943843714928": 1459726337690
+					},
+					"w": {
+						"x": 1665,
+						"y": 414,
+						"w": 147,
+						"h": 153,
+						"l": 9169726377349044,
+						"zi": 8,
+						"hX": 0.5714285969734192,
+						"hY": 0.6078431606292725
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9175592382971256,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}],
+				"3644795865062729": [{
+					"uid": 8,
+					"ivs": {
+						"4295317832790693": 19,
+						"9475304309134900": 19,
+						"3321211388495565": 10
+					},
+					"w": {
+						"x": 1119.790405273438,
+						"y": 814,
+						"w": 97,
+						"h": 94,
+						"l": 9169726377349044,
+						"zi": 9,
+						"hX": 0.5029940009117126
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 3322504650715733,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}],
+				"4716704536026207": [{
+					"uid": 301,
+					"ex": {
+						"c2_feo_val": 1
+					},
+					"ivs": {
+						"3220576457764413": 1,
+						"6128146278882916": 20,
+						"1991404268606079": 500,
+						"2282952334753853": "carry",
+						"8587644090087937": 41871
+					},
+					"w": {
+						"x": 998.2710789197328,
+						"y": 533.9738610348958,
+						"w": 51.7,
+						"h": 49.500000000000036,
+						"l": 9169726377349044,
+						"zi": 13,
+						"hX": 0.7234042286872864,
+						"hY": 0.8074073791503906
+					},
+					"behs": {
+						"1818596033610981": {
+							"acc": 0,
+							"g": 0,
+							"dx": -6.826521419192599,
+							"dy": 499.9533964334209,
+							"lx": 998.3848761784005,
+							"ly": 525.6397004160146,
+							"lka": 0,
+							"t": 1058541.4592574325,
+							"e": true
+						}
+					},
+					"data": {
+						"a": 7919122311649333,
+						"f": 1,
+						"cas": 20,
+						"fs": 3950.6500000056067,
+						"ar": 0,
+						"at": 3950.663236365386
+					}
+				},
+				{
+					"uid": 302,
+					"ex": {
+						"c2_feo_val": 2
+					},
+					"ivs": {
+						"3220576457764413": 2,
+						"6128146278882916": 14,
+						"1991404268606079": 372.5,
+						"2282952334753853": "standby",
+						"8587644090087937": -1
+					},
+					"w": {
+						"x": 977.7002773138529,
+						"y": 692.2037457820735,
+						"w": 40.42,
+						"h": 38.7,
+						"l": 9169726377349044,
+						"zi": 15,
+						"hX": 0.7234042286872864,
+						"hY": 0.8074073791503906
+					},
+					"behs": {
+						"1818596033610981": {
+							"acc": 0,
+							"g": 0,
+							"dx": 0,
+							"dy": 0,
+							"lx": 977.7002773138529,
+							"ly": 692.2037457820735,
+							"lka": 0,
+							"t": 683427.1737333565,
+							"e": true
+						}
+					},
+					"data": {
+						"a": 7919122311649333,
+						"f": 1,
+						"cas": 20,
+						"fs": 3950.6500000056067,
+						"ar": 0,
+						"at": 3950.663236365386
+					}
+				},
+				{
+					"uid": 303,
+					"ex": {
+						"c2_feo_val": 3
+					},
+					"ivs": {
+						"3220576457764413": 3,
+						"6128146278882916": 12,
+						"1991404268606079": 330,
+						"2282952334753853": "reach",
+						"8587644090087937": 41873
+					},
+					"w": {
+						"x": 1004.4497490928096,
+						"y": 423.1946006339063,
+						"w": 36.660000000000004,
+						"h": 35.1,
+						"l": 9169726377349044,
+						"zi": 17,
+						"hX": 0.7234042286872864,
+						"hY": 0.8074073791503906
+					},
+					"behs": {
+						"1818596033610981": {
+							"acc": 0,
+							"g": 0,
+							"dx": 297.23842318647274,
+							"dy": -143.3503393146293,
+							"lx": 999.4948217363576,
+							"ly": 425.5842328699148,
+							"lka": 0,
+							"t": 497122.91331427626,
+							"e": true
+						}
+					},
+					"data": {
+						"a": 7919122311649333,
+						"f": 1,
+						"cas": 20,
+						"fs": 3950.6500000056067,
+						"ar": 0,
+						"at": 3950.663236365386
+					}
+				},
+				{
+					"uid": 58,
+					"ex": {
+						"c2_feo_val": 4
+					},
+					"ivs": {
+						"3220576457764413": 4,
+						"6128146278882916": 12,
+						"1991404268606079": 330,
+						"2282952334753853": "carry",
+						"8587644090087937": 41872
+					},
+					"w": {
+						"x": 1019.5485756087585,
+						"y": 441.21492085671343,
+						"w": 36.660000000000004,
+						"h": 35.1,
+						"l": 9169726377349044,
+						"zi": 19,
+						"hX": 0.7234042286872864,
+						"hY": 0.8074073791503906
+					},
+					"behs": {
+						"1818596033610981": {
+							"acc": 0,
+							"g": 0,
+							"dx": -59.377282056152445,
+							"dy": 324.61413767059514,
+							"lx": 1020.5383874778223,
+							"ly": 435.80364376207604,
+							"lka": 0,
+							"t": 306916.39673119114,
+							"e": true
+						}
+					},
+					"data": {
+						"a": 7919122311649333,
+						"f": 1,
+						"cas": 20,
+						"fs": 3950.6500000056067,
+						"ar": 0,
+						"at": 3950.663236365386
+					}
+				}],
+				"9209630044662388": [{
+					"uid": 41863,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "dropped",
+						"6896696954568411": 2
+					},
+					"w": {
+						"x": 1026.163644557146,
+						"y": 799.604930313437,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 23,
+						"a": 3.86781355345987,
+						"hY": 0.5384615659713745
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": 2.5037732159054302,
+							"vy": 0.825546295048278,
+							"om": 20.491346001135874
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 41865,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "dropped",
+						"6896696954568411": 1
+					},
+					"w": {
+						"x": 1052.3580679938307,
+						"y": 808.4314087758254,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 24,
+						"a": -4.014249907145223,
+						"hY": 0.5384615659713745
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": 2.520149860822021,
+							"vy": 0.8309460167364062,
+							"om": 20.476367364739286
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 41869,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "dropped",
+						"6896696954568411": 1
+					},
+					"w": {
+						"x": 980.4304785211627,
+						"y": 686.7920044996206,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 25,
+						"a": -3.294140005638316,
+						"hY": 0.5384615659713745
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": 0,
+							"vy": 0.3333333333333333,
+							"om": -28.241799729819334
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 41871,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "carried",
+						"6896696954568411": 0
+					},
+					"w": {
+						"x": 998.3856841529184,
+						"y": 525.6436356963886,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 26,
+						"a": 1.364277483610057,
+						"hY": 0.5384615659713745,
+						"ce": false
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": 0.37562302775302214,
+							"vy": 8.23066830655182,
+							"om": -0.48208524329855007
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 41872,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "carried",
+						"6896696954568411": 0
+					},
+					"w": {
+						"x": 1020.5251486202607,
+						"y": 435.82923373791357,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 27,
+						"a": -1.064553173713004,
+						"hY": 0.5384615659713745,
+						"ce": false
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": -1.4267028273679898,
+							"vy": 5.163116106316977,
+							"om": 3.4578803697856335
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				},
+				{
+					"uid": 41873,
+					"ex": {
+						
+					},
+					"ivs": {
+						"9406756358246948": "falling",
+						"6896696954568411": 0
+					},
+					"w": {
+						"x": 1243.410435478304,
+						"y": 325.1647472666871,
+						"w": 14,
+						"h": 13,
+						"l": 9169726377349044,
+						"zi": 28,
+						"a": 2.2457469932967467,
+						"hY": 0.5384615659713745
+					},
+					"behs": {
+						"1936616672555206": {
+							"e": true,
+							"im": false,
+							"pr": false,
+							"d": 10,
+							"fr": 0.1,
+							"re": 0.3,
+							"ld": 0,
+							"ad": 0.01,
+							"b": false,
+							"mcj": [],
+							"vx": -0.03117628072883595,
+							"vy": 20.695753756597206,
+							"om": 4.480647082632487
+						}
+					},
+					"data": {
+						"a": 3023358627610028,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}]
+			},
+			"fx": [],
+			"layers": {
+				"6773501120466672": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [102,
+					102,
+					153],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"1312635062112859": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [102,
+					0,
+					204],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"3360503241055595": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"7734771682489515": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"8306006655282671": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"9169726377349044": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"9092340384845184": {
+					"s": 1,
+					"a": 0,
+					"vl": 799,
+					"vt": 13.000000000000227,
+					"vr": 1439,
+					"vb": 973.0000000000002,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"434803198934181": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"715015176298928": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"8444431784359404": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				"7589780074901761": [{
+					"uid": 97,
+					"ivs": {
+						"5998943843714928": 1459705731100
+					},
+					"w": {
+						"x": -188,
+						"y": 383,
+						"w": 147,
+						"h": 153,
+						"l": 6350718701652926,
+						"zi": 0,
+						"hX": 0.5714285969734192,
+						"hY": 0.6078431606292725
+					},
+					"behs": {
+						
+					},
+					"data": {
+						"a": 9175592382971256,
+						"f": 0,
+						"cas": 5,
+						"fs": 0,
+						"ar": 0,
+						"at": 0
+					}
+				}]
+			},
+			"fx": [],
+			"layers": {
+				"6350718701652926": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [207,
+					191,
+					253],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"8183598444241301": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [102,
+					0,
+					204],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"6144116392519161": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"3770229110749418": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"7624105711630458": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4365996827232482": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"2069148896480696": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"938796960984": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [194,
+					246,
+					194],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"483542770757496": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"9978449007216528": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"4457641638635145": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"336084300422131": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"1069520349933924": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"427742443275625": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"1369274758726524": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"2379466837424291": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": true,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"2443946585998963": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"7331880118832514": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"6018980892533897": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 0,
+					"vb": 0,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		},
+		"5962035855720348": {
+			"sx": 320,
+			"sy": 480,
+			"s": 1,
+			"a": 0,
+			"w": 640,
+			"h": 960,
+			"fv": false,
+			"persist": {
+				
+			},
+			"fx": [],
+			"layers": {
+				"4508153184035681": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": false,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"5328878587902581": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"2009541227671428": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 1,
+					"py": 1,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"9903788474331102": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				},
+				"1004093934077447": {
+					"s": 1,
+					"a": 0,
+					"vl": 0,
+					"vt": 0,
+					"vr": 640,
+					"vb": 960,
+					"v": true,
+					"bc": [255,
+					255,
+					255],
+					"t": true,
+					"px": 0,
+					"py": 0,
+					"o": 1,
+					"zr": 1,
+					"fx": [],
+					"cg": [],
+					"instances": []
+				}
+			}
+		}
+	},
+	"events": {
+		"groups": {
+			"8757473814340235": true,
+			"7906277338568532": true,
+			"8754673480950891": true,
+			"8756537487001793": true,
+			"9768025433966212": true,
+			"3513415724425396": true,
+			"9383853222221444": true,
+			"769228176042275": true,
+			"9038698377792454": true,
+			"8286149581313041": true,
+			"8385435176568034": true,
+			"168130929400991": true,
+			"5809538651794419": true,
+			"3373127521768589": true,
+			"7051194549149644": true,
+			"7098275000725635": true,
+			"4587465909699658": true,
+			"9723364976985796": true,
+			"6915278078437985": true,
+			"1518877078274311": true,
+			"3791512196189419": true,
+			"5019531696412462": true,
+			"7148030219305508": true,
+			"1322280799825649": true,
+			"1941189896919642": true,
+			"3740395054702946": true,
+			"2463618726557668": true,
+			"8627174315040763": true,
+			"4872876774590663": true,
+			"8227255660068296": true,
+			"2084841826371189": true,
+			"1464147514479229": true,
+			"3792616009665136": true,
+			"5993132769924056": false,
+			"5689100297767431": true,
+			"6516691976608457": true,
+			"775314833482713": true,
+			"901981960933352": true,
+			"9599963043552252": true,
+			"887098112256477": true,
+			"8861246033139075": true,
+			"2153991481750325": true,
+			"9689064507054484": true,
+			"2134108211466926": true,
+			"539147761278121": true,
+			"5567629855902233": true,
+			"4503237485293908": true,
+			"8295221066856348": true,
+			"3338230937330577": true,
+			"1185016671241999": true,
+			"5344607217737034": true,
+			"8596006644764351": true,
+			"9177878621399596": true,
+			"8540978209649851": true,
+			"7796730826831464": true,
+			"4565471605711386": true,
+			"6210497927244467": true,
+			"7657935479989554": true,
+			"6800680869525266": true,
+			"8722717593667838": true,
+			"673829932700022": true,
+			"1711817597356589": true,
+			"568582691582884": true,
+			"5241718465079184": true,
+			"622358992184244": true,
+			"4531093225596998": true
+		},
+		"cnds": {
+			"2683204853402891": {
+				"ex": {
+					"Every_seconds": 29,
+					"Every_lastTime": 12673
+				}
+			},
+			"7734889423413394": {
+				"ex": {
+					"Every_seconds": 0.5,
+					"Every_lastTime": 12692.021683209321
+				}
+			},
+			"4196465138572443": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12692.021683209321
+				}
+			},
+			"4934258088047048": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12692.021683209321
+				}
+			},
+			"9202097605480088": {
+				"ex": {
+					"Every_seconds": 60,
+					"Every_lastTime": 12660
+				}
+			},
+			"1734838404821996": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			},
+			"4781094519941076": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			},
+			"2796770552786223": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12691.212134987356
+				}
+			},
+			"2094551076813639": {
+				"ex": {
+					"Every_seconds": 0.5,
+					"Every_lastTime": 12691.712134987356
+				}
+			},
+			"6654809113892262": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			},
+			"8546957919553539": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12691.279038904011
+				}
+			},
+			"1358619705820056": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			},
+			"8009287891295909": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			},
+			"4021333792367518": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12691.212134987356
+				}
+			},
+			"320209268615678": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12691.212134987356
+				}
+			},
+			"9249685647977042": {
+				"ex": {
+					"TriggerOnce_lastTick": 745554
+				}
+			},
+			"50541399760011": {
+				"ex": {
+					"Every_seconds": 1,
+					"Every_lastTime": 12674.677576070708
+				}
+			},
+			"8322033653922054": {
+				"ex": {
+					"collmemory": {
+						
+					}
+				}
+			}
+		},
+		"acts": {
+			"8512746536515936": {
+				"ex": {
+					"Spawn_LastExec": 32080985
+				}
+			},
+			"4127942007554423": {
+				"ex": {
+					"Spawn_LastExec": 32065163
+				}
+			}
+		},
+		"vars": {
+			"5178529854886543": "v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v127 v126b",
+			"1138619170543519": 6175531,
+			"4263644418163258": 0,
+			"7420510770361168": 897,
+			"735276383662506": 0.016,
+			"2557565007336424": 276626349062282.62,
+			"7373339718646982": 0,
+			"2451419822543461": "",
+			"3134179389740672": "2015-09-14",
+			"4410064742002127": 4,
+			"1891200974359444": 1,
+			"803739322960592": 1,
+			"5315505201151524": 0
+		}
+	},
+	"system": {
+		"waits": []
+	}
+}
