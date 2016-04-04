@@ -10,6 +10,21 @@
             <actions>
                 <action id="3" name="Clear storage" sid="6055040843456189" type="LocalStorage" />
                 <action id="-21" name="Reset global variables" sid="9478740291510873" type="System" />
+                <action id="14" name="Log" sid="5215430270436722" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage will be cleared.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2584332708771722">
+            <conditions>
+                <condition id="3" name="On storage cleared" sid="9059846740955427" type="LocalStorage" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="8990335674703304" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Local storage cleared&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>
