@@ -1129,6 +1129,11 @@
                         <comment>menhir enlarged</comment>
                         <event-block sid="271405396349379">
                             <conditions>
+                                <condition id="-8" name="Compare two values" sid="4650005619749511" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;menhir&quot;)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">29</param>
+                                </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="5186823073022031" type="quest">
                                     <param id="0" name="Unique ID">Function.Call(&quot;get or create&quot;, &quot;menhir enlarged&quot;)</param>
                                 </condition>

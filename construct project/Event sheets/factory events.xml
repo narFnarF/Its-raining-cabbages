@@ -798,6 +798,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="1408528661964655" type="menhir">
+                            <param id="0" name="Instance variable">level</param>
+                            <param id="1" name="Value">min(menhir.level, 30)</param>
+                        </action>
                         <action id="-5" name="Set width" sid="5619613339760502" type="menhir">
                             <param id="0" name="Width">(menhir.level)*15+70</param>
                         </action>
