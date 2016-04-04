@@ -249,7 +249,7 @@
                     </actions>
                     <sub-events>
                         <comment>Permettre ou non de réutiliser une vieille savefile</comment>
-                        <variable comment="Permettre ou non de réutiliser une vieille savefile. 1=true" constant="1" name="ALLOW_OLD_SAVEFILE" sid="7658853365759066" static="0" type="number">1</variable>
+                        <variable comment="Permettre ou non de réutiliser une vieille savefile. 1=true" constant="1" name="ALLOW_OLD_SAVEFILE" sid="7658853365759066" static="0" type="number">0</variable>
                         <event-block sid="5160525587991394">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="8796818999843201" type="System">
