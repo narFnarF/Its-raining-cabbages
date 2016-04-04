@@ -3,14 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>savefile error events</name>
     <events>
-        <event-block disabled="1" sid="664840260410674">
+        <event-block sid="8147373363603345">
             <conditions>
-                <condition id="0" name="On any touch start" sid="705138946179585" type="Touch" />
+                <condition id="-2" name="On start of layout" sid="707016326871498" type="System" />
             </conditions>
             <actions>
-                <action id="-37" name="Load" sid="4973557677273387" type="System">
-                    <param id="0" name="Slot">&quot;new game&quot;</param>
-                </action>
+                <action id="3" name="Clear storage" sid="6055040843456189" type="LocalStorage" />
+                <action id="-21" name="Reset global variables" sid="9478740291510873" type="System" />
             </actions>
         </event-block>
     </events>
