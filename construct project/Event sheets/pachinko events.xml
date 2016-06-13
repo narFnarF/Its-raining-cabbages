@@ -499,15 +499,22 @@
                                         <event-block sid="2163008714903629">
                                             <conditions>
                                                 <condition id="-6" name="Every X seconds" sid="9113444571315108" type="System">
-                                                    <param id="0" name="Interval (seconds)">1</param>
+                                                    <param id="0" name="Interval (seconds)">4</param>
+                                                </condition>
+                                                <condition id="-12" name="Repeat" sid="1981389019548773" type="System">
+                                                    <param id="0" name="Count">4</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="161418194553253" type="System">
+                                                <action id="-3" name="Create object" sid="3516529147243116" type="System">
                                                     <param id="0" name="Object to create">lionDisc</param>
                                                     <param id="1" name="Layer">&quot;game&quot;</param>
                                                     <param id="2" name="X">random(0+50, LayoutWidth-50)</param>
-                                                    <param id="3" name="Y">25</param>
+                                                    <param id="3" name="Y">100 - (loopindex+1) *31 </param>
+                                                </action>
+                                                <action id="14" name="Log" sid="2220552301528322" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">loopindex+1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
