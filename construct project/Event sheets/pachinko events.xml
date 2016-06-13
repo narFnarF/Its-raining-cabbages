@@ -64,6 +64,21 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>When lions are stuck, this nudges them a little</comment>
+        <event-block sid="2135717933181216">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6849933162431364" type="Touch">
+                    <param id="0" name="Object">lionDisc</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="162313354830318" type="lionDisc">
+                    <param id="0" name="Impulse">random(5, 15)</param>
+                    <param id="1" name="Angle">random(0, 360)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="673829932700022" title="pachinko finished">
             <sub-events>
                 <variable comment="1=true" constant="0" name="finished" sid="1891200974359444" static="1" type="number">0</variable>
@@ -450,9 +465,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="4531093225596998" title="pachinko switch">
+                <event-group description="" sid="4531093225596998" title="pachinko switch &amp; simulator">
                     <sub-events>
-                        <comment>la switch qui active le mode simulation</comment>
+                        <comment>the switch to activate simulation mode</comment>
                         <event-block sid="3242338340910672">
                             <conditions>
                                 <condition id="-18" name="Is in preview" sid="3071861463874247" type="System" />
