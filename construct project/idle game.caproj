@@ -1583,6 +1583,32 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="bumber">
+            <object-type name="bumper" sid="5538674177708955">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="controllable" sid="8313223512928055" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="1904193286270396">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936579645237105" speed="5">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="0.538462" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bumberArrow" sid="7444168425063014">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9283990682878906" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1666,6 +1692,7 @@
         <layout>lions.xml</layout>
         <layout>factory.xml</layout>
         <layout>rewards.xml</layout>
+        <layout>bumper.xml</layout>
         <layout>grinding.xml</layout>
         <layout>grinding sector.xml</layout>
         <layout>pachinko.xml</layout>
