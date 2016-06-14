@@ -1596,10 +1596,10 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936579645237105" speed="5">
-                        <frame duration="1" hotspotX="0.538462" hotspotY="0.538462" />
+                        <frame duration="1" hotspotX="0.545455" hotspotY="0.545455" />
                     </animation>
                     <animation framecount="1" loop="0" name="main" pingpong="0" repeatcount="1" repeatto="0" sid="4058259544084944" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1619,7 +1619,10 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7342439372298691" speed="5">
+                    <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="7342439372298691" speed="5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bump" pingpong="0" repeatcount="1" repeatto="0" sid="6903117206360079" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

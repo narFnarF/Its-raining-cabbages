@@ -193,8 +193,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>335</x>
-                        <y>845</y>
+                        <x>692</x>
+                        <y>694</y>
                         <z>0</z>
                         <width>131</width>
                         <height>99</height>
@@ -237,11 +237,11 @@
                         <x>236</x>
                         <y>507</y>
                         <z>0</z>
-                        <width>88.121635437</width>
-                        <height>86.652946472</height>
+                        <width>79.648399353</width>
+                        <height>78.320930481</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -278,11 +278,11 @@
                         <x>410</x>
                         <y>260</y>
                         <z>0</z>
-                        <width>70.876060486</width>
-                        <height>69.092445374</height>
+                        <width>59.972049713</width>
+                        <height>58.462837219</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
+                        <hotspotX>0.545454562</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -319,11 +319,11 @@
                         <x>295</x>
                         <y>155</y>
                         <z>0</z>
-                        <width>70.876060486</width>
-                        <height>69.092445374</height>
+                        <width>59.972049713</width>
+                        <height>58.462837219</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
+                        <hotspotX>0.545454562</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -360,11 +360,11 @@
                         <x>125</x>
                         <y>194</y>
                         <z>0</z>
-                        <width>70.876060486</width>
-                        <height>69.092445374</height>
+                        <width>59.972049713</width>
+                        <height>58.462837219</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
+                        <hotspotX>0.545454562</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -550,7 +550,7 @@
                 <instance type="bumper" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -561,7 +561,7 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>0</friction>
+                                <friction>1</friction>
                                 <elasticity>1</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0</angular-damping>
@@ -576,11 +576,11 @@
                         <x>41</x>
                         <y>900</y>
                         <z>0</z>
-                        <width>132.939834595</width>
-                        <height>132.939834595</height>
+                        <width>120.157157898</width>
+                        <height>120.157157898</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -588,7 +588,7 @@
                 <instance type="bumper" uid="123">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -599,7 +599,7 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>0</friction>
+                                <friction>1</friction>
                                 <elasticity>1</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0</angular-damping>
@@ -614,11 +614,11 @@
                         <x>30</x>
                         <y>147</y>
                         <z>0</z>
-                        <width>132.939834595</width>
-                        <height>132.939834595</height>
+                        <width>120.157157898</width>
+                        <height>120.157157898</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -626,7 +626,7 @@
                 <instance type="bumper" uid="124">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -637,7 +637,7 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>0</friction>
+                                <friction>1</friction>
                                 <elasticity>1</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0</angular-damping>
@@ -652,11 +652,11 @@
                         <x>613</x>
                         <y>145</y>
                         <z>0</z>
-                        <width>132.939834595</width>
-                        <height>132.939834595</height>
+                        <width>120.157157898</width>
+                        <height>120.157157898</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -664,7 +664,7 @@
                 <instance type="bumper" uid="125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -675,7 +675,7 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>0</friction>
+                                <friction>1</friction>
                                 <elasticity>1</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0</angular-damping>
@@ -690,11 +690,11 @@
                         <x>616</x>
                         <y>895</y>
                         <z>0</z>
-                        <width>132.939834595</width>
-                        <height>132.939834595</height>
+                        <width>120.157157898</width>
+                        <height>120.157157898</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
