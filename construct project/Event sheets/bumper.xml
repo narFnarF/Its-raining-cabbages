@@ -1,132 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>rewards screen events</name>
+    <name>bumper</name>
     <events>
         <include>gameplay stuff</include>
         <include>global events</include>
         <include>snow events</include>
-        <event-block sid="6749129359702008">
+        <event-block sid="9984069444931865">
             <conditions>
-                <condition id="0" name="On function" sid="5343719830450125" type="Function">
+                <condition id="0" name="On function" sid="4198503541652637" type="Function">
                     <param id="0" name="Name">&quot;first launch&quot;</param>
                 </condition>
             </conditions>
             <actions />
         </event-block>
-        <event-block sid="5119817112695528">
+        <event-block sid="1670298587199469">
             <conditions>
-                <condition id="0" name="On function" sid="7101631958441446" type="Function">
+                <condition id="0" name="On function" sid="786667404434042" type="Function">
                     <param id="0" name="Name">&quot;time has passed&quot;</param>
                 </condition>
             </conditions>
             <actions />
         </event-block>
-        <event-block sid="7261655952238127">
+        <event-block sid="1029270866469603">
             <conditions>
-                <condition id="0" name="On key pressed" sid="9945795479560111" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="8170588709493736" type="Keyboard">
                     <param id="0" name="Key">82 (R)</param>
                 </condition>
-                <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
+                <condition id="-18" name="Is in preview" sid="1728337863740741" type="System" />
             </conditions>
             <actions />
         </event-block>
-        <event-block sid="818327005612731">
+        <event-block sid="9202360583893158">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="5656428855102734" type="System" />
+                <condition id="-2" name="On start of layout" sid="3125739845773166" type="System" />
             </conditions>
             <actions>
-                <action behavior="Physics" id="12" name="Set world gravity" sid="5279415326452207" type="ball">
+                <action behavior="Physics" id="12" name="Set world gravity" sid="4909501704676327" type="ball">
                     <param id="0" name="Gravity">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1503813688882588">
+        <event-block sid="5075424874742318">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="7610041774633573" type="ball">
+                <condition id="-8" name="Is boolean instance variable set" sid="1045812716688884" type="ball">
                     <param id="0" name="Instance variable">controllable</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <comment>parameters</comment>
-                <variable constant="0" name="impulseModifier" sid="7068951699213203" static="0" type="number">0.1</variable>
+                <variable constant="0" name="impulseModifier" sid="703849825978996" static="0" type="number">0.1</variable>
                 <comment>instance variables</comment>
-                <variable comment="1=true" constant="0" name="dragging" sid="4345586919886723" static="1" type="number">0</variable>
-                <variable constant="0" name="startX" sid="1776728450196114" static="1" type="number">0</variable>
-                <variable constant="0" name="startY" sid="8552038079757461" static="1" type="number">0</variable>
-                <variable constant="0" name="direction" sid="2661030296919553" static="0" type="number">0</variable>
-                <variable constant="0" name="force" sid="5902434476238803" static="0" type="number">0</variable>
-                <event-block sid="1668184587076047">
+                <variable comment="1=true" constant="0" name="dragging" sid="4538971249611388" static="1" type="number">0</variable>
+                <variable constant="0" name="startX" sid="1435626123097308" static="1" type="number">0</variable>
+                <variable constant="0" name="startY" sid="210699399615633" static="1" type="number">0</variable>
+                <variable constant="0" name="direction" sid="5182177522009323" static="0" type="number">0</variable>
+                <variable constant="0" name="force" sid="242534955224759" static="0" type="number">0</variable>
+                <event-block sid="5211093871227045">
                     <conditions>
-                        <condition id="10" name="On Nth touch start" sid="6614416568209648" type="Touch">
+                        <condition id="10" name="On Nth touch start" sid="5348282761921276" type="Touch">
                             <param id="0" name="Touch number">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="4202738361706932" type="Browser">
+                        <action id="14" name="Log" sid="2864323191350004" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;click&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="8940847710334885" type="ball">
+                        <action id="-13" name="Set boolean" sid="8853480662469307" type="ball">
                             <param id="0" name="Instance variable">controllable</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="6916784074538396" type="System">
+                        <action id="-9" name="Set value" sid="8040429921499392" type="System">
                             <param id="0" name="Variable">dragging</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="3393247834039312" type="directionArrow">
+                        <action id="-15" name="Set visible" sid="5023980186661533" type="directionArrow">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4404273741107718" type="System">
+                        <action id="-9" name="Set value" sid="1584197156248493" type="System">
                             <param id="0" name="Variable">startX</param>
                             <param id="1" name="Value">Touch.XAt(0)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="6420491542565067" type="System">
+                        <action id="-9" name="Set value" sid="3061522784374936" type="System">
                             <param id="0" name="Variable">startY</param>
                             <param id="1" name="Value">Touch.YAt(0)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3412761502006012">
+                <event-block sid="9552267438979202">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="8165928430305082" type="System">
+                        <action id="-9" name="Set value" sid="8101494838329389" type="System">
                             <param id="0" name="Variable">direction</param>
                             <param id="1" name="Value">angle(Touch.X, Touch.Y, startX, startY)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="1695877908166156" type="System">
+                        <action id="-9" name="Set value" sid="2915712961103554" type="System">
                             <param id="0" name="Variable">force</param>
                             <param id="1" name="Value">distance(Touch.X, Touch.Y, startX, startY)</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="5976190840536224" type="directionArrow">
+                        <action id="-4" name="Set position to another object" sid="2897051048286155" type="directionArrow">
                             <param id="0" name="Object">ball</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="5676029230663448" type="directionArrow">
+                        <action id="-8" name="Set angle" sid="6233137975424716" type="directionArrow">
                             <param id="0" name="Angle">direction</param>
                         </action>
-                        <action id="-5" name="Set width" sid="4052622721589256" type="directionArrow">
+                        <action id="-5" name="Set width" sid="399441022132199" type="directionArrow">
                             <param id="0" name="Width">force</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7341857879597324">
+                <event-block sid="3880796025134926">
                     <conditions>
-                        <condition id="11" name="On Nth touch end" sid="3535624047071668" type="Touch">
+                        <condition id="11" name="On Nth touch end" sid="9102986489048731" type="Touch">
                             <param id="0" name="Touch number">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="440291769371155" type="ball">
+                        <action disabled="1" id="-13" name="Set boolean" sid="2937518970289646" type="ball">
                             <param id="0" name="Instance variable">controllable</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="1070410975207776" type="directionArrow">
+                        <action id="-15" name="Set visible" sid="4516647168762559" type="directionArrow">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="8756687365864938" type="ball">
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1522807059823672" type="ball">
                             <param id="0" name="Impulse">force * impulseModifier</param>
                             <param id="1" name="Angle">direction</param>
                             <param id="2" name="Image point">0</param>

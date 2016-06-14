@@ -1584,7 +1584,7 @@
             </object-type>
         </object-folder>
         <object-folder name="bumber">
-            <object-type name="bumper" sid="5538674177708955">
+            <object-type name="ball" sid="5538674177708955">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="controllable" sid="8313223512928055" type="boolean" />
@@ -1598,13 +1598,29 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936579645237105" speed="5">
                         <frame duration="1" hotspotX="0.538462" hotspotY="0.538462" />
                     </animation>
+                    <animation framecount="1" loop="0" name="main" pingpong="0" repeatcount="1" repeatto="0" sid="4058259544084944" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bumberArrow" sid="7444168425063014">
+            <object-type name="directionArrow" sid="7444168425063014">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9283990682878906" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bumper" sid="5268863288760189">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="8586064630637254">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7342439372298691" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1714,13 +1730,14 @@
             <event-sheet>gameplay stuff.xml</event-sheet>
             <event-sheet>global events.xml</event-sheet>
         </event-folder>
-        <event-sheet>rewards screen events.xml</event-sheet>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>
         <event-sheet>grinding events.xml</event-sheet>
         <event-sheet>grinding sector events.xml</event-sheet>
         <event-sheet>pachinko events.xml</event-sheet>
         <event-sheet>snow events.xml</event-sheet>
+        <event-sheet>rewards screen events.xml</event-sheet>
+        <event-sheet>bumper.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
