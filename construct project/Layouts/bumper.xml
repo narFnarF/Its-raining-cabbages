@@ -225,7 +225,7 @@
                                 <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0.5</linear-damping>
-                                <angular-damping>0</angular-damping>
+                                <angular-damping>0.5</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -266,7 +266,7 @@
                                 <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0.5</linear-damping>
-                                <angular-damping>0</angular-damping>
+                                <angular-damping>0.5</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -307,7 +307,7 @@
                                 <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0.5</linear-damping>
-                                <angular-damping>0</angular-damping>
+                                <angular-damping>0.5</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -348,7 +348,7 @@
                                 <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0.5</linear-damping>
-                                <angular-damping>0</angular-damping>
+                                <angular-damping>0.5</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>

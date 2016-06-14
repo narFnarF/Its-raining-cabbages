@@ -42,10 +42,21 @@
             </actions>
         </event-block>
         <event-block sid="1503813688882588">
-            <conditions />
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="7610041774633573" type="bumper">
+                    <param id="0" name="Instance variable">controllable</param>
+                </condition>
+            </conditions>
             <actions />
             <sub-events>
+                <comment>parameters</comment>
+                <variable constant="0" name="impulseModifier" sid="7068951699213203" static="0" type="number">0.1</variable>
+                <comment>instance variables</comment>
                 <variable comment="1=true" constant="0" name="dragging" sid="4345586919886723" static="1" type="number">0</variable>
+                <variable constant="0" name="startX" sid="1776728450196114" static="1" type="number">0</variable>
+                <variable constant="0" name="startY" sid="8552038079757461" static="1" type="number">0</variable>
+                <variable constant="0" name="direction" sid="2661030296919553" static="0" type="number">0</variable>
+                <variable constant="0" name="force" sid="5902434476238803" static="0" type="number">0</variable>
                 <event-block sid="1668184587076047">
                     <conditions>
                         <condition id="10" name="On Nth touch start" sid="6614416568209648" type="Touch">
@@ -68,24 +79,36 @@
                         <action id="-15" name="Set visible" sid="3393247834039312" type="bumberArrow">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="4404273741107718" type="System">
+                            <param id="0" name="Variable">startX</param>
+                            <param id="1" name="Value">Touch.XAt(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6420491542565067" type="System">
+                            <param id="0" name="Variable">startY</param>
+                            <param id="1" name="Value">Touch.YAt(0)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3412761502006012">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7610041774633573" type="bumper">
-                            <param id="0" name="Instance variable">controllable</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
+                        <action id="-9" name="Set value" sid="8165928430305082" type="System">
+                            <param id="0" name="Variable">direction</param>
+                            <param id="1" name="Value">angle(Touch.X, Touch.Y, startX, startY)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1695877908166156" type="System">
+                            <param id="0" name="Variable">force</param>
+                            <param id="1" name="Value">distance(Touch.X, Touch.Y, startX, startY)</param>
+                        </action>
                         <action id="-4" name="Set position to another object" sid="5976190840536224" type="bumberArrow">
                             <param id="0" name="Object">bumper</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-8" name="Set angle" sid="5676029230663448" type="bumberArrow">
-                            <param id="0" name="Angle">angle(Touch.X, Touch.Y, bumper.X, bumper.Y)</param>
+                            <param id="0" name="Angle">direction</param>
                         </action>
                         <action id="-5" name="Set width" sid="4052622721589256" type="bumberArrow">
-                            <param id="0" name="Width">distance(Touch.X, Touch.Y, bumper.X, bumper.Y)</param>
+                            <param id="0" name="Width">force</param>
                         </action>
                     </actions>
                 </event-block>
@@ -96,12 +119,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="440291769371155" type="bumper">
+                        <action disabled="1" id="-13" name="Set boolean" sid="440291769371155" type="bumper">
                             <param id="0" name="Instance variable">controllable</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="1070410975207776" type="bumberArrow">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="8756687365864938" type="bumper">
+                            <param id="0" name="Impulse">force * impulseModifier</param>
+                            <param id="1" name="Angle">direction</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
