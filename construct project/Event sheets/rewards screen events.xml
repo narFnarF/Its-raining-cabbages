@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>rewards screen events</name>
     <events>
+        <comment>Note: Quest tracking are done in the &quot;Gameplay stuff&quot; event sheet</comment>
         <include>gameplay stuff</include>
         <include>global events</include>
         <include>snow events</include>
@@ -12,15 +13,331 @@
                     <param id="0" name="Name">&quot;first launch&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="7683694140994252" type="Function">
+                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;You meet a black dude with black sunglasses who offers you 2 pills.&#x0D;&#x0A;&#x0D;&#x0A;«Starting now, you&apos;ll see the world bigger».&quot;{###}&quot;Cool I guess...&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="6408567102935197" type="Function">
+                    <param id="0" name="Name">&quot;get items&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;pills&quot;{###}2</param>
+                </action>
+            </actions>
         </event-block>
-        <event-block sid="5119817112695528">
+        <comment>this kicks the player to the factory layout, to avoid seing incorrect stats</comment>
+        <event-block sid="3418242097747272">
+            <conditions />
+            <actions />
+            <sub-events>
+                <variable comment="1=true" constant="0" name="justEntered" sid="6949926013632402" static="1" type="number">0</variable>
+                <event-block sid="2834006017917653">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="189518405426665" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7211215412657885" type="System">
+                            <param id="0" name="Variable">justEntered</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7501376879201671" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8559060420525369" type="System">
+                            <param id="0" name="Variable">justEntered</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9410450147324793">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6065604003673307" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4715292832057554">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="3239528589888872" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="9162408970250905" type="System">
+                                    <param id="0" name="Variable">justEntered</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="2723168429480639" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="7104180084379488" type="System">
+                                    <param id="0" name="Layout">factory</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Update the display, and set the visibility of the Collect button</comment>
+        <event-block sid="7334555190214475">
             <conditions>
-                <condition id="0" name="On function" sid="7101631958441446" type="Function">
-                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                <condition id="-1" name="Every tick" sid="4419579759884234" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1921765072029155" type="questsTxt">
+                    <param id="0" name="Text">&quot;Reward center:&quot; &amp; newline &amp; newline</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6145361355042384" type="questCollectBtn">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="type" sid="986228318847997" static="0" type="text"></variable>
+                <variable constant="0" name="neededCounter" sid="4257023409419588" static="0" type="number">0</variable>
+                <variable constant="0" name="needed" sid="807487963497305" static="0" type="number">0</variable>
+                <variable constant="0" name="basedOn" sid="8440620670234973" static="0" type="text"></variable>
+                <variable constant="0" name="timeCompleted" sid="3864742153559358" static="0" type="number">0</variable>
+                <variable constant="0" name="collectButtonIndex" sid="4357173043813129" static="0" type="number">-1</variable>
+                <event-block sid="2501920317254854">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="9934806301647427" type="System">
+                            <param id="0" name="Object">quest</param>
+                            <param id="1" name="Expression">quest.UID</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="2778975776645327" type="quest">
+                            <param id="0" name="Key">&quot;active&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3449282206342474" type="System">
+                            <param id="0" name="Variable">type</param>
+                            <param id="1" name="Value">quest.Get(&quot;type&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1256748454639034" type="System">
+                            <param id="0" name="Variable">basedOn</param>
+                            <param id="1" name="Value">quest.Get(&quot;based on&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="427686815531907" type="System">
+                            <param id="0" name="Variable">timeCompleted</param>
+                            <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8193095849880722" type="System">
+                            <param id="0" name="Variable">neededCounter</param>
+                            <param id="1" name="Value">quest.Get(&quot;needed counter&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1209379279704068" type="System">
+                            <param id="0" name="Variable">collectButtonIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1486537116570944">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8560749012816399" type="System">
+                                    <param id="0" name="Variable">basedOn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;events&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5752944545936393" type="System">
+                                    <param id="0" name="Variable">needed</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) * (timeCompleted+1)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="2064393449414431" type="questsTxt">
+                                    <param id="0" name="Text">type &amp; &quot;:&quot; &amp; newline &amp; Function.Call(&quot;format numbers&quot;, neededCounter) &amp; &quot;/&quot; &amp; Function.Call(&quot;format numbers&quot;, needed) &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4450280067823946">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9075705608112952" type="System">
+                                    <param id="0" name="Variable">basedOn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;level&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2150244802153719" type="System">
+                                    <param id="0" name="Variable">needed</param>
+                                    <param id="1" name="Value">quest.Get(&quot;needed&quot;) + timeCompleted</param>
+                                </action>
+                                <action id="1" name="Append text" sid="7618151175405635" type="questsTxt">
+                                    <param id="0" name="Text">type &amp; newline &amp; &quot;to level &quot; &amp; needed &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="rewardType" sid="1445440836014504" static="0" type="text"></variable>
+                        <variable constant="0" name="rewardCombien" sid="9265019375569856" static="0" type="number">0</variable>
+                        <event-block sid="5971558982783565">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="8748497312279159" type="System">
+                                    <param id="0" name="Variable">rewardType</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward type&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1095050971287049" type="System">
+                                    <param id="0" name="Variable">rewardCombien</param>
+                                    <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * (timeCompleted+1)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="5521807279279799" type="questsTxt">
+                                    <param id="0" name="Text">&quot;Reward: &quot; &amp; Function.Call(&quot;format numbers&quot;, rewardCombien)  &amp; &quot; &quot; &amp; rewardType &amp; newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="1544542140996164" type="questsTxt">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>set visibility</comment>
+                        <comment>first, select the button associated with the quest</comment>
+                        <event-block sid="7498773367361782">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="513331422236979" type="questCollectBtn">
+                                    <param id="0" name="Instance variable">nb</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">collectButtonIndex</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9334898304867685" type="questCollectBtn">
+                                    <param id="0" name="Instance variable">questID</param>
+                                    <param id="1" name="Value">quest.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>check if the event occured</comment>
+                                <event-block sid="6289171220853826">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8495334805079082" type="System">
+                                            <param id="0" name="Variable">basedOn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;events&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4302348937813878" type="System">
+                                            <param id="0" name="First value">neededCounter</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">needed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="7467857107003006" type="questCollectBtn">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>check if the level required is met</comment>
+                                <event-block sid="4018400704155451">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1638053512353147" type="System">
+                                            <param id="0" name="Variable">basedOn</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;level&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1744499243733571" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;get level of&quot;, type)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">needed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="361758039589434" type="questCollectBtn">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Clicking the Collect button</comment>
+        <event-block sid="728465832505418">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7452122217507895" type="Touch">
+                    <param id="0" name="Object">questCollectBtn</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4128640568667899" type="questCollectBtn" />
+                <condition id="-9" inverted="1" name="Is visible" sid="3794623327599527" type="purchasePopup" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1508772461475354" type="notificationBox">
+                    <param id="0" name="Instance variable">open</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9461912200245638" type="quest">
+                    <param id="0" name="Unique ID">questCollectBtn.questID</param>
                 </condition>
             </conditions>
             <actions />
+            <sub-events>
+                <variable constant="0" name="rewardType" sid="4358924219280783" static="0" type="text"></variable>
+                <variable constant="0" name="rewardCombien" sid="2963349630439143" static="0" type="number">0</variable>
+                <variable constant="0" name="timeCompleted" sid="3825966976465125" static="0" type="number">0</variable>
+                <event-block sid="3407207439365776">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="1981103939705308" type="System">
+                            <param id="0" name="Variable">timeCompleted</param>
+                            <param id="1" name="Value">quest.Get(&quot;time completed&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3381097661341825" type="System">
+                            <param id="0" name="Variable">rewardType</param>
+                            <param id="1" name="Value">quest.Get(&quot;reward type&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1855593493610919" type="System">
+                            <param id="0" name="Variable">rewardCombien</param>
+                            <param id="1" name="Value">quest.Get(&quot;reward combien&quot;) * (timeCompleted+1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="881287469971068" type="Function">
+                            <param id="0" name="Name">&quot;get items&quot;</param>
+                            <param id="1" name="Parameter {n}">rewardType{###}rewardCombien</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2668688715150017" type="Function">
+                            <param id="0" name="Name">&quot;text popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Reward: &quot; &amp; newline &amp; newline &amp; rewardCombien &amp; &quot; &quot; &amp; rewardType{###}choose(&quot;Cool!&quot;, &quot;Awesome!&quot;, &quot;Yay!&quot;, &quot;Nice!&quot;, &quot;Excellent!&quot;)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9236354444325787" type="Function">
+                            <param id="0" name="Name">&quot;notification&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Reward: &quot; &amp; rewardCombien &amp; &quot; &quot; &amp; rewardType</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5272647775498804" type="System">
+                            <param id="0" name="Object to create">plus1</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">questCollectBtn.X</param>
+                            <param id="3" name="Y">questCollectBtn.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8466090065484387" type="plus1">
+                            <param id="0" name="Text">&quot;+&quot; &amp; rewardCombien &amp; &quot; &quot; &amp; rewardType</param>
+                        </action>
+                        <action id="-36" name="Save" sid="3408430030868095" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>increment the TimeCompleted value, then remove the active quest</comment>
+                <event-block sid="2523564528657622">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set key" sid="6739587143187023" type="quest">
+                            <param id="0" name="Key">&quot;time completed&quot;</param>
+                            <param id="1" name="Value">timeCompleted + 1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="9252562787290235" type="quest">
+                            <param id="0" name="Key">&quot;active&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set key" sid="7236518333943349" type="quest">
+                            <param id="0" name="Key">&quot;needed counter&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="7261655952238127">
             <conditions>
@@ -29,111 +346,12 @@
                 </condition>
                 <condition id="-18" name="Is in preview" sid="2414291241380572" type="System" />
             </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="818327005612731">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="5656428855102734" type="System" />
-            </conditions>
             <actions>
-                <action behavior="Physics" id="12" name="Set world gravity" sid="5279415326452207" type="ball">
-                    <param id="0" name="Gravity">0</param>
+                <action id="1" name="Set key" sid="2965111338860834" type="quest">
+                    <param id="0" name="Key">&quot;active&quot;</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="1503813688882588">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="7610041774633573" type="ball">
-                    <param id="0" name="Instance variable">controllable</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <comment>parameters</comment>
-                <variable constant="0" name="impulseModifier" sid="7068951699213203" static="0" type="number">0.1</variable>
-                <comment>instance variables</comment>
-                <variable comment="1=true" constant="0" name="dragging" sid="4345586919886723" static="1" type="number">0</variable>
-                <variable constant="0" name="startX" sid="1776728450196114" static="1" type="number">0</variable>
-                <variable constant="0" name="startY" sid="8552038079757461" static="1" type="number">0</variable>
-                <variable constant="0" name="direction" sid="2661030296919553" static="0" type="number">0</variable>
-                <variable constant="0" name="force" sid="5902434476238803" static="0" type="number">0</variable>
-                <event-block sid="1668184587076047">
-                    <conditions>
-                        <condition id="10" name="On Nth touch start" sid="6614416568209648" type="Touch">
-                            <param id="0" name="Touch number">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="4202738361706932" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;click&quot;</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8940847710334885" type="ball">
-                            <param id="0" name="Instance variable">controllable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6916784074538396" type="System">
-                            <param id="0" name="Variable">dragging</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3393247834039312" type="directionArrow">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="4404273741107718" type="System">
-                            <param id="0" name="Variable">startX</param>
-                            <param id="1" name="Value">Touch.XAt(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6420491542565067" type="System">
-                            <param id="0" name="Variable">startY</param>
-                            <param id="1" name="Value">Touch.YAt(0)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3412761502006012">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="8165928430305082" type="System">
-                            <param id="0" name="Variable">direction</param>
-                            <param id="1" name="Value">angle(Touch.X, Touch.Y, startX, startY)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1695877908166156" type="System">
-                            <param id="0" name="Variable">force</param>
-                            <param id="1" name="Value">distance(Touch.X, Touch.Y, startX, startY)</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="5976190840536224" type="directionArrow">
-                            <param id="0" name="Object">ball</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5676029230663448" type="directionArrow">
-                            <param id="0" name="Angle">direction</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="4052622721589256" type="directionArrow">
-                            <param id="0" name="Width">force</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7341857879597324">
-                    <conditions>
-                        <condition id="11" name="On Nth touch end" sid="3535624047071668" type="Touch">
-                            <param id="0" name="Touch number">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="440291769371155" type="ball">
-                            <param id="0" name="Instance variable">controllable</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1070410975207776" type="directionArrow">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="8756687365864938" type="ball">
-                            <param id="0" name="Impulse">force * impulseModifier</param>
-                            <param id="1" name="Angle">direction</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
