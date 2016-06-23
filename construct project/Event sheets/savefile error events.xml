@@ -3,17 +3,21 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>savefile error events</name>
     <events>
-        <event-block sid="8147373363603345">
+        <event-block any="1" sid="8147373363603345">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="707016326871498" type="System" />
+                <condition id="-6" name="Every X seconds" sid="9884393359053406" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="3" name="Clear storage" sid="6055040843456189" type="LocalStorage" />
-                <action id="-21" name="Reset global variables" sid="9478740291510873" type="System" />
                 <action id="14" name="Log" sid="5215430270436722" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;Local storage will be cleared.&quot;</param>
                 </action>
+                <action id="3" name="Clear storage" sid="6055040843456189" type="LocalStorage" />
+                <action id="-21" name="Reset global variables" sid="9478740291510873" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="3862380377328142" type="System" />
             </actions>
         </event-block>
         <event-block sid="2584332708771722">
