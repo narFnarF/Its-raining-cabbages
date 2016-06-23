@@ -205,47 +205,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ball" uid="109">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>main</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <controllable>true</controllable>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Circle</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>0.2</density>
-                                <friction>1</friction>
-                                <elasticity>0.6</elasticity>
-                                <linear-damping>2</linear-damping>
-                                <angular-damping>0.5</angular-damping>
-                                <bullet>Yes</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>236</x>
-                        <y>507</y>
-                        <z>0</z>
-                        <width>79.648399353</width>
-                        <height>78.320930481</height>
-                        <depth>0</depth>
-                        <hotspotX>0.510638297</hotspotX>
-                        <hotspotY>0.510638297</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ball" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -257,7 +216,7 @@
                         <controllable>false</controllable>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Physics">
+                        <behavior-instance type="Physics2">
                             <properties>
                                 <immovable>No</immovable>
                                 <collision-mask>Circle</collision-mask>
@@ -298,7 +257,7 @@
                         <controllable>false</controllable>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Physics">
+                        <behavior-instance type="Physics2">
                             <properties>
                                 <immovable>No</immovable>
                                 <collision-mask>Circle</collision-mask>
@@ -339,7 +298,7 @@
                         <controllable>false</controllable>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Physics">
+                        <behavior-instance type="Physics2">
                             <properties>
                                 <immovable>No</immovable>
                                 <collision-mask>Circle</collision-mask>
@@ -695,6 +654,86 @@
                         <depth>0</depth>
                         <hotspotX>0.510638297</hotspotX>
                         <hotspotY>0.510638297</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bumperHitSparkles" uid="126">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>10</size>
+                        <opacity>100</opacity>
+                        <grow-rate>-1</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->100</speed-randomiser->
+                        <size-randomiser>5</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-200</acceleration>
+                        <gravity>50</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.5</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>234</x>
+                        <y>681</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ballYou" uid="128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>main</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <controllable>false</controllable>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Physics2">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Circle</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>0.2</density>
+                                <friction>1</friction>
+                                <elasticity>0.6</elasticity>
+                                <linear-damping>2</linear-damping>
+                                <angular-damping>0.5</angular-damping>
+                                <bullet>Yes</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>377</x>
+                        <y>520</y>
+                        <z>0</z>
+                        <width>75.835350037</width>
+                        <height>75.835350037</height>
+                        <depth>0</depth>
+                        <hotspotX>0.510637999</hotspotX>
+                        <hotspotY>0.510637999</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

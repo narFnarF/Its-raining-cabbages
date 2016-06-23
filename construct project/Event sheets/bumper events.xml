@@ -36,20 +36,16 @@
                 <condition id="-2" name="On start of layout" sid="3125739845773166" type="System" />
             </conditions>
             <actions>
-                <action behavior="Physics" id="12" name="Set world gravity" sid="4909501704676327" type="ball">
-                    <param id="0" name="Gravity">0</param>
-                </action>
                 <action id="9" name="Set scale" sid="3890390108153103" type="bumper">
                     <param id="0" name="Scale">3</param>
+                </action>
+                <action behavior="Physics2" id="12" name="Set world gravity" sid="1880791549161569" type="bumperBalls">
+                    <param id="0" name="Gravity">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="5075424874742318">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="1045812716688884" type="ball">
-                    <param id="0" name="Instance variable">controllable</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions />
             <sub-events>
                 <comment>parameters</comment>
@@ -71,7 +67,7 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;click&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="8853480662469307" type="ball">
+                        <action id="-13" name="Set boolean" sid="8853480662469307" type="ballYou">
                             <param id="0" name="Instance variable">controllable</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -104,7 +100,7 @@
                             <param id="1" name="Value">distance(Touch.X, Touch.Y, startX, startY)</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="2897051048286155" type="directionArrow">
-                            <param id="0" name="Object">ball</param>
+                            <param id="0" name="Object">ballYou</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-8" name="Set angle" sid="6233137975424716" type="directionArrow">
@@ -122,14 +118,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="2937518970289646" type="ball">
+                        <action disabled="1" id="-13" name="Set boolean" sid="2937518970289646" type="ballYou">
                             <param id="0" name="Instance variable">controllable</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="4516647168762559" type="directionArrow">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="1522807059823672" type="ball">
+                        <action behavior="Physics2" id="5" name="Apply impulse at angle" sid="7919801452479028" type="ballYou">
                             <param id="0" name="Impulse">force * impulseModifier</param>
                             <param id="1" name="Angle">direction</param>
                             <param id="2" name="Image point">0</param>
@@ -154,24 +150,24 @@
                 <event-block sid="8365669298611221">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8919291127555942" type="bumper">
-                            <param id="0" name="Object">ball</param>
+                            <param id="0" name="Object">bumperBalls</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="7011817300786243" type="ball">
-                            <param id="0" name="Impulse">2</param>
-                            <param id="1" name="Angle">angle(bumper.X, bumper.Y, ball.X, ball.Y)</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                         <action id="4" name="Set animation" sid="6364694092252361" type="bumper">
                             <param id="0" name="Animation">&quot;bump&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Physics2" id="5" name="Apply impulse at angle" sid="436827118434923" type="bumperBalls">
+                            <param id="0" name="Impulse">10</param>
+                            <param id="1" name="Angle">angle(bumper.X, bumper.Y, bumperBalls.X, bumperBalls.Y)</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                         <action disabled="1" id="9" name="Set scale" sid="9129112080739506" type="bumper">
                             <param id="0" name="Scale">bumperSize*1.25</param>
                         </action>
                         <action id="-16" name="Wait" sid="4506698415009832" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                            <param id="0" name="Seconds">0</param>
                         </action>
                         <action disabled="1" id="9" name="Set scale" sid="2017305398187944" type="bumper">
                             <param id="0" name="Scale">bumperSize</param>
