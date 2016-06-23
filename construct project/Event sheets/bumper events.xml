@@ -162,7 +162,7 @@
         <event-group description="" sid="5777947235603478" title="bumper">
             <sub-events>
                 <variable constant="0" name="bumperSize" sid="1674902194364095" static="0" type="number">3</variable>
-                <event-block sid="768398548147143">
+                <event-block disabled="1" sid="768398548147143">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="9027325944406853" type="System" />
                     </conditions>
@@ -183,7 +183,7 @@
                             <param id="0" name="Animation">&quot;bump&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Physics2" id="5" name="Apply impulse at angle" sid="436827118434923" type="bumperBalls">
+                        <action behavior="Physics2" disabled="1" id="5" name="Apply impulse at angle" sid="436827118434923" type="bumperBalls">
                             <param id="0" name="Impulse">10</param>
                             <param id="1" name="Angle">angle(bumper.X, bumper.Y, bumperBalls.X, bumperBalls.Y)</param>
                             <param id="2" name="Image point">0</param>
@@ -192,7 +192,7 @@
                             <param id="0" name="Scale">bumperSize*1.25</param>
                         </action>
                         <action id="-16" name="Wait" sid="4506698415009832" type="System">
-                            <param id="0" name="Seconds">0</param>
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action disabled="1" id="9" name="Set scale" sid="2017305398187944" type="bumper">
                             <param id="0" name="Scale">bumperSize</param>
@@ -213,6 +213,24 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="1844233178147287" type="collectibles" />
+            </actions>
+        </event-block>
+        <event-block sid="1205584934274487">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7583674461710693" type="ballYou">
+                    <param id="0" name="Object">ball</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6402580136400882" type="ballYou">
+                    <param id="0" name="Object">bumperHitSparkles</param>
+                    <param id="1" name="Layer">&quot;game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="4137298146483058" type="bumperHitSparkles">
+                    <param id="0" name="X">ballYou.X + (ball.X - ballYou.X)/2</param>
+                    <param id="1" name="Y">ballYou.Y + (ball.Y - ballYou.Y)/2</param>
+                </action>
             </actions>
         </event-block>
     </events>
