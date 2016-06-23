@@ -162,7 +162,7 @@
         <event-group description="" sid="5777947235603478" title="bumper">
             <sub-events>
                 <variable constant="0" name="bumperSize" sid="1674902194364095" static="0" type="number">3</variable>
-                <event-block disabled="1" sid="768398548147143">
+                <event-block sid="768398548147143">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="9027325944406853" type="System" />
                     </conditions>
@@ -188,13 +188,13 @@
                             <param id="1" name="Angle">angle(bumper.X, bumper.Y, bumperBalls.X, bumperBalls.Y)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action disabled="1" id="9" name="Set scale" sid="9129112080739506" type="bumper">
+                        <action id="9" name="Set scale" sid="9129112080739506" type="bumper">
                             <param id="0" name="Scale">bumperSize*1.25</param>
                         </action>
                         <action id="-16" name="Wait" sid="4506698415009832" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action disabled="1" id="9" name="Set scale" sid="2017305398187944" type="bumper">
+                        <action id="9" name="Set scale" sid="2017305398187944" type="bumper">
                             <param id="0" name="Scale">bumperSize</param>
                         </action>
                         <action id="4" name="Set animation" sid="9780274724031983" type="bumper">
