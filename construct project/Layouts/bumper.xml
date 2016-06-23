@@ -212,9 +212,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <controllable>false</controllable>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics2">
                             <properties>
@@ -222,11 +219,11 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>0.2</density>
-                                <friction>1</friction>
-                                <elasticity>0.6</elasticity>
+                                <friction>0.5</friction>
+                                <elasticity>0.5</elasticity>
                                 <linear-damping>2</linear-damping>
-                                <angular-damping>0.5</angular-damping>
-                                <bullet>Yes</bullet>
+                                <angular-damping>2</angular-damping>
+                                <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -253,9 +250,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <controllable>false</controllable>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics2">
                             <properties>
@@ -263,11 +257,11 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>0.2</density>
-                                <friction>1</friction>
-                                <elasticity>0.6</elasticity>
+                                <friction>0.5</friction>
+                                <elasticity>0.5</elasticity>
                                 <linear-damping>2</linear-damping>
-                                <angular-damping>0.5</angular-damping>
-                                <bullet>Yes</bullet>
+                                <angular-damping>2</angular-damping>
+                                <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -294,9 +288,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <controllable>false</controllable>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics2">
                             <properties>
@@ -304,11 +295,11 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>0.2</density>
-                                <friction>1</friction>
-                                <elasticity>0.6</elasticity>
+                                <friction>0.5</friction>
+                                <elasticity>0.5</elasticity>
                                 <linear-damping>2</linear-damping>
-                                <angular-damping>0.5</angular-damping>
-                                <bullet>Yes</bullet>
+                                <angular-damping>2</angular-damping>
+                                <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -685,8 +676,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>234</x>
-                        <y>681</y>
+                        <x>-267</x>
+                        <y>695</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -704,9 +695,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <controllable>false</controllable>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics2">
                             <properties>
@@ -714,11 +702,11 @@
                                 <collision-mask>Circle</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>0.2</density>
-                                <friction>1</friction>
-                                <elasticity>0.6</elasticity>
+                                <friction>0.5</friction>
+                                <elasticity>0.5</elasticity>
                                 <linear-damping>2</linear-damping>
-                                <angular-damping>0.5</angular-damping>
-                                <bullet>Yes</bullet>
+                                <angular-damping>2</angular-damping>
+                                <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -726,14 +714,58 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>377</x>
-                        <y>520</y>
+                        <x>227</x>
+                        <y>562</y>
                         <z>0</z>
                         <width>75.835350037</width>
                         <height>75.835350037</height>
                         <depth>0</depth>
-                        <hotspotX>0.510637999</hotspotX>
-                        <hotspotY>0.510637999</hotspotY>
+                        <hotspotX>0.510638297</hotspotX>
+                        <hotspotY>0.510638297</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="collectibles" uid="109">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>245</x>
+                        <y>776</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>52</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="collectibles" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>369</x>
+                        <y>776</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>52</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

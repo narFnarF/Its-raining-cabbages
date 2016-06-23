@@ -67,10 +67,6 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;click&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="8853480662469307" type="ballYou">
-                            <param id="0" name="Instance variable">controllable</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-9" name="Set value" sid="8040429921499392" type="System">
                             <param id="0" name="Variable">dragging</param>
                             <param id="1" name="Value">1</param>
@@ -99,6 +95,39 @@
                             <param id="0" name="Variable">force</param>
                             <param id="1" name="Value">distance(Touch.X, Touch.Y, startX, startY)</param>
                         </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9541723544800782">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5206544497064258" type="System">
+                                    <param id="0" name="Variable">force</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">75</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6255546638265836" type="System">
+                                    <param id="0" name="Variable">force</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1120959254645447">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8455756236047832" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2854200307479523" type="System">
+                                    <param id="0" name="Variable">force</param>
+                                    <param id="1" name="Value">min(force, 150)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4221881137942967">
+                    <conditions />
+                    <actions>
                         <action id="-4" name="Set position to another object" sid="2897051048286155" type="directionArrow">
                             <param id="0" name="Object">ballYou</param>
                             <param id="1" name="Image point (optional)">0</param>
@@ -118,10 +147,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-13" name="Set boolean" sid="2937518970289646" type="ballYou">
-                            <param id="0" name="Instance variable">controllable</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="4516647168762559" type="directionArrow">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -180,5 +205,15 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="2595884941318617">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9163778952274157" type="ballYou">
+                    <param id="0" name="Object">collectibles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1844233178147287" type="collectibles" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

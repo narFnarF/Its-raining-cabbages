@@ -1586,9 +1586,6 @@
         <object-folder name="bumber">
             <object-type name="ball" sid="5538674177708955">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="controllable" sid="8313223512928055" type="boolean" />
-                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936579645237105" speed="5">
                         <frame duration="1" hotspotX="0.545455" hotspotY="0.545455">
@@ -1636,9 +1633,6 @@
             </object-type>
             <object-type name="ballYou" sid="7291863192075138">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="controllable" sid="4229681344805006" type="boolean" />
-                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="main" pingpong="0" repeatcount="1" repeatto="0" sid="4690132656972943" speed="5">
                         <frame duration="1" hotspotX="0.510638" hotspotY="0.510638">
@@ -1653,6 +1647,14 @@
                                 <point x="0" y="0.489362" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="collectibles" sid="5122109017712106">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6687925021237508" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
