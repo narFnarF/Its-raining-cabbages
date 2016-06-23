@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>intro events</name>
     <events>
-        <variable constant="0" name="versionNumberSaved" sid="5178529854886543" static="0" type="text">pet</variable>
         <comment>display the version number</comment>
         <event-block sid="5147104861929511">
             <conditions>
@@ -108,8 +107,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-21" name="Reset global variables" sid="6915414272307903" type="System" />
+                        <action id="-45" name="Reset persisted objects" sid="56341098111202" type="System" />
                         <action id="-9" name="Set value" sid="3378446891769618" type="System">
-                            <param id="0" name="Variable">versionNumberSaved</param>
+                            <param id="0" name="Variable">versionsHistory</param>
                             <param id="1" name="Value">projectversion</param>
                         </action>
                         <action disabled="1" id="0" name="Set item" sid="206019130568336" type="LocalStorage">

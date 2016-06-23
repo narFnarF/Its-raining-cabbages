@@ -1774,6 +1774,7 @@
         <event-folder name="general">
             <event-sheet>gameplay stuff.xml</event-sheet>
             <event-sheet>global events.xml</event-sheet>
+            <event-sheet>savefile migration.xml</event-sheet>
         </event-folder>
         <event-sheet>factory events.xml</event-sheet>
         <event-sheet>lions events.xml</event-sheet>

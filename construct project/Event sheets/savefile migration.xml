@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>savefile migration</name>
+    <events>
+        <variable comment="stores the entire history of version used" constant="0" name="versionsHistory" sid="5178529854886543" static="0" type="text">pet</variable>
+        <variable comment="stores the name/number of the last version used (ex: v123)" constant="0" name="lastVersionUsed" sid="1562373015406176" static="0" type="text"></variable>
+        <event-group description="" sid="7892108468783178" title="savefile migration">
+            <sub-events>
+                <event-block sid="6277697890046309">
+                    <conditions>
+                        <condition id="-29" name="On load complete" sid="7617325158211331" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="7647651599913264" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;!!!!!&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>last version used was the CURRENT version</comment>
+                        <event-block sid="6206939790674747">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1973767983557715" type="System">
+                                    <param id="0" name="Variable">lastVersionUsed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">projectversion</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="7821194858799505" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;version numbers are matching&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>last version used is UNKNOWN</comment>
+                        <event-block sid="1973918655235065">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6600591656411604" type="System" />
+                                <condition id="-14" name="Compare variable" sid="5107550932302258" type="System">
+                                    <param id="0" name="Variable">lastVersionUsed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="2024989137440528" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Last version used is unknown. History is:&quot; &amp; versionsHistory</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="last" sid="2911628272219099" static="0" type="text"></variable>
+                                <event-block sid="7734119530838142">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2357032065628875" type="System">
+                                            <param id="0" name="Variable">versionsHistory</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pet&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="2710849611087808">
+                                    <conditions />
+                                    <actions>
+                                        <action disabled="1" id="-9" name="Set value" sid="5073651805207127" type="System">
+                                            <param id="0" name="Variable">last</param>
+                                            <param id="1" name="Value">tokenat(versionsHistory, 0, &quot; &quot;)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8941527823922788" type="System">
+                                            <param id="0" name="Variable">lastVersionUsed</param>
+                                            <param id="1" name="Value">tokenat(versionsHistory, 0, &quot; &quot;)</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="158380936619667" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;Last version used is now known: &quot; &amp; lastVersionUsed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>last version used is from a PAST version</comment>
+                        <event-block sid="7601751070784313">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4358243703900075" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="4625512275554384" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Version numbers are not matching. Upgrading from: &quot; &amp; versionsHistory</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Permettre ou non de réutiliser une vieille savefile</comment>
+                        <variable comment="Permettre ou non de réutiliser une vieille savefile. 1=true" constant="1" name="ALLOW_OLD_SAVEFILE" sid="4351300592670103" static="0" type="number">1</variable>
+                        <event-block sid="7216769869776653">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6320597353863698" type="System">
+                                    <param id="0" name="Variable">versionsHistory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">projectversion</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="2348708940586801">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4837580811435954" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="858083086963758" type="System">
+                                    <param id="0" name="Variable">versionsHistory</param>
+                                    <param id="1" name="Value">projectversion &amp; &quot; &quot; &amp; versionsHistory</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1752379507387763">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4172576053851139" type="System">
+                                            <param id="0" name="Variable">ALLOW_OLD_SAVEFILE</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="4168876532064468" type="System">
+                                            <param id="0" name="Layout">savefile error</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Once the migration is done, update the lastVersionUsed to the current version</comment>
+                        <event-block sid="8043135517820493">
+                            <conditions />
+                            <actions>
+                                <action id="14" name="Log" sid="3892886844390075" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;!!!!! &quot; &amp; lastVersionUsed</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7355733118350611" type="System">
+                                    <param id="0" name="Variable">lastVersionUsed</param>
+                                    <param id="1" name="Value">projectversion</param>
+                                </action>
+                                <action id="14" name="Log" sid="1856278428502782" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;!!!!! &quot; &amp; lastVersionUsed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

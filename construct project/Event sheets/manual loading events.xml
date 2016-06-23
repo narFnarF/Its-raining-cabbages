@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>manual loading events</name>
     <events>
+        <include>savefile migration</include>
         <comment>save</comment>
         <event-block sid="4226205492298222">
             <conditions>
@@ -44,6 +45,8 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="7811238636038683" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="3566072224246614" type="System" />
                 <action id="-38" name="Load from JSON" sid="6241605877364079" type="System">
                     <param id="0" name="JSON">debugTextBox.Text</param>
                 </action>

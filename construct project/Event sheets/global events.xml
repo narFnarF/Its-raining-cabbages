@@ -3,38 +3,43 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>global events</name>
     <events>
-        <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
-        <event-block sid="9906113789766278">
-            <conditions>
-                <condition id="15" name="On double-tap" sid="5046725027455657" type="Touch" />
-                <condition id="12" name="Has Nth touch" sid="7712241700716919" type="Touch">
-                    <param id="0" name="Touch number">4 -1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="4078151407375933" type="System">
-                    <param id="0" name="Layout">manual loading</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5543309227872803">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4222981231032219" type="Keyboard">
-                    <param id="0" name="Key">80 (P)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="1342442979006446" type="Keyboard">
-                    <param id="0" name="Key">69 (E)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="5844897751072514" type="Keyboard">
-                    <param id="0" name="Key">84 (T)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="2365613198982842" type="System">
-                    <param id="0" name="Layout">manual loading</param>
-                </action>
-            </actions>
-        </event-block>
+        <include>savefile migration</include>
+        <event-group description="" sid="8276294162597945" title="cheat">
+            <sub-events>
+                <comment>Touche l&apos;écran avec 4 doigts pour aller dans la scène pour le manual loading</comment>
+                <event-block sid="9906113789766278">
+                    <conditions>
+                        <condition id="15" name="On double-tap" sid="5046725027455657" type="Touch" />
+                        <condition id="12" name="Has Nth touch" sid="7712241700716919" type="Touch">
+                            <param id="0" name="Touch number">4 -1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4078151407375933" type="System">
+                            <param id="0" name="Layout">manual loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5543309227872803">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4222981231032219" type="Keyboard">
+                            <param id="0" name="Key">80 (P)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1342442979006446" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="5844897751072514" type="Keyboard">
+                            <param id="0" name="Key">84 (T)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2365613198982842" type="System">
+                            <param id="0" name="Layout">manual loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="4872876774590663" title="repair savefile (clean collmemory)">
             <sub-events>
                 <comment>bug to fix: it cleans new savefiles. Is that a problem?</comment>
@@ -247,56 +252,6 @@
                             <param id="1" name="Message">&quot;in global events: load ok&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <comment>Permettre ou non de réutiliser une vieille savefile</comment>
-                        <variable comment="Permettre ou non de réutiliser une vieille savefile. 1=true" constant="1" name="ALLOW_OLD_SAVEFILE" sid="7658853365759066" static="0" type="number">0</variable>
-                        <event-block sid="5160525587991394">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="8796818999843201" type="System">
-                                    <param id="0" name="Variable">versionNumberSaved</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">projectversion</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="7742670949956762" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;version numbers are matching&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3136053506248695">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7647337491516364" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="14" name="Log" sid="4453099367722621" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Version numbers are not matching. Upgrading from: &quot; &amp; versionNumberSaved</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="9392244255693984" type="System">
-                                    <param id="0" name="Variable">versionNumberSaved</param>
-                                    <param id="1" name="Value">projectversion &amp; &quot; &quot; &amp; versionNumberSaved</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="337009768600983">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="4630246646121986" type="System">
-                                            <param id="0" name="Variable">ALLOW_OLD_SAVEFILE</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Go to layout" sid="1277380685019034" type="System">
-                                            <param id="0" name="Layout">savefile error</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
