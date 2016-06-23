@@ -183,11 +183,6 @@
                             <param id="0" name="Animation">&quot;bump&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Physics2" disabled="1" id="5" name="Apply impulse at angle" sid="436827118434923" type="bumperBalls">
-                            <param id="0" name="Impulse">10</param>
-                            <param id="1" name="Angle">angle(bumper.X, bumper.Y, bumperBalls.X, bumperBalls.Y)</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                         <action id="9" name="Set scale" sid="9129112080739506" type="bumper">
                             <param id="0" name="Scale">bumperSize*1.25</param>
                         </action>
