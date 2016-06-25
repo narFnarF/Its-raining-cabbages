@@ -1960,16 +1960,142 @@
                     <instance-variables>
                         <progress>0.5</progress>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>922</x>
-                        <y>188</y>
+                        <x>828</x>
+                        <y>1476.250488281</y>
                         <z>0</z>
-                        <width>412</width>
-                        <height>131</height>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="133">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progress>0.2</progress>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>828</x>
+                        <y>1620.809692383</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton9patch" uid="134">
+                    <properties>
+                        <left-margin>50</left-margin>
+                        <right-margin>50</right-margin>
+                        <top-margin>50</top-margin>
+                        <bottom-margin>50</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <callback>purchase upgrade silo</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1408</x>
+                        <y>1388</y>
+                        <z>0</z>
+                        <width>271</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton9patch" uid="136">
+                    <properties>
+                        <left-margin>50</left-margin>
+                        <right-margin>50</right-margin>
+                        <top-margin>50</top-margin>
+                        <bottom-margin>50</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <callback>purchase upgrade factory productivity</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1405</x>
+                        <y>1548</y>
+                        <z>0</z>
+                        <width>271</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton2" uid="137">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <callback></callback>
+                        <callbackParamNb>0</callbackParamNb>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1127</x>
+                        <y>1301</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>76</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

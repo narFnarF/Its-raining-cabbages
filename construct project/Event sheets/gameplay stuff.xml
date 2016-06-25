@@ -3086,6 +3086,27 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="8261521222657646" title="generic buttons">
+            <sub-events>
+                <event-block sid="1758218962013272">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="4384042420495737" type="Touch">
+                            <param id="0" name="Object">genericButtons</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="2989862677828736" type="purchasePopup" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="594759004172402" type="notificationBox">
+                            <param id="0" name="Instance variable">open</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8866773195370843" type="Function">
+                            <param id="0" name="Name">genericButtons2.callback</param>
+                            <param id="1" name="Parameter {n}">genericButtons2.callbackParamNb</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="9948026963321727" title="button progress bars">
             <sub-events>
                 <event-block sid="1754114747372786">
@@ -3100,6 +3121,11 @@
                         <action id="-6" name="Set height" sid="3480952500741891" type="buttonProgressBar">
                             <param id="0" name="Height">buttonProgressBg.Height</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8925624467258873">
+                    <conditions />
+                    <actions>
                         <action id="-5" name="Set width" sid="5716358866201354" type="buttonProgressBar">
                             <param id="0" name="Width">buttonProgressBg.Width * buttonProgressBg.progress</param>
                         </action>

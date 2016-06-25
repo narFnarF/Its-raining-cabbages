@@ -1726,33 +1726,18 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7573296559444703">
+                <event-block sid="4169242486025307">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="4641866961990168" type="Touch">
-                            <param id="0" name="Object">btnUpgradeBg</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7976248067179098" type="btnUpgradeBg">
-                            <param id="0" name="Instance variable">name</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;silo capacity&quot;</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="6391134490151377" type="purchasePopup" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9425196663599165" type="notificationBox">
-                            <param id="0" name="Instance variable">open</param>
+                        <condition id="0" name="On function" sid="7867014048573652" type="Function">
+                            <param id="0" name="Name">&quot;purchase upgrade silo&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5506853796549054">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="1739147492558582" type="Function">
-                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}Function.Call(&quot;silo .get cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="2584064929818734" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade silo&quot;{###}&quot;Enlarge your silo to contain more cabbages at once.&quot;{###}Function.Call(&quot;silo .get cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="7422280202296284">
                     <conditions>
@@ -1806,6 +1791,19 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="8634267096792183">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9526627019692577" type="Function">
+                            <param id="0" name="Name">&quot;purchase upgrade factory productivity&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5153417666636502" type="Function">
+                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}Function.Call(&quot;factory .get productivity cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="8513369860249602">
                     <conditions>

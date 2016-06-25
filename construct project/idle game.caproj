@@ -365,6 +365,11 @@
                     <instance-variables>
                         <instance-variable name="progress" sid="2983038034364261" type="number" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="6263540025684414">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
                     <container>
                         <type>buttonProgressBg</type>
                         <type>buttonProgressBar</type>
@@ -377,12 +382,29 @@
                 </object-type>
                 <object-type name="buttonProgressBar" sid="9567485027148939">
                     <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="8872513878824496">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
                     <container>
                         <type>buttonProgressBg</type>
                         <type>buttonProgressBar</type>
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5016489192869235" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="newButton9patch" sid="7689028022817553">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="newButton2" sid="5096809369448876">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1393280768263531" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -1759,6 +1781,34 @@
             <behaviors>
                 <behavior-type name="Physics2" sid="7242741650655031">
                     <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="genericButtons" plugin-id="NinePatch" sid="1284127603910284">
+            <members>
+                <member>newButton9patch</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="callback" sid="5719395580100306" type="string" />
+                <instance-variable name="callbackParamNb" sid="9966893545591744" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="NoSave" sid="9546827004930348">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="genericButtons2" plugin-id="Sprite" sid="4183274929016279">
+            <members>
+                <member>newButton2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="callback" sid="6708884644703998" type="string" />
+                <instance-variable name="callbackParamNb" sid="7965788020137503" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="NoSave" sid="5841893004396971">
+                    <behavior id="NoSave" />
                 </behavior-type>
             </behaviors>
         </family>
