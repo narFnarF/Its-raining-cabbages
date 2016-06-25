@@ -1415,7 +1415,86 @@
                     </sub-events>
                 </event-block>
                 <comment>Buy or upgrade a bee</comment>
-                <event-block sid="4839414953475044">
+                <event-block sid="1104489585402701">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1056088167918895" type="Function">
+                            <param id="0" name="Name">&quot;clicked bee button&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="beeNb" sid="920938174469002" static="0" type="number">0</variable>
+                        <event-block sid="2037304245943207">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="2325133770806024" type="System">
+                                    <param id="0" name="Variable">beeNb</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2407688407966743">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7445424317198392" type="bee">
+                                    <param id="0" name="Instance variable">nb</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">beeNb</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5290986845161408">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9984148050505835" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9591468816008698" type="Function">
+                                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;buy bee&quot;{###}&quot;Wanna buy a bee?&quot; &amp; newline &amp; &quot;(Bee&apos;s be like &apos;&apos;bzz bzz!&apos;&apos;)&quot;{###}Function.Call(&quot;get bee cost&quot;, bee.nb){###}&quot;honey&quot;{###}&quot;Buy for &quot;{###}bee.nb</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6592254201478737">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8792712368195548" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="434125117475934" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5810823066262837" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="572346429377534" type="Function">
+                                            <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;upgrade bee&quot;{###}&quot;Speed up that bee!&quot; &amp; newline &amp; &quot;(Put a turbo in its bee bottom!)&quot;{###}Function.Call(&quot;get bee cost&quot;, bee.nb){###}&quot;salads&quot;{###}&quot;Buy for &quot;{###}bee.nb</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3439416550160467">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1371937245765211" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="464314006544979" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="4839414953475044">
                     <conditions>
                         <condition id="3" name="On touched object" sid="7689685742471483" type="Touch">
                             <param id="0" name="Object">btnBee</param>
@@ -1432,7 +1511,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="1062256365416408">
+                        <event-block disabled="1" sid="1062256365416408">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5870750824388909" type="bee">
                                     <param id="0" name="Instance variable">level</param>
@@ -1447,12 +1526,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4380204831151178">
+                        <event-block disabled="1" sid="4380204831151178">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7128842433056128" type="bee">
+                                <condition id="-7" name="Compare instance variable" sid="1397758250878695" type="bee">
                                     <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="222941811626891" type="bee">
                                     <param id="0" name="Instance variable">level</param>
@@ -1607,6 +1686,128 @@
                                     <param id="1" name="Parameter {n}">&quot;upgraded a bee&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5496163850306627">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2399813805375312" type="Function">
+                            <param id="0" name="Name">&quot;get bee cost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="beeNb" sid="6358520025171165" static="0" type="number">0</variable>
+                        <event-block sid="702240961575063">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="7162064452371501" type="System">
+                                    <param id="0" name="Variable">beeNb</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4184220572919676">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1933362570641838" type="bee">
+                                            <param id="0" name="Instance variable">nb</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">beeNb</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>to purchase (cost is in honey)</comment>
+                                        <event-block sid="4141758175591775">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="8968256118945307" type="bee">
+                                                    <param id="0" name="Instance variable">level</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="8044515668192838" type="System">
+                                                    <param id="0" name="Variable">beeNb</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="-10" name="Set value" sid="8675827931747508" type="btnBee">
+                                                    <param id="0" name="Instance variable">cost</param>
+                                                    <param id="1" name="Value">floor( 3+3.333333333333*10^(bee.nb-2) )</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="6842716756951251" type="Function">
+                                                    <param id="0" name="Value">floor( 3+3.333333333333*10^(bee.nb-2) )</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>to upgrade (cost is in salads)</comment>
+                                        <event-block sid="6019622603316821">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="3127907761133543" type="bee">
+                                                    <param id="0" name="Instance variable">level</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="3556066414102594" type="bee">
+                                                    <param id="0" name="Instance variable">level</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">20</param>
+                                                </condition>
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="8304507897872534" type="System">
+                                                    <param id="0" name="Variable">beeNb</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="3647908455145629" type="System">
+                                                    <param id="0" name="Variable">beeNb</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">20</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="-10" name="Set value" sid="8147729432290151" type="btnBee">
+                                                    <param id="0" name="Instance variable">cost</param>
+                                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb^2 - (400*bee.level/(bee.nb^2) ) -179)</param>
+                                                </action>
+                                                <action id="1" name="Set return value" sid="2106331800879906" type="Function">
+                                                    <param id="0" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb^2 - (400*bee.level/(bee.nb^2) ) -179)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>reached max</comment>
+                                        <event-block sid="7380664893986622">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1474406824550941" type="bee">
+                                                    <param id="0" name="Instance variable">level</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">20</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="4492795773789226" type="Function">
+                                                    <param id="0" name="Value">9999999999999999999999999999</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="3750976505992003">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5139793914833211" type="Function">
+                            <param id="0" name="Name">&quot;get bee upgrade cost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="bee" sid="3601166177563234" static="0" type="number">0</variable>
+                        <event-block disabled="1" sid="5861253898846315">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

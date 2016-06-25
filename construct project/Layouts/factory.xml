@@ -1310,7 +1310,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton2" uid="137">
+                <instance type="newButton" uid="137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1320,6 +1320,7 @@
                     <instance-variables>
                         <callback>purchase upgrade silo</callback>
                         <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>1</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1339,7 +1340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton2" uid="139">
+                <instance type="newButton" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1349,6 +1350,7 @@
                     <instance-variables>
                         <callback>purchase upgrade factory productivity</callback>
                         <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>2</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1368,7 +1370,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton2" uid="140">
+                <instance type="newButton" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1378,6 +1380,7 @@
                     <instance-variables>
                         <callback>purchase upgrade factory productivity</callback>
                         <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>0</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1961,7 +1964,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <progress>0.5</progress>
+                        <progression>0.5</progression>
+                        <buttonId>1</buttonId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1969,8 +1973,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>829</x>
-                        <y>1476.250488281</y>
+                        <x>835.210144043</x>
+                        <y>1481.838500977</y>
                         <z>0</z>
                         <width>567.796142578</width>
                         <height>4.501098633</height>
@@ -1989,7 +1993,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <progress>0.2</progress>
+                        <progression>0.2</progression>
+                        <buttonId>2</buttonId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1998,7 +2003,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>829</x>
-                        <y>1620.809692383</y>
+                        <y>1623.294555664</y>
                         <z>0</z>
                         <width>567.796142578</width>
                         <height>4.501098633</height>
@@ -2009,21 +2014,17 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton9patch" uid="134">
+                <instance type="newButton" uid="134">
                     <properties>
-                        <left-margin>50</left-margin>
-                        <right-margin>50</right-margin>
-                        <top-margin>50</top-margin>
-                        <bottom-margin>50</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <callback>purchase upgrade silo</callback>
-                        <callbackParamNb>0</callbackParamNb>
+                        <callback>clicked bee button</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <progressBarId>1</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -2031,32 +2032,29 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1408</x>
-                        <y>1388</y>
+                        <x>1398</x>
+                        <y>2453</y>
                         <z>0</z>
-                        <width>271</width>
-                        <height>65</height>
+                        <width>227</width>
+                        <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton9patch" uid="136">
+                <instance type="newButton" uid="136">
                     <properties>
-                        <left-margin>50</left-margin>
-                        <right-margin>50</right-margin>
-                        <top-margin>50</top-margin>
-                        <bottom-margin>50</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <callback>purchase upgrade factory productivity</callback>
-                        <callbackParamNb>0</callbackParamNb>
+                        <callback>clicked bee button</callback>
+                        <callbackParamNb>2</callbackParamNb>
+                        <progressBarId>1</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -2064,14 +2062,75 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1405</x>
-                        <y>1548</y>
+                        <x>1401</x>
+                        <y>2570</y>
                         <z>0</z>
-                        <width>271</width>
-                        <height>65</height>
+                        <width>227</width>
+                        <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton" uid="141">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <callback>clicked bee button</callback>
+                        <callbackParamNb>3</callbackParamNb>
+                        <progressBarId>1</progressBarId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1397</x>
+                        <y>2693</y>
+                        <z>0</z>
+                        <width>227</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton" uid="142">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <callback>clicked bee button</callback>
+                        <callbackParamNb>4</callbackParamNb>
+                        <progressBarId>1</progressBarId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1402</x>
+                        <y>2824</y>
+                        <z>0</z>
+                        <width>227</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

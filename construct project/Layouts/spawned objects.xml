@@ -418,7 +418,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <progress>0.5</progress>
+                        <progression>0.5</progression>
+                        <buttonId>0</buttonId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
