@@ -3086,5 +3086,26 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="9948026963321727" title="button progress bars">
+            <sub-events>
+                <event-block sid="1754114747372786">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7396363847664708" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="6485781925652753" type="buttonProgressBar">
+                            <param id="0" name="Object">buttonProgressBg</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="3480952500741891" type="buttonProgressBar">
+                            <param id="0" name="Height">buttonProgressBg.Height</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="5716358866201354" type="buttonProgressBar">
+                            <param id="0" name="Width">buttonProgressBg.Width * buttonProgressBg.progress</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

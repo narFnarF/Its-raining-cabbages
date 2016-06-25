@@ -360,10 +360,29 @@
         </object-folder>
         <object-folder name="UI">
             <object-folder name="new buttons">
-                <object-type name="newButtons" sid="2630770432602462">
+                <object-type name="buttonProgressBg" sid="2630770432602462">
                     <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="progress" sid="2983038034364261" type="number" />
+                    </instance-variables>
+                    <container>
+                        <type>buttonProgressBg</type>
+                        <type>buttonProgressBar</type>
+                    </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3756821763536945" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="buttonProgressBar" sid="9567485027148939">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>buttonProgressBg</type>
+                        <type>buttonProgressBar</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5016489192869235" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
