@@ -1726,6 +1726,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>silo</comment>
                 <event-block sid="4169242486025307">
                     <conditions>
                         <condition id="0" name="On function" sid="7867014048573652" type="Function">
@@ -1764,34 +1765,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1214298759564089">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="4965599062686496" type="Touch">
-                            <param id="0" name="Object">btnUpgradeBg</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="9400244678581879" type="btnUpgradeBg">
-                            <param id="0" name="Instance variable">name</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;factory productivity&quot;</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="7111002657386647" type="purchasePopup" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6968637382393077" type="notificationBox">
-                            <param id="0" name="Instance variable">open</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6481844996910525">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="4725828261511926" type="Function">
-                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;upgrade factory productivity&quot;{###}&quot;Upgrade the factory&apos;s productivity to convert more cabbages in one go.&quot;{###}Function.Call(&quot;factory .get productivity cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
+                <comment>factory productivity</comment>
                 <event-block sid="8634267096792183">
                     <conditions>
                         <condition id="0" name="On function" sid="9526627019692577" type="Function">
@@ -1834,23 +1808,15 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2419843009570472">
+                <comment>factory capacity</comment>
+                <event-block sid="7453983232938369">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="5936273759741721" type="Touch">
-                            <param id="0" name="Object">btnUpgradeBg</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="9812275499976547" type="btnUpgradeBg">
-                            <param id="0" name="Instance variable">name</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;factory capacity&quot;</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="7616561077152961" type="purchasePopup" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4866644474113238" type="notificationBox">
-                            <param id="0" name="Instance variable">open</param>
+                        <condition id="0" name="On function" sid="4133469996328224" type="Function">
+                            <param id="0" name="Name">&quot;purchase upgrade factory capacity&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="6426068280033631" type="Function">
+                        <action id="0" name="Call function" sid="2001949593299821" type="Function">
                             <param id="0" name="Name">&quot;purchase popup&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;upgrade factory capacity&quot;{###}&quot;Upgrade the factory&apos;s capacity to store more salads.&quot;{###}Function.Call(&quot;factory .get capacity cost&quot;){###}&quot;salads&quot;{###}&quot;Buy for &quot;</param>
                         </action>

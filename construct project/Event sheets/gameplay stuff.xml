@@ -3091,7 +3091,7 @@
                 <event-block sid="1758218962013272">
                     <conditions>
                         <condition id="17" name="On tap object" sid="4384042420495737" type="Touch">
-                            <param id="0" name="Object">genericButtons</param>
+                            <param id="0" name="Object">genericButtons2</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="2989862677828736" type="purchasePopup" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="594759004172402" type="notificationBox">
