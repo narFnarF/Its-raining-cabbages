@@ -151,21 +151,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="btnBeeBackground" sid="6009999432359583">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Persist" sid="7272064174887766">
-                        <behavior id="Persist" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9455856121389184" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0">
-                            <image-point name="bee spawn" x="0.516" y="0.7" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="textboxes">
             <object-type name="plus1" sid="9026095487772363">
