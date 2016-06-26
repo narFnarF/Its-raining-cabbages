@@ -964,6 +964,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
+                        <buttonId>0</buttonId>
                         <receiveWhat>veggie burger</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu steak</payWhat>
@@ -1030,6 +1031,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
+                        <buttonId>0</buttonId>
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu</payWhat>
@@ -1066,6 +1068,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
+                        <buttonId>0</buttonId>
                         <receiveWhat>salads</receiveWhat>
                         <receiveHowMany>7000</receiveHowMany>
                         <payWhat>lion poop</payWhat>
@@ -1102,6 +1105,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
+                        <buttonId>0</buttonId>
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>9</receiveHowMany>
                         <payWhat>veggie burger</payWhat>
@@ -1138,6 +1142,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
+                        <buttonId>0</buttonId>
                         <receiveWhat>tofu</receiveWhat>
                         <receiveHowMany>499</receiveHowMany>
                         <payWhat>honey</payWhat>
@@ -1442,6 +1447,37 @@
                         <z>0</z>
                         <width>100</width>
                         <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="newButton" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <initialyPressed>false</initialyPressed>
+                        <callback>purchase upgrade silo</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>1</progressBarId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1314</x>
+                        <y>1408</y>
+                        <z>0</z>
+                        <width>476</width>
+                        <height>61</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

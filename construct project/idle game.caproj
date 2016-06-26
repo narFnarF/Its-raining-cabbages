@@ -1172,6 +1172,7 @@
             <object-type name="traderTxt" sid="5574383113778382">
                 <plugin id="Text" />
                 <instance-variables>
+                    <instance-variable name="buttonId" sid="7334111181996787" type="number" />
                     <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
                     <instance-variable name="receiveHowMany" sid="8038152053338172" type="number" />
                     <instance-variable name="payWhat" sid="3103701344531354" type="string" />
