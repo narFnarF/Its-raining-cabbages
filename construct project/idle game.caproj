@@ -139,10 +139,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="btnBee" sid="5490029273198872">
+            <object-type name="btnBeeTxt" sid="5490029273198872">
                 <plugin id="Text" />
                 <instance-variables>
-                    <instance-variable name="nb" sid="7230698741477582" type="number" />
+                    <instance-variable name="beeNb" sid="7230698741477582" type="number" />
                     <instance-variable name="cost" sid="3318234215369156" type="number" />
                 </instance-variables>
                 <behaviors>
@@ -387,6 +387,9 @@
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="bar" x="0" y="1" />
                             </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="beeBtn" pingpong="0" repeatcount="1" repeatto="0" sid="501531142461961" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1770,6 +1773,7 @@
                 <member>newButton</member>
             </members>
             <instance-variables>
+                <instance-variable name="initialyPressed" sid="4112654331809096" type="boolean" />
                 <instance-variable name="callback" sid="6708884644703998" type="string" />
                 <instance-variable name="callbackParamNb" sid="7965788020137503" type="number" />
                 <instance-variable name="progressBarId" sid="3723874214917857" type="number" />

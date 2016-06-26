@@ -1344,12 +1344,12 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="9437873035562241" type="System" />
                         <condition id="-11" name="For Each" sid="3700035293464394" type="System">
-                            <param id="0" name="Object">btnBee</param>
+                            <param id="0" name="Object">btnBeeTxt</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="8874818758230541" type="bee">
                             <param id="0" name="Instance variable">nb</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">btnBee.nb</param>
+                            <param id="2" name="Value">btnBeeTxt.beeNb</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1364,12 +1364,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="9354096091450153" type="btnBee">
-                                    <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">floor( 3+3.333333333333*10^(bee.nb-2) )</param>
-                                </action>
-                                <action id="0" name="Set text" sid="4373928098048421" type="btnBee">
-                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBee.nb &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, btnBee.cost) &amp; &quot; honey&quot;</param>
+                                <action id="0" name="Set text" sid="4373928098048421" type="btnBeeTxt">
+                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBeeTxt.beeNb &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; honey&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1388,12 +1384,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="8243264933951822" type="btnBee">
-                                    <param id="0" name="Instance variable">cost</param>
-                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb^2 - (400*bee.level/(bee.nb^2) ) -179)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="6673935572017718" type="btnBee">
-                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, btnBee.cost) &amp; &quot; salads&quot;</param>
+                                <action id="0" name="Set text" sid="6673935572017718" type="btnBeeTxt">
+                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; salads&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1407,7 +1399,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="4061734870384205" type="btnBee">
+                                <action id="0" name="Set text" sid="4061734870384205" type="btnBeeTxt">
                                     <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: Current: Max!&quot;</param>
                                 </action>
                             </actions>
@@ -1494,60 +1486,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="4839414953475044">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="7689685742471483" type="Touch">
-                            <param id="0" name="Object">btnBee</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="3268661961810302" type="purchasePopup" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7422628616435672" type="notificationBox">
-                            <param id="0" name="Instance variable">open</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5329670738527803" type="bee">
-                            <param id="0" name="Instance variable">nb</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">btnBee.nb</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="1062256365416408">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="5870750824388909" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="2569579425709768" type="Function">
-                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;buy bee&quot;{###}&quot;Wanna buy a bee?&quot; &amp; newline &amp; &quot;(Bee&apos;s be like &apos;&apos;bzz bzz!&apos;&apos;)&quot;{###}btnBee.cost{###}&quot;honey&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="4380204831151178">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1397758250878695" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="222941811626891" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">20</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="91376088538763" type="Function">
-                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;upgrade bee&quot;{###}&quot;Speed up that bee!&quot; &amp; newline &amp; &quot;(Put a turbo in its bee bottom!)&quot;{###}btnBee.cost{###}&quot;salads&quot;{###}&quot;Buy for &quot;{###}btnBee.nb</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="6482836070620331">
                     <conditions>
                         <condition id="0" name="On function" sid="4002157392799849" type="Function">
@@ -1560,9 +1498,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-1" name="Set X" sid="321976664750511" type="bee">
-                            <param id="0" name="X">bee.X + 55</param>
-                        </action>
                         <action id="-10" name="Set value" sid="7461060613973109" type="camera">
                             <param id="0" name="Instance variable">screen</param>
                             <param id="1" name="Value">1</param>
@@ -1689,6 +1624,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Return the cost for a bee (purchase or upgrade cost)</comment>
                 <event-block sid="5496163850306627">
                     <conditions>
                         <condition id="0" name="On function" sid="2399813805375312" type="Function">
@@ -1725,17 +1661,8 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
-                                                <condition disabled="1" id="-14" name="Compare variable" sid="8044515668192838" type="System">
-                                                    <param id="0" name="Variable">beeNb</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action disabled="1" id="-10" name="Set value" sid="8675827931747508" type="btnBee">
-                                                    <param id="0" name="Instance variable">cost</param>
-                                                    <param id="1" name="Value">floor( 3+3.333333333333*10^(bee.nb-2) )</param>
-                                                </action>
                                                 <action id="1" name="Set return value" sid="6842716756951251" type="Function">
                                                     <param id="0" name="Value">floor( 3+3.333333333333*10^(bee.nb-2) )</param>
                                                 </action>
@@ -1754,28 +1681,14 @@
                                                     <param id="1" name="Comparison">2</param>
                                                     <param id="2" name="Value">20</param>
                                                 </condition>
-                                                <condition disabled="1" id="-14" name="Compare variable" sid="8304507897872534" type="System">
-                                                    <param id="0" name="Variable">beeNb</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                                <condition disabled="1" id="-14" name="Compare variable" sid="3647908455145629" type="System">
-                                                    <param id="0" name="Variable">beeNb</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">20</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action disabled="1" id="-10" name="Set value" sid="8147729432290151" type="btnBee">
-                                                    <param id="0" name="Instance variable">cost</param>
-                                                    <param id="1" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb^2 - (400*bee.level/(bee.nb^2) ) -179)</param>
-                                                </action>
                                                 <action id="1" name="Set return value" sid="2106331800879906" type="Function">
                                                     <param id="0" name="Value">round( (2.5^(bee.level*0.75) + (500*bee.level)) * bee.nb^2 - (400*bee.level/(bee.nb^2) ) -179)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>reached max</comment>
+                                        <comment>reached max!</comment>
                                         <event-block sid="7380664893986622">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="1474406824550941" type="bee">
@@ -1793,21 +1706,6 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="3750976505992003">
-                    <conditions>
-                        <condition id="0" name="On function" sid="5139793914833211" type="Function">
-                            <param id="0" name="Name">&quot;get bee upgrade cost&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="bee" sid="3601166177563234" static="0" type="number">0</variable>
-                        <event-block disabled="1" sid="5861253898846315">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

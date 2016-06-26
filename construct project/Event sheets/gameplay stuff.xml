@@ -3089,9 +3089,13 @@
         </event-group>
         <event-group description="" sid="8261521222657646" title="generic buttons">
             <sub-events>
-                <event-block sid="1758218962013272">
+                <comment>start the press</comment>
+                <event-block sid="629223296255289">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="4384042420495737" type="Touch">
+                        <condition id="10" name="On Nth touch start" sid="8855222167991441" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="9786652922822021" type="Touch">
                             <param id="0" name="Object">genericButtons</param>
                         </condition>
                         <condition id="-9" inverted="1" name="Is visible" sid="2989862677828736" type="purchasePopup" />
@@ -3100,9 +3104,40 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-13" name="Set boolean" sid="4406039222698822" type="genericButtons">
+                            <param id="0" name="Instance variable">initialyPressed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>complete the press (if still on the same object)</comment>
+                <event-block sid="7040527707900623">
+                    <conditions>
+                        <condition id="11" name="On Nth touch end" sid="2881746187244946" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="8723119865388654" type="Touch">
+                            <param id="0" name="Object">genericButtons</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8942454312022329" type="genericButtons">
+                            <param id="0" name="Instance variable">initialyPressed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="0" name="Call function" sid="8866773195370843" type="Function">
                             <param id="0" name="Name">genericButtons.callback</param>
                             <param id="1" name="Parameter {n}">genericButtons.callbackParamNb</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6975873049489151">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="5542424222845529" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="7862362334140353" type="genericButtons">
+                            <param id="0" name="Instance variable">initialyPressed</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
