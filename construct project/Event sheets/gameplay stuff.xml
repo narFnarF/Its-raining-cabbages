@@ -3141,60 +3141,71 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="9948026963321727" title="button progress bars">
-            <sub-events>
-                <comment>make sure that the progression is between 0 and 1</comment>
-                <event-block sid="8925624467258873">
-                    <conditions />
-                    <actions>
-                        <action id="-10" name="Set value" sid="7251703117066297" type="buttonProgressBg">
-                            <param id="0" name="Instance variable">progression</param>
-                            <param id="1" name="Value">clamp(buttonProgressBg.progression, 0, 1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>adjust size and position</comment>
-                <event-block sid="5365977374980938">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="3691414752105402" type="System">
-                            <param id="0" name="Object">buttonProgressBg</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5107015776394719" type="genericButtons">
-                            <param id="0" name="Instance variable">progressBarId</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">buttonProgressBg.buttonId</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="1037053551926217" type="buttonProgressBg">
-                            <param id="0" name="Object">genericButtons</param>
-                            <param id="1" name="Image point (optional)">&quot;bar&quot;</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="8763933287096533" type="buttonProgressBg">
-                            <param id="0" name="Width">genericButtons.Width</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="6485781925652753" type="buttonProgressBar">
-                            <param id="0" name="Object">buttonProgressBg</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-6" name="Set height" sid="3480952500741891" type="buttonProgressBar">
-                            <param id="0" name="Height">buttonProgressBg.Height</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="9948026963321727" title="button progress bars">
                     <sub-events>
-                        <comment>adjust fill</comment>
-                        <event-block sid="3075301035586671">
-                            <conditions />
+                        <event-block sid="6853564231613715">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="5062335042028441" type="System" />
+                            </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="5716358866201354" type="buttonProgressBar">
-                                    <param id="0" name="Width">buttonProgressBg.Width * buttonProgressBg.progression</param>
+                                <action id="4" name="Set animation" sid="9660139263075532" type="buttonProgressBar">
+                                    <param id="0" name="Animation">buttonProgressBg.AnimationName</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>make sure that the progression is between 0 and 1</comment>
+                        <event-block sid="8925624467258873">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="7251703117066297" type="buttonProgressBg">
+                                    <param id="0" name="Instance variable">progression</param>
+                                    <param id="1" name="Value">clamp(buttonProgressBg.progression, 0, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>adjust size and position</comment>
+                        <event-block sid="5365977374980938">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="3691414752105402" type="System">
+                                    <param id="0" name="Object">buttonProgressBg</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5107015776394719" type="genericButtons">
+                                    <param id="0" name="Instance variable">progressBarId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">buttonProgressBg.buttonId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="1037053551926217" type="buttonProgressBg">
+                                    <param id="0" name="Object">genericButtons</param>
+                                    <param id="1" name="Image point (optional)">&quot;bar&quot;</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="8763933287096533" type="buttonProgressBg">
+                                    <param id="0" name="Width">genericButtons.Width</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="6485781925652753" type="buttonProgressBar">
+                                    <param id="0" name="Object">buttonProgressBg</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="3480952500741891" type="buttonProgressBar">
+                                    <param id="0" name="Height">buttonProgressBg.Height</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>adjust fill</comment>
+                                <event-block sid="3075301035586671">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="5716358866201354" type="buttonProgressBar">
+                                            <param id="0" name="Width">buttonProgressBg.Width * buttonProgressBg.progression</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

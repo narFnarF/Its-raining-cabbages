@@ -361,6 +361,12 @@
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3756821763536945" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="1" loop="0" name="bee" pingpong="0" repeatcount="1" repeatto="0" sid="2783526319135674" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="9132404402467719" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="buttonProgressBar" sid="9567485027148939">
@@ -378,18 +384,26 @@
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5016489192869235" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="1" loop="0" name="bee" pingpong="0" repeatcount="1" repeatto="0" sid="410339129626713" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="1765976811335853" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="newButton" sid="5096809369448876">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1393280768263531" speed="5">
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="1393280768263531" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="bar" x="0" y="1" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="beeBtn" pingpong="0" repeatcount="1" repeatto="0" sid="501531142461961" speed="5">
-                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>

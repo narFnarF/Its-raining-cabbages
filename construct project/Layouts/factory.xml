@@ -390,7 +390,7 @@
                         <initialyPressed>false</initialyPressed>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>4</callbackParamNb>
-                        <progressBarId>0</progressBarId>
+                        <progressBarId>7</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -421,7 +421,7 @@
                         <initialyPressed>false</initialyPressed>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>3</callbackParamNb>
-                        <progressBarId>0</progressBarId>
+                        <progressBarId>6</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -452,7 +452,7 @@
                         <initialyPressed>false</initialyPressed>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>2</callbackParamNb>
-                        <progressBarId>0</progressBarId>
+                        <progressBarId>5</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -483,7 +483,7 @@
                         <initialyPressed>false</initialyPressed>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>1</callbackParamNb>
-                        <progressBarId>0</progressBarId>
+                        <progressBarId>4</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1507,7 +1507,7 @@
                         <initialyPressed>false</initialyPressed>
                         <callback>purchase upgrade factory capacity</callback>
                         <callbackParamNb>0</callbackParamNb>
-                        <progressBarId>0</progressBarId>
+                        <progressBarId>3</progressBarId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -2086,7 +2086,7 @@
                 <instance type="buttonProgressBg" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>factory</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -2115,7 +2115,7 @@
                 <instance type="buttonProgressBg" uid="133">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>factory</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -2131,6 +2131,151 @@
                     <world>
                         <x>829</x>
                         <y>1623.294555664</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="143">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>factory</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>3</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>851</x>
+                        <y>1773</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="144">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bee</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>4</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>850</x>
+                        <y>2528</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="146">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bee</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>5</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>855</x>
+                        <y>2650</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="147">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bee</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>6</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>853</x>
+                        <y>2771</y>
+                        <z>0</z>
+                        <width>567.796142578</width>
+                        <height>4.501098633</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="148">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>bee</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>7</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>855</x>
+                        <y>2896</y>
                         <z>0</z>
                         <width>567.796142578</width>
                         <height>4.501098633</height>

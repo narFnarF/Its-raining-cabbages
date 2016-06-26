@@ -1339,73 +1339,94 @@
         </event-group>
         <event-group description="" sid="901981960933352" title="upgrade bees">
             <sub-events>
-                <comment>updates UI boutons</comment>
-                <event-block sid="6091811762978645">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="9437873035562241" type="System" />
-                        <condition id="-11" name="For Each" sid="3700035293464394" type="System">
-                            <param id="0" name="Object">btnBeeTxt</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8874818758230541" type="bee">
-                            <param id="0" name="Instance variable">nb</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">btnBeeTxt.beeNb</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="6225860005135583" title="UI (bee stuff)">
                     <sub-events>
-                        <comment>pour acheter</comment>
-                        <event-block sid="39501312460836">
+                        <event-block sid="6091811762978645">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2062806322392199" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
+                                <condition id="-11" name="For Each" sid="3700035293464394" type="System">
+                                    <param id="0" name="Object">btnBeeTxt</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8874818758230541" type="bee">
+                                    <param id="0" name="Instance variable">nb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">btnBeeTxt.beeNb</param>
                                 </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="4373928098048421" type="btnBeeTxt">
-                                    <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBeeTxt.beeNb &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; honey&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>pour upgrader</comment>
-                        <event-block sid="3541783187048468">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8837914882428714" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="97603800024943" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">20</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="6673935572017718" type="btnBeeTxt">
-                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; salads&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>reached max</comment>
-                        <event-block sid="5156212411957832">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="102879498721571" type="bee">
-                                    <param id="0" name="Instance variable">level</param>
+                                <condition id="-7" name="Compare instance variable" sid="1704671794550404" type="genericButtons">
+                                    <param id="0" name="Instance variable">callbackParamNb</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">20</param>
+                                    <param id="2" name="Value">btnBeeTxt.beeNb</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6106613957798281" type="buttonProgressBg">
+                                    <param id="0" name="Instance variable">buttonId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">genericButtons.progressBarId</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="4061734870384205" type="btnBeeTxt">
-                                    <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: Current: Max!&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <comment>pour acheter</comment>
+                                <event-block sid="39501312460836">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2062806322392199" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4373928098048421" type="btnBeeTxt">
+                                            <param id="0" name="Text">&quot;Buy bee #&quot; &amp; btnBeeTxt.beeNb &amp; newline &amp; &quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; honey&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1884541995008961" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">progression</param>
+                                            <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, &quot;honey&quot;) / Function.Call(&quot;get bee cost&quot;, bee.nb)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>pour upgrader</comment>
+                                <event-block sid="3541783187048468">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8837914882428714" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="97603800024943" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6673935572017718" type="btnBeeTxt">
+                                            <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: &quot; &amp; bee.level &amp; newline &amp; &quot;Upgrade cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;get bee cost&quot;, bee.nb) ) &amp; &quot; salads&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2370780253746657" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">progression</param>
+                                            <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, &quot;salads&quot;) / Function.Call(&quot;get bee cost&quot;, bee.nb)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>reached max</comment>
+                                <event-block sid="5156212411957832">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="102879498721571" type="bee">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="4061734870384205" type="btnBeeTxt">
+                                            <param id="0" name="Text">&quot;Bee #&quot; &amp; bee.nb &amp; &quot; speed: Current: Max!&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="9863994163137716" type="buttonProgressBg" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
                 <comment>Buy or upgrade a bee</comment>
                 <event-block sid="1104489585402701">
                     <conditions>
@@ -1486,6 +1507,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>purchase a new bee</comment>
                 <event-block sid="6482836070620331">
                     <conditions>
                         <condition id="0" name="On function" sid="4002157392799849" type="Function">
@@ -1591,6 +1613,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>upgrade an existing bee</comment>
                 <event-block sid="1641280530259237">
                     <conditions>
                         <condition id="0" name="On function" sid="6155542883775398" type="Function">
@@ -1624,7 +1647,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Return the cost for a bee (purchase or upgrade cost)</comment>
+                <comment>Function that return the cost for a bee (purchase or upgrade cost)</comment>
                 <event-block sid="5496163850306627">
                     <conditions>
                         <condition id="0" name="On function" sid="2399813805375312" type="Function">
@@ -1751,6 +1774,26 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="1978631369549205">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1475670140404964" type="genericButtons">
+                                            <param id="0" name="Instance variable">callback</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;purchase upgrade silo&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="459938260139309" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">buttonId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="460235289586731" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">progression</param>
+                                            <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, &quot;salads&quot;) / Function.Call(&quot;silo .get cost&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>factory productivity</comment>
@@ -1786,6 +1829,26 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="8254487838950744">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2431374746876915" type="genericButtons">
+                                            <param id="0" name="Instance variable">callback</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;purchase upgrade factory productivity&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="3785701050899999" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">buttonId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3646441379132406" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">progression</param>
+                                            <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, &quot;salads&quot;) / Function.Call(&quot;factory .get productivity cost&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <comment>factory capacity</comment>
@@ -1818,6 +1881,26 @@
                                     <actions>
                                         <action id="0" name="Set text" sid="3535882816328876" type="txtLabel">
                                             <param id="0" name="Text">&quot;Cost: &quot; &amp; Function.Call(&quot;format numbers&quot;, Function.Call(&quot;factory .get capacity cost&quot;) )</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1068039683258785">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3772460217290741" type="genericButtons">
+                                            <param id="0" name="Instance variable">callback</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;purchase upgrade factory capacity&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5730326778426779" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">buttonId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">genericButtons.progressBarId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3085522440522135" type="buttonProgressBg">
+                                            <param id="0" name="Instance variable">progression</param>
+                                            <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, &quot;salads&quot;) / Function.Call(&quot;factory .get capacity cost&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
