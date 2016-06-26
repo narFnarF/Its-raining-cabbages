@@ -143,7 +143,6 @@
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="beeNb" sid="7230698741477582" type="number" />
-                    <instance-variable name="cost" sid="3318234215369156" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Persist" sid="1550309732993426">

@@ -674,7 +674,6 @@
                     </properties>
                     <instance-variables>
                         <beeNb>4</beeNb>
-                        <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -708,7 +707,6 @@
                     </properties>
                     <instance-variables>
                         <beeNb>3</beeNb>
-                        <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -742,7 +740,6 @@
                     </properties>
                     <instance-variables>
                         <beeNb>2</beeNb>
-                        <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
@@ -776,7 +773,6 @@
                     </properties>
                     <instance-variables>
                         <beeNb>1</beeNb>
-                        <cost>0</cost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
