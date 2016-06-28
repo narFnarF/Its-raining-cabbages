@@ -822,14 +822,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4935685582294332">
+                <event-block disabled="1" sid="4935685582294332">
                     <conditions>
                         <condition id="3" name="On touched object" sid="1964020888824892" type="Touch">
                             <param id="0" name="Object">traderTxt</param>
-                        </condition>
-                        <condition disabled="1" id="-10" name="Compare opacity" sid="41187694723071" type="traderTxt">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Opacity">100</param>
                         </condition>
                         <condition id="-9" name="Is visible" sid="3248042329045512" type="traderTxt" />
                         <condition id="-9" inverted="1" name="Is visible" sid="442866060222209" type="purchasePopup" />
@@ -840,7 +836,7 @@
                     <actions />
                     <sub-events>
                         <variable constant="0" name="multiplier" sid="9733372540096703" static="0" type="number">0</variable>
-                        <event-block sid="1848708338065851">
+                        <event-block disabled="1" sid="1848708338065851">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="9734433166563148" type="System">
@@ -857,10 +853,58 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6531855689319834">
+                        <event-block disabled="1" sid="6531855689319834">
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="46242753314526" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;trader give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany*multiplier &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch * multiplier{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany * multiplier{###}traderTxt.receiveWhat</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="740448701196126">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1398461034494827" type="Function">
+                            <param id="0" name="Name">&quot;lion trader clicked&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="which" sid="4333405480251061" static="0" type="number">0</variable>
+                        <variable constant="0" name="multiplier" sid="6913736502822489" static="0" type="number">0</variable>
+                        <event-block sid="955154317219243">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="6641561747750998" type="System">
+                                    <param id="0" name="Variable">which</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1252663025824561">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9478706979408391" type="traderTxt">
+                                    <param id="0" name="Instance variable">buttonId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">which</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9746181037622121" type="System">
+                                    <param id="0" name="Variable">multiplier</param>
+                                    <param id="1" name="Value">floor( Function.Call(&quot;quantity of&quot;, traderTxt.payWhat) / traderTxt.payHowMuch )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8003725300834878" type="System">
+                                    <param id="0" name="Variable">multiplier</param>
+                                    <param id="1" name="Value">max(multiplier, 1)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="2782385141067635" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;multiplier: &quot; &amp; multiplier</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2120128280180167" type="Function">
                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;trader give stuff&quot;{###}&quot;So, you want to make &quot; &amp; traderTxt.receiveHowMany*multiplier &amp; &quot; &quot; &amp; traderTxt.receiveWhat &amp; &quot;?&quot;{###}traderTxt.payHowMuch * multiplier{###}traderTxt.payWhat{###}&quot;Create from &quot;{###}traderTxt.receiveHowMany * multiplier{###}traderTxt.receiveWhat</param>
                                 </action>
@@ -906,75 +950,156 @@
                                     <param id="0" name="Name">&quot;count&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;crafted &quot; &amp; giveWhat{###}giveHowMany</param>
                                 </action>
+                                <action id="0" name="Call function" sid="3960369136222972" type="Function">
+                                    <param id="0" name="Name">&quot;lion .update trader&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <event-group description="" sid="8295221066856348" title="UI trader">
                     <sub-events>
-                        <event-block sid="6139000933248842">
-                            <conditions />
+                        <event-block any="1" sid="2790339836147197">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="5880881266279914" type="System" />
+                                <condition id="-6" name="Every X seconds" sid="5955115716667256" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                                <condition disabled="1" id="-1" name="Every tick" sid="5392998946953288" type="System" />
+                            </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="4783170809078315" type="traderTxt">
-                                    <param id="0" name="Opacity">60</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="4263265633506565" type="traderBg">
-                                    <param id="0" name="Opacity">30</param>
+                                <action id="0" name="Call function" sid="7987912474039601" type="Function">
+                                    <param id="0" name="Name">&quot;lion .update trader&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="8520927995805028">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5087214045055929" type="Function">
+                                    <param id="0" name="Name">&quot;lion .update trader&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="9582575824833593">
+                                <event-block sid="7810139237823815">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="9296108822785677" type="System">
                                             <param id="0" name="Object">traderTxt</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="1815706275530618" type="System">
-                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, traderTxt.payWhat, traderTxt.payHowMuch)</param>
+                                        <condition id="-7" name="Compare instance variable" sid="2182320961472983" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">callbackParamNb</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">&quot;true&quot;</param>
+                                            <param id="2" name="Value">traderTxt.buttonId</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Set opacity" sid="1251166049257055" type="traderTxt">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="8255919494424927" type="traderBg">
-                                            <param id="0" name="Opacity">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Hide the honey converter until you have 4 bees</comment>
-                                <event-block sid="3134670747333092">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1481595288776103" type="traderTxt">
-                                            <param id="0" name="Instance variable">payWhat</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;honey&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="3784604029385735" type="traderTxt">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9833851556312148" type="traderBg">
-                                            <param id="0" name="Visibility">0</param>
+                                        <action disabled="1" id="14" name="Log" sid="4708618359298217" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;ici &quot; &amp; traderTxt.PickedCount</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="8869058462451736">
+                                        <comment>Hide the honey converter until you have 4 bees</comment>
+                                        <event-block sid="3134670747333092">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="9123840049970811" type="System">
+                                                <condition id="-7" name="Compare instance variable" sid="1481595288776103" type="traderTxt">
+                                                    <param id="0" name="Instance variable">payWhat</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;honey&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="7765584472944236" type="System">
                                                     <param id="0" name="First value">Function.Call(&quot;get level of&quot;, &quot;bee4&quot;)</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Second value">1</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="8598338573775372" type="traderTxt">
-                                                    <param id="0" name="Visibility">1</param>
+                                                <action id="-15" name="Set visible" sid="3784604029385735" type="traderTxt">
+                                                    <param id="0" name="Visibility">0</param>
                                                 </action>
-                                                <action id="-15" name="Set visible" sid="3775688230416875" type="traderBg">
-                                                    <param id="0" name="Visibility">1</param>
+                                                <action id="-15" name="Set visible" sid="9833851556312148" type="traderBg">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1755298391447812" type="lionTraderBtnBg">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;invisible&quot;</param>
+                                                </action>
+                                                <action disabled="1" id="14" name="Log" sid="3024070348933503" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;invisible&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>everything else is disabled or normal</comment>
+                                        <event-block sid="9564205056623256">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="6872627988467655" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="2326219421950663">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="1985923530991445" type="System">
+                                                            <param id="0" name="First value">Function.Call(&quot;has enough&quot;, traderTxt.payWhat, traderTxt.payHowMuch)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;false&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Set opacity" sid="4783170809078315" type="traderTxt">
+                                                            <param id="0" name="Opacity">60</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="4263265633506565" type="traderBg">
+                                                            <param id="0" name="Opacity">30</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="9984462830107152" type="lionTraderBtnBg">
+                                                            <param id="0" name="Instance variable">state</param>
+                                                            <param id="1" name="Value">&quot;disabled&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="14" name="Log" sid="8616871067487678" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">&quot;disabled&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="9582575824833593">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="6705919639234756" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Set opacity" sid="1251166049257055" type="traderTxt">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="8255919494424927" type="traderBg">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="579690275259003" type="lionTraderBtnBg">
+                                                            <param id="0" name="Instance variable">state</param>
+                                                            <param id="1" name="Value">&quot;normal&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="14" name="Log" sid="4414990830934763" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">&quot;normal&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>adjust the progress bars</comment>
+                                        <event-block sid="9647669214728872">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="5503466237073741" type="buttonProgressBg">
+                                                    <param id="0" name="Instance variable">buttonId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">lionTraderBtnBg.progressBarId</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="1325843684337712" type="buttonProgressBg">
+                                                    <param id="0" name="Instance variable">progression</param>
+                                                    <param id="1" name="Value">Function.Call(&quot;quantity of&quot;, traderTxt.payWhat) / traderTxt.payHowMuch</param>
                                                 </action>
                                             </actions>
                                         </event-block>

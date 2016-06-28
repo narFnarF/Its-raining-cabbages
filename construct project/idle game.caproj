@@ -351,6 +351,9 @@
                         <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="9132404402467719" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="1" loop="0" name="lionTrader" pingpong="0" repeatcount="1" repeatto="0" sid="6837709488036616" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="buttonProgressBar" sid="9567485027148939">
@@ -374,6 +377,9 @@
                         <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="1765976811335853" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
                         </animation>
+                        <animation framecount="1" loop="0" name="lionTrader" pingpong="0" repeatcount="1" repeatto="0" sid="9527698673154945" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
                     </animation-folder>
                 </object-type>
                 <object-type name="newButton" sid="5096809369448876">
@@ -385,6 +391,21 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="beeBtn" pingpong="0" repeatcount="1" repeatto="0" sid="501531142461961" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="lionTraderBtnBg" sid="3836552500968573">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="7760523467200803" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="7811085318233502" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0">
                                 <image-point name="bar" x="0" y="1" />
                             </frame>
@@ -1010,6 +1031,40 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder name="trader">
+                <object-type name="traderTxt" sid="5574383113778382">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="buttonId" sid="7334111181996787" type="number" />
+                        <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
+                        <instance-variable name="receiveHowMany" sid="8038152053338172" type="number" />
+                        <instance-variable name="payWhat" sid="3103701344531354" type="string" />
+                        <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="682004431540147">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="traderTitle" sid="9400254462319746">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="4749103759458342">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="traderBg" sid="669454111504386">
+                    <plugin id="NinePatch" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="8956811240957274">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                </object-type>
+            </object-folder>
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1166,48 +1221,6 @@
                         <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="trader">
-            <object-type name="traderTxt" sid="5574383113778382">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="buttonId" sid="7334111181996787" type="number" />
-                    <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
-                    <instance-variable name="receiveHowMany" sid="8038152053338172" type="number" />
-                    <instance-variable name="payWhat" sid="3103701344531354" type="string" />
-                    <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="NoSave" sid="682004431540147">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <container>
-                    <type>traderTxt</type>
-                    <type>traderBg</type>
-                </container>
-            </object-type>
-            <object-type name="traderTitle" sid="9400254462319746">
-                <plugin id="Text" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="4749103759458342">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
-            <object-type name="traderBg" sid="669454111504386">
-                <plugin id="NinePatch" />
-                <behaviors>
-                    <behavior-type name="NoSave" sid="8956811240957274">
-                        <behavior id="NoSave" />
-                    </behavior-type>
-                </behaviors>
-                <container>
-                    <type>traderTxt</type>
-                    <type>traderBg</type>
-                </container>
-                <texture />
             </object-type>
         </object-folder>
         <object-folder name="quests">
@@ -1769,13 +1782,16 @@
         </family>
         <family name="genericButtons" plugin-id="Sprite" sid="4183274929016279">
             <members>
+                <member>lionTraderBtnBg</member>
                 <member>newButton</member>
             </members>
             <instance-variables>
-                <instance-variable name="initialyPressed" sid="4112654331809096" type="boolean" />
+                <instance-variable name="clickableEvenIfDisabled" sid="8634969934852378" type="boolean" />
                 <instance-variable name="callback" sid="6708884644703998" type="string" />
                 <instance-variable name="callbackParamNb" sid="7965788020137503" type="number" />
                 <instance-variable name="progressBarId" sid="3723874214917857" type="number" />
+                <instance-variable name="state" sid="9041518536292444" type="string" />
+                <instance-variable name="initialyPressed" sid="4112654331809096" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="NoSave" sid="5841893004396971">

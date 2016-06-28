@@ -287,10 +287,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>4</callbackParamNb>
                         <progressBarId>7</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -318,10 +320,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>3</callbackParamNb>
                         <progressBarId>6</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -349,10 +353,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>2</callbackParamNb>
                         <progressBarId>5</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -380,10 +386,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>clicked bee button</callback>
                         <callbackParamNb>1</callbackParamNb>
                         <progressBarId>4</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1338,10 +1346,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>purchase upgrade silo</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <progressBarId>1</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1369,10 +1379,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>purchase upgrade factory productivity</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <progressBarId>2</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1400,10 +1412,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
                         <callback>purchase upgrade factory capacity</callback>
                         <callbackParamNb>0</callbackParamNb>
                         <progressBarId>3</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />

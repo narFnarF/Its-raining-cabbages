@@ -686,35 +686,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="traderBg" uid="208">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>739</x>
-                        <y>1401</y>
-                        <z>0</z>
-                        <width>558</width>
-                        <height>53</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="lionStatsTxt" uid="209">
                     <properties>
                         <text>lion level</text>
@@ -835,6 +806,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="traderBg" uid="208">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>16</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>148</x>
+                        <y>1404</y>
+                        <z>0</z>
+                        <width>558</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="traderBg" uid="213">
                     <properties>
                         <left-margin>16</left-margin>
@@ -853,8 +853,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>735</x>
-                        <y>1492</y>
+                        <x>149</x>
+                        <y>1489</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -882,8 +882,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>732</x>
-                        <y>1588</y>
+                        <x>146</x>
+                        <y>1585</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -911,8 +911,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>732</x>
-                        <y>1688</y>
+                        <x>146</x>
+                        <y>1685</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -940,8 +940,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>733</x>
-                        <y>1777</y>
+                        <x>147</x>
+                        <y>1774</y>
                         <z>0</z>
                         <width>558</width>
                         <height>53</height>
@@ -951,24 +951,20 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="traderTxt" uid="217">
+                <instance type="lionTraderBtnBg" uid="256">
                     <properties>
-                        <text>veggie burger (from tofu steak)</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <buttonId>0</buttonId>
-                        <receiveWhat>veggie burger</receiveWhat>
-                        <receiveHowMany>1</receiveHowMany>
-                        <payWhat>tofu steak</payWhat>
-                        <payHowMuch>9</payHowMuch>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>lion trader clicked</callback>
+                        <callbackParamNb>1</callbackParamNb>
+                        <progressBarId>1</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -976,11 +972,143 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>747</x>
-                        <y>1413</y>
+                        <x>735</x>
+                        <y>1400</y>
                         <z>0</z>
-                        <width>543</width>
-                        <height>51</height>
+                        <width>558</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>lion trader clicked</callback>
+                        <callbackParamNb>2</callbackParamNb>
+                        <progressBarId>2</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>1496</y>
+                        <z>0</z>
+                        <width>558</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="257">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>lion trader clicked</callback>
+                        <callbackParamNb>3</callbackParamNb>
+                        <progressBarId>3</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>1592</y>
+                        <z>0</z>
+                        <width>558</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="259">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>lion trader clicked</callback>
+                        <callbackParamNb>4</callbackParamNb>
+                        <progressBarId>4</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>1687</y>
+                        <z>0</z>
+                        <width>558</width>
+                        <height>53</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="260">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>true</clickableEvenIfDisabled>
+                        <callback>lion trader clicked</callback>
+                        <callbackParamNb>5</callbackParamNb>
+                        <progressBarId>5</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>735</x>
+                        <y>1783</y>
+                        <z>0</z>
+                        <width>558</width>
+                        <height>53</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1018,6 +1146,43 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="traderTxt" uid="217">
+                    <properties>
+                        <text>veggie burger (from tofu steak)</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <buttonId>1</buttonId>
+                        <receiveWhat>veggie burger</receiveWhat>
+                        <receiveHowMany>1</receiveHowMany>
+                        <payWhat>tofu steak</payWhat>
+                        <payHowMuch>9</payHowMuch>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>747</x>
+                        <y>1413</y>
+                        <z>0</z>
+                        <width>543</width>
+                        <height>51</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="traderTxt" uid="219">
                     <properties>
                         <text>tofu steak (from tofu)</text>
@@ -1031,7 +1196,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <buttonId>0</buttonId>
+                        <buttonId>2</buttonId>
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>1</receiveHowMany>
                         <payWhat>tofu</payWhat>
@@ -1068,7 +1233,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <buttonId>0</buttonId>
+                        <buttonId>3</buttonId>
                         <receiveWhat>salads</receiveWhat>
                         <receiveHowMany>7000</receiveHowMany>
                         <payWhat>lion poop</payWhat>
@@ -1105,7 +1270,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <buttonId>0</buttonId>
+                        <buttonId>4</buttonId>
                         <receiveWhat>tofu steak</receiveWhat>
                         <receiveHowMany>9</receiveHowMany>
                         <payWhat>veggie burger</payWhat>
@@ -1142,7 +1307,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <buttonId>0</buttonId>
+                        <buttonId>5</buttonId>
                         <receiveWhat>tofu</receiveWhat>
                         <receiveHowMany>499</receiveHowMany>
                         <payWhat>honey</payWhat>
@@ -1454,18 +1619,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="newButton" uid="240">
+                <instance type="buttonProgressBg" uid="261">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>lionTrader</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <initialyPressed>false</initialyPressed>
-                        <callback>purchase upgrade silo</callback>
-                        <callbackParamNb>0</callbackParamNb>
-                        <progressBarId>1</progressBarId>
+                        <progression>0.5</progression>
+                        <buttonId>1</buttonId>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -1473,14 +1636,130 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1314</x>
-                        <y>1408</y>
+                        <x>783</x>
+                        <y>1455.059570313</y>
                         <z>0</z>
-                        <width>476</width>
-                        <height>61</height>
+                        <width>412</width>
+                        <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="262">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>lionTrader</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>2</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>798.70324707</x>
+                        <y>1557.539550781</y>
+                        <z>0</z>
+                        <width>412</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="267">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>lionTrader</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>3</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>803.661621094</x>
+                        <y>1653.41003418</y>
+                        <z>0</z>
+                        <width>412</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="270">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>lionTrader</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>4</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>799.528808594</x>
+                        <y>1746.801391602</y>
+                        <z>0</z>
+                        <width>412</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buttonProgressBg" uid="293">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>lionTrader</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <progression>0.5</progression>
+                        <buttonId>5</buttonId>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>803.659118652</x>
+                        <y>1843.494995117</y>
+                        <z>0</z>
+                        <width>412</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
