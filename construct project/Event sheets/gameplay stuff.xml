@@ -237,27 +237,54 @@
             <sub-events>
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
-                        <event-block sid="3637024882119976">
+                        <variable constant="0" name="date" sid="6800240948464881" static="1" type="number">-1</variable>
+                        <event-block sid="8618705193765146">
                             <conditions>
-                                <condition id="0" name="On function" sid="8150831797504466" type="Function">
-                                    <param id="0" name="Name">&quot;first launch&quot;</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="728578133376212" type="System">
-                                    <param id="0" name="First value">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;factory&quot;</param>
-                                </condition>
+                                <condition id="-2" name="On start of layout" sid="8923831098627135" type="System" />
                             </conditions>
-                            <actions>
-                                <action disabled="1" id="14" name="Log" sid="3699607571925918" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Loading JSON with silly messages&quot;</param>
-                                </action>
-                                <action id="1" name="Request project file" sid="2752477227894716" type="AJAX">
-                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
-                                    <param id="1" name="File">silly_messages.json</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="4078791175383307">
+                                    <conditions>
+                                        <condition id="6" name="Is empty" sid="6776147585062525" type="sillyMessages" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Request project file" sid="8944545004057335" type="AJAX">
+                                            <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                            <param id="1" name="File">silly_messages.json</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="4826509902369449" type="Browser">
+                                            <param id="0" name="Type">2</param>
+                                            <param id="1" name="Message">&quot;requesting silly messages&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Request the json once per day</comment>
+                                <event-block sid="8567066461536741">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6179787947702256" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="9001873551431485" type="System">
+                                            <param id="0" name="Variable">date</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">date.Date</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Request project file" sid="3401067125009189" type="AJAX">
+                                            <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                            <param id="1" name="File">silly_messages.json</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7489936930266446" type="System">
+                                            <param id="0" name="Variable">date</param>
+                                            <param id="1" name="Value">Date.Date</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="4205043066947511" type="Browser">
+                                            <param id="0" name="Type">2</param>
+                                            <param id="1" name="Message">&quot;ici: &quot; &amp; date</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="737640445862742">
                             <conditions>
@@ -269,6 +296,10 @@
                                 <action id="11" name="Load" sid="7945392547159848" type="sillyMessages">
                                     <param id="0" name="JSON">AJAX.LastData</param>
                                 </action>
+                                <action id="14" name="Log" sid="1240066287316779" type="Browser">
+                                    <param id="0" name="Type">2</param>
+                                    <param id="1" name="Message">&quot;received silly messages&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6708560099696989">
@@ -278,10 +309,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set size" sid="3229491906643753" type="sillyMessages">
-                                    <param id="0" name="Width">0</param>
-                                    <param id="1" name="Height">1</param>
-                                    <param id="2" name="Depth">1</param>
+                                <action id="14" name="Log" sid="4121064142564542" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Tried to retrieve silly messages but couldn&apos;t. Probably because internet connection is missing. Will try again tomorrow.&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

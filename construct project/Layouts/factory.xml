@@ -1894,8 +1894,8 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -1906,8 +1906,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1307</x>
-                        <y>112</y>
+                        <x>1289</x>
+                        <y>117</y>
                         <z>0</z>
                         <width>125</width>
                         <height>26</height>

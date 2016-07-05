@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>delete savefile events</name>
+    <events>
+        <include>global events</include>
+        <event-block sid="1610478759320779">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3118681479649214" type="System" />
+                <condition id="0" name="Compare text" sid="8950562468046949" type="globalStats">
+                    <param id="0" name="Text to compare">&quot;erase&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="496044605325874" type="globalStats">
+                    <param id="0" name="Text">&quot;WARNING! This will erase your progress for good. There&apos;s no coming back from this. If you erase your savefile, it&apos;s permanently lost. Nothing can be done about it. You must have good reasons for doing that.&#x0D;&#x0A;&#x0D;&#x0A;Note: There are NO bonus received from doing that! You will just reset your game back to the start!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6977250909381466">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2274114359925227" type="Touch">
+                    <param id="0" name="Object">globalStats</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="1100081473358142" type="globalStats">
+                    <param id="0" name="Text to compare">&quot;No! Keep my progress!&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2060471544797077" type="System">
+                    <param id="0" name="Layout">factory</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9466081279842819">
+            <conditions>
+                <condition id="18" name="On double-tap object" sid="2838944217020122" type="Touch">
+                    <param id="0" name="Object">globalStats</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="9833289438984153" type="globalStats">
+                    <param id="0" name="Text to compare">&quot;Double-tap here to erase permanently&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Clear storage" sid="329106449486469" type="LocalStorage" />
+                <action id="-21" name="Reset global variables" sid="5741839416993113" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="1895736508200706" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="3269306999817631">
+            <conditions>
+                <condition id="3" name="On storage cleared" sid="7631501369442344" type="LocalStorage" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="748433767253691" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="436524218552652" type="System">
+                    <param id="0" name="Layout">savefile error</param>
+                </action>
+                <action disabled="1" id="-2" name="Go to layout" sid="6271783017513709" type="System">
+                    <param id="0" name="Layout">Intro</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8628734426210886">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="5925959594140589" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4786347409955887" type="System">
+                    <param id="0" name="Layout">savefile error</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

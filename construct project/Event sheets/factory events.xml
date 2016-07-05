@@ -2058,6 +2058,58 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>reset savefile</comment>
+                <event-block sid="6743424694796781">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="resetCounter" sid="2211372764148625" static="1" type="number">0</variable>
+                        <event-block sid="5193899237006021">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="394241153627333" type="Touch">
+                                    <param id="0" name="Object">FPSTxt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="6458559305854997" type="System">
+                                    <param id="0" name="Variable">resetCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1243967476993835">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8502650142079198" type="System">
+                                    <param id="0" name="Variable">resetCounter</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1931654942939497" type="System">
+                                    <param id="0" name="Variable">resetCounter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6928640846993252" type="System">
+                                    <param id="0" name="Layout">delete savefile</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2052433894601593">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="4484934615433295" type="System">
+                                    <param id="0" name="Interval (seconds)">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8266825075737234" type="System">
+                                    <param id="0" name="Variable">resetCounter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
