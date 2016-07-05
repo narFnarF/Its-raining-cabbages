@@ -2058,7 +2058,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>reset savefile</comment>
+                <comment>tool to reset savefile: mash the FPS counter on the factory screen</comment>
                 <event-block sid="6743424694796781">
                     <conditions />
                     <actions />
