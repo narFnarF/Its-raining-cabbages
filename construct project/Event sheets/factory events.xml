@@ -2037,18 +2037,26 @@
         </event-group>
         <event-group description="" sid="887098112256477" title="debug (factory)">
             <sub-events>
-                <event-block sid="8126762338766192">
+                <event-block sid="1035270599890029">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="7529615479165372" type="Keyboard">
-                            <param id="0" name="Key">32 (Espace)</param>
-                        </condition>
+                        <condition id="-18" name="Is in preview" sid="7056131157726263" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="6186883513299818" type="menhir">
-                            <param id="0" name="Instance variable">level</param>
-                            <param id="1" name="Value">30</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8126762338766192">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7529615479165372" type="Keyboard">
+                                    <param id="0" name="Key">32 (Espace)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6186883513299818" type="menhir">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Value">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
