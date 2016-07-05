@@ -51,7 +51,7 @@
                             </actions>
                         </event-block>
                         <variable comment="1=true" constant="0" name="justEntered" sid="6949926013632402" static="1" type="number">0</variable>
-                        <comment>If you just entered, ignore the time because it&apos;s normal you were idle for a long time. But if you were idle for a long time and you didn&apos;t just entered (because the game was on sleep), then you&apos;re kicked.</comment>
+                        <comment>If you&apos;ve just entered, ignore the time because it&apos;s normal you were idle for a long time. But if you were idle for a long time and you didn&apos;t just entered (because the game was on sleep), then you&apos;re kicked.</comment>
                         <event-block sid="2834006017917653">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="189518405426665" type="System" />

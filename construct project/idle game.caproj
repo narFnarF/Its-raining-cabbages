@@ -1805,7 +1805,6 @@
             <layout>Intro.xml</layout>
             <layout>savefile error.xml</layout>
             <layout>manual loading.xml</layout>
-            <layout>create new game.xml</layout>
         </layout-folder>
         <layout-folder name="old or useless">
             <layout>spawned objects.xml</layout>
@@ -1829,7 +1828,6 @@
             <event-sheet>savefile error events.xml</event-sheet>
             <event-sheet>manual loading events.xml</event-sheet>
             <event-sheet>intro events.xml</event-sheet>
-            <event-sheet>create new game events.xml</event-sheet>
         </event-folder>
         <event-folder name="old">
             <event-folder name="verachou">
