@@ -238,53 +238,51 @@
                 <event-group description="" sid="3373127521768589" title="Silly notifications">
                     <sub-events>
                         <variable constant="0" name="date" sid="6800240948464881" static="1" type="number">-1</variable>
-                        <event-block sid="8618705193765146">
+                        <comment>Request the json once per day (it also triggers on the first start, for a New Game)</comment>
+                        <comment>Bug: it wont trigger after a reset of savefile, because static variables aren&apos;t reset -_-</comment>
+                        <event-block sid="413553810028611">
                             <conditions>
-                                <condition id="-2" name="On start of layout" sid="8923831098627135" type="System" />
+                                <condition id="-14" name="Compare variable" sid="9001873551431485" type="System">
+                                    <param id="0" name="Variable">date</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">date.Date</param>
+                                </condition>
+                                <condition id="1" name="Is online" sid="3493801167385418" type="Browser" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="4078791175383307">
-                                    <conditions>
-                                        <condition id="6" name="Is empty" sid="6776147585062525" type="sillyMessages" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Request project file" sid="8944545004057335" type="AJAX">
-                                            <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
-                                            <param id="1" name="File">silly_messages.json</param>
-                                        </action>
-                                        <action id="14" name="Log" sid="4826509902369449" type="Browser">
-                                            <param id="0" name="Type">2</param>
-                                            <param id="1" name="Message">&quot;requesting silly messages&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Request the json once per day</comment>
-                                <event-block sid="8567066461536741">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="6179787947702256" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="9001873551431485" type="System">
-                                            <param id="0" name="Variable">date</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">date.Date</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Request project file" sid="3401067125009189" type="AJAX">
-                                            <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
-                                            <param id="1" name="File">silly_messages.json</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="7489936930266446" type="System">
-                                            <param id="0" name="Variable">date</param>
-                                            <param id="1" name="Value">Date.Date</param>
-                                        </action>
-                                        <action id="14" name="Log" sid="4205043066947511" type="Browser">
-                                            <param id="0" name="Type">2</param>
-                                            <param id="1" name="Message">&quot;ici: &quot; &amp; date</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="1" name="Request project file" sid="3401067125009189" type="AJAX">
+                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                    <param id="1" name="File">silly_messages.json</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7489936930266446" type="System">
+                                    <param id="0" name="Variable">date</param>
+                                    <param id="1" name="Value">Date.Date</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="4205043066947511" type="Browser">
+                                    <param id="0" name="Type">2</param>
+                                    <param id="1" name="Message">&quot;ici: &quot; &amp; date</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 10 sec</comment>
+                        <event-block sid="4078791175383307">
+                            <conditions>
+                                <condition id="6" name="Is empty" sid="6776147585062525" type="sillyMessages" />
+                                <condition id="1" name="Is online" sid="3840099924335914" type="Browser" />
+                                <condition id="-6" name="Every X seconds" sid="9060795309745808" type="System">
+                                    <param id="0" name="Interval (seconds)">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Request project file" sid="8944545004057335" type="AJAX">
+                                    <param id="0" name="Tag">&quot;silly_messages.json&quot;</param>
+                                    <param id="1" name="File">silly_messages.json</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="4826509902369449" type="Browser">
+                                    <param id="0" name="Type">2</param>
+                                    <param id="1" name="Message">&quot;requesting silly messages from On Went Online.&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="737640445862742">
                             <conditions>
@@ -296,7 +294,7 @@
                                 <action id="11" name="Load" sid="7945392547159848" type="sillyMessages">
                                     <param id="0" name="JSON">AJAX.LastData</param>
                                 </action>
-                                <action id="14" name="Log" sid="1240066287316779" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="1240066287316779" type="Browser">
                                     <param id="0" name="Type">2</param>
                                     <param id="1" name="Message">&quot;received silly messages&quot;</param>
                                 </action>
@@ -417,6 +415,17 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="2011078086224444">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7200842942564816" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3076962427945874" type="Function">
+                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="3297061255133494">
                     <conditions>
                         <condition id="0" name="On function" sid="9779909940571391" type="Function">
@@ -513,20 +522,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2011078086224444">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="7200842942564816" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="3076962427945874" type="Function">
-                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-group description="" sid="7098275000725635" title="update notes">
+                <event-group description="" disabled="1" sid="7098275000725635" title="update notes">
                     <sub-events>
-                        <event-block sid="2862928478550774">
+                        <event-block disabled="1" sid="2862928478550774">
                             <conditions>
                                 <condition id="-29" name="On load complete" sid="4091211900937983" type="System" />
                             </conditions>
@@ -537,7 +535,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9644979044549128">
+                        <event-block disabled="1" sid="9644979044549128">
                             <conditions>
                                 <condition id="0" name="On completed" sid="6888546571940089" type="AJAX">
                                     <param id="0" name="Tag">&quot;release_notes.txt&quot;</param>
@@ -550,7 +548,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1164674688730957">
+                        <event-block disabled="1" sid="1164674688730957">
                             <conditions>
                                 <condition id="1" name="On error" sid="6367679279762195" type="AJAX">
                                     <param id="0" name="Tag">&quot;release_notes.txt&quot;</param>
