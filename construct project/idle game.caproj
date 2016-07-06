@@ -1055,15 +1055,6 @@
                         </behavior-type>
                     </behaviors>
                 </object-type>
-                <object-type name="traderBg" sid="669454111504386">
-                    <plugin id="NinePatch" />
-                    <behaviors>
-                        <behavior-type name="NoSave" sid="8956811240957274">
-                            <behavior id="NoSave" />
-                        </behavior-type>
-                    </behaviors>
-                    <texture />
-                </object-type>
             </object-folder>
             <object-type name="lion" sid="5246547682708114">
                 <plugin id="Sprite" />

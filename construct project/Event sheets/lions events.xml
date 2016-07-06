@@ -1019,9 +1019,6 @@
                                                 <action id="-15" name="Set visible" sid="3784604029385735" type="traderTxt">
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
-                                                <action id="-15" name="Set visible" sid="9833851556312148" type="traderBg">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
                                                 <action id="-10" name="Set value" sid="1755298391447812" type="lionTraderBtnBg">
                                                     <param id="0" name="Instance variable">state</param>
                                                     <param id="1" name="Value">&quot;invisible&quot;</param>
@@ -1051,9 +1048,6 @@
                                                         <action id="-16" name="Set opacity" sid="4783170809078315" type="traderTxt">
                                                             <param id="0" name="Opacity">60</param>
                                                         </action>
-                                                        <action id="-16" name="Set opacity" sid="4263265633506565" type="traderBg">
-                                                            <param id="0" name="Opacity">30</param>
-                                                        </action>
                                                         <action id="-10" name="Set value" sid="9984462830107152" type="lionTraderBtnBg">
                                                             <param id="0" name="Instance variable">state</param>
                                                             <param id="1" name="Value">&quot;disabled&quot;</param>
@@ -1070,9 +1064,6 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-16" name="Set opacity" sid="1251166049257055" type="traderTxt">
-                                                            <param id="0" name="Opacity">100</param>
-                                                        </action>
-                                                        <action id="-16" name="Set opacity" sid="8255919494424927" type="traderBg">
                                                             <param id="0" name="Opacity">100</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="579690275259003" type="lionTraderBtnBg">
