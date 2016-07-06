@@ -1872,18 +1872,44 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="594759004172402" type="notificationBox">
                                     <param id="0" name="Instance variable">open</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1867589633328341" type="genericButtons">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;normal&quot;</param>
-                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="4406039222698822" type="genericButtons">
-                                    <param id="0" name="Instance variable">initialyPressed</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1547112631885341">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1867589633328341" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;normal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="4406039222698822" type="genericButtons">
+                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3064871916391406">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1518884198447646" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="3036056807501591" type="genericButtons">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;disabled&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="6354785222555978" type="genericButtons">
+                                            <param id="0" name="Instance variable">clickableEvenIfDisabled</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="3546074522365827" type="genericButtons">
+                                            <param id="0" name="Instance variable">initialyPressed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>complete the press (if still on the same object)</comment>
                         <event-block sid="7040527707900623">
