@@ -2110,14 +2110,19 @@
                 </event-block>
                 <event-group description="" sid="9948026963321727" title="button progress bars">
                     <sub-events>
-                        <event-block sid="6853564231613715">
+                        <event-block any="1" sid="6853564231613715">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="5062335042028441" type="System" />
+                                <condition id="-29" name="On load complete" sid="8110415501654914" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="9660139263075532" type="buttonProgressBar">
                                     <param id="0" name="Animation">buttonProgressBg.AnimationName</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="650324889441836" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bars updated&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
