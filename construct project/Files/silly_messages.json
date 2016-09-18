@@ -1,1 +1,71 @@
-[{"area":"factory","text":"The menhir… What does it mean?"},{"area":"factory","text":"Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature. Because they all drown in that water..."},{"area":"factory","text":"There isn't any easy mode in this game!"},{"area":"factory","text":"The name of the Boing 747 means that it can carry up to 747 cabbages. But why carry this much cabbages??"},{"area":"factory","text":"How many times a day do you touch your menhir?"},{"area":"factory","text":"The game continues to run even when it's closed. How is that possible? It's magic!"},{"area":"factory","text":"No lions was harmed during the making of this game."},{"area":"factory","text":"Philosophy: Are the cabbages really falling from the sky... or is it the menhir that attracts them?"},{"area":"factory","text":"I want these mother-f...ing cabbages out of this mother-f...ing plane!"},{"area":"factory","text":"Ce menhir... C'est un pic, un cap! Que dis-je? C'est une péninsule!"},{"area":"factory","text":"Freud would be proud of your menhir."},{"area":"factory","text":"We can only hope that the fishes in the water love to eat cabbages."},{"area":"factory","text":"Have your bought your anti-cabbages protecting helmet?"},{"area":"factory","text":"Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again."},{"area":"factory","text":"Is the water just water, or a manifestation of universal entropy?"},{"area":"factory","text":"Never underestimate the combined power of cabbages and gravity."},{"area":"factory","text":"Now hiring engineer to improve productivity of coleslaw salad factory."},{"area":"factory","text":"Most of the cabbages in this game are actually imported from your Skyrim save file."},{"area":"factory","text":"Rent-a-bee: 514-555-8385"},{"area":"factory","text":"Scientist community actively trying to find a way to turn cabbages into clean energy. \"We have so much of them anyway!\""},{"area":"factory","text":"US government implement additional airport security following cabbage terrorist attack."},{"area":"factory","text":"Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!"},{"area":"factory","text":"The cabbages are restless. Consider sacrificing salad dressing to appease them."},{"area":"factory","text":"World hunger have been solved as cabbages enter population eating habits."},{"area":"factory","text":"Is this game art or fart?"},{"area":"factory","text":"The NSA cannot confirm nor deny whether it is spying on your bees."},{"area":"factory","text":"How is it possible to make a rock larger?"},{"area":"factory","text":"Nobody seems to know where these cabbages come from."},{"area":"factory","text":"It is rumored that the menhir is actually an alien technology."},{"area":"factory","text":"Your bees are working hard."},{"area":"factory","text":"Where does the menhir comes from?"},{"area":"factory","text":"A mighty lion is lurking around."},{"area":"factory","text":"What's the meaning of this game??"},{"area":"factory","text":"A lion is poking its head around."},{"area":"factory","text":"If you manage to drop a cabbages in the tiny gap on the left, the game's creator will be furious and will drop a hundred cabbages at once! Which isn't such a bad thing when you think about it."}]
+{
+   "areas": {
+      "factory": [
+         "The menhir… What does it mean?",
+         "Each of these cabbages actually contain a little baby. Which is why the game is rated M for Mature. Because they all drown in that water...",
+         "The name of the Boing 747 means that it can carry up to 747 cabbages. But why carry this much cabbages??",
+         "How many times a day do you touch your menhir?",
+         "The game continues to run even when it's closed. How is that possible? It's magic!",
+         "Philosophy: Are the cabbages really falling from the sky... or is it the menhir that attracts them?",
+         "I want these mother-f...ing cabbages out of this mother-f...ing plane!",
+         "Ce menhir... C'est un pic, un cap! Que dis-je? C'est une péninsule!",
+         "Freud would be proud of your menhir.",
+         "We can only hope that the fishes in the water love to eat cabbages.",
+         "Have your bought your anti-cabbages protecting helmet?",
+         "Hundreds of Montreal sport fans injured in cabbages incident. Olympic stadium forced to rebuild its roof yet again.",
+         "Is the water just water, or a manifestation of universal entropy?",
+         "Never underestimate the combined power of cabbages and gravity.",
+         "Now hiring engineer to improve productivity of coleslaw salad factory.",
+         "Most of the cabbages in this game are actually imported from your Skyrim save file.",
+         "Rent-a-bee: 514-555-8385",
+         "Scientist community actively trying to find a way to turn cabbages into clean energy. \"We have so much of them anyway!\"",
+         "US government implement additional airport security following cabbage terrorist attack.",
+         "Economists report a decrease of coleslaw salad sales as cabbages are literally falling from the sky!",
+         "The cabbages are restless. Consider sacrificing salad dressing to appease them.",
+         "World hunger have been solved as cabbages enter population eating habits.",
+         "Is this game art or fart?",
+         "The NSA cannot confirm nor deny whether it is spying on your bees.",
+         "How is it possible to make a rock larger?",
+         "Nobody seems to know where these cabbages come from.",
+         "It is rumored that the menhir is actually an alien technology.",
+         "Your bees are working hard.",
+         "Where does the menhir comes from?",
+         "A mighty lion is lurking around.",
+         "A lion is poking its head around.",
+         "If you manage to drop a cabbages in the tiny gap on the left, the game's creator will be furious and will drop a hundred cabbages at once! Which isn't such a bad thing when you think about it.",
+         "Sweden to adopt Menhir Cabbages Throwing as their national sport. Fan of the sport infuriated after observants calls it \"a mix between basketball and quidditch\".",
+         "Your most dedicated bees are working overtime for you. Watch out for burnouts!"
+      ],
+      "pachinko": [
+         "Japan was the first country to add lions into pachinko machines",
+         "No lions was harmed during the making of this game. I swear! Falling like that doesn't hurt them!",
+         "Did I just heard that lion say \"ouch!\" ?",
+         "You reward can be doubled... by the power of love!",
+         "Never underestimate the power of gravity."
+      ],
+      "lions": [
+         "No lions was harmed during the making of this game.",
+         "A mighty lion is lurking around.",
+         "A lion is poking its head around.",
+         "Can we make tofu from cabbages?",
+         "We can only wonder what lions are doing when they are away.",
+         "While waiting for you, lions watch Netflix and chill.",
+         "When high level, lions bring back a lot more stuff!"
+      ],
+      "rewards": [
+         "What's the meaning of this game??",
+         "There isn't any easy mode in this game!",
+         "Seriously... Where do all these cabbages come from?",
+         "Not but really... Couldn't we turn all these cabbages into something useful? Like car fuel maybe?"
+      ],
+      "pokemons": [
+         "You get more XP points for long and difficult pokemon battles."
+      ]
+   },
+   "frequencies": {
+      "lions": 10,
+      "factory": 29,
+      "pachinko": 29,
+      "rewards": 29
+   }
+}
