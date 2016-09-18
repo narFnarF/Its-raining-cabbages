@@ -8,13 +8,14 @@
     <author-website>http://www.narF.ca</author-website>
     <app-id>ca.narF.idlegame</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>22700</saved-with-version>
+    <saved-with-version>23300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -59,7 +60,7 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">CocoonJS native</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -322,6 +323,9 @@
                         <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="sillyMessagesJSON" sid="121428616668481">
+                <plugin id="JSON" />
             </object-type>
         </object-folder>
         <object-folder name="UI">

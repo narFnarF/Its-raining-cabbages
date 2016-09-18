@@ -264,10 +264,14 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 10 sec</comment>
+                        <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
                         <event-block sid="4078791175383307">
                             <conditions>
-                                <condition id="6" name="Is empty" sid="6776147585062525" type="sillyMessages" />
+                                <condition disabled="1" id="6" name="Is empty" sid="6776147585062525" type="sillyMessages" />
+                                <condition id="70" name="Is Empty" sid="100450195576674" type="sillyMessagesJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </condition>
                                 <condition id="1" name="Is online" sid="3840099924335914" type="Browser" />
                                 <condition id="-6" name="Every X seconds" sid="9060795309745808" type="System">
                                     <param id="0" name="Interval (seconds)">15</param>
@@ -291,8 +295,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="11" name="Load" sid="7945392547159848" type="sillyMessages">
+                                <action disabled="1" id="11" name="Load" sid="7945392547159848" type="sillyMessages">
                                     <param id="0" name="JSON">AJAX.LastData</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="269136962159158" type="sillyMessagesJSON">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
                                 </action>
                                 <action disabled="1" id="14" name="Log" sid="1240066287316779" type="Browser">
                                     <param id="0" name="Type">2</param>
@@ -313,6 +322,18 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="157902160920596">
+                            <conditions>
+                                <condition id="200" name="On JSON Parse Error" sid="895410443245082" type="sillyMessagesJSON" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="805858386211958" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;The Silly Message JSON is not formated properly.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="randomNotificationNumber" sid="179090504088591" static="0" type="number">0</variable>
                         <event-block sid="3351956113656007">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="2683204853402891" type="System">
@@ -320,9 +341,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="7815691982683778" type="Function">
+                                <action id="-9" name="Set value" sid="450325989161527" type="System">
+                                    <param id="0" name="Variable">randomNotificationNumber</param>
+                                    <param id="1" name="Value">floor(random(0, sillyMessagesJSON.Size(0, &quot;areas&quot;, LayoutName) ) )</param>
+                                </action>
+                                <action id="0" name="Call function" sid="676435939913897" type="Function">
                                     <param id="0" name="Name">&quot;notification&quot;</param>
-                                    <param id="1" name="Parameter {n}">sillyMessages.At( floor( random(0, sillyMessages.Width) ) )</param>
+                                    <param id="1" name="Parameter {n}">sillyMessagesJSON.Value(0, &quot;areas&quot;, LayoutName, randomNotificationNumber)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3302,6 +3327,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="589298622342486">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="432740751556784" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="55" name="Clear" sid="220731256148928" type="sillyMessagesJSON">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="8706205130019801">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="4292622085913126" type="Keyboard">
@@ -3464,12 +3502,12 @@
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="2354770752218285" type="Function">
-                                    <param id="0" name="Name">&quot;has enough&quot;</param>
-                                    <param id="1" name="Parameter {n}">test{###}5</param>
+                                    <param id="0" name="Name">&quot;sillyMessages .countIfThisArea&quot;</param>
+                                    <param id="1" name="Parameter {n}">test</param>
                                 </action>
                                 <action id="14" name="Log" sid="1645016962501771" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;quantity of &quot; &amp; test &amp; &quot; : &quot; &amp; Function.ReturnValue</param>
+                                    <param id="1" name="Message">&quot;return of &quot; &amp; test &amp; &quot; : &quot; &amp; Function.ReturnValue</param>
                                 </action>
                             </actions>
                         </event-block>
