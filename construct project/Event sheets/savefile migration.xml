@@ -186,18 +186,6 @@
                                                     <param id="1" name="Value">131</param>
                                                 </action>
                                             </actions>
-                                            <sub-events>
-                                                <event-block sid="892725233051527">
-                                                    <conditions />
-                                                    <actions>
-                                                        <action id="14" name="Log" sid="635756240083356" type="Browser">
-                                                            <param id="0" name="Type">0</param>
-                                                            <param id="1" name="Message">&quot;deleting the old SillyMessages array&quot;</param>
-                                                        </action>
-                                                        <action id="-9" name="Destroy" sid="346480302950412" type="sillyMessagesOLD" />
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

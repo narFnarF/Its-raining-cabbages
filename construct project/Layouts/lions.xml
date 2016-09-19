@@ -1910,13 +1910,6 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="sillyMessagesOLD" uid="50">
-            <properties>
-                <width>0</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
         <instance type="menhirMsgArray" uid="103">
             <properties>
                 <width>0</width>
