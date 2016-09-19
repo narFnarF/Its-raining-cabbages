@@ -313,7 +313,7 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type global="1" name="sillyMessages" sid="110751735252375">
+            <object-type global="1" name="sillyMessagesOLD" sid="110751735252375">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="mask" sid="6875210335898705">

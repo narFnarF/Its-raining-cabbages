@@ -157,7 +157,47 @@
                                                     <param id="2" name="Value">129</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="14" name="Log" sid="360893134412479" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;migrating from 129 to 130&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="189570834184521" type="System">
+                                                    <param id="0" name="Variable">versionInNumber</param>
+                                                    <param id="1" name="Value">130</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="702983156645368">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="285075725332797" type="System">
+                                                    <param id="0" name="Variable">versionInNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">130</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="958981697969562" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;migrating from 130 to 131&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="286917362725568" type="System">
+                                                    <param id="0" name="Variable">versionInNumber</param>
+                                                    <param id="1" name="Value">131</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="892725233051527">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="635756240083356" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">&quot;deleting the old SillyMessages array&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Destroy" sid="346480302950412" type="sillyMessagesOLD" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -175,6 +215,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>add current version to the front of the list</comment>
                                 <event-block sid="1183524559169109">
                                     <conditions />
                                     <actions>
