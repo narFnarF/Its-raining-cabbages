@@ -15,7 +15,7 @@
     <layers>
         <layer name="background" sid="273888270559521">
             <initially-visible>1</initially-visible>
-            <background-color>153,51,102</background-color>
+            <background-color>102,51,102</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -63,8 +63,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-280</x>
-                        <y>297</y>
+                        <x>-272</x>
+                        <y>350</y>
                         <z>0</z>
                         <width>147</width>
                         <height>153</height>
@@ -75,18 +75,24 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="storyDisplay" uid="214">
+                <instance type="1storyDisplay" uid="214">
                     <properties>
-                        <text>Text</text>
+                        <text>story display</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-27,400,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <string></string>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -94,7 +100,172 @@
                         <y>219</y>
                         <z>0</z>
                         <width>457</width>
-                        <height>532</height>
+                        <height>399.000610352</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="215">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>story receive clicked</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>1</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>66.999992371</x>
+                        <y>621.796447754</y>
+                        <z>0</z>
+                        <width>220</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="lionTraderBtnBg" uid="216">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <clickableEvenIfDisabled>false</clickableEvenIfDisabled>
+                        <callback>story decode clicked</callback>
+                        <callbackParamNb>0</callbackParamNb>
+                        <progressBarId>2</progressBarId>
+                        <state>normal</state>
+                        <initialyPressed>false</initialyPressed>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>337</x>
+                        <y>623.796447754</y>
+                        <z>0</z>
+                        <width>220</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="1storyButtonLabel" uid="341">
+                    <properties>
+                        <text>Receive</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <string></string>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>77.091880798</x>
+                        <y>633.97845459</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>47.274902344</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="1storyButtonLabel" uid="342">
+                    <properties>
+                        <text>Decode</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <string></string>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>348.000640869</x>
+                        <y>636.705627441</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>47.274902344</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="1storyStatus" uid="343">
+                    <properties>
+                        <text>status</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-27,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <string></string>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>82</x>
+                        <y>70</y>
+                        <z>0</z>
+                        <width>457</width>
+                        <height>81</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -143,7 +314,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="storyJSON" uid="213">
+        <instance type="1storyJSON" uid="213">
             <instance-variables>
                 <date>-1</date>
             </instance-variables>

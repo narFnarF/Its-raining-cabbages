@@ -2,5 +2,174 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>story events</name>
-    <events />
+    <events>
+        <include>gameplay stuff</include>
+        <event-group description="" sid="863036200317594" title="AJAX request (Story)">
+            <sub-events>
+                <comment>Request the json once per day (it also triggers on the first start, for a New Game)</comment>
+                <event-block sid="934392183261641">
+                    <conditions>
+                        <condition id="1" name="Is online" sid="846721641959368" type="Browser" />
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="961771567704888" type="1storyJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">date.Date</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="390470154147478" type="AJAX">
+                            <param id="0" name="Tag">&quot;story.json&quot;</param>
+                            <param id="1" name="File">story.txt</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="191775203687803" type="1storyJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Value">Date.Date</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
+                <event-block sid="484121997502294">
+                    <conditions>
+                        <condition id="70" name="Is Empty" sid="355472247943989" type="1storyJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </condition>
+                        <condition id="1" name="Is online" sid="354760909442845" type="Browser" />
+                        <condition id="-6" name="Every X seconds" sid="598795862747915" type="System">
+                            <param id="0" name="Interval (seconds)">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="476758344610784" type="AJAX">
+                            <param id="0" name="Tag">&quot;story.json&quot;</param>
+                            <param id="1" name="File">story.txt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240571591470516">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="751458063359856" type="AJAX">
+                            <param id="0" name="Tag">&quot;story.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="60" name="LoadJSON" sid="669486008255952" type="1storyJSON">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="556188440533073">
+                    <conditions>
+                        <condition id="1" name="On error" sid="253733252301136" type="AJAX">
+                            <param id="0" name="Tag">&quot;story.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="765611765833961" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;Tried to retrieve silly messages but couldn&apos;t. Probably because internet connection is missing. Will try again later.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267972802124585">
+                    <conditions>
+                        <condition id="200" name="On JSON Parse Error" sid="484748881712678" type="1storyJSON" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="936555621740059" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;The Silly Message JSON is not formated properly.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="575801268381648">
+            <conditions>
+                <condition id="70" inverted="1" name="Is Empty" sid="286974887218279" type="1storyJSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <comment>Refresh the view only when the text has changed</comment>
+        <event-block sid="755628680355525">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="122159794481222" type="labelUpdate">
+                    <param id="0" name="Instance variable">string</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">labelUpdate.Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="815464780979119" type="labelUpdate">
+                    <param id="0" name="Text">labelUpdate.string</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="209278545937750">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="770971531505056" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="876871048396670" type="labelUpdate">
+                    <param id="0" name="Instance variable">string</param>
+                    <param id="1" name="Value">1storyJSON.Value(0, &quot;0&quot;, &quot;text&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="817314785781340">
+            <conditions>
+                <condition id="0" name="On function" sid="986386813652536" type="Function">
+                    <param id="0" name="Name">&quot;first launch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="282292504480689">
+            <conditions>
+                <condition id="0" name="On function" sid="101239259300537" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="deltaTime" sid="177755735675471" static="0" type="number">0</variable>
+                <event-block sid="308852134587734">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="628856131065457" type="System">
+                            <param id="0" name="Variable">deltaTime</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="466886045074306">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="855821839646030">
+            <conditions>
+                <condition id="0" name="On function" sid="468278706853853" type="Function">
+                    <param id="0" name="Name">&quot;story receive clicked&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="330906934254617">
+            <conditions>
+                <condition id="0" name="On function" sid="207155003671887" type="Function">
+                    <param id="0" name="Name">&quot;story decode clicked&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
 </c2eventsheet>

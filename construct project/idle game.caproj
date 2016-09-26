@@ -1699,14 +1699,35 @@
             </object-type>
         </object-folder>
         <object-folder name="story">
-            <object-type global="1" name="storyJSON" sid="126688365294019">
+            <object-type global="1" name="1storyJSON" sid="126688365294019">
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="611007619981140" type="number" />
                 </instance-variables>
             </object-type>
-            <object-type name="storyDisplay" sid="729882335839652">
+            <object-type name="1storyDisplay" sid="729882335839652">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="451854708361461">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="1storyButtonLabel" sid="949443365461191">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="815574611707266">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="1storyStatus" sid="768054941553537">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="855062252152715">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
@@ -1801,6 +1822,16 @@
                     <behavior id="NoSave" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="labelUpdate" plugin-id="Text" sid="684843700387695">
+            <members>
+                <member>1storyButtonLabel</member>
+                <member>1storyDisplay</member>
+                <member>1storyStatus</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="string" sid="681397276555332" type="string" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
