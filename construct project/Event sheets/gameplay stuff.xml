@@ -3511,5 +3511,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Refresh the view only when the text has changed</comment>
+        <event-block sid="749077376433406">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="103436626612943" type="labelUpdate">
+                    <param id="0" name="Instance variable">string</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">labelUpdate.Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="817723144411243" type="labelUpdate">
+                    <param id="0" name="Text">labelUpdate.string</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
