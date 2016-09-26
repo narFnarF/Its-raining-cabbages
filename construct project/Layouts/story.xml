@@ -187,7 +187,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string></string>
+                        <string>Receive</string>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -220,7 +220,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string></string>
+                        <string>Decode</string>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -317,6 +317,9 @@
         <instance type="1storyJSON" uid="213">
             <instance-variables>
                 <date>-1</date>
+                <maxStory>0</maxStory>
+                <status>start</status>
+                <timer>0</timer>
             </instance-variables>
         </instance>
     </nonworld-instances>

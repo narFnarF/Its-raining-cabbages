@@ -1703,6 +1703,9 @@
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="611007619981140" type="number" />
+                    <instance-variable name="maxStory" sid="679088167803292" type="number" />
+                    <instance-variable name="status" sid="611118178019623" type="string" />
+                    <instance-variable name="timer" sid="868300196111675" type="number" />
                 </instance-variables>
             </object-type>
             <object-type name="1storyDisplay" sid="729882335839652">
