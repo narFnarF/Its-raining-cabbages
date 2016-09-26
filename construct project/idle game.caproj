@@ -1698,6 +1698,17 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="story">
+            <object-type global="1" name="storyJSON" sid="126688365294019">
+                <plugin id="JSON" />
+                <instance-variables>
+                    <instance-variable name="date" sid="611007619981140" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="storyDisplay" sid="729882335839652">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1815,6 +1826,7 @@
         <layout>grinding.xml</layout>
         <layout>grinding sector.xml</layout>
         <layout>pachinko.xml</layout>
+        <layout>story.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="menus">
@@ -1842,6 +1854,7 @@
         <event-sheet>snow events.xml</event-sheet>
         <event-sheet>rewards screen events.xml</event-sheet>
         <event-sheet>bumper events.xml</event-sheet>
+        <event-sheet>story events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1">
@@ -1869,5 +1882,6 @@
         </file-folder>
         <file name="silly_messages.json" />
         <file name="release_notes.txt" />
+        <file name="story.txt" />
     </files-folder>
 </c2project>
