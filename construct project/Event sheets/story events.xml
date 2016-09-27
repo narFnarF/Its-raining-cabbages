@@ -104,6 +104,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Do I really need this status??</comment>
                 <event-block sid="365026235180722">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="980892333958368" type="1storyJSON">
@@ -132,12 +133,13 @@
                         <condition id="-7" name="Compare instance variable" sid="618968383824849" type="1storyJSON">
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;receiving&quot;</param>
+                            <param id="2" name="Value">&quot;receiving...&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <variable constant="0" name="deltaTime" sid="334433820832396" static="0" type="number">0</variable>
+                        <variable constant="0" name="receiveTime" sid="603989519031269" static="0" type="number">0</variable>
                         <event-block sid="182373823446677">
                             <conditions>
                                 <condition id="0" name="On function" sid="352411805000581" type="Function">
@@ -155,12 +157,30 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="137088574961600">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="226479467613271" type="System">
+                                    <param id="0" name="Variable">receiveTime</param>
+                                    <param id="1" name="Value">1storyJSON.Value(0, 1storyJSON.maxStory, &quot;receive&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="465667729982511" type="1storyStatus">
+                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="1" name="Value">&quot;Receiving transmission...&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="340617333913607" type="1storyDisplay">
+                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="1" name="Value">&quot;asdf transmission is being received...&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>when it&apos;s over</comment>
                         <event-block sid="764757488989010">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="670326981496766" type="1storyJSON">
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">1storyJSON.Value(0, 1storyJSON.maxStory, &quot;receive&quot;)</param>
+                                    <param id="2" name="Value">receiveTime</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -168,29 +188,11 @@
                                     <param id="0" name="Instance variable">status</param>
                                     <param id="1" name="Value">&quot;received&quot;</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="345226154655828" type="1storyJSON">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
-                        </event-block>
-                        <comment>UI</comment>
-                        <event-block sid="572056362229419">
-                            <conditions />
-                            <actions />
-                            <sub-events>
-                                <comment>TODO : Je suis rendu ici! J&apos;essaye de mettre les boutons à disabled!</comment>
-                                <event-block sid="182448178300984">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="300805570624549" type="lionTraderBtnBg">
-                                            <param id="0" name="Instance variable">callback</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                                <event-block sid="853710570701123">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -200,6 +202,35 @@
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;received&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="843901610060118" type="1storyStatus">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;Transmission received.&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="640687884313104" type="1storyDisplay">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;asdf tranmission received&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893356893774205">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="461453216836136" type="1storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;decoding...&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="949521122031704">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="845944734462185" type="1storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;decoded&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -290,21 +321,43 @@
                     <param id="0" name="Name">&quot;story receive clicked&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="14" name="Log" sid="959428479286106" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;receive&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="459244211573671" type="1storyJSON">
-                    <param id="0" name="Instance variable">status</param>
-                    <param id="1" name="Value">&quot;receiving&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="307629036364700">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="709835228918101" type="1storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;start&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="436252366346567" type="1storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;decoded&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="959428479286106" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;receive&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="459244211573671" type="1storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;receiving...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="330906934254617">
             <conditions>
                 <condition id="0" name="On function" sid="207155003671887" type="Function">
                     <param id="0" name="Name">&quot;story decode clicked&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="406876087903141" type="1storyJSON">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;decoded&quot;</param>
                 </condition>
             </conditions>
             <actions>
