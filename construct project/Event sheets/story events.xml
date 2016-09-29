@@ -223,7 +223,16 @@
                             <param id="2" name="Value">&quot;decoding...&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="831576127728634" type="1storyStatus">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;Decoding transmission...&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="467989474755597" type="1storyDisplay">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;asdf tranmission is currently being decoded yo!&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="949521122031704">
                     <conditions>
@@ -233,18 +242,27 @@
                             <param id="2" name="Value">&quot;decoded&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="275891850707882" type="1storyStatus">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;Transmission decoded. Awaiting order.&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="569047082410190" type="1storyDisplay">
+                            <param id="0" name="Instance variable">string</param>
+                            <param id="1" name="Value">&quot;asdf this is the transmission that you can finally read entirely!&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Error cases:</comment>
+        <comment>When the JSON is empty</comment>
         <event-block sid="730002022199091">
             <conditions>
                 <condition id="-22" name="Else" sid="839609060969714" type="System" />
             </conditions>
             <actions />
             <sub-events>
-                <comment>Error cases:</comment>
-                <comment>When the JSON is empty</comment>
                 <variable constant="0" name="message" sid="495177879787669" static="0" type="text"></variable>
                 <event-block sid="903502869057935">
                     <conditions>
@@ -357,13 +375,17 @@
                 <condition id="-7" name="Compare instance variable" sid="406876087903141" type="1storyJSON">
                     <param id="0" name="Instance variable">status</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;decoded&quot;</param>
+                    <param id="2" name="Value">&quot;received&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="14" name="Log" sid="738936045997006" type="Browser">
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;decode&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="928277410835568" type="1storyJSON">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">&quot;decoding...&quot;</param>
                 </action>
             </actions>
         </event-block>

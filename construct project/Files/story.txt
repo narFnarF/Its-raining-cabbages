@@ -1,12 +1,12 @@
 [
    {
-      "receive": 10,
-      "decode": 10,
+      "receive": 5,
+      "decode": 5,
       "text": "Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus."
    },
    {
-      "receive": 10,
-      "decode": 10,
+      "receive": 5,
+      "decode": 5,
       "text": "Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam."
    },
    {
