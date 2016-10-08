@@ -135,11 +135,11 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="966065816040273" type="3storyStatus">
-                            <param id="0" name="Instance variable">string</param>
+                            <param id="0" name="Instance variable">theText</param>
                             <param id="1" name="Value">&quot;Page &quot; &amp; 3storyJSON.currentPage+1</param>
                         </action>
                         <action id="-10" name="Set value" sid="158580340016897" type="3storyDisplay">
-                            <param id="0" name="Instance variable">string</param>
+                            <param id="0" name="Instance variable">theText</param>
                             <param id="1" name="Value">3storyJSON.Value(0, 3storyJSON.currentPage, &quot;text&quot;)</param>
                         </action>
                     </actions>
@@ -185,11 +185,11 @@
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="886052119075543" type="3storyStatus">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;Welcome.&quot;</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="141120008702266" type="3storyDisplay">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="942534588317670" type="3storyJSON">
@@ -222,11 +222,11 @@
                                             <param id="1" name="Value">3storyJSON.timer/receiveTime</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="465667729982511" type="3storyStatus">
-                                            <param id="0" name="Instance variable">string</param>
+                                            <param id="0" name="Instance variable">theText</param>
                                             <param id="1" name="Value">&quot;Receiving transmission... (&quot; &amp; round(3storyJSON.timer/receiveTime*100) &amp; &quot;%)&quot;</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="340617333913607" type="3storyDisplay">
-                                            <param id="0" name="Instance variable">string</param>
+                                            <param id="0" name="Instance variable">theText</param>
                                             <param id="1" name="Value">Function.Call(&quot;story .displayReceive&quot;, currentMessage, completionRatio)</param>
                                         </action>
                                     </actions>
@@ -263,7 +263,7 @@
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="843901610060118" type="3storyStatus">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;Transmission received.&quot;</param>
                                 </action>
                             </actions>
@@ -292,11 +292,11 @@
                                             <param id="1" name="Value">3storyJSON.timer/receiveTime</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="831576127728634" type="3storyStatus">
-                                            <param id="0" name="Instance variable">string</param>
+                                            <param id="0" name="Instance variable">theText</param>
                                             <param id="1" name="Value">&quot;Decoding transmission... (&quot; &amp; round(completionRatio*100) &amp; &quot;%)&quot;</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="671657761720887" type="3storyDisplay">
-                                            <param id="0" name="Instance variable">string</param>
+                                            <param id="0" name="Instance variable">theText</param>
                                             <param id="1" name="Value">Function.Call(&quot;story .displayDecode&quot;, currentMessage, completionRatio)</param>
                                         </action>
                                     </actions>
@@ -337,7 +337,7 @@
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="275891850707882" type="3storyStatus">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;Transmission decoded. Awaiting order.&quot;</param>
                                 </action>
                             </actions>
@@ -417,11 +417,11 @@
                             <conditions />
                             <actions>
                                 <action id="-10" name="Set value" sid="279120405391745" type="3storyDisplay">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">message</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="260290988127625" type="3storyStatus">
-                                    <param id="0" name="Instance variable">string</param>
+                                    <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">message</param>
                                 </action>
                             </actions>

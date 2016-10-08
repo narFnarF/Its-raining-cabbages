@@ -1834,7 +1834,7 @@
                 <member>3storyStatus</member>
             </members>
             <instance-variables>
-                <instance-variable name="string" sid="681397276555332" type="string" />
+                <instance-variable name="theText" sid="681397276555332" type="string" />
             </instance-variables>
         </family>
     </families>

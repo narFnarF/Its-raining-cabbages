@@ -88,7 +88,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string></string>
+                        <theText></theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -187,7 +187,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string>Receive</string>
+                        <theText>Receive</theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -220,7 +220,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string>Decode</string>
+                        <theText>Decode</theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -253,7 +253,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string></string>
+                        <theText></theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -352,7 +352,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string>&lt;--</string>
+                        <theText>&lt;--</theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
@@ -385,7 +385,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <string>--&gt;</string>
+                        <theText>--&gt;</theText>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
