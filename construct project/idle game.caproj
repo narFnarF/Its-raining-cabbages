@@ -1818,7 +1818,7 @@
                 <instance-variable name="callback" sid="6708884644703998" type="string" />
                 <instance-variable name="callbackParamNb" sid="7965788020137503" type="number" />
                 <instance-variable name="progressBarId" sid="3723874214917857" type="number" />
-                <instance-variable name="state" sid="9041518536292444" type="string" />
+                <instance-variable comment="Options: normal, pressed, disabled, invisible" name="state" sid="9041518536292444" type="string" />
                 <instance-variable name="initialyPressed" sid="4112654331809096" type="boolean" />
             </instance-variables>
             <behaviors>

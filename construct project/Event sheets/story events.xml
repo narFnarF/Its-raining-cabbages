@@ -142,9 +142,13 @@
                             <param id="0" name="Instance variable">theText</param>
                             <param id="1" name="Value">3storyJSON.Value(0, 3storyJSON.currentPage, &quot;text&quot;)</param>
                         </action>
+                        <action disabled="1" id="14" name="Log" sid="246594172939152" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;not on latest page&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
-                <comment>Display when on page in progress (the latest unlocked)</comment>
+                <comment>Display when on a page in progress (the latest unlocked page)</comment>
                 <event-block sid="575801268381648">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="365358651140810" type="3storyJSON">
@@ -338,7 +342,15 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="275891850707882" type="3storyStatus">
                                     <param id="0" name="Instance variable">theText</param>
-                                    <param id="1" name="Value">&quot;Transmission decoded. Awaiting order.&quot;</param>
+                                    <param id="1" name="Value">&quot;Awayting transmission&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="625899906938289" type="3storyDisplay">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="991808179722387" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;status decoded&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -611,6 +623,225 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="565042074225739" title="button state visuals (story)">
+                    <sub-events>
+                        <comment>the Pages buttons</comment>
+                        <event-block sid="724683600764609">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="722089306619069" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">callback</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;story .changePage&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="837913677566763" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;normal&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>the RIGHT button (+1) gets disabled</comment>
+                                <comment>if we&apos;re on the last page</comment>
+                                <comment>OR if the next page doesn&apos;t exist in the JSON</comment>
+                                <event-block sid="623023832015220">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="792131791236351" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">callbackParamNb</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="409726575969213">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="636768465245413" type="3storyJSON">
+                                                    <param id="0" name="Instance variable">currentPage</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3storyJSON.unlocked</param>
+                                                </condition>
+                                                <condition id="60" name="Is undefined" sid="364757739045524" type="3storyJSON">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">3storyJSON.currentPage+1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="104473384235310" type="lionTraderBtnBg">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;disabled&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>if we&apos;re on the FIRST page</comment>
+                                <comment>the LEFT button (-1) gets disabled</comment>
+                                <event-block sid="328978384286516">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="931318992902886" type="3storyJSON">
+                                            <param id="0" name="Instance variable">currentPage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="405442849272094" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">callbackParamNb</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="582167995554297" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;disabled&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>the Receive button</comment>
+                        <event-block sid="373627077266607">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="740840068667470" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">callback</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;story receive clicked&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="892233677822793" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;invisible&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>if we&apos;re on the last page</comment>
+                                <event-block sid="164244464915169">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="986108048721193" type="3storyJSON">
+                                            <param id="0" name="Instance variable">currentPage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3storyJSON.unlocked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="268729961485924" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;disabled&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="780569884890921">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="769708873315255" type="3storyJSON">
+                                                    <param id="0" name="Instance variable">status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;start&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="131484560282691" type="3storyJSON">
+                                                    <param id="0" name="Instance variable">status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;decoded&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="539216345492384" type="lionTraderBtnBg">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;normal&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>the Decode button</comment>
+                        <event-block any="1" sid="210530865760961">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="674643365780473" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">callback</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;story decode clicked&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="163781930516528" type="lionTraderBtnBg">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;invisible&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>if we&apos;re on the last page</comment>
+                                <event-block sid="380229954029790">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="777538425296842" type="3storyJSON">
+                                            <param id="0" name="Instance variable">currentPage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3storyJSON.unlocked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="258740874789332" type="lionTraderBtnBg">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;disabled&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="373604236859667">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="747500795872709" type="3storyJSON">
+                                                    <param id="0" name="Instance variable">status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;received&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="110067705527090" type="lionTraderBtnBg">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;normal&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>button labels</comment>
+                        <event-block sid="371540521785440">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="487816481369929" type="System">
+                                    <param id="0" name="Object">3storyButtonLabel</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="987767149199311" type="lionTraderBtnBg">
+                                    <param id="0" name="Object">3storyButtonLabel</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="587846706666911">
+                                    <conditions>
+                                        <condition id="-9" name="Is visible" sid="452793767019427" type="lionTraderBtnBg" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="984612389557830" type="3storyButtonLabel">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="323687613114618">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="326408395583096" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="781095264767976" type="3storyButtonLabel">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

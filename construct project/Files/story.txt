@@ -13,5 +13,10 @@
       "receive": 10,
       "decode": 10,
       "text": "Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris."
+   },
+   {
+      "receive": 4,
+      "decode": 15,
+      "text": "THE END"
    }
 ]
