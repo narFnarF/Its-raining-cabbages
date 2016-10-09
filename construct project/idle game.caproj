@@ -1917,6 +1917,6 @@
         </file-folder>
         <file name="silly_messages.json" />
         <file name="release_notes.txt" />
-        <file name="story.txt" />
+        <file name="story.json" />
     </files-folder>
 </c2project>

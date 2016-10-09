@@ -51,7 +51,7 @@
                     <actions>
                         <action id="1" name="Request project file" sid="390470154147478" type="AJAX">
                             <param id="0" name="Tag">&quot;story.json&quot;</param>
-                            <param id="1" name="File">story.txt</param>
+                            <param id="1" name="File">story.json</param>
                         </action>
                         <action id="-10" name="Set value" sid="191775203687803" type="3storyJSON">
                             <param id="0" name="Instance variable">date</param>
@@ -74,7 +74,7 @@
                     <actions>
                         <action id="1" name="Request project file" sid="476758344610784" type="AJAX">
                             <param id="0" name="Tag">&quot;story.json&quot;</param>
-                            <param id="1" name="File">story.txt</param>
+                            <param id="1" name="File">story.json</param>
                         </action>
                     </actions>
                 </event-block>
