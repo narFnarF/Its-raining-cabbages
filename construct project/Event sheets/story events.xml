@@ -203,7 +203,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="780863155063684" type="System">
                                     <param id="0" name="Variable">maxStoriesAvailable</param>
-                                    <param id="1" name="Value">3storyJSON.Size(0)</param>
+                                    <param id="1" name="Value">3storyJSON.Size(1)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="539506111786242" type="System">
                                     <param id="0" name="Variable">currentMessage</param>
@@ -247,6 +247,7 @@
                             <sub-events>
                                 <variable constant="0" name="receiveTime" sid="603989519031269" static="0" type="number">0</variable>
                                 <variable constant="0" name="completionRatio" sid="260593680634391" static="0" type="number">0</variable>
+                                <comment>display the reception 1 by 1 characters</comment>
                                 <event-block sid="137088574961600">
                                     <conditions />
                                     <actions>
@@ -325,6 +326,7 @@
                             <sub-events>
                                 <variable constant="0" name="decodeTime" sid="208715584421923" static="0" type="number">0</variable>
                                 <variable constant="0" name="completionRatio" sid="261787663682232" static="0" type="number">0</variable>
+                                <comment>display the decoding 1 by 1 characters</comment>
                                 <event-block sid="711907015484077">
                                     <conditions />
                                     <actions>
