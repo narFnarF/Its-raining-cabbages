@@ -611,17 +611,12 @@
                     <sub-events>
                         <comment>Parameters : -1=left, 1=right</comment>
                         <variable constant="0" name="p" sid="129104324788606" static="0" type="number">0</variable>
-                        <variable constant="0" name="availablePages" sid="381963870586928" static="0" type="number">0</variable>
                         <event-block sid="778262320657661">
                             <conditions />
                             <actions>
                                 <action id="-9" name="Set value" sid="348458436078643" type="System">
                                     <param id="0" name="Variable">p</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="610033300100067" type="System">
-                                    <param id="0" name="Variable">availablePages</param>
-                                    <param id="1" name="Value">3storyJSON.Size(0)</param>
                                 </action>
                                 <action id="-11" name="Add to" sid="659356148760959" type="3storyJSON">
                                     <param id="0" name="Instance variable">currentPage</param>
