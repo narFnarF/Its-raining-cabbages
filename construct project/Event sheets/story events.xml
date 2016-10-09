@@ -120,6 +120,30 @@
         </event-group>
         <event-group description="" sid="207725341225783" title="state and display (Story)">
             <sub-events>
+                <event-block sid="523044700959865">
+                    <conditions>
+                        <condition id="0" name="On function" sid="276032410872337" type="Function">
+                            <param id="0" name="Name">&quot;time has passed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="deltaTime" sid="404679279478935" static="0" type="number">0</variable>
+                        <event-block any="1" sid="644347417404807">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="162223868103278" type="System">
+                                    <param id="0" name="Variable">deltaTime</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="272623057578029" type="3storyJSON">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">deltaTime</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>Display when on a previous page</comment>
                 <event-block sid="150330705192799">
                     <conditions>
@@ -178,7 +202,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Do I really need this status??</comment>
+                        <comment>When we access the Story feature for the 1st time</comment>
                         <event-block sid="365026235180722">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="980892333958368" type="3storyJSON">
@@ -270,6 +294,14 @@
                                     <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;Transmission received.&quot;</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="189842814525551" type="3storyDisplay">
+                                    <param id="0" name="Instance variable">theText</param>
+                                    <param id="1" name="Value">Function.Call(&quot;story .displayReceive&quot;, currentMessage, 100)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="283491087407056" type="3storyJSON">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="893356893774205">
@@ -348,46 +380,15 @@
                                     <param id="0" name="Instance variable">theText</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="403292330802051" type="3storyJSON">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action disabled="1" id="14" name="Log" sid="991808179722387" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;status decoded&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="523044700959865">
-                            <conditions>
-                                <condition id="0" name="On function" sid="276032410872337" type="Function">
-                                    <param id="0" name="Name">&quot;time has passed&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="deltaTime" sid="404679279478935" static="0" type="number">0</variable>
-                                <event-block any="1" sid="644347417404807">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="452456651104753" type="3storyJSON">
-                                            <param id="0" name="Instance variable">status</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;receiving...&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="881281064653666" type="3storyJSON">
-                                            <param id="0" name="Instance variable">status</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;decoding...&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="162223868103278" type="System">
-                                            <param id="0" name="Variable">deltaTime</param>
-                                            <param id="1" name="Value">Function.Param(0)</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="272623057578029" type="3storyJSON">
-                                            <param id="0" name="Instance variable">timer</param>
-                                            <param id="1" name="Value">deltaTime</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
