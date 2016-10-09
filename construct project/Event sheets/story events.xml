@@ -158,13 +158,17 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="200" name="Set Current Path" sid="319528738995040" type="3storyJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;stories&quot;</param>
+                        </action>
                         <action id="-10" name="Set value" sid="966065816040273" type="3storyStatus">
                             <param id="0" name="Instance variable">theText</param>
                             <param id="1" name="Value">&quot;Page &quot; &amp; 3storyJSON.currentPage+1</param>
                         </action>
                         <action id="-10" name="Set value" sid="158580340016897" type="3storyDisplay">
                             <param id="0" name="Instance variable">theText</param>
-                            <param id="1" name="Value">3storyJSON.Value(0, 3storyJSON.currentPage, &quot;text&quot;)</param>
+                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.currentPage, &quot;text&quot;)</param>
                         </action>
                         <action disabled="1" id="14" name="Log" sid="246594172939152" type="Browser">
                             <param id="0" name="Type">0</param>
@@ -185,7 +189,12 @@
                             <param id="1" name="Key {n}"></param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="200" name="Set Current Path" sid="169358447468377" type="3storyJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;stories&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <variable constant="0" name="maxStoriesAvailable" sid="267133635551592" static="0" type="number">0</variable>
                         <variable constant="0" name="currentMessage" sid="176782844652238" static="0" type="text"></variable>
@@ -198,7 +207,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="539506111786242" type="System">
                                     <param id="0" name="Variable">currentMessage</param>
-                                    <param id="1" name="Value">3storyJSON.Value(0, min(3storyJSON.unlocked, maxStoriesAvailable), &quot;text&quot;)</param>
+                                    <param id="1" name="Value">3storyJSON.Value(1, min(3storyJSON.unlocked, maxStoriesAvailable), &quot;text&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -243,7 +252,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="226479467613271" type="System">
                                             <param id="0" name="Variable">receiveTime</param>
-                                            <param id="1" name="Value">3storyJSON.Value(0, 3storyJSON.unlocked, &quot;receive&quot;)</param>
+                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;receive&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="578394163858845" type="System">
                                             <param id="0" name="Variable">completionRatio</param>
@@ -314,18 +323,18 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <variable constant="0" name="receiveTime" sid="208715584421923" static="0" type="number">0</variable>
+                                <variable constant="0" name="decodeTime" sid="208715584421923" static="0" type="number">0</variable>
                                 <variable constant="0" name="completionRatio" sid="261787663682232" static="0" type="number">0</variable>
                                 <event-block sid="711907015484077">
                                     <conditions />
                                     <actions>
                                         <action id="-9" name="Set value" sid="168919079607312" type="System">
-                                            <param id="0" name="Variable">receiveTime</param>
-                                            <param id="1" name="Value">3storyJSON.Value(0, 3storyJSON.unlocked, &quot;decode&quot;)</param>
+                                            <param id="0" name="Variable">decodeTime</param>
+                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;decode&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="122070211852513" type="System">
                                             <param id="0" name="Variable">completionRatio</param>
-                                            <param id="1" name="Value">3storyJSON.timer/receiveTime</param>
+                                            <param id="1" name="Value">3storyJSON.timer/decodeTime</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="831576127728634" type="3storyStatus">
                                             <param id="0" name="Instance variable">theText</param>
@@ -343,7 +352,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="549899211368480" type="3storyJSON">
                                             <param id="0" name="Instance variable">timer</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">receiveTime</param>
+                                            <param id="2" name="Value">decodeTime</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -652,6 +661,10 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
+                                        <condition id="70" inverted="1" name="Is Empty" sid="966283784486749" type="3storyJSON">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -664,7 +677,7 @@
                                                 </condition>
                                                 <condition id="60" name="Is undefined" sid="364757739045524" type="3storyJSON">
                                                     <param id="0" name="Reference point">0</param>
-                                                    <param id="1" name="Key {n}">3storyJSON.currentPage+1</param>
+                                                    <param id="1" name="Key {n}">&quot;stories&quot;{###}3storyJSON.currentPage+1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
