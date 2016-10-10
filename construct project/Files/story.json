@@ -1,24 +1,56 @@
 {
     "stories": [
         {
-            "receive": 5,
-            "decode": 5,
-            "text": "Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+            "text": "Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "receive": {
+                "cost": 5,
+                "costCurrency": "salads",
+                "time": 5
+            },
+            "decode": {
+                "cost": 5,
+                "costCurrency": "salads",
+                "time": 5
+            }
         },
         {
-            "receive": 5,
-            "decode": 5,
-            "text": "Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam."
+            "text": "Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam.",
+            "receive": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 5
+            },
+            "decode": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 5
+            }
         },
         {
-            "receive": 10,
-            "decode": 10,
-            "text": "Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris."
+            "text": "Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris.",
+            "receive": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 10
+            },
+            "decode": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 10
+            }
         },
         {
-            "receive": 4,
-            "decode": 15,
-            "text": "THE END"
+            "text": "THE END",
+            "receive": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 4
+            },
+            "decode": {
+                "cost": 1,
+                "costCurrency": "tofu",
+                "time": 15
+            }
         }
     ]
 }

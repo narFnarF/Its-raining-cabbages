@@ -253,7 +253,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="226479467613271" type="System">
                                             <param id="0" name="Variable">receiveTime</param>
-                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;receive&quot;)</param>
+                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;receive&quot;, &quot;time&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="578394163858845" type="System">
                                             <param id="0" name="Variable">completionRatio</param>
@@ -332,7 +332,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="168919079607312" type="System">
                                             <param id="0" name="Variable">decodeTime</param>
-                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;decode&quot;)</param>
+                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked, &quot;decode&quot;, &quot;time&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="122070211852513" type="System">
                                             <param id="0" name="Variable">completionRatio</param>
@@ -563,7 +563,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="959428479286106" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="959428479286106" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;receive&quot;</param>
                                 </action>
@@ -587,7 +587,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="14" name="Log" sid="554445375715728" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="554445375715728" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;decode&quot;</param>
                         </action>
@@ -595,7 +595,7 @@
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Value">&quot;decoding...&quot;</param>
                         </action>
-                        <action id="14" name="Log" sid="741332407451495" type="Browser">
+                        <action disabled="1" id="14" name="Log" sid="741332407451495" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">Function.ParamCount</param>
                         </action>

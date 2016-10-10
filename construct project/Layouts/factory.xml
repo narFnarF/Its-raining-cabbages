@@ -649,6 +649,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="arrowLayout" uid="396">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>box</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <label>Transmission</label>
+                        <name>arrow story</name>
+                        <price>1</price>
+                        <priceCurrency>salads</priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>1</visibilityMinimum>
+                        <goto>story</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1317.02746582</x>
+                        <y>233</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>174</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.49444443</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

@@ -405,6 +405,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="arrowLayout" uid="353">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>X</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <label></label>
+                        <name></name>
+                        <price>0</price>
+                        <priceCurrency></priceCurrency>
+                        <alwaysVisible>true</alwaysVisible>
+                        <visibilityMinimum>0</visibilityMinimum>
+                        <goto>factory</goto>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>561.698730469</x>
+                        <y>100.222221375</y>
+                        <z>0</z>
+                        <width>79</width>
+                        <height>76</height>
+                        <depth>0</depth>
+                        <hotspotX>0.801282048</hotspotX>
+                        <hotspotY>0.694444418</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

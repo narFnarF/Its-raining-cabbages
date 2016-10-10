@@ -520,6 +520,12 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801973543682937" speed="5">
                         <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="1" loop="0" name="X" pingpong="0" repeatcount="1" repeatto="0" sid="614865373040596" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.511111" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="box" pingpong="0" repeatcount="1" repeatto="0" sid="816487073867316" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.494444" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="FPSTxt" sid="9025536709654262">
@@ -1784,8 +1790,8 @@
                 <member>arrowLayout</member>
             </members>
             <instance-variables>
-                <instance-variable name="label" sid="6512711138914009" type="string" />
-                <instance-variable name="name" sid="8613328284108331" type="string" />
+                <instance-variable comment="label that the player sees" name="label" sid="6512711138914009" type="string" />
+                <instance-variable comment="used in the Saver array" name="name" sid="8613328284108331" type="string" />
                 <instance-variable comment="How much of the currency is needed to purchase" name="price" sid="3173789073934467" type="number" />
                 <instance-variable comment="What currency is needed" name="priceCurrency" sid="5741496624709641" type="string" />
                 <instance-variable name="alwaysVisible" sid="6064496295085109" type="boolean" />

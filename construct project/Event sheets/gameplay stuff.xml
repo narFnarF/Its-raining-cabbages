@@ -349,7 +349,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="7051194549149644" title="Notification box">
+                <event-group description="" sid="7051194549149644" title="Open &amp; Close &amp; positionning (Notification box)">
                     <sub-events>
                         <variable constant="0" name="speed" sid="2144318682713438" static="0" type="number">7</variable>
                         <variable constant="0" name="height" sid="7420510770361168" static="1" type="number">0</variable>
@@ -436,113 +436,117 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="2011078086224444">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="7200842942564816" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="3076962427945874" type="Function">
-                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3297061255133494">
-                    <conditions>
-                        <condition id="0" name="On function" sid="9779909940571391" type="Function">
-                            <param id="0" name="Name">&quot;notification&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1563127842587189" type="notificationBox">
-                            <param id="0" name="Animation">&quot;flash&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="242013874550409" title="display notif">
                     <sub-events>
-                        <comment>Vide la textbox, et push la nouvelle notification</comment>
-                        <event-block sid="8681305054990883">
+                        <event-block sid="2011078086224444">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="3949063803916931" type="Function">
-                                    <param id="0" name="Index">1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;nobr&quot;</param>
-                                </condition>
+                                <condition id="-2" name="On start of layout" sid="7200842942564816" type="System" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="8950452122555956" type="notifications">
-                                    <param id="0" name="Where">1</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1722859168537195">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1780504656744671" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="987647764436304" type="notifications">
-                                    <param id="0" name="Where">1</param>
-                                    <param id="1" name="Value">Function.Param(0) &amp; newline</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1951331004917804">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="7313793373593471" type="Function">
+                                <action id="0" name="Call function" sid="3076962427945874" type="Function">
                                     <param id="0" name="Name">&quot;refresh notifications&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Refresh the notification box</comment>
-                <event-block sid="6136545302500118">
-                    <conditions>
-                        <condition id="0" name="On function" sid="4463989980660938" type="Function">
-                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="2712988918937438" type="notificationTxt">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="9756152489724751">
+                        <event-block sid="3297061255133494">
                             <conditions>
-                                <condition id="7" name="Compare size" sid="2550594532501463" type="notifications">
-                                    <param id="0" name="Axis">0</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">15</param>
+                                <condition id="0" name="On function" sid="9779909940571391" type="Function">
+                                    <param id="0" name="Name">&quot;notification&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set size" sid="1324575582996049" type="notifications">
-                                    <param id="0" name="Width">15</param>
-                                    <param id="1" name="Height">1</param>
-                                    <param id="2" name="Depth">1</param>
+                                <action id="4" name="Set animation" sid="1563127842587189" type="notificationBox">
+                                    <param id="0" name="Animation">&quot;flash&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <comment>Vide la textbox, et push la nouvelle notification</comment>
+                                <event-block sid="8681305054990883">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="3949063803916931" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;nobr&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="8950452122555956" type="notifications">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1722859168537195">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1780504656744671" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="987647764436304" type="notifications">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Value">Function.Param(0) &amp; newline</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1951331004917804">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7313793373593471" type="Function">
+                                            <param id="0" name="Name">&quot;refresh notifications&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="6670611033980802">
+                        <comment>Refresh the notification box (update the text inside of it)</comment>
+                        <event-block sid="6136545302500118">
                             <conditions>
-                                <condition id="3" name="For each element" sid="6264250690382946" type="notifications">
-                                    <param id="0" name="Axes">2</param>
+                                <condition id="0" name="On function" sid="4463989980660938" type="Function">
+                                    <param id="0" name="Name">&quot;refresh notifications&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="5407355819552363" type="notificationTxt">
-                                    <param id="0" name="Text">notifications.CurValue &amp; newline</param>
+                                <action id="0" name="Set text" sid="2712988918937438" type="notificationTxt">
+                                    <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9756152489724751">
+                                    <conditions>
+                                        <condition id="7" name="Compare size" sid="2550594532501463" type="notifications">
+                                            <param id="0" name="Axis">0</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">15</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set size" sid="1324575582996049" type="notifications">
+                                            <param id="0" name="Width">15</param>
+                                            <param id="1" name="Height">1</param>
+                                            <param id="2" name="Depth">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6670611033980802">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="6264250690382946" type="notifications">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="5407355819552363" type="notificationTxt">
+                                            <param id="0" name="Text">notifications.CurValue &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
                 <event-group description="" disabled="1" sid="7098275000725635" title="update notes">
                     <sub-events>
                         <event-block disabled="1" sid="2862928478550774">
