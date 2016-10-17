@@ -484,6 +484,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>replace all char that are not spaces with &quot;#&quot;</comment>
                         <event-block sid="438073891016251">
                             <conditions />
                             <actions>
@@ -527,6 +528,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>returns the left part (decoded) and, for the right part, replace all char that are not spaces with &quot;#&quot;</comment>
                         <event-block sid="120442716487266">
                             <conditions />
                             <actions>
