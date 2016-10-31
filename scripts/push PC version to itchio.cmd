@@ -1,25 +1,51 @@
+@echo off
+echo Push started
+
+title Push to itch.io
+
+::PARAMETERS TO SET
 set dossier="C:\Users\narF\Desktop\It's Raining Cabbages"
-
-set current=%cd%
-echo %current%
-
-:: set /p version=Numero de version? (avec un 'v' devant): 
+set butler="%appdata%\itch\bin\butler.exe"
 
 
-cd %dossier%\win32
+
+::rename nw.exe to cabbages.exe
+pushd %dossier%\win32
+if %ERRORLEVEL% EQU 1 GOTO error_dossierWin32NotFound
 rename nw.exe cabbages.exe
-cd ..
+if %ERRORLEVEL% EQU 1 GOTO error_nwNotFound
+popd
 
-copy %appdata%\itch\bin\butler.exe .
 
-butler push --userversion-file="%current%\version-pc.txt" win32 narf/its-raining-cabbages:windows
+::butler push all versions
+%butler% push --userversion-file="versionNb-pc.txt" %dossier%\win32 narf/its-raining-cabbages:windows
 
-butler push --userversion-file="%current%\version-pc.txt" osx64 narf/its-raining-cabbages:mac-osx
+%butler% push --userversion-file="versionNb-pc.txt" %dossier%\osx64 narf/its-raining-cabbages:mac-osx
 
-butler push --userversion-file="%current%\version-pc.txt" linux32 narf/its-raining-cabbages:linux32
+%butler% push --userversion-file="versionNb-pc.txt" %dossier%\linux32 narf/its-raining-cabbages:linux32
 
-butler push --userversion-file="%current%\version-pc.txt" linux64 narf/its-raining-cabbages:linux64
+%butler% push --userversion-file="versionNb-pc.txt" %dossier%\linux64 narf/its-raining-cabbages:linux64
 
-butler status narf/its-raining-cabbages
+::display status
+%butler% status narf/its-raining-cabbages
 
+
+
+goto end_pause
+
+
+
+
+:error_nwNotFound
+echo Error: nw.exe was not found
+goto end_pause
+
+:error_dossierWin32NotFound
+echo Error: %dossier%\win32 doesn't exist.
+goto end_pause
+
+
+:end_pause
 pause
+
+:end_noPause
