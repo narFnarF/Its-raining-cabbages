@@ -591,10 +591,10 @@
                     <instance-variables>
                         <label>Rewards</label>
                         <name>arrow rewards</name>
-                        <price>60</price>
-                        <priceCurrency>salads</priceCurrency>
+                        <price>3</price>
+                        <priceCurrency>pages</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
-                        <visibilityMinimum>20</visibilityMinimum>
+                        <visibilityMinimum>2</visibilityMinimum>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -657,12 +657,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <label>Transmission</label>
+                        <label>eBook</label>
                         <name>arrow story</name>
-                        <price>1</price>
+                        <price>60</price>
                         <priceCurrency>salads</priceCurrency>
-                        <alwaysVisible>true</alwaysVisible>
-                        <visibilityMinimum>1</visibilityMinimum>
+                        <alwaysVisible>false</alwaysVisible>
+                        <visibilityMinimum>20</visibilityMinimum>
                         <goto>story</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -671,11 +671,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1590</x>
-                        <y>194</y>
+                        <x>1358.277954102</x>
+                        <y>222</y>
                         <z>0</z>
                         <width>60</width>
-                        <height>174</height>
+                        <height>124</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.49444443</hotspotY>
