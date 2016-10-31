@@ -349,6 +349,8 @@
                                     </actions>
                                 </event-block>
                                 <comment>when it&apos;s over</comment>
+                                <variable constant="0" name="nb" sid="368086155099331" static="0" type="number">0</variable>
+                                <variable constant="0" name="currency" sid="684457813322629" static="0" type="text"></variable>
                                 <event-block sid="814603317479448">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="549899211368480" type="3storyJSON">
@@ -370,7 +372,44 @@
                                             <param id="0" name="Instance variable">unlocked</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action disabled="1" id="14" name="Log" sid="320783861819735" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;receive attachment&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="729531665264863" type="System">
+                                            <param id="0" name="Variable">nb</param>
+                                            <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked-1, &quot;reward&quot;, &quot;nb&quot;)</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="896784091293390">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="864423235035960" type="System">
+                                                    <param id="0" name="Variable">nb</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="892434142706591" type="System">
+                                                    <param id="0" name="Variable">currency</param>
+                                                    <param id="1" name="Value">3storyJSON.Value(1, 3storyJSON.unlocked-1, &quot;reward&quot;, &quot;currency&quot;)</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="663538393308908" type="Function">
+                                                    <param id="0" name="Name">&quot;text popup&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;There was an attachment with the page.&quot; &amp; newline &amp; &quot;You got: &quot; &amp; nb &amp; &quot; &quot; &amp; currency{###}&quot;Cool!&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="944097416268403" type="Function">
+                                                    <param id="0" name="Name">&quot;notification&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Found &quot; &amp; nb &amp; &quot; &quot; &amp; currency &amp; &quot;!&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="594538030456695" type="Function">
+                                                    <param id="0" name="Name">&quot;get items&quot;</param>
+                                                    <param id="1" name="Parameter {n}">currency{###}nb</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -549,50 +588,114 @@
                             <param id="0" name="Name">&quot;story receive clicked&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="14" name="Log" sid="959428479286106" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;clicked receive&quot;</param>
+                        </action>
+                        <action id="200" name="Set Current Path" sid="605289696091630" type="3storyJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;stories&quot;{###}3storyJSON.unlocked</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block any="1" sid="307629036364700">
+                        <comment>no cost</comment>
+                        <event-block sid="838748774872532">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="709835228918101" type="3storyJSON">
-                                    <param id="0" name="Instance variable">status</param>
+                                <condition id="-8" name="Compare two values" sid="362926138061003" type="System">
+                                    <param id="0" name="First value">3storyJSON.Value(1, &quot;receive&quot;, &quot;cost&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;start&quot;</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="436252366346567" type="3storyJSON">
-                                    <param id="0" name="Instance variable">status</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;decoded&quot;</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="14" name="Log" sid="959428479286106" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;receive&quot;</param>
+                                <action id="0" name="Call function" sid="792212385062006" type="Function">
+                                    <param id="0" name="Name">&quot;story receive now&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-10" name="Set value" sid="459244211573671" type="3storyJSON">
-                                    <param id="0" name="Instance variable">status</param>
-                                    <param id="1" name="Value">&quot;receiving...&quot;</param>
+                            </actions>
+                        </event-block>
+                        <comment>there&apos;s a cost (and it&apos;s not 0)</comment>
+                        <event-block sid="712604774543245">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="569733865456264" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="499210021651713" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;story receive now&quot;{###}&quot;Download a page?&quot;{###}3storyJSON.Value(1, &quot;receive&quot;, &quot;cost&quot;){###}3storyJSON.Value(1, &quot;receive&quot;, &quot;currency&quot;){###}&quot;Pay &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="691682416232394">
+                    <conditions>
+                        <condition id="0" name="On function" sid="485037584411679" type="Function">
+                            <param id="0" name="Name">&quot;story receive now&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="459244211573671" type="3storyJSON">
+                            <param id="0" name="Instance variable">status</param>
+                            <param id="1" name="Value">&quot;receiving...&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="975000206199294">
                     <conditions>
                         <condition id="0" name="On function" sid="105676992878182" type="Function">
                             <param id="0" name="Name">&quot;story decode clicked&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="792261558916926" type="3storyJSON">
-                            <param id="0" name="Instance variable">status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;received&quot;</param>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="554445375715728" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;clicked decode&quot;</param>
+                        </action>
+                        <action id="200" name="Set Current Path" sid="930170478043062" type="3storyJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">&quot;stories&quot;{###}3storyJSON.unlocked</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>no cost</comment>
+                        <event-block sid="392608227540488">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="700133403740472" type="System">
+                                    <param id="0" name="First value">3storyJSON.Value(1, &quot;decode&quot;, &quot;cost&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="103084331251214" type="Function">
+                                    <param id="0" name="Name">&quot;story decode now&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>there&apos;s a cost (and it&apos;s not 0)</comment>
+                        <event-block sid="515669250019050">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="565205622493550" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="594010185015943" type="Function">
+                                    <param id="0" name="Name">&quot;purchase popup&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;story decode now&quot;{###}&quot;Decode the page?&quot;{###}3storyJSON.Value(1, &quot;decode&quot;, &quot;cost&quot;){###}3storyJSON.Value(1, &quot;decode&quot;, &quot;currency&quot;){###}&quot;Pay &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="279809223407773">
+                    <conditions>
+                        <condition id="0" name="On function" sid="892260254631271" type="Function">
+                            <param id="0" name="Name">&quot;story decode now&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="14" name="Log" sid="554445375715728" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;decode&quot;</param>
-                        </action>
                         <action id="-10" name="Set value" sid="633088497996300" type="3storyJSON">
                             <param id="0" name="Instance variable">status</param>
                             <param id="1" name="Value">&quot;decoding...&quot;</param>

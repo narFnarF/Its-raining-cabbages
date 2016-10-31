@@ -1709,7 +1709,7 @@
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="611007619981140" type="number" />
-                    <instance-variable name="unlocked" sid="679088167803292" type="number" />
+                    <instance-variable comment="The number of the latest unlocked page" name="unlocked" sid="679088167803292" type="number" />
                     <instance-variable name="currentPage" sid="820663665408254" type="number" />
                     <instance-variable name="status" sid="611118178019623" type="string" />
                     <instance-variable name="timer" sid="868300196111675" type="number" />
