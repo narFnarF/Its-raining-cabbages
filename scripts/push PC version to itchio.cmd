@@ -1,7 +1,7 @@
 @echo off
-echo Push started
+echo Push PC build to itch.io
 
-title Push to itch.io
+title Push PC build to itch.io
 
 ::PARAMETERS TO SET
 set dossier="C:\Users\narF\Desktop\It's Raining Cabbages"
