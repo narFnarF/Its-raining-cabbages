@@ -596,8 +596,24 @@
         <event-group description="scrolling the text object" sid="290655216088769" title="Scrolling (Story)">
             <sub-events>
                 <variable constant="0" name="initY" sid="640022193741315" static="1" type="number">0</variable>
-                <variable constant="0" name="txtInitY" sid="984790427121020" static="1" type="number">0</variable>
+                <variable constant="0" name="initTxtY" sid="984790427121020" static="1" type="number">0</variable>
                 <variable constant="0" name="currentTouchY" sid="568261889730059" static="0" type="number">0</variable>
+                <event-block any="1" sid="424068332089928">
+                    <conditions>
+                        <condition id="10" name="On Nth touch start" sid="480234760284470" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                        <condition id="12" name="Has Nth touch" sid="293633456894218" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="991279814991676" type="System">
+                            <param id="0" name="Variable">currentTouchY</param>
+                            <param id="1" name="Value">Touch.YForID(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="405176756571182">
                     <conditions>
                         <condition id="10" name="On Nth touch start" sid="418779394375663" type="Touch">
@@ -605,16 +621,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="991279814991676" type="System">
-                            <param id="0" name="Variable">currentTouchY</param>
-                            <param id="1" name="Value">Touch.YAt(0)</param>
-                        </action>
                         <action id="-9" name="Set value" sid="298965716176835" type="System">
                             <param id="0" name="Variable">initY</param>
                             <param id="1" name="Value">currentTouchY</param>
                         </action>
                         <action id="-9" name="Set value" sid="314858747764822" type="System">
-                            <param id="0" name="Variable">txtInitY</param>
+                            <param id="0" name="Variable">initTxtY</param>
                             <param id="1" name="Value">3storyDisplay.Y</param>
                         </action>
                     </actions>
@@ -627,17 +639,13 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Set Y" sid="154960384946119" type="3storyDisplay">
-                            <param id="0" name="Y">txtInitY + ( currentTouchY - initY )</param>
+                            <param id="0" name="Y">initTxtY + ( currentTouchY - initY )</param>
                         </action>
                         <action id="14" name="Log" sid="571528552371527" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">currentTouchY</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="424068332089928">
-                    <conditions />
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
