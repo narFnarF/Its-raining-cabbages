@@ -641,11 +641,48 @@
                         <action id="-2" name="Set Y" sid="154960384946119" type="3storyDisplay">
                             <param id="0" name="Y">initTxtY + ( currentTouchY - initY )</param>
                         </action>
-                        <action id="14" name="Log" sid="571528552371527" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">currentTouchY</param>
-                        </action>
                     </actions>
+                </event-block>
+                <variable constant="0" name="topMargin" sid="374252403595808" static="0" type="number">200</variable>
+                <variable constant="0" name="botMargin" sid="452560430823957" static="0" type="number">150</variable>
+                <variable constant="0" name="elasticSpeed" sid="661446907697984" static="0" type="number">0.3</variable>
+                <event-block sid="442708317268232">
+                    <conditions>
+                        <condition id="12" inverted="1" name="Has Nth touch" sid="521921025929162" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="327079257240626">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="116254623605563" type="System">
+                                    <param id="0" name="First value">3storyDisplay.BBoxTop</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">topMargin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="856559527458515" type="3storyDisplay">
+                                    <param id="0" name="Y">lerp(3storyDisplay.Y, topMargin, elasticSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="364899278986862">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="953490162735636" type="System">
+                                    <param id="0" name="First value">3storyDisplay.BBoxBottom</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">LayoutHeight-botMargin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="298301271529161" type="3storyDisplay">
+                                    <param id="0" name="Y">lerp(3storyDisplay.Y, LayoutHeight-botMargin-3storyDisplay.Height, elasticSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
