@@ -670,6 +670,7 @@
                         </event-block>
                         <event-block sid="364899278986862">
                             <conditions>
+                                <condition id="-22" name="Else" sid="682861530766676" type="System" />
                                 <condition id="-8" name="Compare two values" sid="953490162735636" type="System">
                                     <param id="0" name="First value">3storyDisplay.BBoxBottom</param>
                                     <param id="1" name="Comparison">2</param>
@@ -679,6 +680,23 @@
                             <actions>
                                 <action id="-2" name="Set Y" sid="298301271529161" type="3storyDisplay">
                                     <param id="0" name="Y">lerp(3storyDisplay.Y, LayoutHeight-botMargin-3storyDisplay.Height, elasticSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="205684059661780">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="803812991904182" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="530313785568808" type="3storyDisplay">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="321300435161361" type="3storyDisplay">
+                                    <param id="0" name="Speed">Touch.SpeedAt(0)</param>
+                                </action>
+                                <action id="14" name="Log" sid="872401377626681" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">Touch.SpeedAt(0)</param>
                                 </action>
                             </actions>
                         </event-block>

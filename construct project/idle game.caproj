@@ -1721,6 +1721,9 @@
                     <behavior-type name="NoSave" sid="451854708361461">
                         <behavior id="NoSave" />
                     </behavior-type>
+                    <behavior-type name="Bullet" sid="103260918898594">
+                        <behavior id="Bullet" />
+                    </behavior-type>
                 </behaviors>
             </object-type>
             <object-type name="3storyButtonLabel" sid="949443365461191">
