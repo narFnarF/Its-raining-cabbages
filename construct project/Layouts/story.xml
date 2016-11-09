@@ -92,13 +92,9 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
-                        <behavior-instance type="Bullet">
+                        <behavior-instance type="DragDrop">
                             <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
+                                <axes>Vertical only</axes>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>

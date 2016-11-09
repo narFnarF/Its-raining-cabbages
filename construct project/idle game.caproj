@@ -30,6 +30,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
@@ -1721,8 +1722,8 @@
                     <behavior-type name="NoSave" sid="451854708361461">
                         <behavior id="NoSave" />
                     </behavior-type>
-                    <behavior-type name="Bullet" sid="103260918898594">
-                        <behavior id="Bullet" />
+                    <behavior-type name="DragDrop" sid="784179388682398">
+                        <behavior id="DragnDrop" />
                     </behavior-type>
                 </behaviors>
             </object-type>
