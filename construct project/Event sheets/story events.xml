@@ -410,7 +410,7 @@
                                                 </action>
                                                 <action id="0" name="Call function" sid="663538393308908" type="Function">
                                                     <param id="0" name="Name">&quot;text popup&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;There was an attachment with the page.&quot; &amp; newline &amp; &quot;You got: &quot; &amp; nb &amp; &quot; &quot; &amp; currency{###}&quot;Cool!&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Page decoded!&#x0D;&#x0A;There was an attachment with the page.&quot; &amp; newline &amp; &quot;You got: &quot; &amp; nb &amp; &quot; &quot; &amp; currency{###}&quot;Cool!&quot;</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="944097416268403" type="Function">
                                                     <param id="0" name="Name">&quot;notification&quot;</param>
