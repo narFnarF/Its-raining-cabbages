@@ -1,24 +1,24 @@
 {
     "stories": [
         {
-            "text": "Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "text": "Test long story (to be deleted): Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
             "receive": {
                 "cost": 0,
                 "currency": "salads",
-                "time": 5
+                "time": 0.7
             },
             "decode": {
                 "cost": 0,
                 "currency": "salads",
-                "time": 5
+                "time": 0.7
             },
             "reward": {
                 "nb": 0,
-                "currency": "salads"
+                "currency": "nothing"
             }
         },
         {
-            "text": "Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam.",
+            "text": "First story: Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam.",
             "receive": {
                 "cost": 1,
                 "currency": "tofu",
@@ -30,12 +30,12 @@
                 "time": 5
             },
             "reward": {
-                "nb": 5,
-                "currency": "salads"
+                "nb": 2,
+                "currency": "black markers"
             }
         },
         {
-            "text": "Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris.",
+            "text": "Second story: Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris.",
             "receive": {
                 "cost": 1,
                 "currency": "tofu",
@@ -47,8 +47,8 @@
                 "time": 10
             },
             "reward": {
-                "nb": 5,
-                "currency": "salads"
+                "nb": 2,
+                "currency": "black markers"
             }
         },
         {
@@ -66,6 +66,23 @@
             "reward": {
                 "nb": 5,
                 "currency": "salads"
+            }
+        },
+        {
+            "text": "Test long story (to be deleted): Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "receive": {
+                "cost": 0,
+                "currency": "salads",
+                "time": 0.7
+            },
+            "decode": {
+                "cost": 0,
+                "currency": "salads",
+                "time": 0.7
+            },
+            "reward": {
+                "nb": 0,
+                "currency": "nothing"
             }
         }
     ]

@@ -592,7 +592,7 @@
                         <label>Rewards</label>
                         <name>arrow rewards</name>
                         <price>3</price>
-                        <priceCurrency>pages</priceCurrency>
+                        <priceCurrency>black markers</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>2</visibilityMinimum>
                         <goto>rewards</goto>
