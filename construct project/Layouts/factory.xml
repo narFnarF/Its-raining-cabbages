@@ -557,10 +557,10 @@
                     <instance-variables>
                         <label>Lions</label>
                         <name>arrow lions</name>
-                        <price>4</price>
-                        <priceCurrency>tofu steak</priceCurrency>
+                        <price>5</price>
+                        <priceCurrency>something</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
-                        <visibilityMinimum>3</visibilityMinimum>
+                        <visibilityMinimum>2</visibilityMinimum>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -591,10 +591,10 @@
                     <instance-variables>
                         <label>Rewards</label>
                         <name>arrow rewards</name>
-                        <price>3</price>
-                        <priceCurrency>black markers</priceCurrency>
+                        <price>60</price>
+                        <priceCurrency>salads</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
-                        <visibilityMinimum>2</visibilityMinimum>
+                        <visibilityMinimum>20</visibilityMinimum>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -659,10 +659,10 @@
                     <instance-variables>
                         <label>eBook</label>
                         <name>arrow story</name>
-                        <price>60</price>
-                        <priceCurrency>salads</priceCurrency>
+                        <price>4</price>
+                        <priceCurrency>tofu steak</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
-                        <visibilityMinimum>20</visibilityMinimum>
+                        <visibilityMinimum>3</visibilityMinimum>
                         <goto>story</goto>
                     </instance-variables>
                     <behavior-instances>
