@@ -558,7 +558,7 @@
                         <label>Lions</label>
                         <name>arrow lions</name>
                         <price>5</price>
-                        <priceCurrency>placeholder book currency</priceCurrency>
+                        <priceCurrency>key to lions</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>2</visibilityMinimum>
                         <goto>lions</goto>
