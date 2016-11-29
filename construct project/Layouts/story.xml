@@ -425,6 +425,8 @@
                         <priceCurrency></priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText></purchasePopupText>
+                        <purchasePopupButtonText></purchasePopupButtonText>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

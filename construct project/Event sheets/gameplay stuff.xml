@@ -64,6 +64,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
+                                        <variable constant="0" name="text" sid="563733227957364" static="0" type="text"></variable>
                                         <event-block sid="5776103934263722">
                                             <conditions>
                                                 <condition id="0" name="Compare value" sid="2753687022103709" type="saver">
@@ -84,9 +85,21 @@
                                                 <condition id="-22" name="Else" sid="2253229004848121" type="System" />
                                             </conditions>
                                             <actions>
+                                                <action id="-9" name="Set value" sid="680021081694008" type="System">
+                                                    <param id="0" name="Variable">text</param>
+                                                    <param id="1" name="Value">arrows.purchasePopupText</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="236933792623896" type="System">
+                                                    <param id="0" name="Variable">text</param>
+                                                    <param id="1" name="Value">replace(text, &quot;%price&quot;, str(arrows.price) )</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="419675163536524" type="System">
+                                                    <param id="0" name="Variable">text</param>
+                                                    <param id="1" name="Value">replace(text, &quot;%currency&quot;, str(arrows.priceCurrency) )</param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="6468875628514111" type="Function">
                                                     <param id="0" name="Name">&quot;purchase popup&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;unlock arrow&quot;{###}&quot;Curious to see what&apos;s over there? That will cost you &quot; &amp; arrows.price &amp; &quot; &quot; &amp; arrows.priceCurrency &amp; &quot; to unlock that screen.&quot;{###}arrows.price{###}arrows.priceCurrency{###}&quot;Pay &quot;{###}0{###}arrows.name</param>
+                                                    <param id="1" name="Parameter {n}">&quot;unlock arrow&quot;{###}text{###}arrows.price{###}arrows.priceCurrency{###}arrows.purchasePopupButtonText{###}0{###}arrows.name</param>
                                                 </action>
                                             </actions>
                                         </event-block>

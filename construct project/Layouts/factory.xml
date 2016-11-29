@@ -425,6 +425,8 @@
                         <priceCurrency>salads</priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <goto>3</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -459,6 +461,8 @@
                         <priceCurrency>salads</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>1</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -493,6 +497,8 @@
                         <priceCurrency></priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <goto>2</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -527,6 +533,8 @@
                         <priceCurrency></priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -561,6 +569,8 @@
                         <priceCurrency>key to lions</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>2</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <goto>lions</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -595,6 +605,8 @@
                         <priceCurrency>salads</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>20</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Pay </purchasePopupButtonText>
                         <goto>rewards</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -629,6 +641,8 @@
                         <priceCurrency>cucumber cut lengthwise</priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <goto>grinding</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -663,6 +677,8 @@
                         <priceCurrency>tofu steak</priceCurrency>
                         <alwaysVisible>false</alwaysVisible>
                         <visibilityMinimum>3</visibilityMinimum>
+                        <purchasePopupText>Some kid with a giant dog shows you an eBook reader. &quot;This book is a joy to read, you&apos;ll see. I haven&apos;t finished it though.&quot;</purchasePopupText>
+                        <purchasePopupButtonText>Buy for </purchasePopupButtonText>
                         <goto>story</goto>
                     </instance-variables>
                     <behavior-instances>
@@ -1708,6 +1724,8 @@
                         <priceCurrency></priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText>Curious to see what&apos;s over there? That will cost you %price %currency to unlock that screen.</purchasePopupText>
+                        <purchasePopupButtonText>Give </purchasePopupButtonText>
                         <goto>1</goto>
                     </instance-variables>
                     <behavior-instances>
