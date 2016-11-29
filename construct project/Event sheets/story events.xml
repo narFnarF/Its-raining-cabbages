@@ -642,6 +642,7 @@
                 <variable constant="0" name="previousYPosition" sid="722484002275074" static="1" type="number">0</variable>
                 <variable constant="0" name="inertiaSpeed" sid="160916621019687" static="1" type="number">0</variable>
                 <variable constant="0" name="friction" sid="690977920388355" static="1" type="number">0.9</variable>
+                <variable constant="0" name="mouseWheelScroll" sid="461765235786737" static="1" type="number">500</variable>
                 <event-block sid="951304589057786">
                     <conditions>
                         <condition behavior="DragDrop" id="0" name="Is dragging" sid="219555774532895" type="3storyDisplay" />
@@ -682,6 +683,32 @@
                         <action id="-9" name="Set value" sid="940943322084527" type="System">
                             <param id="0" name="Variable">inertiaSpeed</param>
                             <param id="1" name="Value">inertiaSpeed*friction</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508523754325476">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="672812917425857" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="522246251062164" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">mouseWheelScroll</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316777928765746">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="512599291631326" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="877289513417229" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">mouseWheelScroll</param>
                         </action>
                     </actions>
                 </event-block>
