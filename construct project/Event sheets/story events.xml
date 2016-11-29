@@ -641,8 +641,8 @@
                 <variable constant="0" name="lastYPosition" sid="366063712552063" static="1" type="number">0</variable>
                 <variable constant="0" name="previousYPosition" sid="722484002275074" static="1" type="number">0</variable>
                 <variable constant="0" name="inertiaSpeed" sid="160916621019687" static="1" type="number">0</variable>
-                <variable constant="0" name="friction" sid="690977920388355" static="1" type="number">0.9</variable>
-                <variable constant="0" name="mouseWheelScroll" sid="461765235786737" static="1" type="number">500</variable>
+                <variable constant="0" name="friction" sid="690977920388355" static="0" type="number">0.9</variable>
+                <variable constant="0" name="mouseWheelScroll" sid="461765235786737" static="0" type="number">500</variable>
                 <event-block sid="951304589057786">
                     <conditions>
                         <condition behavior="DragDrop" id="0" name="Is dragging" sid="219555774532895" type="3storyDisplay" />
