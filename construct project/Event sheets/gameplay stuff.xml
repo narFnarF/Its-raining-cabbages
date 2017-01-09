@@ -947,6 +947,9 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Count stuff for stats</comment>
+                        <comment>Mostly useful to call &quot;count for quests&quot;</comment>
+                        <comment>Usage: Call &quot;count&quot; in the code. (but I&apos;m not sure what the dictionary &quot;stats&quot; is for...)</comment>
                         <variable constant="0" name="item" sid="4607276310527662" static="0" type="text"></variable>
                         <variable constant="0" name="number" sid="1763759199186607" static="0" type="number">1</variable>
                         <event-block sid="6348617493765248">
