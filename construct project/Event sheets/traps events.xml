@@ -3,6 +3,53 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>traps events</name>
     <events>
+        <include>global events</include>
         <include>gameplay stuff</include>
+        <event-block sid="227827290332802">
+            <conditions>
+                <condition id="0" name="On function" sid="741191467400781" type="Function">
+                    <param id="0" name="Name">&quot;time has passed&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="deltaTime" sid="857004679723869" static="0" type="number">0</variable>
+                <event-block sid="278529939378744">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="830996273618068" type="System">
+                            <param id="0" name="Variable">deltaTime</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="331503936648156">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="926324522447133" type="System">
+                            <param id="0" name="Variable">deltaTime</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">5*60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="452318784279782" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;moins de 5 minutes&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796035864721826">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="728395175121534" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="739130014481313" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Ça fait longtemps&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
