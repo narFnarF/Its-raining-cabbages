@@ -92,6 +92,12 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Vertical only</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -419,6 +425,8 @@
                         <priceCurrency></priceCurrency>
                         <alwaysVisible>true</alwaysVisible>
                         <visibilityMinimum>0</visibilityMinimum>
+                        <purchasePopupText></purchasePopupText>
+                        <purchasePopupButtonText></purchasePopupButtonText>
                         <goto>factory</goto>
                     </instance-variables>
                     <behavior-instances>

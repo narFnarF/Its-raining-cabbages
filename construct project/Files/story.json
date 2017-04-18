@@ -1,72 +1,108 @@
 {
-    "stories": [
-        {
-            "text": "Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-            "receive": {
-                "cost": 0,
-                "currency": "salads",
-                "time": 5
-            },
-            "decode": {
-                "cost": 0,
-                "currency": "salads",
-                "time": 5
-            },
-            "reward": {
-                "nb": 0,
-                "currency": "salads"
-            }
-        },
-        {
-            "text": "Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam.",
-            "receive": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 5
-            },
-            "decode": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 5
-            },
-            "reward": {
-                "nb": 5,
-                "currency": "salads"
-            }
-        },
-        {
-            "text": "Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris.",
-            "receive": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 10
-            },
-            "decode": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 10
-            },
-            "reward": {
-                "nb": 5,
-                "currency": "salads"
-            }
-        },
-        {
-            "text": "THE END",
-            "receive": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 4
-            },
-            "decode": {
-                "cost": 1,
-                "currency": "tofu",
-                "time": 15
-            },
-            "reward": {
-                "nb": 5,
-                "currency": "salads"
-            }
-        }
-    ]
+  "stories": [
+    {
+      "text": "Extract from Citizen News Journal\n\nIt's been weeks now since lions have been sighted in the city and the population is getting more and more afraid. Yet, one citizen have raised a voice in defence. \n\nLocal college student Trish Grady have been writing letters to every newspapers and news stations claiming that we should protect, not kill, the lions roaming in the local park.\n\n\"I've been studying them for the past 2 months. They have shown no signs of aggressiveness at all. They feed entirely on cabbages. I can assure you that there is absolutely no reason to be afraid.\"\n\nBased on these claims, local zoo have sent field experts to investigate the situation. \n\nIn a press conference today, the experts announced the beginning of a new field research. \"For now, we ask for people to stay away from them and leave them be until the investigation is concluded\", said the lead expert. \"We are working with the autorities to make sure nobody, including the animals, gets hurt.\"\n\nIn the meantime, Ms Grady will continue to work with the zoo scientists and share her field research results. \"It's a lot more fun science project than just building another of those potato clock!\"\n",
+      "receive": {
+        "cost": 0,
+        "currency": "asdf",
+        "time": 0.7
+      },
+      "decode": {
+        "cost": 0,
+        "currency": "asdf",
+        "time": 0.7
+      },
+      "reward": {
+        "nb": 0,
+        "currency": "nothing"
+      }
+    },
+    {
+      "text": "First story: Curabitur luctus feugiat felis nec aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor metus et urna laoreet, vitae faucibus lectus tempus. Nullam id dictum felis, et aliquam odio. Pellentesque tortor tellus, consequat eget iaculis quis, posuere non diam.",
+      "receive": {
+        "cost": 40,
+        "currency": "salads",
+        "time": 5
+      },
+      "decode": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 5
+      },
+      "reward": {
+        "nb": 2,
+        "currency": "black markers"
+      }
+    },
+    {
+      "text": "Second story: Vestibulum eu elit arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\nDonec luctus vel eros ut fermentum. Cras quis ante et tortor iaculis blandit sed at mauris.",
+      "receive": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 10
+      },
+      "decode": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 10
+      },
+      "reward": {
+        "nb": 2,
+        "currency": "black markers"
+      }
+    },
+    {
+      "comment": "Second to last story before lions. ",
+      "text": "asdfasdfasdfasdfasdf",
+      "receive": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 4
+      },
+      "decode": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 15
+      },
+      "reward": {
+        "nb": 5,
+        "currency": "salads"
+      }
+    },
+    {
+      "comment": "Last story before lions. The reward is what will unlock lion screen",
+      "text": "asdf",
+      "receive": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 4
+      },
+      "decode": {
+        "cost": 1,
+        "currency": "tofu",
+        "time": 15
+      },
+      "reward": {
+        "nb": 5,
+        "currency": "salads"
+      }
+    },
+    {
+      "text": "Test long story (to be deleted): Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, \"consectetur\" adipiscing elit. Nullam laoreet ex ac metus dapibus lobortis. Ut accumsan placerat quam tempus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "receive": {
+        "cost": 0,
+        "currency": "asdf",
+        "time": 0.7
+      },
+      "decode": {
+        "cost": 0,
+        "currency": "asdf",
+        "time": 0.7
+      },
+      "reward": {
+        "nb": 0,
+        "currency": "nothing"
+      }
+    }
+  ]
 }

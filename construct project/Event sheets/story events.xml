@@ -120,6 +120,19 @@
         </event-group>
         <event-group description="" sid="207725341225783" title="state and display (Story)">
             <sub-events>
+                <comment>adjust size of text object</comment>
+                <event-block sid="957047429914487">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="827027659583428" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="703831462450207" type="3storyDisplay">
+                            <param id="0" name="Height">3storyDisplay.TextHeight+200</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="523044700959865">
                     <conditions>
                         <condition id="0" name="On function" sid="276032410872337" type="Function">
@@ -397,7 +410,7 @@
                                                 </action>
                                                 <action id="0" name="Call function" sid="663538393308908" type="Function">
                                                     <param id="0" name="Name">&quot;text popup&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;There was an attachment with the page.&quot; &amp; newline &amp; &quot;You got: &quot; &amp; nb &amp; &quot; &quot; &amp; currency{###}&quot;Cool!&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Page decoded!&#x0D;&#x0A;There was an attachment with the page.&quot; &amp; newline &amp; &quot;You got: &quot; &amp; nb &amp; &quot; &quot; &amp; currency{###}&quot;Cool!&quot;</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="944097416268403" type="Function">
                                                     <param id="0" name="Name">&quot;notification&quot;</param>
@@ -577,6 +590,127 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="scrolling the text object" sid="290655216088769" title="Scrolling (Story)">
+            <sub-events>
+                <comment>Remember: Most of the scrolling for this object is actually done through the Drag-and-drop behavior</comment>
+                <variable constant="0" name="topMargin" sid="374252403595808" static="0" type="number">200</variable>
+                <variable constant="0" name="botMargin" sid="452560430823957" static="0" type="number">150</variable>
+                <variable constant="0" name="elasticSpeed" sid="661446907697984" static="0" type="number">0.3</variable>
+                <comment>elastic at the edges (top and bottom) to prevent extra scrolling</comment>
+                <event-block sid="442708317268232">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="696367316792684" type="3storyDisplay" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="327079257240626">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="116254623605563" type="System">
+                                    <param id="0" name="First value">3storyDisplay.BBoxTop</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">topMargin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="856559527458515" type="3storyDisplay">
+                                    <param id="0" name="Y">lerp(3storyDisplay.Y, topMargin, elasticSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="364899278986862">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="682861530766676" type="System" />
+                                <condition id="-8" name="Compare two values" sid="953490162735636" type="System">
+                                    <param id="0" name="First value">3storyDisplay.BBoxBottom</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">LayoutHeight-botMargin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="298301271529161" type="3storyDisplay">
+                                    <param id="0" name="Y">lerp(3storyDisplay.Y, LayoutHeight-botMargin-3storyDisplay.Height, elasticSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>calculate the inertia value</comment>
+                <variable constant="0" name="lastYPosition" sid="366063712552063" static="1" type="number">0</variable>
+                <variable constant="0" name="previousYPosition" sid="722484002275074" static="1" type="number">0</variable>
+                <variable constant="0" name="inertiaSpeed" sid="160916621019687" static="1" type="number">0</variable>
+                <variable constant="0" name="friction" sid="690977920388355" static="0" type="number">0.9</variable>
+                <variable constant="0" name="mouseWheelScroll" sid="461765235786737" static="0" type="number">500</variable>
+                <event-block sid="951304589057786">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="219555774532895" type="3storyDisplay" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="993805135135781" type="System">
+                            <param id="0" name="Variable">previousYPosition</param>
+                            <param id="1" name="Value">lastYPosition</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="874877539311417" type="System">
+                            <param id="0" name="Variable">lastYPosition</param>
+                            <param id="1" name="Value">touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="606309771595164">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="554262643648544" type="3storyDisplay" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="664116470625698" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">(lastYPosition-previousYPosition) / dt</param>
+                        </action>
+                        <action id="14" name="Log" sid="756119048287796" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;inertia: &quot; &amp; inertiaSpeed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>move based on the inertia</comment>
+                <event-block sid="118755075804691">
+                    <conditions />
+                    <actions>
+                        <action id="-2" name="Set Y" sid="473094267771947" type="3storyDisplay">
+                            <param id="0" name="Y">3storyDisplay.Y+ (inertiaSpeed*dt)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="940943322084527" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">inertiaSpeed*friction</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508523754325476">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="672812917425857" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="522246251062164" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">mouseWheelScroll</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316777928765746">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="512599291631326" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="877289513417229" type="System">
+                            <param id="0" name="Variable">inertiaSpeed</param>
+                            <param id="1" name="Value">mouseWheelScroll</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

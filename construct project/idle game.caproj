@@ -30,6 +30,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
@@ -60,7 +61,7 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">CocoonJS native</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1721,6 +1722,9 @@
                     <behavior-type name="NoSave" sid="451854708361461">
                         <behavior id="NoSave" />
                     </behavior-type>
+                    <behavior-type name="DragDrop" sid="784179388682398">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
                 </behaviors>
             </object-type>
             <object-type name="3storyButtonLabel" sid="949443365461191">
@@ -1796,6 +1800,8 @@
                 <instance-variable comment="What currency is needed" name="priceCurrency" sid="5741496624709641" type="string" />
                 <instance-variable name="alwaysVisible" sid="6064496295085109" type="boolean" />
                 <instance-variable comment="How many of the currency is needed so that the arrow is purchaseable (and visible)" name="visibilityMinimum" sid="7552434025415277" type="number" />
+                <instance-variable comment="The text that will be displayed in the Purchase Popup. Uses %price and%currency as replacement tokens." name="purchasePopupText" sid="130822909522419" type="string" />
+                <instance-variable name="purchasePopupButtonText" sid="222827981781965" type="string" />
             </instance-variables>
         </family>
         <family name="nodes" plugin-id="Sprite" sid="4146238142840315">
