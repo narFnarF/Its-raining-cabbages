@@ -1942,5 +1942,6 @@
         <file name="silly_messages.json" />
         <file name="release_notes.txt" />
         <file name="story.json" />
+        <file name="mons.json" />
     </files-folder>
 </c2project>

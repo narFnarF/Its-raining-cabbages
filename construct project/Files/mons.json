@@ -1,0 +1,14 @@
+{
+  "mons": [
+    {
+      "name": "pikachu",
+      "duration": 15,
+      "gift": 10
+    },
+    {
+      "name": "togepi",
+      "duration": 15,
+      "gift": 15
+    }
+  ]
+}
