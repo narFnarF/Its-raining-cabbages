@@ -1753,6 +1753,12 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type global="1" name="3trapsJSON" sid="656523467114586">
+                <plugin id="JSON" />
+                <instance-variables>
+                    <instance-variable name="date" sid="270234482754530" type="number" />
+                </instance-variables>
+            </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
             <plugin id="Sprite" />

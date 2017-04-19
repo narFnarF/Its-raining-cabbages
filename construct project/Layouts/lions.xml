@@ -1939,6 +1939,11 @@
             </properties>
         </instance>
         <instance type="sillyMessagesJSON" uid="208" />
+        <instance type="3trapsJSON" uid="399">
+            <instance-variables>
+                <date>-1</date>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
