@@ -75,7 +75,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyDisplay" uid="214">
+                <instance type="storyDisplay" uid="214">
                     <properties>
                         <text>story display</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -180,7 +180,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyButtonLabel" uid="341">
+                <instance type="storyButtonLabel" uid="341">
                     <properties>
                         <text>Receive</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -213,7 +213,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyButtonLabel" uid="342">
+                <instance type="storyButtonLabel" uid="342">
                     <properties>
                         <text>Decode</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -246,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyStatus" uid="343">
+                <instance type="storyStatus" uid="343">
                     <properties>
                         <text>status</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -345,7 +345,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyButtonLabel" uid="351">
+                <instance type="storyButtonLabel" uid="351">
                     <properties>
                         <text>&lt;--</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -378,7 +378,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="3storyButtonLabel" uid="352">
+                <instance type="storyButtonLabel" uid="352">
                     <properties>
                         <text>--&gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -488,7 +488,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="3storyJSON" uid="213">
+        <instance type="storyJSON" uid="213">
             <instance-variables>
                 <date>-1</date>
                 <unlocked>0</unlocked>

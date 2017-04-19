@@ -1706,7 +1706,7 @@
             </object-type>
         </object-folder>
         <object-folder name="story">
-            <object-type global="1" name="3storyJSON" sid="126688365294019">
+            <object-type global="1" name="storyJSON" sid="126688365294019">
                 <plugin id="JSON" />
                 <instance-variables>
                     <instance-variable name="date" sid="611007619981140" type="number" />
@@ -1716,7 +1716,7 @@
                     <instance-variable name="timer" sid="868300196111675" type="number" />
                 </instance-variables>
             </object-type>
-            <object-type name="3storyDisplay" sid="729882335839652">
+            <object-type name="storyDisplay" sid="729882335839652">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="451854708361461">
@@ -1727,7 +1727,7 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="3storyButtonLabel" sid="949443365461191">
+            <object-type name="storyButtonLabel" sid="949443365461191">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="815574611707266">
@@ -1735,13 +1735,23 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="3storyStatus" sid="768054941553537">
+            <object-type name="storyStatus" sid="768054941553537">
                 <plugin id="Text" />
                 <behaviors>
                     <behavior-type name="NoSave" sid="855062252152715">
                         <behavior id="NoSave" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="traps">
+            <object-type name="3trap" sid="813539396306480">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="639384806503562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="timeKeeper" sid="7589780074901761">
@@ -1841,9 +1851,9 @@
         </family>
         <family name="labelUpdate" plugin-id="Text" sid="684843700387695">
             <members>
-                <member>3storyButtonLabel</member>
-                <member>3storyDisplay</member>
-                <member>3storyStatus</member>
+                <member>storyButtonLabel</member>
+                <member>storyDisplay</member>
+                <member>storyStatus</member>
             </members>
             <instance-variables>
                 <instance-variable name="theText" sid="681397276555332" type="string" />
