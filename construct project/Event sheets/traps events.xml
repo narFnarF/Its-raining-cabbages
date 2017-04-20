@@ -51,5 +51,128 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="941902649631225" title="AJAX request (traps)">
+            <sub-events>
+                <comment>Request the json once per day (it also triggers on the first start, for a New Game)</comment>
+                <event-block sid="474135525523124">
+                    <conditions>
+                        <condition id="1" name="Is online" sid="342637408275274" type="Browser" />
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="217659171967679" type="3trapsJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">date.Date</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="983872325896409" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                            <param id="1" name="File">mons.json</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="570607403618910" type="3trapsJSON">
+                            <param id="0" name="Instance variable">date</param>
+                            <param id="1" name="Value">Date.Date</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>if the internet was down the first time you launched the game and the array is still empty, this will make sure you&apos;re quickly back on track by trying every 15 sec</comment>
+                <event-block sid="850054465330936">
+                    <conditions>
+                        <condition id="70" name="Is Empty" sid="284789509293068" type="3trapsJSON">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </condition>
+                        <condition id="1" name="Is online" sid="821078781737790" type="Browser" />
+                        <condition id="-6" name="Every X seconds" sid="939480123943461" type="System">
+                            <param id="0" name="Interval (seconds)">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="423401574443775" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                            <param id="1" name="File">mons.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970818881138967">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="727140558703871" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="60" name="LoadJSON" sid="609327474889873" type="3trapsJSON">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="690716924661973">
+                    <conditions>
+                        <condition id="1" name="On error" sid="404330999851662" type="AJAX">
+                            <param id="0" name="Tag">&quot;mons.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="421414331579897" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;Tried to retrieve mons.json but couldn&apos;t. Probably because internet connection is missing. Will try again later.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="950896162275799">
+                    <conditions>
+                        <condition id="200" name="On JSON Parse Error" sid="582516010564090" type="3trapsJSON" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="514927499061973" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;The mons.json is not formated properly.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="753817922202577" title="JSON functions (traps)">
+            <sub-events>
+                <event-block sid="123617965027594">
+                    <conditions>
+                        <condition id="0" name="On function" sid="298404752182894" type="Function">
+                            <param id="0" name="Name">&quot;get Nb mons&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="697573811616964" type="Function">
+                            <param id="0" name="Value">3trapsJSON.Size(0, &quot;mons&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="799838731313010" title="debug (traps)">
+            <sub-events>
+                <event-block sid="332699366555795">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="264565433427546" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="698703762127055" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;before&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="208905483803146" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;debug: &quot; &amp; Function.Call(&quot;get Nb mons&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="578464219814689" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;after&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
