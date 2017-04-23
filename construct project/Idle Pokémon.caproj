@@ -1,0 +1,1953 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Idle Pokémon</name>
+    <description>like pokemon, but idle</description>
+    <version>v1</version>
+    <author>narF</author>
+    <author-email>narF@narF.ca</author-email>
+    <author-website>http://www.narF.ca</author-website>
+    <app-id>ca.narF.idlemon</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>traps</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="plugins">
+            <object-type name="Browser" sid="5129043714455325">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="1040817558484765">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Touch" sid="2427246001340585">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type global="1" name="Date" sid="8536047002691559">
+                <plugin id="Rex_Date" />
+            </object-type>
+            <object-type name="Mouse" sid="9887476147998468">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Keyboard" sid="8221280292440799">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="AJAX" sid="3132682189607884">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type name="Array" sid="9189166598250775">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="LocalStorage" sid="5917754173735484">
+                <plugin id="LocalStorage" />
+            </object-type>
+        </object-folder>
+        <object-folder name="bee stuff">
+            <object-type name="bee" sid="4716704536026207">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="3220576457764413" type="number" />
+                    <instance-variable name="level" sid="6128146278882916" type="number" />
+                    <instance-variable name="speed" sid="1991404268606079" type="number" />
+                    <instance-variable name="status" sid="2282952334753853" type="string" />
+                    <instance-variable name="cabbageID" sid="8587644090087937" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="8469844386374516">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="1818596033610981">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="vol" pingpong="0" repeatcount="1" repeatto="0" sid="7919122311649333" speed="20">
+                        <frame duration="1" hotspotX="0.74026" hotspotY="0.828125" />
+                        <frame duration="1" hotspotX="0.723404" hotspotY="0.807407" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="beeCollectZone" sid="8514725442516342">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1705140010114099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="beeDropZone" sid="7173800691898986">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="26439158848992">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6993862622659614" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnBeeTxt" sid="5490029273198872">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="beeNb" sid="7230698741477582" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="1550309732993426">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="textboxes">
+            <object-type name="plus1" sid="9026095487772363">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="2289773093146785">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8332503493718814">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="2977789895684222">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="factory stuff">
+            <object-type name="factory" sid="5214980029075165">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="levelOfProductivity" sid="8246387739080951" type="number" />
+                    <instance-variable name="levelOfCapacity" sid="8504193921132513" type="number" />
+                    <instance-variable comment="number of salad produced" name="productivity" sid="4191659673427779" type="number" />
+                    <instance-variable name="capacity" sid="186393763798137" type="number" />
+                    <instance-variable comment="The salads that are ready to collect" name="outputSalads" sid="2892429438510819" type="number" />
+                    <instance-variable name="timer" sid="5116439341233498" type="number" />
+                    <instance-variable name="timerMax" sid="6847551949910904" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="3067676385396211">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8839356722953241" speed="5">
+                        <frame duration="1" hotspotX="0.506438" hotspotY="0.513889" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="factoryProgressBar" sid="5953083345980087">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8102623093277821">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5605835646574217" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.555556" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="factoryTxt" sid="146299065524885">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5769377757837101">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="factoryNotification" sid="3803439497545899">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="4135370625602129" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1516703655586581" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502439" />
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.629268" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="siloTxt" sid="9054213322709587">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9586923452024129">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="silo" sid="3644795865062729">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="level" sid="4295317832790693" type="number" />
+                    <instance-variable name="capacity" sid="9475304309134901" type="number" />
+                    <instance-variable name="cabbages" sid="3321211388495565" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="9319293075286822">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3322504650715733" speed="5">
+                        <frame duration="1" hotspotX="0.502994" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="siloHistory" sid="7596336318687071">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="factoryHistory" sid="1757212072694836">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="siloUpgradeBtn" sid="1426435039234259">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8258410927934596">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="factoryProgressBarBg" sid="4294554374314644">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7453271929086289">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6717182044711645" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.555556" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="siloHistoryForStats" sid="7153178140964365">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder name="notifications">
+            <object-type name="notificationBox" sid="4820868941892838">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="open" sid="3708815445241575" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1545521745320206">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3571457017003339" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="flash" pingpong="0" repeatcount="1" repeatto="0" sid="4211130502648322" speed="6">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="notifications" sid="5194667752447656">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="notificationTxt" sid="9963654768141708">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9962413741718986">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="mask" sid="6875210335898705">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3914035558437269" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="sillyMessagesJSON" sid="121428616668481">
+                <plugin id="JSON" />
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-folder name="new buttons">
+                <object-type name="buttonProgressBg" sid="2630770432602462">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="progression" sid="2983038034364261" type="number" />
+                        <instance-variable name="buttonId" sid="4636741037066105" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="6263540025684414">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>buttonProgressBg</type>
+                        <type>buttonProgressBar</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3756821763536945" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="bee" pingpong="0" repeatcount="1" repeatto="0" sid="2783526319135674" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="9132404402467719" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="lionTrader" pingpong="0" repeatcount="1" repeatto="0" sid="6837709488036616" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="buttonProgressBar" sid="9567485027148939">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="8872513878824496">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>buttonProgressBg</type>
+                        <type>buttonProgressBar</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5016489192869235" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="bee" pingpong="0" repeatcount="1" repeatto="0" sid="410339129626713" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="1765976811335853" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="lionTrader" pingpong="0" repeatcount="1" repeatto="0" sid="9527698673154945" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="newButton" sid="5096809369448876">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="factory" pingpong="0" repeatcount="1" repeatto="0" sid="1393280768263531" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="beeBtn" pingpong="0" repeatcount="1" repeatto="0" sid="501531142461961" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="lionTraderBtnBg" sid="3836552500968573">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="normal" pingpong="0" repeatcount="1" repeatto="0" sid="7760523467200803" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="7811085318233502" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0">
+                                <image-point name="bar" x="0" y="1" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="arrowCamera" sid="9018481897248055">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="goto" sid="4017894354927551" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5810778148981333">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="arrow" pingpong="0" repeatcount="1" repeatto="0" sid="6799261809530454" speed="5">
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="X" pingpong="0" repeatcount="1" repeatto="0" sid="3488531143083979" speed="5">
+                        <frame duration="1" hotspotX="0.519231" hotspotY="0.477778" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="button" pingpong="0" repeatcount="1" repeatto="0" sid="1010255396462984" speed="5">
+                        <frame duration="1" hotspotX="0.519231" hotspotY="0.477778" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="camera" sid="4915622769187808">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="screen" sid="9728426467232505" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="7314232100600382">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="7030378950934829">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4781535449343194" speed="5">
+                        <frame duration="1" hotspotX="0.502283" hotspotY="0.502283" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtLabel" sid="2110053242017875">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable comment="Can be used to differenciate the labels" name="name" sid="2334635496844516" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1321623081067884">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="globalStats" sid="1716407423504638">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6792969353378058">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="screen" sid="9322701201513001">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="number" sid="4851678768145092" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1956974350066586">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9558079890219215" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="saveBtn" sid="4336163140375962">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3067014009371409">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7469536007764582" speed="5">
+                        <frame duration="1" hotspotX="0.796875" hotspotY="0.773585" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="debugTextBox" sid="1463393681975661">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="arrowLayout" sid="3468448305939629">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="goto" sid="7119143192806759" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6710477579799478">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801973543682937" speed="5">
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="X" pingpong="0" repeatcount="1" repeatto="0" sid="614865373040596" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.511111" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="box" pingpong="0" repeatcount="1" repeatto="0" sid="816487073867316" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.494444" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FPSTxt" sid="9025536709654262">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3237331307166794">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="globalStats2" sid="2437325743335131">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8322566797672151">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="arrowLabel" sid="646455290385136">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8736571886796099">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="props">
+            <object-type name="solidBloc" sid="3710229597765973">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="2362145777090324">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="3411584763812897">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4478074572537306" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="water" sid="5146963646431959">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7430355389712841">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914258321610921" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="waterParticles" sid="1205555491118924">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8214194427257181">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="solidBloc2" sid="4686098944097985">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="8765188160030715">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="4802101496847389">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830266739533531" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="verachou">
+            <object-type name="verachou" sid="345317527254927">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="2925477932496892" type="string" />
+                    <instance-variable name="costPurchase" sid="7066570008543057" type="number" />
+                    <instance-variable name="age" sid="7317338424517423" type="number" />
+                    <instance-variable name="ageMax" sid="1125517200955031" type="number" />
+                    <instance-variable name="status" sid="2342245633523666" type="string" />
+                    <instance-variable name="hungry" sid="6213101917915552" type="number" />
+                    <instance-variable name="hungryMax" sid="6946453867958305" type="number" />
+                    <instance-variable name="hungryCounter" sid="4521198605043197" type="number" />
+                    <instance-variable comment="2 hours" name="hungryCounterMax" sid="1201984919770812" type="number" />
+                    <instance-variable name="IQ" sid="4269610420630433" type="number" />
+                    <instance-variable name="IQmax" sid="6774559943169333" type="number" />
+                    <instance-variable name="IQCounter" sid="7779685056698707" type="number" />
+                    <instance-variable name="IQCounterMax" sid="3486132832093965" type="number" />
+                    <instance-variable name="energy" sid="315820726766646" type="number" />
+                    <instance-variable name="energyMax" sid="9878480204033343" type="number" />
+                    <instance-variable name="energyCounter" sid="3681406710281512" type="number" />
+                    <instance-variable name="energyCounterMax" sid="6744602456558582" type="number" />
+                    <instance-variable name="toEvolveCounter" sid="6339981050453749" type="number" />
+                    <instance-variable name="toEvolve" sid="2145543609789773" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="5237604124599049">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unborn" pingpong="0" repeatcount="1" repeatto="0" sid="9096289198181984" speed="5">
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="baby" pingpong="0" repeatcount="1" repeatto="0" sid="3402142341129791" speed="1">
+                        <frame duration="1" hotspotX="0.461538" hotspotY="0.962025" />
+                        <frame duration="1" hotspotX="0.472527" hotspotY="0.87037" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="kid" pingpong="0" repeatcount="1" repeatto="0" sid="3414579298123279" speed="1">
+                        <frame duration="1" hotspotX="0.693182" hotspotY="0.965217" />
+                        <frame duration="1" hotspotX="0.506173" hotspotY="0.979381" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="teen" pingpong="0" repeatcount="1" repeatto="0" sid="5892831189021971" speed="1">
+                        <frame duration="1" hotspotX="0.363636" hotspotY="0.777778" />
+                        <frame duration="1" hotspotX="0.670455" hotspotY="0.746154" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="adult" pingpong="0" repeatcount="1" repeatto="0" sid="5417209032790861" speed="1">
+                        <frame duration="1" hotspotX="0.703297" hotspotY="0.97546" />
+                        <frame duration="1" hotspotX="0.573171" hotspotY="0.967949" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="dead" pingpong="0" repeatcount="1" repeatto="0" sid="6338539069129807" speed="5">
+                        <frame duration="1" hotspotX="0.508475" hotspotY="0.922222" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouStats" sid="4291720361545455">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3569514873855026">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="verachouFeedBtn" sid="1869117220261939">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8507912904868358" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouStudyBtn" sid="6506717338388186">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1700243232574993" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouEnergy" sid="4891179448567307">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="1112557148176972" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="9290783877406575" speed="5">
+                        <frame duration="1" hotspotX="0.509009" hotspotY="0.82" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="2475857233106956" speed="5">
+                        <frame duration="1" hotspotX="0.509009" hotspotY="0.82" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="heart" sid="1244228769241016">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="1867126846187975" type="number" />
+                    <instance-variable name="type" sid="8525387831059956" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="5656164001952044" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.431579" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="2886834824426518" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.431579" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouEnergyTimerTxt" sid="5340654386194916">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="lightSwitch" sid="561888425972263">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="turnedOn" sid="3718597580846417" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8717184000824626">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="8727848375741922" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="8956037132713342" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouGrowBtn" sid="761117717822557">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7330031687124053" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouEggIcon" sid="1822700665624996">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339122616548337" speed="5">
+                        <frame duration="1" hotspotX="0.66" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouDarkness" sid="2686922646626659">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="429013310828128">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806741008849285" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="verachouProgressBar" sid="2395862388375656">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="value" sid="3954409651565213" type="number" />
+                    <instance-variable name="valueMax" sid="3059102364074422" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="verachouProgressBarBg" sid="8075840418252747">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="verachouLevelUp" sid="4539624746310134">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="purchase popup">
+            <object-type name="purchasePopup" sid="269146194465256">
+                <plugin id="NinePatch" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="purchasePopupBuyBtn" sid="191091152619404">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="functionCall" sid="9188864498709404" type="string" />
+                    <instance-variable name="functionCallParams_nb" sid="1830715055677984" type="number" />
+                    <instance-variable name="functionCallParams_txt" sid="1273978999212721" type="string" />
+                    <instance-variable name="price" sid="8457791532848926" type="number" />
+                    <instance-variable name="currency" sid="7694556192140746" type="string" />
+                </instance-variables>
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="purchasePopupBuyBtnTxt" sid="4765928005168268">
+                <plugin id="Text" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+            </object-type>
+            <object-type name="purchasePopupDescriptionTxt" sid="9467639165513063">
+                <plugin id="Text" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+            </object-type>
+            <object-type name="purchasePopupDarkness" sid="5715703512699373">
+                <plugin id="TiledBg" />
+                <container>
+                    <type>purchasePopup</type>
+                    <type>purchasePopupDarkness</type>
+                    <type>purchasePopupBuyBtn</type>
+                    <type>purchasePopupBuyBtnTxt</type>
+                    <type>purchasePopupDescriptionTxt</type>
+                </container>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="menhir">
+            <object-type name="menhir" sid="1702331039481137">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="price" sid="2406122236208806" type="number" />
+                    <instance-variable name="level" sid="1302145897562813" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="4019090817851407">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Persist" sid="5534419827777112">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3215945281272706" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                            <collision-poly>
+                                <point x="0.016" y="0" />
+                                <point x="0.984" y="0" />
+                                <point x="0.84" y="0.833333" />
+                                <point x="0.16" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.416667">
+                            <collision-poly>
+                                <point x="0.016" y="0" />
+                                <point x="0.984" y="0" />
+                                <point x="0.84" y="0.833333" />
+                                <point x="0.16" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="menhirMsgArray" sid="2986728960170597">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder name="cabbages stuff">
+            <object-type name="cabbage" sid="9209630044662387">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="status" sid="9406756358246947" type="string" />
+                    <instance-variable name="carriedDuration" sid="6896696954568411" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Physics" sid="1936616672555206">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Persist" sid="193605268883753">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023358627610028" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.538462">
+                            <collision-poly>
+                                <point x="0.142857" y="0.153846" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.153846" />
+                                <point x="1" y="0.461538" />
+                                <point x="0.857143" y="0.846154" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0714286" y="0.923077" />
+                                <point x="0" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cabbagesSpawnArea" sid="3837656882855279">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3205247853103715">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="fallingCabbagesDetector" sid="6570114965952764">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="3450144000430623">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6926801322755496" speed="5">
+                        <frame duration="1" hotspotX="-1.7" hotspotY="5.0303" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="lions">
+            <object-folder name="pachinko">
+                <object-type name="lionDisc" sid="7663539838536756">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="level" sid="6787758768450439" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Physics" sid="1941449537735709">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                        <behavior-type name="Persist" sid="4706895864038387">
+                            <behavior id="Persist" />
+                        </behavior-type>
+                        <behavior-type name="Timer" sid="4858822590441516">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>pachinkoLevel</type>
+                        <type>lionDisc</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7954787054964202" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.55">
+                                <collision-poly>
+                                    <point x="0.142857" y="0.153846" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.857143" y="0.153846" />
+                                    <point x="1" y="0.461538" />
+                                    <point x="0.857143" y="0.846154" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0714286" y="0.923077" />
+                                    <point x="0" y="0.461538" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="sensor" sid="5301166418854619">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="name" sid="4684731389783821" type="string" />
+                        <instance-variable comment="for stat simulator only" name="counter" sid="1163251948597008" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="9072527553724251">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>sensorTxt</type>
+                        <type>sensor</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4047603040769671" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="sensorTxt" sid="7103543970488127">
+                    <plugin id="Text" />
+                    <container>
+                        <type>sensorTxt</type>
+                        <type>sensor</type>
+                    </container>
+                </object-type>
+                <object-type global="1" name="pachinko" sid="9341328297692634">
+                    <plugin id="Arr" />
+                </object-type>
+                <object-type name="pachinkoLevel" sid="206022705876045">
+                    <plugin id="Text" />
+                    <container>
+                        <type>pachinkoLevel</type>
+                        <type>lionDisc</type>
+                    </container>
+                </object-type>
+                <object-type name="pachinkoDoubler" sid="4081849072907919">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="on" sid="5549064851823669" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Sine" sid="7954267234327315">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                        <behavior-type name="NoSave" sid="6787892155161553">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2385792216653706" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="trader">
+                <object-type name="traderTxt" sid="5574383113778382">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="buttonId" sid="7334111181996787" type="number" />
+                        <instance-variable name="receiveWhat" sid="2750451303680641" type="string" />
+                        <instance-variable name="receiveHowMany" sid="8038152053338172" type="number" />
+                        <instance-variable name="payWhat" sid="3103701344531354" type="string" />
+                        <instance-variable name="payHowMuch" sid="1451616090028767" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="682004431540147">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="traderTitle" sid="9400254462319746">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="4749103759458342">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
+            <object-type name="lion" sid="5246547682708114">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="7024890554918371" type="number" />
+                    <instance-variable name="level" sid="7130495753662925" type="number" />
+                    <instance-variable name="initialWaitingTime" sid="9638501070773712" type="number" />
+                    <instance-variable name="initialWaitingTimeCounter" sid="6475709690379468" type="number" />
+                    <instance-variable name="huntTime" sid="6955178951385895" type="number" />
+                    <instance-variable name="huntTimeCounter" sid="4270270175809803" type="number" />
+                    <instance-variable name="away" sid="9952528029607261" type="boolean" />
+                    <instance-variable comment="when the lion is back and ready to collect" name="readyToCollect" sid="3188355233868491" type="boolean" />
+                    <instance-variable name="levelUpCost" sid="4190724656124025" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Persist" sid="8847791984893872">
+                        <behavior id="Persist" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="vide" pingpong="0" repeatcount="1" repeatto="0" sid="2961880686804428" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="burger" pingpong="0" repeatcount="1" repeatto="0" sid="4370781162084332" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="lion" pingpong="0" repeatcount="1" repeatto="0" sid="3653958491940525" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="hunting" pingpong="0" repeatcount="1" repeatto="0" sid="9173746592414603" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.501377" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="inventory" sid="977963652630131">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="lionBtn" sid="5989880898955489">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9363507014872155">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="lionBtnTxt" sid="9902903114487378">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6667317526628925">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+            </object-type>
+            <object-type name="lionRandomItems" sid="2847898352338322">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="inventoryDisplay" sid="8665233173308308">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6602520798867941">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="lionStatsTxt" sid="3154089353528074">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8219478190353372">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+            </object-type>
+            <object-type name="lionGift" sid="6505178483040949">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="1898658030584963">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8822494290821093" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.12069" y="0.166667" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.896552" y="0.151515" />
+                                <point x="0.982759" y="0.5" />
+                                <point x="0.913793" y="0.863636" />
+                                <point x="0.5" y="0.984848" />
+                                <point x="0.0862069" y="0.863636" />
+                                <point x="0.0172414" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lionLevelUpIcon" sid="3292323360026143">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="2772117969696449">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>lion</type>
+                    <type>lionBtnTxt</type>
+                    <type>lionBtn</type>
+                    <type>lionStatsTxt</type>
+                    <type>lionGift</type>
+                    <type>lionLevelUpIcon</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3035814222332729" speed="5">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="quests">
+            <object-type global="1" name="stats" sid="8704913547318958">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="questsTxt" sid="5168085700003491">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="questCollectBtn" sid="7090045992240154">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nb" sid="624509774830988" type="number" />
+                    <instance-variable name="questID" sid="7602691269376311" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101373270952746" speed="5">
+                        <frame duration="1" hotspotX="0.659459" hotspotY="0.642857" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="levelOfStuff" sid="5253234207102304">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="quest" sid="7316888990734442">
+                <plugin id="Dictionary" />
+            </object-type>
+        </object-folder>
+        <object-folder name="grinding simulator">
+            <object-folder name="map">
+                <object-type name="node" sid="7360139416173163">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="killsDone" sid="1177172083179364" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Persist" sid="7995510087235718">
+                            <behavior id="Persist" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                        <type>nodeData</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8682726089398045" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="completed" pingpong="0" repeatcount="1" repeatto="0" sid="1315943638618706" speed="5">
+                            <frame duration="1" hotspotX="0.44" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.04" y="0.222222" />
+                                    <point x="0.84" y="0.222222" />
+                                    <point x="0.84" y="0.962963" />
+                                    <point x="0.04" y="0.962963" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="route" sid="7384187287672046">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="3122838953827855">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719770415771162" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="you" sid="323269835040368">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="7569364851329432">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9230095903346105" speed="5">
+                            <frame duration="1" hotspotX="0.537037" hotspotY="0.674074" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="nodeTxt" sid="7597308021376178">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="2659643885740869">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                        <type>nodeData</type>
+                    </container>
+                </object-type>
+                <object-type name="nodeData" sid="8017469267039675">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="nb" sid="3709550927162332" type="number" />
+                        <instance-variable name="start" sid="4604724392480643" type="boolean" />
+                        <instance-variable name="end" sid="9602003886879857" type="boolean" />
+                        <instance-variable name="killsToDo" sid="8913232414783156" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="NoSave" sid="4459086275013467">
+                            <behavior id="NoSave" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>node</type>
+                        <type>nodeTxt</type>
+                        <type>nodeData</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7530899417121039" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="completed" pingpong="0" repeatcount="1" repeatto="0" sid="4703389389982252" speed="5">
+                            <frame duration="1" hotspotX="0.44" hotspotY="0.592593">
+                                <collision-poly>
+                                    <point x="0.04" y="0.222222" />
+                                    <point x="0.84" y="0.222222" />
+                                    <point x="0.84" y="0.962963" />
+                                    <point x="0.04" y="0.962963" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="grindingBush" sid="7690932005223696">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9741649089996923">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4302931634723911" speed="5">
+                        <frame duration="1" hotspotX="0.614907" hotspotY="0.361538" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="pkStats" sid="3803377852119337">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="state" sid="5514812683437481" type="string" />
+                    <instance-variable name="timerWalking" sid="4663920467777482" type="number" />
+                    <instance-variable name="battleTimer" sid="7977112317557196" type="number" />
+                    <instance-variable name="battleTimerInit" sid="2788110404818428" type="number" />
+                    <instance-variable name="level" sid="6817374396250628" type="number" />
+                    <instance-variable name="levelEnemy" sid="1704673553733937" type="number" />
+                    <instance-variable name="currentNode" sid="5568407274159363" type="number" />
+                    <instance-variable name="killsDone" sid="5847347889282774" type="number" />
+                    <instance-variable name="killsToDo" sid="5018348872088445" type="number" />
+                    <instance-variable name="xp" sid="7192516300412876" type="number" />
+                    <instance-variable name="xpRequired" sid="5679409330007737" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8790946755917929" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.50289">
+                            <collision-poly>
+                                <point x="0.479554" y="1" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0.479554" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pkBarBg" sid="6282714273423693">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="9189479058264416">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pkBarBg</type>
+                    <type>pkBar</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="rouge" pingpong="0" repeatcount="1" repeatto="0" sid="5799785853409298" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bleu" pingpong="0" repeatcount="1" repeatto="0" sid="9582440942998391" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="gris" pingpong="0" repeatcount="1" repeatto="0" sid="9803267789089201" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pkBar" sid="7235007784863634">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="1783009049203672" type="string" />
+                    <instance-variable name="value" sid="4717978794554196" type="number" />
+                    <instance-variable name="valueMin" sid="4177131603774301" type="number" />
+                    <instance-variable name="valueMax" sid="5969524446534017" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="4965186405026929">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pkBarBg</type>
+                    <type>pkBar</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="vert" pingpong="0" repeatcount="1" repeatto="0" sid="3872243152214634" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="orange" pingpong="0" repeatcount="1" repeatto="0" sid="1838620917169107" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bleu" pingpong="0" repeatcount="1" repeatto="0" sid="5551910572788438" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="grindingGuy" sid="3855796501199458">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="3864952777360856">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="2871034946219225">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3212888108080541" speed="5">
+                        <frame duration="1" hotspotX="0.51049" hotspotY="0.504902">
+                            <collision-poly>
+                                <point x="0" y="0.617647" />
+                                <point x="0.874126" y="0.617647" />
+                                <point x="0.874126" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="panelPkmnTrainer" sid="514352623606222">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="4339435037000967">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1534758023464001" speed="10">
+                        <frame duration="1" hotspotX="0.237288" hotspotY="0.586207" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="blocker" sid="367605596310849">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="5451261603135343">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="3534157589949293">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9816792735805939" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="battleTransition" sid="2647524471120711">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="8478479160171235">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="blackFlash" sid="6349916444108112">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="4011696329305882">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="pkLevel" sid="9067352385932635">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="your" sid="762568211867715" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="6679590119212251">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type global="1" name="sectorInfo" sid="2099321260430553">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="pokemon" sid="9934082067433431">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="yours" sid="9464601197445116" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="NoSave" sid="2869736899432163">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pokemon</type>
+                    <type>pkName</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Verachou" pingpong="0" repeatcount="1" repeatto="0" sid="8751723836974156" speed="10">
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0.964602" />
+                        <frame duration="1" hotspotX="0.0846154" hotspotY="0.977778" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pikachat" pingpong="0" repeatcount="1" repeatto="0" sid="7436587979530942" speed="5">
+                        <frame duration="1" hotspotX="0.59292" hotspotY="0.868421">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Grand" pingpong="0" repeatcount="1" repeatto="0" sid="806979740104139" speed="5">
+                        <frame duration="1" hotspotX="0.474576" hotspotY="0.937931">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Rando" pingpong="0" repeatcount="1" repeatto="0" sid="9074864419134216" speed="5">
+                        <frame duration="1" hotspotX="0.439024" hotspotY="0.938144" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pkName" sid="7811285854107901">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="2038576940545413">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pokemon</type>
+                    <type>pkName</type>
+                </container>
+            </object-type>
+            <object-type name="pkSectorName" sid="1874100705810594">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="7440954466908052">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="pkBarSectorTimeTxt" sid="3851843521013606">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5781419445588147">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="pkLevelUpIcon" sid="4722709261757437">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="5742604040150727">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5325611802827121" speed="5">
+                        <frame duration="1" hotspotX="0.513228" hotspotY="0.481865">
+                            <collision-poly>
+                                <point x="0.126984" y="0.124352" />
+                                <point x="0.497355" y="0.00518135" />
+                                <point x="0.883598" y="0.11399" />
+                                <point x="0.994709" y="0.497409" />
+                                <point x="0.899471" y="0.901554" />
+                                <point x="0.497355" y="0.994819" />
+                                <point x="0.153439" y="0.849741" />
+                                <point x="0.00529101" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="bumber">
+            <object-type name="ball" sid="5538674177708955">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936579645237105" speed="5">
+                        <frame duration="1" hotspotX="0.545455" hotspotY="0.545455">
+                            <collision-poly>
+                                <point x="0.153409" y="0.119318" />
+                                <point x="0.505682" y="0" />
+                                <point x="0.857955" y="0.147727" />
+                                <point x="1" y="0.454545" />
+                                <point x="0.846591" y="0.789773" />
+                                <point x="0.505682" y="0.954545" />
+                                <point x="0.153409" y="0.806818" />
+                                <point x="0" y="0.454545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="directionArrow" sid="7444168425063014">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9283990682878906" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bumper" sid="5268863288760189">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="8586064630637254">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="7342439372298691" speed="5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="bump" pingpong="0" repeatcount="1" repeatto="0" sid="6903117206360079" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bumperHitSparkles" sid="4091349688647897">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="ballYou" sid="7291863192075138">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="main" pingpong="0" repeatcount="1" repeatto="0" sid="4690132656972943" speed="5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.510638">
+                            <collision-poly>
+                                <point x="0.148936" y="0.148936" />
+                                <point x="0.489362" y="0" />
+                                <point x="0.851064" y="0.148936" />
+                                <point x="1" y="0.489362" />
+                                <point x="0.851064" y="0.851064" />
+                                <point x="0.489362" y="0.978723" />
+                                <point x="0.148936" y="0.851064" />
+                                <point x="0" y="0.489362" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="collectibles" sid="5122109017712106">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6687925021237508" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="story">
+            <object-type global="1" name="storyJSON" sid="126688365294019">
+                <plugin id="JSON" />
+                <instance-variables>
+                    <instance-variable name="date" sid="611007619981140" type="number" />
+                    <instance-variable comment="The number of the latest unlocked page" name="unlocked" sid="679088167803292" type="number" />
+                    <instance-variable name="currentPage" sid="820663665408254" type="number" />
+                    <instance-variable name="status" sid="611118178019623" type="string" />
+                    <instance-variable name="timer" sid="868300196111675" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="storyDisplay" sid="729882335839652">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="451854708361461">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="784179388682398">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="storyButtonLabel" sid="949443365461191">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="815574611707266">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="storyStatus" sid="768054941553537">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="855062252152715">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="traps">
+            <object-type name="3trap" sid="813539396306480">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="639384806503562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="3trapsJSON" sid="656523467114586">
+                <plugin id="JSON" />
+                <instance-variables>
+                    <instance-variable name="date" sid="270234482754530" type="number" />
+                </instance-variables>
+            </object-type>
+        </object-folder>
+        <object-type name="timeKeeper" sid="7589780074901761">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="lastTimeStamp" sid="5998943843714928" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="7087179446488632">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9175592382971256" speed="5">
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.607843" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="saver" sid="4467673521804933">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="coins" sid="5586148913928903">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="snow" sid="6797678188612642">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Persist" sid="870605882006574">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="verachouButtons" plugin-id="Sprite" sid="2082036991771531">
+            <members>
+                <member>verachouFeedBtn</member>
+                <member>verachouGrowBtn</member>
+                <member>verachouStudyBtn</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="energyCost" sid="1507618704537177" type="number" />
+            </instance-variables>
+        </family>
+        <family name="arrows" plugin-id="Sprite" sid="7275680179902792">
+            <members>
+                <member>arrowCamera</member>
+                <member>arrowLayout</member>
+            </members>
+            <instance-variables>
+                <instance-variable comment="label that the player sees" name="label" sid="6512711138914009" type="string" />
+                <instance-variable comment="used in the Saver array" name="name" sid="8613328284108331" type="string" />
+                <instance-variable comment="How much of the currency is needed to purchase" name="price" sid="3173789073934467" type="number" />
+                <instance-variable comment="What currency is needed" name="priceCurrency" sid="5741496624709641" type="string" />
+                <instance-variable name="alwaysVisible" sid="6064496295085109" type="boolean" />
+                <instance-variable comment="How many of the currency is needed so that the arrow is purchaseable (and visible)" name="visibilityMinimum" sid="7552434025415277" type="number" />
+                <instance-variable comment="The text that will be displayed in the Purchase Popup. Uses %price and%currency as replacement tokens." name="purchasePopupText" sid="130822909522419" type="string" />
+                <instance-variable name="purchasePopupButtonText" sid="222827981781965" type="string" />
+            </instance-variables>
+        </family>
+        <family name="nodes" plugin-id="Sprite" sid="4146238142840315">
+            <members>
+                <member>node</member>
+            </members>
+        </family>
+        <family name="bumperBalls" plugin-id="Sprite" sid="7085744398243987">
+            <members>
+                <member>ball</member>
+                <member>ballYou</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Physics2" sid="7242741650655031">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="genericButtons" plugin-id="Sprite" sid="4183274929016279">
+            <members>
+                <member>lionTraderBtnBg</member>
+                <member>newButton</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="clickableEvenIfDisabled" sid="8634969934852378" type="boolean" />
+                <instance-variable name="callback" sid="6708884644703998" type="string" />
+                <instance-variable name="callbackParamNb" sid="7965788020137503" type="number" />
+                <instance-variable name="progressBarId" sid="3723874214917857" type="number" />
+                <instance-variable comment="Options: normal, pressed, disabled, invisible" name="state" sid="9041518536292444" type="string" />
+                <instance-variable name="initialyPressed" sid="4112654331809096" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="NoSave" sid="5841893004396971">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="labelUpdate" plugin-id="Text" sid="684843700387695">
+            <members>
+                <member>storyButtonLabel</member>
+                <member>storyDisplay</member>
+                <member>storyStatus</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="theText" sid="681397276555332" type="string" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout-folder name="menus">
+            <layout>Intro.xml</layout>
+            <layout>savefile error.xml</layout>
+            <layout>manual loading.xml</layout>
+            <layout>delete savefile.xml</layout>
+        </layout-folder>
+        <layout-folder name="old or useless">
+            <layout>spawned objects.xml</layout>
+            <layout>Verachou.xml</layout>
+        </layout-folder>
+        <layout-folder name="global layers">
+            <layout>notifications bar.xml</layout>
+            <layout>snow.xml</layout>
+            <layout>purchase popup.xml</layout>
+        </layout-folder>
+        <layout>lions.xml</layout>
+        <layout>factory.xml</layout>
+        <layout>rewards.xml</layout>
+        <layout>bumper.xml</layout>
+        <layout>grinding.xml</layout>
+        <layout>grinding sector.xml</layout>
+        <layout>pachinko.xml</layout>
+        <layout>story.xml</layout>
+        <layout>traps.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="menus">
+            <event-sheet>savefile error events.xml</event-sheet>
+            <event-sheet>manual loading events.xml</event-sheet>
+            <event-sheet>intro events.xml</event-sheet>
+            <event-sheet>delete savefile events.xml</event-sheet>
+        </event-folder>
+        <event-folder name="old">
+            <event-folder name="verachou">
+                <event-sheet>verachou.xml</event-sheet>
+                <event-sheet>verachou main.xml</event-sheet>
+            </event-folder>
+        </event-folder>
+        <event-folder name="general">
+            <event-sheet>gameplay stuff.xml</event-sheet>
+            <event-sheet>global events.xml</event-sheet>
+            <event-sheet>savefile migration.xml</event-sheet>
+        </event-folder>
+        <event-sheet>factory events.xml</event-sheet>
+        <event-sheet>lions events.xml</event-sheet>
+        <event-sheet>grinding events.xml</event-sheet>
+        <event-sheet>grinding sector events.xml</event-sheet>
+        <event-sheet>pachinko events.xml</event-sheet>
+        <event-sheet>snow events.xml</event-sheet>
+        <event-sheet>rewards screen events.xml</event-sheet>
+        <event-sheet>bumper events.xml</event-sheet>
+        <event-sheet>story events.xml</event-sheet>
+        <event-sheet>traps events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="4" />
+        <global-instance type="Function" uid="5" />
+        <global-instance type="Mouse" uid="30" />
+        <global-instance type="Keyboard" uid="40" />
+        <global-instance type="AJAX" uid="42" />
+        <global-instance type="LocalStorage" uid="104" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="silly_messages.json" />
+        <file name="release_notes.txt" />
+        <file name="story.json" />
+        <file name="mons.json" />
+    </files-folder>
+</c2project>
