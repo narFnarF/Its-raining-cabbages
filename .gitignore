@@ -1,21 +1,74 @@
+# =========================
+# Operating System Files
+# =========================
+
+# -------------------------
+# Windows
+# -------------------------
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+# -------------------------
+# OSX
+# -------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with \r (or "CR" in Notepad++)
+Icon[]
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+# ================
+# Construct 2
+# ================
+*.autosave
+*.backup[0-9]
+*.backup[0-9][0-9]
 *.uistate.xml
 
-*.autosave
 
-*.backup1
-*.backup2
-*.backup3
-*.backup4
-*.backup5
-*.backup6
-*.backup7
-*.backup8
-*.backup9
-*.backup10
-*.backup11
-*.backup12
-*.backup13
-*.backup14
-*.backup15
+# ================
+# Others
+# ================
 
-Thumbs.db
+#Add new ignored files below
+
